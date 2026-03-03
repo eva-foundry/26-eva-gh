@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "assets": [
+    {
+      "assetId": "icon_jurisprudence_scales",
+      "type": "svg",
+      "path": "/assets/icons/scales.svg",
+      "description": "Scales of justice icon used for Jurisprudence."
+    },
+    {
+      "assetId": "hero_animated_eva",
+      "type": "gif",
+      "path": "/assets/illustrations/eva-hero.gif",
+      "description": "Animated EVA assistant illustration."
+    },
+    {
+      "assetId": "icon_clear_chat",
+      "type": "svg",
+      "path": "/assets/icons/clear-chat.svg",
+      "description": "Clear chat / reset conversation icon."
+    }
+  ]
+}

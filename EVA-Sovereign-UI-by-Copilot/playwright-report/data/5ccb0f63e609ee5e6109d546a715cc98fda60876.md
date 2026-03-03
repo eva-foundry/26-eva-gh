@@ -1,0 +1,55 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - heading "🇨🇦 EVA-Sovereign-UI Demo" [level=1] [ref=e3]
+    - paragraph [ref=e4]:
+      - text: Welcome to the
+      - strong [ref=e5]: EVA-Sovereign-UI
+      - text: demonstration. This is a production-ready Web Components library for building accessible, multilingual government applications following the Government of Canada Design System.
+    - generic [ref=e6]:
+      - 'heading "✅ Build Status: Running" [level=3] [ref=e7]'
+      - list [ref=e8]:
+        - listitem [ref=e9]: 31 Web Components implemented
+        - listitem [ref=e10]: WCAG 2.2 AAA accessibility standards
+        - listitem [ref=e11]: Bilingual support (EN-CA/FR-CA)
+        - listitem [ref=e12]: Official GC Design System compliance
+        - listitem [ref=e13]: Five Eyes sovereign profiles ready
+    - generic [ref=e14]:
+      - link "🏛️ ESDC Public Website Full demonstration of Employment and Social Development Canada portal with program pages, services, and EVA AI chatbot assistant." [ref=e15] [cursor=pointer]:
+        - /url: /apps/esdc-demo/index.html
+        - generic [ref=e16]: 🏛️
+        - heading "ESDC Public Website" [level=2] [ref=e17]
+        - paragraph [ref=e18]: Full demonstration of Employment and Social Development Canada portal with program pages, services, and EVA AI chatbot assistant.
+      - link "🛠️ Developer Kit Component gallery showcasing all 31 Web Components with accessibility features, internationalization, and theming options." [ref=e19] [cursor=pointer]:
+        - /url: /apps/dev-kit-demo/index.html
+        - generic [ref=e20]: 🛠️
+        - heading "Developer Kit" [level=2] [ref=e21]
+        - paragraph [ref=e22]: Component gallery showcasing all 31 Web Components with accessibility features, internationalization, and theming options.
+    - generic [ref=e23]:
+      - heading "📚 Documentation" [level=3] [ref=e24]
+      - paragraph [ref=e25]:
+        - text: Check the
+        - code [ref=e26]: docs/
+        - text: "folder for:"
+      - list [ref=e27]:
+        - listitem [ref=e28]: ARCHITECTURE.md - System architecture and design patterns
+        - listitem [ref=e29]: COMPONENT-GUIDE.md - Complete component reference
+        - listitem [ref=e30]: INTEGRATION-GUIDE.md - How to use in your projects
+        - listitem [ref=e31]: DEMO-SUMMARY.md - Complete build summary
+  - generic [ref=e34]:
+    - generic [ref=e35]: "[plugin:vite:import-analysis] Failed to resolve import \"../packages/eva-sovereign-ui-wc/src/components/gc-design/eva-gc-button.ts\" from \"demo-button-enhanced.html?html-proxy&index=0.js\". Does the file exist?"
+    - generic [ref=e36]: C:/Users/marco/Documents/_AI Dev/EVA Suite/EVA-Sovereign-UI-by-Copilot/demo-button-enhanced.html:317:13
+    - generic [ref=e37]: 1 | 2 | // Import the enhanced button component 3 | import '../packages/eva-sovereign-ui-wc/src/components/gc-design/eva-gc-button.ts'; | ^ 4 |
+    - generic [ref=e38]: at TransformPluginContext._formatError (file:///C:/Users/marco/Documents/_AI%20Dev/EVA%20Suite/EVA-Sovereign-UI-by-Copilot/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41) at TransformPluginContext.error (file:///C:/Users/marco/Documents/_AI%20Dev/EVA%20Suite/EVA-Sovereign-UI-by-Copilot/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16) at normalizeUrl (file:///C:/Users/marco/Documents/_AI%20Dev/EVA%20Suite/EVA-Sovereign-UI-by-Copilot/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23) at process.processTicksAndRejections (node:internal/process/task_queues:105:5) at async file:///C:/Users/marco/Documents/_AI%20Dev/EVA%20Suite/EVA-Sovereign-UI-by-Copilot/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39 at async Promise.all (index 0) at async TransformPluginContext.transform (file:///C:/Users/marco/Documents/_AI%20Dev/EVA%20Suite/EVA-Sovereign-UI-by-Copilot/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7) at async PluginContainer.transform (file:///C:/Users/marco/Documents/_AI%20Dev/EVA%20Suite/EVA-Sovereign-UI-by-Copilot/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18) at async loadAndTransform (file:///C:/Users/marco/Documents/_AI%20Dev/EVA%20Suite/EVA-Sovereign-UI-by-Copilot/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27) at async viteTransformMiddleware (file:///C:/Users/marco/Documents/_AI%20Dev/EVA%20Suite/EVA-Sovereign-UI-by-Copilot/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24
+    - generic [ref=e39]:
+      - text: Click outside, press Esc key, or fix the code to dismiss.
+      - text: You can also disable this overlay by setting
+      - code [ref=e40]: server.hmr.overlay
+      - text: to
+      - code [ref=e41]: "false"
+      - text: in
+      - code [ref=e42]: vite.config.ts
+      - text: .
+```

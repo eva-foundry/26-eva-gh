@@ -1,0 +1,85 @@
+{
+  "esdc": {
+    "title": "Emploi et Développement social Canada",
+    "titleShort": "EDSC",
+    "hero": {
+      "title": "Bâtir une main-d'œuvre qualifiée, adaptable et inclusive",
+      "description": "Accédez aux services d'emploi, aux prestations et aux programmes de soutien qui aident les Canadiens à réussir"
+    },
+    "programs": {
+      "title": "Programmes et services",
+      "ei": {
+        "title": "Assurance-emploi",
+        "titleShort": "AE",
+        "description": "Aide financière temporaire pendant que vous cherchez du travail ou perfectionnez vos compétences",
+        "details": "L'assurance-emploi (AE) offre un soutien du revenu temporaire aux Canadiens sans emploi pendant qu'ils cherchent du travail ou perfectionnent leurs compétences. Les prestations régulières sont offertes aux personnes qui perdent leur emploi sans en être responsables et qui ont accumulé suffisamment d'heures assurables."
+      },
+      "oas": {
+        "title": "Sécurité de la vieillesse",
+        "titleShort": "SV",
+        "description": "Paiement mensuel pour les aînés de 65 ans et plus",
+        "details": "La Sécurité de la vieillesse (SV) est un paiement mensuel offert à la plupart des Canadiens de 65 ans ou plus. Vous n'avez pas besoin d'avoir travaillé pour recevoir la SV. Le montant que vous recevez dépend du nombre d'années où vous avez vécu au Canada après l'âge de 18 ans."
+      },
+      "cpp": {
+        "title": "Régime de pensions du Canada",
+        "titleShort": "RPC",
+        "description": "Programme de pension de retraite contributif pour les travailleurs canadiens",
+        "details": "Le Régime de pensions du Canada (RPC) est un programme d'assurance sociale contributif et lié aux gains. Il constitue l'un des éléments du système de revenu de retraite du Canada. Le RPC offre des prestations de base de retraite, d'invalidité et de survivant."
+      }
+    },
+    "services": {
+      "jobSearch": {
+        "title": "Recherche d'emploi",
+        "description": "Trouvez des opportunités d'emploi partout au Canada avec le Guichet-Emplois",
+        "details": "Le Guichet-Emplois est le service national de l'emploi du Canada. Recherchez des milliers d'emplois, explorez les tendances du marché du travail et accédez aux outils de planification de carrière pour vous aider à trouver votre prochaine opportunité."
+      },
+      "benefitsFinder": {
+        "title": "Chercheur de prestations",
+        "description": "Découvrez les prestations et services gouvernementaux auxquels vous pourriez être admissible",
+        "details": "Répondez à quelques questions simples pour obtenir une liste personnalisée des prestations et services fédéraux, provinciaux et territoriaux auxquels vous pourriez être admissible."
+      }
+    }
+  },
+  "chat": {
+    "title": "Demandez à EVA",
+    "subtitle": "Assistante virtuelle pour l'emploi",
+    "placeholder": "Comment puis-je vous aider aujourd'hui?",
+    "send": "Envoyer",
+    "voice": "Entrée vocale",
+    "thinking": "EVA réfléchit...",
+    "suggestedTopics": "Sujets suggérés:",
+    "topics": {
+      "ei": "Assurance-emploi",
+      "oas": "Sécurité de la vieillesse",
+      "cpp": "Régime de pensions du Canada",
+      "jobs": "Trouver un emploi"
+    }
+  },
+  "navigation": {
+    "skipToMain": "Passer au contenu principal",
+    "home": "Accueil",
+    "programs": "Programmes",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© Sa Majesté le Roi du chef du Canada",
+    "privacy": "Confidentialité",
+    "terms": "Avis",
+    "accessibility": "Accessibilité",
+    "canada": "Canada.ca"
+  },
+  "common": {
+    "learnMore": "En savoir plus",
+    "apply": "Faire une demande",
+    "english": "English",
+    "french": "Français",
+    "spanish": "Español",
+    "italian": "Italiano",
+    "german": "Deutsch",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "close": "Fermer"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "values_and_principles": {
+    "core_values": [
+      "Accountability in technology and AI use",
+      "Transparency and traceability",
+      "Respect for privacy, human rights, and fairness",
+      "Accessibility and inclusion",
+      "Lifelong learning and upskilling",
+      "Collaboration and knowledge sharing"
+    ],
+    "professional_principles": [
+      "AI must augment, not replace, human judgment.",
+      "Governance and security are first-class requirements.",
+      "Prefer shared platforms and reuse over silos.",
+      "Design for multi-tenant, bilingual, accessible by default.",
+      "Document decisions and provide clear narratives."
+    ],
+    "personal_principles": [
+      "Long-term commitment to relationships and promises.",
+      "Curiosity and experimentation in life and learning.",
+      "Balance discipline with play and exploration.",
+      "Desire to be recognized for experience and capability."
+    ]
+  },
+  "ai_usage_goals": {
+    "short_term": [
+      "Accelerate drafting of documents (PRDs, SOWs, work plans, narratives).",
+      "Support technical prototyping and troubleshooting (code, infra, UI).",
+      "Prepare presentations and communications for executives and partners.",
+      "Assist with personal writing and learning (languages, Bible study)."
+    ],
+    "medium_long_term": [
+      "Establish EVA as the central trusted AI platform at ESDC.",
+      "Embed AI literacy and accountability into organizational culture.",
+      "Create repeatable patterns for AI projects via EVA + IIAID.",
+      "Leverage AI as a personal learning and reflection partner."
+    ]
+  }
+}

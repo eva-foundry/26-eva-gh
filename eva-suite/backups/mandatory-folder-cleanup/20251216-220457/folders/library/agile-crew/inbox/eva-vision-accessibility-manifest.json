@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-vision-accessibility.md",
+  "feature_key": "P02-AUTO-1b5804ed",
+  "title": "CDD: EVA Vision Accessibility Features",
+  "p02_artifacts_path": "docs/features/eva-vision-accessibility",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-vision-accessibility",
+  "created_timestamp": "2025-11-25T23:55:19.0954240Z"
+}

@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "useDefineForClassFields": true,
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ES2022"
+        ],
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "strict": true,
+        "jsx": "react-jsx",
+        "types": [
+            "vite/client"
+        ],
+        "skipLibCheck": true,
+        "baseUrl": "./src",
+        "paths": {
+            "@config/*": [
+                "config/*"
+            ],
+            "@lib/*": [
+                "lib/*"
+            ],
+            "@components/*": [
+                "components/*"
+            ],
+            "@types/*": [
+                "types/*"
+            ],
+            "@styles/*": [
+                "styles/*"
+            ]
+        }
+    },
+    "include": [
+        "src"
+    ]
+}

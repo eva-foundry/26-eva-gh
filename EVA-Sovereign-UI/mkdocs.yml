@@ -1,0 +1,70 @@
+site_name: EVA Sovereign UI Book
+site_url: https://marcopolo483.github.io/EVA-Sovereign-UI/
+repo_url: https://github.com/MarcoPolo483/EVA-Sovereign-UI
+repo_name: MarcoPolo483/EVA-Sovereign-UI
+
+theme:
+  name: material
+  palette:
+    # Light mode (GC red primary)
+    - scheme: default
+      primary: custom  # Will use custom CSS for #d93f0b
+      accent: red
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    
+    # Dark mode
+    - scheme: slate
+      primary: custom
+      accent: red
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  features:
+    - navigation.instant      # Instant loading (SPA behavior)
+    - navigation.tracking     # URL updates on scroll
+    - navigation.tabs         # Top-level sections as tabs
+    - navigation.sections     # Collapsible sections in sidebar
+    - navigation.top          # Back-to-top button
+    - search.suggest          # Search suggestions
+    - search.highlight        # Highlight search terms in results
+    - content.code.copy       # Copy button on code blocks
+  
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang: en
+
+markdown_extensions:
+  - admonition               # Info/warning/danger boxes
+  - attr_list                # Add attributes to HTML elements
+  - codehilite:              # Syntax highlighting
+      guess_lang: false
+  - toc:
+      permalink: true        # Add permalink anchors to headings
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - 'Home': 'book/index.md'
+  - 'Getting Started': 'book/01-getting-started.md'
+  - 'Design Principles': 'book/02-design-principles.md'
+  - 'Components Overview': 'book/03-components-overview.md'
+  - 'API Reference': 'book/04-api-reference.md'
+  - 'Usage Examples': 'book/05-usage-examples.md'
+  - 'Accessibility': 'book/06-accessibility.md'
+  - 'Internationalization': 'book/07-internationalization.md'
+  - 'Theming': 'book/08-theming.md'
+  - 'Contributing': 'book/09-contributing.md'
+  - 'Appendices': 'book/10-appendices.md'
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MarcoPolo483/EVA-Sovereign-UI
+      name: EVA Sovereign UI on GitHub

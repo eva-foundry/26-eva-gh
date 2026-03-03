@@ -1,0 +1,5 @@
+# EVA Suite Orchestrator Python Dependencies
+# Required packages for YAML parsing and HTTP requests
+
+pyyaml
+requests

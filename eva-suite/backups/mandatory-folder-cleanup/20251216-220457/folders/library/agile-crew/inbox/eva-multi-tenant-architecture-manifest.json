@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-multi-tenant-architecture.md",
+  "feature_key": "P02-AUTO-a682816a",
+  "title": "CDD: EVA Multi-Tenant Architecture",
+  "p02_artifacts_path": "docs/features/eva-multi-tenant-architecture",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-multi-tenant-architecture",
+  "created_timestamp": "2025-11-25T23:54:37.4706651Z"
+}

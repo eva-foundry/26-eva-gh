@@ -1,0 +1,151 @@
+
+
+
+
+
+
+ 
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}%
+
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{bbding}
+\usepackage{url}
+\usepackage{hyperref}
+\renewcommand\UrlFont{\ttfamily\scriptsize}
+\usepackage{adjustbox}
+\usepackage{pdflscape}
+
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+\usepackage[most]{tcolorbox}
+
+
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%
+\newtheorem{proposition}[theorem]{Proposition}%
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+\newcommand{\rw}[1]{\textcolor{red}{[rw: #1]}}
+
+\newcommand{\xj}[1]{\textcolor{orange}{[xj: #1]}}
+
+\newcommand{\shy}[1]{\textcolor{green}{[shy: #1]}}
+\definecolor{lightblue}{RGB}{174,214,241}
+\definecolor{darkblue}{RGB}{36,113,163}
+\input{preamble}
+\raggedbottom
+
+\begin{document}
+
+\title[Article Title]{AI Awareness}
+
+
+\author[2,3]{\fnm{Xiaojian} \sur{Li}}
+\equalcont{These authors contributed equally to this work.}
+
+\author[4]{\fnm{Haoyuan} \sur{Shi}}
+\equalcont{These authors contributed equally to this work.}
+
+\author*[1,3]{\fnm{Rongwu} \sur{Xu}}\email{xrw22@mails.tsinghua.edu.cn}
+
+\author[1,2,3]{\fnm{Wei} \sur{Xu}}
+
+\affil*[1]{\orgdiv{Institute for Interdisciplinary Information Sciences}, \orgname{Tsinghua University}, \orgaddress{\postcode{100084}, \state{Beijing}, \country{China}}}
+
+\affil[2]{\orgdiv{College of AI}, \orgname{Tsinghua University}, \orgaddress{\postcode{100083}, \state{Beijing}, \country{China}}}
+
+\affil*[3]{\orgdiv{Shanghai Qi Zhi Institute}, \orgaddress{\postcode{200232}, \state{Shanghai}, \country{China}}}
+
+\affil[4]{\orgdiv{Teachers College}, \orgname{Columbia University}, \orgaddress{\postcode{10027}, \state{New York}, \country{United States of America}}}
+
+
+
+
+
+
+
+\abstract{Recent breakthroughs in artificial intelligence (AI) have brought about increasingly capable systems that demonstrate remarkable abilities in reasoning, language understanding, and problem-solving. These advancements have prompted a renewed examination of \textbf{AI awareness}\textemdash not as a philosophical question of consciousness, but as a measurable, functional capacity. AI awareness is a double-edged sword: it improves general capabilities, \ie, reasoning, safety, while also raising concerns around misalignment and societal risks, demanding careful oversight as AI capabilities grow.
+
+In this review, we explore the emerging landscape of AI awareness, which includes metacognition (the ability to represent and reason about its own cognitive state), self-awareness (recognizing its own identity, knowledge, limitations, \etc), social awareness (modeling the knowledge, intentions, and behaviors of other agents and social norms), and situational awareness (assessing and responding to the context in which it operates). 
+
+First, we draw on insights from cognitive science, psychology, and computational theory to trace the theoretical foundations of awareness and examine how the four distinct forms of AI awareness manifest in state-of-the-art AI.
+Next, we systematically analyze current evaluation methods and empirical findings to better understand these manifestations.
+Building on this, we explore how AI awareness is closely linked to AI capabilities, demonstrating that more aware AI agents tend to exhibit higher levels of intelligent behaviors.
+Finally, we discuss the risks associated with AI awareness, including key topics in AI safety, alignment, and broader ethical concerns.
+
+On the whole, our interdisciplinary review provides a roadmap for future research and aims to clarify the role of AI awareness in the ongoing development of intelligent machines.}
+
+
+
+\keywords{Artificial Intelligence, Awareness, Large Language Model, Cognitive Science, AI Safety and Alignment}
+
+
+
+\maketitle
+
+\vspace{-3em}
+\mytcolorbox{While \textit{AI consciousness} remains a deeply elusive philosophical question, mounting empirical evidence suggests that modern AI systems already exhibit functional forms of \textit{awareness}, which simultaneously broadens their capabilities and intensifies related risks.}
+
+
+
+
+\input{Secs/intro}
+\input{Secs/theory}
+\input{Secs/evaluation}
+\input{Secs/capabilities}
+\input{Secs/risks}
+\input{Secs/conclusion}
+\clearpage
+\backmatter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bibliography{sn-bibliography}%
+
+\end{document}

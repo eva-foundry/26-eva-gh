@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "🚀 Quick Start Guide - Creating 17 EVA Repos",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/quick-start",
+  "created_timestamp": "2025-11-27T12:40:36.1413282Z",
+  "source_intake_file": "QUICK-START.md",
+  "feature_key": "P02-AUTO-479cd99b",
+  "feature_slug": "quick-start"
+}

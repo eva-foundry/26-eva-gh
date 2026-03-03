@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "issue-draft-commands.md",
+  "feature_key": "P02-AUTO-52421970",
+  "title": "User Request Issue Drafts",
+  "p02_artifacts_path": "docs/features/issue-draft-commands",
+  "priority": "MEDIUM",
+  "feature_slug": "issue-draft-commands",
+  "created_timestamp": "2025-11-25T23:55:31.2723947Z"
+}

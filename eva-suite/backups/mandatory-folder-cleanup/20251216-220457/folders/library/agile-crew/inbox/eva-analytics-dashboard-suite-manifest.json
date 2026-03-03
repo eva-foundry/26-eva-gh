@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-analytics-dashboard-suite.md",
+  "feature_key": "P02-AUTO-3b8341e6",
+  "title": "CDD: EVA Analytics Dashboard Suite",
+  "p02_artifacts_path": "docs/features/eva-analytics-dashboard-suite",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-analytics-dashboard-suite",
+  "created_timestamp": "2025-11-25T23:53:55.6635202Z"
+}

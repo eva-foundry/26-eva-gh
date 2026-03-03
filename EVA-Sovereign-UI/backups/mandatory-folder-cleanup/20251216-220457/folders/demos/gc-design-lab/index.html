@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVA Sovereign UI - 100 Component Showcase</title>
+    <script type="module" src="../../components/eva-sovereign-ui.es.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --gc-blue: #26374a; --gc-blue-light: #335075; --gc-red: #af3c43;
+            --gc-white: #ffffff; --gc-gray-100: #f5f5f5; --gc-gray-200: #e1e4e7;
+            --gc-gray-300: #cfd1d5; --gc-gray-700: #333333; --gc-focus: #0535d2;
+            --gc-focus-outline: #ffbf47; --transition: all 0.2s ease;
+        }
+        body { font-family: 'Noto Sans', Arial, sans-serif; background: var(--gc-gray-100); color: var(--gc-gray-700); line-height: 1.6; }
+        .header { background: var(--gc-blue); color: var(--gc-white); padding: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .header-title h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .header-subtitle { font-size: 1rem; opacity: 0.9; }
+        .stats-badge { background: var(--gc-red); color: var(--gc-white); padding: 0.75rem 1.5rem; border-radius: 50px; font-size: 1.25rem; font-weight: 700; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .lang-toggle { background: var(--gc-blue-light); border: 2px solid var(--gc-white); color: var(--gc-white); padding: 0.5rem 1.5rem; border-radius: 4px; cursor: pointer; font-size: 1rem; font-weight: 600; transition: var(--transition); }
+        .lang-toggle:hover { background: var(--gc-white); color: var(--gc-blue); }
+        .lang-toggle:focus { outline: 3px solid var(--gc-focus-outline); outline-offset: 2px; }
+        .controls { background: var(--gc-white); padding: 2rem; margin: 2rem 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .search-bar { width: 100%; padding: 1rem; font-size: 1.125rem; border: 2px solid var(--gc-gray-300); border-radius: 4px; margin-bottom: 1.5rem; transition: var(--transition); }
+        .search-bar:focus { outline: none; border-color: var(--gc-focus); box-shadow: 0 0 0 3px rgba(5, 53, 210, 0.1); }
+        .filter-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .filter-btn { padding: 0.75rem 1.5rem; border: 2px solid var(--gc-blue); background: var(--gc-white); color: var(--gc-blue); border-radius: 4px; cursor: pointer; font-size: 1rem; font-weight: 600; transition: var(--transition); }
+        .filter-btn:hover { background: var(--gc-blue-light); border-color: var(--gc-blue-light); color: var(--gc-white); }
+        .filter-btn:focus { outline: 3px solid var(--gc-focus-outline); outline-offset: 2px; }
+        .filter-btn.active { background: var(--gc-blue); color: var(--gc-white); }
+        .category-section { margin: 3rem 0; }
+        .category-header { background: linear-gradient(135deg, var(--gc-blue) 0%, var(--gc-blue-light) 100%); color: var(--gc-white); padding: 1.5rem 2rem; border-radius: 8px 8px 0 0; margin-bottom: 0; }
+        .category-header h2 { font-size: 1.75rem; font-weight: 700; }
+        .category-count { font-size: 1rem; opacity: 0.9; margin-top: 0.25rem; }
+        .component-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem; background: var(--gc-white); padding: 2rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .component-card { border: 2px solid var(--gc-gray-200); border-radius: 8px; padding: 1.25rem; background: var(--gc-white); transition: var(--transition); cursor: pointer; }
+        .component-card:hover { border-color: var(--gc-blue); box-shadow: 0 4px 16px rgba(38, 55, 74, 0.15); transform: translateY(-2px); }
+        .component-card:focus-within { outline: 3px solid var(--gc-focus); outline-offset: 2px; }
+        .component-name { font-family: 'Courier New', monospace; font-size: 0.95rem; font-weight: 700; color: var(--gc-red); margin-bottom: 0.5rem; padding: 0.4rem; background: var(--gc-gray-100); border-radius: 4px; word-break: break-all; }
+        .component-description { font-size: 0.85rem; color: var(--gc-gray-700); margin-bottom: 0.75rem; line-height: 1.4; }
+        .component-demo { min-height: 60px; display: flex; align-items: center; justify-content: center; padding: 0.75rem; background: var(--gc-gray-100); border-radius: 4px; border: 1px dashed var(--gc-gray-300); }
+        .hidden { display: none !important; }
+        .no-results { text-align: center; padding: 4rem 2rem; color: var(--gc-gray-700); }
+        .no-results h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        footer { background: var(--gc-blue); color: var(--gc-white); padding: 2rem 0; margin-top: 4rem; text-align: center; }
+        footer p { opacity: 0.9; }
+        @media (max-width: 768px) { .header-title h1 { font-size: 1.5rem; } .component-grid { grid-template-columns: 1fr; } .filter-buttons { flex-direction: column; } .filter-btn { width: 100%; } }
+        .skip-link { position: absolute; top: -40px; left: 0; background: var(--gc-focus-outline); color: var(--gc-gray-700); padding: 0.5rem 1rem; text-decoration: none; font-weight: 700; z-index: 2000; }
+        .skip-link:focus { top: 0; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-title"><h1>EVA Sovereign UI</h1><div class="header-subtitle">Complete 100 Component Showcase</div></div>
+                <div class="stats-badge" role="status" aria-live="polite"><span id="visible-count">100</span> Components</div>
+                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">EN / FR</button>
+            </div>
+        </div>
+    </header>
+    <main id="main-content" class="container" role="main">
+        <section class="controls" role="search" aria-label="Component search and filters">
+            <input type="search" id="search-input" class="search-bar" placeholder="Search components..." aria-label="Search components">
+            <div class="filter-buttons" role="group" aria-label="Filter by category">
+                <button class="filter-btn active" data-filter="all">All (100)</button>
+                <button class="filter-btn" data-filter="eva">EVA (11)</button>
+                <button class="filter-btn" data-filter="gc">GC (45)</button>
+                <button class="filter-btn" data-filter="wb">WB (44)</button>
+            </div>
+        </section>
+        <section class="category-section" data-category="eva" role="region" aria-labelledby="eva-h">
+            <div class="category-header"><h2 id="eva-h">EVA Core Components</h2><div class="category-count">11 foundational components</div></div>
+            <div class="component-grid">
+                <article class="component-card" data-component="eva-alert" tabindex="0"><div class="component-name">&lt;eva-alert&gt;</div><p class="component-description">Alert messages for notifications</p><div class="component-demo"><eva-alert type="info" message="Info alert"></eva-alert></div></article>
+                <article class="component-card" data-component="eva-button" tabindex="0"><div class="component-name">&lt;eva-button&gt;</div><p class="component-description">Button with multiple variants</p><div class="component-demo"><eva-button variant="primary">Button</eva-button></div></article>
+                <article class="component-card" data-component="eva-card" tabindex="0"><div class="component-name">&lt;eva-card&gt;</div><p class="component-description">Container for content grouping</p><div class="component-demo"><eva-card title="Card"></eva-card></div></article>
+                <article class="component-card" data-component="eva-chat-panel" tabindex="0"><div class="component-name">&lt;eva-chat-panel&gt;</div><p class="component-description">Chat interface panel</p><div class="component-demo"><eva-chat-panel></eva-chat-panel></div></article>
+                <article class="component-card" data-component="eva-checkbox" tabindex="0"><div class="component-name">&lt;eva-checkbox&gt;</div><p class="component-description">Checkbox input control</p><div class="component-demo"><eva-checkbox label="Check" checked></eva-checkbox></div></article>
+                <article class="component-card" data-component="eva-input" tabindex="0"><div class="component-name">&lt;eva-input&gt;</div><p class="component-description">Text input field</p><div class="component-demo"><eva-input placeholder="Input"></eva-input></div></article>
+                <article class="component-card" data-component="eva-modal" tabindex="0"><div class="component-name">&lt;eva-modal&gt;</div><p class="component-description">Modal dialog overlay</p><div class="component-demo"><eva-modal title="Modal"></eva-modal></div></article>
+                <article class="component-card" data-component="eva-radio" tabindex="0"><div class="component-name">&lt;eva-radio&gt;</div><p class="component-description">Radio button input</p><div class="component-demo"><eva-radio name="r" label="Radio"></eva-radio></div></article>
+                <article class="component-card" data-component="eva-select" tabindex="0"><div class="component-name">&lt;eva-select&gt;</div><p class="component-description">Dropdown select menu</p><div class="component-demo"><eva-select></eva-select></div></article>
+                <article class="component-card" data-component="eva-tab" tabindex="0"><div class="component-name">&lt;eva-tab&gt;</div><p class="component-description">Tab panel item</p><div class="component-demo"><eva-tab label="Tab"></eva-tab></div></article>
+                <article class="component-card" data-component="eva-tabs" tabindex="0"><div class="component-name">&lt;eva-tabs&gt;</div><p class="component-description">Tabbed interface container</p><div class="component-demo"><eva-tabs></eva-tabs></div></article>
+            </div>
+        </section>
+        <section class="category-section" data-category="gc" role="region" aria-labelledby="gc-h">
+            <div class="category-header"><h2 id="gc-h">GC Design System Components</h2><div class="category-count">45 Canada.ca components</div></div>
+            <div class="component-grid">
+                <article class="component-card" data-component="gc-accordion" tabindex="0"><div class="component-name">&lt;gc-accordion&gt;</div><p class="component-description">Expandable accordion sections</p><div class="component-demo"><gc-accordion></gc-accordion></div></article>
+                <article class="component-card" data-component="gc-action-menu" tabindex="0"><div class="component-name">&lt;gc-action-menu&gt;</div><p class="component-description">Contextual action menu</p><div class="component-demo"><gc-action-menu></gc-action-menu></div></article>
+                <article class="component-card" data-component="gc-back-to-top" tabindex="0"><div class="component-name">&lt;gc-back-to-top&gt;</div><p class="component-description">Back to top button</p><div class="component-demo"><gc-back-to-top></gc-back-to-top></div></article>
+                <article class="component-card" data-component="gc-breadcrumb" tabindex="0"><div class="component-name">&lt;gc-breadcrumb&gt;</div><p class="component-description">Breadcrumb item</p><div class="component-demo"><gc-breadcrumb></gc-breadcrumb></div></article>
+                <article class="component-card" data-component="gc-breadcrumbs" tabindex="0"><div class="component-name">&lt;gc-breadcrumbs&gt;</div><p class="component-description">Breadcrumb navigation trail</p><div class="component-demo"><gc-breadcrumbs></gc-breadcrumbs></div></article>
+                <article class="component-card" data-component="gc-carousel" tabindex="0"><div class="component-name">&lt;gc-carousel&gt;</div><p class="component-description">Image carousel slider</p><div class="component-demo"><gc-carousel></gc-carousel></div></article>
+                <article class="component-card" data-component="gc-contextual-alerts" tabindex="0"><div class="component-name">&lt;gc-contextual-alerts&gt;</div><p class="component-description">Context-specific alerts</p><div class="component-demo"><gc-contextual-alerts></gc-contextual-alerts></div></article>
+                <article class="component-card" data-component="gc-data-table" tabindex="0"><div class="component-name">&lt;gc-data-table&gt;</div><p class="component-description">Accessible data tables</p><div class="component-demo"><gc-data-table></gc-data-table></div></article>
+                <article class="component-card" data-component="gc-drawer" tabindex="0"><div class="component-name">&lt;gc-drawer&gt;</div><p class="component-description">Side drawer panel</p><div class="component-demo"><gc-drawer></gc-drawer></div></article>
+                <article class="component-card" data-component="gc-error-summary" tabindex="0"><div class="component-name">&lt;gc-error-summary&gt;</div><p class="component-description">Form error summary</p><div class="component-demo"><gc-error-summary></gc-error-summary></div></article>
+                <article class="component-card" data-component="gc-expand-collapse" tabindex="0"><div class="component-name">&lt;gc-expand-collapse&gt;</div><p class="component-description">Expand/collapse toggle</p><div class="component-demo"><gc-expand-collapse></gc-expand-collapse></div></article>
+                <article class="component-card" data-component="gc-feature-tiles" tabindex="0"><div class="component-name">&lt;gc-feature-tiles&gt;</div><p class="component-description">Feature highlight tiles</p><div class="component-demo"><gc-feature-tiles></gc-feature-tiles></div></article>
+                <article class="component-card" data-component="gc-feedback-widget" tabindex="0"><div class="component-name">&lt;gc-feedback-widget&gt;</div><p class="component-description">User feedback form</p><div class="component-demo"><gc-feedback-widget></gc-feedback-widget></div></article>
+                <article class="component-card" data-component="gc-filterable-list" tabindex="0"><div class="component-name">&lt;gc-filterable-list&gt;</div><p class="component-description">Filterable content list</p><div class="component-demo"><gc-filterable-list></gc-filterable-list></div></article>
+                <article class="component-card" data-component="gc-footer" tabindex="0"><div class="component-name">&lt;gc-footer&gt;</div><p class="component-description">Page footer section</p><div class="component-demo"><gc-footer></gc-footer></div></article>
+                <article class="component-card" data-component="gc-global-footer" tabindex="0"><div class="component-name">&lt;gc-global-footer&gt;</div><p class="component-description">GC global footer</p><div class="component-demo"><gc-global-footer></gc-global-footer></div></article>
+                <article class="component-card" data-component="gc-global-header" tabindex="0"><div class="component-name">&lt;gc-global-header&gt;</div><p class="component-description">GC global header</p><div class="component-demo"><gc-global-header></gc-global-header></div></article>
+                <article class="component-card" data-component="gc-language-toggle" tabindex="0"><div class="component-name">&lt;gc-language-toggle&gt;</div><p class="component-description">Language switcher</p><div class="component-demo"><gc-language-toggle></gc-language-toggle></div></article>
+                <article class="component-card" data-component="gc-loading-spinner" tabindex="0"><div class="component-name">&lt;gc-loading-spinner&gt;</div><p class="component-description">Loading indicator</p><div class="component-demo"><gc-loading-spinner></gc-loading-spinner></div></article>
+                <article class="component-card" data-component="gc-modal" tabindex="0"><div class="component-name">&lt;gc-modal&gt;</div><p class="component-description">GC modal dialog</p><div class="component-demo"><gc-modal></gc-modal></div></article>
+                <article class="component-card" data-component="gc-most-requested" tabindex="0"><div class="component-name">&lt;gc-most-requested&gt;</div><p class="component-description">Most requested links</p><div class="component-demo"><gc-most-requested></gc-most-requested></div></article>
+                <article class="component-card" data-component="gc-notification-toast" tabindex="0"><div class="component-name">&lt;gc-notification-toast&gt;</div><p class="component-description">Toast notification</p><div class="component-demo"><gc-notification-toast></gc-notification-toast></div></article>
+                <article class="component-card" data-component="gc-page-banner" tabindex="0"><div class="component-name">&lt;gc-page-banner&gt;</div><p class="component-description">Page banner alert</p><div class="component-demo"><gc-page-banner></gc-page-banner></div></article>
+                <article class="component-card" data-component="gc-page-details" tabindex="0"><div class="component-name">&lt;gc-page-details&gt;</div><p class="component-description">Page metadata details</p><div class="component-demo"><gc-page-details></gc-page-details></div></article>
+                <article class="component-card" data-component="gc-page-navigation" tabindex="0"><div class="component-name">&lt;gc-page-navigation&gt;</div><p class="component-description">Page navigation links</p><div class="component-demo"><gc-page-navigation></gc-page-navigation></div></article>
+                <article class="component-card" data-component="gc-pagination" tabindex="0"><div class="component-name">&lt;gc-pagination&gt;</div><p class="component-description">Pagination controls</p><div class="component-demo"><gc-pagination></gc-pagination></div></article>
+                <article class="component-card" data-component="gc-print-page" tabindex="0"><div class="component-name">&lt;gc-print-page&gt;</div><p class="component-description">Print page button</p><div class="component-demo"><gc-print-page></gc-print-page></div></article>
+                <article class="component-card" data-component="gc-report-problem" tabindex="0"><div class="component-name">&lt;gc-report-problem&gt;</div><p class="component-description">Problem reporting form</p><div class="component-demo"><gc-report-problem></gc-report-problem></div></article>
+                <article class="component-card" data-component="gc-search-box" tabindex="0"><div class="component-name">&lt;gc-search-box&gt;</div><p class="component-description">Search input box</p><div class="component-demo"><gc-search-box></gc-search-box></div></article>
+                <article class="component-card" data-component="gc-search-results" tabindex="0"><div class="component-name">&lt;gc-search-results&gt;</div><p class="component-description">Search results display</p><div class="component-demo"><gc-search-results></gc-search-results></div></article>
+                <article class="component-card" data-component="gc-services-info" tabindex="0"><div class="component-name">&lt;gc-services-info&gt;</div><p class="component-description">Services information</p><div class="component-demo"><gc-services-info></gc-services-info></div></article>
+                <article class="component-card" data-component="gc-side-nav" tabindex="0"><div class="component-name">&lt;gc-side-nav&gt;</div><p class="component-description">Side navigation menu</p><div class="component-demo"><gc-side-nav></gc-side-nav></div></article>
+                <article class="component-card" data-component="gc-signature" tabindex="0"><div class="component-name">&lt;gc-signature&gt;</div><p class="component-description">GC official signature</p><div class="component-demo"><gc-signature></gc-signature></div></article>
+                <article class="component-card" data-component="gc-site-menu" tabindex="0"><div class="component-name">&lt;gc-site-menu&gt;</div><p class="component-description">Site menu navigation</p><div class="component-demo"><gc-site-menu></gc-site-menu></div></article>
+                <article class="component-card" data-component="gc-skip-link" tabindex="0"><div class="component-name">&lt;gc-skip-link&gt;</div><p class="component-description">Skip navigation link</p><div class="component-demo"><gc-skip-link></gc-skip-link></div></article>
+                <article class="component-card" data-component="gc-skip-links" tabindex="0"><div class="component-name">&lt;gc-skip-links&gt;</div><p class="component-description">Skip links container</p><div class="component-demo"><gc-skip-links></gc-skip-links></div></article>
+                <article class="component-card" data-component="gc-social-share" tabindex="0"><div class="component-name">&lt;gc-social-share&gt;</div><p class="component-description">Social sharing buttons</p><div class="component-demo"><gc-social-share></gc-social-share></div></article>
+                <article class="component-card" data-component="gc-stepper" tabindex="0"><div class="component-name">&lt;gc-stepper&gt;</div><p class="component-description">Step progress indicator</p><div class="component-demo"><gc-stepper></gc-stepper></div></article>
+                <article class="component-card" data-component="gc-steps-form" tabindex="0"><div class="component-name">&lt;gc-steps-form&gt;</div><p class="component-description">Multi-step form wizard</p><div class="component-demo"><gc-steps-form></gc-steps-form></div></article>
+                <article class="component-card" data-component="gc-subway-nav" tabindex="0"><div class="component-name">&lt;gc-subway-nav&gt;</div><p class="component-description">Subway-style navigation</p><div class="component-demo"><gc-subway-nav></gc-subway-nav></div></article>
+                <article class="component-card" data-component="gc-tabbed-interface" tabindex="0"><div class="component-name">&lt;gc-tabbed-interface&gt;</div><p class="component-description">Tabbed content interface</p><div class="component-demo"><gc-tabbed-interface></gc-tabbed-interface></div></article>
+                <article class="component-card" data-component="gc-tabs" tabindex="0"><div class="component-name">&lt;gc-tabs&gt;</div><p class="component-description">Tab navigation</p><div class="component-demo"><gc-tabs></gc-tabs></div></article>
+                <article class="component-card" data-component="gc-tag-filter" tabindex="0"><div class="component-name">&lt;gc-tag-filter&gt;</div><p class="component-description">Tag-based filtering</p><div class="component-demo"><gc-tag-filter></gc-tag-filter></div></article>
+                <article class="component-card" data-component="gc-tooltip" tabindex="0"><div class="component-name">&lt;gc-tooltip&gt;</div><p class="component-description">Contextual tooltip</p><div class="component-demo"><gc-tooltip></gc-tooltip></div></article>
+                <article class="component-card" data-component="gc-topic-menu" tabindex="0"><div class="component-name">&lt;gc-topic-menu&gt;</div><p class="component-description">Topic-based menu</p><div class="component-demo"><gc-topic-menu></gc-topic-menu></div></article>
+            </div>
+        </section>
+        <section class="category-section" data-category="wb" role="region" aria-labelledby="wb-h">
+            <div class="category-header"><h2 id="wb-h">WET-BOEW Components</h2><div class="category-count">44 Web Experience Toolkit components</div></div>
+            <div class="component-grid">
+                <article class="component-card" data-component="wb-accordion" tabindex="0"><div class="component-name">&lt;wb-accordion&gt;</div><p class="component-description">WET accordion container</p><div class="component-demo"><wb-accordion></wb-accordion></div></article>
+                <article class="component-card" data-component="wb-accordion-panel" tabindex="0"><div class="component-name">&lt;wb-accordion-panel&gt;</div><p class="component-description">Accordion panel item</p><div class="component-demo"><wb-accordion-panel></wb-accordion-panel></div></article>
+                <article class="component-card" data-component="wb-add-cal" tabindex="0"><div class="component-name">&lt;wb-add-cal&gt;</div><p class="component-description">Add to calendar</p><div class="component-demo"><wb-add-cal></wb-add-cal></div></article>
+                <article class="component-card" data-component="wb-archived" tabindex="0"><div class="component-name">&lt;wb-archived&gt;</div><p class="component-description">Archived content banner</p><div class="component-demo"><wb-archived></wb-archived></div></article>
+                <article class="component-card" data-component="wb-bgimg" tabindex="0"><div class="component-name">&lt;wb-bgimg&gt;</div><p class="component-description">Background image</p><div class="component-demo"><wb-bgimg></wb-bgimg></div></article>
+                <article class="component-card" data-component="wb-calendar" tabindex="0"><div class="component-name">&lt;wb-calendar&gt;</div><p class="component-description">Calendar widget</p><div class="component-demo"><wb-calendar></wb-calendar></div></article>
+                <article class="component-card" data-component="wb-charts" tabindex="0"><div class="component-name">&lt;wb-charts&gt;</div><p class="component-description">Data visualization charts</p><div class="component-demo"><wb-charts></wb-charts></div></article>
+                <article class="component-card" data-component="wb-collapsible-alerts" tabindex="0"><div class="component-name">&lt;wb-collapsible-alerts&gt;</div><p class="component-description">Collapsible alert messages</p><div class="component-demo"><wb-collapsible-alerts></wb-collapsible-alerts></div></article>
+                <article class="component-card" data-component="wb-country-content" tabindex="0"><div class="component-name">&lt;wb-country-content&gt;</div><p class="component-description">Country-specific content</p><div class="component-demo"><wb-country-content></wb-country-content></div></article>
+                <article class="component-card" data-component="wb-data-ajax" tabindex="0"><div class="component-name">&lt;wb-data-ajax&gt;</div><p class="component-description">AJAX data loading</p><div class="component-demo"><wb-data-ajax></wb-data-ajax></div></article>
+                <article class="component-card" data-component="wb-data-inview" tabindex="0"><div class="component-name">&lt;wb-data-inview&gt;</div><p class="component-description">In-viewport trigger</p><div class="component-demo"><wb-data-inview></wb-data-inview></div></article>
+                <article class="component-card" data-component="wb-data-json" tabindex="0"><div class="component-name">&lt;wb-data-json&gt;</div><p class="component-description">JSON data display</p><div class="component-demo"><wb-data-json></wb-data-json></div></article>
+                <article class="component-card" data-component="wb-details" tabindex="0"><div class="component-name">&lt;wb-details&gt;</div><p class="component-description">Details disclosure widget</p><div class="component-demo"><wb-details></wb-details></div></article>
+                <article class="component-card" data-component="wb-dismissable" tabindex="0"><div class="component-name">&lt;wb-dismissable&gt;</div><p class="component-description">Dismissable content</p><div class="component-demo"><wb-dismissable></wb-dismissable></div></article>
+                <article class="component-card" data-component="wb-equalheight" tabindex="0"><div class="component-name">&lt;wb-equalheight&gt;</div><p class="component-description">Equal height layout</p><div class="component-demo"><wb-equalheight></wb-equalheight></div></article>
+                <article class="component-card" data-component="wb-exitscript" tabindex="0"><div class="component-name">&lt;wb-exitscript&gt;</div><p class="component-description">Exit warning script</p><div class="component-demo"><wb-exitscript></wb-exitscript></div></article>
+                <article class="component-card" data-component="wb-facebook" tabindex="0"><div class="component-name">&lt;wb-facebook&gt;</div><p class="component-description">Facebook integration</p><div class="component-demo"><wb-facebook></wb-facebook></div></article>
+                <article class="component-card" data-component="wb-favicon" tabindex="0"><div class="component-name">&lt;wb-favicon&gt;</div><p class="component-description">Favicon setter</p><div class="component-demo"><wb-favicon></wb-favicon></div></article>
+                <article class="component-card" data-component="wb-feedback" tabindex="0"><div class="component-name">&lt;wb-feedback&gt;</div><p class="component-description">Feedback form</p><div class="component-demo"><wb-feedback></wb-feedback></div></article>
+                <article class="component-card" data-component="wb-fieldflow" tabindex="0"><div class="component-name">&lt;wb-fieldflow&gt;</div><p class="component-description">Dynamic form flow</p><div class="component-demo"><wb-fieldflow></wb-fieldflow></div></article>
+                <article class="component-card" data-component="wb-filter" tabindex="0"><div class="component-name">&lt;wb-filter&gt;</div><p class="component-description">Content filtering</p><div class="component-demo"><wb-filter></wb-filter></div></article>
+                <article class="component-card" data-component="wb-footnotes" tabindex="0"><div class="component-name">&lt;wb-footnotes&gt;</div><p class="component-description">Footnote management</p><div class="component-demo"><wb-footnotes></wb-footnotes></div></article>
+                <article class="component-card" data-component="wb-formvalid" tabindex="0"><div class="component-name">&lt;wb-formvalid&gt;</div><p class="component-description">Form validation</p><div class="component-demo"><wb-formvalid></wb-formvalid></div></article>
+                <article class="component-card" data-component="wb-geomap" tabindex="0"><div class="component-name">&lt;wb-geomap&gt;</div><p class="component-description">Geographic map</p><div class="component-demo"><wb-geomap></wb-geomap></div></article>
+                <article class="component-card" data-component="wb-lightbox" tabindex="0"><div class="component-name">&lt;wb-lightbox&gt;</div><p class="component-description">Lightbox gallery</p><div class="component-demo"><wb-lightbox></wb-lightbox></div></article>
+                <article class="component-card" data-component="wb-lightbox-item" tabindex="0"><div class="component-name">&lt;wb-lightbox-item&gt;</div><p class="component-description">Lightbox item</p><div class="component-demo"><wb-lightbox-item></wb-lightbox-item></div></article>
+                <article class="component-card" data-component="wb-menu" tabindex="0"><div class="component-name">&lt;wb-menu&gt;</div><p class="component-description">WET menu container</p><div class="component-demo"><wb-menu></wb-menu></div></article>
+                <article class="component-card" data-component="wb-menu-item" tabindex="0"><div class="component-name">&lt;wb-menu-item&gt;</div><p class="component-description">Menu item</p><div class="component-demo"><wb-menu-item></wb-menu-item></div></article>
+                <article class="component-card" data-component="wb-multimedia" tabindex="0"><div class="component-name">&lt;wb-multimedia&gt;</div><p class="component-description">Multimedia player</p><div class="component-demo"><wb-multimedia></wb-multimedia></div></article>
+                <article class="component-card" data-component="wb-overlay" tabindex="0"><div class="component-name">&lt;wb-overlay&gt;</div><p class="component-description">Modal overlay</p><div class="component-demo"><wb-overlay></wb-overlay></div></article>
+                <article class="component-card" data-component="wb-pii-scrub" tabindex="0"><div class="component-name">&lt;wb-pii-scrub&gt;</div><p class="component-description">PII data scrubbing</p><div class="component-demo"><wb-pii-scrub></wb-pii-scrub></div></article>
+                <article class="component-card" data-component="wb-postback" tabindex="0"><div class="component-name">&lt;wb-postback&gt;</div><p class="component-description">Form postback handler</p><div class="component-demo"><wb-postback></wb-postback></div></article>
+                <article class="component-card" data-component="wb-prettify" tabindex="0"><div class="component-name">&lt;wb-prettify&gt;</div><p class="component-description">Code syntax highlighting</p><div class="component-demo"><wb-prettify></wb-prettify></div></article>
+                <article class="component-card" data-component="wb-randomize" tabindex="0"><div class="component-name">&lt;wb-randomize&gt;</div><p class="component-description">Content randomizer</p><div class="component-demo"><wb-randomize></wb-randomize></div></article>
+                <article class="component-card" data-component="wb-session-timeout" tabindex="0"><div class="component-name">&lt;wb-session-timeout&gt;</div><p class="component-description">Session timeout warning</p><div class="component-demo"><wb-session-timeout></wb-session-timeout></div></article>
+                <article class="component-card" data-component="wb-share" tabindex="0"><div class="component-name">&lt;wb-share&gt;</div><p class="component-description">Social sharing</p><div class="component-demo"><wb-share></wb-share></div></article>
+                <article class="component-card" data-component="wb-slideout" tabindex="0"><div class="component-name">&lt;wb-slideout&gt;</div><p class="component-description">Slideout panel</p><div class="component-demo"><wb-slideout></wb-slideout></div></article>
+                <article class="component-card" data-component="wb-stepsform" tabindex="0"><div class="component-name">&lt;wb-stepsform&gt;</div><p class="component-description">Multi-step form</p><div class="component-demo"><wb-stepsform></wb-stepsform></div></article>
+                <article class="component-card" data-component="wb-tables" tabindex="0"><div class="component-name">&lt;wb-tables&gt;</div><p class="component-description">Enhanced tables</p><div class="component-demo"><wb-tables></wb-tables></div></article>
+                <article class="component-card" data-component="wb-tagfilter" tabindex="0"><div class="component-name">&lt;wb-tagfilter&gt;</div><p class="component-description">Tag filtering</p><div class="component-demo"><wb-tagfilter></wb-tagfilter></div></article>
+                <article class="component-card" data-component="wb-texthighlight" tabindex="0"><div class="component-name">&lt;wb-texthighlight&gt;</div><p class="component-description">Text highlighting</p><div class="component-demo"><wb-texthighlight></wb-texthighlight></div></article>
+                <article class="component-card" data-component="wb-toggle" tabindex="0"><div class="component-name">&lt;wb-toggle&gt;</div><p class="component-description">Toggle visibility</p><div class="component-demo"><wb-toggle></wb-toggle></div></article>
+                <article class="component-card" data-component="wb-twitter" tabindex="0"><div class="component-name">&lt;wb-twitter&gt;</div><p class="component-description">Twitter integration</p><div class="component-demo"><wb-twitter></wb-twitter></div></article>
+                <article class="component-card" data-component="wb-zebra" tabindex="0"><div class="component-name">&lt;wb-zebra&gt;</div><p class="component-description">Zebra table striping</p><div class="component-demo"><wb-zebra></wb-zebra></div></article>
+            </div>
+        </section>
+        <div id="no-results" class="no-results hidden"><h3>No components found</h3><p>Try adjusting your search or filter</p></div>
+    </main>
+    <footer role="contentinfo"><div class="container"><p>&copy; 2025 EVA Sovereign UI - Government of Canada</p><p>100 production-ready Web Components</p></div></footer>
+    <script>
+        const searchInput=document.getElementById('search-input'),filterButtons=document.querySelectorAll('.filter-btn'),componentCards=document.querySelectorAll('.component-card'),categorySections=document.querySelectorAll('.category-section'),noResults=document.getElementById('no-results'),visibleCount=document.getElementById('visible-count'),langToggle=document.getElementById('lang-toggle');let currentFilter='all',currentSearch='',currentLang='en';langToggle.addEventListener('click',()=>{currentLang=currentLang==='en'?'fr':'en';document.documentElement.lang=currentLang;});filterButtons.forEach(btn=>{btn.addEventListener('click',()=>{filterButtons.forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentFilter=btn.dataset.filter;updateDisplay();});});searchInput.addEventListener('input',e=>{currentSearch=e.target.value.toLowerCase();updateDisplay();});function updateDisplay(){let visible=0;categorySections.forEach(section=>{const category=section.dataset.category;let sectionVisible=false;if(currentFilter==='all'||currentFilter===category){section.classList.remove('hidden');const cards=section.querySelectorAll('.component-card');cards.forEach(card=>{const name=card.dataset.component;if(name.includes(currentSearch)){card.classList.remove('hidden');visible++;sectionVisible=true;}else{card.classList.add('hidden');}});if(!sectionVisible)section.classList.add('hidden');}else{section.classList.add('hidden');}});visibleCount.textContent=visible;noResults.classList.toggle('hidden',visible>0);}componentCards.forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('expanded'));card.addEventListener('keypress',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();card.classList.toggle('expanded');}});});document.addEventListener('keydown',e=>{if(e.key==='Escape')componentCards.forEach(card=>card.classList.remove('expanded'));});updateDisplay();
+    </script>
+</body>
+</html>

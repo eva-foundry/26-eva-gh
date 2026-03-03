@@ -1,0 +1,527 @@
+````markdown
+# EVA IQ – Leveraging Microsoft Work IQ & Fabric IQ Concepts
+
+## 0. Purpose
+
+This document summarizes:
+
+- What **Microsoft Work IQ** and **Microsoft Fabric IQ** are.
+- The common **“IQ layer” pattern** behind them.
+- How **EVA** can implement its own equivalents:
+  - **EVA Work IQ** (work graph & context).
+  - **EVA Domain IQ** (ontology-driven data layer).
+- How EVA can later **integrate** with Microsoft’s IQ layers if/when licensed.
+- Concrete **next steps** for EVA 2.0.
+
+---
+
+## 1. Microsoft Work IQ – What It Is
+
+**Microsoft Work IQ** is the **intelligence layer behind Microsoft 365 Copilot and agents**.
+
+High-level characteristics:
+
+- Uses **Microsoft 365 work data** as input:
+  - Emails, documents, chats, meetings, calendars, and relationships.
+- Builds a **graph of how work happens**:
+  - Who works with whom, on which topics, using which artifacts.
+- Provides **context** to Copilot and agents, so they can:
+  - Understand user role, ongoing projects, and relevant content.
+  - Prioritize and filter responses based on what actually matters to the user.
+
+Conceptually:
+
+> **Microsoft 365 Work Graph + semantics + policies → Work IQ → Copilot & agents.**
+
+---
+
+## 2. Microsoft Fabric IQ – What It Is
+
+**Microsoft Fabric IQ** is an **intelligence layer within Microsoft Fabric / OneLake** that focuses on **business data and operations**.
+
+High-level characteristics:
+
+- Builds a **semantic view / ontology** over enterprise data:
+  - Business entities (Customer, Case, Claim, Benefit, Appeal, etc.).
+  - Relationships and metrics (SLA, outcomes, volumes, thresholds).
+- Provides a **unified business vocabulary** on top of tables and files.
+- Powers **“operational agents”** that:
+  - Monitor data and rules (SLAs, data quality, thresholds).
+  - Suggest or trigger actions in workflows (with human-in-the-loop).
+
+Conceptually:
+
+> **OneLake/Fabric data + ontology + rules → Fabric IQ → data & operational agents.**
+
+---
+
+## 3. The Shared “IQ Layer” Pattern
+
+Across Microsoft’s story:
+
+- **Work IQ** = intelligence about **how the organization works**  
+  (people, documents, meetings, collaboration patterns).
+
+- **Fabric IQ** = intelligence about **what the business is and how it runs**  
+  (business entities, metrics, processes, rules).
+
+Together, they represent:
+
+> A **context engine** that sits under Copilot/agents, not a user-facing app.
+
+EVA is already evolving toward a similar model:
+
+- **EVA Foundation** as the “brain” (RAG + services).
+- **EVA DA, EVA Chat, AssistMe, Jurisprudence, KM** as different faces.
+- **APIM** as the shared API surface.
+
+This gives a natural place to define **“EVA IQ”** as the internal equivalent.
+
+---
+
+## 4. EVA IQ – Conceptual Overview
+
+EVA can borrow the pattern and create two complementary internal services:
+
+1. **EVA Work IQ**  
+   - Inspired by **Work IQ**.  
+   - Focus: **who is working on what, using which EVA spaces and artifacts**.
+
+2. **EVA Domain IQ**  
+   - Inspired by **Fabric IQ**.  
+   - Focus: **business/domain entities and data semantics for RAG & agents**.
+
+Both live **under** EVA Chat, EVA DA, and future EVA agents, exposed via **APIM**.
+
+---
+
+## 5. EVA Work IQ – EVA’s “Work Graph”
+
+### 5.1. Scope
+
+**EVA Work IQ** (or *EVA Work Graph*) captures:
+
+- **People**
+  - Users, roles, teams, branches.
+- **Projects & Domains**
+  - EVA DA project spaces (Eric, CPP-D, Jurisprudence, AssistMe, KM, etc.).
+  - Ownership, cost centers, domains, sensitivity.
+- **Artifacts**
+  - Documents indexed by RAG.
+  - Domain Assistant project configs.
+  - Prompt sets and specialized tools/endpoints.
+- **Relationships**
+  - Which users use which projects and artifacts.
+  - Which documents are central to which project.
+  - Which prompts/tools are frequently used for which tasks.
+
+The initial version can be **metadata-only** (no raw content), staying safely within EVA’s governance and privacy constraints.
+
+---
+
+### 5.2. Data Sources
+
+Potential sources for building EVA Work IQ:
+
+- **EVA DA Project Registry**
+  - Project IDs, titles, owners, Sponsors, cost centers.
+  - Domain classifications and tags.
+- **EVA Usage Telemetry (aggregated)**
+  - Which project spaces are used by which roles.
+  - Popular queries (topic tags, not raw PII text).
+- **EVA Configuration**
+  - Registered tools, prompts, RAG spaces, and their configurations.
+
+Later, optionally (subject to approvals and governance):
+
+- **M365 Graph Metadata** (titles, owners, sites, not content):
+  - SharePoint / OneDrive: key document metadata.
+  - Teams: channels linked to specific projects.
+
+---
+
+### 5.3. Architecture – Microservice & Storage
+
+Create a new microservice:
+
+- **Service name:** `eva-iq-work`
+- **Responsibilities:**
+  - Maintain the EVA Work Graph (people, projects, artifacts, relationships).
+  - Periodically sync from:
+    - EVA DA registry and config.
+    - Telemetry/analytics store.
+    - Approved external metadata sources (e.g., M365 Graph, if authorized).
+  - Provide fast query APIs for “context lookups.”
+
+**Storage options** (pick one based on Infra preferences):
+
+- Graph database (e.g., Cosmos DB Gremlin / Neo4j equivalent).
+- Relational tables with an abstraction layer.
+- Document-based model (Cosmos DB) with an in-memory graph cache.
+
+---
+
+### 5.4. EVA Work IQ – API Surface (via APIM)
+
+Expose **read-focused APIs** (no destructive operations):
+
+```http
+GET /iq/work/context?userId={userId}&projectId={projectId}
+````
+
+Returns:
+
+* User roles and domains.
+* Project metadata (name, owner, cost center, tags).
+* Top related artifacts (RAG spaces, key docs, tools).
+
+```http
+GET /iq/work/related?docId={docId}
+```
+
+Returns:
+
+* Related projects, owners, subject-matter experts.
+* Other frequently co-accessed artifacts.
+
+```http
+POST /iq/work/feedback
+Content-Type: application/json
+
+{
+  "userId": "u123",
+  "projectId": "proj_cppd",
+  "entityType": "document",
+  "entityId": "doc_456",
+  "feedbackType": "helpful" | "not_helpful"
+}
+```
+
+Used to refine graph and ranking over time.
+
+---
+
+### 5.5. Integrating Work IQ into EVA Chat & EVA DA
+
+**In EVA Chat:**
+
+1. When a conversation starts:
+
+   * Identify `userId` and optional `projectId` (if chosen from UI or inferred).
+   * Call `/iq/work/context`.
+2. Inject a **“Work Context” block into the system prompt**, e.g.:
+
+> The user is a CPP-D adjudicator working mostly with ERIC and AssistMe.
+> Their primary EVA project spaces:
+>
+> * CPP-D Domain Assistant
+> * ERIC RAG space
+> * Jurisprudence (appeals reference)
+>
+> Prefer CPP-D and ERIC content for this session unless explicitly told otherwise.
+
+**In EVA DA:**
+
+* Use Work IQ to:
+
+  * Suggest the **default project space** based on the user and context.
+  * Highlight **recommended datasets and tools**.
+  * Offer quick navigation: “You often work on: Jurisprudence, CPP-D, KM.”
+
+---
+
+### 5.6. Governance & Privacy
+
+To remain aligned with EVA’s non-automation, responsible-use posture:
+
+* Start with **metadata-only** (no message content, no PII).
+* Treat EVA Work IQ as a **read-only assistant**; it **does not** take actions.
+* Log all IQ API calls for **auditability**.
+* Align with AI governance (NuEnergy/MTI, AI RACI, ATO):
+
+  * Add Work IQ to the list of components that must be monitored.
+  * Document what data is ingested, retention, and access control.
+* Ensure **RBAC**: only authorized users can see context about specific projects.
+
+---
+
+## 6. EVA Domain IQ – EVA’s “Fabric-style” Ontology Layer
+
+### 6.1. Purpose
+
+**EVA Domain IQ** is the **semantic/ontology layer** that:
+
+* Turns **domain knowledge** into structured entities and relationships.
+* Connects those entities to:
+
+  * RAG indexes,
+  * Databases,
+  * APIs,
+  * Other systems.
+
+It allows EVA to answer questions not only by **searching unstructured text**, but also by **reasoning about structured entities** (cases, appeals, claims, decisions, etc.).
+
+---
+
+### 6.2. Domain Ontologies
+
+For each major domain, define an **ontology**:
+
+#### Example: Jurisprudence
+
+* **Entities**
+
+  * `Appeal`, `Decision`, `Claimant` (pseudonymized), `BenefitType`, `Outcome`, `Statute`, `Panel`, `DecisionLevel`.
+* **Relationships**
+
+  * `Appeal` → `Decision`
+  * `Appeal` → `BenefitType`
+  * `Decision` → `Statute` (cited)
+* **Attributes / Metrics**
+
+  * Outcome (allowed/denied)
+  * DecisionDate
+  * AppealLevel
+  * Key issues, referenced jurisprudence.
+
+#### Example: CPP-D
+
+* **Entities**
+
+  * `Claim`, `MedicalReport`, `FunctionalLimitation`, `AdjudicationDecision`,
+    `ProgramRule`, `BenefitStartDate`.
+* **Relationships**
+
+  * `Claim` → `MedicalReport` (1..N)
+  * `Claim` → `AdjudicationDecision`
+  * `AdjudicationDecision` → `ProgramRule` (applied).
+* **Attributes / Metrics**
+
+  * Severity, duration, employability, SLA dates, status, steps.
+
+#### Example: AssistMe / KM
+
+* **Entities**
+
+  * `KnowledgeArticle`, `Step`, `PolicyReference`, `SystemScreen`, `ExceptionScenario`.
+* **Relationships**
+
+  * `KnowledgeArticle` → `PolicyReference`
+  * `KnowledgeArticle` → `SystemScreen`
+  * `Step` → `ExceptionScenario`.
+* **Attributes**
+
+  * Channel (web, phone, in-person)
+  * Target role (agent, manager, adjudicator)
+  * Version, validity period.
+
+---
+
+### 6.3. EVA Domain IQ – Data Model
+
+Represent each ontology in a **canonical schema**, e.g. a JSON/YAML definition:
+
+```yaml
+domain: cppd
+entities:
+  - name: Claim
+    keys: [ClaimId]
+    attributes:
+      - { name: Status, type: string }
+      - { name: IntakeDate, type: date }
+      - { name: BenefitStartDate, type: date }
+    relations:
+      - { name: Decisions, target: AdjudicationDecision, type: one_to_many }
+
+  - name: AdjudicationDecision
+    keys: [DecisionId]
+    attributes:
+      - { name: Outcome, type: string }
+      - { name: DecisionDate, type: date }
+      - { name: AppliedRuleIds, type: array }
+```
+
+Also define **mappings**:
+
+* From entities to **physical sources**:
+
+  * SQL tables, SharePoint lists, Fabric datasets, AI indexes, APIs.
+* From **source-specific fields** to entity attributes.
+
+---
+
+### 6.4. EVA Domain IQ Service
+
+Create a microservice:
+
+* **Service name:** `eva-iq-domain` (or `eva-iq-data`).
+* **Responsibilities:**
+
+  * Store and serve ontologies for each domain.
+  * Resolve queries from “semantic intent” → actual data sources.
+  * Provide **explanations** of how metrics or answers are derived.
+
+**Core APIs (via APIM):**
+
+```http
+GET /iq/domain/entities?domain={domainId}
+```
+
+Returns entity definitions for the domain (attributes, relationships).
+
+```http
+POST /iq/domain/query
+Content-Type: application/json
+
+{
+  "domain": "cppd",
+  "intent": "cases_near_sla",
+  "filters": {
+    "Region": "Quebec"
+  }
+}
+```
+
+The service:
+
+* Interprets the intent using the ontology.
+* Queries underlying structured data.
+* Returns normalized results to EVA (e.g., list of claims with SLA risk).
+
+```http
+POST /iq/domain/explain
+Content-Type: application/json
+
+{
+  "domain": "cppd",
+  "metric": "SLA_BreachRisk",
+  "context": {
+    "ClaimId": "CLM-12345"
+  }
+}
+```
+
+Returns:
+
+* A structured explanation of how the metric is calculated (rules, thresholds, fields).
+
+---
+
+### 6.5. Using Domain IQ in EVA RAG and Agents
+
+**For RAG:**
+
+1. Parse the user question.
+2. Use Domain IQ to **identify entities** and metrics involved.
+3. Fetch:
+
+   * **Textual context** (RAG chunks).
+   * **Structured context** (entities/metrics via Domain IQ).
+4. Combine both in the prompt so the model can:
+
+   * Reference the *actual numbers / statuses*.
+   * Explain decisions using both **policy** and **data**.
+
+**For agents (without full automation):**
+
+* Implement **“operational agents”** as **alerting + suggestion systems**:
+
+  * `EVA CPP-D Agent`: monitors SLAs via Domain IQ, flags high-risk claims, and drafts recommended next steps.
+  * `EVA Jurisprudence Agent`: detects new decisions that impact a rule and drafts updated guidance text.
+* All outputs go into a **review queue** in EVA LiveOps or admin UI:
+
+  * Human reviews, edits, and publishes.
+  * Maintains **human-in-the-loop** and non-automation stance.
+
+---
+
+## 7. Future Integration with Microsoft Work IQ / Fabric IQ
+
+If/when ESDC adopts **Work IQ** and/or **Fabric IQ**:
+
+### 7.1. Treat Them as External IQ Sources
+
+* EVA can **call Work IQ APIs** as an additional work-context provider.
+* EVA can **call Fabric IQ APIs** as an additional data/ontology provider.
+
+Example:
+
+* **EVA Work IQ** uses local EVA graph + Work IQ metadata to enrich user context.
+* **EVA Domain IQ** uses EVA ontologies plus Fabric IQ’s semantic models for deeper integration with Fabric datasets.
+
+### 7.2. EVA’s Value-add on Top
+
+Even with Microsoft IQ layers available, EVA provides:
+
+* **Protected B alignment** and GoC-specific constraints.
+* **ESDC-specific prompts, policies, and guardrails**.
+* **Bilingual** responses and UI (EN/FR).
+* **Accessibility & personalization** (WCAG AA, ESDC standards).
+* **Monitoring, auditing, and MTI-style governance** integrated across all EVA services.
+
+---
+
+## 8. Recommended Next Steps for EVA 2.0
+
+1. **Define EVA IQ as a formal capability**
+
+   * Short section in EVA 2.0 vision/PRD:
+
+     * “EVA IQ = Work IQ + Domain IQ layers that provide contextual and semantic intelligence to all EVA solutions.”
+
+2. **Pilot EVA Work IQ (metadata-only)**
+
+   * Start with:
+
+     * EVA DA project registry.
+     * Roles and domains of users.
+     * Basic usage telemetry (aggregated).
+   * Implement `eva-iq-work` service and `/iq/work/context` API.
+   * Wire it into EVA Chat’s system prompts and EVA DA’s project suggestions.
+
+3. **Pilot EVA Domain IQ for One Domain**
+
+   * Choose **Jurisprudence** or **CPP-D** as the first domain.
+   * Define entities, relationships, metrics, and data-source mappings.
+   * Implement `eva-iq-domain` service and basic `/iq/domain/entities` and `/iq/domain/query` APIs.
+   * Integrate into one EVA DA project space as a POC.
+
+4. **Document Governance & Privacy Boundaries**
+
+   * Metadata-only for v1 of Work IQ.
+   * Explicit description of:
+
+     * What is ingested.
+     * RBAC enforcement.
+     * Logging and audit.
+   * Map EVA IQ components into:
+
+     * AI risk registers.
+     * ATO documentation.
+     * NuEnergy MTI scoring.
+
+5. **Plan for Progressive Enhancement**
+
+   * Work IQ:
+
+     * Later phases can add richer relationships and (if approved) selected M365 metadata.
+   * Domain IQ:
+
+     * Gradually cover more domains (AssistMe, KM, ERIC, etc.).
+     * Add more complex rules and explanation capabilities.
+   * Agent Layer:
+
+     * Start with alerting and suggestions.
+     * Plan for more advanced agents once governance is mature.
+
+---
+
+## 9. Summary
+
+* **Microsoft Work IQ** and **Fabric IQ** are **intelligence layers** that sit *under* Copilot and agents, providing **work context** and **business/data context**.
+* EVA can implement its own equivalents:
+
+  * **EVA Work IQ**: a work graph capturing relationships between users, projects, and EVA artifacts.
+  * **EVA Domain IQ**: an ontology and rule layer for domains like CPP-D and Jurisprudence.
+* Both are exposed via **APIM**, consumed by **EVA Chat, EVA DA, and future agents**, and governed within EVA’s existing privacy and accountability framework.
+* If/when Microsoft IQ services are available at ESDC, EVA can **integrate them as additional IQ sources** while still providing ESDC-specific value and governance.

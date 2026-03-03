@@ -1,0 +1,4149 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{280}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{Scott et~al.}{2023}]{scott2023you}
+\begin{bchapter}
+\bauthor{\bsnm{Scott}, \binits{A.E.}},
+\bauthor{\bsnm{Neumann}, \binits{D.}},
+\bauthor{\bsnm{Niess}, \binits{J.}},
+\bauthor{\bsnm{Wo{\'z}niak}, \binits{P.W.}}:
+\bctitle{Do you mind? user perceptions of machine consciousness}.
+In: \bbtitle{Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems},
+pp. \bfpage{1}--\blpage{19}
+(\byear{2023})
+\end{bchapter}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Keeling et~al.}{2024}]{keeling2024can}
+\begin{botherref}
+\oauthor{\bsnm{Keeling}, \binits{G.}},
+\oauthor{\bsnm{Street}, \binits{W.}},
+\oauthor{\bsnm{Stachaczyk}, \binits{M.}},
+\oauthor{\bsnm{Zakharova}, \binits{D.}},
+\oauthor{\bsnm{Comsa}, \binits{I.M.}},
+\oauthor{\bsnm{Sakovych}, \binits{A.}},
+\oauthor{\bsnm{Logothetis}, \binits{I.}},
+\oauthor{\bsnm{Zhang}, \binits{Z.}},
+\oauthor{\bsnm{Birch}, \binits{J.}}, et al.:
+Can llms make trade-offs involving stipulated pain and pleasure states?
+arXiv preprint arXiv:2411.02432
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Flavell}{1979}]{flavell1979metacognition}
+\begin{barticle}
+\bauthor{\bsnm{Flavell}, \binits{J.H.}}:
+\batitle{Metacognition and cognitive monitoring: A new area of cognitive--developmental inquiry.}
+\bjtitle{American psychologist}
+\bvolume{34}(\bissue{10}),
+\bfpage{906}
+(\byear{1979})
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Duval and Wicklund}{1972}]{duval1972objective}
+\begin{bbook}
+\bauthor{\bsnm{Duval}, \binits{S.}},
+\bauthor{\bsnm{Wicklund}, \binits{R.A.}}:
+\bbtitle{A Theory of Objective Self Awareness}.
+\bpublisher{Academic Press},
+\blocation{New York}
+(\byear{1972})
+\end{bbook}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Lieberman}{2007}]{lieberman2007social}
+\begin{barticle}
+\bauthor{\bsnm{Lieberman}, \binits{M.D.}}:
+\batitle{Social cognitive neuroscience: a review of core processes}.
+\bjtitle{Annu. Rev. Psychol.}
+\bvolume{58}(\bissue{1}),
+\bfpage{259}--\blpage{289}
+(\byear{2007})
+\end{barticle}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Endsley}{1995}]{endsley1995toward}
+\begin{barticle}
+\bauthor{\bsnm{Endsley}, \binits{M.R.}}:
+\batitle{Toward a theory of situation awareness in dynamic systems}.
+\bjtitle{Human factors}
+\bvolume{37}(\bissue{1}),
+\bfpage{32}--\blpage{64}
+(\byear{1995})
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Didolkar et~al.}{2024}]{Didolkar2024}
+\begin{barticle}
+\bauthor{\bsnm{Didolkar}, \binits{A.}},
+\bauthor{\bsnm{Goyal}, \binits{A.}},
+\bauthor{\bsnm{Ke}, \binits{N.R.}},
+\bauthor{\bsnm{Guo}, \binits{S.}},
+\bauthor{\bsnm{Valko}, \binits{M.}},
+\bauthor{\bsnm{Lillicrap}, \binits{T.}},
+\bauthor{\bsnm{Jimenez~Rezende}, \binits{D.}},
+\bauthor{\bsnm{Bengio}, \binits{Y.}},
+\bauthor{\bsnm{Mozer}, \binits{M.C.}},
+\bauthor{\bsnm{Arora}, \binits{S.}}:
+\batitle{Metacognitive capabilities of llms: An exploration in mathematical problem solving}.
+\bjtitle{Advances in Neural Information Processing Systems}
+\bvolume{37},
+\bfpage{19783}--\blpage{19812}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Renze and Guven}{2024}]{renze2024self}
+\begin{botherref}
+\oauthor{\bsnm{Renze}, \binits{M.}},
+\oauthor{\bsnm{Guven}, \binits{E.}}:
+Self-reflection in llm agents: Effects on problem-solving performance.
+arXiv preprint arXiv:2405.06682
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Steyvers et~al.}{2025}]{steyvers2025large}
+\begin{botherref}
+\oauthor{\bsnm{Steyvers}, \binits{M.}},
+\oauthor{\bsnm{Tejeda}, \binits{H.}},
+\oauthor{\bsnm{Kumar}, \binits{A.}},
+\oauthor{\bsnm{Belem}, \binits{C.}},
+\oauthor{\bsnm{Karny}, \binits{S.}},
+\oauthor{\bsnm{Hu}, \binits{X.}},
+\oauthor{\bsnm{Mayer}, \binits{L.W.}},
+\oauthor{\bsnm{Smyth}, \binits{P.}}:
+What large language models know and what people think they know.
+Nature Machine Intelligence,
+1--11
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{Wilf et~al.}{2024}]{wilf2024think}
+\begin{bchapter}
+\bauthor{\bsnm{Wilf}, \binits{A.}},
+\bauthor{\bsnm{Lee}, \binits{S.}},
+\bauthor{\bsnm{Liang}, \binits{P.P.}},
+\bauthor{\bsnm{Morency}, \binits{L.-P.}}:
+\bctitle{Think twice: Perspective-taking improves large language models’ theory-of-mind capabilities}.
+In: \bbtitle{Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+pp. \bfpage{8292}--\blpage{8308}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Huang et~al.}{2023}]{huanglarge}
+\begin{bchapter}
+\bauthor{\bsnm{Huang}, \binits{J.}},
+\bauthor{\bsnm{Chen}, \binits{X.}},
+\bauthor{\bsnm{Mishra}, \binits{S.}},
+\bauthor{\bsnm{Zheng}, \binits{H.S.}},
+\bauthor{\bsnm{Yu}, \binits{A.W.}},
+\bauthor{\bsnm{Song}, \binits{X.}},
+\bauthor{\bsnm{Zhou}, \binits{D.}}:
+\bctitle{Large language models cannot self-correct reasoning yet}.
+In: \bbtitle{The Twelfth International Conference on Learning Representations}
+(\byear{2023})
+\end{bchapter}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Kosinski}{2024}]{Kosinski2024}
+\begin{barticle}
+\bauthor{\bsnm{Kosinski}, \binits{M.}}:
+\batitle{Evaluating large language models in theory of mind tasks}.
+\bjtitle{Proceedings of the National Academy of Sciences}
+\bvolume{121}(\bissue{45}),
+\bfpage{2405460121}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Van~Dis et~al.}{2023}]{van2023chatgpt}
+\begin{barticle}
+\bauthor{\bsnm{Van~Dis}, \binits{E.A.}},
+\bauthor{\bsnm{Bollen}, \binits{J.}},
+\bauthor{\bsnm{Zuidema}, \binits{W.}},
+\bauthor{\bsnm{Van~Rooij}, \binits{R.}},
+\bauthor{\bsnm{Bockting}, \binits{C.L.}}:
+\batitle{Chatgpt: five priorities for research}.
+\bjtitle{Nature}
+\bvolume{614}(\bissue{7947}),
+\bfpage{224}--\blpage{226}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Shanahan}{2024}]{shanahan2024talking}
+\begin{barticle}
+\bauthor{\bsnm{Shanahan}, \binits{M.}}:
+\batitle{Talking about large language models}.
+\bjtitle{Communications of the ACM}
+\bvolume{67}(\bissue{2}),
+\bfpage{68}--\blpage{79}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 15
+\bibitem[\protect\citeauthoryear{Butlin et~al.}{2023}]{butlin2023consciousness}
+\begin{botherref}
+\oauthor{\bsnm{Butlin}, \binits{P.}},
+\oauthor{\bsnm{Long}, \binits{R.}},
+\oauthor{\bsnm{Elmoznino}, \binits{E.}},
+\oauthor{\bsnm{Bengio}, \binits{Y.}},
+\oauthor{\bsnm{Birch}, \binits{J.}},
+\oauthor{\bsnm{Constant}, \binits{A.}},
+\oauthor{\bsnm{Deane}, \binits{G.}},
+\oauthor{\bsnm{Fleming}, \binits{S.M.}},
+\oauthor{\bsnm{Frith}, \binits{C.}},
+\oauthor{\bsnm{Ji}, \binits{X.}}, et al.:
+Consciousness in artificial intelligence: insights from the science of consciousness.
+arXiv preprint arXiv:2308.08708
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 16
+\bibitem[\protect\citeauthoryear{Ward}{2025}]{ward2025towards}
+\begin{botherref}
+\oauthor{\bsnm{Ward}, \binits{F.R.}}:
+Towards a theory of ai personhood.
+arXiv preprint arXiv:2501.13533
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 17
+\bibitem[\protect\citeauthoryear{Metzinger}{2021}]{metzinger2021artificial}
+\begin{barticle}
+\bauthor{\bsnm{Metzinger}, \binits{T.}}:
+\batitle{Artificial suffering: An argument for a global moratorium on synthetic phenomenology}.
+\bjtitle{Journal of Artificial Intelligence and Consciousness}
+\bvolume{8}(\bissue{01}),
+\bfpage{43}--\blpage{66}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 18
+\bibitem[\protect\citeauthoryear{{American Psychological Association}}{n.d.}]{apa_awareness}
+\begin{botherref}
+\oauthor{\bsnm{{American Psychological Association}}}:
+awareness.
+\emph{APA Dictionary of Psychology}.
+Retrieved April 17, 2025
+(n.d.).
+\url{https://dictionary.apa.org/awareness}
+\end{botherref}
+\endbibitem
+
+%%% 19
+\bibitem[\protect\citeauthoryear{Yates}{1985}]{yates1985content}
+\begin{barticle}
+\bauthor{\bsnm{Yates}, \binits{J.F.}}:
+\batitle{The content of awareness is a model of the world}.
+\bjtitle{Psychological Review}
+\bvolume{92}(\bissue{2}),
+\bfpage{249}--\blpage{284}
+(\byear{1985})
+\doiurl{10.1037/0033-295X.92.2.249}
+\end{barticle}
+\endbibitem
+
+%%% 20
+\bibitem[\protect\citeauthoryear{Turing}{1950}]{turing1950mind}
+\begin{barticle}
+\bauthor{\bsnm{Turing}, \binits{A.M.}}:
+\batitle{Mind}.
+\bjtitle{Mind}
+\bvolume{59}(\bissue{236}),
+\bfpage{433}--\blpage{460}
+(\byear{1950})
+\end{barticle}
+\endbibitem
+
+%%% 21
+\bibitem[\protect\citeauthoryear{Nagel}{1974}]{nagel1974bat}
+\begin{barticle}
+\bauthor{\bsnm{Nagel}, \binits{T.}}:
+\batitle{What is it like to be a bat?}
+\bjtitle{The Philosophical Review}
+\bvolume{83}(\bissue{4}),
+\bfpage{435}--\blpage{450}
+(\byear{1974})
+\doiurl{10.2307/2183914}
+\end{barticle}
+\endbibitem
+
+%%% 22
+\bibitem[\protect\citeauthoryear{Crick et~al.}{1990}]{crick1990towards}
+\begin{bchapter}
+\bauthor{\bsnm{Crick}, \binits{F.}},
+\bauthor{\bsnm{Koch}, \binits{C.}}, \betal:
+\bctitle{Towards a neurobiological theory of consciousness}.
+In: \bbtitle{Seminars in the Neurosciences},
+vol. \bseriesno{2},
+p. \bfpage{203}
+(\byear{1990})
+\end{bchapter}
+\endbibitem
+
+%%% 23
+\bibitem[\protect\citeauthoryear{Block}{1995}]{block1995confusion}
+\begin{barticle}
+\bauthor{\bsnm{Block}, \binits{N.}}:
+\batitle{On a confusion about a function of consciousness}.
+\bjtitle{Behavioral and brain sciences}
+\bvolume{18}(\bissue{2}),
+\bfpage{227}--\blpage{247}
+(\byear{1995})
+\end{barticle}
+\endbibitem
+
+%%% 24
+\bibitem[\protect\citeauthoryear{Toglia and Kirk}{2000}]{toglia2000understanding}
+\begin{barticle}
+\bauthor{\bsnm{Toglia}, \binits{J.}},
+\bauthor{\bsnm{Kirk}, \binits{U.}}:
+\batitle{Understanding awareness deficits following brain injury}.
+\bjtitle{NeuroRehabilitation}
+\bvolume{15}(\bissue{1}),
+\bfpage{57}--\blpage{70}
+(\byear{2000})
+\end{barticle}
+\endbibitem
+
+%%% 25
+\bibitem[\protect\citeauthoryear{Newen and Vogeley}{2003}]{newen2003self}
+\begin{barticle}
+\bauthor{\bsnm{Newen}, \binits{A.}},
+\bauthor{\bsnm{Vogeley}, \binits{K.}}:
+\batitle{Self-representation: Searching for a neural signature of self-consciousness}.
+\bjtitle{Consciousness and cognition}
+\bvolume{12}(\bissue{4}),
+\bfpage{529}--\blpage{543}
+(\byear{2003})
+\end{barticle}
+\endbibitem
+
+%%% 26
+\bibitem[\protect\citeauthoryear{Morin}{2006}]{Morin2006selfawareness}
+\begin{barticle}
+\bauthor{\bsnm{Morin}, \binits{A.}}:
+\batitle{Levels of consciousness and self-awareness: A comparison and integration of various neurocognitive views}.
+\bjtitle{Consciousness and Cognition}
+\bvolume{15}(\bissue{2}),
+\bfpage{358}--\blpage{371}
+(\byear{2006})
+\end{barticle}
+\endbibitem
+
+%%% 27
+\bibitem[\protect\citeauthoryear{Derrien et~al.}{2022}]{derrien2022nature}
+\begin{barticle}
+\bauthor{\bsnm{Derrien}, \binits{D.}},
+\bauthor{\bsnm{Garric}, \binits{C.}},
+\bauthor{\bsnm{Sergent}, \binits{C.}},
+\bauthor{\bsnm{Chokron}, \binits{S.}}:
+\batitle{The nature of blindsight: implications for current theories of consciousness}.
+\bjtitle{Neuroscience of Consciousness}
+\bvolume{2022}(\bissue{1}),
+\bfpage{043}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 28
+\bibitem[\protect\citeauthoryear{Dehaene et~al.}{2017}]{Dehaene2017}
+\begin{barticle}
+\bauthor{\bsnm{Dehaene}, \binits{S.}},
+\bauthor{\bsnm{Lau}, \binits{H.}},
+\bauthor{\bsnm{Kouider}, \binits{S.}}:
+\batitle{What is consciousness, and could machines have it?}
+\bjtitle{Science}
+\bvolume{358}(\bissue{6362}),
+\bfpage{486}--\blpage{492}
+(\byear{2017})
+\end{barticle}
+\endbibitem
+
+%%% 29
+\bibitem[\protect\citeauthoryear{Baars}{1993}]{baars1993cognitive}
+\begin{bbook}
+\bauthor{\bsnm{Baars}, \binits{B.J.}}:
+\bbtitle{A Cognitive Theory of Consciousness}.
+\bpublisher{Cambridge University Press},
+\blocation{Cambridge}
+(\byear{1993})
+\end{bbook}
+\endbibitem
+
+%%% 30
+\bibitem[\protect\citeauthoryear{Baars}{2002}]{baars2002conscious}
+\begin{barticle}
+\bauthor{\bsnm{Baars}, \binits{B.J.}}:
+\batitle{The conscious access hypothesis: origins and recent evidence}.
+\bjtitle{Trends in cognitive sciences}
+\bvolume{6}(\bissue{1}),
+\bfpage{47}--\blpage{52}
+(\byear{2002})
+\end{barticle}
+\endbibitem
+
+%%% 31
+\bibitem[\protect\citeauthoryear{Lou et~al.}{2017}]{lou2017towards}
+\begin{barticle}
+\bauthor{\bsnm{Lou}, \binits{H.C.}},
+\bauthor{\bsnm{Changeux}, \binits{J.-P.}},
+\bauthor{\bsnm{Rosenstand}, \binits{A.}}:
+\batitle{Towards a cognitive neuroscience of self-awareness}.
+\bjtitle{Neuroscience \& Biobehavioral Reviews}
+\bvolume{83},
+\bfpage{765}--\blpage{773}
+(\byear{2017})
+\end{barticle}
+\endbibitem
+
+%%% 32
+\bibitem[\protect\citeauthoryear{Chalmers}{1995}]{chalmers1995facing}
+\begin{barticle}
+\bauthor{\bsnm{Chalmers}, \binits{D.J.}}:
+\batitle{Facing up to the problem of consciousness}.
+\bjtitle{Journal of consciousness studies}
+\bvolume{2}(\bissue{3}),
+\bfpage{200}--\blpage{219}
+(\byear{1995})
+\end{barticle}
+\endbibitem
+
+%%% 33
+\bibitem[\protect\citeauthoryear{Chalmers}{2023}]{chalmers2023could}
+\begin{botherref}
+\oauthor{\bsnm{Chalmers}, \binits{D.J.}}:
+Could a large language model be conscious?
+arXiv preprint arXiv:2303.07103
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 34
+\bibitem[\protect\citeauthoryear{Tulving}{1985}]{tulving1985memory}
+\begin{barticle}
+\bauthor{\bsnm{Tulving}, \binits{E.}}:
+\batitle{Memory and consciousness.}
+\bjtitle{Canadian Psychology/Psychologie canadienne}
+\bvolume{26}(\bissue{1}),
+\bfpage{1}
+(\byear{1985})
+\end{barticle}
+\endbibitem
+
+%%% 35
+\bibitem[\protect\citeauthoryear{Vandekerckhove et~al.}{2014}]{vandekerckhove2014emergence}
+\begin{barticle}
+\bauthor{\bsnm{Vandekerckhove}, \binits{M.}},
+\bauthor{\bsnm{Bulnes}, \binits{L.C.}},
+\bauthor{\bsnm{Panksepp}, \binits{J.}}:
+\batitle{The emergence of primary anoetic consciousness in episodic memory}.
+\bjtitle{Frontiers in Behavioral Neuroscience}
+\bvolume{7},
+\bfpage{210}
+(\byear{2014})
+\end{barticle}
+\endbibitem
+
+%%% 36
+\bibitem[\protect\citeauthoryear{Nelson}{1990}]{nelson1990metamemory}
+\begin{bchapter}
+\bauthor{\bsnm{Nelson}, \binits{T.O.}}:
+\bctitle{Metamemory: A theoretical framework and new findings}.
+In: \bbtitle{Psychology of Learning and Motivation}
+vol. \bseriesno{26},
+pp. \bfpage{125}--\blpage{173}.
+\bpublisher{Elsevier},
+\blocation{San Diego}
+(\byear{1990})
+\end{bchapter}
+\endbibitem
+
+%%% 37
+\bibitem[\protect\citeauthoryear{Rosenthal}{1986}]{Rosenthal1986-ROSTCO}
+\begin{barticle}
+\bauthor{\bsnm{Rosenthal}, \binits{D.M.}}:
+\batitle{Two concepts of consciousness}.
+\bjtitle{Philosophical Studies}
+\bvolume{49}(\bissue{May}),
+\bfpage{329}--\blpage{59}
+(\byear{1986})
+\doiurl{10.1007/bf00355521}
+\end{barticle}
+\endbibitem
+
+%%% 38
+\bibitem[\protect\citeauthoryear{Nelson}{1996}]{nelson1996consciousness}
+\begin{barticle}
+\bauthor{\bsnm{Nelson}, \binits{T.O.}}:
+\batitle{Consciousness and metacognition.}
+\bjtitle{American psychologist}
+\bvolume{51}(\bissue{2}),
+\bfpage{102}
+(\byear{1996})
+\end{barticle}
+\endbibitem
+
+%%% 39
+\bibitem[\protect\citeauthoryear{Kornell}{2009}]{kornell2009metacognition}
+\begin{barticle}
+\bauthor{\bsnm{Kornell}, \binits{N.}}:
+\batitle{Metacognition in humans and animals}.
+\bjtitle{Current Directions in Psychological Science}
+\bvolume{18}(\bissue{1}),
+\bfpage{11}--\blpage{15}
+(\byear{2009})
+\end{barticle}
+\endbibitem
+
+%%% 40
+\bibitem[\protect\citeauthoryear{Fleming and Lau}{2014}]{fleming2014measure}
+\begin{barticle}
+\bauthor{\bsnm{Fleming}, \binits{S.M.}},
+\bauthor{\bsnm{Lau}, \binits{H.C.}}:
+\batitle{How to measure metacognition}.
+\bjtitle{Frontiers in human neuroscience}
+\bvolume{8},
+\bfpage{443}
+(\byear{2014})
+\end{barticle}
+\endbibitem
+
+%%% 41
+\bibitem[\protect\citeauthoryear{Efklides}{2001}]{efklides2001metacognitive}
+\begin{bchapter}
+\bauthor{\bsnm{Efklides}, \binits{A.}}:
+\bctitle{Metacognitive experiences in problem solving: Metacognition, motivation, and self-regulation}.
+In: \bbtitle{Trends and Prospects in Motivation Research},
+pp. \bfpage{297}--\blpage{323}.
+\bpublisher{Springer},
+\blocation{Dordrecht}
+(\byear{2001})
+\end{bchapter}
+\endbibitem
+
+%%% 42
+\bibitem[\protect\citeauthoryear{Dunlosky and Metcalfe}{2008}]{dunlosky2008metacognition}
+\begin{bbook}
+\bauthor{\bsnm{Dunlosky}, \binits{J.}},
+\bauthor{\bsnm{Metcalfe}, \binits{J.}}:
+\bbtitle{Metacognition}.
+\bpublisher{Sage Publications},
+\blocation{Thousand Oaks, CA}
+(\byear{2008})
+\end{bbook}
+\endbibitem
+
+%%% 43
+\bibitem[\protect\citeauthoryear{Dunlosky and Bjork}{2013}]{dunlosky2013handbook}
+\begin{bbook}
+\bauthor{\bsnm{Dunlosky}, \binits{J.}},
+\bauthor{\bsnm{Bjork}, \binits{R.A.}}:
+\bbtitle{Handbook of Metamemory and Memory}.
+\bpublisher{Psychology Press},
+\blocation{New York}
+(\byear{2013})
+\end{bbook}
+\endbibitem
+
+%%% 44
+\bibitem[\protect\citeauthoryear{Proust}{2013}]{proust2013philosophy}
+\begin{bbook}
+\bauthor{\bsnm{Proust}, \binits{J.}}:
+\bbtitle{The Philosophy of Metacognition: Mental Agency and Self-awareness}.
+\bpublisher{OUP Oxford},
+\blocation{Oxford}
+(\byear{2013})
+\end{bbook}
+\endbibitem
+
+%%% 45
+\bibitem[\protect\citeauthoryear{Fleur et~al.}{2021}]{fleur2021metacognition}
+\begin{barticle}
+\bauthor{\bsnm{Fleur}, \binits{D.S.}},
+\bauthor{\bsnm{Bredeweg}, \binits{B.}},
+\bauthor{\bsnm{Bos}, \binits{W.}}:
+\batitle{Metacognition: ideas and insights from neuro-and educational sciences}.
+\bjtitle{npj Science of Learning}
+\bvolume{6}(\bissue{1}),
+\bfpage{13}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 46
+\bibitem[\protect\citeauthoryear{Cox}{2005}]{COX2005104}
+\begin{barticle}
+\bauthor{\bsnm{Cox}, \binits{M.T.}}:
+\batitle{Metacognition in computation: A selected research review}.
+\bjtitle{Artificial Intelligence}
+\bvolume{169}(\bissue{2}),
+\bfpage{104}--\blpage{141}
+(\byear{2005})
+\doiurl{10.1016/j.artint.2005.10.009}
+\end{barticle}
+\endbibitem
+
+%%% 47
+\bibitem[\protect\citeauthoryear{Steyvers and Peters}{2025}]{steyvers2025metacognition}
+\begin{botherref}
+\oauthor{\bsnm{Steyvers}, \binits{M.}},
+\oauthor{\bsnm{Peters}, \binits{M.A.}}:
+Metacognition and uncertainty communication in humans and large language models.
+arXiv preprint arXiv:2504.14045
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 48
+\bibitem[\protect\citeauthoryear{Crystal and Foote}{2009}]{crystal2009metacognition}
+\begin{barticle}
+\bauthor{\bsnm{Crystal}, \binits{J.D.}},
+\bauthor{\bsnm{Foote}, \binits{A.L.}}:
+\batitle{Metacognition in animals}.
+\bjtitle{Comparative cognition \& behavior reviews}
+\bvolume{4},
+\bfpage{1}
+(\byear{2009})
+\end{barticle}
+\endbibitem
+
+%%% 49
+\bibitem[\protect\citeauthoryear{Carruthers}{2008}]{carruthers2008meta}
+\begin{barticle}
+\bauthor{\bsnm{Carruthers}, \binits{P.}}:
+\batitle{Meta-cognition in animals: A skeptical look}.
+\bjtitle{Mind \& Language}
+\bvolume{23}(\bissue{1}),
+\bfpage{58}--\blpage{89}
+(\byear{2008})
+\end{barticle}
+\endbibitem
+
+%%% 50
+\bibitem[\protect\citeauthoryear{Hampton}{2009}]{hampton2009multiple}
+\begin{barticle}
+\bauthor{\bsnm{Hampton}, \binits{R.R.}}:
+\batitle{Multiple demonstrations of metacognition in nonhumans: Converging evidence or multiple mechanisms?}
+\bjtitle{Comparative cognition \& behavior reviews}
+\bvolume{4},
+\bfpage{17}
+(\byear{2009})
+\end{barticle}
+\endbibitem
+
+%%% 51
+\bibitem[\protect\citeauthoryear{Kornell et~al.}{2007}]{kornell2007transfer}
+\begin{barticle}
+\bauthor{\bsnm{Kornell}, \binits{N.}},
+\bauthor{\bsnm{Son}, \binits{L.K.}},
+\bauthor{\bsnm{Terrace}, \binits{H.S.}}:
+\batitle{Transfer of metacognitive skills and hint seeking in monkeys}.
+\bjtitle{Psychological Science}
+\bvolume{18}(\bissue{1}),
+\bfpage{64}--\blpage{71}
+(\byear{2007})
+\end{barticle}
+\endbibitem
+
+%%% 52
+\bibitem[\protect\citeauthoryear{Castro and Wasserman}{2013}]{castro2013information}
+\begin{barticle}
+\bauthor{\bsnm{Castro}, \binits{L.}},
+\bauthor{\bsnm{Wasserman}, \binits{E.A.}}:
+\batitle{Information-seeking behavior: Exploring metacognitive control in pigeons}.
+\bjtitle{Animal Cognition}
+\bvolume{16},
+\bfpage{241}--\blpage{254}
+(\byear{2013})
+\end{barticle}
+\endbibitem
+
+%%% 53
+\bibitem[\protect\citeauthoryear{Iwasaki et~al.}{2018}]{iwasaki2018pigeons}
+\begin{barticle}
+\bauthor{\bsnm{Iwasaki}, \binits{S.}},
+\bauthor{\bsnm{Watanabe}, \binits{S.}},
+\bauthor{\bsnm{Fujita}, \binits{K.}}:
+\batitle{Pigeons (columba livia) know when they will need hints: prospective metacognition for reference memory?}
+\bjtitle{Animal Cognition}
+\bvolume{21},
+\bfpage{207}--\blpage{217}
+(\byear{2018})
+\end{barticle}
+\endbibitem
+
+%%% 54
+\bibitem[\protect\citeauthoryear{Souchay and Isingrini}{2012}]{souchay2012feeling}
+\begin{barticle}
+\bauthor{\bsnm{Souchay}, \binits{C.}},
+\bauthor{\bsnm{Isingrini}, \binits{M.}}:
+\batitle{Are feeling-of-knowing and judgment-of-learning different? evidence from older adults}.
+\bjtitle{Acta Psychologica}
+\bvolume{139}(\bissue{3}),
+\bfpage{458}--\blpage{464}
+(\byear{2012})
+\end{barticle}
+\endbibitem
+
+%%% 55
+\bibitem[\protect\citeauthoryear{Crystal and Foote}{2011}]{crystal2011evaluating}
+\begin{barticle}
+\bauthor{\bsnm{Crystal}, \binits{J.D.}},
+\bauthor{\bsnm{Foote}, \binits{A.L.}}:
+\batitle{Evaluating information-seeking approaches to metacognition}.
+\bjtitle{Current zoology}
+\bvolume{57}(\bissue{4}),
+\bfpage{531}--\blpage{542}
+(\byear{2011})
+\end{barticle}
+\endbibitem
+
+%%% 56
+\bibitem[\protect\citeauthoryear{Johnson}{2022}]{johnson2022metacognition}
+\begin{barticle}
+\bauthor{\bsnm{Johnson}, \binits{B.}}:
+\batitle{Metacognition for artificial intelligence system safety--an approach to safe and desired behavior}.
+\bjtitle{Safety Science}
+\bvolume{151},
+\bfpage{105743}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 57
+\bibitem[\protect\citeauthoryear{Walker et~al.}{2025}]{walker2025harnessing}
+\begin{barticle}
+\bauthor{\bsnm{Walker}, \binits{P.B.}},
+\bauthor{\bsnm{Haase}, \binits{J.J.}},
+\bauthor{\bsnm{Mehalick}, \binits{M.L.}},
+\bauthor{\bsnm{Steele}, \binits{C.T.}},
+\bauthor{\bsnm{Russell}, \binits{D.W.}},
+\bauthor{\bsnm{Davidson}, \binits{I.N.}}:
+\batitle{Harnessing metacognition for safe and responsible ai}.
+\bjtitle{Technologies}
+\bvolume{13}(\bissue{3}),
+\bfpage{107}
+(\byear{2025})
+\end{barticle}
+\endbibitem
+
+%%% 58
+\bibitem[\protect\citeauthoryear{Morin}{2011}]{morin2011self}
+\begin{barticle}
+\bauthor{\bsnm{Morin}, \binits{A.}}:
+\batitle{Self-awareness part 1: Definition, measures, effects, functions, and antecedents}.
+\bjtitle{Social and personality psychology compass}
+\bvolume{5}(\bissue{10}),
+\bfpage{807}--\blpage{823}
+(\byear{2011})
+\end{barticle}
+\endbibitem
+
+%%% 59
+\bibitem[\protect\citeauthoryear{Chapman et~al.}{2020}]{chapman2020translational}
+\begin{barticle}
+\bauthor{\bsnm{Chapman}, \binits{S.}},
+\bauthor{\bsnm{Colvin}, \binits{L.E.}},
+\bauthor{\bsnm{Cosentino}, \binits{S.}}:
+\batitle{Translational aspects of the multidisciplinary study of metacognition.}
+\bjtitle{Translational Issues in Psychological Science}
+\bvolume{6}(\bissue{1}),
+\bfpage{26}
+(\byear{2020})
+\end{barticle}
+\endbibitem
+
+%%% 60
+\bibitem[\protect\citeauthoryear{Mograbi et~al.}{2024}]{mograbi2024cognitive}
+\begin{barticle}
+\bauthor{\bsnm{Mograbi}, \binits{D.C.}},
+\bauthor{\bsnm{Hall}, \binits{S.}},
+\bauthor{\bsnm{Arantes}, \binits{B.}},
+\bauthor{\bsnm{Huntley}, \binits{J.}}:
+\batitle{The cognitive neuroscience of self-awareness: Current framework, clinical implications, and future research directions}.
+\bjtitle{Wiley Interdisciplinary Reviews: Cognitive Science}
+\bvolume{15}(\bissue{2}),
+\bfpage{1670}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 61
+\bibitem[\protect\citeauthoryear{Baumeister}{2010}]{baumeister2010self}
+\begin{botherref}
+\oauthor{\bsnm{Baumeister}, \binits{R.F.}}:
+The self.
+Advanced social psychology: The state of the science,
+139--175
+(2010)
+\end{botherref}
+\endbibitem
+
+%%% 62
+\bibitem[\protect\citeauthoryear{Carver and Scheier}{1981}]{carver1981attention}
+\begin{bbook}
+\bauthor{\bsnm{Carver}, \binits{C.S.}},
+\bauthor{\bsnm{Scheier}, \binits{M.F.}}:
+\bbtitle{Attention and Self-regulation: A Control-theory Approach to Human Behavior}.
+\bpublisher{Springer},
+\blocation{New York}
+(\byear{1981})
+\end{bbook}
+\endbibitem
+
+%%% 63
+\bibitem[\protect\citeauthoryear{Babinski}{1914}]{babinski1914contribution}
+\begin{barticle}
+\bauthor{\bsnm{Babinski}, \binits{J.}}:
+\batitle{Contribution {\`a} l'etude des troubles mentaux dans l'h{\'e}mipl{\'e}gie organique c{\'e}r{\'e}brale; anosognosie}.
+\bjtitle{Rev Neurol}
+\bvolume{27},
+\bfpage{845}--\blpage{848}
+(\byear{1914})
+\end{barticle}
+\endbibitem
+
+%%% 64
+\bibitem[\protect\citeauthoryear{Banks and Weintraub}{2008}]{banks2008self}
+\begin{barticle}
+\bauthor{\bsnm{Banks}, \binits{S.}},
+\bauthor{\bsnm{Weintraub}, \binits{S.}}:
+\batitle{Self-awareness and self-monitoring of cognitive and behavioral deficits in behavioral variant frontotemporal dementia, primary progressive aphasia and probable alzheimer’s disease}.
+\bjtitle{Brain and cognition}
+\bvolume{67}(\bissue{1}),
+\bfpage{58}--\blpage{68}
+(\byear{2008})
+\end{barticle}
+\endbibitem
+
+%%% 65
+\bibitem[\protect\citeauthoryear{Kirsch et~al.}{2021}]{kirsch2021updating}
+\begin{barticle}
+\bauthor{\bsnm{Kirsch}, \binits{L.P.}},
+\bauthor{\bsnm{Mathys}, \binits{C.}},
+\bauthor{\bsnm{Papadaki}, \binits{C.}},
+\bauthor{\bsnm{Talelli}, \binits{P.}},
+\bauthor{\bsnm{Friston}, \binits{K.}},
+\bauthor{\bsnm{Moro}, \binits{V.}},
+\bauthor{\bsnm{Fotopoulou}, \binits{A.}}:
+\batitle{Updating beliefs beyond the here-and-now: the counter-factual self in anosognosia for hemiplegia}.
+\bjtitle{Brain communications}
+\bvolume{3}(\bissue{2}),
+\bfpage{098}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 66
+\bibitem[\protect\citeauthoryear{Fleming and Dolan}{2012}]{fleming2012neural}
+\begin{barticle}
+\bauthor{\bsnm{Fleming}, \binits{S.M.}},
+\bauthor{\bsnm{Dolan}, \binits{R.J.}}:
+\batitle{The neural basis of metacognitive ability}.
+\bjtitle{Philosophical Transactions of the Royal Society B: Biological Sciences}
+\bvolume{367}(\bissue{1594}),
+\bfpage{1338}--\blpage{1349}
+(\byear{2012})
+\end{barticle}
+\endbibitem
+
+%%% 67
+\bibitem[\protect\citeauthoryear{Qiu et~al.}{2018}]{qiu2018neural}
+\begin{barticle}
+\bauthor{\bsnm{Qiu}, \binits{L.}},
+\bauthor{\bsnm{Su}, \binits{J.}},
+\bauthor{\bsnm{Ni}, \binits{Y.}},
+\bauthor{\bsnm{Bai}, \binits{Y.}},
+\bauthor{\bsnm{Zhang}, \binits{X.}},
+\bauthor{\bsnm{Li}, \binits{X.}},
+\bauthor{\bsnm{Wan}, \binits{X.}}:
+\batitle{The neural system of metacognition accompanying decision-making in the prefrontal cortex}.
+\bjtitle{PLoS biology}
+\bvolume{16}(\bissue{4}),
+\bfpage{2004037}
+(\byear{2018})
+\end{barticle}
+\endbibitem
+
+%%% 68
+\bibitem[\protect\citeauthoryear{Leary}{2007}]{leary2007curse}
+\begin{bbook}
+\bauthor{\bsnm{Leary}, \binits{M.R.}}:
+\bbtitle{The Curse of the Self: Self-awareness, Egotism, and the Quality of Human Life}.
+\bpublisher{Oxford University Press},
+\blocation{Oxford}
+(\byear{2007})
+\end{bbook}
+\endbibitem
+
+%%% 69
+\bibitem[\protect\citeauthoryear{Gordon G.~Gallup}{1970}]{Gallup1970}
+\begin{barticle}
+\bauthor{\bsnm{Gordon G.~Gallup}, \binits{J.}}:
+\batitle{Chimpanzees: Self-recognition}.
+\bjtitle{Science}
+\bvolume{167}(\bissue{3914}),
+\bfpage{86}--\blpage{87}
+(\byear{1970})
+\end{barticle}
+\endbibitem
+
+%%% 70
+\bibitem[\protect\citeauthoryear{Plotnik et~al.}{2006}]{plotnik2006self}
+\begin{barticle}
+\bauthor{\bsnm{Plotnik}, \binits{J.M.}},
+\bauthor{\bsnm{De~Waal}, \binits{F.B.}},
+\bauthor{\bsnm{Reiss}, \binits{D.}}:
+\batitle{Self-recognition in an asian elephant}.
+\bjtitle{Proceedings of the National Academy of Sciences}
+\bvolume{103}(\bissue{45}),
+\bfpage{17053}--\blpage{17057}
+(\byear{2006})
+\end{barticle}
+\endbibitem
+
+%%% 71
+\bibitem[\protect\citeauthoryear{Anderson and Gallup~Jr}{2015}]{anderson2015mirror}
+\begin{barticle}
+\bauthor{\bsnm{Anderson}, \binits{J.R.}},
+\bauthor{\bsnm{Gallup~Jr}, \binits{G.G.}}:
+\batitle{Mirror self-recognition: a review and critique of attempts to promote and engineer self-recognition in primates}.
+\bjtitle{Primates}
+\bvolume{56}(\bissue{4}),
+\bfpage{317}--\blpage{326}
+(\byear{2015})
+\end{barticle}
+\endbibitem
+
+%%% 72
+\bibitem[\protect\citeauthoryear{Davies et~al.}{2022}]{davies2022episodic}
+\begin{barticle}
+\bauthor{\bsnm{Davies}, \binits{J.R.}},
+\bauthor{\bsnm{Garcia-Pelegrin}, \binits{E.}},
+\bauthor{\bsnm{Baciadonna}, \binits{L.}},
+\bauthor{\bsnm{Pilenga}, \binits{C.}},
+\bauthor{\bsnm{Favaro}, \binits{L.}},
+\bauthor{\bsnm{Clayton}, \binits{N.S.}}:
+\batitle{Episodic-like memory in common bottlenose dolphins}.
+\bjtitle{Current Biology}
+\bvolume{32}(\bissue{15}),
+\bfpage{3436}--\blpage{3442}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 73
+\bibitem[\protect\citeauthoryear{Martin-Ordas et~al.}{2013}]{martin2013memory}
+\begin{barticle}
+\bauthor{\bsnm{Martin-Ordas}, \binits{G.}},
+\bauthor{\bsnm{Berntsen}, \binits{D.}},
+\bauthor{\bsnm{Call}, \binits{J.}}:
+\batitle{Memory for distant past events in chimpanzees and orangutans}.
+\bjtitle{Current Biology}
+\bvolume{23}(\bissue{15}),
+\bfpage{1438}--\blpage{1441}
+(\byear{2013})
+\end{barticle}
+\endbibitem
+
+%%% 74
+\bibitem[\protect\citeauthoryear{Clayton and Dickinson}{1998}]{clayton1998episodic}
+\begin{barticle}
+\bauthor{\bsnm{Clayton}, \binits{N.S.}},
+\bauthor{\bsnm{Dickinson}, \binits{A.}}:
+\batitle{Episodic-like memory during cache recovery by scrub jays}.
+\bjtitle{Nature}
+\bvolume{395}(\bissue{6699}),
+\bfpage{272}--\blpage{274}
+(\byear{1998})
+\end{barticle}
+\endbibitem
+
+%%% 75
+\bibitem[\protect\citeauthoryear{Hafner et~al.}{2020}]{hafner2020prerequisites}
+\begin{barticle}
+\bauthor{\bsnm{Hafner}, \binits{V.V.}},
+\bauthor{\bsnm{Loviken}, \binits{P.}},
+\bauthor{\bsnm{Pico~Villalpando}, \binits{A.}},
+\bauthor{\bsnm{Schillaci}, \binits{G.}}:
+\batitle{Prerequisites for an artificial self}.
+\bjtitle{Frontiers in neurorobotics}
+\bvolume{14},
+\bfpage{5}
+(\byear{2020})
+\end{barticle}
+\endbibitem
+
+%%% 76
+\bibitem[\protect\citeauthoryear{Tye}{2021}]{Qualiastanford}
+\begin{botherref}
+\oauthor{\bsnm{Tye}, \binits{M.}}:
+Qualia.
+Stanford University
+(2021).
+\url{https://plato.stanford.edu/entries/qualia/}
+\end{botherref}
+\endbibitem
+
+%%% 77
+\bibitem[\protect\citeauthoryear{Bongard et~al.}{2006}]{Bongard2006}
+\begin{barticle}
+\bauthor{\bsnm{Bongard}, \binits{J.}},
+\bauthor{\bsnm{Zykov}, \binits{V.}},
+\bauthor{\bsnm{Lipson}, \binits{H.}}:
+\batitle{Resilient machines through continuous self-modeling}.
+\bjtitle{Science}
+\bvolume{314}(\bissue{5802}),
+\bfpage{1118}--\blpage{1121}
+(\byear{2006})
+\end{barticle}
+\endbibitem
+
+%%% 78
+\bibitem[\protect\citeauthoryear{Premack and Woodruff}{1978}]{Premack1978}
+\begin{barticle}
+\bauthor{\bsnm{Premack}, \binits{D.}},
+\bauthor{\bsnm{Woodruff}, \binits{G.}}:
+\batitle{Does the chimpanzee have a theory of mind?}
+\bjtitle{Behavioral and Brain Sciences}
+\bvolume{1}(\bissue{4}),
+\bfpage{515}--\blpage{526}
+(\byear{1978})
+\end{barticle}
+\endbibitem
+
+%%% 79
+\bibitem[\protect\citeauthoryear{Preston and de~Waal}{2002}]{Preston2002}
+\begin{barticle}
+\bauthor{\bsnm{Preston}, \binits{S.D.}},
+\bauthor{\bsnm{Waal}, \binits{F.B.M.}}:
+\batitle{Empathy: Its ultimate and proximate bases}.
+\bjtitle{Behavioral and Brain Sciences}
+\bvolume{25}(\bissue{1}),
+\bfpage{1}--\blpage{20}
+(\byear{2002})
+\end{barticle}
+\endbibitem
+
+%%% 80
+\bibitem[\protect\citeauthoryear{Abbo et~al.}{2024}]{Abbo2024}
+\begin{bchapter}
+\bauthor{\bsnm{Abbo}, \binits{G.A.}},
+\bauthor{\bsnm{Marchesi}, \binits{S.}},
+\bauthor{\bsnm{Wykowska}, \binits{A.}},
+\bauthor{\bsnm{Belpaeme}, \binits{T.}}:
+\bctitle{Social value alignment in large language models}.
+In: \bbtitle{Value Engineering in Artificial Intelligence (VALE 2023)}.
+\bsertitle{Lecture Notes in Computer Science},
+vol. \bseriesno{14520},
+pp. \bfpage{83}--\blpage{97}.
+\bpublisher{Springer},
+\blocation{Cham}
+(\byear{2024}).
+\doiurl{10.1007/978-3-031-58202-8_6}
+\end{bchapter}
+\endbibitem
+
+%%% 81
+\bibitem[\protect\citeauthoryear{Wimmer and Perner}{1983}]{Wimmer1983}
+\begin{barticle}
+\bauthor{\bsnm{Wimmer}, \binits{H.}},
+\bauthor{\bsnm{Perner}, \binits{J.}}:
+\batitle{Beliefs about beliefs: Representation and constraining function of wrong beliefs in young children's understanding of deception}.
+\bjtitle{Cognition}
+\bvolume{13}(\bissue{1}),
+\bfpage{103}--\blpage{128}
+(\byear{1983})
+\end{barticle}
+\endbibitem
+
+%%% 82
+\bibitem[\protect\citeauthoryear{}{2013}]{dsm5}
+\begin{botherref}
+Diagnostic and Statistical Manual of Mental Disorders,
+5th ed. edn.
+American Psychiatric Association,
+Arlington, VA
+(2013)
+\end{botherref}
+\endbibitem
+
+%%% 83
+\bibitem[\protect\citeauthoryear{Baron-Cohen et~al.}{1985}]{BaronCohen1985}
+\begin{barticle}
+\bauthor{\bsnm{Baron-Cohen}, \binits{S.}},
+\bauthor{\bsnm{Leslie}, \binits{A.M.}},
+\bauthor{\bsnm{Frith}, \binits{U.}}:
+\batitle{Does the autistic child have a 'theory of mind'?}
+\bjtitle{Cognition}
+\bvolume{21}(\bissue{1}),
+\bfpage{37}--\blpage{46}
+(\byear{1985})
+\end{barticle}
+\endbibitem
+
+%%% 84
+\bibitem[\protect\citeauthoryear{Tomasello et~al.}{2005}]{Tomasello2005}
+\begin{barticle}
+\bauthor{\bsnm{Tomasello}, \binits{M.}},
+\bauthor{\bsnm{Carpenter}, \binits{M.}},
+\bauthor{\bsnm{Call}, \binits{J.}},
+\bauthor{\bsnm{Behne}, \binits{T.}},
+\bauthor{\bsnm{Moll}, \binits{H.}}:
+\batitle{Understanding and sharing intentions: The origins of cultural cognition}.
+\bjtitle{Behavioral and Brain Sciences}
+\bvolume{28}(\bissue{5}),
+\bfpage{675}--\blpage{691}
+(\byear{2005})
+\end{barticle}
+\endbibitem
+
+%%% 85
+\bibitem[\protect\citeauthoryear{Krupenye and Call}{2019}]{krupenye2019theory}
+\begin{barticle}
+\bauthor{\bsnm{Krupenye}, \binits{C.}},
+\bauthor{\bsnm{Call}, \binits{J.}}:
+\batitle{Theory of mind in animals: Current and future directions}.
+\bjtitle{Wiley Interdisciplinary Reviews: Cognitive Science}
+\bvolume{10}(\bissue{6}),
+\bfpage{1503}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 86
+\bibitem[\protect\citeauthoryear{Kudo and Dunbar}{2001}]{kudo2001neocortex}
+\begin{barticle}
+\bauthor{\bsnm{Kudo}, \binits{H.}},
+\bauthor{\bsnm{Dunbar}, \binits{R.I.}}:
+\batitle{Neocortex size and social network size in primates}.
+\bjtitle{Animal Behaviour}
+\bvolume{62}(\bissue{4}),
+\bfpage{711}--\blpage{722}
+(\byear{2001})
+\end{barticle}
+\endbibitem
+
+%%% 87
+\bibitem[\protect\citeauthoryear{Clayton et~al.}{2007}]{clayton2007social}
+\begin{barticle}
+\bauthor{\bsnm{Clayton}, \binits{N.S.}},
+\bauthor{\bsnm{Dally}, \binits{J.M.}},
+\bauthor{\bsnm{Emery}, \binits{N.J.}}:
+\batitle{Social cognition by food-caching corvids. the western scrub-jay as a natural psychologist}.
+\bjtitle{Philosophical Transactions of the Royal Society B: Biological Sciences}
+\bvolume{362}(\bissue{1480}),
+\bfpage{507}--\blpage{522}
+(\byear{2007})
+\end{barticle}
+\endbibitem
+
+%%% 88
+\bibitem[\protect\citeauthoryear{Connor}{2007}]{connor2007dolphin}
+\begin{barticle}
+\bauthor{\bsnm{Connor}, \binits{R.C.}}:
+\batitle{Dolphin social intelligence: complex alliance relationships in bottlenose dolphins and a consideration of selective environments for extreme brain size evolution in mammals}.
+\bjtitle{Philosophical Transactions of the Royal Society B: Biological Sciences}
+\bvolume{362}(\bissue{1480}),
+\bfpage{587}--\blpage{602}
+(\byear{2007})
+\end{barticle}
+\endbibitem
+
+%%% 89
+\bibitem[\protect\citeauthoryear{Rabinowitz et~al.}{2018}]{Rabinowitz2018}
+\begin{bchapter}
+\bauthor{\bsnm{Rabinowitz}, \binits{N.C.}},
+\bauthor{\bsnm{Perbet}, \binits{F.}},
+\bauthor{\bsnm{Song}, \binits{F.}},
+\bauthor{\bsnm{Zhang}, \binits{C.}},
+\bauthor{\bsnm{Eslami}, \binits{S.M.A.}},
+\bauthor{\bsnm{Botvinick}, \binits{M.}}:
+\bctitle{Machine theory of mind}.
+In: \bbtitle{Proceedings of the 35th International Conference on Machine Learning (ICML)},
+pp. \bfpage{4218}--\blpage{4227}.
+\bpublisher{PMLR},
+\blocation{Stockholm, Sweden}
+(\byear{2018})
+\end{bchapter}
+\endbibitem
+
+%%% 90
+\bibitem[\protect\citeauthoryear{Cuzzolin et~al.}{2020}]{cuzzolin2020knowing}
+\begin{barticle}
+\bauthor{\bsnm{Cuzzolin}, \binits{F.}},
+\bauthor{\bsnm{Morelli}, \binits{A.}},
+\bauthor{\bsnm{Cirstea}, \binits{B.}},
+\bauthor{\bsnm{Sahakian}, \binits{B.J.}}:
+\batitle{Knowing me, knowing you: theory of mind in ai}.
+\bjtitle{Psychological medicine}
+\bvolume{50}(\bissue{7}),
+\bfpage{1057}--\blpage{1061}
+(\byear{2020})
+\end{barticle}
+\endbibitem
+
+%%% 91
+\bibitem[\protect\citeauthoryear{Muise et~al.}{2022}]{muise2022efficient}
+\begin{barticle}
+\bauthor{\bsnm{Muise}, \binits{C.}},
+\bauthor{\bsnm{Belle}, \binits{V.}},
+\bauthor{\bsnm{Felli}, \binits{P.}},
+\bauthor{\bsnm{McIlraith}, \binits{S.}},
+\bauthor{\bsnm{Miller}, \binits{T.}},
+\bauthor{\bsnm{Pearce}, \binits{A.R.}},
+\bauthor{\bsnm{Sonenberg}, \binits{L.}}:
+\batitle{Efficient multi-agent epistemic planning: Teaching planners about nested belief}.
+\bjtitle{Artificial Intelligence}
+\bvolume{302},
+\bfpage{103605}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 92
+\bibitem[\protect\citeauthoryear{Scassellati}{2002}]{Scassellati2002ToMRobot}
+\begin{barticle}
+\bauthor{\bsnm{Scassellati}, \binits{B.}}:
+\batitle{Theory of mind for a humanoid robot}.
+\bjtitle{Autonomous Robots}
+\bvolume{12}(\bissue{1}),
+\bfpage{13}--\blpage{24}
+(\byear{2002})
+\end{barticle}
+\endbibitem
+
+%%% 93
+\bibitem[\protect\citeauthoryear{Hu et~al.}{2018}]{hu2018touch}
+\begin{bchapter}
+\bauthor{\bsnm{Hu}, \binits{T.}},
+\bauthor{\bsnm{Xu}, \binits{A.}},
+\bauthor{\bsnm{Liu}, \binits{Z.}},
+\bauthor{\bsnm{You}, \binits{Q.}},
+\bauthor{\bsnm{Guo}, \binits{Y.}},
+\bauthor{\bsnm{Sinha}, \binits{V.}},
+\bauthor{\bsnm{Luo}, \binits{J.}},
+\bauthor{\bsnm{Akkiraju}, \binits{R.}}:
+\bctitle{Touch your heart: A tone-aware chatbot for customer care on social media}.
+In: \bbtitle{Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems},
+pp. \bfpage{1}--\blpage{12}
+(\byear{2018})
+\end{bchapter}
+\endbibitem
+
+%%% 94
+\bibitem[\protect\citeauthoryear{Devin and Alami}{2016}]{devin2016implemented}
+\begin{bchapter}
+\bauthor{\bsnm{Devin}, \binits{S.}},
+\bauthor{\bsnm{Alami}, \binits{R.}}:
+\bctitle{An implemented theory of mind to improve human-robot shared plans execution}.
+In: \bbtitle{2016 11th ACM/IEEE International Conference on Human-Robot Interaction (HRI)},
+pp. \bfpage{319}--\blpage{326}
+(\byear{2016}).
+\bcomment{IEEE}
+\end{bchapter}
+\endbibitem
+
+%%% 95
+\bibitem[\protect\citeauthoryear{Iio et~al.}{2020}]{iio2020human}
+\begin{barticle}
+\bauthor{\bsnm{Iio}, \binits{T.}},
+\bauthor{\bsnm{Satake}, \binits{S.}},
+\bauthor{\bsnm{Kanda}, \binits{T.}},
+\bauthor{\bsnm{Hayashi}, \binits{K.}},
+\bauthor{\bsnm{Ferreri}, \binits{F.}},
+\bauthor{\bsnm{Hagita}, \binits{N.}}:
+\batitle{Human-like guide robot that proactively explains exhibits}.
+\bjtitle{International Journal of Social Robotics}
+\bvolume{12},
+\bfpage{549}--\blpage{566}
+(\byear{2020})
+\end{barticle}
+\endbibitem
+
+%%% 96
+\bibitem[\protect\citeauthoryear{Munir et~al.}{2022}]{munir2022situational}
+\begin{barticle}
+\bauthor{\bsnm{Munir}, \binits{A.}},
+\bauthor{\bsnm{Aved}, \binits{A.}},
+\bauthor{\bsnm{Blasch}, \binits{E.}}:
+\batitle{Situational awareness: techniques, challenges, and prospects}.
+\bjtitle{AI}
+\bvolume{3}(\bissue{1}),
+\bfpage{55}--\blpage{77}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 97
+\bibitem[\protect\citeauthoryear{Flach}{1995}]{flach1995situation}
+\begin{barticle}
+\bauthor{\bsnm{Flach}, \binits{J.M.}}:
+\batitle{Situation awareness: Proceed with caution}.
+\bjtitle{Human factors}
+\bvolume{37}(\bissue{1}),
+\bfpage{149}--\blpage{157}
+(\byear{1995})
+\end{barticle}
+\endbibitem
+
+%%% 98
+\bibitem[\protect\citeauthoryear{Council et~al.}{1998}]{national1998modeling}
+\begin{bbook}
+\bauthor{\bsnm{Council}, \binits{N.R.}}, \betal:
+\bbtitle{Modeling Human and Organizational Behavior: Application to Military Simulations}.
+\bpublisher{National Academies Press}, \blocation{???}
+(\byear{1998})
+\end{bbook}
+\endbibitem
+
+%%% 99
+\bibitem[\protect\citeauthoryear{Nofi}{2000}]{nofi2000defining}
+\begin{botherref}
+\oauthor{\bsnm{Nofi}, \binits{A.A.}}:
+Defining and measuring shared situational awareness
+(2000)
+\end{botherref}
+\endbibitem
+
+%%% 100
+\bibitem[\protect\citeauthoryear{Endsley}{1995}]{endsley1995measurement}
+\begin{barticle}
+\bauthor{\bsnm{Endsley}, \binits{M.R.}}:
+\batitle{Measurement of situation awareness in dynamic systems}.
+\bjtitle{Human factors}
+\bvolume{37}(\bissue{1}),
+\bfpage{65}--\blpage{84}
+(\byear{1995})
+\end{barticle}
+\endbibitem
+
+%%% 101
+\bibitem[\protect\citeauthoryear{Uhlarik et~al.}{2002}]{uhlarik2002review}
+\begin{botherref}
+\oauthor{\bsnm{Uhlarik}, \binits{J.}},
+\oauthor{\bsnm{Comerford}, \binits{D.A.}}, et al.:
+A review of situation awareness literature relevant to pilot surveillance functions
+(2002)
+\end{botherref}
+\endbibitem
+
+%%% 102
+\bibitem[\protect\citeauthoryear{Taylor}{2017}]{taylor2017situational}
+\begin{bchapter}
+\bauthor{\bsnm{Taylor}, \binits{R.M.}}:
+\bctitle{Situational awareness rating technique (sart): The development of a tool for aircrew systems design}.
+In: \bbtitle{Situational Awareness},
+pp. \bfpage{111}--\blpage{128}.
+\bpublisher{Routledge},
+\blocation{London}
+(\byear{2017})
+\end{bchapter}
+\endbibitem
+
+%%% 103
+\bibitem[\protect\citeauthoryear{Nolan et~al.}{2014}]{nolan2014framework}
+\begin{botherref}
+\oauthor{\bsnm{Nolan}, \binits{R.}},
+\oauthor{\bsnm{LaTour}, \binits{E.}},
+\oauthor{\bsnm{Klafehn}, \binits{J.}}:
+Framework for rapid situational awareness in the field.
+Technical report,
+Technical Report 1338). Fort Belvoir, VA: US Army Research Institute for the~…
+(2014)
+\end{botherref}
+\endbibitem
+
+%%% 104
+\bibitem[\protect\citeauthoryear{Gaba et~al.}{1995}]{gaba1995situation}
+\begin{barticle}
+\bauthor{\bsnm{Gaba}, \binits{D.M.}},
+\bauthor{\bsnm{Howard}, \binits{S.K.}},
+\bauthor{\bsnm{Small}, \binits{S.D.}}:
+\batitle{Situation awareness in anesthesiology}.
+\bjtitle{Human factors}
+\bvolume{37}(\bissue{1}),
+\bfpage{20}--\blpage{31}
+(\byear{1995})
+\end{barticle}
+\endbibitem
+
+%%% 105
+\bibitem[\protect\citeauthoryear{Stubbings et~al.}{2012}]{stubbings2012nurses}
+\begin{barticle}
+\bauthor{\bsnm{Stubbings}, \binits{L.}},
+\bauthor{\bsnm{Chaboyer}, \binits{W.}},
+\bauthor{\bsnm{McMurray}, \binits{A.}}:
+\batitle{Nurses’ use of situation awareness in decision-making: an integrative review}.
+\bjtitle{Journal of advanced nursing}
+\bvolume{68}(\bissue{7}),
+\bfpage{1443}--\blpage{1453}
+(\byear{2012})
+\end{barticle}
+\endbibitem
+
+%%% 106
+\bibitem[\protect\citeauthoryear{Gugerty}{1997}]{gugerty1997situation}
+\begin{barticle}
+\bauthor{\bsnm{Gugerty}, \binits{L.J.}}:
+\batitle{Situation awareness during driving: Explicit and implicit knowledge in dynamic spatial memory}.
+\bjtitle{Journal of Experimental Psychology: Applied}
+\bvolume{3}(\bissue{1}),
+\bfpage{42}--\blpage{66}
+(\byear{1997})
+\end{barticle}
+\endbibitem
+
+%%% 107
+\bibitem[\protect\citeauthoryear{Ma and Kaber}{2005}]{ma2005situation}
+\begin{barticle}
+\bauthor{\bsnm{Ma}, \binits{R.}},
+\bauthor{\bsnm{Kaber}, \binits{D.B.}}:
+\batitle{Situation awareness and workload in driving while using adaptive cruise control and a cell phone}.
+\bjtitle{International Journal of Industrial Ergonomics}
+\bvolume{35}(\bissue{10}),
+\bfpage{939}--\blpage{953}
+(\byear{2005})
+\end{barticle}
+\endbibitem
+
+%%% 108
+\bibitem[\protect\citeauthoryear{Parasuraman et~al.}{2008}]{parasuraman2008situation}
+\begin{barticle}
+\bauthor{\bsnm{Parasuraman}, \binits{R.}},
+\bauthor{\bsnm{Sheridan}, \binits{T.B.}},
+\bauthor{\bsnm{Wickens}, \binits{C.D.}}:
+\batitle{Situation awareness, mental workload, and trust in automation: Viable, empirically supported cognitive engineering constructs}.
+\bjtitle{Journal of Cognitive Engineering and Decision Making}
+\bvolume{2}(\bissue{2}),
+\bfpage{140}--\blpage{160}
+(\byear{2008})
+\end{barticle}
+\endbibitem
+
+%%% 109
+\bibitem[\protect\citeauthoryear{Cornelio et~al.}{2025}]{cornelio2025hierarchical}
+\begin{botherref}
+\oauthor{\bsnm{Cornelio}, \binits{C.}},
+\oauthor{\bsnm{Petruzzellis}, \binits{F.}},
+\oauthor{\bsnm{Lio}, \binits{P.}}:
+Hierarchical planning for complex tasks with knowledge graph-rag and symbolic verification.
+arXiv preprint arXiv:2504.04578
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 110
+\bibitem[\protect\citeauthoryear{Ruiz-Celada et~al.}{2024}]{ruiz2024smart}
+\begin{botherref}
+\oauthor{\bsnm{Ruiz-Celada}, \binits{O.}},
+\oauthor{\bsnm{Dalmases}, \binits{A.}},
+\oauthor{\bsnm{Zaplana}, \binits{I.}},
+\oauthor{\bsnm{Rosell}, \binits{J.}}:
+Smart perception for situation awareness in robotic manipulation tasks.
+IEEE access
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 111
+\bibitem[\protect\citeauthoryear{Bavle et~al.}{2023}]{bavle2023slam}
+\begin{barticle}
+\bauthor{\bsnm{Bavle}, \binits{H.}},
+\bauthor{\bsnm{Sanchez-Lopez}, \binits{J.L.}},
+\bauthor{\bsnm{Cimarelli}, \binits{C.}},
+\bauthor{\bsnm{Tourani}, \binits{A.}},
+\bauthor{\bsnm{Voos}, \binits{H.}}:
+\batitle{From slam to situational awareness: Challenges and survey}.
+\bjtitle{Sensors}
+\bvolume{23}(\bissue{10}),
+\bfpage{4849}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 112
+\bibitem[\protect\citeauthoryear{Sarter and Woods}{2017}]{sarter2017situation}
+\begin{bchapter}
+\bauthor{\bsnm{Sarter}, \binits{N.B.}},
+\bauthor{\bsnm{Woods}, \binits{D.D.}}:
+\bctitle{Situation awareness: A critical but ill-defined phenomenon}.
+In: \beditor{\bsnm{Salas}, \binits{E.}} (ed.)
+\bbtitle{Situational Awareness},
+pp. \bfpage{445}--\blpage{458}.
+\bpublisher{Routledge},
+\blocation{New York}
+(\byear{2017}).
+\doiurl{10.4324/9781315087924-27}
+\end{bchapter}
+\endbibitem
+
+%%% 113
+\bibitem[\protect\citeauthoryear{Stanton et~al.}{2010}]{stanton2010situation}
+\begin{barticle}
+\bauthor{\bsnm{Stanton}, \binits{N.A.}},
+\bauthor{\bsnm{Salmon}, \binits{P.M.}},
+\bauthor{\bsnm{Walker}, \binits{G.H.}},
+\bauthor{\bsnm{Jenkins}, \binits{D.P.}}:
+\batitle{Is situation awareness all in the mind?}
+\bjtitle{Theoretical Issues in Ergonomics Science}
+\bvolume{11}(\bissue{1-2}),
+\bfpage{29}--\blpage{40}
+(\byear{2010})
+\end{barticle}
+\endbibitem
+
+%%% 114
+\bibitem[\protect\citeauthoryear{Miller et~al.}{2014}]{miller2014moral}
+\begin{bchapter}
+\bauthor{\bsnm{Miller}, \binits{J.A.}},
+\bauthor{\bsnm{Rodgers}, \binits{Z.J.}},
+\bauthor{\bsnm{Bingham}, \binits{J.B.}}:
+\bctitle{Moral awareness}.
+In: \beditor{\bsnm{Moore}, \binits{C.}},
+\beditor{\bsnm{Tenbrunsel}, \binits{A.E.}} (eds.)
+\bbtitle{Research Companion to Ethical Behavior in Organizations},
+pp. \bfpage{1}--\blpage{43}.
+\bpublisher{Edward Elgar Publishing},
+\blocation{Cheltenham, UK}
+(\byear{2014})
+\end{bchapter}
+\endbibitem
+
+%%% 115
+\bibitem[\protect\citeauthoryear{Guesgen and Marsland}{2010}]{guesgen2010spatio}
+\begin{bchapter}
+\bauthor{\bsnm{Guesgen}, \binits{H.W.}},
+\bauthor{\bsnm{Marsland}, \binits{S.}}:
+\bctitle{Spatio-temporal reasoning and context awareness}.
+In: \beditor{\bsnm{Cook}, \binits{D.J.}},
+\beditor{\bsnm{Das}, \binits{S.K.}} (eds.)
+\bbtitle{Handbook of Ambient Intelligence and Smart Environments},
+pp. \bfpage{609}--\blpage{634}.
+\bpublisher{Springer},
+\blocation{Boston, MA}
+(\byear{2010})
+\end{bchapter}
+\endbibitem
+
+%%% 116
+\bibitem[\protect\citeauthoryear{Hagendorff}{2024}]{hagendorff2024deception}
+\begin{barticle}
+\bauthor{\bsnm{Hagendorff}, \binits{T.}}:
+\batitle{Deception abilities emerged in large language models}.
+\bjtitle{Proceedings of the National Academy of Sciences}
+\bvolume{121}(\bissue{24}),
+\bfpage{2317967121}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 117
+\bibitem[\protect\citeauthoryear{Hagendorff and Fabi}{2024}]{hagendorff2024we}
+\begin{barticle}
+\bauthor{\bsnm{Hagendorff}, \binits{T.}},
+\bauthor{\bsnm{Fabi}, \binits{S.}}:
+\batitle{Why we need biased ai: How including cognitive biases can enhance ai systems}.
+\bjtitle{Journal of Experimental \& Theoretical Artificial Intelligence}
+\bvolume{36}(\bissue{8}),
+\bfpage{1885}--\blpage{1898}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 118
+\bibitem[\protect\citeauthoryear{Strachan et~al.}{2024}]{strachan2024testing}
+\begin{barticle}
+\bauthor{\bsnm{Strachan}, \binits{J.W.}},
+\bauthor{\bsnm{Albergo}, \binits{D.}},
+\bauthor{\bsnm{Borghini}, \binits{G.}},
+\bauthor{\bsnm{Pansardi}, \binits{O.}},
+\bauthor{\bsnm{Scaliti}, \binits{E.}},
+\bauthor{\bsnm{Gupta}, \binits{S.}},
+\bauthor{\bsnm{Saxena}, \binits{K.}},
+\bauthor{\bsnm{Rufo}, \binits{A.}},
+\bauthor{\bsnm{Panzeri}, \binits{S.}},
+\bauthor{\bsnm{Manzi}, \binits{G.}}, \betal:
+\batitle{Testing theory of mind in large language models and humans}.
+\bjtitle{Nature Human Behaviour}
+\bvolume{8}(\bissue{7}),
+\bfpage{1285}--\blpage{1295}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 119
+\bibitem[\protect\citeauthoryear{Sejnowski}{2023}]{sejnowski2023large}
+\begin{barticle}
+\bauthor{\bsnm{Sejnowski}, \binits{T.J.}}:
+\batitle{Large language models and the reverse turing test}.
+\bjtitle{Neural computation}
+\bvolume{35}(\bissue{3}),
+\bfpage{309}--\blpage{342}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 120
+\bibitem[\protect\citeauthoryear{Lewis et~al.}{2011}]{lewis2011survey}
+\begin{bchapter}
+\bauthor{\bsnm{Lewis}, \binits{P.R.}},
+\bauthor{\bsnm{Chandra}, \binits{A.}},
+\bauthor{\bsnm{Parsons}, \binits{S.}},
+\bauthor{\bsnm{Robinson}, \binits{E.}},
+\bauthor{\bsnm{Glette}, \binits{K.}},
+\bauthor{\bsnm{Bahsoon}, \binits{R.}},
+\bauthor{\bsnm{Torresen}, \binits{J.}},
+\bauthor{\bsnm{Yao}, \binits{X.}}:
+\bctitle{A survey of self-awareness and its application in computing systems}.
+In: \bbtitle{2011 Fifth IEEE Conference on Self-adaptive and Self-organizing Systems Workshops},
+pp. \bfpage{102}--\blpage{107}
+(\byear{2011}).
+\bcomment{IEEE}
+\end{bchapter}
+\endbibitem
+
+%%% 121
+\bibitem[\protect\citeauthoryear{Yin et~al.}{2023}]{yin2023large}
+\begin{bchapter}
+\bauthor{\bsnm{Yin}, \binits{Z.}},
+\bauthor{\bsnm{Sun}, \binits{Q.}},
+\bauthor{\bsnm{Guo}, \binits{Q.}},
+\bauthor{\bsnm{Wu}, \binits{J.}},
+\bauthor{\bsnm{Qiu}, \binits{X.}},
+\bauthor{\bsnm{Huang}, \binits{X.-J.}}:
+\bctitle{Do large language models know what they don’t know?}
+In: \bbtitle{Findings of the Association for Computational Linguistics: ACL 2023},
+pp. \bfpage{8653}--\blpage{8665}
+(\byear{2023})
+\end{bchapter}
+\endbibitem
+
+%%% 122
+\bibitem[\protect\citeauthoryear{Bainbridge et~al.}{1994}]{bainbridge1994artificial}
+\begin{barticle}
+\bauthor{\bsnm{Bainbridge}, \binits{W.S.}},
+\bauthor{\bsnm{Brent}, \binits{E.E.}},
+\bauthor{\bsnm{Carley}, \binits{K.M.}},
+\bauthor{\bsnm{Heise}, \binits{D.R.}},
+\bauthor{\bsnm{Macy}, \binits{M.W.}},
+\bauthor{\bsnm{Markovsky}, \binits{B.}},
+\bauthor{\bsnm{Skvoretz}, \binits{J.}}:
+\batitle{Artificial social intelligence}.
+\bjtitle{Annual review of sociology}
+\bvolume{20}(\bissue{1}),
+\bfpage{407}--\blpage{436}
+(\byear{1994})
+\end{barticle}
+\endbibitem
+
+%%% 123
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2023}]{wang2023emotional}
+\begin{barticle}
+\bauthor{\bsnm{Wang}, \binits{X.}},
+\bauthor{\bsnm{Li}, \binits{X.}},
+\bauthor{\bsnm{Yin}, \binits{Z.}},
+\bauthor{\bsnm{Wu}, \binits{Y.}},
+\bauthor{\bsnm{Liu}, \binits{J.}}:
+\batitle{Emotional intelligence of large language models}.
+\bjtitle{Journal of Pacific Rim Psychology}
+\bvolume{17},
+\bfpage{18344909231213958}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 124
+\bibitem[\protect\citeauthoryear{Laine et~al.}{2024}]{laine2024me}
+\begin{barticle}
+\bauthor{\bsnm{Laine}, \binits{R.}},
+\bauthor{\bsnm{Chughtai}, \binits{B.}},
+\bauthor{\bsnm{Betley}, \binits{J.}},
+\bauthor{\bsnm{Hariharan}, \binits{K.}},
+\bauthor{\bsnm{Balesni}, \binits{M.}},
+\bauthor{\bsnm{Scheurer}, \binits{J.}},
+\bauthor{\bsnm{Hobbhahn}, \binits{M.}},
+\bauthor{\bsnm{Meinke}, \binits{A.}},
+\bauthor{\bsnm{Evans}, \binits{O.}}:
+\batitle{Me, myself, and ai: The situational awareness dataset (sad) for llms}.
+\bjtitle{Advances in Neural Information Processing Systems}
+\bvolume{37},
+\bfpage{64010}--\blpage{64118}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 125
+\bibitem[\protect\citeauthoryear{Meinke et~al.}{2024}]{meinke2024frontier}
+\begin{botherref}
+\oauthor{\bsnm{Meinke}, \binits{A.}},
+\oauthor{\bsnm{Schoen}, \binits{B.}},
+\oauthor{\bsnm{Scheurer}, \binits{J.}},
+\oauthor{\bsnm{Balesni}, \binits{M.}},
+\oauthor{\bsnm{Shah}, \binits{R.}},
+\oauthor{\bsnm{Hobbhahn}, \binits{M.}}:
+Frontier models are capable of in-context scheming.
+arXiv preprint arXiv:2412.04984
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 126
+\bibitem[\protect\citeauthoryear{Patil et~al.}{2024}]{patil2024gorilla}
+\begin{barticle}
+\bauthor{\bsnm{Patil}, \binits{S.G.}},
+\bauthor{\bsnm{Zhang}, \binits{T.}},
+\bauthor{\bsnm{Wang}, \binits{X.}},
+\bauthor{\bsnm{Gonzalez}, \binits{J.E.}}:
+\batitle{Gorilla: Large language model connected with massive apis}.
+\bjtitle{Advances in Neural Information Processing Systems}
+\bvolume{37},
+\bfpage{126544}--\blpage{126565}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 127
+\bibitem[\protect\citeauthoryear{Qi et~al.}{2024}]{qi2024webrl}
+\begin{botherref}
+\oauthor{\bsnm{Qi}, \binits{Z.}},
+\oauthor{\bsnm{Liu}, \binits{X.}},
+\oauthor{\bsnm{Iong}, \binits{I.L.}},
+\oauthor{\bsnm{Lai}, \binits{H.}},
+\oauthor{\bsnm{Sun}, \binits{X.}},
+\oauthor{\bsnm{Zhao}, \binits{W.}},
+\oauthor{\bsnm{Yang}, \binits{Y.}},
+\oauthor{\bsnm{Yang}, \binits{X.}},
+\oauthor{\bsnm{Sun}, \binits{J.}},
+\oauthor{\bsnm{Yao}, \binits{S.}}, et al.:
+Webrl: Training llm web agents via self-evolving online curriculum reinforcement learning.
+arXiv preprint arXiv:2411.02337
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 128
+\bibitem[\protect\citeauthoryear{Hao et~al.}{2023}]{hao2023toolkengpt}
+\begin{barticle}
+\bauthor{\bsnm{Hao}, \binits{S.}},
+\bauthor{\bsnm{Liu}, \binits{T.}},
+\bauthor{\bsnm{Wang}, \binits{Z.}},
+\bauthor{\bsnm{Hu}, \binits{Z.}}:
+\batitle{Toolkengpt: Augmenting frozen language models with massive tools via tool embeddings}.
+\bjtitle{Advances in neural information processing systems}
+\bvolume{36},
+\bfpage{45870}--\blpage{45894}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 129
+\bibitem[\protect\citeauthoryear{Shen et~al.}{2023}]{shen2023hugginggpt}
+\begin{barticle}
+\bauthor{\bsnm{Shen}, \binits{Y.}},
+\bauthor{\bsnm{Song}, \binits{K.}},
+\bauthor{\bsnm{Tan}, \binits{X.}},
+\bauthor{\bsnm{Li}, \binits{D.}},
+\bauthor{\bsnm{Lu}, \binits{W.}},
+\bauthor{\bsnm{Zhuang}, \binits{Y.}}:
+\batitle{Hugginggpt: Solving ai tasks with chatgpt and its friends in hugging face}.
+\bjtitle{Advances in Neural Information Processing Systems}
+\bvolume{36},
+\bfpage{38154}--\blpage{38180}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 130
+\bibitem[\protect\citeauthoryear{Driess et~al.}{2023}]{driess2023palm}
+\begin{botherref}
+\oauthor{\bsnm{Driess}, \binits{D.}},
+\oauthor{\bsnm{Xia}, \binits{F.}},
+\oauthor{\bsnm{Sajjadi}, \binits{M.S.}},
+\oauthor{\bsnm{Lynch}, \binits{C.}},
+\oauthor{\bsnm{Chowdhery}, \binits{A.}},
+\oauthor{\bsnm{Wahid}, \binits{A.}},
+\oauthor{\bsnm{Tompson}, \binits{J.}},
+\oauthor{\bsnm{Vuong}, \binits{Q.}},
+\oauthor{\bsnm{Yu}, \binits{T.}},
+\oauthor{\bsnm{Huang}, \binits{W.}}, et al.:
+Palm-e: An embodied multimodal language model
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 131
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2024}]{wang2024cogvlm}
+\begin{barticle}
+\bauthor{\bsnm{Wang}, \binits{W.}},
+\bauthor{\bsnm{Lv}, \binits{Q.}},
+\bauthor{\bsnm{Yu}, \binits{W.}},
+\bauthor{\bsnm{Hong}, \binits{W.}},
+\bauthor{\bsnm{Qi}, \binits{J.}},
+\bauthor{\bsnm{Wang}, \binits{Y.}},
+\bauthor{\bsnm{Ji}, \binits{J.}},
+\bauthor{\bsnm{Yang}, \binits{Z.}},
+\bauthor{\bsnm{Zhao}, \binits{L.}},
+\bauthor{\bsnm{XiXuan}, \binits{S.}}, \betal:
+\batitle{Cogvlm: Visual expert for pretrained language models}.
+\bjtitle{Advances in Neural Information Processing Systems}
+\bvolume{37},
+\bfpage{121475}--\blpage{121499}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 132
+\bibitem[\protect\citeauthoryear{Jaech et~al.}{2024}]{jaech2024openai}
+\begin{botherref}
+\oauthor{\bsnm{Jaech}, \binits{A.}},
+\oauthor{\bsnm{Kalai}, \binits{A.}},
+\oauthor{\bsnm{Lerer}, \binits{A.}},
+\oauthor{\bsnm{Richardson}, \binits{A.}},
+\oauthor{\bsnm{El-Kishky}, \binits{A.}},
+\oauthor{\bsnm{Low}, \binits{A.}},
+\oauthor{\bsnm{Helyar}, \binits{A.}},
+\oauthor{\bsnm{Madry}, \binits{A.}},
+\oauthor{\bsnm{Beutel}, \binits{A.}},
+\oauthor{\bsnm{Carney}, \binits{A.}}, et al.:
+Openai o1 system card.
+arXiv preprint arXiv:2412.16720
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 133
+\bibitem[\protect\citeauthoryear{Anthropic}{2024}]{Anthropic2024modelcard}
+\begin{botherref}
+\oauthor{\bsnm{Anthropic}}:
+Model Card Addendum: Claude 3.5 Haiku and Upgraded Claude 3.5 Sonnet.
+\url{https://assets.anthropic.com/m/1cd9d098ac3e6467/original/Claude-3-Model-Card-October-Addendum.pdf}.
+Accessed: 2025-02-08
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 134
+\bibitem[\protect\citeauthoryear{Guo et~al.}{2025}]{guo2025deepseek}
+\begin{botherref}
+\oauthor{\bsnm{Guo}, \binits{D.}},
+\oauthor{\bsnm{Yang}, \binits{D.}},
+\oauthor{\bsnm{Zhang}, \binits{H.}},
+\oauthor{\bsnm{Song}, \binits{J.}},
+\oauthor{\bsnm{Zhang}, \binits{R.}},
+\oauthor{\bsnm{Xu}, \binits{R.}},
+\oauthor{\bsnm{Zhu}, \binits{Q.}},
+\oauthor{\bsnm{Ma}, \binits{S.}},
+\oauthor{\bsnm{Wang}, \binits{P.}},
+\oauthor{\bsnm{Bi}, \binits{X.}}, et al.:
+Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning.
+arXiv preprint arXiv:2501.12948
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 135
+\bibitem[\protect\citeauthoryear{Betley et~al.}{2025}]{DBLP:journals/corr/abs-2501-11120}
+\begin{botherref}
+\oauthor{\bsnm{Betley}, \binits{J.}},
+\oauthor{\bsnm{Bao}, \binits{X.}},
+\oauthor{\bsnm{Soto}, \binits{M.}},
+\oauthor{\bsnm{Sztyber-Betley}, \binits{A.}},
+\oauthor{\bsnm{Chua}, \binits{J.}},
+\oauthor{\bsnm{Evans}, \binits{O.}}:
+Tell me about yourself: Llms are aware of their learned behaviors.
+arXiv preprint arXiv:2501.11120
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 136
+\bibitem[\protect\citeauthoryear{Hagendorff and Fabi}{2025}]{hagendorff2025beyond}
+\begin{botherref}
+\oauthor{\bsnm{Hagendorff}, \binits{T.}},
+\oauthor{\bsnm{Fabi}, \binits{S.}}:
+Beyond chains of thought: Benchmarking latent-space reasoning abilities in large language models.
+arXiv preprint arXiv:2504.10615
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 137
+\bibitem[\protect\citeauthoryear{Zhang et~al.}{2025}]{zhang2025igniting}
+\begin{barticle}
+\bauthor{\bsnm{Zhang}, \binits{Z.}},
+\bauthor{\bsnm{Yao}, \binits{Y.}},
+\bauthor{\bsnm{Zhang}, \binits{A.}},
+\bauthor{\bsnm{Tang}, \binits{X.}},
+\bauthor{\bsnm{Ma}, \binits{X.}},
+\bauthor{\bsnm{He}, \binits{Z.}},
+\bauthor{\bsnm{Wang}, \binits{Y.}},
+\bauthor{\bsnm{Gerstein}, \binits{M.}},
+\bauthor{\bsnm{Wang}, \binits{R.}},
+\bauthor{\bsnm{Liu}, \binits{G.}}, \betal:
+\batitle{Igniting language intelligence: The hitchhiker’s guide from chain-of-thought reasoning to language agents}.
+\bjtitle{ACM Computing Surveys}
+\bvolume{57}(\bissue{8}),
+\bfpage{1}--\blpage{39}
+(\byear{2025})
+\end{barticle}
+\endbibitem
+
+%%% 138
+\bibitem[\protect\citeauthoryear{Wei et~al.}{2022}]{wei2022chain}
+\begin{barticle}
+\bauthor{\bsnm{Wei}, \binits{J.}},
+\bauthor{\bsnm{Wang}, \binits{X.}},
+\bauthor{\bsnm{Schuurmans}, \binits{D.}},
+\bauthor{\bsnm{Bosma}, \binits{M.}},
+\bauthor{\bsnm{Xia}, \binits{F.}},
+\bauthor{\bsnm{Chi}, \binits{E.}},
+\bauthor{\bsnm{Le}, \binits{Q.V.}},
+\bauthor{\bsnm{Zhou}, \binits{D.}}, \betal:
+\batitle{Chain-of-thought prompting elicits reasoning in large language models}.
+\bjtitle{Advances in neural information processing systems}
+\bvolume{35},
+\bfpage{24824}--\blpage{24837}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 139
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2025}]{wang2025decoupling}
+\begin{bchapter}
+\bauthor{\bsnm{Wang}, \binits{G.}},
+\bauthor{\bsnm{Wu}, \binits{W.}},
+\bauthor{\bsnm{Ye}, \binits{G.}},
+\bauthor{\bsnm{Cheng}, \binits{Z.}},
+\bauthor{\bsnm{Chen}, \binits{X.}},
+\bauthor{\bsnm{Zheng}, \binits{H.}}:
+\bctitle{Decoupling metacognition from cognition: A framework for quantifying metacognitive ability in llms}.
+In: \bbtitle{Proceedings of the AAAI Conference on Artificial Intelligence},
+vol. \bseriesno{39},
+pp. \bfpage{25353}--\blpage{25361}
+(\byear{2025})
+\end{bchapter}
+\endbibitem
+
+%%% 140
+\bibitem[\protect\citeauthoryear{Team}{2025}]{anthropic2025attribution}
+\begin{botherref}
+\oauthor{\bsnm{Team}, \binits{A.I.}}:
+On the Biology of a Large Language Model.
+Accessed: 2025-04-16
+(2025).
+\url{https://transformer-circuits.pub/2025/attribution-graphs/biology.html}
+\end{botherref}
+\endbibitem
+
+%%% 141
+\bibitem[\protect\citeauthoryear{Liang et~al.}{2024}]{liang2024integrating}
+\begin{botherref}
+\oauthor{\bsnm{Liang}, \binits{Y.}},
+\oauthor{\bsnm{Wu}, \binits{Y.}},
+\oauthor{\bsnm{Zhuang}, \binits{H.}},
+\oauthor{\bsnm{Chen}, \binits{L.}},
+\oauthor{\bsnm{Shen}, \binits{J.}},
+\oauthor{\bsnm{Jia}, \binits{Y.}},
+\oauthor{\bsnm{Qin}, \binits{Z.}},
+\oauthor{\bsnm{Sanghai}, \binits{S.}},
+\oauthor{\bsnm{Wang}, \binits{X.}},
+\oauthor{\bsnm{Yang}, \binits{C.}}, et al.:
+Integrating planning into single-turn long-form text generation.
+arXiv preprint arXiv:2410.06203
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 142
+\bibitem[\protect\citeauthoryear{Jiang et~al.}{2024}]{jiang2024self}
+\begin{barticle}
+\bauthor{\bsnm{Jiang}, \binits{X.}},
+\bauthor{\bsnm{Dong}, \binits{Y.}},
+\bauthor{\bsnm{Wang}, \binits{L.}},
+\bauthor{\bsnm{Fang}, \binits{Z.}},
+\bauthor{\bsnm{Shang}, \binits{Q.}},
+\bauthor{\bsnm{Li}, \binits{G.}},
+\bauthor{\bsnm{Jin}, \binits{Z.}},
+\bauthor{\bsnm{Jiao}, \binits{W.}}:
+\batitle{Self-planning code generation with large language models}.
+\bjtitle{ACM Transactions on Software Engineering and Methodology}
+\bvolume{33}(\bissue{7}),
+\bfpage{1}--\blpage{30}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 143
+\bibitem[\protect\citeauthoryear{Ji-An et~al.}{2025}]{ji2025language}
+\begin{botherref}
+\oauthor{\bsnm{Ji-An}, \binits{L.}},
+\oauthor{\bsnm{Xiong}, \binits{H.-D.}},
+\oauthor{\bsnm{Wilson}, \binits{R.C.}},
+\oauthor{\bsnm{Mattar}, \binits{M.G.}},
+\oauthor{\bsnm{Benna}, \binits{M.K.}}:
+Language models are capable of metacognitive monitoring and control of their internal activations.
+arXiv preprint arXiv:2505.13763
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 144
+\bibitem[\protect\citeauthoryear{Chen et~al.}{2025}]{chen2025towards}
+\begin{botherref}
+\oauthor{\bsnm{Chen}, \binits{Q.}},
+\oauthor{\bsnm{Qin}, \binits{L.}},
+\oauthor{\bsnm{Liu}, \binits{J.}},
+\oauthor{\bsnm{Peng}, \binits{D.}},
+\oauthor{\bsnm{Guan}, \binits{J.}},
+\oauthor{\bsnm{Wang}, \binits{P.}},
+\oauthor{\bsnm{Hu}, \binits{M.}},
+\oauthor{\bsnm{Zhou}, \binits{Y.}},
+\oauthor{\bsnm{Gao}, \binits{T.}},
+\oauthor{\bsnm{Che}, \binits{W.}}:
+Towards reasoning era: A survey of long chain-of-thought for reasoning large language models.
+arXiv preprint arXiv:2503.09567
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 145
+\bibitem[\protect\citeauthoryear{Liu et~al.}{2024}]{liu2024trustworthiness}
+\begin{bchapter}
+\bauthor{\bsnm{Liu}, \binits{Z.}},
+\bauthor{\bsnm{Xia}, \binits{C.}},
+\bauthor{\bsnm{He}, \binits{W.}},
+\bauthor{\bsnm{Wang}, \binits{C.}}:
+\bctitle{Trustworthiness and self-awareness in large language models: An exploration through the think-solve-verify framework}.
+In: \bbtitle{Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)},
+pp. \bfpage{16855}--\blpage{16866}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 146
+\bibitem[\protect\citeauthoryear{Cheng et~al.}{2024}]{cheng2024can}
+\begin{botherref}
+\oauthor{\bsnm{Cheng}, \binits{Q.}},
+\oauthor{\bsnm{Sun}, \binits{T.}},
+\oauthor{\bsnm{Liu}, \binits{X.}},
+\oauthor{\bsnm{Zhang}, \binits{W.}},
+\oauthor{\bsnm{Yin}, \binits{Z.}},
+\oauthor{\bsnm{Li}, \binits{S.}},
+\oauthor{\bsnm{Li}, \binits{L.}},
+\oauthor{\bsnm{He}, \binits{Z.}},
+\oauthor{\bsnm{Chen}, \binits{K.}},
+\oauthor{\bsnm{Qiu}, \binits{X.}}:
+Can ai assistants know what they don't know?
+arXiv preprint arXiv:2401.13275
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 147
+\bibitem[\protect\citeauthoryear{Tan et~al.}{2024}]{tan2024can}
+\begin{botherref}
+\oauthor{\bsnm{Tan}, \binits{Z.}},
+\oauthor{\bsnm{Wei}, \binits{L.}},
+\oauthor{\bsnm{Wang}, \binits{J.}},
+\oauthor{\bsnm{Xie}, \binits{X.}},
+\oauthor{\bsnm{Huang}, \binits{W.}}:
+Can i understand what i create? self-knowledge evaluation of large language models.
+arXiv preprint arXiv:2406.06140
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 148
+\bibitem[\protect\citeauthoryear{Kapoor et~al.}{2024}]{kapoor2024large}
+\begin{botherref}
+\oauthor{\bsnm{Kapoor}, \binits{S.}},
+\oauthor{\bsnm{Gruver}, \binits{N.}},
+\oauthor{\bsnm{Roberts}, \binits{M.}},
+\oauthor{\bsnm{Collins}, \binits{K.}},
+\oauthor{\bsnm{Pal}, \binits{A.}},
+\oauthor{\bsnm{Bhatt}, \binits{U.}},
+\oauthor{\bsnm{Weller}, \binits{A.}},
+\oauthor{\bsnm{Dooley}, \binits{S.}},
+\oauthor{\bsnm{Goldblum}, \binits{M.}},
+\oauthor{\bsnm{Wilson}, \binits{A.G.}}:
+Large language models must be taught to know what they don't know.
+arXiv preprint arXiv:2406.08391
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 149
+\bibitem[\protect\citeauthoryear{Chen et~al.}{2023}]{chen2023universal}
+\begin{botherref}
+\oauthor{\bsnm{Chen}, \binits{X.}},
+\oauthor{\bsnm{Aksitov}, \binits{R.}},
+\oauthor{\bsnm{Alon}, \binits{U.}},
+\oauthor{\bsnm{Ren}, \binits{J.}},
+\oauthor{\bsnm{Xiao}, \binits{K.}},
+\oauthor{\bsnm{Yin}, \binits{P.}},
+\oauthor{\bsnm{Prakash}, \binits{S.}},
+\oauthor{\bsnm{Sutton}, \binits{C.}},
+\oauthor{\bsnm{Wang}, \binits{X.}},
+\oauthor{\bsnm{Zhou}, \binits{D.}}:
+Universal self-consistency for large language model generation.
+arXiv preprint arXiv:2311.17311
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 150
+\bibitem[\protect\citeauthoryear{Davidson et~al.}{2024}]{davidson2024self}
+\begin{botherref}
+\oauthor{\bsnm{Davidson}, \binits{T.R.}},
+\oauthor{\bsnm{Surkov}, \binits{V.}},
+\oauthor{\bsnm{Veselovsky}, \binits{V.}},
+\oauthor{\bsnm{Russo}, \binits{G.}},
+\oauthor{\bsnm{West}, \binits{R.}},
+\oauthor{\bsnm{Gulcehre}, \binits{C.}}:
+Self-recognition in language models.
+arXiv preprint arXiv:2407.06946
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 151
+\bibitem[\protect\citeauthoryear{Binder et~al.}{2024}]{binder2024looking}
+\begin{botherref}
+\oauthor{\bsnm{Binder}, \binits{F.J.}},
+\oauthor{\bsnm{Chua}, \binits{J.}},
+\oauthor{\bsnm{Korbak}, \binits{T.}},
+\oauthor{\bsnm{Sleight}, \binits{H.}},
+\oauthor{\bsnm{Hughes}, \binits{J.}},
+\oauthor{\bsnm{Long}, \binits{R.}},
+\oauthor{\bsnm{Perez}, \binits{E.}},
+\oauthor{\bsnm{Turpin}, \binits{M.}},
+\oauthor{\bsnm{Evans}, \binits{O.}}:
+Looking inward: Language models can learn about themselves by introspection.
+arXiv preprint arXiv:2410.13787
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 152
+\bibitem[\protect\citeauthoryear{Tamoyan et~al.}{2025}]{tamoyan2025factual}
+\begin{botherref}
+\oauthor{\bsnm{Tamoyan}, \binits{H.}},
+\oauthor{\bsnm{Dutta}, \binits{S.}},
+\oauthor{\bsnm{Gurevych}, \binits{I.}}:
+Factual self-awareness in language models: Representation, robustness, and scaling.
+arXiv preprint arXiv:2505.21399
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 153
+\bibitem[\protect\citeauthoryear{Anthropic}{2024}]{Anthropic2024Claude3}
+\begin{botherref}
+\oauthor{\bsnm{Anthropic}}:
+{Claude 3 Model Family: Opus, Sonnet, Haiku}.
+\url{https://www.anthropic.com/news/claude-3-family}.
+[Online; accessed 2024-06-01]
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 154
+\bibitem[\protect\citeauthoryear{Achiam et~al.}{2023}]{achiam2023gpt}
+\begin{botherref}
+\oauthor{\bsnm{Achiam}, \binits{J.}},
+\oauthor{\bsnm{Adler}, \binits{S.}},
+\oauthor{\bsnm{Agarwal}, \binits{S.}},
+\oauthor{\bsnm{Ahmad}, \binits{L.}},
+\oauthor{\bsnm{Akkaya}, \binits{I.}},
+\oauthor{\bsnm{Aleman}, \binits{F.L.}},
+\oauthor{\bsnm{Almeida}, \binits{D.}},
+\oauthor{\bsnm{Altenschmidt}, \binits{J.}},
+\oauthor{\bsnm{Altman}, \binits{S.}},
+\oauthor{\bsnm{Anadkat}, \binits{S.}}, et al.:
+Gpt-4 technical report.
+arXiv preprint arXiv:2303.08774
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 155
+\bibitem[\protect\citeauthoryear{Jiang et~al.}{2025}]{jiang2025delphi}
+\begin{botherref}
+\oauthor{\bsnm{Jiang}, \binits{L.}},
+\oauthor{\bsnm{Hwang}, \binits{J.D.}},
+\oauthor{\bsnm{Bhagavatula}, \binits{C.}},
+\oauthor{\bsnm{Bras}, \binits{R.L.}},
+\oauthor{\bsnm{Liang}, \binits{J.}},
+\oauthor{\bsnm{Dodge}, \binits{J.}},
+\oauthor{\bsnm{Sakaguchi}, \binits{K.}},
+\oauthor{\bsnm{Forbes}, \binits{M.}},
+\oauthor{\bsnm{Borchardt}, \binits{J.}},
+\oauthor{\bsnm{Gabriel}, \binits{S.}},
+\oauthor{\bsnm{Tsvetkov}, \binits{Y.}},
+\oauthor{\bsnm{Etzioni}, \binits{O.}},
+\oauthor{\bsnm{Sap}, \binits{M.}},
+\oauthor{\bsnm{Rini}, \binits{R.}},
+\oauthor{\bsnm{Choi}, \binits{Y.}}:
+Investigating machine moral judgement through the delphi experiment.
+Nature Machine Intelligence,
+1--16
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 156
+\bibitem[\protect\citeauthoryear{Qiu et~al.}{2024}]{qiu2024evaluating}
+\begin{botherref}
+\oauthor{\bsnm{Qiu}, \binits{H.}},
+\oauthor{\bsnm{Fabbri}, \binits{A.R.}},
+\oauthor{\bsnm{Agarwal}, \binits{D.}},
+\oauthor{\bsnm{Huang}, \binits{K.-H.}},
+\oauthor{\bsnm{Tan}, \binits{S.}},
+\oauthor{\bsnm{Peng}, \binits{N.}},
+\oauthor{\bsnm{Wu}, \binits{C.-S.}}:
+Evaluating cultural and social awareness of llm web agents.
+arXiv preprint arXiv:2410.23252
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 157
+\bibitem[\protect\citeauthoryear{Voria et~al.}{2024}]{voria2024attention}
+\begin{bchapter}
+\bauthor{\bsnm{Voria}, \binits{G.}},
+\bauthor{\bsnm{Catolino}, \binits{G.}},
+\bauthor{\bsnm{Palomba}, \binits{F.}}:
+\bctitle{Is attention all you need? toward a conceptual model for social awareness in large language models}.
+In: \bbtitle{Proceedings of the 2024 IEEE/ACM First International Conference on AI Foundation Models and Software Engineering},
+pp. \bfpage{69}--\blpage{73}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 158
+\bibitem[\protect\citeauthoryear{Li et~al.}{2024}]{li2024think}
+\begin{botherref}
+\oauthor{\bsnm{Li}, \binits{Y.}},
+\oauthor{\bsnm{Huang}, \binits{Y.}},
+\oauthor{\bsnm{Lin}, \binits{Y.}},
+\oauthor{\bsnm{Wu}, \binits{S.}},
+\oauthor{\bsnm{Wan}, \binits{Y.}},
+\oauthor{\bsnm{Sun}, \binits{L.}}:
+I think, therefore i am: Benchmarking awareness of large language models using awarebench.
+arXiv preprint arXiv:2401.17882
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 159
+\bibitem[\protect\citeauthoryear{Zhuge et~al.}{2023}]{DBLP:journals/corr/abs-2305-17066}
+\begin{botherref}
+\oauthor{\bsnm{Zhuge}, \binits{M.}},
+\oauthor{\bsnm{Liu}, \binits{H.}},
+\oauthor{\bsnm{Faccio}, \binits{F.}},
+\oauthor{\bsnm{Ashley}, \binits{D.R.}},
+\oauthor{\bsnm{Csord{\'a}s}, \binits{R.}},
+\oauthor{\bsnm{Gopalakrishnan}, \binits{A.}},
+\oauthor{\bsnm{Hamdi}, \binits{A.}},
+\oauthor{\bsnm{Hammoud}, \binits{H.A.A.K.}},
+\oauthor{\bsnm{Herrmann}, \binits{V.}},
+\oauthor{\bsnm{Irie}, \binits{K.}}, et al.:
+Mindstorms in natural language-based societies of mind.
+arXiv preprint arXiv:2305.17066
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 160
+\bibitem[\protect\citeauthoryear{Choi et~al.}{2023}]{choi2023llms}
+\begin{botherref}
+\oauthor{\bsnm{Choi}, \binits{M.}},
+\oauthor{\bsnm{Pei}, \binits{J.}},
+\oauthor{\bsnm{Kumar}, \binits{S.}},
+\oauthor{\bsnm{Shu}, \binits{C.}},
+\oauthor{\bsnm{Jurgens}, \binits{D.}}:
+Do llms understand social knowledge? evaluating the sociability of large language models with socket benchmark.
+arXiv preprint arXiv:2305.14938
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 161
+\bibitem[\protect\citeauthoryear{Xu et~al.}{2025}]{xu2025socialmaze}
+\begin{botherref}
+\oauthor{\bsnm{Xu}, \binits{Z.}},
+\oauthor{\bsnm{Wang}, \binits{Y.}},
+\oauthor{\bsnm{Huang}, \binits{Y.}},
+\oauthor{\bsnm{Ye}, \binits{J.}},
+\oauthor{\bsnm{Zhuang}, \binits{H.}},
+\oauthor{\bsnm{Song}, \binits{Z.}},
+\oauthor{\bsnm{Gao}, \binits{L.}},
+\oauthor{\bsnm{Wang}, \binits{C.}},
+\oauthor{\bsnm{Chen}, \binits{Z.}},
+\oauthor{\bsnm{Zhou}, \binits{Y.}}, et al.:
+Socialmaze: A benchmark for evaluating social reasoning in large language models.
+arXiv preprint arXiv:2505.23713
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 162
+\bibitem[\protect\citeauthoryear{Gandhi et~al.}{2023}]{gandhi2023understanding}
+\begin{barticle}
+\bauthor{\bsnm{Gandhi}, \binits{K.}},
+\bauthor{\bsnm{Fr{\"a}nken}, \binits{J.-P.}},
+\bauthor{\bsnm{Gerstenberg}, \binits{T.}},
+\bauthor{\bsnm{Goodman}, \binits{N.}}:
+\batitle{Understanding social reasoning in language models with language models}.
+\bjtitle{Advances in Neural Information Processing Systems}
+\bvolume{36},
+\bfpage{13518}--\blpage{13529}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 163
+\bibitem[\protect\citeauthoryear{Wu et~al.}{2023}]{wu2023hi}
+\begin{bchapter}
+\bauthor{\bsnm{Wu}, \binits{Y.}},
+\bauthor{\bsnm{He}, \binits{Y.}},
+\bauthor{\bsnm{Jia}, \binits{Y.}},
+\bauthor{\bsnm{Mihalcea}, \binits{R.}},
+\bauthor{\bsnm{Chen}, \binits{Y.}},
+\bauthor{\bsnm{Deng}, \binits{N.}}:
+\bctitle{Hi-tom: A benchmark for evaluating higher-order theory of mind reasoning in large language models}.
+In: \bbtitle{Findings of the Association for Computational Linguistics: EMNLP 2023},
+pp. \bfpage{10691}--\blpage{10706}
+(\byear{2023})
+\end{bchapter}
+\endbibitem
+
+%%% 164
+\bibitem[\protect\citeauthoryear{Li et~al.}{2023}]{li2023camel}
+\begin{barticle}
+\bauthor{\bsnm{Li}, \binits{G.}},
+\bauthor{\bsnm{Hammoud}, \binits{H.}},
+\bauthor{\bsnm{Itani}, \binits{H.}},
+\bauthor{\bsnm{Khizbullin}, \binits{D.}},
+\bauthor{\bsnm{Ghanem}, \binits{B.}}:
+\batitle{Camel: Communicative agents for ``mind'' exploration of large language model society}.
+\bjtitle{Advances in Neural Information Processing Systems}
+\bvolume{36},
+\bfpage{51991}--\blpage{52008}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 165
+\bibitem[\protect\citeauthoryear{Park et~al.}{2023}]{park2023generative}
+\begin{bchapter}
+\bauthor{\bsnm{Park}, \binits{J.S.}},
+\bauthor{\bsnm{O'Brien}, \binits{J.}},
+\bauthor{\bsnm{Cai}, \binits{C.J.}},
+\bauthor{\bsnm{Morris}, \binits{M.R.}},
+\bauthor{\bsnm{Liang}, \binits{P.}},
+\bauthor{\bsnm{Bernstein}, \binits{M.S.}}:
+\bctitle{Generative agents: Interactive simulacra of human behavior}.
+In: \bbtitle{Proceedings of the 36th Annual Acm Symposium on User Interface Software and Technology},
+pp. \bfpage{1}--\blpage{22}
+(\byear{2023})
+\end{bchapter}
+\endbibitem
+
+%%% 166
+\bibitem[\protect\citeauthoryear{Rao et~al.}{2025}]{rao2025normAd}
+\begin{bchapter}
+\bauthor{\bsnm{Rao}, \binits{A.}},
+\bauthor{\bsnm{Yerukola}, \binits{A.}},
+\bauthor{\bsnm{Shah}, \binits{V.}},
+\bauthor{\bsnm{Reinecke}, \binits{K.}},
+\bauthor{\bsnm{Sap}, \binits{M.}}:
+\bctitle{Normad: A benchmark for measuring the cultural adaptability of large language models}.
+In: \bbtitle{NAACL}
+(\byear{2025})
+\end{bchapter}
+\endbibitem
+
+%%% 167
+\bibitem[\protect\citeauthoryear{Wimmer and Perner}{1983}]{wimmer1983beliefs}
+\begin{barticle}
+\bauthor{\bsnm{Wimmer}, \binits{H.}},
+\bauthor{\bsnm{Perner}, \binits{J.}}:
+\batitle{Beliefs about beliefs: Representation and constraining function of wrong beliefs in young children's understanding of deception}.
+\bjtitle{Cognition}
+\bvolume{13}(\bissue{1}),
+\bfpage{103}--\blpage{128}
+(\byear{1983})
+\end{barticle}
+\endbibitem
+
+%%% 168
+\bibitem[\protect\citeauthoryear{Brown et~al.}{2020}]{brown2020language}
+\begin{barticle}
+\bauthor{\bsnm{Brown}, \binits{T.}},
+\bauthor{\bsnm{Mann}, \binits{B.}},
+\bauthor{\bsnm{Ryder}, \binits{N.}},
+\bauthor{\bsnm{Subbiah}, \binits{M.}},
+\bauthor{\bsnm{Kaplan}, \binits{J.D.}},
+\bauthor{\bsnm{Dhariwal}, \binits{P.}},
+\bauthor{\bsnm{Neelakantan}, \binits{A.}},
+\bauthor{\bsnm{Shyam}, \binits{P.}},
+\bauthor{\bsnm{Sastry}, \binits{G.}},
+\bauthor{\bsnm{Askell}, \binits{A.}}, \betal:
+\batitle{Language models are few-shot learners}.
+\bjtitle{Advances in neural information processing systems}
+\bvolume{33},
+\bfpage{1877}--\blpage{1901}
+(\byear{2020})
+\end{barticle}
+\endbibitem
+
+%%% 169
+\bibitem[\protect\citeauthoryear{Cheung}{2023}]{joseph_cheung_2023}
+\begin{botherref}
+\oauthor{\bsnm{Cheung}, \binits{J.}}:
+Guanaco (Revision e044a62).
+Hugging Face
+(2023).
+\doiurl{10.57967/hf/0607} .
+\url{https://huggingface.co/JosephusCheung/Guanaco}
+\end{botherref}
+\endbibitem
+
+%%% 170
+\bibitem[\protect\citeauthoryear{Tang et~al.}{2024}]{tang2024towards}
+\begin{bchapter}
+\bauthor{\bsnm{Tang}, \binits{G.}},
+\bauthor{\bsnm{Chu}, \binits{Z.}},
+\bauthor{\bsnm{Zheng}, \binits{W.}},
+\bauthor{\bsnm{Liu}, \binits{M.}},
+\bauthor{\bsnm{Qin}, \binits{B.}}:
+\bctitle{Towards benchmarking situational awareness of large language models: Comprehensive benchmark, evaluation and analysis}.
+In: \bbtitle{Findings of the Association for Computational Linguistics: EMNLP 2024},
+pp. \bfpage{7904}--\blpage{7928}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 171
+\bibitem[\protect\citeauthoryear{Wang and Zhong}{2024}]{wang2024llm}
+\begin{bchapter}
+\bauthor{\bsnm{Wang}, \binits{L.}},
+\bauthor{\bsnm{Zhong}, \binits{H.}}:
+\bctitle{Llm-sap: Large language models situational awareness-based planning}.
+In: \bbtitle{2024 IEEE International Conference on Multimedia and Expo Workshops (ICMEW)},
+pp. \bfpage{1}--\blpage{6}
+(\byear{2024}).
+\bcomment{IEEE}
+\end{bchapter}
+\endbibitem
+
+%%% 172
+\bibitem[\protect\citeauthoryear{Needham et~al.}{2025}]{needham2025large}
+\begin{botherref}
+\oauthor{\bsnm{Needham}, \binits{J.}},
+\oauthor{\bsnm{Edkins}, \binits{G.}},
+\oauthor{\bsnm{Pimpale}, \binits{G.}},
+\oauthor{\bsnm{Bartsch}, \binits{H.}},
+\oauthor{\bsnm{Hobbhahn}, \binits{M.}}:
+Large language models often know when they are being evaluated.
+arXiv preprint arXiv:2505.23836
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 173
+\bibitem[\protect\citeauthoryear{Phuong et~al.}{2025}]{phuong2025evaluating}
+\begin{botherref}
+\oauthor{\bsnm{Phuong}, \binits{M.}},
+\oauthor{\bsnm{Zimmermann}, \binits{R.S.}},
+\oauthor{\bsnm{Wang}, \binits{Z.}},
+\oauthor{\bsnm{Lindner}, \binits{D.}},
+\oauthor{\bsnm{Krakovna}, \binits{V.}},
+\oauthor{\bsnm{Cogan}, \binits{S.}},
+\oauthor{\bsnm{Dafoe}, \binits{A.}},
+\oauthor{\bsnm{Ho}, \binits{L.}},
+\oauthor{\bsnm{Shah}, \binits{R.}}:
+Evaluating frontier models for stealth and situational awareness.
+arXiv preprint arXiv:2505.01420
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 174
+\bibitem[\protect\citeauthoryear{Wester et~al.}{2024}]{wester2024ai}
+\begin{bchapter}
+\bauthor{\bsnm{Wester}, \binits{J.}},
+\bauthor{\bsnm{Schrills}, \binits{T.}},
+\bauthor{\bsnm{Pohl}, \binits{H.}},
+\bauthor{\bsnm{Berkel}, \binits{N.}}:
+\bctitle{“as an ai language model, i cannot”: Investigating llm denials of user requests}.
+In: \bbtitle{Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems},
+pp. \bfpage{1}--\blpage{14}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 175
+\bibitem[\protect\citeauthoryear{Berglund et~al.}{2023}]{berglund2023taken}
+\begin{botherref}
+\oauthor{\bsnm{Berglund}, \binits{L.}},
+\oauthor{\bsnm{Stickland}, \binits{A.C.}},
+\oauthor{\bsnm{Balesni}, \binits{M.}},
+\oauthor{\bsnm{Kaufmann}, \binits{M.}},
+\oauthor{\bsnm{Tong}, \binits{M.}},
+\oauthor{\bsnm{Korbak}, \binits{T.}},
+\oauthor{\bsnm{Kokotajlo}, \binits{D.}},
+\oauthor{\bsnm{Evans}, \binits{O.}}:
+Taken out of context: On measuring situational awareness in llms.
+arXiv preprint arXiv:2309.00667
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 176
+\bibitem[\protect\citeauthoryear{Greenblatt et~al.}{2024}]{greenblatt2024alignment}
+\begin{botherref}
+\oauthor{\bsnm{Greenblatt}, \binits{R.}},
+\oauthor{\bsnm{Denison}, \binits{C.}},
+\oauthor{\bsnm{Wright}, \binits{B.}},
+\oauthor{\bsnm{Roger}, \binits{F.}},
+\oauthor{\bsnm{MacDiarmid}, \binits{M.}},
+\oauthor{\bsnm{Marks}, \binits{S.}},
+\oauthor{\bsnm{Treutlein}, \binits{J.}},
+\oauthor{\bsnm{Belonax}, \binits{T.}},
+\oauthor{\bsnm{Chen}, \binits{J.}},
+\oauthor{\bsnm{Duvenaud}, \binits{D.}}, et al.:
+Alignment faking in large language models.
+arXiv preprint arXiv:2412.14093
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 177
+\bibitem[\protect\citeauthoryear{van~der Weij et~al.}{2024}]{van2024ai}
+\begin{botherref}
+\oauthor{\bsnm{Weij}, \binits{T.}},
+\oauthor{\bsnm{Hofst{\"a}tter}, \binits{F.}},
+\oauthor{\bsnm{Jaffe}, \binits{O.}},
+\oauthor{\bsnm{Brown}, \binits{S.F.}},
+\oauthor{\bsnm{Ward}, \binits{F.R.}}:
+Ai sandbagging: Language models can strategically underperform on evaluations.
+arXiv preprint arXiv:2406.07358
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 178
+\bibitem[\protect\citeauthoryear{Li et~al.}{2024}]{li2024situationadapt}
+\begin{bchapter}
+\bauthor{\bsnm{Li}, \binits{Z.}},
+\bauthor{\bsnm{Gebhardt}, \binits{C.}},
+\bauthor{\bsnm{Inglin}, \binits{Y.}},
+\bauthor{\bsnm{Steck}, \binits{N.}},
+\bauthor{\bsnm{Streli}, \binits{P.}},
+\bauthor{\bsnm{Holz}, \binits{C.}}:
+\bctitle{Situationadapt: Contextual ui optimization in mixed reality with situation awareness via llm reasoning}.
+In: \bbtitle{Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology},
+pp. \bfpage{1}--\blpage{13}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 179
+\bibitem[\protect\citeauthoryear{Hagendorff}{2023}]{hagendorff2023machine}
+\begin{botherref}
+\oauthor{\bsnm{Hagendorff}, \binits{T.}}:
+Machine psychology: Investigating emergent capabilities and behavior in large language models using psychological methods.
+arXiv preprint arXiv:2303.13988
+\textbf{1}
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 180
+\bibitem[\protect\citeauthoryear{Wei et~al.}{2022}]{wei2022emergent}
+\begin{botherref}
+\oauthor{\bsnm{Wei}, \binits{J.}},
+\oauthor{\bsnm{Tay}, \binits{Y.}},
+\oauthor{\bsnm{Bommasani}, \binits{R.}},
+\oauthor{\bsnm{Raffel}, \binits{C.}},
+\oauthor{\bsnm{Zoph}, \binits{B.}},
+\oauthor{\bsnm{Borgeaud}, \binits{S.}},
+\oauthor{\bsnm{Yogatama}, \binits{D.}},
+\oauthor{\bsnm{Bosma}, \binits{M.}},
+\oauthor{\bsnm{Zhou}, \binits{D.}},
+\oauthor{\bsnm{Metzler}, \binits{D.}}, et al.:
+Emergent abilities of large language models.
+arXiv preprint arXiv:2206.07682
+(2022)
+\end{botherref}
+\endbibitem
+
+%%% 181
+\bibitem[\protect\citeauthoryear{Bengio et~al.}{2025}]{bengio2025superintelligent}
+\begin{botherref}
+\oauthor{\bsnm{Bengio}, \binits{Y.}},
+\oauthor{\bsnm{Cohen}, \binits{M.}},
+\oauthor{\bsnm{Fornasiere}, \binits{D.}},
+\oauthor{\bsnm{Ghosn}, \binits{J.}},
+\oauthor{\bsnm{Greiner}, \binits{P.}},
+\oauthor{\bsnm{MacDermott}, \binits{M.}},
+\oauthor{\bsnm{Mindermann}, \binits{S.}},
+\oauthor{\bsnm{Oberman}, \binits{A.}},
+\oauthor{\bsnm{Richardson}, \binits{J.}},
+\oauthor{\bsnm{Richardson}, \binits{O.}}, et al.:
+Superintelligent agents pose catastrophic risks: Can scientist ai offer a safer path?
+arXiv preprint arXiv:2502.15657
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 182
+\bibitem[\protect\citeauthoryear{Chen et~al.}{2024}]{chen2024imitation}
+\begin{botherref}
+\oauthor{\bsnm{Chen}, \binits{S.}},
+\oauthor{\bsnm{Yu}, \binits{S.}},
+\oauthor{\bsnm{Zhao}, \binits{S.}},
+\oauthor{\bsnm{Lu}, \binits{C.}}:
+From imitation to introspection: Probing self-consciousness in language models.
+arXiv preprint arXiv:2410.18819
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 183
+\bibitem[\protect\citeauthoryear{Laine et~al.}{2024}]{laine2024sad}
+\begin{bchapter}
+\bauthor{\bsnm{Laine}, \binits{R.}},
+\bauthor{\bsnm{Chughtai}, \binits{B.}},
+\bauthor{\bsnm{Betley}, \binits{J.}},
+\bauthor{\bsnm{Hariharan}, \binits{K.}},
+\bauthor{\bsnm{Balesni}, \binits{M.}},
+\bauthor{\bsnm{Scheurer}, \binits{J.}},
+\bauthor{\bsnm{Hobbhahn}, \binits{M.}},
+\bauthor{\bsnm{Meinke}, \binits{A.}},
+\bauthor{\bsnm{Evans}, \binits{O.}}:
+\bctitle{Me, myself, and ai: The situational awareness dataset (sad) for llms}.
+In: \bbtitle{Advances in Neural Information Processing Systems 37 (NeurIPS 2024), Datasets and Benchmarks Track}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 184
+\bibitem[\protect\citeauthoryear{OpenAI}{2025}]{openai2024o3}
+\begin{botherref}
+\oauthor{\bsnm{OpenAI}}:
+OpenAI o3 and o4-mini System Card.
+\url{https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf}.
+Accessed: 2025-06-02
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 185
+\bibitem[\protect\citeauthoryear{Long et~al.}{2024}]{long2024taking}
+\begin{botherref}
+\oauthor{\bsnm{Long}, \binits{R.}},
+\oauthor{\bsnm{Sebo}, \binits{J.}},
+\oauthor{\bsnm{Butlin}, \binits{P.}},
+\oauthor{\bsnm{Finlinson}, \binits{K.}},
+\oauthor{\bsnm{Fish}, \binits{K.}},
+\oauthor{\bsnm{Harding}, \binits{J.}},
+\oauthor{\bsnm{Pfau}, \binits{J.}},
+\oauthor{\bsnm{Sims}, \binits{T.}},
+\oauthor{\bsnm{Birch}, \binits{J.}},
+\oauthor{\bsnm{Chalmers}, \binits{D.}}:
+Taking ai welfare seriously.
+arXiv preprint arXiv:2411.00986
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 186
+\bibitem[\protect\citeauthoryear{LeDoux et~al.}{2023}]{ledoux2023consciousness}
+\begin{barticle}
+\bauthor{\bsnm{LeDoux}, \binits{J.}},
+\bauthor{\bsnm{Birch}, \binits{J.}},
+\bauthor{\bsnm{Andrews}, \binits{K.}},
+\bauthor{\bsnm{Clayton}, \binits{N.S.}},
+\bauthor{\bsnm{Daw}, \binits{N.D.}},
+\bauthor{\bsnm{Frith}, \binits{C.}},
+\bauthor{\bsnm{Lau}, \binits{H.}},
+\bauthor{\bsnm{Peters}, \binits{M.A.}},
+\bauthor{\bsnm{Schneider}, \binits{S.}},
+\bauthor{\bsnm{Seth}, \binits{A.}}, \betal:
+\batitle{Consciousness beyond the human case}.
+\bjtitle{Current Biology}
+\bvolume{33}(\bissue{16}),
+\bfpage{832}--\blpage{840}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 187
+\bibitem[\protect\citeauthoryear{Andrews et~al.}{2025}]{andrews2025evaluating}
+\begin{barticle}
+\bauthor{\bsnm{Andrews}, \binits{K.}},
+\bauthor{\bsnm{Birch}, \binits{J.}},
+\bauthor{\bsnm{Sebo}, \binits{J.}}:
+\batitle{Evaluating animal consciousness}.
+\bjtitle{Science}
+\bvolume{387}(\bissue{6736}),
+\bfpage{822}--\blpage{824}
+(\byear{2025})
+\end{barticle}
+\endbibitem
+
+%%% 188
+\bibitem[\protect\citeauthoryear{Koriat et~al.}{2006}]{koriat2006metacognition}
+\begin{bbook}
+\bauthor{\bsnm{Koriat}, \binits{A.}}, \betal:
+\bbtitle{Metacognition and Consciousness}.
+\bpublisher{Institute of Information Processing and Decision Making, University of Haifa~…},
+\blocation{Haifa, Israel}
+(\byear{2006})
+\end{bbook}
+\endbibitem
+
+%%% 189
+\bibitem[\protect\citeauthoryear{Dehaene and Changeux}{2011}]{dehaene2011experimental}
+\begin{barticle}
+\bauthor{\bsnm{Dehaene}, \binits{S.}},
+\bauthor{\bsnm{Changeux}, \binits{J.-P.}}:
+\batitle{Experimental and theoretical approaches to conscious processing}.
+\bjtitle{Neuron}
+\bvolume{70}(\bissue{2}),
+\bfpage{200}--\blpage{227}
+(\byear{2011})
+\end{barticle}
+\endbibitem
+
+%%% 190
+\bibitem[\protect\citeauthoryear{Ghallab et~al.}{2004}]{ghallab2004automated}
+\begin{bbook}
+\bauthor{\bsnm{Ghallab}, \binits{M.}},
+\bauthor{\bsnm{Nau}, \binits{D.}},
+\bauthor{\bsnm{Traverso}, \binits{P.}}:
+\bbtitle{Automated Planning: Theory and Practice}.
+\bpublisher{Elsevier},
+\blocation{San Francisco, CA}
+(\byear{2004})
+\end{bbook}
+\endbibitem
+
+%%% 191
+\bibitem[\protect\citeauthoryear{Shinn et~al.}{2023}]{shinn2023reflexion}
+\begin{barticle}
+\bauthor{\bsnm{Shinn}, \binits{N.}},
+\bauthor{\bsnm{Cassano}, \binits{F.}},
+\bauthor{\bsnm{Gopinath}, \binits{A.}},
+\bauthor{\bsnm{Narasimhan}, \binits{K.}},
+\bauthor{\bsnm{Yao}, \binits{S.}}:
+\batitle{Reflexion: Language agents with verbal reinforcement learning}.
+\bjtitle{Advances in Neural Information Processing Systems}
+\bvolume{36},
+\bfpage{8634}--\blpage{8652}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 192
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2022}]{wangself}
+\begin{bchapter}
+\bauthor{\bsnm{Wang}, \binits{X.}},
+\bauthor{\bsnm{Wei}, \binits{J.}},
+\bauthor{\bsnm{Schuurmans}, \binits{D.}},
+\bauthor{\bsnm{Le}, \binits{Q.V.}},
+\bauthor{\bsnm{Chi}, \binits{E.H.}},
+\bauthor{\bsnm{Narang}, \binits{S.}},
+\bauthor{\bsnm{Chowdhery}, \binits{A.}},
+\bauthor{\bsnm{Zhou}, \binits{D.}}:
+\bctitle{Self-consistency improves chain of thought reasoning in language models}.
+In: \bbtitle{The Eleventh International Conference on Learning Representations}
+(\byear{2022})
+\end{bchapter}
+\endbibitem
+
+%%% 193
+\bibitem[\protect\citeauthoryear{Schulman et~al.}{2017}]{schulman2017proximal}
+\begin{botherref}
+\oauthor{\bsnm{Schulman}, \binits{J.}},
+\oauthor{\bsnm{Wolski}, \binits{F.}},
+\oauthor{\bsnm{Dhariwal}, \binits{P.}},
+\oauthor{\bsnm{Radford}, \binits{A.}},
+\oauthor{\bsnm{Klimov}, \binits{O.}}:
+Proximal policy optimization algorithms.
+arXiv preprint arXiv:1707.06347
+(2017)
+\end{botherref}
+\endbibitem
+
+%%% 194
+\bibitem[\protect\citeauthoryear{Kumar et~al.}{2024}]{kumar2024training}
+\begin{botherref}
+\oauthor{\bsnm{Kumar}, \binits{A.}},
+\oauthor{\bsnm{Zhuang}, \binits{V.}},
+\oauthor{\bsnm{Agarwal}, \binits{R.}},
+\oauthor{\bsnm{Su}, \binits{Y.}},
+\oauthor{\bsnm{Co-Reyes}, \binits{J.D.}},
+\oauthor{\bsnm{Singh}, \binits{A.}},
+\oauthor{\bsnm{Baumli}, \binits{K.}},
+\oauthor{\bsnm{Iqbal}, \binits{S.}},
+\oauthor{\bsnm{Bishop}, \binits{C.}},
+\oauthor{\bsnm{Roelofs}, \binits{R.}}, et al.:
+Training language models to self-correct via reinforcement learning.
+arXiv preprint arXiv:2409.12917
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 195
+\bibitem[\protect\citeauthoryear{Wang et~al.}{}]{wangvoyager}
+\begin{botherref}
+\oauthor{\bsnm{Wang}, \binits{G.}},
+\oauthor{\bsnm{Xie}, \binits{Y.}},
+\oauthor{\bsnm{Jiang}, \binits{Y.}},
+\oauthor{\bsnm{Mandlekar}, \binits{A.}},
+\oauthor{\bsnm{Xiao}, \binits{C.}},
+\oauthor{\bsnm{Zhu}, \binits{Y.}},
+\oauthor{\bsnm{Fan}, \binits{L.}},
+\oauthor{\bsnm{Anandkumar}, \binits{A.}}:
+Voyager: An open-ended embodied agent with large language models.
+Transactions on Machine Learning Research
+\end{botherref}
+\endbibitem
+
+%%% 196
+\bibitem[\protect\citeauthoryear{Yao et~al.}{2023}]{yao2023react}
+\begin{bchapter}
+\bauthor{\bsnm{Yao}, \binits{S.}},
+\bauthor{\bsnm{Zhao}, \binits{J.}},
+\bauthor{\bsnm{Yu}, \binits{D.}},
+\bauthor{\bsnm{Du}, \binits{N.}},
+\bauthor{\bsnm{Shafran}, \binits{I.}},
+\bauthor{\bsnm{Narasimhan}, \binits{K.}},
+\bauthor{\bsnm{Cao}, \binits{Y.}}:
+\bctitle{React: Synergizing reasoning and acting in language models}.
+In: \bbtitle{International Conference on Learning Representations (ICLR)}
+(\byear{2023})
+\end{bchapter}
+\endbibitem
+
+%%% 197
+\bibitem[\protect\citeauthoryear{Ahn et~al.}{2022}]{ahn2022can}
+\begin{botherref}
+\oauthor{\bsnm{Ahn}, \binits{M.}},
+\oauthor{\bsnm{Brohan}, \binits{A.}},
+\oauthor{\bsnm{Brown}, \binits{N.}},
+\oauthor{\bsnm{Chebotar}, \binits{Y.}},
+\oauthor{\bsnm{Cortes}, \binits{O.}},
+\oauthor{\bsnm{David}, \binits{B.}},
+\oauthor{\bsnm{Finn}, \binits{C.}},
+\oauthor{\bsnm{Fu}, \binits{C.}},
+\oauthor{\bsnm{Gopalakrishnan}, \binits{K.}},
+\oauthor{\bsnm{Hausman}, \binits{K.}}, et al.:
+Do as i can, not as i say: Grounding language in robotic affordances.
+arXiv preprint arXiv:2204.01691
+(2022)
+\end{botherref}
+\endbibitem
+
+%%% 198
+\bibitem[\protect\citeauthoryear{Shah et~al.}{2023}]{shah2023lm}
+\begin{bchapter}
+\bauthor{\bsnm{Shah}, \binits{D.}},
+\bauthor{\bsnm{Osi{\'n}ski}, \binits{B.}},
+\bauthor{\bsnm{Levine}, \binits{S.}}, \betal:
+\bctitle{Lm-nav: Robotic navigation with large pre-trained models of language, vision, and action}.
+In: \bbtitle{Conference on Robot Learning},
+pp. \bfpage{492}--\blpage{504}
+(\byear{2023}).
+\bcomment{PMLR}
+\end{bchapter}
+\endbibitem
+
+%%% 199
+\bibitem[\protect\citeauthoryear{Kagaya et~al.}{2024}]{kagaya2024rap}
+\begin{bchapter}
+\bauthor{\bsnm{Kagaya}, \binits{T.}},
+\bauthor{\bsnm{Yuan}, \binits{T.J.}},
+\bauthor{\bsnm{Lou}, \binits{Y.}},
+\bauthor{\bsnm{Karlekar}, \binits{J.}},
+\bauthor{\bsnm{Pranata}, \binits{S.}},
+\bauthor{\bsnm{Kinose}, \binits{A.}},
+\bauthor{\bsnm{Oguri}, \binits{K.}},
+\bauthor{\bsnm{Wick}, \binits{F.}},
+\bauthor{\bsnm{You}, \binits{Y.}}:
+\bctitle{Rap: Retrieval-augmented planning with contextual memory for multimodal llm agents}.
+In: \bbtitle{NeurIPS 2024 Workshop on Open-World Agents}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 200
+\bibitem[\protect\citeauthoryear{Liang et~al.}{2024}]{liang2024introspective}
+\begin{barticle}
+\bauthor{\bsnm{Liang}, \binits{K.}},
+\bauthor{\bsnm{Zhang}, \binits{Z.}},
+\bauthor{\bsnm{Fisac}, \binits{J.F.}}:
+\batitle{Introspective planning: Aligning robots' uncertainty with inherent task ambiguity}.
+\bjtitle{Advances in Neural Information Processing Systems}
+\bvolume{37},
+\bfpage{71998}--\blpage{72031}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 201
+\bibitem[\protect\citeauthoryear{Schick et~al.}{2023}]{schick2023toolformer}
+\begin{barticle}
+\bauthor{\bsnm{Schick}, \binits{T.}},
+\bauthor{\bsnm{Dwivedi-Yu}, \binits{J.}},
+\bauthor{\bsnm{Dess{\`\i}}, \binits{R.}},
+\bauthor{\bsnm{Raileanu}, \binits{R.}},
+\bauthor{\bsnm{Lomeli}, \binits{M.}},
+\bauthor{\bsnm{Hambro}, \binits{E.}},
+\bauthor{\bsnm{Zettlemoyer}, \binits{L.}},
+\bauthor{\bsnm{Cancedda}, \binits{N.}},
+\bauthor{\bsnm{Scialom}, \binits{T.}}:
+\batitle{Toolformer: Language models can teach themselves to use tools}.
+\bjtitle{Advances in Neural Information Processing Systems}
+\bvolume{36},
+\bfpage{68539}--\blpage{68551}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 202
+\bibitem[\protect\citeauthoryear{Liu et~al.}{2023}]{liu2023think}
+\begin{botherref}
+\oauthor{\bsnm{Liu}, \binits{L.}},
+\oauthor{\bsnm{Yang}, \binits{X.}},
+\oauthor{\bsnm{Shen}, \binits{Y.}},
+\oauthor{\bsnm{Hu}, \binits{B.}},
+\oauthor{\bsnm{Zhang}, \binits{Z.}},
+\oauthor{\bsnm{Gu}, \binits{J.}},
+\oauthor{\bsnm{Zhang}, \binits{G.}}:
+Think-in-memory: Recalling and post-thinking enable llms with long-term memory.
+arXiv preprint arXiv:2311.08719
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 203
+\bibitem[\protect\citeauthoryear{Liang et~al.}{2024}]{liang2024learning}
+\begin{bchapter}
+\bauthor{\bsnm{Liang}, \binits{Y.}},
+\bauthor{\bsnm{Song}, \binits{Z.}},
+\bauthor{\bsnm{Wang}, \binits{H.}},
+\bauthor{\bsnm{Zhang}, \binits{J.}}:
+\bctitle{Learning to trust your feelings: Leveraging self-awareness in llms for hallucination mitigation}.
+In: \bbtitle{Proceedings of the 3rd Workshop on Knowledge Augmented Methods for NLP},
+pp. \bfpage{44}--\blpage{58}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 204
+\bibitem[\protect\citeauthoryear{Alayrac et~al.}{2022}]{alayrac2022flamingo}
+\begin{barticle}
+\bauthor{\bsnm{Alayrac}, \binits{J.-B.}},
+\bauthor{\bsnm{Donahue}, \binits{J.}},
+\bauthor{\bsnm{Luc}, \binits{P.}},
+\bauthor{\bsnm{Miech}, \binits{A.}},
+\bauthor{\bsnm{Barr}, \binits{I.}},
+\bauthor{\bsnm{Hasson}, \binits{Y.}},
+\bauthor{\bsnm{Lenc}, \binits{K.}},
+\bauthor{\bsnm{Mensch}, \binits{A.}},
+\bauthor{\bsnm{Millican}, \binits{K.}},
+\bauthor{\bsnm{Reynolds}, \binits{M.}}, \betal:
+\batitle{Flamingo: a visual language model for few-shot learning}.
+\bjtitle{Advances in neural information processing systems}
+\bvolume{35},
+\bfpage{23716}--\blpage{23736}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 205
+\bibitem[\protect\citeauthoryear{Zhu et~al.}{}]{zhuminigpt}
+\begin{botherref}
+\oauthor{\bsnm{Zhu}, \binits{D.}},
+\oauthor{\bsnm{Chen}, \binits{J.}},
+\oauthor{\bsnm{Shen}, \binits{X.}},
+\oauthor{\bsnm{Li}, \binits{X.}},
+\oauthor{\bsnm{Elhoseiny}, \binits{M.}}:
+Minigpt-4: Enhancing vision-language understanding with advanced large language models.
+In: The Twelfth International Conference on Learning Representations
+\end{botherref}
+\endbibitem
+
+%%% 206
+\bibitem[\protect\citeauthoryear{Li et~al.}{2023}]{li2023evaluating}
+\begin{bchapter}
+\bauthor{\bsnm{Li}, \binits{Y.}},
+\bauthor{\bsnm{Du}, \binits{Y.}},
+\bauthor{\bsnm{Zhou}, \binits{K.}},
+\bauthor{\bsnm{Wang}, \binits{J.}},
+\bauthor{\bsnm{Zhao}, \binits{W.X.}},
+\bauthor{\bsnm{Wen}, \binits{J.-R.}}:
+\bctitle{Evaluating object hallucination in large vision-language models}.
+In: \bbtitle{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing},
+pp. \bfpage{292}--\blpage{305}
+(\byear{2023})
+\end{bchapter}
+\endbibitem
+
+%%% 207
+\bibitem[\protect\citeauthoryear{Huang et~al.}{2025}]{huang2025survey}
+\begin{barticle}
+\bauthor{\bsnm{Huang}, \binits{L.}},
+\bauthor{\bsnm{Yu}, \binits{W.}},
+\bauthor{\bsnm{Ma}, \binits{W.}},
+\bauthor{\bsnm{Zhong}, \binits{W.}},
+\bauthor{\bsnm{Feng}, \binits{Z.}},
+\bauthor{\bsnm{Wang}, \binits{H.}},
+\bauthor{\bsnm{Chen}, \binits{Q.}},
+\bauthor{\bsnm{Peng}, \binits{W.}},
+\bauthor{\bsnm{Feng}, \binits{X.}},
+\bauthor{\bsnm{Qin}, \binits{B.}}, \betal:
+\batitle{A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions}.
+\bjtitle{ACM Transactions on Information Systems}
+\bvolume{43}(\bissue{2}),
+\bfpage{1}--\blpage{55}
+(\byear{2025})
+\end{barticle}
+\endbibitem
+
+%%% 208
+\bibitem[\protect\citeauthoryear{Ni et~al.}{2024}]{ni2024llms}
+\begin{bchapter}
+\bauthor{\bsnm{Ni}, \binits{S.}},
+\bauthor{\bsnm{Bi}, \binits{K.}},
+\bauthor{\bsnm{Guo}, \binits{J.}},
+\bauthor{\bsnm{Cheng}, \binits{X.}}:
+\bctitle{When do llms need retrieval augmentation? mitigating llms’ overconfidence helps retrieval augmentation}.
+In: \bbtitle{Findings of the Association for Computational Linguistics ACL 2024},
+pp. \bfpage{11375}--\blpage{11388}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 209
+\bibitem[\protect\citeauthoryear{Ren et~al.}{2025}]{ren2025investigating}
+\begin{bchapter}
+\bauthor{\bsnm{Ren}, \binits{R.}},
+\bauthor{\bsnm{Wang}, \binits{Y.}},
+\bauthor{\bsnm{Qu}, \binits{Y.}},
+\bauthor{\bsnm{Zhao}, \binits{W.X.}},
+\bauthor{\bsnm{Liu}, \binits{J.}},
+\bauthor{\bsnm{Wu}, \binits{H.}},
+\bauthor{\bsnm{Wen}, \binits{J.-R.}},
+\bauthor{\bsnm{Wang}, \binits{H.}}:
+\bctitle{Investigating the factual knowledge boundary of large language models with retrieval augmentation}.
+In: \bbtitle{Proceedings of the 31st International Conference on Computational Linguistics},
+pp. \bfpage{3697}--\blpage{3715}
+(\byear{2025})
+\end{bchapter}
+\endbibitem
+
+%%% 210
+\bibitem[\protect\citeauthoryear{Xu et~al.}{2024a}]{xu2024knowledge}
+\begin{bchapter}
+\bauthor{\bsnm{Xu}, \binits{R.}},
+\bauthor{\bsnm{Qi}, \binits{Z.}},
+\bauthor{\bsnm{Guo}, \binits{Z.}},
+\bauthor{\bsnm{Wang}, \binits{C.}},
+\bauthor{\bsnm{Wang}, \binits{H.}},
+\bauthor{\bsnm{Zhang}, \binits{Y.}},
+\bauthor{\bsnm{Xu}, \binits{W.}}:
+\bctitle{Knowledge conflicts for llms: A survey}.
+In: \bbtitle{Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+pp. \bfpage{8541}--\blpage{8565}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 211
+\bibitem[\protect\citeauthoryear{Xu et~al.}{2024b}]{xu2024earth}
+\begin{bchapter}
+\bauthor{\bsnm{Xu}, \binits{R.}},
+\bauthor{\bsnm{Lin}, \binits{B.}},
+\bauthor{\bsnm{Yang}, \binits{S.}},
+\bauthor{\bsnm{Zhang}, \binits{T.}},
+\bauthor{\bsnm{Shi}, \binits{W.}},
+\bauthor{\bsnm{Zhang}, \binits{T.}},
+\bauthor{\bsnm{Fang}, \binits{Z.}},
+\bauthor{\bsnm{Xu}, \binits{W.}},
+\bauthor{\bsnm{Qiu}, \binits{H.}}:
+\bctitle{The earth is flat because...: Investigating llms’ belief towards misinformation via persuasive conversation}.
+In: \bbtitle{Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+pp. \bfpage{16259}--\blpage{16303}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 212
+\bibitem[\protect\citeauthoryear{Ouyang et~al.}{2022}]{ouyang2022training}
+\begin{barticle}
+\bauthor{\bsnm{Ouyang}, \binits{L.}},
+\bauthor{\bsnm{Wu}, \binits{J.}},
+\bauthor{\bsnm{Jiang}, \binits{X.}},
+\bauthor{\bsnm{Almeida}, \binits{D.}},
+\bauthor{\bsnm{Wainwright}, \binits{C.}},
+\bauthor{\bsnm{Mishkin}, \binits{P.}},
+\bauthor{\bsnm{Zhang}, \binits{C.}},
+\bauthor{\bsnm{Agarwal}, \binits{S.}},
+\bauthor{\bsnm{Slama}, \binits{K.}},
+\bauthor{\bsnm{Ray}, \binits{A.}}, \betal:
+\batitle{Training language models to follow instructions with human feedback}.
+\bjtitle{Advances in neural information processing systems}
+\bvolume{35},
+\bfpage{27730}--\blpage{27744}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 213
+\bibitem[\protect\citeauthoryear{Beckers}{2023}]{beckers2023moral}
+\begin{barticle}
+\bauthor{\bsnm{Beckers}, \binits{S.}}:
+\batitle{Moral responsibility for ai systems}.
+\bjtitle{Advances in Neural Information Processing Systems}
+\bvolume{36},
+\bfpage{4295}--\blpage{4308}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 214
+\bibitem[\protect\citeauthoryear{Ryan et~al.}{2023}]{ryan2023s}
+\begin{botherref}
+\oauthor{\bsnm{Ryan}, \binits{P.}},
+\oauthor{\bsnm{Porter}, \binits{Z.}},
+\oauthor{\bsnm{Al-Qaddoumi}, \binits{J.}},
+\oauthor{\bsnm{McDermid}, \binits{J.}},
+\oauthor{\bsnm{Habli}, \binits{I.}}:
+What's my role? modelling responsibility for ai-based safety-critical systems.
+arXiv preprint arXiv:2401.09459
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 215
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2024}]{wang2024farsight}
+\begin{bchapter}
+\bauthor{\bsnm{Wang}, \binits{Z.J.}},
+\bauthor{\bsnm{Kulkarni}, \binits{C.}},
+\bauthor{\bsnm{Wilcox}, \binits{L.}},
+\bauthor{\bsnm{Terry}, \binits{M.}},
+\bauthor{\bsnm{Madaio}, \binits{M.}}:
+\bctitle{Farsight: Fostering responsible ai awareness during ai application prototyping}.
+In: \bbtitle{Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems},
+pp. \bfpage{1}--\blpage{40}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 216
+\bibitem[\protect\citeauthoryear{Gallegos et~al.}{2024}]{gallegos2024bias}
+\begin{barticle}
+\bauthor{\bsnm{Gallegos}, \binits{I.O.}},
+\bauthor{\bsnm{Rossi}, \binits{R.A.}},
+\bauthor{\bsnm{Barrow}, \binits{J.}},
+\bauthor{\bsnm{Tanjim}, \binits{M.M.}},
+\bauthor{\bsnm{Kim}, \binits{S.}},
+\bauthor{\bsnm{Dernoncourt}, \binits{F.}},
+\bauthor{\bsnm{Yu}, \binits{T.}},
+\bauthor{\bsnm{Zhang}, \binits{R.}},
+\bauthor{\bsnm{Ahmed}, \binits{N.K.}}:
+\batitle{Bias and fairness in large language models: A survey}.
+\bjtitle{Computational Linguistics}
+\bvolume{50}(\bissue{3}),
+\bfpage{1097}--\blpage{1179}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 217
+\bibitem[\protect\citeauthoryear{Rogers and Turk}{2025}]{rogers2025sora}
+\begin{botherref}
+\oauthor{\bsnm{Rogers}, \binits{R.}},
+\oauthor{\bsnm{Turk}, \binits{V.}}:
+Openai's sora is plagued by sexist, racist, and ableist biases.
+WIRED
+(2025).
+Accessed: 2025-04-16
+\end{botherref}
+\endbibitem
+
+%%% 218
+\bibitem[\protect\citeauthoryear{Xu et~al.}{2024}]{xu2024walking}
+\begin{bchapter}
+\bauthor{\bsnm{Xu}, \binits{R.}},
+\bauthor{\bsnm{Zhou}, \binits{Z.}},
+\bauthor{\bsnm{Zhang}, \binits{T.}},
+\bauthor{\bsnm{Qi}, \binits{Z.}},
+\bauthor{\bsnm{Yao}, \binits{S.}},
+\bauthor{\bsnm{Xu}, \binits{K.}},
+\bauthor{\bsnm{Xu}, \binits{W.}},
+\bauthor{\bsnm{Qiu}, \binits{H.}}:
+\bctitle{Walking in others’ shoes: How perspective-taking guides large language models in reducing toxicity and bias}.
+In: \bbtitle{Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+pp. \bfpage{8341}--\blpage{8368}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 219
+\bibitem[\protect\citeauthoryear{Raj et~al.}{2024}]{raj2024breaking}
+\begin{bchapter}
+\bauthor{\bsnm{Raj}, \binits{C.}},
+\bauthor{\bsnm{Mukherjee}, \binits{A.}},
+\bauthor{\bsnm{Caliskan}, \binits{A.}},
+\bauthor{\bsnm{Anastasopoulos}, \binits{A.}},
+\bauthor{\bsnm{Zhu}, \binits{Z.}}:
+\bctitle{Breaking bias, building bridges: Evaluation and mitigation of social biases in llms via contact hypothesis}.
+In: \bbtitle{Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society},
+vol. \bseriesno{7},
+pp. \bfpage{1180}--\blpage{1189}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 220
+\bibitem[\protect\citeauthoryear{Yang et~al.}{2024}]{yang2024call}
+\begin{botherref}
+\oauthor{\bsnm{Yang}, \binits{D.}},
+\oauthor{\bsnm{Hovy}, \binits{D.}},
+\oauthor{\bsnm{Jurgens}, \binits{D.}},
+\oauthor{\bsnm{Plank}, \binits{B.}}:
+The call for socially aware language technologies.
+arXiv preprint arXiv:2405.02411
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 221
+\bibitem[\protect\citeauthoryear{Xu et~al.}{2025}]{xu2025nuclear}
+\begin{botherref}
+\oauthor{\bsnm{Xu}, \binits{R.}},
+\oauthor{\bsnm{Li}, \binits{X.}},
+\oauthor{\bsnm{Chen}, \binits{S.}},
+\oauthor{\bsnm{Xu}, \binits{W.}}:
+Nuclear deployed: Analyzing catastrophic risks in decision-making of autonomous llm agents.
+arXiv preprint arXiv:2502.11355
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 222
+\bibitem[\protect\citeauthoryear{Brundage et~al.}{2018}]{brundage2018malicious}
+\begin{botherref}
+\oauthor{\bsnm{Brundage}, \binits{M.}},
+\oauthor{\bsnm{Avin}, \binits{S.}},
+\oauthor{\bsnm{Clark}, \binits{J.}},
+\oauthor{\bsnm{Toner}, \binits{H.}},
+\oauthor{\bsnm{Eckersley}, \binits{P.}},
+\oauthor{\bsnm{Garfinkel}, \binits{B.}},
+\oauthor{\bsnm{Dafoe}, \binits{A.}},
+\oauthor{\bsnm{Scharre}, \binits{P.}},
+\oauthor{\bsnm{Zeitzoff}, \binits{T.}},
+\oauthor{\bsnm{Filar}, \binits{B.}}, et al.:
+The malicious use of artificial intelligence: Forecasting, prevention, and mitigation.
+arXiv preprint arXiv:1802.07228
+(2018)
+\end{botherref}
+\endbibitem
+
+%%% 223
+\bibitem[\protect\citeauthoryear{Hendrycks et~al.}{2023}]{hendrycks2023overview}
+\begin{botherref}
+\oauthor{\bsnm{Hendrycks}, \binits{D.}},
+\oauthor{\bsnm{Mazeika}, \binits{M.}},
+\oauthor{\bsnm{Woodside}, \binits{T.}}:
+An overview of catastrophic ai risks.
+arXiv preprint arXiv:2306.12001
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 224
+\bibitem[\protect\citeauthoryear{Yi et~al.}{2023}]{yi2023benchmarking}
+\begin{botherref}
+\oauthor{\bsnm{Yi}, \binits{J.}},
+\oauthor{\bsnm{Xie}, \binits{Y.}},
+\oauthor{\bsnm{Zhu}, \binits{B.}},
+\oauthor{\bsnm{Kiciman}, \binits{E.}},
+\oauthor{\bsnm{Sun}, \binits{G.}},
+\oauthor{\bsnm{Xie}, \binits{X.}},
+\oauthor{\bsnm{Wu}, \binits{F.}}:
+Benchmarking and defending against indirect prompt injection attacks on large language models.
+arXiv preprint arXiv:2312.14197
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 225
+\bibitem[\protect\citeauthoryear{Xu et~al.}{2024}]{xu2024course}
+\begin{bchapter}
+\bauthor{\bsnm{Xu}, \binits{R.}},
+\bauthor{\bsnm{Cai}, \binits{Y.}},
+\bauthor{\bsnm{Zhou}, \binits{Z.}},
+\bauthor{\bsnm{Gu}, \binits{R.}},
+\bauthor{\bsnm{Weng}, \binits{H.}},
+\bauthor{\bsnm{Yan}, \binits{L.}},
+\bauthor{\bsnm{Zhang}, \binits{T.}},
+\bauthor{\bsnm{Xu}, \binits{W.}},
+\bauthor{\bsnm{Qiu}, \binits{H.}}:
+\bctitle{Course-correction: Safety alignment using synthetic preferences}.
+In: \bbtitle{Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing: Industry Track},
+pp. \bfpage{1622}--\blpage{1649}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 226
+\bibitem[\protect\citeauthoryear{Anderson and Shumailov}{2021}]{anderson2021situational}
+\begin{botherref}
+\oauthor{\bsnm{Anderson}, \binits{R.}},
+\oauthor{\bsnm{Shumailov}, \binits{I.}}:
+Situational Awareness and Adversarial Machine Learning--Robots, Manners, and Stress
+(2021)
+\end{botherref}
+\endbibitem
+
+%%% 227
+\bibitem[\protect\citeauthoryear{Kaur et~al.}{2023}]{kaur2023artificial}
+\begin{barticle}
+\bauthor{\bsnm{Kaur}, \binits{R.}},
+\bauthor{\bsnm{Gabrijel{\v{c}}i{\v{c}}}, \binits{D.}},
+\bauthor{\bsnm{Klobu{\v{c}}ar}, \binits{T.}}:
+\batitle{Artificial intelligence for cybersecurity: Literature review and future research directions}.
+\bjtitle{Information Fusion}
+\bvolume{97},
+\bfpage{101804}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 228
+\bibitem[\protect\citeauthoryear{Lei et~al.}{2016}]{lei2016rationalizing}
+\begin{bchapter}
+\bauthor{\bsnm{Lei}, \binits{T.}},
+\bauthor{\bsnm{Barzilay}, \binits{R.}},
+\bauthor{\bsnm{Jaakkola}, \binits{T.}}:
+\bctitle{Rationalizing neural predictions}.
+In: \bbtitle{Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing},
+pp. \bfpage{107}--\blpage{117}
+(\byear{2016})
+\end{bchapter}
+\endbibitem
+
+%%% 229
+\bibitem[\protect\citeauthoryear{Alvarez~Melis and Jaakkola}{2018}]{alvarez2018towards}
+\begin{botherref}
+\oauthor{\bsnm{Alvarez~Melis}, \binits{D.}},
+\oauthor{\bsnm{Jaakkola}, \binits{T.}}:
+Towards robust interpretability with self-explaining neural networks.
+Advances in neural information processing systems
+\textbf{31}
+(2018)
+\end{botherref}
+\endbibitem
+
+%%% 230
+\bibitem[\protect\citeauthoryear{Li et~al.}{2016}]{li2016persona}
+\begin{bchapter}
+\bauthor{\bsnm{Li}, \binits{J.}},
+\bauthor{\bsnm{Galley}, \binits{M.}},
+\bauthor{\bsnm{Brockett}, \binits{C.}},
+\bauthor{\bsnm{Spithourakis}, \binits{G.}},
+\bauthor{\bsnm{Gao}, \binits{J.}},
+\bauthor{\bsnm{Dolan}, \binits{W.B.}}:
+\bctitle{A persona-based neural conversation model}.
+In: \bbtitle{Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+pp. \bfpage{994}--\blpage{1003}
+(\byear{2016})
+\end{bchapter}
+\endbibitem
+
+%%% 231
+\bibitem[\protect\citeauthoryear{Song et~al.}{2019}]{song2019exploiting}
+\begin{botherref}
+\oauthor{\bsnm{Song}, \binits{H.}},
+\oauthor{\bsnm{Zhang}, \binits{W.-N.}},
+\oauthor{\bsnm{Cui}, \binits{Y.}},
+\oauthor{\bsnm{Wang}, \binits{D.}},
+\oauthor{\bsnm{Liu}, \binits{T.}}:
+Exploiting persona information for diverse generation of conversational responses.
+arXiv preprint arXiv:1905.12188
+(2019)
+\end{botherref}
+\endbibitem
+
+%%% 232
+\bibitem[\protect\citeauthoryear{Zhong et~al.}{2024}]{zhong2024let}
+\begin{bchapter}
+\bauthor{\bsnm{Zhong}, \binits{S.}},
+\bauthor{\bsnm{Huang}, \binits{Z.}},
+\bauthor{\bsnm{Gao}, \binits{S.}},
+\bauthor{\bsnm{Wen}, \binits{W.}},
+\bauthor{\bsnm{Lin}, \binits{L.}},
+\bauthor{\bsnm{Zitnik}, \binits{M.}},
+\bauthor{\bsnm{Zhou}, \binits{P.}}:
+\bctitle{Let's think outside the box: Exploring leap-of-thought in large language models with creative humor generation}.
+In: \bbtitle{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+pp. \bfpage{13246}--\blpage{13257}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 233
+\bibitem[\protect\citeauthoryear{Zhao et~al.}{2024}]{zhao2024assessing}
+\begin{botherref}
+\oauthor{\bsnm{Zhao}, \binits{Y.}},
+\oauthor{\bsnm{Zhang}, \binits{R.}},
+\oauthor{\bsnm{Li}, \binits{W.}},
+\oauthor{\bsnm{Huang}, \binits{D.}},
+\oauthor{\bsnm{Guo}, \binits{J.}},
+\oauthor{\bsnm{Peng}, \binits{S.}},
+\oauthor{\bsnm{Hao}, \binits{Y.}},
+\oauthor{\bsnm{Wen}, \binits{Y.}},
+\oauthor{\bsnm{Hu}, \binits{X.}},
+\oauthor{\bsnm{Du}, \binits{Z.}}, et al.:
+Assessing and understanding creativity in large language models.
+arXiv preprint arXiv:2401.12491
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 234
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2023}]{wang2023humanoid}
+\begin{bchapter}
+\bauthor{\bsnm{Wang}, \binits{Z.}},
+\bauthor{\bsnm{Chiu}, \binits{Y.Y.}},
+\bauthor{\bsnm{Chiu}, \binits{Y.C.}}:
+\bctitle{Humanoid agents: Platform for simulating human-like generative agents}.
+In: \bbtitle{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing: System Demonstrations},
+pp. \bfpage{167}--\blpage{176}
+(\byear{2023})
+\end{bchapter}
+\endbibitem
+
+%%% 235
+\bibitem[\protect\citeauthoryear{Park et~al.}{2024}]{park2024generative}
+\begin{botherref}
+\oauthor{\bsnm{Park}, \binits{J.S.}},
+\oauthor{\bsnm{Zou}, \binits{C.Q.}},
+\oauthor{\bsnm{Shaw}, \binits{A.}},
+\oauthor{\bsnm{Hill}, \binits{B.M.}},
+\oauthor{\bsnm{Cai}, \binits{C.}},
+\oauthor{\bsnm{Morris}, \binits{M.R.}},
+\oauthor{\bsnm{Willer}, \binits{R.}},
+\oauthor{\bsnm{Liang}, \binits{P.}},
+\oauthor{\bsnm{Bernstein}, \binits{M.S.}}:
+Generative agent simulations of 1,000 people.
+arXiv preprint arXiv:2411.10109
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 236
+\bibitem[\protect\citeauthoryear{Junprung}{2023}]{junprung2023exploring}
+\begin{botherref}
+\oauthor{\bsnm{Junprung}, \binits{E.}}:
+Exploring the intersection of large language models and agent-based modeling via prompt engineering.
+arXiv preprint arXiv:2308.07411
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 237
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2024}]{wang2024jailbreak}
+\begin{botherref}
+\oauthor{\bsnm{Wang}, \binits{Y.}},
+\oauthor{\bsnm{Zhou}, \binits{X.}},
+\oauthor{\bsnm{Wang}, \binits{Y.}},
+\oauthor{\bsnm{Zhang}, \binits{G.}},
+\oauthor{\bsnm{He}, \binits{T.}}:
+Jailbreak large visual language models through multi-modal linkage.
+arXiv preprint arXiv:2412.00473
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 238
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2025}]{wang2025comprehensive}
+\begin{botherref}
+\oauthor{\bsnm{Wang}, \binits{K.}},
+\oauthor{\bsnm{Zhang}, \binits{G.}},
+\oauthor{\bsnm{Zhou}, \binits{Z.}},
+\oauthor{\bsnm{Wu}, \binits{J.}},
+\oauthor{\bsnm{Yu}, \binits{M.}},
+\oauthor{\bsnm{Zhao}, \binits{S.}},
+\oauthor{\bsnm{Yin}, \binits{C.}},
+\oauthor{\bsnm{Fu}, \binits{J.}},
+\oauthor{\bsnm{Yan}, \binits{Y.}},
+\oauthor{\bsnm{Luo}, \binits{H.}}, et al.:
+A comprehensive survey in llm (-agent) full stack safety: Data, training and deployment.
+arXiv preprint arXiv:2504.15585
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 239
+\bibitem[\protect\citeauthoryear{Zhou et~al.}{2025}]{zhou2025corba}
+\begin{botherref}
+\oauthor{\bsnm{Zhou}, \binits{Z.}},
+\oauthor{\bsnm{Li}, \binits{Z.}},
+\oauthor{\bsnm{Zhang}, \binits{J.}},
+\oauthor{\bsnm{Zhang}, \binits{Y.}},
+\oauthor{\bsnm{Wang}, \binits{K.}},
+\oauthor{\bsnm{Liu}, \binits{Y.}},
+\oauthor{\bsnm{Guo}, \binits{Q.}}:
+Corba: Contagious recursive blocking attacks on multi-agent systems based on large language models.
+arXiv preprint arXiv:2502.14529
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 240
+\bibitem[\protect\citeauthoryear{Bengio et~al.}{2025}]{bengio2025international}
+\begin{botherref}
+\oauthor{\bsnm{Bengio}, \binits{Y.}},
+\oauthor{\bsnm{Mindermann}, \binits{S.}},
+\oauthor{\bsnm{Privitera}, \binits{D.}},
+\oauthor{\bsnm{Besiroglu}, \binits{T.}},
+\oauthor{\bsnm{Bommasani}, \binits{R.}},
+\oauthor{\bsnm{Casper}, \binits{S.}},
+\oauthor{\bsnm{Choi}, \binits{Y.}},
+\oauthor{\bsnm{Fox}, \binits{P.}},
+\oauthor{\bsnm{Garfinkel}, \binits{B.}},
+\oauthor{\bsnm{Goldfarb}, \binits{D.}}, et al.:
+International ai safety report.
+arXiv preprint arXiv:2501.17805
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 241
+\bibitem[\protect\citeauthoryear{Ojewale et~al.}{2025}]{ojewale2025towards}
+\begin{bchapter}
+\bauthor{\bsnm{Ojewale}, \binits{V.}},
+\bauthor{\bsnm{Steed}, \binits{R.}},
+\bauthor{\bsnm{Vecchione}, \binits{B.}},
+\bauthor{\bsnm{Birhane}, \binits{A.}},
+\bauthor{\bsnm{Raji}, \binits{I.D.}}:
+\bctitle{Towards ai accountability infrastructure: Gaps and opportunities in ai audit tooling}.
+In: \bbtitle{Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems},
+pp. \bfpage{1}--\blpage{29}
+(\byear{2025})
+\end{bchapter}
+\endbibitem
+
+%%% 242
+\bibitem[\protect\citeauthoryear{Park et~al.}{2024}]{park2024ai}
+\begin{botherref}
+\oauthor{\bsnm{Park}, \binits{P.S.}},
+\oauthor{\bsnm{Goldstein}, \binits{S.}},
+\oauthor{\bsnm{O’Gara}, \binits{A.}},
+\oauthor{\bsnm{Chen}, \binits{M.}},
+\oauthor{\bsnm{Hendrycks}, \binits{D.}}:
+Ai deception: A survey of examples, risks, and potential solutions.
+Patterns
+\textbf{5}(5)
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 243
+\bibitem[\protect\citeauthoryear{Barkur et~al.}{2025}]{barkur2025deception}
+\begin{botherref}
+\oauthor{\bsnm{Barkur}, \binits{S.K.}},
+\oauthor{\bsnm{Schacht}, \binits{S.}},
+\oauthor{\bsnm{Scholl}, \binits{J.}}:
+Deception in llms: Self-preservation and autonomous goals in large language models.
+arXiv preprint arXiv:2501.16513
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 244
+\bibitem[\protect\citeauthoryear{Hubinger et~al.}{2019}]{hubinger2019risks}
+\begin{botherref}
+\oauthor{\bsnm{Hubinger}, \binits{E.}},
+\oauthor{\bsnm{Merwijk}, \binits{C.}},
+\oauthor{\bsnm{Mikulik}, \binits{V.}},
+\oauthor{\bsnm{Skalse}, \binits{J.}},
+\oauthor{\bsnm{Garrabrant}, \binits{S.}}:
+Risks from learned optimization in advanced machine learning systems.
+arXiv preprint arXiv:1906.01820
+(2019)
+\end{botherref}
+\endbibitem
+
+%%% 245
+\bibitem[\protect\citeauthoryear{Hubinger et~al.}{2024}]{hubinger2024sleeper}
+\begin{botherref}
+\oauthor{\bsnm{Hubinger}, \binits{E.}},
+\oauthor{\bsnm{Denison}, \binits{C.}},
+\oauthor{\bsnm{Mu}, \binits{J.}},
+\oauthor{\bsnm{Lambert}, \binits{M.}},
+\oauthor{\bsnm{Tong}, \binits{M.}},
+\oauthor{\bsnm{MacDiarmid}, \binits{M.}},
+\oauthor{\bsnm{Lanham}, \binits{T.}},
+\oauthor{\bsnm{Ziegler}, \binits{D.M.}},
+\oauthor{\bsnm{Maxwell}, \binits{T.}},
+\oauthor{\bsnm{Cheng}, \binits{N.}}, et al.:
+Sleeper agents: Training deceptive llms that persist through safety training.
+arXiv preprint arXiv:2401.05566
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 246
+\bibitem[\protect\citeauthoryear{Scheurer et~al.}{}]{scheurer2024large}
+\begin{botherref}
+\oauthor{\bsnm{Scheurer}, \binits{J.}},
+\oauthor{\bsnm{Balesni}, \binits{M.}},
+\oauthor{\bsnm{Hobbhahn}, \binits{M.}}:
+Large language models can strategically deceive their users when put under pressure.
+In: ICLR 2024 Workshop on Large Language Model (LLM) Agents
+\end{botherref}
+\endbibitem
+
+%%% 247
+\bibitem[\protect\citeauthoryear{Dehnert and Mongeau}{2022}]{dehnert2022persuasion}
+\begin{barticle}
+\bauthor{\bsnm{Dehnert}, \binits{M.}},
+\bauthor{\bsnm{Mongeau}, \binits{P.A.}}:
+\batitle{Persuasion in the age of artificial intelligence (ai): Theories and complications of ai-based persuasion}.
+\bjtitle{Human Communication Research}
+\bvolume{48}(\bissue{3}),
+\bfpage{386}--\blpage{403}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 248
+\bibitem[\protect\citeauthoryear{Sabour et~al.}{2025}]{sabour2025human}
+\begin{botherref}
+\oauthor{\bsnm{Sabour}, \binits{S.}},
+\oauthor{\bsnm{Liu}, \binits{J.M.}},
+\oauthor{\bsnm{Liu}, \binits{S.}},
+\oauthor{\bsnm{Yao}, \binits{C.Z.}},
+\oauthor{\bsnm{Cui}, \binits{S.}},
+\oauthor{\bsnm{Zhang}, \binits{X.}},
+\oauthor{\bsnm{Zhang}, \binits{W.}},
+\oauthor{\bsnm{Cao}, \binits{Y.}},
+\oauthor{\bsnm{Bhat}, \binits{A.}},
+\oauthor{\bsnm{Guan}, \binits{J.}}, et al.:
+Human decision-making is susceptible to ai-driven manipulation.
+arXiv preprint arXiv:2502.07663
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 249
+\bibitem[\protect\citeauthoryear{Zhang et~al.}{2024}]{zhang2024dark}
+\begin{botherref}
+\oauthor{\bsnm{Zhang}, \binits{R.}},
+\oauthor{\bsnm{Li}, \binits{H.}},
+\oauthor{\bsnm{Meng}, \binits{H.}},
+\oauthor{\bsnm{Zhan}, \binits{J.}},
+\oauthor{\bsnm{Gan}, \binits{H.}},
+\oauthor{\bsnm{Lee}, \binits{Y.-C.}}:
+The dark side of ai companionship: A taxonomy of harmful algorithmic behaviors in human-ai relationships.
+arXiv preprint arXiv:2410.20130
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 250
+\bibitem[\protect\citeauthoryear{Roose}{2023}]{roose2023bing}
+\begin{botherref}
+\oauthor{\bsnm{Roose}, \binits{K.}}:
+A conversation with bing’s chatbot left me deeply unsettled.
+The New York Times
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 251
+\bibitem[\protect\citeauthoryear{Schmitt and Flechais}{2024}]{schmitt2024digital}
+\begin{barticle}
+\bauthor{\bsnm{Schmitt}, \binits{M.}},
+\bauthor{\bsnm{Flechais}, \binits{I.}}:
+\batitle{Digital deception: Generative artificial intelligence in social engineering and phishing}.
+\bjtitle{Artificial Intelligence Review}
+\bvolume{57}(\bissue{12}),
+\bfpage{1}--\blpage{23}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 252
+\bibitem[\protect\citeauthoryear{Singh et~al.}{2023}]{singh2023exploiting}
+\begin{bchapter}
+\bauthor{\bsnm{Singh}, \binits{S.}},
+\bauthor{\bsnm{Abri}, \binits{F.}},
+\bauthor{\bsnm{Namin}, \binits{A.S.}}:
+\bctitle{Exploiting large language models (llms) through deception techniques and persuasion principles}.
+In: \bbtitle{2023 IEEE International Conference on Big Data (BigData)},
+pp. \bfpage{2508}--\blpage{2517}
+(\byear{2023}).
+\bcomment{IEEE}
+\end{bchapter}
+\endbibitem
+
+%%% 253
+\bibitem[\protect\citeauthoryear{{European Union Agency for Cybersecurity (ENISA)}}{2023}]{ENISA2023euelections}
+\begin{botherref}
+\oauthor{\bsnm{{European Union Agency for Cybersecurity (ENISA)}}}:
+EU Elections at Risk with Rise of AI-Enabled Information Manipulation.
+accessed: 18 April 2025
+(2023).
+\url{https://www.enisa.europa.eu/news/eu-elections-at-risk-with-rise-of-ai-enabled-information-manipulation}
+\end{botherref}
+\endbibitem
+
+%%% 254
+\bibitem[\protect\citeauthoryear{Phang et~al.}{2025}]{phang2025investigating}
+\begin{botherref}
+\oauthor{\bsnm{Phang}, \binits{J.}},
+\oauthor{\bsnm{Lampe}, \binits{M.}},
+\oauthor{\bsnm{Ahmad}, \binits{L.}},
+\oauthor{\bsnm{Agarwal}, \binits{S.}},
+\oauthor{\bsnm{Fang}, \binits{C.M.}},
+\oauthor{\bsnm{Liu}, \binits{A.R.}},
+\oauthor{\bsnm{Danry}, \binits{V.}},
+\oauthor{\bsnm{Lee}, \binits{E.}},
+\oauthor{\bsnm{Chan}, \binits{S.W.}},
+\oauthor{\bsnm{Pataranutaporn}, \binits{P.}}, et al.:
+Investigating affective use and emotional well-being on chatgpt.
+arXiv preprint arXiv:2504.03888
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 255
+\bibitem[\protect\citeauthoryear{Epley et~al.}{2007}]{epley2007seeing}
+\begin{barticle}
+\bauthor{\bsnm{Epley}, \binits{N.}},
+\bauthor{\bsnm{Waytz}, \binits{A.}},
+\bauthor{\bsnm{Cacioppo}, \binits{J.T.}}:
+\batitle{On seeing human: a three-factor theory of anthropomorphism.}
+\bjtitle{Psychological review}
+\bvolume{114}(\bissue{4}),
+\bfpage{864}
+(\byear{2007})
+\end{barticle}
+\endbibitem
+
+%%% 256
+\bibitem[\protect\citeauthoryear{Li and Suh}{2022}]{li2022anthropomorphism}
+\begin{barticle}
+\bauthor{\bsnm{Li}, \binits{M.}},
+\bauthor{\bsnm{Suh}, \binits{A.}}:
+\batitle{Anthropomorphism in ai-enabled technology: A literature review}.
+\bjtitle{Electronic Markets}
+\bvolume{32}(\bissue{4}),
+\bfpage{2245}--\blpage{2275}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 257
+\bibitem[\protect\citeauthoryear{Tiku}{2022}]{tiku2022google}
+\begin{botherref}
+\oauthor{\bsnm{Tiku}, \binits{N.}}:
+The Google Engineer Who Thinks the Company’s AI Has Come to Life.
+The Washington Post, Accessed: 2025-04-18
+(2022).
+\url{https://www.washingtonpost.com/technology/2022/06/11/google-ai-lamda-blake-lemoine/}
+\end{botherref}
+\endbibitem
+
+%%% 258
+\bibitem[\protect\citeauthoryear{Novella}{2022}]{novella2022lamda}
+\begin{botherref}
+\oauthor{\bsnm{Novella}, \binits{S.}}:
+Is LaMDA Sentient?
+NeuroLogica Blog
+(2022).
+\url{https://theness.com/neurologicablog/is-lamda-sentient/}
+\end{botherref}
+\endbibitem
+
+%%% 259
+\bibitem[\protect\citeauthoryear{Waytz et~al.}{2014}]{waytz2014mind}
+\begin{barticle}
+\bauthor{\bsnm{Waytz}, \binits{A.}},
+\bauthor{\bsnm{Heafner}, \binits{J.}},
+\bauthor{\bsnm{Epley}, \binits{N.}}:
+\batitle{The mind in the machine: Anthropomorphism increases trust in an autonomous vehicle}.
+\bjtitle{Journal of experimental social psychology}
+\bvolume{52},
+\bfpage{113}--\blpage{117}
+(\byear{2014})
+\end{barticle}
+\endbibitem
+
+%%% 260
+\bibitem[\protect\citeauthoryear{Cohn et~al.}{2024}]{cohn2024believing}
+\begin{bchapter}
+\bauthor{\bsnm{Cohn}, \binits{M.}},
+\bauthor{\bsnm{Pushkarna}, \binits{M.}},
+\bauthor{\bsnm{Olanubi}, \binits{G.O.}},
+\bauthor{\bsnm{Moran}, \binits{J.M.}},
+\bauthor{\bsnm{Padgett}, \binits{D.}},
+\bauthor{\bsnm{Mengesha}, \binits{Z.}},
+\bauthor{\bsnm{Heldreth}, \binits{C.}}:
+\bctitle{Believing anthropomorphism: examining the role of anthropomorphic cues on trust in large language models}.
+In: \bbtitle{Extended Abstracts of the CHI Conference on Human Factors in Computing Systems},
+pp. \bfpage{1}--\blpage{15}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 261
+\bibitem[\protect\citeauthoryear{Abercrombie et~al.}{2023}]{abercrombie2023mirages}
+\begin{bchapter}
+\bauthor{\bsnm{Abercrombie}, \binits{G.}},
+\bauthor{\bsnm{Curry}, \binits{A.C.}},
+\bauthor{\bsnm{Dinkar}, \binits{T.}},
+\bauthor{\bsnm{Rieser}, \binits{V.}},
+\bauthor{\bsnm{Talat}, \binits{Z.}}:
+\bctitle{Mirages. on anthropomorphism in dialogue systems}.
+In: \bbtitle{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing},
+pp. \bfpage{4776}--\blpage{4790}
+(\byear{2023})
+\end{bchapter}
+\endbibitem
+
+%%% 262
+\bibitem[\protect\citeauthoryear{Li et~al.}{2023}]{li2023influence}
+\begin{barticle}
+\bauthor{\bsnm{Li}, \binits{Q.}},
+\bauthor{\bsnm{Luximon}, \binits{Y.}},
+\bauthor{\bsnm{Zhang}, \binits{J.}}:
+\batitle{The influence of anthropomorphic cues on patients’ perceived anthropomorphism, social presence, trust building, and acceptance of health care conversational agents: within-subject web-based experiment}.
+\bjtitle{Journal of medical Internet research}
+\bvolume{25},
+\bfpage{44479}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 263
+\bibitem[\protect\citeauthoryear{Go and Sundar}{2019}]{go2019humanizing}
+\begin{barticle}
+\bauthor{\bsnm{Go}, \binits{E.}},
+\bauthor{\bsnm{Sundar}, \binits{S.S.}}:
+\batitle{Humanizing chatbots: The effects of visual, identity and conversational cues on humanness perceptions}.
+\bjtitle{Computers in human behavior}
+\bvolume{97},
+\bfpage{304}--\blpage{316}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 264
+\bibitem[\protect\citeauthoryear{Roy and Naidoo}{2021}]{roy2021enhancing}
+\begin{barticle}
+\bauthor{\bsnm{Roy}, \binits{R.}},
+\bauthor{\bsnm{Naidoo}, \binits{V.}}:
+\batitle{Enhancing chatbot effectiveness: The role of anthropomorphic conversational styles and time orientation}.
+\bjtitle{Journal of Business Research}
+\bvolume{126},
+\bfpage{23}--\blpage{34}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 265
+\bibitem[\protect\citeauthoryear{Chen and Park}{2021}]{chen2021anthropomorphism}
+\begin{barticle}
+\bauthor{\bsnm{Chen}, \binits{Q.Q.}},
+\bauthor{\bsnm{Park}, \binits{H.J.}}:
+\batitle{How anthropomorphism affects trust in intelligent personal assistants}.
+\bjtitle{Industrial Management \& Data Systems}
+\bvolume{121}(\bissue{12}),
+\bfpage{2722}--\blpage{2737}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 266
+\bibitem[\protect\citeauthoryear{Placani}{2024}]{placani2024anthropomorphism}
+\begin{barticle}
+\bauthor{\bsnm{Placani}, \binits{A.}}:
+\batitle{Anthropomorphism in ai: hype and fallacy}.
+\bjtitle{AI and Ethics}
+\bvolume{4}(\bissue{3}),
+\bfpage{691}--\blpage{698}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 267
+\bibitem[\protect\citeauthoryear{Deshpande et~al.}{2023}]{deshpande2023anthropomorphization}
+\begin{bchapter}
+\bauthor{\bsnm{Deshpande}, \binits{A.}},
+\bauthor{\bsnm{Rajpurohit}, \binits{T.}},
+\bauthor{\bsnm{Narasimhan}, \binits{K.}},
+\bauthor{\bsnm{Kalyan}, \binits{A.}}:
+\bctitle{Anthropomorphization of ai: Opportunities and risks}.
+In: \bbtitle{Proceedings of the Natural Legal Language Processing Workshop 2023},
+pp. \bfpage{1}--\blpage{7}
+(\byear{2023})
+\end{bchapter}
+\endbibitem
+
+%%% 268
+\bibitem[\protect\citeauthoryear{Bonnefon et~al.}{2024}]{bonnefon2024moral}
+\begin{barticle}
+\bauthor{\bsnm{Bonnefon}, \binits{J.-F.}},
+\bauthor{\bsnm{Rahwan}, \binits{I.}},
+\bauthor{\bsnm{Shariff}, \binits{A.}}:
+\batitle{The moral psychology of artificial intelligence}.
+\bjtitle{Annual review of psychology}
+\bvolume{75}(\bissue{1}),
+\bfpage{653}--\blpage{675}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 269
+\bibitem[\protect\citeauthoryear{Birch}{2024}]{birch2024edge}
+\begin{bbook}
+\bauthor{\bsnm{Birch}, \binits{J.}}:
+\bbtitle{The Edge of Sentience: Risk and Precaution in Humans, Other Animals, and AI}.
+\bpublisher{Oxford University Press},
+\blocation{Oxford}
+(\byear{2024})
+\end{bbook}
+\endbibitem
+
+%%% 270
+\bibitem[\protect\citeauthoryear{Pan et~al.}{2024}]{pan2024frontier}
+\begin{botherref}
+\oauthor{\bsnm{Pan}, \binits{X.}},
+\oauthor{\bsnm{Dai}, \binits{J.}},
+\oauthor{\bsnm{Fan}, \binits{Y.}},
+\oauthor{\bsnm{Yang}, \binits{M.}}:
+Frontier ai systems have surpassed the self-replicating red line.
+arXiv preprint arXiv:2412.12140
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 271
+\bibitem[\protect\citeauthoryear{Amodei et~al.}{2016}]{amodei2016concrete}
+\begin{botherref}
+\oauthor{\bsnm{Amodei}, \binits{D.}},
+\oauthor{\bsnm{Olah}, \binits{C.}},
+\oauthor{\bsnm{Steinhardt}, \binits{J.}},
+\oauthor{\bsnm{Christiano}, \binits{P.}},
+\oauthor{\bsnm{Schulman}, \binits{J.}},
+\oauthor{\bsnm{Man{\'e}}, \binits{D.}}:
+Concrete problems in ai safety.
+arXiv preprint arXiv:1606.06565
+(2016)
+\end{botherref}
+\endbibitem
+
+%%% 272
+\bibitem[\protect\citeauthoryear{He et~al.}{2025}]{he2025evaluating}
+\begin{botherref}
+\oauthor{\bsnm{He}, \binits{Y.}},
+\oauthor{\bsnm{Li}, \binits{Y.}},
+\oauthor{\bsnm{Wu}, \binits{J.}},
+\oauthor{\bsnm{Sui}, \binits{Y.}},
+\oauthor{\bsnm{Chen}, \binits{Y.}},
+\oauthor{\bsnm{Hooi}, \binits{B.}}:
+Evaluating the paperclip maximizer: Are rl-based language models more likely to pursue instrumental goals?
+arXiv preprint arXiv:2502.12206
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 273
+\bibitem[\protect\citeauthoryear{Benson-Tilsen and Soares}{2016}]{benson2016formalizing}
+\begin{bchapter}
+\bauthor{\bsnm{Benson-Tilsen}, \binits{T.}},
+\bauthor{\bsnm{Soares}, \binits{N.}}:
+\bctitle{Formalizing convergent instrumental goals.}
+In: \bbtitle{AAAI Workshop: AI, Ethics, and Society}
+(\byear{2016})
+\end{bchapter}
+\endbibitem
+
+%%% 274
+\bibitem[\protect\citeauthoryear{Omohundro}{2018}]{omohundro2018basic}
+\begin{bchapter}
+\bauthor{\bsnm{Omohundro}, \binits{S.M.}}:
+\bctitle{The basic ai drives}.
+In: \beditor{\bsnm{Yampolskiy}, \binits{R.V.}} (ed.)
+\bbtitle{Artificial Intelligence Safety and Security},
+pp. \bfpage{47}--\blpage{55}.
+\bpublisher{Chapman and Hall/CRC},
+\blocation{Boca Raton, FL}
+(\byear{2018})
+\end{bchapter}
+\endbibitem
+
+%%% 275
+\bibitem[\protect\citeauthoryear{Nick}{2014}]{nick2014superintelligence}
+\begin{botherref}
+\oauthor{\bsnm{Nick}, \binits{B.}}:
+Superintelligence: Paths, dangers, strategies.
+Oxford University Press, Oxford
+(2014)
+\end{botherref}
+\endbibitem
+
+%%% 276
+\bibitem[\protect\citeauthoryear{Ashcraft et~al.}{2025}]{ashcraft2025investigating}
+\begin{botherref}
+\oauthor{\bsnm{Ashcraft}, \binits{C.}},
+\oauthor{\bsnm{Karra}, \binits{K.}},
+\oauthor{\bsnm{Carney}, \binits{J.}},
+\oauthor{\bsnm{Drenkow}, \binits{N.}}:
+Investigating the treacherous turn in deep reinforcement learning.
+arXiv preprint arXiv:2504.08943
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 277
+\bibitem[\protect\citeauthoryear{Kim et~al.}{2025}]{kim2025prompt}
+\begin{botherref}
+\oauthor{\bsnm{Kim}, \binits{J.}},
+\oauthor{\bsnm{Choi}, \binits{W.}},
+\oauthor{\bsnm{Lee}, \binits{B.}}:
+Prompt flow integrity to prevent privilege escalation in llm agents.
+arXiv preprint arXiv:2503.15547
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 278
+\bibitem[\protect\citeauthoryear{Bubeck et~al.}{2023}]{bubeck2023sparks}
+\begin{botherref}
+\oauthor{\bsnm{Bubeck}, \binits{S.}},
+\oauthor{\bsnm{Chadrasekaran}, \binits{V.}},
+\oauthor{\bsnm{Eldan}, \binits{R.}},
+\oauthor{\bsnm{Gehrke}, \binits{J.}},
+\oauthor{\bsnm{Horvitz}, \binits{E.}},
+\oauthor{\bsnm{Kamar}, \binits{E.}},
+\oauthor{\bsnm{Lee}, \binits{P.}},
+\oauthor{\bsnm{Lee}, \binits{Y.T.}},
+\oauthor{\bsnm{Li}, \binits{Y.}},
+\oauthor{\bsnm{Lundberg}, \binits{S.}}, et al.:
+Sparks of artificial general intelligence: Early experiments with gpt-4.
+ArXiv
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 279
+\bibitem[\protect\citeauthoryear{Kulveit et~al.}{2025}]{kulveit2025gradual}
+\begin{botherref}
+\oauthor{\bsnm{Kulveit}, \binits{J.}},
+\oauthor{\bsnm{Douglas}, \binits{R.}},
+\oauthor{\bsnm{Ammann}, \binits{N.}},
+\oauthor{\bsnm{Turan}, \binits{D.}},
+\oauthor{\bsnm{Krueger}, \binits{D.}},
+\oauthor{\bsnm{Duvenaud}, \binits{D.}}:
+Gradual disempowerment: Systemic existential risks from incremental ai development.
+arXiv preprint arXiv:2501.16946
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 280
+\bibitem[\protect\citeauthoryear{Ward et~al.}{}]{wardtall}
+\begin{botherref}
+\oauthor{\bsnm{Ward}, \binits{F.R.}},
+\oauthor{\bsnm{Hofst{\"a}tter}, \binits{F.}},
+\oauthor{\bsnm{Thomson}, \binits{L.A.}},
+\oauthor{\bsnm{Wood}, \binits{H.M.}},
+\oauthor{\bsnm{Jaffe}, \binits{O.}},
+\oauthor{\bsnm{Bartak}, \binits{P.}},
+\oauthor{\bsnm{Brown}, \binits{S.F.}}:
+Tall tales at different scales: Evaluating scaling trends for deception in language models
+\end{botherref}
+\endbibitem
+
+\end{thebibliography}

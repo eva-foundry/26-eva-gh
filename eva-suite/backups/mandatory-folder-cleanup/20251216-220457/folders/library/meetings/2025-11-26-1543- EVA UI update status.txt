@@ -1,0 +1,42 @@
+Here is your **clean final Markdown status block** exactly matching the pattern of your dev team’s update — short, factual, no fluff, ready to paste into GitHub, Teams, or an email.
+
+---
+
+# ✅ EVA Suite – P02 & EVA UI Status Update (2025-11-26)
+
+## **P02 – Requirements Engine**
+
+* **4 issues moved to Done**
+  Completed and closed: **#31–#34** (all updated with *“Completed as of 2025-11-26”*) under **Sprint 02**.
+* **2 new backlog items created**
+
+  * **#35 – Publish P02 Markdown reports to SharePoint** *(Sprint 04)*
+  * **#36 – Align P02 CDD coverage with EVA CDD roadmap** *(Sprint 04)*
+
+## **EVA UI – Unified Chat Frame**
+
+* **5 issues + 1 epic moved to Done (Sprint 02)**
+  Done stories: **#3–#7** (layout + skip links, two-pane chat shell, APIM stub + telemetry, runtime i18n, branding + lint).
+  Epic **#2** also marked Completed.
+* **4 new backlog issues created**
+
+  * **#8 – Connect Unified Chat Frame to real EVA APIM endpoint** *(Sprint 03)*
+  * **#9 – Persisted threads + richer sidebar** *(Sprint 03)*
+  * **#10 – Extend component test coverage (>=80%)** *(Sprint 04)*
+  * **#11 – Full a11y regression pass for Unified Chat Frame** *(Sprint 04)*
+
+## **Operational Notes**
+
+* Both project boards now fully aligned with the **Backlog → In Progress → Review → Done** workflow and Sprint 01–05 fields.
+* Sprint 03 priority = **Real APIM wiring + persisted threads**.
+* Sprint 04 priority = **SharePoint publication, CDD alignment, expanded test suite, a11y regression**.
+
+---
+
+If you want, I can also generate:
+
+✅ a **Copilot prompt** that will perform these same project-board updates automatically for future sprints
+✅ a **Sprint 03 plan** (tasks, estimates, risks)
+✅ a **Release Note for EVA Chat Frame 0.1.0** (polished, shareable with the team)
+
+Just say the word.

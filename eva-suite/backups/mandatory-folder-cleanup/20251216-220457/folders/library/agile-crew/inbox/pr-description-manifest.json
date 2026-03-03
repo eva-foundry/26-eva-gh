@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "PR_DESCRIPTION",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/pr-description",
+  "created_timestamp": "2025-11-27T12:40:32.8512360Z",
+  "source_intake_file": "PR_DESCRIPTION.md",
+  "feature_key": "P02-AUTO-0123f746",
+  "feature_slug": "pr-description"
+}

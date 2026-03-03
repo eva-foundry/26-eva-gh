@@ -1,0 +1,57 @@
+{
+  "id": "template_meeting_summary",
+  "title": "Template – Meeting Summary",
+  "metadata": {
+    "date": "YYYY-MM-DD",
+    "time": "HH:MM–HH:MM",
+    "location": "Virtual / In-person / Hybrid",
+    "participants": [
+      "Name (Role)",
+      "Name (Role)"
+    ],
+    "related_projects": [
+      "eva_platform",
+      "jurisprudence_integration"
+    ]
+  },
+  "context": "Short paragraph describing why this meeting took place and what it was meant to achieve.",
+  "agenda": [
+    "Item 1",
+    "Item 2",
+    "Item 3"
+  ],
+  "discussion_highlights": [
+    {
+      "topic": "Topic name",
+      "notes": "Key points discussed; decisions, concerns, options."
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DEC-001",
+      "description": "Decision made, e.g., 'Proceed with EVA as the core trunk for RAG solutions.'",
+      "owner": "Name / Role",
+      "date": "YYYY-MM-DD"
+    }
+  ],
+  "actions": [
+    {
+      "id": "ACT-001",
+      "description": "Concrete action item.",
+      "owner": "Name / Role",
+      "due_date": "YYYY-MM-DD",
+      "status": "Not started / In progress / Done"
+    }
+  ],
+  "open_questions": [
+    "Question 1",
+    "Question 2"
+  ],
+  "attachments_or_links": [
+    {
+      "type": "document / slide / repo / email",
+      "title": "Name of artifact",
+      "location": "URL or path"
+    }
+  ]
+}

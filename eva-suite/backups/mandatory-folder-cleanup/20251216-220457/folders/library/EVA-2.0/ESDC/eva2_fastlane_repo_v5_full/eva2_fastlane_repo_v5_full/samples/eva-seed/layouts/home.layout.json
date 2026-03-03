@@ -1,0 +1,52 @@
+{
+  "pageId": "eva_da_home",
+  "version": "1.0",
+  "sections": [
+    {
+      "id": "hero",
+      "type": "HeroBanner",
+      "props": {
+        "headlineKeyEn": "home.hero.headline_en",
+        "headlineKeyFr": "home.hero.headline_fr",
+        "subtitleKeyEn": "home.hero.subtitle_en",
+        "subtitleKeyFr": "home.hero.subtitle_fr",
+        "graphicAssetId": "hero_animated_eva",
+        "showClearChatButton": true
+      }
+    },
+    {
+      "id": "quickActions",
+      "type": "QuickActionsGrid",
+      "props": {
+        "items": [
+          {
+            "id": "qa_recent",
+            "labelKeyEn": "home.quickActions.recent_en",
+            "labelKeyFr": "home.quickActions.recent_fr",
+            "action": "openRecentQueries"
+          },
+          {
+            "id": "qa_upload",
+            "labelKeyEn": "home.quickActions.upload_en",
+            "labelKeyFr": "home.quickActions.upload_fr",
+            "action": "openUploadDialog"
+          },
+          {
+            "id": "qa_examples",
+            "labelKeyEn": "home.quickActions.examples_en",
+            "labelKeyFr": "home.quickActions.examples_fr",
+            "action": "showSamplePrompts"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chatPanel",
+      "type": "ChatPanel",
+      "props": {
+        "showSuggestedQuestions": true,
+        "suggestedQuestionsKey": "home.chat.suggestedQuestions"
+      }
+    }
+  ]
+}

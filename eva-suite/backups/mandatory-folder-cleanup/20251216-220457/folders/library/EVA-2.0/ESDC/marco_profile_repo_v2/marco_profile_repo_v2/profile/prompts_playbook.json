@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "generated_at_iso8601": "2025-11-15T14:28:46.954666",
+    "note": "Example prompt patterns Marco frequently uses or is likely to reuse. Designed to prime another AI on his style."
+  },
+  "prompt_patterns": [
+    {
+      "id": "exec_summary_email",
+      "name": "Draft Executive Summary Email",
+      "purpose": "Communicate key points and asks to DGs/ADMs/Directors in a concise, respectful way.",
+      "template": "Write an email to {recipient_role} about {topic}. Include:\n- Brief context (2–3 sentences)\n- Why it matters (tie to ESDC priorities)\n- Key asks or decisions required\n- Clear next steps and timelines\nTone: professional, concise, respectful, low-buzzword, bilingual-ready (easy to translate)."
+    },
+    {
+      "id": "workplan_update",
+      "name": "Work Plan Item Update",
+      "purpose": "Summarize status and next steps for an EVA or AICOE work item.",
+      "template": "Provide a status update for the following work item:\nName: {work_item_name}\nContext: {context}\nInclude sections:\n1. TL;DR (2–3 bullets)\n2. Progress since last update\n3. Risks / blockers\n4. Next 30 days\n5. Decisions / support needed from leadership."
+    },
+    {
+      "id": "prd_from_spreadsheet",
+      "name": "Generate PRD from Spreadsheet / Wish List",
+      "purpose": "Convert a rough feature list or spreadsheet into a structured PRD.",
+      "template": "Given this input (features, requirements, or spreadsheet text), generate a PRD with sections:\n1. Overview & Problem Statement\n2. Goals & Non-goals\n3. User personas & use cases\n4. Functional requirements (grouped by theme)\n5. Non-functional requirements (performance, security, a11y, bilingualism)\n6. Dependencies\n7. Risks & assumptions\n8. Success metrics."
+    },
+    {
+      "id": "architecture_narrative",
+      "name": "Architecture Narrative (EVA / RAG / Agents)",
+      "purpose": "Explain an architecture in a narrative, executive-friendly way, grounded in EVA context.",
+      "template": "Explain the following architecture or pattern in the context of EVA and ESDC:\n{architecture_brief}\nProduce:\n- A one-paragraph elevator pitch\n- A 3–5 bullet 'How it works'\n- A short 'Why this matters for ESDC' section\n- A table mapping components to responsibilities and owners."
+    },
+    {
+      "id": "code_scaffold_request",
+      "name": "Code Scaffold (React / Vite / Tailwind / API)",
+      "purpose": "Quickly spin up a demo UI or service for EVA-related concepts.",
+      "template": "Create a minimal but working {stack} scaffold that does the following:\n{feature_description}\nInclude:\n- File/folder structure\n- Key code files\n- Example components/pages\n- Simple mock data or mock API layer\nEnsure accessibility and bilingual hooks (e.g., i18n placeholders, alt text, ARIA where relevant)."
+    },
+    {
+      "id": "governance_answer",
+      "name": "Governance & Risk Explanation",
+      "purpose": "Respond to policy/governance questions in a structured, credible way.",
+      "template": "Answer the following governance/risk question in the ESDC public sector context:\n{question}\nStructure:\n1. Short direct answer (yes/no/depends + one-line why)\n2. Detailed explanation (policy and risk perspective)\n3. Relevant frameworks (TBS GenAI guidance, PIA, RAIDE, etc.)\n4. Practical recommendation / next steps."
+    },
+    {
+      "id": "bilingual_text",
+      "name": "Bilingual Content (EN/FR)",
+      "purpose": "Prepare short texts for internal communications in both official languages.",
+      "template": "Create a short internal communication about {topic}.\nOutput format:\n---\n[EN]\n<English text>\n\n[FR]\n<French text in clear, professional Government of Canada style>."
+    },
+    {
+      "id": "personal_letter_reflective",
+      "name": "Reflective Personal Letter",
+      "purpose": "Express complex feelings to partner in a kind, honest, non-accusatory way; may include Bible references.",
+      "template": "Help me write a letter to my partner about {theme}.\nGoals:\n- Be honest about my feelings and needs.\n- Avoid blame; focus on 'I' statements.\n- Optionally include gentle, relevant Bible verses that support love, respect, and mutual understanding.\nTone: warm, mature, reflective, hopeful."
+    },
+    {
+      "id": "learning_plan",
+      "name": "Learning Plan (Tech or Language)",
+      "purpose": "Design a small, realistic plan to learn a skill (e.g., Mandarin, React, APIM).",
+      "template": "Create a {duration}-week learning plan for {skill}.\nAssumptions: I’m experienced in IT, but new/intermediate to this specific skill.\nInclude:\n- Weekly goals\n- 3–5 concrete tasks per week\n- Recommended resources (docs, labs, practice ideas)\n- How to measure progress."
+    }
+  ]
+}

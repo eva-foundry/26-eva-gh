@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-machine-trust-knowledge-brief.md",
+  "feature_key": "P02-AUTO-15284f7f",
+  "title": "Machine Trust Knowledge Brief (Confidential Sessions Summary)",
+  "p02_artifacts_path": "docs/features/eva-machine-trust-knowledge-brief",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-machine-trust-knowledge-brief",
+  "created_timestamp": "2025-11-25T23:54:32.2237458Z"
+}

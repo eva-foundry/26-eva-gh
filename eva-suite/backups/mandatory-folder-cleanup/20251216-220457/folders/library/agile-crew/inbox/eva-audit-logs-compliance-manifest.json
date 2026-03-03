@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-audit-logs-compliance.md",
+  "feature_key": "P02-AUTO-96a06b3c",
+  "title": "CDD: EVA Audit Logs & Compliance",
+  "p02_artifacts_path": "docs/features/eva-audit-logs-compliance",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-audit-logs-compliance",
+  "created_timestamp": "2025-11-25T23:54:02.4374106Z"
+}

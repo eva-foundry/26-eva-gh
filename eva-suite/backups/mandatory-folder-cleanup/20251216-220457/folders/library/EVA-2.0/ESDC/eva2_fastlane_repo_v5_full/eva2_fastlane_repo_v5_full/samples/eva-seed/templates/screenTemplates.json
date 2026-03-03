@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "templates": [
+    {
+      "templateId": "chat_landing_v1",
+      "label": "Chat landing – hero + quick actions + chat",
+      "description": "Standard EVA DA welcome screen with hero, quick actions, and chat panel.",
+      "layoutRef": "layouts/home.layout.json",
+      "allowedProjects": [
+        "*"
+      ],
+      "editableProps": [
+        "hero.props.headlineKeyEn",
+        "hero.props.headlineKeyFr",
+        "hero.props.subtitleKeyEn",
+        "hero.props.subtitleKeyFr",
+        "quickActions.props.items"
+      ]
+    }
+  ]
+}

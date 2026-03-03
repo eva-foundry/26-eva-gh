@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "PR_SUMMARY",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/pr-summary",
+  "created_timestamp": "2025-11-27T12:40:34.4751277Z",
+  "source_intake_file": "PR_SUMMARY.md",
+  "feature_key": "P02-AUTO-179ab0f1",
+  "feature_slug": "pr-summary"
+}

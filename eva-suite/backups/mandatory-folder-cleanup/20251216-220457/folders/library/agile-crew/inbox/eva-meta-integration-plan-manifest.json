@@ -1,0 +1,10 @@
+{
+  "p02_artifacts_path": "docs/features/eva-meta-integration-plan",
+  "priority": "MEDIUM",
+  "status": "ready-for-crew",
+  "title": "EVA-Meta Integration Plan",
+  "feature_slug": "eva-meta-integration-plan",
+  "created_timestamp": "2025-12-12T01:38:24.8260080Z",
+  "source_intake_file": "EVA-META-INTEGRATION-PLAN.md",
+  "feature_key": "P02-AUTO-0f5a006f"
+}

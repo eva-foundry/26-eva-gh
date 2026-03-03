@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/quality-assessment-eva-chat-vs-eva-ui",
+  "feature_key": "P02-AUTO-7a1e47d2",
+  "title": "Quality Assessment: eva-chat vs eva-ui",
+  "source_intake_file": "QUALITY-ASSESSMENT-EVA-CHAT-VS-EVA-UI.md",
+  "feature_slug": "quality-assessment-eva-chat-vs-eva-ui",
+  "priority": "MEDIUM",
+  "created_timestamp": "2025-12-15T01:42:23.4408210Z"
+}

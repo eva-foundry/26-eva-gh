@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "Safe Deletion Checklist - EVA Suite",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/safe-deletion-checklist",
+  "created_timestamp": "2025-11-27T12:40:44.3679312Z",
+  "source_intake_file": "SAFE-DELETION-CHECKLIST.md",
+  "feature_key": "P02-AUTO-f2417451",
+  "feature_slug": "safe-deletion-checklist"
+}

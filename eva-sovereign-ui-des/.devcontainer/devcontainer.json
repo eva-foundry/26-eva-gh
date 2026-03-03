@@ -1,0 +1,11 @@
+{
+  "name": "Minimal Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "forwardPorts": [],
+  "postCreateCommand": "echo 'Devcontainer ready'",
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
+}

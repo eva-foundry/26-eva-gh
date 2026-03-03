@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "eva-suite-full-tree",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/eva-suite-full-tree",
+  "created_timestamp": "2025-11-27T12:40:24.5699277Z",
+  "source_intake_file": "eva-suite-full-tree.txt",
+  "feature_key": "P02-AUTO-3ff49165",
+  "feature_slug": "eva-suite-full-tree"
+}

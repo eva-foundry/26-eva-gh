@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-vision-powerbi-integration.md",
+  "feature_key": "P02-AUTO-045d584b",
+  "title": "CDD: EVA Vision Power BI Integration",
+  "p02_artifacts_path": "docs/features/eva-vision-powerbi-integration",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-vision-powerbi-integration",
+  "created_timestamp": "2025-11-25T23:55:24.3552150Z"
+}

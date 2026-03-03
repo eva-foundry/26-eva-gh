@@ -1,0 +1,40 @@
+name: EVA Demo Mode - Nightly
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # 03:00 UTC -> adjust as you wish
+  workflow_dispatch:      # allow manual runs
+
+jobs:
+  demo-nightly:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node (for demo web builds)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"     # adjust to your stack
+
+      - name: Load sprint manifest (demo mode)
+        id: load_manifest
+        run: |
+          echo "Loading sprint manifest..."
+          # TODO: later: parse eva-meta/sprints/sprint-001-demo.yml
+          # For now, this is just a placeholder so the workflow is valid.
+          echo "SPRINT_FILE=eva-meta/sprints/sprint-001-demo.yml" >> $GITHUB_OUTPUT
+
+      - name: Build EVA Suite demo (placeholder)
+        run: |
+          echo "TODO: implement demo build step."
+          echo "Would read ${{ steps.load_manifest.outputs.SPRINT_FILE }}"
+          echo "Then run tasks for demo mode: UI build, mock data, deploy to demo target."
+
+      - name: Produce demo summary (placeholder)
+        run: |
+          echo "EVA Demo Mode completed (placeholder)."
+          echo "Later: summarize tasks, link artifacts, update public page."

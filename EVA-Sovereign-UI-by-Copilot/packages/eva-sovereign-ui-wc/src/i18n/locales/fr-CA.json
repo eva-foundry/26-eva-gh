@@ -1,0 +1,83 @@
+{
+  "esdc": {
+    "title": "Emploi et Développement social Canada",
+    "shortTitle": "EDSC",
+    "hero": {
+      "title": "Bâtir une main-d'œuvre qualifiée, adaptable et inclusive",
+      "description": "Accédez aux services d'emploi, aux prestations et aux programmes de soutien"
+    },
+    "programs": {
+      "title": "Programmes et services",
+      "ei": {
+        "title": "Assurance-emploi",
+        "description": "Aide financière temporaire pendant que vous cherchez du travail ou perfectionnez vos compétences",
+        "icon": "💼"
+      },
+      "oas": {
+        "title": "Sécurité de la vieillesse",
+        "description": "Paiement mensuel pour les aînés de 65 ans et plus",
+        "icon": "🧓"
+      },
+      "cpp": {
+        "title": "Régime de pensions du Canada",
+        "description": "Programme de pension de retraite contributif",
+        "icon": "💰"
+      }
+    },
+    "services": {
+      "jobSearch": {
+        "title": "Recherche d'emploi",
+        "description": "Trouvez des opportunités d'emploi partout au Canada"
+      },
+      "benefitsFinder": {
+        "title": "Chercheur de prestations",
+        "description": "Découvrez les prestations auxquelles vous pourriez être admissible"
+      }
+    }
+  },
+  "chat": {
+    "title": "Demandez à EVA",
+    "placeholder": "Comment puis-je vous aider aujourd'hui?",
+    "send": "Envoyer",
+    "voice": "Entrée vocale",
+    "thinking": "Réflexion...",
+    "welcome": "Bonjour! Je suis EVA, votre assistante d'Emploi et Développement social Canada. Comment puis-je vous aider aujourd'hui?"
+  },
+  "nav": {
+    "skipToContent": "Passer au contenu principal",
+    "home": "Accueil",
+    "programs": "Programmes",
+    "services": "Services",
+    "about": "À propos"
+  },
+  "footer": {
+    "copyright": "© Sa Majesté le Roi du chef du Canada",
+    "privacy": "Confidentialité",
+    "terms": "Avis",
+    "accessibility": "Accessibilité",
+    "canadaCa": "Canada.ca"
+  },
+  "accessibility": {
+    "loading": "Chargement...",
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "menu": "Menu",
+    "search": "Recherche",
+    "language": "Sélection de la langue"
+  },
+  "language": {
+    "en": "English",
+    "fr": "Français",
+    "switchTo": "Passer à",
+    "current": "Langue actuelle"
+  },
+  "devkit": {
+    "title": "Trousse de développement EVA-Sovereign-UI",
+    "subtitle": "Bibliothèque de composants et vitrine",
+    "gallery": "Galerie de composants",
+    "themes": "Sélection de thème",
+    "a11y": "Fonctionnalités d'accessibilité",
+    "i18n": "Internationalisation",
+    "integration": "Exemples d'intégration"
+  }
+}

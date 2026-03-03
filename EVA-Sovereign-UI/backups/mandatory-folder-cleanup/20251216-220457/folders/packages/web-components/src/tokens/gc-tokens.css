@@ -1,0 +1,105 @@
+/**
+ * GC Design System CSS Custom Properties
+ * Generated from gc-tokens.ts
+ * Official Government of Canada Design System tokens
+ */
+
+:root {
+  /* Colors - Primary */
+  --eva-colors-gc-link-blue: #284162;
+  --eva-colors-gc-fip-red: #af3c43;
+  --eva-colors-gc-error-red: #d3080c;
+  --eva-colors-gc-accent-navy: #26374a;
+  --eva-colors-gc-text-default: #333;
+  --eva-colors-gc-text-secondary: #666;
+  --eva-colors-gc-background-white: #fff;
+  --eva-colors-gc-background-light: #f5f5f5;
+  --eva-colors-gc-background-dark: #333;
+  --eva-colors-gc-border-default: #ccc;
+  --eva-colors-gc-border-light: #e1e4e7;
+  
+  /* Colors - Status */
+  --eva-colors-gc-success: #278400;
+  --eva-colors-gc-warning: #ff9900;
+  --eva-colors-gc-info: #269abc;
+  
+  /* Colors - Interactive States */
+  --eva-colors-gc-focus-outline: #284162;
+  --eva-colors-gc-hover-blue: #0535d2;
+  --eva-colors-gc-visited-purple: #7834bc;
+  
+  /* Typography - Font Families */
+  --eva-typography-font-family-headings: "Lato", sans-serif;
+  --eva-typography-font-family-body: "Noto Sans", sans-serif;
+  
+  /* Typography - Font Weights */
+  --eva-typography-font-weight-regular: 400;
+  --eva-typography-font-weight-bold: 700;
+  
+  /* Typography - Font Sizes */
+  --eva-typography-font-size-h1: clamp(2rem, 5vw, 2.5rem);
+  --eva-typography-font-size-h2: clamp(1.5rem, 4vw, 2rem);
+  --eva-typography-font-size-h3: clamp(1.25rem, 3vw, 1.5rem);
+  --eva-typography-font-size-h4: 1.125rem;
+  --eva-typography-font-size-h5: 1rem;
+  --eva-typography-font-size-h6: 0.875rem;
+  --eva-typography-font-size-body: 1rem;
+  --eva-typography-font-size-small: 0.875rem;
+  --eva-typography-font-size-tiny: 0.75rem;
+  
+  /* Typography - Line Heights */
+  --eva-typography-line-height-tight: 1.2;
+  --eva-typography-line-height-normal: 1.5;
+  --eva-typography-line-height-relaxed: 1.7;
+  
+  /* Spacing - 8px Grid System */
+  --eva-spacing-spacing-0: 0;
+  --eva-spacing-spacing-1: 0.25rem;
+  --eva-spacing-spacing-2: 0.5rem;
+  --eva-spacing-spacing-3: 0.75rem;
+  --eva-spacing-spacing-4: 1rem;
+  --eva-spacing-spacing-5: 1.5rem;
+  --eva-spacing-spacing-6: 2rem;
+  --eva-spacing-spacing-7: 2.5rem;
+  --eva-spacing-spacing-8: 3rem;
+  --eva-spacing-spacing-9: 4rem;
+  --eva-spacing-spacing-10: 5rem;
+  
+  /* Shadows */
+  --eva-shadows-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --eva-shadows-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --eva-shadows-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --eva-shadows-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  /* Border Radius */
+  --eva-borderRadius-radius-none: 0;
+  --eva-borderRadius-radius-sm: 0.125rem;
+  --eva-borderRadius-radius-md: 0.25rem;
+  --eva-borderRadius-radius-lg: 0.5rem;
+  --eva-borderRadius-radius-full: 9999px;
+  
+  /* Breakpoints */
+  --eva-breakpoints-mobile: 375px;
+  --eva-breakpoints-tablet: 768px;
+  --eva-breakpoints-desktop: 1024px;
+  --eva-breakpoints-wide: 1440px;
+  
+  /* Accessibility - WCAG 2.2 AAA */
+  --eva-a11y-contrast-ratio-aaa: 7:1;
+  --eva-a11y-touch-target-min: 44px;
+  --eva-a11y-focus-outline-width: 3px;
+  --eva-a11y-animation-duration-max: 500ms;
+}
+
+/* Screen Reader Only Utility Class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

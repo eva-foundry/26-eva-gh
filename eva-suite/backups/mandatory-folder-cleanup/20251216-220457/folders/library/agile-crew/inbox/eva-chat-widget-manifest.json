@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-chat-widget.md",
+  "feature_key": "P02-AUTO-b363b076",
+  "title": "CDD: EVA Chat Widget (AskMe Embeddable)",
+  "p02_artifacts_path": "docs/features/eva-chat-widget",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-chat-widget",
+  "created_timestamp": "2025-11-25T23:54:09.4221081Z"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-portal-navigation-ux.md",
+  "feature_key": "P02-AUTO-fb61ffa5",
+  "title": "CDD: EVA Portal Navigation & UX",
+  "p02_artifacts_path": "docs/features/eva-portal-navigation-ux",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-portal-navigation-ux",
+  "created_timestamp": "2025-11-25T23:54:58.4492914Z"
+}

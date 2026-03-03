@@ -1,0 +1,102 @@
+{
+  "name": "@eva-sovereign/web-components",
+  "version": "1.0.0",
+  "description": "Production-ready Web Components for Government of Canada - WCAG AAA compliant, bilingual, GC Design System certified",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarcoPolo483/EVA-Sovereign-UI.git",
+    "directory": "packages/web-components"
+  },
+  "homepage": "https://marcopolo483.github.io/EVA-Sovereign-UI/",
+  "bugs": {
+    "url": "https://github.com/MarcoPolo483/EVA-Sovereign-UI/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "test:parallel": "vitest --run --reporter=basic --threads",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "docs": "typedoc"
+  },
+  "keywords": [
+    "web-components",
+    "lit",
+    "gc-design-system",
+    "canada",
+    "government",
+    "accessibility",
+    "wcag",
+    "bilingual",
+    "canada-gc",
+    "government-of-canada",
+    "sovereign-ui",
+    "design-system",
+    "a11y",
+    "i18n",
+    "en-ca",
+    "fr-ca",
+    "typescript",
+    "custom-elements",
+    "shadow-dom",
+    "chatbot",
+    "rag",
+    "canada-ca"
+  ],
+  "author": {
+    "name": "Marco Presta",
+    "email": "marco@eva-sovereign.com"
+  },
+  "contributors": [
+    {
+      "name": "POD-X Team",
+      "url": "https://github.com/MarcoPolo483/EVA-Sovereign-UI"
+    }
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "@lit/localize": "^0.12.2",
+    "lit": "^3.1.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^8.6.14",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/web-components": "^8.6.14",
+    "@storybook/web-components-vite": "^8.6.14",
+    "@testing-library/dom": "^9.3.4",
+    "@vitest/coverage-v8": "^1.6.1",
+    "@vitest/ui": "^1.2.0",
+    "axe-core": "^4.8.3",
+    "jsdom": "^24.0.0",
+    "storybook": "^8.6.14",
+    "terser": "^5.44.1",
+    "typedoc": "^0.28.15",
+    "typescript": "^5.7.2",
+    "vite": "^5.0.11",
+    "vitest": "^1.2.0"
+  }
+}

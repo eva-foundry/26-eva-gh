@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-bilingual-quality-evaluation.md",
+  "feature_key": "P02-AUTO-248d6670",
+  "title": "CDD: Bilingual Quality Evaluation Framework",
+  "p02_artifacts_path": "docs/features/eva-bilingual-quality-evaluation",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-bilingual-quality-evaluation",
+  "created_timestamp": "2025-11-25T23:54:05.9616443Z"
+}

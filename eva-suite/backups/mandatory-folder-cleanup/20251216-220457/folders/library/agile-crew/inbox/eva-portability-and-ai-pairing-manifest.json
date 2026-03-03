@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-portability-and-ai-pairing.md",
+  "feature_key": "P02-AUTO-44f54e95",
+  "title": "Portability & AI Pairing Backlog",
+  "p02_artifacts_path": "docs/features/eva-portability-and-ai-pairing",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-portability-and-ai-pairing",
+  "created_timestamp": "2025-11-25T23:54:54.8935365Z"
+}

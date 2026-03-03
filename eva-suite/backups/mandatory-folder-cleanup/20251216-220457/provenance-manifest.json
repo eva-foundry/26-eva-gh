@@ -1,0 +1,275 @@
+{
+  "executedBy": "marco",
+  "reason": "Phase 3 ZERO TOLERANCE path enforcement cleanup",
+  "movedItems": [
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\assets",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.4963612Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\folders\\assets",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": null
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\data",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.5120310Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\folders\\data",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": null
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\docs-src",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.5281914Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\folders\\docs-src",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": null
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\library",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.5499280Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\folders\\library",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": null
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\public",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.5647824Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\folders\\public",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": null
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\DEMO-TOUR.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.5698285Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\DEMO-TOUR.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "C877CBC805A046943FA0638DB449D519E6F1110AB2B3AE9FFADA34EC9C5A371E",
+        "size": 7568,
+        "lastModified": "2025-11-28T12:50:42.2184898-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\DEMO-TOUR.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\GC-DEMO-COMPLETE.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.5745400Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\GC-DEMO-COMPLETE.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "EE6996A20B3CD712FC69261AF1AED831FBF2524086FEE74F92C41CC186223E92",
+        "size": 5620,
+        "lastModified": "2025-11-28T12:50:42.2184898-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\GC-DEMO-COMPLETE.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\GC-PROFESSIONAL-UI-REDESIGN.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.5794624Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\GC-PROFESSIONAL-UI-REDESIGN.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "40B6066D79737F74252C83ECDD5A13A570206BD3071856F77D15CC5442D15A91",
+        "size": 15925,
+        "lastModified": "2025-11-28T12:50:42.2194866-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\GC-PROFESSIONAL-UI-REDESIGN.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\index.html",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.5842037Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\index.html",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "C324FEFC1BF29E1765E76600DA3BA54A6A091E27F3D51146DC2253F71EECD5F4",
+        "size": 396,
+        "lastModified": "2025-11-28T12:50:42.2494907-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\index.html"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\legacy-index.html",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.5890853Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\legacy-index.html",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "5E70ED067C5D80FB0B2255ECEFFF9F5D5FDBD9BDCF01D783916232C3B685E3C9",
+        "size": 161308,
+        "lastModified": "2025-11-28T12:50:42.2504880-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\legacy-index.html"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\mkdocs-books.yml",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.5956730Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\mkdocs-books.yml",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "75A0DF13F112ECFCA7A53216170B126F860AA698B77C4D4AD64019CEE384B0EF",
+        "size": 2910,
+        "lastModified": "2025-12-14T18:57:35.0707926-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\mkdocs-books.yml"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\static-index.html",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.6012857Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\static-index.html",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "C1A0D4509C7C989BF13EE0262E7BBAD83C24D6FA78A453434FF94B3E49918738",
+        "size": 161601,
+        "lastModified": "2025-11-28T12:50:42.2884868-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\static-index.html"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\tsconfig.app.json",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.6067477Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\tsconfig.app.json",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "185C585AA92B2CBE0DF1918E999D9A6BC4FEC6762A6D80DE7D2D155D56369AED",
+        "size": 760,
+        "lastModified": "2025-11-28T12:50:42.2894873-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\tsconfig.app.json"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\tsconfig.node.json",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.6128479Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\tsconfig.node.json",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "A6D49D645590CAC21C235A0548605D867321B2E1750E99176D2153D702DFA842",
+        "size": 679,
+        "lastModified": "2025-11-28T12:50:42.2914885-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\tsconfig.node.json"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\UI-UX-TEST-CHECKLIST.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.6185425Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\UI-UX-TEST-CHECKLIST.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "580215ECCDCF3D818DCB9005A5808D744F579C02EBAEE73F7D3CA4D4713426D5",
+        "size": 26713,
+        "lastModified": "2025-11-28T12:50:42.2214881-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\UI-UX-TEST-CHECKLIST.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\update_hero_demos.py",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.6243951Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\update_hero_demos.py",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "FE43A2CEA04ACEBE56CF583E0689B1D199CDEDFC72C466EEA6CA8D02E895A2DB",
+        "size": 10937,
+        "lastModified": "2025-11-28T12:50:42.2914885-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\update_hero_demos.py"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\vite.svg",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:18.6303353Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\vite.svg",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "4A748AFD443918BB16591C834C401DAE33E87861AB5DBAD0811C3A3B4A9214FB",
+        "size": 1497,
+        "lastModified": "2025-11-28T12:50:42.2924870-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\eva-suite\\vite.svg"
+      }
+    }
+  ],
+  "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+  "totalMoved": 17,
+  "repo": "eva-suite",
+  "timestamp": "2025-12-17T03:05:18.6312261Z",
+  "approvedBy": "Marco Presta (Product Owner)"
+}

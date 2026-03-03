@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-portal-landing-page.md",
+  "feature_key": "P02-AUTO-6f5e576c",
+  "title": "CDD: EVA Portal Landing Page",
+  "p02_artifacts_path": "docs/features/eva-portal-landing-page",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-portal-landing-page",
+  "created_timestamp": "2025-11-25T23:54:56.6137707Z"
+}

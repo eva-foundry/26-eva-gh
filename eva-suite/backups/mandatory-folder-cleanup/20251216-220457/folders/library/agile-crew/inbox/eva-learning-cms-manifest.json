@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-learning-cms.md",
+  "feature_key": "P02-AUTO-455c2289",
+  "title": "CDD: EVA Learning Platform CMS",
+  "p02_artifacts_path": "docs/features/eva-learning-cms",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-learning-cms",
+  "created_timestamp": "2025-11-25T23:54:21.4951238Z"
+}

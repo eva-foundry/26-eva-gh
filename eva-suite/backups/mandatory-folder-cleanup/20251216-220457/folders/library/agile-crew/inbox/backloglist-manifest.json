@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "backloglist.txt",
+  "feature_key": "P02-AUTO-cff13a7f",
+  "title": "backloglist",
+  "p02_artifacts_path": "docs/features/backloglist",
+  "priority": "MEDIUM",
+  "feature_slug": "backloglist",
+  "created_timestamp": "2025-11-25T23:53:46.9195829Z"
+}

@@ -1,0 +1,176 @@
+/* EVA Agentic Book - Government of Canada Design System Styling */
+/* P22-DPB (Documentation Publishing Bot) - Custom Theme */
+
+:root {
+  /* GC Design System Colors */
+  --gc-red: #e74c3c;
+  --gc-dark-red: #c0392b;
+  --gc-text: #333333;
+  --gc-background: #f9f9f9;
+  --gc-border: #dddddd;
+  --gc-accent: #2c3e50;
+}
+
+/* Canada.ca Header Styling */
+.md-header {
+  background-color: var(--gc-red) !important;
+  color: white !important;
+}
+
+.md-header__title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Navigation Sidebar */
+.md-sidebar--primary {
+  background-color: var(--gc-background);
+}
+
+.md-nav__title {
+  background-color: var(--gc-red);
+  color: white;
+  font-weight: 600;
+}
+
+/* Content Area */
+.md-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: var(--gc-accent);
+  font-weight: 600;
+}
+
+h1 {
+  border-bottom: 3px solid var(--gc-red);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Code Blocks */
+.md-typeset code {
+  background-color: #f5f5f5;
+  color: #c7254e;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+.md-typeset pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  border-left: 4px solid var(--gc-red);
+}
+
+/* Tables */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--gc-border);
+  border-collapse: collapse;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--gc-red);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.75rem;
+  border: 1px solid var(--gc-border);
+}
+
+/* Admonitions (Info boxes) */
+.md-typeset .admonition {
+  border-left: 4px solid var(--gc-red);
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--gc-red);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--gc-red);
+}
+
+.md-typeset a:hover {
+  color: var(--gc-dark-red);
+  border-bottom: 1px solid var(--gc-dark-red);
+}
+
+/* Search */
+.md-search__input {
+  border: 2px solid var(--gc-red);
+  border-radius: 4px;
+}
+
+.md-search__input:focus {
+  border-color: var(--gc-dark-red);
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+/* Footer */
+.md-footer {
+  background-color: var(--gc-accent);
+}
+
+/* Buttons */
+.md-button {
+  background-color: var(--gc-red);
+  color: white;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+.md-button:hover {
+  background-color: var(--gc-dark-red);
+}
+
+/* Breadcrumbs */
+.md-nav--secondary > .md-nav__list > .md-nav__item--active {
+  border-left: 3px solid var(--gc-red);
+}
+
+/* Pattern Cards (for homepage) */
+.pattern-card {
+  border: 2px solid var(--gc-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.pattern-card:hover {
+  border-color: var(--gc-red);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Accessibility Enhancements */
+:focus {
+  outline: 3px solid var(--gc-red);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --gc-red: #d32f2f;
+    --gc-text: #000000;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .md-header,
+  .md-sidebar,
+  .md-footer {
+    display: none;
+  }
+
+  .md-content {
+    max-width: 100%;
+  }
+}

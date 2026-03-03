@@ -1,0 +1,83 @@
+{
+  "esdc": {
+    "title": "Employment and Social Development Canada",
+    "shortTitle": "ESDC",
+    "hero": {
+      "title": "Building a skilled, adaptable, and inclusive workforce",
+      "description": "Access employment services, benefits, and support programs"
+    },
+    "programs": {
+      "title": "Programs and Services",
+      "ei": {
+        "title": "Employment Insurance",
+        "description": "Temporary financial assistance while you look for work or upgrade your skills",
+        "icon": "💼"
+      },
+      "oas": {
+        "title": "Old Age Security",
+        "description": "Monthly payment for seniors 65 and older",
+        "icon": "🧓"
+      },
+      "cpp": {
+        "title": "Canada Pension Plan",
+        "description": "Contributory retirement pension program",
+        "icon": "💰"
+      }
+    },
+    "services": {
+      "jobSearch": {
+        "title": "Job Search",
+        "description": "Find employment opportunities across Canada"
+      },
+      "benefitsFinder": {
+        "title": "Benefits Finder",
+        "description": "Discover what benefits you may be eligible for"
+      }
+    }
+  },
+  "chat": {
+    "title": "Ask EVA",
+    "placeholder": "How can I help you today?",
+    "send": "Send",
+    "voice": "Voice input",
+    "thinking": "Thinking...",
+    "welcome": "Hello! I'm EVA, your Employment and Social Development Canada assistant. How can I help you today?"
+  },
+  "nav": {
+    "skipToContent": "Skip to main content",
+    "home": "Home",
+    "programs": "Programs",
+    "services": "Services",
+    "about": "About"
+  },
+  "footer": {
+    "copyright": "© His Majesty the King in Right of Canada",
+    "privacy": "Privacy",
+    "terms": "Terms and conditions",
+    "accessibility": "Accessibility",
+    "canadaCa": "Canada.ca"
+  },
+  "accessibility": {
+    "loading": "Loading...",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu",
+    "search": "Search",
+    "language": "Language selection"
+  },
+  "language": {
+    "en": "English",
+    "fr": "Français",
+    "switchTo": "Switch to",
+    "current": "Current language"
+  },
+  "devkit": {
+    "title": "EVA-Sovereign-UI Developer Kit",
+    "subtitle": "Component library and showcase",
+    "gallery": "Component Gallery",
+    "themes": "Theme Selection",
+    "a11y": "Accessibility Features",
+    "i18n": "Internationalization",
+    "integration": "Integration Examples"
+  }
+}

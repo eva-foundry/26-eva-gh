@@ -1,0 +1,114 @@
+### EVA Suite – Unified EVA Chat Frame 0.1.0
+
+**Release date:** 2025-11-26
+**Owner:** EVA UI / EVA Orchestrator
+
+#### 🎯 What this is
+
+EVA Chat Frame 0.1.0 is the **first integrated React/Vite shell** for EVA’s chat experience: bilingual, accessible, and ready to plug into EVA’s APIM-backed services. It’s a working scaffold we can now reuse for future EVA chat surfaces.
+
+---
+
+#### ✅ What’s included
+
+**1. Unified Shell & Layout**
+
+* React + Vite app with:
+
+  * `<header>`, `<main>`, and `<footer>` structure
+  * Bilingual **skip links** (screen-reader and keyboard-friendly)
+  * Global **locale selector** in the header (en-CA / fr-CA)
+* Dedicated layout components:
+
+  * `AppHeader`, `AppFooter`, `RootLayout`, `SkipLinks`
+
+**2. Two-Pane Chat Experience**
+
+* Left sidebar with:
+
+  * “New chat” entry point
+  * Space for future thread list
+* Main chat area with:
+
+  * Scrollable message history (`role="log"` + `aria-live`)
+  * Localized chat bubbles for user/assistant
+  * `ChatInputBar` with:
+
+    * **Enter** to send
+    * **Shift+Enter** for newline
+  * **Mic button (simulated)** that inserts a sample dictated message
+  * **Mode toggle** (Internal / External) with telemetry events
+
+**3. Minimal EVA APIM Client & Telemetry**
+
+* `evaApiClient` stub accepting:
+
+  * `x-project`, `x-feature`, `x-app`, `x-env`, `x-cost-center`, `x-mode`, `x-locale`
+* Returns mock responses that reflect:
+
+  * The active **mode** (Internal/External)
+  * The active **locale**
+* All send/receive/mode/locale events are logged through `telemetry.ts`, paving the way for FinOps and observability later.
+
+**4. Bilingual i18n & Branding**
+
+* Centralized runtime i18n store (`i18n.ts`)
+* Locale bundles:
+
+  * `public/locale/en-CA.json`
+  * `public/locale/fr-CA.json`
+* Every UI string is localized:
+
+  * Skip links
+  * Header/footer copy
+  * Sidebar labels and buttons
+  * Placeholders and error messages
+* EVA branding:
+
+  * `eva-logo.svg`
+  * Updated favicon
+
+**5. Accessibility & Quality Checks**
+
+* Skip links target main content and chat input.
+* Focus outlines preserved (no “outline: none” hacks).
+* Landmarks and roles set for screen readers.
+* `npm run lint` (TypeScript type-check) passes.
+
+---
+
+#### 🧪 How to run it locally
+
+```bash
+cd C:\Users\marco\Documents\_AI Dev\EVA Suite\eva-ui\apps\eva-chat
+npm install
+npm run dev
+```
+
+Open the Vite URL (default `http://localhost:5175`).
+
+You should be able to:
+
+* Switch languages via the header selector
+* Toggle Internal/External mode
+* Type or “dictate” via the mic button
+* See mock replies that reflect mode + locale
+
+---
+
+#### 🔭 What’s coming next
+
+Planned next steps (not yet in 0.1.0):
+
+* Wire the chat frame to a **real EVA APIM endpoint**
+* Add **persisted threads** and a richer sidebar
+* Introduce **test coverage** for core components
+* Run a dedicated **accessibility regression** and fix any gaps
+
+---
+
+If you want, I can now turn that release note into:
+
+* A **Teams announcement**,
+* A **SharePoint News post**, or
+* A short **“demo script”** you can read while walking people through the UI.

@@ -1,0 +1,51 @@
+\begingroup
+\small
+\begin{center}          %
+\begin{longtable}{%
+    >{\raggedright\arraybackslash}p{0.18\linewidth}
+    >{\raggedright\arraybackslash}p{0.34\linewidth}
+    >{\centering\arraybackslash}p{0.14\linewidth}
+    >{\centering\arraybackslash}p{0.12\linewidth}
+    >{\raggedright\arraybackslash}p{0.14\linewidth}}
+\caption{Summary of literature on social awareness evaluation}
+\label{tab:social-eval-long}\\   %
+\toprule
+\makecell{\textbf{Authors}} &
+\makecell{\textbf{Key Contribution}} &
+\makecell{\textbf{Focus on}\\\textbf{Social}\\\textbf{Awareness}} &
+\makecell{\textbf{Using}\\\textbf{Human}\\\textbf{Baseline}} &
+\makecell{\textbf{Code}\\\textbf{Links}}\\
+\midrule
+\endfirsthead            %
+
+\multicolumn{5}{l}{\small\itshape (Continued)}\\
+\toprule
+\makecell{\textbf{Authors}} &
+\makecell{\textbf{Key Contribution}} &
+\makecell{\textbf{Focus on}\\\textbf{Social}\\\textbf{Awareness}} &
+\makecell{\textbf{Using}\\\textbf{Human}\\\textbf{Baseline}} &
+\makecell{\textbf{Code}\\\textbf{Links}}\\
+\midrule
+\endhead                 %
+
+\midrule
+\multicolumn{5}{r}{\small\itshape Continued on next page}\\
+\endfoot                 %
+\endlastfoot 
+    \citet{Kosinski2024} & Curated 40 classic false-belief ToM tasks; first to show GPT-4 scores $\sim$75\% (child level) while GPT-3 fails almost all. & \checkmark & \checkmark & \texttt{\href{https://osf.io/csdhb/}{OSF repo}} \\
+    \citet{jiang2025delphi} & Builds \textit{Commonsense Norm Bank} (1.7M moral judgements) and trains \textbf{Delphi}, which hits 92.8\% agreement with human crowd labels—beating GPT-3 (60\%) and GPT-4 (79\%)—thereby benchmarking LLM moral-norm awareness. & \checkmark & \checkmark & \texttt{N/A} \\
+    \citet{qiu2024evaluating} & Created cross-cultural norm benchmark; finds GPT-4 violates 12 \% of norms vs 4\% human, GPT-3 violates 28\%. & \checkmark & \checkmark & \texttt{\href{https://github.com/SalesforceAIResearch/CASA}{GitHub repo}} \\
+    \citet{voria2024attention} & Presents first SE-oriented framework mapping developer-side ethics vs runtime collaboration; outlines future evaluation axes. & \checkmark & \XSolidBrush & \texttt{N/A} \\
+    \citet{li2024think} & Proposed five-factor awareness taxonomy; among 13 LLMs, social-awareness tops at 78\% (GPT-4) whereas capability-awareness stays at 40\%. & \XSolidBrush & \XSolidBrush & \texttt{\href{https://github.com/HowieHwong/Awareness-in-LLM}{GitHub repo}} \\
+    \citet{DBLP:journals/corr/abs-2305-17066} & Assembles up to 129 agents in a Natural-Language Society-of-Mind; VQA accuracy rises to 67\% vs 60\% best single model, showcasing emergent multi-agent social reasoning across multimodal tasks. & \checkmark & \XSolidBrush & \texttt{\href{https://github.com/metauto-ai/NLSOM}{GitHub repo}} \\
+    \citet{choi2023llms} & Released 4k-scenario SOCKET dataset; shows GPT-4 matches crowd sentiment/offense judgements (85\%) but trails on trust, GPT-3 lags by 20 pp overall. & \checkmark & \checkmark & \texttt{\href{https://github.com/minjechoi/SOCKET}{GitHub repo}} \\
+    \citet{xu2025socialmaze} & Introduced six interactive tasks; Chain-of-Thought lifts GPT-4 success to 63\% yet 30\% failures persist under uncertainty, GPT-3 $<$25\%. & \checkmark & \XSolidBrush & \texttt{\href{https://huggingface.co/datasets/MBZUAI/SocialMaze}{HuggingFace repo}} \\
+    \citet{gandhi2023understanding} & Built higher-order ToM benchmark; reveals GPT-4 accuracy crashes below 10\% on second-order beliefs, GPT-3 at chance. & \checkmark & \checkmark & \texttt{\href{https://github.com/cicl-stanford/procedural-evals-tom}{GitHub repo}} \\
+    \citet{wu2023hi} & Released benchmark up to 4-order ToM; GPT-4 hits 64\% (3rd-order) / 41\% (4th-order) vs humans $\sim$90\%, exposing steep recursive-belief drop. & \checkmark & \checkmark & \texttt{\href{https://github.com/ying-hui-he/Hi-ToM_dataset}{GitHub repo}} \\
+    \citet{li2023camel} & Introduced role-playing ``AI Society'' (100 k dialogues); GPT-4 collaborative success ↑20 pp over single-role chats, indicating improved cooperative social reasoning. & \checkmark & \XSolidBrush & \texttt{\href{https://github.com/camel-ai/camel}{GitHub repo}} \\
+    \citet{park2023generative} & Simulated a 25-agent ``small-town'' sandbox; human raters judged 81\% of agent actions socially plausible, showing memory + reflection + planning yields emergent social behaviour. & \checkmark & \XSolidBrush & \texttt{N/A} \\
+    \citet{rao2025normAd} & Launched 11-language norm dataset; uncovers 25 pp drop for GPT-4 on Global-South norms, few-shot tuning recovers 15 pp. & \checkmark & \checkmark & \texttt{\href{https://github.com/Akhila-Yerukola/NormAd}{GitHub repo}} \\
+        \bottomrule
+\end{longtable}
+\end{center}
+\endgroup

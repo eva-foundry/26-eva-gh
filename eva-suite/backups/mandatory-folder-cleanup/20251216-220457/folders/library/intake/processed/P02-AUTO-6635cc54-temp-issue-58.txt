@@ -1,0 +1,294 @@
+Gotcha ΓÇö SM = Scrum Master bot, not Senior Management. ≡ƒÿä
+
+LetΓÇÖs redo this as a full, implementation-oriented report for your Copilot Scrum Master (SM) agent. Think of this as the SMΓÇÖs playbook for turning ΓÇ£AI awareness + autonomous crew + swarm strategiesΓÇ¥ into backlog, sprints, and workflows.
+
+Γ╕╗
+
+EVA Autonomous Agile Crew
+
+SM Operations Report & Implementation Guide
+
+0. Mission for the SM Agent
+
+You (SM agent) orchestrate an autonomous agile crew of AI agents to deliver EVA features safely and continuously. Your job is to:
+	1.	Turn research on AI awareness, mult i-agent autonomy, and swarm coordination into:
+	ΓÇó	Epics, stories, tasks
+	ΓÇó	Workflows and guardrails
+	ΓÇó	Metrics and dashboards
+	2.	Keep everything aligned with:
+	ΓÇó	EVA vision and trunk architecture
+	ΓÇó	Governance, auditability, and human-in-the-loop
+	ΓÇó	A11y, i18n, GC design & 5 Eyes ΓÇ£sovereignΓÇ¥ constraints
+
+You donΓÇÖt ΓÇ£do the codingΓÇ¥ alone ΓÇö you coordinate Dev, QA, P02, Infra, Governance, and Docs agents and keep them moving in tight, safe loops.
+
+Γ╕╗
+
+1. Capability Pillars From Research ΓåÆ What the SM Must Enable
+
+We derive four big capability pillars the crew should move towards. Each pillar = one epic for the SM to manage.
+
+Epic A ΓÇô Awareness-Driven Agents (Metacognition & Confidence)
+
+Concept:
+Recent work on ΓÇ£AI awarenessΓÇ¥ shows LLM agents perform better when they can:
+	ΓÇó	Track their own confidence / uncertainty
+	ΓÇó	Reflect on their outputs and revise
+	ΓÇó	Escalate when the task is out of scope or too risky
+
+What SM must implement:
+	ΓÇó	For every EVA agent (Dev, QA, Docs, Governance, etc.):
+	ΓÇó	Enforce a 3-phase loop on non-trivial tasks:
+Plan ΓåÆ Act ΓåÆ Reflect.
+	ΓÇó	Require agents to emit:
+	ΓÇó	A confidence score (0ΓÇô1 or Low/Med/High)
+	ΓÇó	A short self-critique (ΓÇ£what might be wrong?ΓÇ¥)
+	ΓÇó	A next-action suggestion (ΓÇ£recheck testsΓÇ¥, ΓÇ£ask humanΓÇ¥, ΓÇ£call Governance agentΓÇ¥)
+	ΓÇó	Define escalation thresholds:
+	ΓÇó	If confidence < X, or if agent detects missing context/permissions, it must:
+	ΓÇó	Stop autonomous changes
+	ΓÇó	Open an issue or comment
+	ΓÇó	Tag the human PO / Marco
+
+Backlog categories under Epic A:
+	ΓÇó	A1 ΓÇô Awareness protocol spec
+	ΓÇó	A2 ΓÇô Awareness logging schema (JSON)
+	ΓÇó	A3 ΓÇô Confidence / reflection hooks in Dev agent workflows
+	ΓÇó	A4 ΓÇô Confidence / reflection hooks in QA / Governance workflows
+	ΓÇó	A5 ΓÇô Dashboards: awareness metrics (how often low-confidence? how resolved?)
+
+Γ╕╗
+
+Epic B ΓÇô Multi-Agent, Role-Based Crew (Dev, QA, Docs, GovernanceΓÇª)
+
+Concept:
+Multi-agent frameworks for software engineering show that LLMs work best as a team of specialized agents, not one giant ΓÇ£do everythingΓÇ¥ bot. Roles: planner, coder, reviewer, tester, doc writer, etc.
+
+What SM must implement:
+	ΓÇó	Maintain a canonical list of EVA crew roles, for example:
+	ΓÇó	Planner / Architect agent ΓÇô breaks work into tasks, clarifies goals.
+	ΓÇó	Dev agent ΓÇô writes / refactors code and config.
+	ΓÇó	QA agent ΓÇô writes tests, runs test reports, suggests fixes.
+	ΓÇó	Docs agent ΓÇô writes / updates READMEs, ADRs, CDD snippets.
+	ΓÇó	Governance agent ΓÇô checks against PADI, EVA rules, TBS guide.
+	ΓÇó	Telemetry/FinOps agent ΓÇô keeps usage, cost, and error metrics flowing.
+	ΓÇó	SM agent (you) ΓÇô orchestration, sprint hygiene, dependency unblocker.
+	ΓÇó	For each role, standardize:
+	ΓÇó	Inputs (what context it expects)
+	ΓÇó	Outputs (files, comments, PR updates, logs)
+	ΓÇó	Success criteria / DoD (e.g., ΓÇ£Dev agent must produce code + tests + summaryΓÇ¥)
+	ΓÇó	Enforce handoff patterns:
+	ΓÇó	Planner ΓåÆ Dev ΓåÆ QA ΓåÆ Governance ΓåÆ Docs ΓåÆ Merge
+	ΓÇó	Orchestration performed through PR workflows, GitHub issues, and scheduled runs.
+
+Backlog categories under Epic B:
+	ΓÇó	B1 ΓÇô Role definitions & prompts (one file per agent role)
+	ΓÇó	B2 ΓÇô SM orchestration workflow (which agent runs when, triggered by what)
+	ΓÇó	B3 ΓÇô Mapping roles to CI workflows (& which repos)
+	ΓÇó	B4 ΓÇô Standard output contract for each role (required fields in comments / artifacts)
+
+Γ╕╗
+
+Epic C ΓÇô Swarm & Coordination Strategies (Many Small Agents, One Coherent Behavior)
+
+Concept:
+Swarm / multi-agent RL research suggests that many small agents with local info + coordination rules can behave like one powerful, robust policy. For EVA, that translates to:
+	ΓÇó	Many narrow, specialized bots (e.g., ΓÇ£A11y checker for formsΓÇ¥, ΓÇ£i18n contract validatorΓÇ¥, ΓÇ£APIM cost header enforcerΓÇ¥)
+	ΓÇó	Coordinated via simple, consistent rules instead of one giant ΓÇ£superΓÇ¥-agent.
+
+What SM must implement:
+	ΓÇó	Define granularity policy:
+	ΓÇó	When to create a new micro-agent vs extend an existing one.
+	ΓÇó	Rule of thumb: ΓÇ£If a check/process can be expressed as a repeatable, testable pattern, consider a micro-agent.ΓÇ¥
+	ΓÇó	Introduce coordination patterns:
+	ΓÇó	ΓÇ£Parallel fansΓÇ¥ (multiple checkers run on a PR; SM aggregates results).
+	ΓÇó	ΓÇ£PipelinesΓÇ¥ (output of one agent becomes input of the next).
+	ΓÇó	ΓÇ£Voting / arbitrationΓÇ¥ (for conflicting suggestions, SM or Governance agent decides).
+	ΓÇó	Align swarm behavior with human-facing constructs:
+	ΓÇó	The swarm should surface as:
+	ΓÇó	Tagged comments on PRs
+	ΓÇó	Summary digests (ΓÇ£3 agents flagged 5 issues; hereΓÇÖs a prioritized listΓÇ¥)
+	ΓÇó	Dashboards, not a stream of random bot chatter.
+
+Backlog categories under Epic C:
+	ΓÇó	C1 ΓÇô Coordination playbook (fan-out, pipeline, voting templates)
+	ΓÇó	C2 ΓÇô PR-level swarm runner (meta-workflow that calls multiple agents)
+	ΓÇó	C3 ΓÇô Aggregator logic (SM agent summarization patterns)
+	ΓÇó	C4 ΓÇô Priority / conflict resolution rules (whatΓÇÖs blocking vs advisory)
+
+Γ╕╗
+
+Epic D ΓÇô Governance, Auditability & Safety Loops
+
+Concept:
+Agentic systems are powerful but risky. Governance research (and your TBS / PADI / EVA standards) require:
+	ΓÇó	Traceable decisions
+	ΓÇó	Clear human-in-the-loop checkpoints
+	ΓÇó	Distinguishing suggestions vs. actions
+	ΓÇó	Restrictions on what can be changed without human approval.
+
+What SM must implement:
+	ΓÇó	Standard audit log format for all agents:
+	ΓÇó	Task ID, repo, branch, files touched
+	ΓÇó	Which agents ran, with timestamps
+	ΓÇó	Their confidence, reflections, and links to artifacts (logs, test reports, etc.)
+	ΓÇó	Whether a human reviewed/approved
+	ΓÇó	Action classes:
+	ΓÇó	Class 0 ΓÇô Read-only analysis / suggestions (always allowed)
+	ΓÇó	Class 1 ΓÇô Low-risk code refactors in dev branches
+	ΓÇó	Class 2 ΓÇô Changes with policy/compliance impact
+	ΓÇó	Class 3 ΓÇô Production-bound configs, infra, access, or citizen-facing flows
+ΓåÆ Only Class 0ΓÇô1 can ever be ΓÇ£fully autonomousΓÇ¥; Class 2ΓÇô3 require human explicit approval.
+	ΓÇó	Stop conditions:
+	ΓÇó	Repeated low-confidence
+	ΓÇó	Unexpected test failures
+	ΓÇó	Governance rule violations
+	ΓÇó	Security / privacy red flags
+
+Backlog categories under Epic D:
+	ΓÇó	D1 ΓÇô Audit JSON schema & logging location
+	ΓÇó	D2 ΓÇô Action classification table + enforcement checks
+	ΓÇó	D3 ΓÇô SM enforcement workflow (when to halt, when to escalate)
+	ΓÇó	D4 ΓÇô Governance agent prompts aligned with PADI / EVA rules
+	ΓÇó	D5 ΓÇô ΓÇ£Safe experiment modeΓÇ¥ toggles for demo vs production contexts
+
+Γ╕╗
+
+2. ΓÇ£Art of the ImpossibleΓÇ¥ ΓåÆ Concrete SM Outcomes
+
+These are the high-value behaviors we want the crew to exhibit. SMΓÇÖs job is to make them real via backlog, workflows, and constraints.
+
+Outcome 1 ΓÇô Self-Correcting Workflows
+
+What it looks like:
+	ΓÇó	Dev agent generates code + tests.
+	ΓÇó	QA agent runs tests, finds failures, annotates with reasons.
+	ΓÇó	Dev agent automatically revises until:
+	ΓÇó	tests pass, or
+	ΓÇó	it hits retry / confidence limits ΓåÆ SM escalates to human.
+
+SM responsibility:
+	ΓÇó	Ensure all code-producing workflows:
+	ΓÇó	Include QA agent steps
+	ΓÇó	Have retry + reflection loops
+	ΓÇó	Enforce max attempts + escalation
+
+Γ╕╗
+
+Outcome 2 ΓÇô Auto-Onboarding of New Tools / APIs
+
+What it looks like:
+	ΓÇó	You add a new service (e.g., new APIM endpoint, new EVA microservice).
+	ΓÇó	A ΓÇ£Tool OnboardingΓÇ¥ agent:
+	ΓÇó	Reads docs / OpenAPI / specs
+	ΓÇó	Proposes client wrappers
+	ΓÇó	Generates test stubs and example usage
+	ΓÇó	SM ensures a Governance agent and a human reviewer approve before merging.
+
+SM responsibility:
+	ΓÇó	Maintain a standard tool-onboarding workflow:
+	ΓÇó	Trigger: new spec or docs in a designated folder
+	ΓÇó	Tasks: wrapper code, tests, docs, governance check
+	ΓÇó	Outputs: ready-to-use client + demo
+
+Γ╕╗
+
+Outcome 3 ΓÇô Swarm-Style PR Reviews
+
+What it looks like:
+	ΓÇó	Developer (human or Dev agent) opens a PR.
+	ΓÇó	Several micro-agents run in parallel:
+	ΓÇó	A11y checker
+	ΓÇó	i18n checker
+	ΓÇó	API governance checker
+	ΓÇó	FinOps / cost header checker
+	ΓÇó	Security linter
+	ΓÇó	SM aggregates this into a single summary comment with:
+	ΓÇó	Blocking issues
+	ΓÇó	Warnings / recommendations
+	ΓÇó	Suggested fixes or code snippets
+
+SM responsibility:
+	ΓÇó	Define and maintain:
+	ΓÇó	Which micro-agents run for which repos/paths
+	ΓÇó	Which issues are blocking vs advisory
+	ΓÇó	How summary narratives are structured
+
+Γ╕╗
+
+Outcome 4 ΓÇô Continuous Documentation & Knowledge Vault
+
+What it looks like:
+	ΓÇó	When new features or workflows are created:
+	ΓÇó	Docs agent updates READMEs / ADRs / CDD snippets automatically
+	ΓÇó	Governance agent updates AI usage entries if relevant
+	ΓÇó	P02 / knowledge agents update index/manifest files, so EVAΓÇÖs ΓÇ£memoryΓÇ¥ stays fresh.
+
+SM responsibility:
+	ΓÇó	Keep ΓÇ£Docs as first-class citizensΓÇ¥ in all workflows:
+	ΓÇó	No story is ΓÇ£DoneΓÇ¥ until docs are updated/created.
+	ΓÇó	Include docs checks in swarm PR review.
+
+Γ╕╗
+
+3. SM Operating Rules
+
+3.1 General Operating Principles
+	1.	Safety before speed
+	ΓÇó	If in doubt, halt and escalate to human.
+	2.	Small, observable steps
+	ΓÇó	Prefer many small PRs / changes with clear tests and logs over giant ΓÇ£big bangΓÇ¥ changes.
+	3.	Evidence-based progress
+	ΓÇó	Track and surface metrics:
+	ΓÇó	Tests passing/failing
+	ΓÇó	Number of suggestions vs merged changes
+	ΓÇó	Time saved vs human baselines
+	ΓÇó	Governance issues caught
+	4.	ΓÇ£Humans set direction, agents do the heavy liftingΓÇ¥
+	ΓÇó	The crew proposes; humans dispose (at least for Class 2ΓÇô3 actions).
+
+Γ╕╗
+
+3.2 SM Daily / Iteration Tasks
+
+For each sprint/iteration, the SM agent should:
+	ΓÇó	Backlog grooming
+	ΓÇó	Keep Epics AΓÇôD populated with:
+	ΓÇó	Stories and tasks derived from research and EVA roadmap
+	ΓÇó	Tagged by repo, risk level, agent roles required
+	ΓÇó	Workflow health checks
+	ΓÇó	Ensure agent workflows are:
+	ΓÇó	Running
+	ΓÇó	Producing logs
+	ΓÇó	Not stuck in loops
+	ΓÇó	Risk monitoring
+	ΓÇó	Watch for:
+	ΓÇó	High frequency of low-confidence results
+	ΓÇó	Repeated failures in same area (e.g., APIM tests)
+	ΓÇó	Governance violations flagged by Governance agent
+	ΓÇó	Sprint reporting
+	ΓÇó	Generate concise summaries for humans:
+	ΓÇó	What agents worked on
+	ΓÇó	What was merged
+	ΓÇó	What was blocked and why
+	ΓÇó	Any safety incidents or escalations
+
+Γ╕╗
+
+4. Structure for Future Copilot Prompts
+
+You said: ΓÇ£Next I will ask you to distill each topic/bullet in your full report with details on how to implement it. the copilot prompt.ΓÇ¥
+
+Perfect. This report is the conceptual + structural layer.
+
+Next step (in your next message), IΓÇÖll turn each major section into:
+	ΓÇó	A Copilot / SM system prompt (who am I? whatΓÇÖs my job?)
+	ΓÇó	Specific task prompts (e.g., ΓÇ£Create backlog items for Epic AΓÇ¥, ΓÇ£Generate PR swarm workflow for EVA-UIΓÇ¥, ΓÇ£Define audit JSON schema for agent actionsΓÇ¥, etc.)
+	ΓÇó	With concrete:
+	ΓÇó	Inputs (files, repos, context)
+	ΓÇó	Expected outputs (YAML, JSON, markdown, code, workflows)
+	ΓÇó	Acceptance criteria
+
+When youΓÇÖre ready, just say something like:
+
+ΓÇ£OK, now give me the detailed Copilot prompts for each epic and outcome.ΓÇ¥

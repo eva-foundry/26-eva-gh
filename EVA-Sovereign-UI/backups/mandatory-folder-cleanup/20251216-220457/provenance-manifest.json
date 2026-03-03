@@ -1,0 +1,438 @@
+{
+  "executedBy": "marco",
+  "reason": "Phase 3 ZERO TOLERANCE path enforcement cleanup",
+  "movedItems": [
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\demos",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.7988219Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\folders\\demos",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": null
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\packages",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8152419Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\folders\\packages",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": null
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\public",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8350848Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\folders\\public",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": null
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\.prettierrc.json",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8405608Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\.prettierrc.json",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "DC2158042967625F2B3C8382C99927D52CFCA35E223513D3B7ECE3AB4FC20641",
+        "size": 184,
+        "lastModified": "2025-12-07T15:45:49.5148553-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\.prettierrc.json"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\AUDIT-FIX-PLAN.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8461900Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\AUDIT-FIX-PLAN.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "8CAE8351D24F12AF38A538B1561AC0AFD277A4C552C594203956943C0A14ECF2",
+        "size": 20486,
+        "lastModified": "2025-12-10T21:29:49.7966687-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\AUDIT-FIX-PLAN.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\AUDIT-PROMPT.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8519901Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\AUDIT-PROMPT.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "8B4CC8B78B7FDB8738C16AE84F2176148485CA662E3C20122D750671DC6D42C8",
+        "size": 12740,
+        "lastModified": "2025-12-10T20:38:05.8744346-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\AUDIT-PROMPT.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\AUDIT-REPORT.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8577449Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\AUDIT-REPORT.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "863C9FABCB53BF2F365EF74405D91955DE7CEA428181288B30276343EC3E3136",
+        "size": 19114,
+        "lastModified": "2025-12-10T20:38:05.8744346-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\AUDIT-REPORT.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\COMPLETION-LOG-WEEK-1.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8633710Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\COMPLETION-LOG-WEEK-1.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "399908AE682E838EBABB5CF4BC5FE27A7BD0563FA5B6B09E3F5D8B31EE6C1B67",
+        "size": 1183,
+        "lastModified": "2025-12-08T13:25:39.5366840-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\COMPLETION-LOG-WEEK-1.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\DEPLOYMENT-SETUP.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8696163Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\DEPLOYMENT-SETUP.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "BDAB16DF8D7B56AD77A4A8CB684E2435A4CA843AC1E1D152283D27295DB23714",
+        "size": 8115,
+        "lastModified": "2025-12-08T13:22:49.6373170-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\DEPLOYMENT-SETUP.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\FINAL-PROJECT-REPORT.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8754553Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\FINAL-PROJECT-REPORT.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "81973C31C4C76AEFF060AC57973FC68A0103188914A1D124A2AC70E39ED797E5",
+        "size": 12888,
+        "lastModified": "2025-12-07T16:30:21.1821895-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\FINAL-PROJECT-REPORT.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\GITHUB-PAGES-FIX-SUMMARY.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8816172Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\GITHUB-PAGES-FIX-SUMMARY.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "A5900DFAE91ED2149DF4C024984DF9296914B23263DE1B465EBF71433B54C413",
+        "size": 6136,
+        "lastModified": "2025-12-12T11:16:24.9119212-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\GITHUB-PAGES-FIX-SUMMARY.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\IMPLEMENTATION-PLAN-130-COMPONENTS.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8870400Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\IMPLEMENTATION-PLAN-130-COMPONENTS.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "8156F8D89F23075F07E4829ECD63C6AE607A6576F62989435EA9C109936E2D75",
+        "size": 12375,
+        "lastModified": "2025-12-07T16:38:53.4619024-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\IMPLEMENTATION-PLAN-130-COMPONENTS.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\IMPLEMENTATION-ROADMAP.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8931649Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\IMPLEMENTATION-ROADMAP.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "89E92B73770A913FD015D11FA93CC16864982D271A537AE37D22E7EF88A1891E",
+        "size": 11869,
+        "lastModified": "2025-12-07T20:22:05.9932421-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\IMPLEMENTATION-ROADMAP.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\ISSUE-CHAT-DEMO-NOT-RESPONDING.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.8985166Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\ISSUE-CHAT-DEMO-NOT-RESPONDING.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "A47FBA00AAF0B8DF98018F556622F14846A1C11CBE5E48148F44AF49A24886BB",
+        "size": 12447,
+        "lastModified": "2025-12-13T12:52:06.0201939-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\ISSUE-CHAT-DEMO-NOT-RESPONDING.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PHASE-1-COMPLETE.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.9047497Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\PHASE-1-COMPLETE.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "72C164F0F2DD89BE7895F8C1EA5A198D48592B4F1102C6703791295A2DAD6A35",
+        "size": 4819,
+        "lastModified": "2025-12-07T15:45:49.5248596-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PHASE-1-COMPLETE.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PHASE-2-B3-COMPLETE.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.9105535Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\PHASE-2-B3-COMPLETE.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "66A8CF1C2EF63F5420C5BD18C5C690C9EEEEB2CF9159A9D17BCB7E2E192F9FC4",
+        "size": 8145,
+        "lastModified": "2025-12-07T16:06:42.2115686-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PHASE-2-B3-COMPLETE.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PHASE-2-COMPLETE-FINAL.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.9160941Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\PHASE-2-COMPLETE-FINAL.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "BC56C854194ADA76AB910560AE6B9284AC8058E7428FB9BF8761446AB352E008",
+        "size": 9830,
+        "lastModified": "2025-12-07T16:06:42.2125700-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PHASE-2-COMPLETE-FINAL.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PHASE-2-COMPLETE.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.9220103Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\PHASE-2-COMPLETE.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "2AB4373613AC5C534B778F14326B6B6DC37F26CCB8CE267B7E8E4AE61FE1E3C5",
+        "size": 8387,
+        "lastModified": "2025-12-07T15:45:49.5288667-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PHASE-2-COMPLETE.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PHASE-2-PART-1-COMPLETE.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.9282637Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\PHASE-2-PART-1-COMPLETE.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "E5BB8F87F276DC791264B3B65BDE3B88DDD812D3D19633B5A0E94ACF5A8B3594",
+        "size": 8059,
+        "lastModified": "2025-12-07T15:45:49.5258671-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PHASE-2-PART-1-COMPLETE.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PHASE-3-COMPLETE.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.9343758Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\PHASE-3-COMPLETE.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "19654710A3AACB408CC958BE2DBFAF1D416C7B21960B94262A753E8B47314FCC",
+        "size": 10314,
+        "lastModified": "2025-12-07T16:06:42.2205688-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PHASE-3-COMPLETE.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PROJECT-SUMMARY.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.9401342Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\PROJECT-SUMMARY.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "C5383BA7B84DCF7392BCBFFC449B494320FE4A29BA2BA11FA265CC37ECEB3656",
+        "size": 11802,
+        "lastModified": "2025-12-07T16:30:21.1682890-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\PROJECT-SUMMARY.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\QUALITATIVE-ASSESSMENT.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.9462914Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\QUALITATIVE-ASSESSMENT.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "577DA2E62AC6B456643711C82D025EDD54182BA0BEB7B9898C8A502C5E441311",
+        "size": 14043,
+        "lastModified": "2025-12-09T08:20:33.8952161-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\QUALITATIVE-ASSESSMENT.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\QUICK-REFERENCE.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.9526755Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\QUICK-REFERENCE.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "E4AE5381BA60933B469FEAB3B43DAFDEC570513DF46863788E743613CBDFA999",
+        "size": 1610,
+        "lastModified": "2025-12-08T13:23:31.1144612-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\QUICK-REFERENCE.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\REQUIREMENTS-COMPLIANCE-AUDIT.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.9584433Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\REQUIREMENTS-COMPLIANCE-AUDIT.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "9412E0101FBE8E1DD81B1F826298511C3C080632CFF1CBF6D103651878954E57",
+        "size": 16605,
+        "lastModified": "2025-12-10T21:57:48.0584723-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\REQUIREMENTS-COMPLIANCE-AUDIT.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\SPRINT-REVIEW-WEEK-1.md",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.9647971Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\SPRINT-REVIEW-WEEK-1.md",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "847F2BEE595B8754E6818AAC30C90119DC0E01F9A0478DDE861715C9265FAEDE",
+        "size": 9429,
+        "lastModified": "2025-12-08T13:21:58.1220668-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\SPRINT-REVIEW-WEEK-1.md"
+      }
+    },
+    {
+      "sourcePath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\test-results-audit.txt",
+      "executedBy": "marco",
+      "category": "path-enforcement",
+      "machine": "MSILAPTOP",
+      "timestamp": "2025-12-17T03:05:12.9707078Z",
+      "action": "moved",
+      "reason": "ZERO TOLERANCE: Outside mandatory folder structure",
+      "destinationPath": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\backups\\mandatory-folder-cleanup\\20251216-220457\\files\\test-results-audit.txt",
+      "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+      "fingerprint": {
+        "sha256": "A2D0D6883897D9C4087F142C0F98A7563F05874F3FFA60D4E7724F416590D6A6",
+        "size": 36095,
+        "lastModified": "2025-12-10T19:38:29.2610655-05:00",
+        "path": "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI\\test-results-audit.txt"
+      }
+    }
+  ],
+  "runId": "3dfa856f-3f41-4cb8-88b1-ad07d61ec901",
+  "totalMoved": 26,
+  "repo": "EVA-Sovereign-UI",
+  "timestamp": "2025-12-17T03:05:12.9713571Z",
+  "approvedBy": "Marco Presta (Product Owner)"
+}

@@ -1,0 +1,10 @@
+{
+  "title": "EVA Data Model & Folder Schema Documentation - P02 Intake",
+  "priority": "MEDIUM",
+  "p02_artifacts_path": "docs/features/p02-req-001-eva-data-model",
+  "feature_key": "P02-AUTO-3fc7c655",
+  "source_intake_file": "p02-req-001-eva-data-model.md",
+  "status": "ready-for-crew",
+  "created_timestamp": "2025-12-07T11:31:16.8403616Z",
+  "feature_slug": "p02-req-001-eva-data-model"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-os-system-service.md",
+  "feature_key": "P02-AUTO-aa6d083b",
+  "title": "CDD: EVA OS System Service",
+  "p02_artifacts_path": "docs/features/eva-os-system-service",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-os-system-service",
+  "created_timestamp": "2025-11-25T23:54:49.7079079Z"
+}

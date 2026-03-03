@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "EVA 2.0 Hub",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/eva-hub",
+  "created_timestamp": "2025-11-27T12:40:19.6500763Z",
+  "source_intake_file": "EVA-HUB.md",
+  "feature_key": "P02-AUTO-0e1a1c0e",
+  "feature_slug": "eva-hub"
+}

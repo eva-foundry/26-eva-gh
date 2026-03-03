@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAG Test Harness - EVA Sovereign UI</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    h1 {
+      color: #26374a;
+      border-bottom: 3px solid #d93f0b;
+      padding-bottom: 10px;
+    }
+    .test-section {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #26374a;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      margin: 10px 10px 10px 0;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #1C578A;
+    }
+    button.success {
+      background: #28a745;
+    }
+    button.error {
+      background: #dc3545;
+    }
+    pre {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 15px;
+      border-radius: 4px;
+      overflow-x: auto;
+      max-height: 500px;
+      overflow-y: auto;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .result {
+      margin-top: 15px;
+    }
+    .status {
+      padding: 8px 12px;
+      border-radius: 4px;
+      display: inline-block;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+    .status.pass {
+      background: #d4edda;
+      color: #155724;
+    }
+    .status.fail {
+      background: #f8d7da;
+      color: #721c24;
+    }
+    .status.pending {
+      background: #fff3cd;
+      color: #856404;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧪 RAG Test Harness - EVA Sovereign UI</h1>
+  
+  <div class="test-section">
+    <h2>📦 Knowledge Base Validation</h2>
+    <button onclick="validateKnowledgeBase()">Validate Knowledge Base</button>
+    <div id="kb-validation" class="result"></div>
+  </div>
+
+  <div class="test-section">
+    <h2>🎯 EVA Components Test</h2>
+    <button onclick="testEVAComponents()">Test: "Tell me about EVA Sovereign UI components"</button>
+    <div id="test-components" class="result"></div>
+  </div>
+
+  <div class="test-section">
+    <h2>♿ Accessibility Test</h2>
+    <button onclick="testAccessibility()">Test: "How accessible are EVA components?"</button>
+    <div id="test-accessibility" class="result"></div>
+  </div>
+
+  <div class="test-section">
+    <h2>🌐 Bilingual Support Test</h2>
+    <button onclick="testBilingual()">Test: "How does EVA handle bilingual support?"</button>
+    <div id="test-bilingual" class="result"></div>
+  </div>
+
+  <div class="test-section">
+    <h2>🎨 Theming Test</h2>
+    <button onclick="testTheming()">Test: "How do I customize EVA themes?"</button>
+    <div id="test-theming" class="result"></div>
+  </div>
+
+  <div class="test-section">
+    <h2>❌ Fallback Test</h2>
+    <button onclick="testFallback()">Test: "Random unrelated question"</button>
+    <div id="test-fallback" class="result"></div>
+  </div>
+
+  <div class="test-section">
+    <h2>🔄 Run All Tests</h2>
+    <button onclick="runAllTests()" style="background: #d93f0b; font-size: 16px; padding: 15px 30px;">▶️ Run All Tests</button>
+    <div id="test-summary" class="result"></div>
+  </div>
+
+  <!-- Load app.js (contains queryRAG function and ragKnowledgeBase) -->
+  <script src="app.js"></script>
+
+  <script>
+    // Test harness functions
+    let testResults = {
+      total: 0,
+      passed: 0,
+      failed: 0
+    };
+
+    function validateKnowledgeBase() {
+      const output = document.getElementById('kb-validation');
+      output.innerHTML = '<div class="status pending">⏳ Validating...</div>';
+
+      try {
+        const enKeys = Object.keys(ragKnowledgeBase['en-CA']);
+        const frKeys = Object.keys(ragKnowledgeBase['fr-CA']);
+        
+        const hasEVAComponents = !!ragKnowledgeBase['en-CA']['eva-components'];
+        const hasEVAAccessibility = !!ragKnowledgeBase['en-CA']['eva-accessibility'];
+        const hasEVAi18n = !!ragKnowledgeBase['en-CA']['eva-i18n'];
+        const hasEVATheming = !!ragKnowledgeBase['en-CA']['eva-theming'];
+        
+        const componentAnswerLength = ragKnowledgeBase['en-CA']['eva-components']?.answer?.length || 0;
+        
+        let html = '<div class="status pass">✅ Knowledge Base Valid</div>';
+        html += '<pre>';
+        html += '📦 EN-CA Knowledge Base Keys:\n' + JSON.stringify(enKeys, null, 2) + '\n\n';
+        html += '📦 FR-CA Knowledge Base Keys:\n' + JSON.stringify(frKeys, null, 2) + '\n\n';
+        html += '✅ EVA Components Entry: ' + hasEVAComponents + '\n';
+        html += '✅ EVA Accessibility Entry: ' + hasEVAAccessibility + '\n';
+        html += '✅ EVA i18n Entry: ' + hasEVAi18n + '\n';
+        html += '✅ EVA Theming Entry: ' + hasEVATheming + '\n';
+        html += '📏 Components Answer Length: ' + componentAnswerLength + ' chars\n';
+        html += '</pre>';
+        
+        output.innerHTML = html;
+      } catch (error) {
+        output.innerHTML = '<div class="status fail">❌ Validation Failed</div><pre>' + error.toString() + '</pre>';
+      }
+    }
+
+    async function testEVAComponents() {
+      const output = document.getElementById('test-components');
+      output.innerHTML = '<div class="status pending">⏳ Testing...</div>';
+      
+      try {
+        console.log('🧪 TEST: EVA Components');
+        const result = await queryRAG("Tell me about EVA Sovereign UI components", "en-CA");
+        
+        const isEVAContent = result.answer.includes('EVA Sovereign UI') && 
+                             result.answer.includes('Web Components') &&
+                             !result.answer.includes('canada.ca');
+        
+        if (isEVAContent) {
+          testResults.passed++;
+          output.innerHTML = '<div class="status pass">✅ PASS - Returned EVA content</div>';
+        } else {
+          testResults.failed++;
+          output.innerHTML = '<div class="status fail">❌ FAIL - Returned fallback instead</div>';
+        }
+        
+        output.innerHTML += '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
+        testResults.total++;
+      } catch (error) {
+        testResults.failed++;
+        testResults.total++;
+        output.innerHTML = '<div class="status fail">❌ ERROR</div><pre>' + error.toString() + '</pre>';
+      }
+    }
+
+    async function testAccessibility() {
+      const output = document.getElementById('test-accessibility');
+      output.innerHTML = '<div class="status pending">⏳ Testing...</div>';
+      
+      try {
+        console.log('🧪 TEST: Accessibility');
+        const result = await queryRAG("How accessible are EVA components?", "en-CA");
+        
+        const isAccessibilityContent = result.answer.includes('WCAG') || 
+                                      result.answer.includes('accessibility') &&
+                                      !result.answer.includes('canada.ca');
+        
+        if (isAccessibilityContent) {
+          testResults.passed++;
+          output.innerHTML = '<div class="status pass">✅ PASS - Returned accessibility content</div>';
+        } else {
+          testResults.failed++;
+          output.innerHTML = '<div class="status fail">❌ FAIL - Returned fallback instead</div>';
+        }
+        
+        output.innerHTML += '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
+        testResults.total++;
+      } catch (error) {
+        testResults.failed++;
+        testResults.total++;
+        output.innerHTML = '<div class="status fail">❌ ERROR</div><pre>' + error.toString() + '</pre>';
+      }
+    }
+
+    async function testBilingual() {
+      const output = document.getElementById('test-bilingual');
+      output.innerHTML = '<div class="status pending">⏳ Testing...</div>';
+      
+      try {
+        console.log('🧪 TEST: Bilingual');
+        const result = await queryRAG("How does EVA handle bilingual support?", "en-CA");
+        
+        const isBilingualContent = (result.answer.includes('i18n') || 
+                                   result.answer.includes('bilingual') ||
+                                   result.answer.includes('French')) &&
+                                   !result.answer.includes('canada.ca');
+        
+        if (isBilingualContent) {
+          testResults.passed++;
+          output.innerHTML = '<div class="status pass">✅ PASS - Returned i18n content</div>';
+        } else {
+          testResults.failed++;
+          output.innerHTML = '<div class="status fail">❌ FAIL - Returned fallback instead</div>';
+        }
+        
+        output.innerHTML += '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
+        testResults.total++;
+      } catch (error) {
+        testResults.failed++;
+        testResults.total++;
+        output.innerHTML = '<div class="status fail">❌ ERROR</div><pre>' + error.toString() + '</pre>';
+      }
+    }
+
+    async function testTheming() {
+      const output = document.getElementById('test-theming');
+      output.innerHTML = '<div class="status pending">⏳ Testing...</div>';
+      
+      try {
+        console.log('🧪 TEST: Theming');
+        const result = await queryRAG("How do I customize EVA themes?", "en-CA");
+        
+        const isThemingContent = (result.answer.includes('theme') || 
+                                 result.answer.includes('CSS') ||
+                                 result.answer.includes('customize')) &&
+                                 !result.answer.includes('canada.ca');
+        
+        if (isThemingContent) {
+          testResults.passed++;
+          output.innerHTML = '<div class="status pass">✅ PASS - Returned theming content</div>';
+        } else {
+          testResults.failed++;
+          output.innerHTML = '<div class="status fail">❌ FAIL - Returned fallback instead</div>';
+        }
+        
+        output.innerHTML += '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
+        testResults.total++;
+      } catch (error) {
+        testResults.failed++;
+        testResults.total++;
+        output.innerHTML = '<div class="status fail">❌ ERROR</div><pre>' + error.toString() + '</pre>';
+      }
+    }
+
+    async function testFallback() {
+      const output = document.getElementById('test-fallback');
+      output.innerHTML = '<div class="status pending">⏳ Testing...</div>';
+      
+      try {
+        console.log('🧪 TEST: Fallback');
+        const result = await queryRAG("What is the weather today?", "en-CA");
+        
+        const isFallback = result.answer.includes('canada.ca') || 
+                          result.answer.includes('Service Canada');
+        
+        if (isFallback) {
+          testResults.passed++;
+          output.innerHTML = '<div class="status pass">✅ PASS - Correctly returned fallback</div>';
+        } else {
+          testResults.failed++;
+          output.innerHTML = '<div class="status fail">❌ FAIL - Should return fallback</div>';
+        }
+        
+        output.innerHTML += '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
+        testResults.total++;
+      } catch (error) {
+        testResults.failed++;
+        testResults.total++;
+        output.innerHTML = '<div class="status fail">❌ ERROR</div><pre>' + error.toString() + '</pre>';
+      }
+    }
+
+    async function runAllTests() {
+      testResults = { total: 0, passed: 0, failed: 0 };
+      
+      const summary = document.getElementById('test-summary');
+      summary.innerHTML = '<div class="status pending">⏳ Running all tests...</div>';
+      
+      // Run validation
+      validateKnowledgeBase();
+      
+      // Run tests sequentially
+      await testEVAComponents();
+      await new Promise(r => setTimeout(r, 500));
+      
+      await testAccessibility();
+      await new Promise(r => setTimeout(r, 500));
+      
+      await testBilingual();
+      await new Promise(r => setTimeout(r, 500));
+      
+      await testTheming();
+      await new Promise(r => setTimeout(r, 500));
+      
+      await testFallback();
+      
+      // Display summary
+      const passRate = ((testResults.passed / testResults.total) * 100).toFixed(0);
+      const statusClass = testResults.failed === 0 ? 'pass' : 'fail';
+      
+      summary.innerHTML = `
+        <div class="status ${statusClass}">
+          ${testResults.failed === 0 ? '✅' : '⚠️'} Test Summary: ${testResults.passed}/${testResults.total} passed (${passRate}%)
+        </div>
+        <pre>
+Total Tests: ${testResults.total}
+Passed: ${testResults.passed}
+Failed: ${testResults.failed}
+Pass Rate: ${passRate}%
+        </pre>
+      `;
+    }
+
+    // Auto-validate on page load
+    window.addEventListener('load', () => {
+      console.log('🧪 Test harness loaded');
+      validateKnowledgeBase();
+    });
+  </script>
+</body>
+</html>

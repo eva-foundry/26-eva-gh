@@ -1,0 +1,866 @@
+// Archived from eva-da-2/src/components/ProjectRegistry.tsx (v0.75)
+// Stored as plain text to avoid linting this legacy artifact inside docs.
+
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import type { ProjectId } from "../lib/evaClient";
+import type { ApimConfig } from "../lib/apimConfig";
+import { defaultLocalConfig, defaultAzureConfig } from "../lib/apimConfig";
+import {
+	loadRegistry,
+	saveRegistry,
+	exportRegistry,
+	importRegistry
+} from "../lib/projectRegistryStore";
+
+interface ThemeConfig {
+	primary: string;
+	background: string;
+	surface: string;
+	baseFontPx: number;
+}
+
+interface RagIndexConfig {
+	chunkingStrategy: string;
+	chunkSizeTokens: number;
+	overlapTokens: number;
+	indexName: string;
+}
+
+interface RagRetrievalConfig {
+	rankingStrategy: string;
+	topK: number;
+	citationStyle: string;
+}
+
+interface GuardrailConfig {
+	piiRedaction: boolean;
+	speculativeAnswers: boolean;
+	blockedTopicsSummary: string;
+}
+
+interface RegistryEntry {
+	id: ProjectId;
+	label: string;
+	domain: string;
+	owner: string;
+	costCentre: string;
+	ragProfile: string;
+	description: string;
+
+	theme: ThemeConfig;
+	ragIndex: RagIndexConfig;
+	ragRetrieval: RagRetrievalConfig;
+	guardrails: GuardrailConfig;
+	suggestedQuestions?: string[];
+	apim: ApimConfig;
+}
+
+const REGISTRY: RegistryEntry[] = [
+	{
+		id: "canadaLife",
+		label: "Canada Life EVA Assistant",
+		domain: "Benefits & Insurance",
+		owner: "Canada Life Integration Team",
+		costCentre: "CL-7421",
+		ragProfile: "FAQ-centric RAG over curated policy PDFs and playbooks.",
+		description:
+			"Pilot assistant helping case workers and analysts search Canada Life onboarding and benefits documentation.",
+		theme: {
+			primary: "#e41d3d",
+			background: "#fff5f5",
+			surface: "#ffffff",
+			baseFontPx: 18
+		},
+		ragIndex: {
+			chunkingStrategy: "semantic",
+			chunkSizeTokens: 600,
+			overlapTokens: 80,
+			indexName: "rag-index-canada-life"
+		},
+		ragRetrieval: {
+			rankingStrategy: "hybrid",
+			topK: 8,
+			citationStyle: "inline"
+		},
+		guardrails: {
+			piiRedaction: true,
+			speculativeAnswers: false,
+			blockedTopicsSummary: "Blocks medical diagnosis and personal financial advice."
+		},
+		suggestedQuestions: [
+			"suggestions.canadaLife.q1",
+			"suggestions.canadaLife.q2",
+			"suggestions.canadaLife.q3"
+		],
+		apim: {
+			...defaultLocalConfig,
+			features: {
+				...defaultLocalConfig.features,
+				enableCache: true
+			}
+		}
+	},
+	{
+		id: "jurisprudence",
+		label: "Jurisprudence Research Assistant",
+		domain: "Legal / Jurisprudence",
+		owner: "Legal Services",
+		costCentre: "JUR-9001",
+		ragProfile:
+			"Case-law-centric RAG over curated jurisprudence decisions and summaries.",
+		description:
+			"Assistant to help legal analysts and advisors research CPP-D and related jurisprudence.",
+		theme: {
+			primary: "#0055a4",
+			background: "#f5f8ff",
+			surface: "#ffffff",
+			baseFontPx: 18
+		},
+		ragIndex: {
+			chunkingStrategy: "markdown",
+			chunkSizeTokens: 700,
+			overlapTokens: 100,
+			indexName: "rag-index-jurisprudence"
+		},
+		ragRetrieval: {
+			rankingStrategy: "semantic",
+			topK: 5,
+			citationStyle: "footnote"
+		},
+		guardrails: {
+			piiRedaction: true,
+			speculativeAnswers: false,
+			blockedTopicsSummary: "Disallows personal legal advice; forces citations to case law."
+		},
+		suggestedQuestions: [
+			"suggestions.jurisprudence.q1",
+			"suggestions.jurisprudence.q2",
+			"suggestions.jurisprudence.q3"
+		],
+		apim: {
+			...defaultLocalConfig,
+			features: {
+				...defaultLocalConfig.features,
+				enableTracing: false
+			}
+		}
+	},
+	{
+		id: "admin",
+		label: "EVA DA Admin Workspace",
+		domain: "Platform / AICOE",
+		owner: "AI Centre of Enablement",
+		costCentre: "AICOE-0001",
+		ragProfile:
+			"Metadata-driven RAG over internal runbooks, architecture decisions, and operating procedures.",
+		description:
+			"Internal workspace used to manage EVA DA projects, RAG profiles, and monitoring information.",
+		theme: {
+			primary: "#000000",
+			background: "#f4f4f4",
+			surface: "#ffffff",
+			baseFontPx: 16
+		},
+		ragIndex: {
+			chunkingStrategy: "semantic",
+			chunkSizeTokens: 500,
+			overlapTokens: 80,
+			indexName: "eva-da-admin-index"
+		},
+		ragRetrieval: {
+			rankingStrategy: "hybrid",
+			topK: 6,
+			citationStyle: "inline"
+		},
+		guardrails: {
+			piiRedaction: true,
+			speculativeAnswers: false,
+			blockedTopicsSummary: "Internal-only; logs prompts and answers for monitoring."
+		},
+		suggestedQuestions: [],
+		apim: {
+			...defaultAzureConfig,
+			apiEndpoint: "https://eva-da-admin.azure-api.net/eva/v1",
+			apiVersion: "2023-11-09",
+			subscriptionKey: import.meta.env.ADMIN_APIM_KEY || "",
+			features: {
+				enableMetrics: true,
+				enableTracing: true,
+				enableCache: false
+			}
+		}
+	}
+];
+
+const registryById: Record<ProjectId, RegistryEntry> = REGISTRY.reduce(
+	(acc, entry) => {
+		acc[entry.id] = entry;
+		return acc;
+	},
+	{} as Record<ProjectId, RegistryEntry>
+);
+
+export { registryById };
+
+export function ProjectRegistry() {
+	const { t } = useTranslation();
+	const [entries, setEntries] = useState<RegistryEntry[]>(() =>
+		loadRegistry<RegistryEntry>(REGISTRY)
+	);
+
+	const initialProjectId: ProjectId = entries[0]?.id ?? "canadaLife";
+	const [selectedProjectId, setSelectedProjectId] =
+		useState<ProjectId>(initialProjectId);
+
+	const [showLookAndFeelDetails, setShowLookAndFeelDetails] =
+		useState<boolean>(true);
+
+	const project = entries.find((e) => e.id === selectedProjectId) ?? entries[0];
+	const [draftProject, setDraftProject] = useState<RegistryEntry | null>(null);
+
+	useEffect(() => {
+		setDraftProject(null);
+	}, [selectedProjectId]);
+
+	const activeProject = draftProject ?? project;
+	const theme = activeProject?.theme ?? {
+		primary: "#000000",
+		background: "#ffffff",
+		surface: "#ffffff",
+		baseFontPx: 16
+	};
+
+	function handleSave() {
+		if (!draftProject) return;
+
+		const updated = entries.map((e) =>
+			e.id === selectedProjectId ? draftProject : e
+		);
+
+		const ok = saveRegistry(updated);
+		if (ok) {
+			setEntries(updated);
+			setDraftProject(null);
+			alert("Project registry saved to localStorage.");
+		} else {
+			alert("Failed to save registry. See console for details.");
+		}
+	}
+
+	function updateField(field: keyof RegistryEntry, value: any) {
+		if (!project) return;
+		const draft = draftProject ?? { ...project };
+		setDraftProject({ ...draft, [field]: value });
+	}
+
+	function handleCreateNew() {
+		const id = prompt("New project id (short, no spaces)");
+		if (!id) return;
+		const normalized = id.trim().replace(/\s+/g, "");
+		if (entries.some((e) => e.id === normalized)) {
+			alert("A project with that id already exists.");
+			return;
+		}
+		const newEntry: RegistryEntry = {
+			id: normalized as ProjectId,
+			label: `New project ${normalized}`,
+			domain: "",
+			owner: "",
+			costCentre: "",
+			ragProfile: "",
+			description: "",
+			theme: { primary: "#0b74de", background: "#ffffff", surface: "#ffffff", baseFontPx: 16 },
+			ragIndex: { chunkingStrategy: "semantic", chunkSizeTokens: 500, overlapTokens: 80, indexName: `${normalized}-index` },
+			ragRetrieval: { rankingStrategy: "semantic", topK: 6, citationStyle: "inline" },
+			guardrails: { piiRedaction: true, speculativeAnswers: false, blockedTopicsSummary: "" },
+			suggestedQuestions: [],
+			apim: { ...defaultLocalConfig }
+		};
+		const updated = [...entries, newEntry];
+		setEntries(updated);
+		setSelectedProjectId(newEntry.id);
+	}
+
+	function handleDelete(id: ProjectId) {
+		if (!confirm(`Delete project ${id}? This cannot be undone.`)) return;
+		const updated = entries.filter((e) => e.id !== id);
+		setEntries(updated);
+		saveRegistry(updated);
+		setSelectedProjectId(updated[0]?.id ?? ("canadaLife" as ProjectId));
+	}
+
+	function handleExport() {
+		const text = exportRegistry(entries);
+		const blob = new Blob([text], { type: "application/json" });
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement("a");
+		a.href = url;
+		a.download = "eva-project-registry.json";
+		document.body.appendChild(a);
+		a.click();
+		a.remove();
+		URL.revokeObjectURL(url);
+	}
+
+	function handleImport() {
+		const raw = prompt("Paste registry JSON here to import (will replace current registry)");
+		if (!raw) return;
+		const imported = importRegistry<RegistryEntry>(raw);
+		if (!imported) {
+			alert("Invalid JSON payload — import failed.");
+			return;
+		}
+		setEntries(imported);
+		saveRegistry(imported);
+		alert("Registry imported and saved.");
+	}
+
+	return (
+		<section aria-label="Project register administration">
+			<header className="mb-4">
+				<p className="text-xs text-gray-600 mb-1">
+					EVA DA 2.0 demo – project-aware, bilingual, accessible
+				</p>
+				<h1 className="text-2xl font-semibold">
+					Project Register Administration
+				</h1>
+				<p className="text-sm text-gray-600 mt-1">
+					Configure project-aware assistants for EVA Domain Assistant. These
+					attributes can be changed in the UI so project spaces evolve without
+					code changes in the backend.
+				</p>
+			</header>
+
+			<div className="mb-5 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+				<div className="flex items-center gap-2">
+					<label
+						htmlFor="registry-project"
+						className="text-sm font-medium text-gray-700"
+					>
+						Project:
+					</label>
+					<select
+						id="registry-project"
+						value={selectedProjectId}
+						onChange={(e) =>
+							setSelectedProjectId(e.target.value as ProjectId)
+						}
+						className="rounded border border-gray-300 bg-white px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+					>
+						{entries.map((e) => (
+							<option key={e.id} value={e.id}>
+								{t(`project.${e.id}`) || e.label}
+							</option>
+						))}
+					</select>
+				</div>
+
+				<div className="flex gap-2">
+					<button onClick={handleSave} className="rounded bg-[var(--color-accent)] px-3 py-1.5 text-xs font-medium text-white">
+						Save
+					</button>
+					<button onClick={handleCreateNew} className="rounded border border-gray-300 bg-white px-3 py-1.5 text-xs font-medium text-gray-700">
+						New
+					</button>
+					<button onClick={() => handleDelete(selectedProjectId)} className="rounded border border-red-300 bg-white px-3 py-1.5 text-xs font-medium text-red-700">
+						Delete
+					</button>
+					<button onClick={handleExport} className="rounded border border-gray-300 bg-white px-3 py-1.5 text-xs font-medium text-gray-700">
+						Export
+					</button>
+					<button onClick={handleImport} className="rounded border border-gray-300 bg-white px-3 py-1.5 text-xs font-medium text-gray-700">
+						Import
+					</button>
+				</div>
+			</div>
+
+			<div className="grid gap-4 md:grid-cols-2">
+				<div className="rounded border border-gray-200 bg-[var(--color-surface)]">
+					<button
+						type="button"
+						className="flex w-full items-center justify-between px-4 py-2 text-left text-sm font-semibold border-b border-gray-200 bg-gray-50"
+					>
+						<span>Business profile</span>
+					</button>
+					<div className="space-y-3 px-4 py-3 text-sm">
+						<Field
+							label="ID"
+							value={activeProject?.id ?? ""}
+							onChange={(v) => updateField("id", v as ProjectId)}
+						/>
+						<Field
+							label="Label"
+							value={activeProject?.label ?? ""}
+							onChange={(v) => updateField("label", v)}
+						/>
+						<Field
+							label="Domain"
+							value={activeProject?.domain ?? ""}
+							onChange={(v) => updateField("domain", v)}
+						/>
+						<Field
+							label="Owner"
+							value={activeProject?.owner ?? ""}
+							onChange={(v) => updateField("owner", v)}
+						/>
+						<Field
+							label="Cost centre"
+							value={activeProject?.costCentre ?? ""}
+							onChange={(v) => updateField("costCentre", v)}
+						/>
+						<Textarea
+							label="Description"
+							value={activeProject?.description ?? ""}
+							onChange={(v) => updateField("description", v)}
+						/>
+						<Textarea
+							label="RAG profile"
+							value={activeProject?.ragProfile ?? ""}
+							onChange={(v) => updateField("ragProfile", v)}
+						/>
+						<Textarea
+							label="Blocked topics summary"
+							value={activeProject?.guardrails.blockedTopicsSummary ?? ""}
+							onChange={(v) =>
+								updateField("guardrails", {
+									...activeProject?.guardrails,
+									blockedTopicsSummary: v
+								})
+							}
+						/>
+					</div>
+				</div>
+
+				<div className="rounded border border-gray-200 bg-[var(--color-surface)]">
+					<button
+						type="button"
+						className="flex w-full items-center justify-between px-4 py-2 text-left text-sm font-semibold border-b border-gray-200 bg-gray-50"
+					>
+						<span>Retrieval & RAG engine</span>
+					</button>
+					<div className="space-y-3 px-4 py-3 text-sm">
+						<Field
+							label="Index name"
+							value={activeProject?.ragIndex.indexName ?? ""}
+							onChange={(v) =>
+								updateField("ragIndex", {
+									...activeProject?.ragIndex,
+									indexName: v
+								})
+							}
+						/>
+						<Field
+							label="Chunking strategy"
+							value={activeProject?.ragIndex.chunkingStrategy ?? ""}
+							onChange={(v) =>
+								updateField("ragIndex", {
+									...activeProject?.ragIndex,
+									chunkingStrategy: v
+								})
+							}
+						/>
+						<NumberField
+							label="Chunk size (tokens)"
+							value={activeProject?.ragIndex.chunkSizeTokens ?? 0}
+							onChange={(v) =>
+								updateField("ragIndex", {
+									...activeProject?.ragIndex,
+									chunkSizeTokens: Number(v)
+								})
+							}
+						/>
+						<NumberField
+							label="Overlap (tokens)"
+							value={activeProject?.ragIndex.overlapTokens ?? 0}
+							onChange={(v) =>
+								updateField("ragIndex", {
+									...activeProject?.ragIndex,
+									overlapTokens: Number(v)
+								})
+							}
+						/>
+						<Field
+							label="Ranking strategy"
+							value={activeProject?.ragRetrieval.rankingStrategy ?? ""}
+							onChange={(v) =>
+								updateField("ragRetrieval", {
+									...activeProject?.ragRetrieval,
+									rankingStrategy: v
+								})
+							}
+						/>
+						<NumberField
+							label="Top K"
+							value={activeProject?.ragRetrieval.topK ?? 0}
+							onChange={(v) =>
+								updateField("ragRetrieval", {
+									...activeProject?.ragRetrieval,
+									topK: Number(v)
+								})
+							}
+						/>
+						<Field
+							label="Citation style"
+							value={activeProject?.ragRetrieval.citationStyle ?? ""}
+							onChange={(v) =>
+								updateField("ragRetrieval", {
+									...activeProject?.ragRetrieval,
+									citationStyle: v
+								})
+							}
+						/>
+					</div>
+				</div>
+
+				<div className="rounded border border-gray-200 bg-[var(--color-surface)]">
+					<button
+						type="button"
+						className="flex w-full items-center justify-between px-4 py-2 text-left text-sm font-semibold border-b border-gray-200 bg-gray-50"
+					>
+						<span>Guardrails</span>
+					</button>
+					<div className="space-y-3 px-4 py-3 text-sm">
+						<Checkbox
+							label="PII redaction"
+							checked={activeProject?.guardrails.piiRedaction ?? false}
+							onChange={(checked) =>
+								updateField("guardrails", {
+									...activeProject?.guardrails,
+									piiRedaction: checked
+								})
+							}
+						/>
+						<Checkbox
+							label="Speculative answers"
+							checked={activeProject?.guardrails.speculativeAnswers ?? false}
+							onChange={(checked) =>
+								updateField("guardrails", {
+									...activeProject?.guardrails,
+									speculativeAnswers: checked
+								})
+							}
+						/>
+					</div>
+				</div>
+
+				<div className="rounded border border-gray-200 bg-[var(--color-surface)]">
+					<button
+						type="button"
+						className="flex w-full items-center justify-between px-4 py-2 text-left text-sm font-semibold border-b border-gray-200 bg-gray-50"
+						onClick={() => setShowLookAndFeelDetails((prev) => !prev)}
+						aria-expanded={showLookAndFeelDetails}
+					>
+						<span>Look & feel</span>
+						<span className="text-xs text-gray-500">
+							{showLookAndFeelDetails ? "Hide" : "Show"}
+						</span>
+					</button>
+					{showLookAndFeelDetails && (
+						<div className="space-y-3 px-4 py-3 text-sm">
+							<ColorField
+								label="Primary colour"
+								value={theme.primary}
+								onChange={(v) =>
+									updateField("theme", {
+										...activeProject?.theme,
+										primary: v
+									})
+								}
+							/>
+							<ColorField
+								label="Background"
+								value={theme.background}
+								onChange={(v) =>
+									updateField("theme", {
+										...activeProject?.theme,
+										background: v
+									})
+								}
+							/>
+							<ColorField
+								label="Surface"
+								value={theme.surface}
+								onChange={(v) =>
+									updateField("theme", {
+										...activeProject?.theme,
+										surface: v
+									})
+								}
+							/>
+							<NumberField
+								label="Base font size"
+								value={theme.baseFontPx}
+								min={12}
+								max={24}
+								onChange={(v) =>
+									updateField("theme", {
+										...activeProject?.theme,
+										baseFontPx: Number(v)
+									})
+								}
+							/>
+						</div>
+					)}
+				</div>
+			</div>
+
+			<div className="mt-6 grid gap-4 md:grid-cols-2">
+				<div className="rounded border border-gray-200 bg-[var(--color-surface)]">
+					<div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-2 text-sm font-semibold">
+						<span>Suggested questions</span>
+					</div>
+					<div className="space-y-3 px-4 py-3 text-sm">
+						<label className="block text-xs font-medium text-gray-500 uppercase tracking-wide">
+							Questions ({activeProject?.suggestedQuestions?.length ?? 0})
+						</label>
+						<div className="space-y-2">
+							{(activeProject?.suggestedQuestions ?? []).map((q, idx) => (
+								<div key={idx} className="flex items-center gap-2">
+									<input
+										type="text"
+										value={q}
+										onChange={(e) => {
+											const updatedQuestions = [...(activeProject?.suggestedQuestions ?? [])];
+											updatedQuestions[idx] = e.target.value;
+											updateField("suggestedQuestions", updatedQuestions);
+										}}
+										className="flex-1 rounded border border-gray-300 bg-white px-3 py-1 text-sm"
+									/>
+									<button
+										type="button"
+										onClick={() => {
+											const updatedQuestions =
+												(activeProject?.suggestedQuestions ?? []).filter((_, i) => i !== idx);
+											updateField("suggestedQuestions", updatedQuestions);
+										}}
+										aria-label="Remove question"
+										className="rounded border border-gray-200 px-2 py-1 text-xs text-gray-600"
+									>
+										Remove
+									</button>
+								</div>
+							))}
+							<button
+								type="button"
+								onClick={() => {
+									const updatedQuestions = [...(activeProject?.suggestedQuestions ?? []), ""];
+									updateField("suggestedQuestions", updatedQuestions);
+								}}
+								className="rounded border border-gray-300 bg-white px-3 py-1 text-xs font-medium text-gray-700"
+							>
+								Add question
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div className="rounded border border-gray-200 bg-[var(--color-surface)]">
+					<div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-2 text-sm font-semibold">
+						<span>APIM configuration</span>
+					</div>
+					<div className="space-y-3 px-4 py-3 text-sm">
+						<Field
+							label="API endpoint"
+							value={activeProject?.apim.apiEndpoint ?? ""}
+							onChange={(v) =>
+								updateField("apim", {
+									...activeProject?.apim,
+									apiEndpoint: v
+								})
+							}
+						/>
+						<Field
+							label="API version"
+							value={activeProject?.apim.apiVersion ?? ""}
+							onChange={(v) =>
+								updateField("apim", {
+									...activeProject?.apim,
+									apiVersion: v
+								})
+							}
+						/>
+						<Field
+							label="Subscription key"
+							value={activeProject?.apim.subscriptionKey ?? ""}
+							onChange={(v) =>
+								updateField("apim", {
+									...activeProject?.apim,
+									subscriptionKey: v
+								})
+							}
+						/>
+						<fieldset className="space-y-2 rounded border border-gray-200 px-3 py-2">
+							<legend className="px-1 text-xs font-semibold uppercase tracking-wide text-gray-500">
+								Features
+							</legend>
+							<Checkbox
+								label="Enable metrics"
+								checked={activeProject?.apim.features.enableMetrics ?? false}
+								onChange={(checked) =>
+									updateField("apim", {
+										...activeProject?.apim,
+										features: {
+											...activeProject?.apim.features,
+											enableMetrics: checked
+										}
+									})
+								}
+							/>
+							<Checkbox
+								label="Enable tracing"
+								checked={activeProject?.apim.features.enableTracing ?? false}
+								onChange={(checked) =>
+									updateField("apim", {
+										...activeProject?.apim,
+										features: {
+											...activeProject?.apim.features,
+											enableTracing: checked
+										}
+									})
+								}
+							/>
+							<Checkbox
+								label="Enable cache"
+								checked={activeProject?.apim.features.enableCache ?? false}
+								onChange={(checked) =>
+									updateField("apim", {
+										...activeProject?.apim,
+										features: {
+											...activeProject?.apim.features,
+											enableCache: checked
+										}
+									})
+								}
+							/>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+}
+
+function Field({
+	label,
+	value,
+	onChange
+}: {
+	label: string;
+	value: string;
+	onChange: (value: string) => void;
+}) {
+	return (
+		<label className="block text-xs font-medium text-gray-500 uppercase tracking-wide">
+			{label}
+			<input
+				type="text"
+				value={value}
+				onChange={(e) => onChange(e.target.value)}
+				className="mt-1 w-full rounded border border-gray-300 bg-white px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+			/>
+		</label>
+	);
+}
+
+function NumberField({
+	label,
+	value,
+	onChange,
+	min,
+	max
+}: {
+	label: string;
+	value: number;
+	onChange: (value: number) => void;
+	min?: number;
+	max?: number;
+}) {
+	return (
+		<label className="block text-xs font-medium text-gray-500 uppercase tracking-wide">
+			{label}
+			<input
+				type="number"
+				value={value}
+				onChange={(e) => onChange(Number(e.target.value))}
+				min={min}
+				max={max}
+				className="mt-1 w-full rounded border border-gray-300 bg-white px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+			/>
+		</label>
+	);
+}
+
+function Textarea({
+	label,
+	value,
+	onChange
+}: {
+	label: string;
+	value: string;
+	onChange: (value: string) => void;
+}) {
+	return (
+		<label className="block text-xs font-medium text-gray-500 uppercase tracking-wide">
+			{label}
+			<textarea
+				value={value}
+				onChange={(e) => onChange(e.target.value)}
+				rows={3}
+				className="mt-1 w-full rounded border border-gray-300 bg-white px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+			/>
+		</label>
+	);
+}
+
+function Checkbox({
+	label,
+	checked,
+	onChange
+}: {
+	label: string;
+	checked: boolean;
+	onChange: (checked: boolean) => void;
+}) {
+	return (
+		<label className="flex items-center gap-2 text-xs font-medium text-gray-600">
+			<input
+				type="checkbox"
+				checked={checked}
+				onChange={(e) => onChange(e.target.checked)}
+				className="rounded border-gray-300 text-[var(--color-accent)] focus:ring-[var(--color-accent)]"
+			/>
+			<span>{label}</span>
+		</label>
+	);
+}
+
+function ColorField({
+	label,
+	value,
+	onChange
+}: {
+	label: string;
+	value: string;
+	onChange: (value: string) => void;
+}) {
+	return (
+		<label className="block text-xs font-medium text-gray-500 uppercase tracking-wide">
+			{label}
+			<div className="mt-1 flex items-center gap-3">
+				<input
+					type="color"
+					value={value}
+					onChange={(e) => onChange(e.target.value)}
+					className="h-8 w-12 rounded border border-gray-300"
+				/>
+				<input
+					type="text"
+					value={value}
+					onChange={(e) => onChange(e.target.value)}
+					className="flex-1 rounded border border-gray-300 bg-white px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+				/>
+			</div>
+		</label>
+	);
+}

@@ -1,0 +1,327 @@
+name: Auto-Merge Quality Gates
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+
+jobs:
+  quality-gates:
+    name: Run All 12 Quality Gates
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: |
+          cd packages/web-components
+          npm ci
+      
+      # ============================================================================
+      # GATE 1: Test Coverage 100%
+      # ============================================================================
+      - name: Gate 1 - Test Coverage 100%
+        id: gate1
+        run: |
+          cd packages/web-components
+          npm test -- --coverage --run
+          
+          # Check coverage is 100%
+          COVERAGE=$(node -e "
+            const coverage = require('./coverage/coverage-summary.json');
+            const total = coverage.total;
+            const allHundred = 
+              total.statements.pct === 100 &&
+              total.branches.pct === 100 &&
+              total.functions.pct === 100 &&
+              total.lines.pct === 100;
+            console.log(allHundred ? 'PASS' : 'FAIL');
+          ")
+          
+          if [ "$COVERAGE" != "PASS" ]; then
+            echo "❌ Gate 1 FAILED: Test coverage is not 100%"
+            exit 1
+          fi
+          echo "✅ Gate 1 PASSED: Test coverage 100%"
+      
+      # ============================================================================
+      # GATE 2: Lighthouse Score 100/100
+      # ============================================================================
+      - name: Gate 2 - Lighthouse Score 100/100
+        id: gate2
+        run: |
+          cd packages/web-components
+          npm run storybook:build
+          npx http-server storybook-static -p 6006 &
+          sleep 10
+          
+          npm install -g @lhci/cli
+          lhci autorun --config=lighthouserc.json
+          
+          # Check all scores are 100
+          SCORES=$(node -e "
+            const fs = require('fs');
+            const report = JSON.parse(fs.readFileSync('.lighthouseci/lhr-0.json'));
+            const scores = {
+              performance: report.categories.performance.score * 100,
+              accessibility: report.categories.accessibility.score * 100,
+              bestPractices: report.categories['best-practices'].score * 100,
+              seo: report.categories.seo.score * 100
+            };
+            const allHundred = Object.values(scores).every(s => s === 100);
+            console.log(allHundred ? 'PASS' : 'FAIL');
+          ")
+          
+          if [ "$SCORES" != "PASS" ]; then
+            echo "❌ Gate 2 FAILED: Lighthouse scores not 100/100"
+            exit 1
+          fi
+          echo "✅ Gate 2 PASSED: Lighthouse 100/100"
+      
+      # ============================================================================
+      # GATE 3: WCAG 2.2 AAA Compliance
+      # ============================================================================
+      - name: Gate 3 - WCAG 2.2 AAA Compliance
+        id: gate3
+        run: |
+          cd packages/web-components
+          npm install -g @axe-core/cli
+          
+          # Test built components
+          axe dist/ --tags wcag22aaa --exit
+          
+          # Test Storybook
+          axe http://localhost:6006 --tags wcag22aaa --exit
+          
+          echo "✅ Gate 3 PASSED: WCAG 2.2 AAA compliant"
+      
+      # ============================================================================
+      # GATE 4: Zero axe-core Violations
+      # ============================================================================
+      - name: Gate 4 - Zero axe-core Violations
+        id: gate4
+        run: |
+          cd packages/web-components
+          
+          # Test all built components
+          axe dist/ --exit
+          
+          # Test Storybook
+          axe http://localhost:6006 --exit
+          
+          echo "✅ Gate 4 PASSED: Zero axe-core violations"
+      
+      # ============================================================================
+      # GATE 5: Zero Broken Links
+      # ============================================================================
+      - name: Gate 5 - Zero Broken Links
+        id: gate5
+        run: |
+          cd packages/web-components
+          npm install -g linkinator
+          
+          # Check Storybook links
+          linkinator http://localhost:6006 --recurse --skip "external-link-.*"
+          
+          echo "✅ Gate 5 PASSED: Zero broken links"
+      
+      # ============================================================================
+      # GATE 6: Zero Hardcoded Literals
+      # ============================================================================
+      - name: Gate 6 - Zero Hardcoded Literals
+        id: gate6
+        run: |
+          cd packages/web-components
+          
+          # Search for hardcoded text
+          if grep -r "TODO\|FIXME\|lorem ipsum" src/; then
+            echo "❌ Gate 6 FAILED: Found hardcoded literals (TODO/FIXME/lorem)"
+            exit 1
+          fi
+          
+          # Check all components use i18n
+          MISSING_I18N=$(find src/components -name "*.ts" -exec grep -L "msg\|registerMessages" {} \; | wc -l)
+          if [ "$MISSING_I18N" -gt 0 ]; then
+            echo "❌ Gate 6 FAILED: Found $MISSING_I18N components without i18n"
+            exit 1
+          fi
+          
+          echo "✅ Gate 6 PASSED: Zero hardcoded literals"
+      
+      # ============================================================================
+      # GATE 7: All Demos Work
+      # ============================================================================
+      - name: Gate 7 - All Demos Work
+        id: gate7
+        run: |
+          # Build all demos
+          cd demos/canada-chatbot && npm install && npm run build
+          cd ../gc-design-lab && npm install && npm run build
+          cd ../devkit && npm install && npm run build
+          
+          echo "✅ Gate 7 PASSED: All demos build successfully"
+      
+      # ============================================================================
+      # GATE 8: CI/CD Pipelines Green
+      # ============================================================================
+      - name: Gate 8 - CI/CD Pipelines Green
+        id: gate8
+        run: |
+          # This step passes if we got here (all previous steps passed)
+          echo "✅ Gate 8 PASSED: All CI/CD steps successful"
+      
+      # ============================================================================
+      # GATE 9: npm Packages Valid
+      # ============================================================================
+      - name: Gate 9 - npm Packages Valid
+        id: gate9
+        run: |
+          cd packages/web-components
+          npm run build
+          npm pack --dry-run
+          
+          # Verify package.json is valid
+          npm install -g validate-npm-package-name
+          PKG_NAME=$(node -e "console.log(require('./package.json').name)")
+          if ! npx validate-npm-package-name "$PKG_NAME" | grep -q "valid"; then
+            echo "❌ Gate 9 FAILED: Invalid package name"
+            exit 1
+          fi
+          
+          echo "✅ Gate 9 PASSED: npm package valid"
+      
+      # ============================================================================
+      # GATE 10: Complete Documentation
+      # ============================================================================
+      - name: Gate 10 - Complete Documentation
+        id: gate10
+        run: |
+          cd packages/web-components
+          
+          # Build Storybook
+          npm run storybook:build
+          
+          # Build TypeDoc
+          npm run docs:build
+          
+          # Verify all components have stories
+          COMPONENTS=$(find src/components -name "*.ts" -not -name "*.stories.ts" -not -name "*.test.ts" | wc -l)
+          STORIES=$(find src/components -name "*.stories.ts" | wc -l)
+          
+          if [ "$STORIES" -lt "$COMPONENTS" ]; then
+            echo "❌ Gate 10 FAILED: Missing Storybook stories ($STORIES stories for $COMPONENTS components)"
+            exit 1
+          fi
+          
+          echo "✅ Gate 10 PASSED: Complete documentation"
+      
+      # ============================================================================
+      # GATE 11: Official GC Assets Only
+      # ============================================================================
+      - name: Gate 11 - Official GC Assets Only
+        id: gate11
+        run: |
+          cd packages/web-components
+          
+          # Check for unofficial assets
+          if grep -r "placeholder\|dummy\|temp\|test\.png\|sample\.jpg" src/; then
+            echo "❌ Gate 11 FAILED: Found placeholder assets"
+            exit 1
+          fi
+          
+          # Verify SVG files only (no PNG/JPG for logos)
+          if find src/assets -name "*.png" -o -name "*.jpg" | grep -q .; then
+            echo "❌ Gate 11 FAILED: Found raster images (use SVG only)"
+            exit 1
+          fi
+          
+          echo "✅ Gate 11 PASSED: Official GC assets only"
+      
+      # ============================================================================
+      # GATE 12: Professional Visual Standards
+      # ============================================================================
+      - name: Gate 12 - Professional Visual Standards
+        id: gate12
+        run: |
+          cd packages/web-components
+          
+          # Check for unprofessional terms
+          if grep -ri "video.game\|cartoon\|playful\|fun\|emoji" src/; then
+            echo "❌ Gate 12 FAILED: Found unprofessional language"
+            exit 1
+          fi
+          
+          # Verify color tokens match GC Design System
+          if ! grep -q "#af3c43" src/styles/tokens.ts; then
+            echo "❌ Gate 12 FAILED: Missing official GC FIP red"
+            exit 1
+          fi
+          
+          if ! grep -q "#284162" src/styles/tokens.ts; then
+            echo "❌ Gate 12 FAILED: Missing official GC link blue"
+            exit 1
+          fi
+          
+          echo "✅ Gate 12 PASSED: Professional visual standards"
+      
+      # ============================================================================
+      # FINAL GATE SUMMARY
+      # ============================================================================
+      - name: Quality Gates Summary
+        if: success()
+        run: |
+          echo "🎉 ALL 12 QUALITY GATES PASSED!"
+          echo "✅ Gate 1: Test Coverage 100%"
+          echo "✅ Gate 2: Lighthouse 100/100"
+          echo "✅ Gate 3: WCAG 2.2 AAA"
+          echo "✅ Gate 4: Zero axe-core violations"
+          echo "✅ Gate 5: Zero broken links"
+          echo "✅ Gate 6: Zero hardcoded literals"
+          echo "✅ Gate 7: All demos work"
+          echo "✅ Gate 8: CI/CD pipelines green"
+          echo "✅ Gate 9: npm packages valid"
+          echo "✅ Gate 10: Complete documentation"
+          echo "✅ Gate 11: Official GC assets only"
+          echo "✅ Gate 12: Professional visual standards"
+
+  auto-merge:
+    name: Auto-Merge PR
+    runs-on: ubuntu-latest
+    needs: quality-gates
+    if: success()
+    
+    steps:
+      - name: Auto-approve PR
+        uses: hmarr/auto-approve-action@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Enable auto-merge
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ github.event.pull_request.number }}
+          merge-method: squash
+      
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🎉 **All 12 Quality Gates Passed!**\n\n✅ Auto-merging this PR.\n\nQuality Gates:\n- ✅ Test Coverage 100%\n- ✅ Lighthouse 100/100\n- ✅ WCAG 2.2 AAA\n- ✅ Zero axe-core violations\n- ✅ Zero broken links\n- ✅ Zero hardcoded literals\n- ✅ All demos work\n- ✅ CI/CD pipelines green\n- ✅ npm packages valid\n- ✅ Complete documentation\n- ✅ Official GC assets only\n- ✅ Professional visual standards'
+            })

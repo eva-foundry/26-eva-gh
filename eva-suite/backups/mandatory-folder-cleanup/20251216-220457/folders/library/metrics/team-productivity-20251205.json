@@ -1,0 +1,35 @@
+{
+  "Issues": {
+    "Closed": 8,
+    "ByAuthor": {
+      "Name": "MarcoPolo483",
+      "Count": 8
+    },
+    "AvgCycleTimeHours": 262.4
+  },
+  "Period": "Last 7 days",
+  "Timestamp": "2025-12-05T11:16:47.2552160+00:00",
+  "Commits": {
+    "ByAuthor": [
+      {
+        "Name": "EVA Memory Bot",
+        "Count": 27
+      },
+      {
+        "Name": "github-actions[bot]",
+        "Count": 3
+      }
+    ],
+    "Total": 30
+  },
+  "PullRequests": {
+    "Total": 1,
+    "Merged": 0,
+    "ByAuthor": {
+      "Name": "app/github-actions",
+      "Count": 1
+    },
+    "AvgCycleTimeHours": 0
+  },
+  "ActiveContributors": 4
+}

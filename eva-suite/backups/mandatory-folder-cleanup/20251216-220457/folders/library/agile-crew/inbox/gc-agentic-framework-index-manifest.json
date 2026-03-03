@@ -1,0 +1,10 @@
+{
+  "title": "GC Agentic Framework - Navigation Index",
+  "feature_key": "P02-AUTO-8338a22c",
+  "created_timestamp": "2025-12-12T12:41:21.4902352Z",
+  "priority": "MEDIUM",
+  "status": "ready-for-crew",
+  "source_intake_file": "GC-AGENTIC-FRAMEWORK-INDEX.md",
+  "feature_slug": "gc-agentic-framework-index",
+  "p02_artifacts_path": "docs/features/gc-agentic-framework-index"
+}

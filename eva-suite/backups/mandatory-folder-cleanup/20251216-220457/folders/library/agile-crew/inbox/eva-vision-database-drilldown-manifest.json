@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-vision-database-drilldown.md",
+  "feature_key": "P02-AUTO-c2fa847e",
+  "title": "CDD: EVA Vision Database Drill-Down",
+  "p02_artifacts_path": "docs/features/eva-vision-database-drilldown",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-vision-database-drilldown",
+  "created_timestamp": "2025-11-25T23:55:22.6001182Z"
+}

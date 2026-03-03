@@ -1,0 +1,1301 @@
+{
+  "lastRunTimestamp": "2025-12-15T06:34:25.0714542Z",
+  "processedFiles": [
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-0df52c54-.sample-ai-code-review.md",
+      "hash": "492B97E9D3914B8A0DCF8BF9A7EA06A5BE311184F0FCEF46A5AF1AB543BE5EB5",
+      "feature_key": "P02-AUTO-0df52c54",
+      "feature_slug": "sample-ai-code-review",
+      "processed_at": "2025-11-25T23:53:43.4667913Z",
+      "original_filename": ".sample-ai-code-review.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-FINOPS-007-.sample-cost-anomaly-detection.md",
+      "hash": "7A6F206A11EBF11FBD356B06EAA1758BDD3BA096180B1A7F0883921FFDDF9840",
+      "feature_key": "P02-FINOPS-007",
+      "feature_slug": "azure-cost-anomaly-detection",
+      "processed_at": "2025-11-25T23:53:45.2087088Z",
+      "original_filename": ".sample-cost-anomaly-detection.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-cff13a7f-backloglist.txt",
+      "hash": "FFCBFF40CA4DCB05570AB841AD20BFCE6ECC658AEE9EDC62D52CCCCBB1E83E55",
+      "feature_key": "P02-AUTO-cff13a7f",
+      "feature_slug": "backloglist",
+      "processed_at": "2025-11-25T23:53:46.9280155Z",
+      "original_filename": "backloglist.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-5e5d23ca-CDD-INVENTORY-OLD.md",
+      "hash": "1CA8F7808CB5EAC48B1E81108AB3451AA7DD0E0A6588EA0288032AA7B306A223",
+      "feature_key": "P02-AUTO-5e5d23ca",
+      "feature_slug": "cdd-inventory-old",
+      "processed_at": "2025-11-25T23:53:48.6357308Z",
+      "original_filename": "CDD-INVENTORY-OLD.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-0abd5fd8-CDD-INVENTORY-UPDATED.md",
+      "hash": "F02312AEFB3BA029C311F5067F0458728E5A1145C82E6EB9A35C7CFA124C1001",
+      "feature_key": "P02-AUTO-0abd5fd8",
+      "feature_slug": "cdd-inventory-updated",
+      "processed_at": "2025-11-25T23:53:50.3454563Z",
+      "original_filename": "CDD-INVENTORY-UPDATED.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-a3bfb660-CDD-INVENTORY.md",
+      "hash": "F38DF58AE15450375EA4B9275729CEBFE339E90A7CE5600170FF3FEA4514DE1F",
+      "feature_key": "P02-AUTO-a3bfb660",
+      "feature_slug": "cdd-inventory",
+      "processed_at": "2025-11-25T23:53:52.0980548Z",
+      "original_filename": "CDD-INVENTORY.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-a7750ab1-eva-analytics-command-center-dashboard.md",
+      "hash": "1DD302CE88C3686D8ABCC27484EBA92682830B2C6775852C0DDDAB729440A091",
+      "feature_key": "P02-AUTO-a7750ab1",
+      "feature_slug": "eva-analytics-command-center-dashboard",
+      "processed_at": "2025-11-25T23:53:53.9103834Z",
+      "original_filename": "eva-analytics-command-center-dashboard.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-3b8341e6-eva-analytics-dashboard-suite.md",
+      "hash": "4BE6265B89C33AA12CA3DCA6EDC9222545232F7AE3934408F3F7ADD81BB0513D",
+      "feature_key": "P02-AUTO-3b8341e6",
+      "feature_slug": "eva-analytics-dashboard-suite",
+      "processed_at": "2025-11-25T23:53:55.6761366Z",
+      "original_filename": "eva-analytics-dashboard-suite.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-3bfdc2d0-eva-analytics-learning-dashboard.md",
+      "hash": "49D1EBC9436A8949D945E325568DB7DDCD644287286926993362E972906300CB",
+      "feature_key": "P02-AUTO-3bfdc2d0",
+      "feature_slug": "eva-analytics-learning-dashboard",
+      "processed_at": "2025-11-25T23:53:57.3591172Z",
+      "original_filename": "eva-analytics-learning-dashboard.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-ccad40d3-eva-analytics-space-dashboard.md",
+      "hash": "5272AED3931A7DEEEE7A516B1C2AA093166E47E7209E4ECDE826D3995A0E1656",
+      "feature_key": "P02-AUTO-ccad40d3",
+      "feature_slug": "eva-analytics-space-dashboard",
+      "processed_at": "2025-11-25T23:53:59.0751398Z",
+      "original_filename": "eva-analytics-space-dashboard.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-2778a4a9-eva-api-platform-developers.md",
+      "hash": "4C966AE761A4C87B6B210FE14101C5C2A70DB3F9B0FBE86C37CFCB16E2F6B6EA",
+      "feature_key": "P02-AUTO-2778a4a9",
+      "feature_slug": "eva-api-platform-developers",
+      "processed_at": "2025-11-25T23:54:00.7585046Z",
+      "original_filename": "eva-api-platform-developers.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-96a06b3c-eva-audit-logs-compliance.md",
+      "hash": "365C729EA65CB0480C4060B859267AEA9E6903E60F570FFD6CA56A4D6FDFF502",
+      "feature_key": "P02-AUTO-96a06b3c",
+      "feature_slug": "eva-audit-logs-compliance",
+      "processed_at": "2025-11-25T23:54:02.4474248Z",
+      "original_filename": "eva-audit-logs-compliance.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-9971bf92-eva-audit-trail.md",
+      "hash": "EA180D79B8791FA089A675986E0A540C75AE3AD63742B2FDDABA8EEC9633EF4A",
+      "feature_key": "P02-AUTO-9971bf92",
+      "feature_slug": "eva-audit-trail",
+      "processed_at": "2025-11-25T23:54:04.2165337Z",
+      "original_filename": "eva-audit-trail.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-248d6670-eva-bilingual-quality-evaluation.md",
+      "hash": "6CAA4546B643D0C7B5A5F2D11F07D4CCECC37BE0E79B6CC0572FFDB127F88077",
+      "feature_key": "P02-AUTO-248d6670",
+      "feature_slug": "eva-bilingual-quality-evaluation",
+      "processed_at": "2025-11-25T23:54:05.9736896Z",
+      "original_filename": "eva-bilingual-quality-evaluation.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-20e9b446-eva-chat-service.md",
+      "hash": "9DD2161D9C0E4E1B862EBB902962378677C5FB992EF15C137AD2499E64856E2B",
+      "feature_key": "P02-AUTO-20e9b446",
+      "feature_slug": "eva-chat-service",
+      "processed_at": "2025-11-25T23:54:07.6906763Z",
+      "original_filename": "eva-chat-service.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-b363b076-eva-chat-widget.md",
+      "hash": "B907C8B7EEF11C92E7063A8C44503A382A4FDFE2BAE4E1CF7E1CE77D7B788E8C",
+      "feature_key": "P02-AUTO-b363b076",
+      "feature_slug": "eva-chat-widget",
+      "processed_at": "2025-11-25T23:54:09.431738Z",
+      "original_filename": "eva-chat-widget.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-a4cc0393-eva-directory-user-administration.md",
+      "hash": "C26F8F1F0C74BC136D3AD5A229C40474B79CB8FADC9E4A09C05C9F713876F3F7",
+      "feature_key": "P02-AUTO-a4cc0393",
+      "feature_slug": "eva-directory-user-administration",
+      "processed_at": "2025-11-25T23:54:11.2041087Z",
+      "original_filename": "eva-directory-user-administration.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-cc56486c-eva-domain-assistant-core.md",
+      "hash": "D73DAEB954195ACA85A9CE303F6BE99C63EAF674E952CF1E64B94DE21EC34FE0",
+      "feature_key": "P02-AUTO-cc56486c",
+      "feature_slug": "eva-domain-assistant-core",
+      "processed_at": "2025-11-25T23:54:12.9328214Z",
+      "original_filename": "eva-domain-assistant-core.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-42454c1f-eva-ecosystem-partnerships.md",
+      "hash": "42ADD27461DEB527E4B514ED5F3F5CFC8D03343CC422E78AEE15A4802D3DCE8D",
+      "feature_key": "P02-AUTO-42454c1f",
+      "feature_slug": "eva-ecosystem-partnerships",
+      "processed_at": "2025-11-25T23:54:14.6648887Z",
+      "original_filename": "eva-ecosystem-partnerships.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-b6acb76d-eva-external-customer-support.md",
+      "hash": "7FA2720868577EFA1FCF907A39C9EFCFFD01D507779FFA6A1D1BCD8958C4BF96",
+      "feature_key": "P02-AUTO-b6acb76d",
+      "feature_slug": "eva-external-customer-support",
+      "processed_at": "2025-11-25T23:54:16.393819Z",
+      "original_filename": "eva-external-customer-support.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-9516f425-eva-feature-flags-ab-testing.md",
+      "hash": "CE7B3AF7BFF65E723A0E34E691836A07C7D047AAA13B42859AA98800718B771D",
+      "feature_key": "P02-AUTO-9516f425",
+      "feature_slug": "eva-feature-flags-ab-testing",
+      "processed_at": "2025-11-25T23:54:18.0876942Z",
+      "original_filename": "eva-feature-flags-ab-testing.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-77e66685-eva-github-projects-dashboard-agent.md",
+      "hash": "3AE8824AC01FBBAC83C532E008AF867652E5425DB3EA7FF3DF253AE3F5AC9734",
+      "feature_key": "P02-AUTO-77e66685",
+      "feature_slug": "eva-github-projects-dashboard-agent",
+      "processed_at": "2025-11-25T23:54:19.7744475Z",
+      "original_filename": "eva-github-projects-dashboard-agent.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-455c2289-eva-learning-cms.md",
+      "hash": "D9B4105FD606F9A2A3BF11CFD667D823EAFD89E43DBE82DCF371E43CF6F7C8E4",
+      "feature_key": "P02-AUTO-455c2289",
+      "feature_slug": "eva-learning-cms",
+      "processed_at": "2025-11-25T23:54:21.5025712Z",
+      "original_filename": "eva-learning-cms.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-2436041b-eva-learning-community-forum.md",
+      "hash": "98F6C79DA9D317DD78840FE0E4FE5EE002A4EC293766E68FBA69EF255A9FDC39",
+      "feature_key": "P02-AUTO-2436041b",
+      "feature_slug": "eva-learning-community-forum",
+      "processed_at": "2025-11-25T23:54:23.2972246Z",
+      "original_filename": "eva-learning-community-forum.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-02cd2b1a-eva-learning-lab-environments.md",
+      "hash": "085A3D62711855C4349E3025C7CBFE8468662AE502A900F2094EBC92264981CD",
+      "feature_key": "P02-AUTO-02cd2b1a",
+      "feature_slug": "eva-learning-lab-environments",
+      "processed_at": "2025-11-25T23:54:25.1143211Z",
+      "original_filename": "eva-learning-lab-environments.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-dc5664df-eva-learning-progress-tracking.md",
+      "hash": "5890FD6416203E72738CD35F700F5D606EA62C64E29F290F59092572E7E5160C",
+      "feature_key": "P02-AUTO-dc5664df",
+      "feature_slug": "eva-learning-progress-tracking",
+      "processed_at": "2025-11-25T23:54:26.9110638Z",
+      "original_filename": "eva-learning-progress-tracking.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-e04de10b-eva-liveops-alerting.md",
+      "hash": "1CBA3820B688987E2FBF76F93D13C52252CE5F6948CD80254AC0B945BB3FF5D6",
+      "feature_key": "P02-AUTO-e04de10b",
+      "feature_slug": "eva-liveops-alerting",
+      "processed_at": "2025-11-25T23:54:28.7567925Z",
+      "original_filename": "eva-liveops-alerting.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-cd08da34-eva-liveops-command-center.md",
+      "hash": "05FB88EC78527CE6624A037D59A3BA24A37964C5A97020BC9DE26C8BD7261915",
+      "feature_key": "P02-AUTO-cd08da34",
+      "feature_slug": "eva-liveops-command-center",
+      "processed_at": "2025-11-25T23:54:30.4945936Z",
+      "original_filename": "eva-liveops-command-center.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-15284f7f-eva-machine-trust-knowledge-brief.md",
+      "hash": "E0A51F0CBEEDE585F15C39D46691F3FB4E7E576EE8DE551A4359C3E0C7747275",
+      "feature_key": "P02-AUTO-15284f7f",
+      "feature_slug": "eva-machine-trust-knowledge-brief",
+      "processed_at": "2025-11-25T23:54:32.2356299Z",
+      "original_filename": "eva-machine-trust-knowledge-brief.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-b5f0ef80-eva-marketplace-internal-tools-community.md",
+      "hash": "E85FF9EEE3546AA3E9F710DB1895DBF815E41CE2C768B324AB8D6E4EB78C4E83",
+      "feature_key": "P02-AUTO-b5f0ef80",
+      "feature_slug": "eva-marketplace-internal-tools-community",
+      "processed_at": "2025-11-25T23:54:33.9227555Z",
+      "original_filename": "eva-marketplace-internal-tools-community.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-190deea0-eva-mobile-app.md",
+      "hash": "BBA94D7722F357E7A2A14D1018EA3FCF5753A217FE25A92B27DAF2F88A8B59C7",
+      "feature_key": "P02-AUTO-190deea0",
+      "feature_slug": "eva-mobile-app",
+      "processed_at": "2025-11-25T23:54:35.6902565Z",
+      "original_filename": "eva-mobile-app.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-a682816a-eva-multi-tenant-architecture.md",
+      "hash": "B9A253853EF3431BEDB40D04C41D9262EFD04F4C0A623E1634F148F94CE19404",
+      "feature_key": "P02-AUTO-a682816a",
+      "feature_slug": "eva-multi-tenant-architecture",
+      "processed_at": "2025-11-25T23:54:37.4787047Z",
+      "original_filename": "eva-multi-tenant-architecture.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-d4a76a69-eva-notification-system.md",
+      "hash": "38A15B468B62DB9B3D7B2E7A2B675DCB61D707E4A57F639DCCE4D4684A40A82D",
+      "feature_key": "P02-AUTO-d4a76a69",
+      "feature_slug": "eva-notification-system",
+      "processed_at": "2025-11-25T23:54:39.2495994Z",
+      "original_filename": "eva-notification-system.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-1b29c66a-eva-os-app-integrations.md",
+      "hash": "B0B3D8DBBFB1482F62F35A16C145CA64CEFEE284590D92EBEFC482B60E3CF04B",
+      "feature_key": "P02-AUTO-1b29c66a",
+      "feature_slug": "eva-os-app-integrations",
+      "processed_at": "2025-11-25T23:54:40.9449457Z",
+      "original_filename": "eva-os-app-integrations.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-b2fe2ebd-eva-os-context-awareness.md",
+      "hash": "9DE619E74F2BE135683B48380954DE4215B6C2E822215AB2F5DF308BDACD647C",
+      "feature_key": "P02-AUTO-b2fe2ebd",
+      "feature_slug": "eva-os-context-awareness",
+      "processed_at": "2025-11-25T23:54:42.6328944Z",
+      "original_filename": "eva-os-context-awareness.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-df70fd31-eva-os-deployment-models.md",
+      "hash": "E4486CA055BE7FE49FA61983F34428D001CD76C122D6496C65E609A1D79C9955",
+      "feature_key": "P02-AUTO-df70fd31",
+      "feature_slug": "eva-os-deployment-models",
+      "processed_at": "2025-11-25T23:54:44.3360415Z",
+      "original_filename": "eva-os-deployment-models.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-ff62ae64-eva-os-extension.md",
+      "hash": "0F2EC7B023CB800436419860BFDF206312EC6E56352931971A04F94EC16EDF31",
+      "feature_key": "P02-AUTO-ff62ae64",
+      "feature_slug": "eva-os-extension",
+      "processed_at": "2025-11-25T23:54:46.0469064Z",
+      "original_filename": "eva-os-extension.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-4e50db4e-eva-os-security-sandbox.md",
+      "hash": "61ADFDCE907B7EC61A3472DAE8FDB96727CBC457A0A141721993B7DE9CD10F43",
+      "feature_key": "P02-AUTO-4e50db4e",
+      "feature_slug": "eva-os-security-sandbox",
+      "processed_at": "2025-11-25T23:54:47.989204Z",
+      "original_filename": "eva-os-security-sandbox.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-aa6d083b-eva-os-system-service.md",
+      "hash": "AB0518DCAB9D496AD253E4717F94C0F56A5F909FFDC694A6F7290C5F66E3525C",
+      "feature_key": "P02-AUTO-aa6d083b",
+      "feature_slug": "eva-os-system-service",
+      "processed_at": "2025-11-25T23:54:49.7155967Z",
+      "original_filename": "eva-os-system-service.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-5105e37f-eva-os-ui-components.md",
+      "hash": "09C28A21064911FB330BDE5654332F4979CC052E8731FBABA31C54886F6DA659",
+      "feature_key": "P02-AUTO-5105e37f",
+      "feature_slug": "eva-os-ui-components",
+      "processed_at": "2025-11-25T23:54:51.4174931Z",
+      "original_filename": "eva-os-ui-components.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-e98d37e2-eva-os-voice-activation.md",
+      "hash": "4C10DF7FEE405304E84020E62F8BF02ABF6CB896D5D3756BD5341965EA5960FC",
+      "feature_key": "P02-AUTO-e98d37e2",
+      "feature_slug": "eva-os-voice-activation",
+      "processed_at": "2025-11-25T23:54:53.1886332Z",
+      "original_filename": "eva-os-voice-activation.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-44f54e95-eva-portability-and-ai-pairing.md",
+      "hash": "E2FFBB74B2231D343D9DBEBFE6324A70430998F0A94858804DF0DFE87E6D78C4",
+      "feature_key": "P02-AUTO-44f54e95",
+      "feature_slug": "eva-portability-and-ai-pairing",
+      "processed_at": "2025-11-25T23:54:54.9009206Z",
+      "original_filename": "eva-portability-and-ai-pairing.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-6f5e576c-eva-portal-landing-page.md",
+      "hash": "697AA04C243FBC94984CE412856BE990A233CB5CD56132C1A439B17B7327FA06",
+      "feature_key": "P02-AUTO-6f5e576c",
+      "feature_slug": "eva-portal-landing-page",
+      "processed_at": "2025-11-25T23:54:56.6215782Z",
+      "original_filename": "eva-portal-landing-page.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-fb61ffa5-eva-portal-navigation-ux.md",
+      "hash": "F01E575EDF4A7FFBB937DC7087741A8AFCDF53E298F0C7DC1C890E741E9D0A23",
+      "feature_key": "P02-AUTO-fb61ffa5",
+      "feature_slug": "eva-portal-navigation-ux",
+      "processed_at": "2025-11-25T23:54:58.45668Z",
+      "original_filename": "eva-portal-navigation-ux.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-55706a26-eva-portal-sso-user-profiles.md",
+      "hash": "396EC6EF077857E8FE949007DC2B715F66B65CEDC428C0A3172F66B8BB1AE696",
+      "feature_key": "P02-AUTO-55706a26",
+      "feature_slug": "eva-portal-sso-user-profiles",
+      "processed_at": "2025-11-25T23:55:00.1736134Z",
+      "original_filename": "eva-portal-sso-user-profiles.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-b973ec65-eva-production-spaces.md",
+      "hash": "AF72BDCF7C631487CA427F811B36C4F97B70401B8B9EBE6501A140BE8CABC9A0",
+      "feature_key": "P02-AUTO-b973ec65",
+      "feature_slug": "eva-production-spaces",
+      "processed_at": "2025-11-25T23:55:01.8825311Z",
+      "original_filename": "eva-production-spaces.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-1becc476-eva-pubsec-info-assistant-assets.md",
+      "hash": "E753B816596544BD072B6ED5C3B6F8A15602197C5ECA14662095D04C238A986E",
+      "feature_key": "P02-AUTO-1becc476",
+      "feature_slug": "eva-pubsec-info-assistant-assets",
+      "processed_at": "2025-11-25T23:55:03.5957133Z",
+      "original_filename": "eva-pubsec-info-assistant-assets.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-590908df-eva-sandbox-spaces.md",
+      "hash": "55EB0A35B9777D1612E9E61C4735E544216DC661F4AB3BFFD3358D3CF3AD4C07",
+      "feature_key": "P02-AUTO-590908df",
+      "feature_slug": "eva-sandbox-spaces",
+      "processed_at": "2025-11-25T23:55:05.3084171Z",
+      "original_filename": "eva-sandbox-spaces.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-8f14eaa0-eva-space-management.md",
+      "hash": "9880E920B7724843CC313C9AA78BB7B1EF85E49FCF37F21D3E37D9D536158061",
+      "feature_key": "P02-AUTO-8f14eaa0",
+      "feature_slug": "eva-space-management",
+      "processed_at": "2025-11-25T23:55:07.0426112Z",
+      "original_filename": "eva-space-management.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-ab59cafa-eva-tool-code-review-helper.md",
+      "hash": "991128698691A8EBFFDD81C1BAF9B3CA016F68593732C13261D3021A640DD1FF",
+      "feature_key": "P02-AUTO-ab59cafa",
+      "feature_slug": "eva-tool-code-review-helper",
+      "processed_at": "2025-11-25T23:55:08.8501632Z",
+      "original_filename": "eva-tool-code-review-helper.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-678d0724-eva-tool-data-analysis-copilot.md",
+      "hash": "63458D80E59115D64E165FDAE9CEE927CA76001F47DF9C51F1B244BD9869CA19",
+      "feature_key": "P02-AUTO-678d0724",
+      "feature_slug": "eva-tool-data-analysis-copilot",
+      "processed_at": "2025-11-25T23:55:10.5846525Z",
+      "original_filename": "eva-tool-data-analysis-copilot.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-536fbe32-eva-tool-document-summarizer.md",
+      "hash": "D3A3EDB5B5429C3E642C995D2016C07E9961244FCA086F19F528BE4A978DE0D5",
+      "feature_key": "P02-AUTO-536fbe32",
+      "feature_slug": "eva-tool-document-summarizer",
+      "processed_at": "2025-11-25T23:55:12.283776Z",
+      "original_filename": "eva-tool-document-summarizer.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-dfaa9026-eva-tool-email-draft-assistant.md",
+      "hash": "05F8CF1E992D5BE9BC09075D0A99FE8BAB45253ACD2608E55BF395B8FA5E4C16",
+      "feature_key": "P02-AUTO-dfaa9026",
+      "feature_slug": "eva-tool-email-draft-assistant",
+      "processed_at": "2025-11-25T23:55:13.9594922Z",
+      "original_filename": "eva-tool-email-draft-assistant.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-05a17442-eva-tool-meeting-transcription.md",
+      "hash": "C3371B5289A2EFD4833ED7050FF2E650E42547B4D67FF8C5B66B7711BF0DA493",
+      "feature_key": "P02-AUTO-05a17442",
+      "feature_slug": "eva-tool-meeting-transcription",
+      "processed_at": "2025-11-25T23:55:15.7314461Z",
+      "original_filename": "eva-tool-meeting-transcription.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-913fcf09-eva-tools-marketplace.md",
+      "hash": "22E9750D5D1FD81B409B96A98F05CBDF76D4CB74328FFE8BB03FA1458DE1E7A3",
+      "feature_key": "P02-AUTO-913fcf09",
+      "feature_slug": "eva-tools-marketplace",
+      "processed_at": "2025-11-25T23:55:17.4218674Z",
+      "original_filename": "eva-tools-marketplace.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-1b5804ed-eva-vision-accessibility.md",
+      "hash": "BE2944D208137B9DFA50383EF776BF765FDF9B034C45A50CAD65A8D02F40569B",
+      "feature_key": "P02-AUTO-1b5804ed",
+      "feature_slug": "eva-vision-accessibility",
+      "processed_at": "2025-11-25T23:55:19.1074765Z",
+      "original_filename": "eva-vision-accessibility.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-bc590054-eva-vision-core-engine.md",
+      "hash": "51C13F8A236365FBBDE3896BD7420879BF37FDBB77CE487CD4E00909BDC4DCE0",
+      "feature_key": "P02-AUTO-bc590054",
+      "feature_slug": "eva-vision-core-engine",
+      "processed_at": "2025-11-25T23:55:20.7911165Z",
+      "original_filename": "eva-vision-core-engine.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-c2fa847e-eva-vision-database-drilldown.md",
+      "hash": "5F526B628CEC86856E0B5D6F0E616C7A9FB9572D366B59B10BF32A5D82FF95CE",
+      "feature_key": "P02-AUTO-c2fa847e",
+      "feature_slug": "eva-vision-database-drilldown",
+      "processed_at": "2025-11-25T23:55:22.6126307Z",
+      "original_filename": "eva-vision-database-drilldown.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-045d584b-eva-vision-powerbi-integration.md",
+      "hash": "4807E57B64C2ADA24D29D5EED0908C9A0A70179F57E330755FDF6DEB639CABCA",
+      "feature_key": "P02-AUTO-045d584b",
+      "feature_slug": "eva-vision-powerbi-integration",
+      "processed_at": "2025-11-25T23:55:24.3630797Z",
+      "original_filename": "eva-vision-powerbi-integration.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-3ae40f16-eva-vision-screenshot-analysis.md",
+      "hash": "EDC24F9A4D5D0F40AED6020CD80838800E50CA99A517A697F0E4A5EF4488913A",
+      "feature_key": "P02-AUTO-3ae40f16",
+      "feature_slug": "eva-vision-screenshot-analysis",
+      "processed_at": "2025-11-25T23:55:26.1287015Z",
+      "original_filename": "eva-vision-screenshot-analysis.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-c92a0ccc-eva-vision-voice-interface.md",
+      "hash": "695514558D77E4BE4A5F868647ED36E370F9778C9A45A954BCEDE4887FA5B138",
+      "feature_key": "P02-AUTO-c92a0ccc",
+      "feature_slug": "eva-vision-voice-interface",
+      "processed_at": "2025-11-25T23:55:27.8631991Z",
+      "original_filename": "eva-vision-voice-interface.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-a5c1c2aa-eva-wsl2-claude-integration.md",
+      "hash": "0C060ECCE50763C34DE482C309F9AD3F55D5DE5FA5C3A7E4FD80DD4A352860D5",
+      "feature_key": "P02-AUTO-a5c1c2aa",
+      "feature_slug": "eva-wsl2-claude-integration",
+      "processed_at": "2025-11-25T23:55:29.5685373Z",
+      "original_filename": "eva-wsl2-claude-integration.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-52421970-issue-draft-commands.md",
+      "hash": "B0471CD849231C0F4F0A47B357CDD550FC16263AF4E6A01C17F12984EC46BC1B",
+      "feature_key": "P02-AUTO-52421970",
+      "feature_slug": "issue-draft-commands",
+      "processed_at": "2025-11-25T23:55:31.2821492Z",
+      "original_filename": "issue-draft-commands.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-49b94f52-power-bi-dashboard-architecture.md",
+      "hash": "C89BE0B45D3A3472CA2D0D9F182C94DF475FC466A3795F82C75A8DE93B9AB268",
+      "feature_key": "P02-AUTO-49b94f52",
+      "feature_slug": "power-bi-dashboard-architecture",
+      "processed_at": "2025-11-25T23:55:33.0143334Z",
+      "original_filename": "power-bi-dashboard-architecture.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-32da9fa8-user-request-backlog.md",
+      "hash": "A71B2A5FD3F69050917F81111D08CC12158AB70DE96655DFABE458C4E88FB951",
+      "feature_key": "P02-AUTO-32da9fa8",
+      "feature_slug": "user-request-backlog",
+      "processed_at": "2025-11-25T23:55:34.6972009Z",
+      "original_filename": "user-request-backlog.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-55d30b64-CDD-ARCHIVE-REPORT-2025-01-27.md",
+      "hash": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "feature_key": "P02-AUTO-55d30b64",
+      "feature_slug": "cdd-archive-report-2025-01-27",
+      "processed_at": "2025-11-27T12:40:06.4281865Z",
+      "original_filename": "CDD-ARCHIVE-REPORT-2025-01-27.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-db5474de-CDD-CONSOLIDATION-COMPLETE-REPORT-2025-01-27.md",
+      "hash": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "feature_key": "P02-AUTO-db5474de",
+      "feature_slug": "cdd-consolidation-complete-report-2025-01-27",
+      "processed_at": "2025-11-27T12:40:08.0945665Z",
+      "original_filename": "CDD-CONSOLIDATION-COMPLETE-REPORT-2025-01-27.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-f9c2f2c8-CDD-CONSOLIDATION-REPORT-2025-01-27.md",
+      "hash": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "feature_key": "P02-AUTO-f9c2f2c8",
+      "feature_slug": "cdd-consolidation-report-2025-01-27",
+      "processed_at": "2025-11-27T12:40:09.7647773Z",
+      "original_filename": "CDD-CONSOLIDATION-REPORT-2025-01-27.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-c50eaeca-CDD-ECOSYSTEM-FINAL-REPORT-2025-01-27.md",
+      "hash": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "feature_key": "P02-AUTO-c50eaeca",
+      "feature_slug": "cdd-ecosystem-final-report-2025-01-27",
+      "processed_at": "2025-11-27T12:40:11.4039176Z",
+      "original_filename": "CDD-ECOSYSTEM-FINAL-REPORT-2025-01-27.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-edca00b3-CDD-STANDARDIZATION-REPORT-2025-01-27.md",
+      "hash": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "feature_key": "P02-AUTO-edca00b3",
+      "feature_slug": "cdd-standardization-report-2025-01-27",
+      "processed_at": "2025-11-27T12:40:13.068312Z",
+      "original_filename": "CDD-STANDARDIZATION-REPORT-2025-01-27.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-40310dfc-CHATGPT-REPO-STATUS.md",
+      "hash": "B4DF013BFDBB0442DDBFDE31DA746635065CF5AA98B904BD87B479A814DFD970",
+      "feature_key": "P02-AUTO-40310dfc",
+      "feature_slug": "chatgpt-repo-status",
+      "processed_at": "2025-11-27T12:40:14.7305673Z",
+      "original_filename": "CHATGPT-REPO-STATUS.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-96acd085-COPILOT-README.md",
+      "hash": "0160E12AE5777BC51771A5E5A34646B258CE9BA7A46BF62EC110405FE1CCE860",
+      "feature_key": "P02-AUTO-96acd085",
+      "feature_slug": "copilot-readme",
+      "processed_at": "2025-11-27T12:40:16.3654895Z",
+      "original_filename": "COPILOT-README.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-462b22f6-CREATE-EVA-REPOS.md",
+      "hash": "028D73C2B90CA9332E118B5652218309987C32ACD8A4C28BE21A538D98807353",
+      "feature_key": "P02-AUTO-462b22f6",
+      "feature_slug": "create-eva-repos",
+      "processed_at": "2025-11-27T12:40:17.9925131Z",
+      "original_filename": "CREATE-EVA-REPOS.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-0e1a1c0e-EVA-HUB.md",
+      "hash": "BD3AEE394D30C82B85DCE1DEECFEDCF7393F0951814DC1E948A53324D0CECB94",
+      "feature_key": "P02-AUTO-0e1a1c0e",
+      "feature_slug": "eva-hub",
+      "processed_at": "2025-11-27T12:40:19.6539202Z",
+      "original_filename": "EVA-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-d3b4ad52-EVA-ORCHESTRATOR-README.md",
+      "hash": "A408379D13F3EF165CA476FA29AD919ECA3655FBCF983C6CE59FC35F288B39BE",
+      "feature_key": "P02-AUTO-d3b4ad52",
+      "feature_slug": "eva-orchestrator-readme",
+      "processed_at": "2025-11-27T12:40:21.3246114Z",
+      "original_filename": "EVA-ORCHESTRATOR-README.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-7cc9e39b-EVA-PRODUCT-LIST.md",
+      "hash": "C7AE3C4CAFBB41C664C4FF758239552D8D73AEE989DA5BF1B97E0EC18B85BF27",
+      "feature_key": "P02-AUTO-7cc9e39b",
+      "feature_slug": "eva-product-list",
+      "processed_at": "2025-11-27T12:40:22.9500271Z",
+      "original_filename": "EVA-PRODUCT-LIST.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-3ff49165-eva-suite-full-tree.txt",
+      "hash": "A242DB5B17B4D4CD28D568A62A63C1888901D18F890CB7FA2F4E30197239737F",
+      "feature_key": "P02-AUTO-3ff49165",
+      "feature_slug": "eva-suite-full-tree",
+      "processed_at": "2025-11-27T12:40:24.5736687Z",
+      "original_filename": "eva-suite-full-tree.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-f0488585-GITHUB-TOKEN-SETUP.md",
+      "hash": "476583BCC499F14BFDB44FED046E955608175020117341C49678780F489F5E50",
+      "feature_key": "P02-AUTO-f0488585",
+      "feature_slug": "github-token-setup",
+      "processed_at": "2025-11-27T12:40:26.238863Z",
+      "original_filename": "GITHUB-TOKEN-SETUP.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-48dfe1bc-HEALTH-CHECK-REPORT.md",
+      "hash": "32505D478603FC467BB4E73D0F6E580CC9A46E88C2C7B8F86E4F98F64AB48A1B",
+      "feature_key": "P02-AUTO-48dfe1bc",
+      "feature_slug": "health-check-report",
+      "processed_at": "2025-11-27T12:40:27.9006661Z",
+      "original_filename": "HEALTH-CHECK-REPORT.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-ad903980-MARCO-CHEAT-SHEET.md",
+      "hash": "DCAC318CE55C948B9FCBADDE4B19CA3CF652F97EED371B12687445358FBB1881",
+      "feature_key": "P02-AUTO-ad903980",
+      "feature_slug": "marco-cheat-sheet",
+      "processed_at": "2025-11-27T12:40:29.5459074Z",
+      "original_filename": "MARCO-CHEAT-SHEET.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-b35e7598-MARCO-HUB.md",
+      "hash": "60D6E760BBBF7F1DA2B844B105E6FAC08F6441DCA6DC6CB9C5F95165B24F4B95",
+      "feature_key": "P02-AUTO-b35e7598",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-11-27T12:40:31.2216608Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-0123f746-PR_DESCRIPTION.md",
+      "hash": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "feature_key": "P02-AUTO-0123f746",
+      "feature_slug": "pr-description",
+      "processed_at": "2025-11-27T12:40:32.8548212Z",
+      "original_filename": "PR_DESCRIPTION.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-179ab0f1-PR_SUMMARY.md",
+      "hash": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "feature_key": "P02-AUTO-179ab0f1",
+      "feature_slug": "pr-summary",
+      "processed_at": "2025-11-27T12:40:34.4784304Z",
+      "original_filename": "PR_SUMMARY.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-479cd99b-QUICK-START.md",
+      "hash": "4CCC0F6447F24767ABF38D93BBAA46D0E7FAA96878DE73C6CB88CF9065E78CD1",
+      "feature_key": "P02-AUTO-479cd99b",
+      "feature_slug": "quick-start",
+      "processed_at": "2025-11-27T12:40:36.1447093Z",
+      "original_filename": "QUICK-START.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-12c6273c-README.md",
+      "hash": "49D9742F0CFE930590A88A4B6037217359F022101A2F6557F03587547E61ADB1",
+      "feature_key": "P02-AUTO-12c6273c",
+      "feature_slug": "readme",
+      "processed_at": "2025-11-27T12:40:37.7865751Z",
+      "original_filename": "README.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-70bbca07-READY-TO-CREATE.md",
+      "hash": "9316D4503DCA58F2A363FB00F00BDD9F23B79D117F83966EEB4852CECB85E6F2",
+      "feature_key": "P02-AUTO-70bbca07",
+      "feature_slug": "ready-to-create",
+      "processed_at": "2025-11-27T12:40:39.4126713Z",
+      "original_filename": "READY-TO-CREATE.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-6b0a1273-REPO-QUICK-REFERENCE.md",
+      "hash": "D23D865C10229FD227995A7D413010970E2B587EF3705DFE886B30E2147AFEB1",
+      "feature_key": "P02-AUTO-6b0a1273",
+      "feature_slug": "repo-quick-reference",
+      "processed_at": "2025-11-27T12:40:41.0695956Z",
+      "original_filename": "REPO-QUICK-REFERENCE.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-5e27bd11-requirements.txt",
+      "hash": "84C4DBE936663020BD3A42AA64E0B47EECDFAEA829775C67936CD8E4894BF324",
+      "feature_key": "P02-AUTO-5e27bd11",
+      "feature_slug": "requirements",
+      "processed_at": "2025-11-27T12:40:42.72842Z",
+      "original_filename": "requirements.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-f2417451-SAFE-DELETION-CHECKLIST.md",
+      "hash": "935614EEFF7C4FDA98A83D401C6C23D4810CCC584B5A17B3B81060F99D13D83A",
+      "feature_key": "P02-AUTO-f2417451",
+      "feature_slug": "safe-deletion-checklist",
+      "processed_at": "2025-11-27T12:40:44.3711096Z",
+      "original_filename": "SAFE-DELETION-CHECKLIST.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-9ee41ae0-START-HERE.md",
+      "hash": "3FC8D78128205A09BDD26606637BABB899E112AB316FEFF0471853A0B453C847",
+      "feature_key": "P02-AUTO-9ee41ae0",
+      "feature_slug": "start-here",
+      "processed_at": "2025-11-27T12:40:45.9904232Z",
+      "original_filename": "START-HERE.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-5b2966da-MARCO-HUB.md",
+      "hash": "CA8532C7296CCACEC45450AAB76DE2C129072DFFD1388A8F346B7BC50628C0DC",
+      "feature_key": "P02-AUTO-5b2966da",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-11-29T01:23:44.4676928Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-d55f2e19-READY-FOR-SPRINT.md",
+      "hash": "1F723C2E288B5D940E174309834FCD8C6B9110A16F7C5EAAD926581FBC69E77B",
+      "feature_key": "P02-AUTO-d55f2e19",
+      "feature_slug": "ready-for-sprint",
+      "processed_at": "2025-11-29T01:23:46.1717105Z",
+      "original_filename": "READY-FOR-SPRINT.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-9ecb00fb-MARCO-HUB.md",
+      "hash": "317B58DB5A41DB552534598D413B5BCABAC1D54197EBCB060AE6165A4D25AB26",
+      "feature_key": "P02-AUTO-9ecb00fb",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-11-29T12:36:16.9397999Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-2cd1e51d-task-result.txt",
+      "hash": "43193FF31BB8AEA8649B60378FEA947D47DA8A0922433B56E3EAD3CF43DE2FCE",
+      "feature_key": "P02-AUTO-2cd1e51d",
+      "feature_slug": "task-result",
+      "processed_at": "2025-11-29T12:36:18.6524898Z",
+      "original_filename": "task-result.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-0cf2ce4b-MARCO-HUB.md",
+      "hash": "9C8F22AD13F12DA28831A6B6491732479D2F07CA00899CE4B38F39758F71E80B",
+      "feature_key": "P02-AUTO-0cf2ce4b",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-11-30T06:28:34.9417021Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-98f6401d-task-result.txt",
+      "hash": "630FAFC480A600055A70BD64E3E2DA147AAE6C6B26F5CD0A0BE00C3448671E45",
+      "feature_key": "P02-AUTO-98f6401d",
+      "feature_slug": "task-result",
+      "processed_at": "2025-11-30T06:28:36.6043643Z",
+      "original_filename": "task-result.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-b52462dc-MARCO-HUB.md",
+      "hash": "FE62DDC3CB45BD96059FBAA9631DA1414A839C98126CD0BE0A7E4561BED0AD6D",
+      "feature_key": "P02-AUTO-b52462dc",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-12-01T06:32:13.9811537Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-c4f17ed2-task-result.txt",
+      "hash": "266EB31773926A5DC0AD60781BAA8DD4F04E0B5BF0D5928E2D82D2F8AFD499E8",
+      "feature_key": "P02-AUTO-c4f17ed2",
+      "feature_slug": "task-result",
+      "processed_at": "2025-12-01T06:32:15.6869393Z",
+      "original_filename": "task-result.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-d4c851ee-MARCO-HUB.md",
+      "hash": "4C43911EA00E7C492D344ED8D21FFAC446A8C05A8A343BED3EADDC493EC896E6",
+      "feature_key": "P02-AUTO-d4c851ee",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-12-03T01:26:47.6569389Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-691b81d5-README.md",
+      "hash": "18DE45B587A5F96AF57DA487DE86716B8102BD809341E760A73427E0E3E751C1",
+      "feature_key": "P02-AUTO-691b81d5",
+      "feature_slug": "readme",
+      "processed_at": "2025-12-03T01:26:49.3523795Z",
+      "original_filename": "README.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-27d72aa8-MARCO-HUB.md",
+      "hash": "473C9BA0B6C47AB2277901B689F7C53C466F4E3CCB68B3FD15EA5D4C7656E77A",
+      "feature_key": "P02-AUTO-27d72aa8",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-12-07T01:43:28.2648249Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-8bd5b1a2-READY-FOR-SPRINT.md",
+      "hash": "21E5148990CD85DC38E52BC0728EEFB3A9F8B381BA1FAEB13E165D4380A47F0A",
+      "feature_key": "P02-AUTO-8bd5b1a2",
+      "feature_slug": "ready-for-sprint",
+      "processed_at": "2025-12-07T01:43:29.9638748Z",
+      "original_filename": "READY-FOR-SPRINT.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-a9419f29-READY-TO-CREATE.md",
+      "hash": "8C93D4183D3B4C27B524828CFB324F8592200BAC18344E2B2B9B89FD3BBEC4E3",
+      "feature_key": "P02-AUTO-a9419f29",
+      "feature_slug": "ready-to-create",
+      "processed_at": "2025-12-07T01:43:31.6113988Z",
+      "original_filename": "READY-TO-CREATE.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-8f10b536-task-result.txt",
+      "hash": "738EA93E8CE20E5DB3AB099FD7A511BCDCED0E6D97C6B81348D986210C088DF1",
+      "feature_key": "P02-AUTO-8f10b536",
+      "feature_slug": "task-result",
+      "processed_at": "2025-12-07T01:43:33.2596019Z",
+      "original_filename": "task-result.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-3b7c5b6f-MARCO-HUB.md",
+      "hash": "D23A4D16696947033CAE11499EEB59A15B5519FA0198DE515240960DFFDECB72",
+      "feature_key": "P02-AUTO-3b7c5b6f",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-12-07T06:27:23.2844283Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-3fc7c655-p02-req-001-eva-data-model.md",
+      "hash": "F9B8C7C6301AA6557AFB1E8C50A26837AFF5E469D6F129FB0F5B507E6438CDB9",
+      "feature_key": "P02-AUTO-3fc7c655",
+      "feature_slug": "p02-req-001-eva-data-model",
+      "processed_at": "2025-12-07T11:31:16.8522579Z",
+      "original_filename": "p02-req-001-eva-data-model.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-02fe0f05-copilot.readme.md",
+      "hash": "FA60B943360A3D3D99AD727515DEF07EC00E1346A30C0896C3517FB4C78295B7",
+      "feature_key": "P02-AUTO-02fe0f05",
+      "feature_slug": "copilotreadme",
+      "processed_at": "2025-12-08T01:27:36.6524059Z",
+      "original_filename": "copilot.readme.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-78e9ddee-README.md",
+      "hash": "D64C74B12A30B06D92E9F6F8FF0F9566BF62FF578A48B201C05B18733DD76793",
+      "feature_key": "P02-AUTO-78e9ddee",
+      "feature_slug": "readme",
+      "processed_at": "2025-12-08T01:27:38.3235108Z",
+      "original_filename": "README.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-f405e061-MARCO-HUB.md",
+      "hash": "C30FC77F73D32EF1C9FA21B9401357EF023E00F692D484A6AEC6FD0AB6EE5D1A",
+      "feature_key": "P02-AUTO-f405e061",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-12-08T06:33:34.9165064Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-8699eb17-ARCHITECTURE-DECISION-EVA-SOVEREIGN-UI.md",
+      "hash": "E8F4E65335690C8E7490F87750D58A4C0FB459110EE3E8E51386CD266CEC353D",
+      "feature_key": "P02-AUTO-8699eb17",
+      "feature_slug": "architecture-decision-eva-sovereign-ui",
+      "processed_at": "2025-12-09T12:41:52.9472257Z",
+      "original_filename": "ARCHITECTURE-DECISION-EVA-SOVEREIGN-UI.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-1b8ae36a-DAY-1-COMPLETION-REPORT.md",
+      "hash": "2FFEAD7DB8B57676ED82781603D70CC1F37396D690253B388C8373B1042D4AB9",
+      "feature_key": "P02-AUTO-1b8ae36a",
+      "feature_slug": "day-1-completion-report",
+      "processed_at": "2025-12-09T12:41:54.6624986Z",
+      "original_filename": "DAY-1-COMPLETION-REPORT.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-9a299ee9-DAY-2-PROGRESS-REPORT.md",
+      "hash": "7A89DB6412ECDEE389198D4D4CF56047DD95987AA6DF78E8E0C2343E32557D15",
+      "feature_key": "P02-AUTO-9a299ee9",
+      "feature_slug": "day-2-progress-report",
+      "processed_at": "2025-12-09T12:41:56.3001604Z",
+      "original_filename": "DAY-2-PROGRESS-REPORT.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-f619e922-FRONTEND-ANALYSIS-SUMMARY.md",
+      "hash": "4022EDD8E98444A01C7C336F3C19434695D77C935AA18DC93B54F1337A1D1385",
+      "feature_key": "P02-AUTO-f619e922",
+      "feature_slug": "frontend-analysis-summary",
+      "processed_at": "2025-12-09T12:41:57.987454Z",
+      "original_filename": "FRONTEND-ANALYSIS-SUMMARY.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-0e712671-FRONTEND-PARALLELIZATION-PLAN.md",
+      "hash": "A68259D39D37284CD993FE6364CA4411AC34C68D2E89B82F0220D33EB22D8041",
+      "feature_key": "P02-AUTO-0e712671",
+      "feature_slug": "frontend-parallelization-plan",
+      "processed_at": "2025-12-09T12:41:59.6407244Z",
+      "original_filename": "FRONTEND-PARALLELIZATION-PLAN.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-04ecf144-MARCO-HUB.md",
+      "hash": "6ADE1A3A42818E603E6BE67CF5655D0F517FE162AB918D2B72EB58E039A82BE8",
+      "feature_key": "P02-AUTO-04ecf144",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-12-09T12:42:01.2793848Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-0170391b-OPTION-3-EXECUTION-STATUS.md",
+      "hash": "8A85366659A89CF111417F09370DE23617F85AA257C9A0B8E672FF9DDDF9E788",
+      "feature_key": "P02-AUTO-0170391b",
+      "feature_slug": "option-3-execution-status",
+      "processed_at": "2025-12-09T12:42:02.9243242Z",
+      "original_filename": "OPTION-3-EXECUTION-STATUS.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-75bf7bd5-WEEK-1-AGENT-1-TEST-FIXES.md",
+      "hash": "E9369DBEC5A15511F0ED21AEB25097D55AD826A523018DF906579A888DBE6D35",
+      "feature_key": "P02-AUTO-75bf7bd5",
+      "feature_slug": "week-1-agent-1-test-fixes",
+      "processed_at": "2025-12-09T12:42:04.6015252Z",
+      "original_filename": "WEEK-1-AGENT-1-TEST-FIXES.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-45b85794-WEEK-1-AGENT-2-GC-COMPONENTS.md",
+      "hash": "4D55DCC7837ED63C40B172BC302CF7DDBCCF88EFE2039A3EE3E0CE67AA575FE1",
+      "feature_key": "P02-AUTO-45b85794",
+      "feature_slug": "week-1-agent-2-gc-components",
+      "processed_at": "2025-12-09T12:42:06.2632343Z",
+      "original_filename": "WEEK-1-AGENT-2-GC-COMPONENTS.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-60c4a62e-WEEK-1-AGENTS-3-4-5-DOCS-PUBLISH-A11Y.md",
+      "hash": "D045D623202B0F99452DCA9FAF4A433C522ABEE755FD39922F4A65DA520DC834",
+      "feature_key": "P02-AUTO-60c4a62e",
+      "feature_slug": "week-1-agents-3-4-5-docs-publish-a11y",
+      "processed_at": "2025-12-09T12:42:07.9109224Z",
+      "original_filename": "WEEK-1-AGENTS-3-4-5-DOCS-PUBLISH-A11Y.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-a7a52ef3-WEEK-1-IMPLEMENTATION-PLAN.md",
+      "hash": "959861322711BDB463FD94D1DB98E4974FE1552F13A1AE438729D1A943B1F68C",
+      "feature_key": "P02-AUTO-a7a52ef3",
+      "feature_slug": "week-1-implementation-plan",
+      "processed_at": "2025-12-09T12:42:09.6376276Z",
+      "original_filename": "WEEK-1-IMPLEMENTATION-PLAN.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-d96a3925-WORK-PACKAGE-0-DUAL-APPROACH-EXECUTION.md",
+      "hash": "72BCF1B592D6716918CC8DCCF78F120AD869F6432A0E6CA78691F520A77415D5",
+      "feature_key": "P02-AUTO-d96a3925",
+      "feature_slug": "work-package-0-dual-approach-execution",
+      "processed_at": "2025-12-09T12:42:11.2997642Z",
+      "original_filename": "WORK-PACKAGE-0-DUAL-APPROACH-EXECUTION.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-533c3448-WORK-PACKAGE-1-LIT-WC-COMPLETION.md",
+      "hash": "B2F7389C0E3D5A78D211604F6CB802757D309EDA15A959AB5401C7236F1CA007",
+      "feature_key": "P02-AUTO-533c3448",
+      "feature_slug": "work-package-1-lit-wc-completion",
+      "processed_at": "2025-12-09T12:42:12.9621429Z",
+      "original_filename": "WORK-PACKAGE-1-LIT-WC-COMPLETION.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-840d0d1d-WORK-PACKAGE-2-REACT-FIRST.md",
+      "hash": "DC0375A046DEDFEE86E10B0FC357A170DA440E78B6DA20D1B916C96384DA22B8",
+      "feature_key": "P02-AUTO-840d0d1d",
+      "feature_slug": "work-package-2-react-first",
+      "processed_at": "2025-12-09T12:42:14.5878125Z",
+      "original_filename": "WORK-PACKAGE-2-REACT-FIRST.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-fe5881b7-WORK-PACKAGE-3-5-FRONTEND-APPS.md",
+      "hash": "20ED683C00935637D7665B45B20391DBE3674DCE9A1B84445435DFDFD4EC9E07",
+      "feature_key": "P02-AUTO-fe5881b7",
+      "feature_slug": "work-package-3-5-frontend-apps",
+      "processed_at": "2025-12-09T12:42:16.2179339Z",
+      "original_filename": "WORK-PACKAGE-3-5-FRONTEND-APPS.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-7ef505ec-task-result.txt",
+      "hash": "4586130AC3CFCAA1DC4586EE70AF81BBF469605A709EDE6A9D1A1631300EA346",
+      "feature_key": "P02-AUTO-7ef505ec",
+      "feature_slug": "task-result",
+      "processed_at": "2025-12-10T01:28:56.7777275Z",
+      "original_filename": "task-result.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-d155202e-MARCO-HUB.md",
+      "hash": "5367B816765A4A7F0CCC7F3CD15747E734756BB2C50F116062192C7074628617",
+      "feature_key": "P02-AUTO-d155202e",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-12-10T06:31:44.376875Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-8c511711-task-result.txt",
+      "hash": "8FE4D3E45850FA98372596441F6BC47B8F815C6100D6E77025AFABC9F19C65C7",
+      "feature_key": "P02-AUTO-8c511711",
+      "feature_slug": "task-result",
+      "processed_at": "2025-12-10T06:31:46.0903954Z",
+      "original_filename": "task-result.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-1e2d4c72-MARCO-HUB.md",
+      "hash": "DBFF251833FF88725F04BBDB785BD5284D399F207CFBC1F5B6E30FC0345C8855",
+      "feature_key": "P02-AUTO-1e2d4c72",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-12-11T12:43:09.2528027Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-c236fe05-README.md",
+      "hash": "E4B8931BED82F4FC6ACC3927CEA22603196DDDCD5FADA6E369A37BEEFDF7A31E",
+      "feature_key": "P02-AUTO-c236fe05",
+      "feature_slug": "readme",
+      "processed_at": "2025-12-11T12:43:10.9508887Z",
+      "original_filename": "README.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-33071727-task-result.txt",
+      "hash": "BDAF644039579769AD907AD24203CF3B9BC7AAECA6E143FCC1D2AB76001CD1BD",
+      "feature_key": "P02-AUTO-33071727",
+      "feature_slug": "task-result",
+      "processed_at": "2025-12-11T18:28:58.8943398Z",
+      "original_filename": "task-result.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-0f5a006f-EVA-META-INTEGRATION-PLAN.md",
+      "hash": "1986EB5743DA9D22FA254BB7E7E5CB06ADB2529D127703E12C07410874D3EA95",
+      "feature_key": "P02-AUTO-0f5a006f",
+      "feature_slug": "eva-meta-integration-plan",
+      "processed_at": "2025-12-12T01:38:24.8370307Z",
+      "original_filename": "EVA-META-INTEGRATION-PLAN.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-8a516d62-EVA-PRODUCT-LIST.md",
+      "hash": "2032195B78EA0CA845D0165752082920EFDB474F79BC05B18D592B4E21211872",
+      "feature_key": "P02-AUTO-8a516d62",
+      "feature_slug": "eva-product-list",
+      "processed_at": "2025-12-12T01:38:26.5534282Z",
+      "original_filename": "EVA-PRODUCT-LIST.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-2c9d536b-EVA-RAG-AICOE-PRESENTATION.md",
+      "hash": "6C130C32E5A4DDEB0D5A0F690611592D86AC07AF7FE94029B48EDEF3B9BF3A18",
+      "feature_key": "P02-AUTO-2c9d536b",
+      "feature_slug": "eva-rag-aicoe-presentation",
+      "processed_at": "2025-12-12T01:38:28.2221166Z",
+      "original_filename": "EVA-RAG-AICOE-PRESENTATION.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-c3193987-EVA-SUITE-ESDC-INTRODUCTION.md",
+      "hash": "EF0EEF92DADE07C17BE5A749A80EE90093AAD38D574215F63D97355706D2F354",
+      "feature_key": "P02-AUTO-c3193987",
+      "feature_slug": "eva-suite-esdc-introduction",
+      "processed_at": "2025-12-12T01:38:29.9316396Z",
+      "original_filename": "EVA-SUITE-ESDC-INTRODUCTION.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-f80395c2-FINOPS-EVA-RAG-COST-ESTIMATE.md",
+      "hash": "89C2E9ADF2CFCCDCE6980265C55F07D820D3FEBA08D97E39DA1AB17CE8B547B7",
+      "feature_key": "P02-AUTO-f80395c2",
+      "feature_slug": "finops-eva-rag-cost-estimate",
+      "processed_at": "2025-12-12T01:38:31.5818644Z",
+      "original_filename": "FINOPS-EVA-RAG-COST-ESTIMATE.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-3f6705ce-PRIORITY-0-CENTRAL-COMMAND-DASHBOARD.md",
+      "hash": "B3781B6277BB5074F0CDEB30A0104A66AA721CF9CB5C2CC3460E12E0E548924D",
+      "feature_key": "P02-AUTO-3f6705ce",
+      "feature_slug": "priority-0-central-command-dashboard",
+      "processed_at": "2025-12-12T01:38:33.2575543Z",
+      "original_filename": "PRIORITY-0-CENTRAL-COMMAND-DASHBOARD.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-ac44d989-PRODUCTION-READINESS-INDEX-COMPLETE.md",
+      "hash": "D1AA53DC29E5445DA2A836686DC7916177966B7656D3ADB09BA6C5BC38CD8CF5",
+      "feature_key": "P02-AUTO-ac44d989",
+      "feature_slug": "production-readiness-index-complete",
+      "processed_at": "2025-12-12T01:38:34.9180401Z",
+      "original_filename": "PRODUCTION-READINESS-INDEX-COMPLETE.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-93b1e128-PRODUCTION-READINESS-INDEX.md",
+      "hash": "1C5754B86EA42EB394974CC55F1812403EF2A898941110E84CCCC712ADF2A988",
+      "feature_key": "P02-AUTO-93b1e128",
+      "feature_slug": "production-readiness-index",
+      "processed_at": "2025-12-12T01:38:36.5800586Z",
+      "original_filename": "PRODUCTION-READINESS-INDEX.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-827bbfac-QUALITATIVE-ASSESSMENT.md",
+      "hash": "CCDBE714A819FF9FBCDDE2343DC90E124A92EA4F960734AF9E8A35D6A6F032F6",
+      "feature_key": "P02-AUTO-827bbfac",
+      "feature_slug": "qualitative-assessment",
+      "processed_at": "2025-12-12T01:38:38.276562Z",
+      "original_filename": "QUALITATIVE-ASSESSMENT.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-ac6ca828-SESSION-HANDOFF-META-INTEGRATION.md",
+      "hash": "B120508E84FBCE2B04D20470DA13B5FBBD6D80AAC71926A30332F5C290EF3624",
+      "feature_key": "P02-AUTO-ac6ca828",
+      "feature_slug": "session-handoff-meta-integration",
+      "processed_at": "2025-12-12T01:38:39.9214748Z",
+      "original_filename": "SESSION-HANDOFF-META-INTEGRATION.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-5577535c-SPRINT-REVIEW-2025-12-07.md",
+      "hash": "3CF09C55139B86B75B58F2AC7330968F71B11CDD7050A775302EA93B2BFFA733",
+      "feature_key": "P02-AUTO-5577535c",
+      "feature_slug": "sprint-review-2025-12-07",
+      "processed_at": "2025-12-12T01:38:41.5679488Z",
+      "original_filename": "SPRINT-REVIEW-2025-12-07.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-c9d3aab2-task-result.txt",
+      "hash": "016A14AF60F1F3A2935AB2F9B1650C8D284F49ADCA98637C19E7C5A68B96D53B",
+      "feature_key": "P02-AUTO-c9d3aab2",
+      "feature_slug": "task-result",
+      "processed_at": "2025-12-12T01:38:43.2455747Z",
+      "original_filename": "task-result.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-21f8e68c-MARCO-HUB.md",
+      "hash": "911752BB8B24E322DB23A03D85EBA58ACA6023381D8E25C844AE95BCBA13C617",
+      "feature_key": "P02-AUTO-21f8e68c",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-12-12T06:31:50.0075919Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-bcaa24e8-task-result.txt",
+      "hash": "6353D37ACB1ED500A7A52BA1C00676CAB2A21F9345304C8622F0F4BCD5A05D30",
+      "feature_key": "P02-AUTO-bcaa24e8",
+      "feature_slug": "task-result",
+      "processed_at": "2025-12-12T06:31:51.6756313Z",
+      "original_filename": "task-result.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-8338a22c-GC-AGENTIC-FRAMEWORK-INDEX.md",
+      "hash": "51E248D128CB1C9EEF90B6A439E83FCF9B9765EE04166929D2BD3C1EECE247C0",
+      "feature_key": "P02-AUTO-8338a22c",
+      "feature_slug": "gc-agentic-framework-index",
+      "processed_at": "2025-12-12T12:41:21.5018201Z",
+      "original_filename": "GC-AGENTIC-FRAMEWORK-INDEX.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-479951a9-GC-AGENTIC-FRAMEWORK-QUICK-REF.md",
+      "hash": "CA613853675024C4E45ADF9A71402E061F0E69F9CBCE96A8C8AF1C6CB2E99213",
+      "feature_key": "P02-AUTO-479951a9",
+      "feature_slug": "gc-agentic-framework-quick-ref",
+      "processed_at": "2025-12-12T12:41:23.1963614Z",
+      "original_filename": "GC-AGENTIC-FRAMEWORK-QUICK-REF.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-2d42ccea-GC-AGENTIC-FRAMEWORK-SUMMARY.md",
+      "hash": "3302E270EF05DDE9D47882C34887B3B86FE1A29D96DD9CAC5C074270EB3D0FBC",
+      "feature_key": "P02-AUTO-2d42ccea",
+      "feature_slug": "gc-agentic-framework-summary",
+      "processed_at": "2025-12-12T12:41:24.8552505Z",
+      "original_filename": "GC-AGENTIC-FRAMEWORK-SUMMARY.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-08ed33ec-task-result.txt",
+      "hash": "55D7D312D0BDCB676F608E715EFD78F5B6A00FCE6E2898300BB6E603245BA916",
+      "feature_key": "P02-AUTO-08ed33ec",
+      "feature_slug": "task-result",
+      "processed_at": "2025-12-12T12:41:26.5335021Z",
+      "original_filename": "task-result.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-80e4c778-task-result.txt",
+      "hash": "18DE03E1A78DC9132A6DAB893363AD56EE90E537521E074E79E454FE81DA6672",
+      "feature_key": "P02-AUTO-80e4c778",
+      "feature_slug": "task-result",
+      "processed_at": "2025-12-12T18:31:04.7786758Z",
+      "original_filename": "task-result.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-b2a34d57-requirements.txt",
+      "hash": "06A85F51AFAB2C9F576AFFB75A8F4C23057ED11C56858E13F74924FEF5C88070",
+      "feature_key": "P02-AUTO-b2a34d57",
+      "feature_slug": "requirements",
+      "processed_at": "2025-12-13T01:24:52.9627675Z",
+      "original_filename": "requirements.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-cf6047b7-task-result.txt",
+      "hash": "4C857930A9F524E5F4537D05AB780BA1C0593F9286A8C653560C4BF0592784DC",
+      "feature_key": "P02-AUTO-cf6047b7",
+      "feature_slug": "task-result",
+      "processed_at": "2025-12-13T01:24:54.6246052Z",
+      "original_filename": "task-result.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-13b5303d-MARCO-HUB.md",
+      "hash": "05C162C2337CE643079855957B422C14B223B926DCB97DFC27D268504F8F15D9",
+      "feature_key": "P02-AUTO-13b5303d",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-12-13T06:28:58.8105398Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-a909716b-MARCO-HUB.md",
+      "hash": "EB581E585A2F2FE7CF7BE8383FF0F8F09661098E9C53D18EAC633ED7EE9C9727",
+      "feature_key": "P02-AUTO-a909716b",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-12-14T06:29:05.2145167Z",
+      "original_filename": "MARCO-HUB.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-aae970e3-GARBAGE-CLEANUP-PLAN.md",
+      "hash": "3C728A5182975BA47100C82515583A94DA22127529B63E50FA9D94E0673E77AE",
+      "feature_key": "P02-AUTO-aae970e3",
+      "feature_slug": "garbage-cleanup-plan",
+      "processed_at": "2025-12-15T01:42:18.3052239Z",
+      "original_filename": "GARBAGE-CLEANUP-PLAN.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-c57356f3-GARBAGE-CLEANUP-QUICKREF.md",
+      "hash": "1351F33514248747D536675CC58D2E1237854988B4B891F1548E17701913AE08",
+      "feature_key": "P02-AUTO-c57356f3",
+      "feature_slug": "garbage-cleanup-quickref",
+      "processed_at": "2025-12-15T01:42:20.0679686Z",
+      "original_filename": "GARBAGE-CLEANUP-QUICKREF.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-b4da652f-P23-P21-INTEGRATION-SUMMARY.md",
+      "hash": "93270CDF709744A36121BC7D20B4E5288ACB3B34A48CD024BB63F9C16C453317",
+      "feature_key": "P02-AUTO-b4da652f",
+      "feature_slug": "p23-p21-integration-summary",
+      "processed_at": "2025-12-15T01:42:21.7646388Z",
+      "original_filename": "P23-P21-INTEGRATION-SUMMARY.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-7a1e47d2-QUALITY-ASSESSMENT-EVA-CHAT-VS-EVA-UI.md",
+      "hash": "EF1BD22E19CF156AC90F0B661C19D02DCCF8E29C416B5C7B8B22C4989711E5B8",
+      "feature_key": "P02-AUTO-7a1e47d2",
+      "feature_slug": "quality-assessment-eva-chat-vs-eva-ui",
+      "processed_at": "2025-12-15T01:42:23.4444387Z",
+      "original_filename": "QUALITY-ASSESSMENT-EVA-CHAT-VS-EVA-UI.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-ee4924cc-temp-issue-57.txt",
+      "hash": "31D7E513C410CC288F28CBEFF7B9C31B6B060CD999C09B98549C442B0DC8E8D7",
+      "feature_key": "P02-AUTO-ee4924cc",
+      "feature_slug": "temp-issue-57",
+      "processed_at": "2025-12-15T01:42:25.199207Z",
+      "original_filename": "temp-issue-57.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-6635cc54-temp-issue-58.txt",
+      "hash": "5DEACAAA9535AFD0F83070CDB879D632CD7FC7DA1D29541E1B92C47173B24983",
+      "feature_key": "P02-AUTO-6635cc54",
+      "feature_slug": "temp-issue-58",
+      "processed_at": "2025-12-15T01:42:26.8613727Z",
+      "original_filename": "temp-issue-58.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-0a672e47-temp-issue-59.txt",
+      "hash": "669E3F968AAD70C8D493DEDF142C67FB5CAF2AC352A7A0C88C0259B6417DD23A",
+      "feature_key": "P02-AUTO-0a672e47",
+      "feature_slug": "temp-issue-59",
+      "processed_at": "2025-12-15T01:42:28.5097507Z",
+      "original_filename": "temp-issue-59.txt"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-93893b8b-WORKSPACE-CONTAMINATION-ASSESSMENT.md",
+      "hash": "F30561EEFBD61732BAC80B304032E28FD2B9C1130633230C47B838162E0C141B",
+      "feature_key": "P02-AUTO-93893b8b",
+      "feature_slug": "workspace-contamination-assessment",
+      "processed_at": "2025-12-15T01:42:30.1582081Z",
+      "original_filename": "WORKSPACE-CONTAMINATION-ASSESSMENT.md"
+    },
+    {
+      "path": "docs\\intake\\processed\\P02-AUTO-d3ff9fa5-MARCO-HUB.md",
+      "hash": "E43E90A03AA664FEEB85B7C1EAD06CE1B08F15FFD45674DC601788BAC017CC44",
+      "feature_key": "P02-AUTO-d3ff9fa5",
+      "feature_slug": "marco-hub",
+      "processed_at": "2025-12-15T06:34:25.0632168Z",
+      "original_filename": "MARCO-HUB.md"
+    }
+  ]
+}

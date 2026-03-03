@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "CDD-ARCHIVE-REPORT-2025-01-27",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/cdd-archive-report-2025-01-27",
+  "created_timestamp": "2025-11-27T12:40:06.4172943Z",
+  "source_intake_file": "CDD-ARCHIVE-REPORT-2025-01-27.md",
+  "feature_key": "P02-AUTO-55d30b64",
+  "feature_slug": "cdd-archive-report-2025-01-27"
+}

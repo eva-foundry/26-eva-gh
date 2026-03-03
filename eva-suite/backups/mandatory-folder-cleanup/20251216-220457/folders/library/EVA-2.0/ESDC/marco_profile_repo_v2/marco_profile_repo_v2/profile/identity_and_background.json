@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "exported_from": "ChatGPT (GPT-5.1 Thinking)",
+    "exported_at_iso8601": "2025-11-15T14:21:23.575073",
+    "source": "Long-running conversations with the user since 2024-09",
+    "version": "1.0"
+  },
+  "identity": {
+    "name": "Marco Presta",
+    "approx_age_range": "60s",
+    "location": {
+      "country": "Canada",
+      "city": "Boucherville",
+      "timezone": "America/Toronto"
+    },
+    "languages": [
+      "English (primary, fluent)",
+      "French (working proficiency; required for federal context)",
+      "Italian (background, not heavily used in chats)",
+      "Mandarin (beginner; studying)"
+    ]
+  },
+  "education_and_career": {
+    "education": [
+      "Bachelor's degree (field not explicitly specified)",
+      "Two Executive MBAs"
+    ],
+    "career_start_year": 1984,
+    "early_career_experience": [
+      "IBM mainframe (MVS, JES2, JCL, VM/CMS)",
+      "Enterprise systems and batch processing"
+    ],
+    "current_org": "Employment and Social Development Canada (ESDC) – Innovation, Information and Technology Branch (IITB)",
+    "current_role_summary": "Senior leader / architect in the AI Centre of Enablement (AICOE), driving the EVA platform and AI governance.",
+    "notable_experience": [
+      "Siebel CRM (versions 6–8) – strong appreciation for consistent, metadata-driven UI frameworks.",
+      "Extensive experience in large-scale IT projects, architecture, and governance."
+    ],
+    "typical_responsibilities": [
+      "Vision and architecture for EVA (EVA Chat, EVA Domain Assistant, EVA Foundation, EVA 2.0 / Agentic).",
+      "AI governance, privacy, and compliance (PIA, SAQ, RAIDE, AI Register, AIOB).",
+      "Multi-year budgeting, cost recovery models, FinOps and APIM cost attribution.",
+      "Stakeholder management across DGs, ADMs, PMD, Privacy, Security, BDM, ITAO, vendors.",
+      "Hands-on prototyping with Azure, GitHub, Copilot, React/Vite/Tailwind, Terraform, APIM."
+    ]
+  }
+}

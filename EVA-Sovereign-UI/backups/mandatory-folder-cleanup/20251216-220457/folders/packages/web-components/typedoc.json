@@ -1,0 +1,20 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["src/index.ts"],
+  "out": "docs/api",
+  "name": "EVA-Sovereign-UI API Documentation",
+  "theme": "default",
+  "readme": "none",
+  "excludePrivate": true,
+  "excludeProtected": false,
+  "includeVersion": true,
+  "categorizeByGroup": true,
+  "categoryOrder": [
+    "Components",
+    "Utilities",
+    "Types",
+    "*"
+  ],
+  "sort": ["source-order"],
+  "plugin": []
+}

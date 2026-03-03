@@ -1,0 +1,10 @@
+{
+  "title": "GC Agentic Framework - Comprehensive Summary",
+  "feature_key": "P02-AUTO-2d42ccea",
+  "created_timestamp": "2025-12-12T12:41:24.8513634Z",
+  "priority": "MEDIUM",
+  "status": "ready-for-crew",
+  "source_intake_file": "GC-AGENTIC-FRAMEWORK-SUMMARY.md",
+  "feature_slug": "gc-agentic-framework-summary",
+  "p02_artifacts_path": "docs/features/gc-agentic-framework-summary"
+}

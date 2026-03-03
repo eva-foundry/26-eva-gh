@@ -1,0 +1,273 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: packages/web-components/package-lock.json
+
+      - name: Install dependencies
+        run: |
+          cd packages/web-components
+          npm ci
+
+      - name: Build Web Components
+        run: |
+          cd packages/web-components
+          npm run build
+
+      - name: Build Storybook
+        run: |
+          cd packages/web-components
+          npm run build-storybook
+
+      - name: Generate API Documentation
+        run: |
+          cd packages/web-components
+          npm run docs
+
+      - name: Create deployment directory
+        run: |
+          mkdir -p public
+          mkdir -p public/storybook
+          mkdir -p public/docs
+          mkdir -p public/demos
+
+      - name: Copy Storybook
+        run: |
+          cp -r packages/web-components/storybook-static/* public/storybook/
+
+      - name: Copy API Docs
+        run: |
+          cp -r packages/web-components/docs/api/* public/docs/
+
+      - name: Copy Demos
+        run: |
+          cp -r demos/* public/demos/
+
+      - name: Copy Package Dist
+        run: |
+          cp -r packages/web-components/dist public/dist
+
+      - name: Create index.html
+        run: |
+          cat > public/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>EVA Sovereign UI - Government of Canada Web Components</title>
+            <style>
+              * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+              }
+              body {
+                font-family: "Noto Sans", Arial, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              .container {
+                max-width: 900px;
+                padding: 3rem;
+                text-align: center;
+              }
+              h1 {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+              }
+              .subtitle {
+                font-size: 1.5rem;
+                opacity: 0.9;
+                margin-bottom: 3rem;
+              }
+              .links {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+              }
+              .link-card {
+                background: rgba(255,255,255,0.1);
+                padding: 2rem;
+                border-radius: 12px;
+                text-decoration: none;
+                color: white;
+                transition: all 0.3s;
+                border: 2px solid rgba(255,255,255,0.2);
+              }
+              .link-card:hover {
+                background: rgba(255,255,255,0.2);
+                transform: translateY(-5px);
+                border-color: rgba(255,255,255,0.4);
+              }
+              .link-icon {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+              }
+              .link-title {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+              }
+              .link-description {
+                font-size: 0.95rem;
+                opacity: 0.9;
+              }
+              .badge {
+                background: rgba(255,255,255,0.3);
+                padding: 0.25rem 0.75rem;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                display: inline-block;
+                margin-top: 1rem;
+              }
+              .stats {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2rem;
+                margin: 3rem 0;
+                background: rgba(255,255,255,0.1);
+                padding: 2rem;
+                border-radius: 12px;
+              }
+              .stat {
+                text-align: center;
+              }
+              .stat-number {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+              }
+              .stat-label {
+                font-size: 0.9rem;
+                opacity: 0.9;
+              }
+              @media (max-width: 768px) {
+                h1 { font-size: 2rem; }
+                .subtitle { font-size: 1.125rem; }
+                .links { grid-template-columns: 1fr; }
+                .stats { grid-template-columns: repeat(2, 1fr); }
+              }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>EVA Sovereign UI</h1>
+              <p class="subtitle">Production-ready Web Components for Government of Canada</p>
+              
+              <div class="stats">
+                <div class="stat">
+                  <div class="stat-number">11</div>
+                  <div class="stat-label">Components</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-number">WCAG AAA</div>
+                  <div class="stat-label">Accessibility</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-number">2</div>
+                  <div class="stat-label">Languages</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-number">100%</div>
+                  <div class="stat-label">GC Compliant</div>
+                </div>
+              </div>
+
+              <div class="links">
+                <a href="./storybook/" class="link-card">
+                  <div class="link-icon">📖</div>
+                  <div class="link-title">Storybook</div>
+                  <div class="link-description">Interactive component documentation with 40+ live examples</div>
+                  <div class="badge">Recommended</div>
+                </a>
+
+                <a href="./docs/" class="link-card">
+                  <div class="link-icon">📚</div>
+                  <div class="link-title">API Documentation</div>
+                  <div class="link-description">Complete TypeScript API reference with props, events, and methods</div>
+                </a>
+
+                <a href="./demos/devkit/" class="link-card">
+                  <div class="link-icon">🚀</div>
+                  <div class="link-title">Quick Start Guide</div>
+                  <div class="link-description">Get started in 5 minutes with React, Vue, or Vanilla JS</div>
+                  <div class="badge">Start Here</div>
+                </a>
+
+                <a href="./demos/canada-chatbot/" class="link-card">
+                  <div class="link-icon">💬</div>
+                  <div class="link-title">Canada.ca Chatbot</div>
+                  <div class="link-description">Production demo with RAG integration and bilingual support</div>
+                </a>
+
+                <a href="./demos/gc-design-lab/" class="link-card">
+                  <div class="link-icon">🎨</div>
+                  <div class="link-title">GC Design Lab</div>
+                  <div class="link-description">Showcase of all 11 components with live, interactive examples</div>
+                </a>
+
+                <a href="https://github.com/MarcoPolo483/EVA-Sovereign-UI" class="link-card">
+                  <div class="link-icon">🐙</div>
+                  <div class="link-title">GitHub Repository</div>
+                  <div class="link-description">Source code, issues, and contribution guidelines</div>
+                </a>
+              </div>
+
+              <p style="margin-top: 3rem; opacity: 0.8; font-size: 0.9rem;">
+                © 2025 EVA-Sovereign-UI | POD-X | Marco Presta + GitHub Copilot
+              </p>
+            </div>
+          </body>
+          </html>
+          EOF
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

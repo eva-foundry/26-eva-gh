@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "CDD-INVENTORY-OLD.md",
+  "feature_key": "P02-AUTO-5e5d23ca",
+  "title": "CDD Inventory & Management Status",
+  "p02_artifacts_path": "docs/features/cdd-inventory-old",
+  "priority": "MEDIUM",
+  "feature_slug": "cdd-inventory-old",
+  "created_timestamp": "2025-11-25T23:53:48.6233281Z"
+}

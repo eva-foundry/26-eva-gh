@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-os-voice-activation.md",
+  "feature_key": "P02-AUTO-e98d37e2",
+  "title": "CDD: EVA OS Voice Activation",
+  "p02_artifacts_path": "docs/features/eva-os-voice-activation",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-os-voice-activation",
+  "created_timestamp": "2025-11-25T23:54:53.1766792Z"
+}

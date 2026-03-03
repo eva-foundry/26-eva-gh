@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-os-ui-components.md",
+  "feature_key": "P02-AUTO-5105e37f",
+  "title": "CDD: EVA OS UI Components",
+  "p02_artifacts_path": "docs/features/eva-os-ui-components",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-os-ui-components",
+  "created_timestamp": "2025-11-25T23:54:51.4046739Z"
+}

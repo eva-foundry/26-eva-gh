@@ -1,0 +1,21 @@
+{
+  "repo": "[REPLACE: repo-name]",
+  "pod": "[REPLACE: POD-F, POD-X, POD-O, POD-S-*]",
+  "purpose": "[REPLACE: Brief description of repository purpose]",
+  "owner": "[REPLACE: Primary agent/team responsible]",
+  "patterns": ["Three Concepts Pattern"],
+  "dependencies": [
+    "[REPLACE: List of dependencies, if any]"
+  ],
+  "qualityGates": [
+    "Three Concepts Pattern compliance",
+    "PowerShell script headers",
+    "Documentation completeness"
+  ],
+  "lastUpdated": "[REPLACE: YYYY-MM-DD]",
+  "bootstrap": {
+    "version": "1.0",
+    "date": "[REPLACE: YYYY-MM-DD]",
+    "script": "eva-orchestrator/scripts/bootstrap-repo.ps1"
+  }
+}

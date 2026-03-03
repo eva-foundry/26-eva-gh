@@ -1,0 +1,10 @@
+{
+  "p02_artifacts_path": "docs/features/priority-0-central-command-dashboard",
+  "priority": "MEDIUM",
+  "status": "ready-for-crew",
+  "title": "PRIORITY 0: Central Command Dashboard for EVA Suite",
+  "feature_slug": "priority-0-central-command-dashboard",
+  "created_timestamp": "2025-12-12T01:38:33.2533840Z",
+  "source_intake_file": "PRIORITY-0-CENTRAL-COMMAND-DASHBOARD.md",
+  "feature_key": "P02-AUTO-3f6705ce"
+}

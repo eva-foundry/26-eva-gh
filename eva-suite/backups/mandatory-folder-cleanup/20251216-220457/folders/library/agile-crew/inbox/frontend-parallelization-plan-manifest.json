@@ -1,0 +1,10 @@
+{
+  "feature_slug": "frontend-parallelization-plan",
+  "priority": "MEDIUM",
+  "feature_key": "P02-AUTO-0e712671",
+  "p02_artifacts_path": "docs/features/frontend-parallelization-plan",
+  "created_timestamp": "2025-12-09T12:41:59.6369996Z",
+  "title": "Frontend Implementation Parallelization Plan",
+  "source_intake_file": "FRONTEND-PARALLELIZATION-PLAN.md",
+  "status": "ready-for-crew"
+}

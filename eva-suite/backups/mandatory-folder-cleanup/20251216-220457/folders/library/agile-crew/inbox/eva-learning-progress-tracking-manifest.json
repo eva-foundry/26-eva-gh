@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-learning-progress-tracking.md",
+  "feature_key": "P02-AUTO-dc5664df",
+  "title": "CDD: EVA Learning Progress Tracking",
+  "p02_artifacts_path": "docs/features/eva-learning-progress-tracking",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-learning-progress-tracking",
+  "created_timestamp": "2025-11-25T23:54:26.9031688Z"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/workspace-contamination-assessment",
+  "feature_key": "P02-AUTO-93893b8b",
+  "title": "Workspace Contamination Assessment - EVA Chat Book Session",
+  "source_intake_file": "WORKSPACE-CONTAMINATION-ASSESSMENT.md",
+  "feature_slug": "workspace-contamination-assessment",
+  "priority": "MEDIUM",
+  "created_timestamp": "2025-12-15T01:42:30.1546020Z"
+}

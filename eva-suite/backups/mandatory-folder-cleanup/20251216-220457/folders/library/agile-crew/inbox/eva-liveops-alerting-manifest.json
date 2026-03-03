@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-liveops-alerting.md",
+  "feature_key": "P02-AUTO-e04de10b",
+  "title": "CDD: EVA LiveOps Alerting",
+  "p02_artifacts_path": "docs/features/eva-liveops-alerting",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-liveops-alerting",
+  "created_timestamp": "2025-11-25T23:54:28.7495611Z"
+}

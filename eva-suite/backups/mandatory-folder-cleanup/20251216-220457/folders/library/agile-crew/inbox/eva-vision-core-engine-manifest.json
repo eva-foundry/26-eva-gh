@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-vision-core-engine.md",
+  "feature_key": "P02-AUTO-bc590054",
+  "title": "CDD: EVA Vision Core Engine",
+  "p02_artifacts_path": "docs/features/eva-vision-core-engine",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-vision-core-engine",
+  "created_timestamp": "2025-11-25T23:55:20.7784486Z"
+}

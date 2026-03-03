@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "power-bi-dashboard-architecture.md",
+  "feature_key": "P02-AUTO-49b94f52",
+  "title": "Power BI Dashboard Suite - Architecture & Implementation",
+  "p02_artifacts_path": "docs/features/power-bi-dashboard-architecture",
+  "priority": "MEDIUM",
+  "feature_slug": "power-bi-dashboard-architecture",
+  "created_timestamp": "2025-11-25T23:55:33.0063665Z"
+}

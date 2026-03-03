@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/garbage-cleanup-quickref",
+  "feature_key": "P02-AUTO-c57356f3",
+  "title": "EVA Garbage Cleanup - Quick Reference",
+  "source_intake_file": "GARBAGE-CLEANUP-QUICKREF.md",
+  "feature_slug": "garbage-cleanup-quickref",
+  "priority": "MEDIUM",
+  "created_timestamp": "2025-12-15T01:42:20.0630441Z"
+}

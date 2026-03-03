@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-ecosystem-partnerships.md",
+  "feature_key": "P02-AUTO-42454c1f",
+  "title": "CDD: EVA Ecosystem Partnerships",
+  "p02_artifacts_path": "docs/features/eva-ecosystem-partnerships",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-ecosystem-partnerships",
+  "created_timestamp": "2025-11-25T23:54:14.6518446Z"
+}

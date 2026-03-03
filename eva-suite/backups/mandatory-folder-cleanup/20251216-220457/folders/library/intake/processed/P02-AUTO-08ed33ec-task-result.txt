@@ -1,0 +1,14 @@
+```json
+{
+  "status": "success",
+  "summary": "Consolidated the EVA Agentic Operating Manual from P01-P21 patterns into a comprehensive document.",
+  "files": [
+    {
+      "path": "docs/agentic/operating-manual.md",
+      "content": "# EVA Agentic Operating Manual\n\n## Introduction\nThis manual consolidates the operating procedures and guidelines for EVA agents, derived from patterns P01 to P21. It covers governance, safety protocols, coordination rules, and lifecycle phases essential for the effective functioning of EVA agents.\n\n## Governance\nEVA agents operate under a strict governance framework to ensure compliance with organizational policies and ethical standards. Key governance aspects include:\n- **Accountability**: Each agent's actions are logged and reviewed to maintain transparency.\n- **Compliance**: Agents must adhere to legal and regulatory requirements.\n- **Ethical Standards**: Agents are programmed to prioritize ethical decision-making.\n\n## Safety Protocols\nSafety is paramount in the operation of EVA agents. The following protocols are enforced:\n- **Risk Assessment**: Continuous evaluation of potential risks associated with agent actions.\n- **Fail-Safe Mechanisms**: Implementation of automatic shutdown procedures in case of anomalies.\n- **Emergency Response**: Predefined actions for agents to take in emergency situations.\n\n## Coordination Rules\nEffective coordination among EVA agents is crucial for achieving collective goals. Coordination rules include:\n- **Communication Protocols**: Standardized methods for agents to exchange information.\n- **Task Allocation**: Dynamic distribution of tasks based on agent capabilities and workload.\n- **Conflict Resolution**: Mechanisms to resolve disputes and ensure harmonious operation.\n\n## Lifecycle Phases\nEVA agents undergo several lifecycle phases, each with specific objectives and processes:\n- **Initialization**: Setup and configuration of agent parameters.\n- **Operation**: Active phase where agents perform assigned tasks.\n- **Maintenance**: Regular updates and diagnostics to ensure optimal performance.\n- **Decommissioning**: Safe and secure shutdown of agents at the end of their lifecycle.\n\n## Conclusion\nThis manual serves as a comprehensive guide for the operation of EVA agents, ensuring they function effectively and safely within their designated roles.",
+      "action": "create"
+    }
+  ],
+  "nextSteps": "Review the operating manual for completeness and accuracy. Ensure all dependencies are resolved and integrated into the manual as needed."
+}
+```

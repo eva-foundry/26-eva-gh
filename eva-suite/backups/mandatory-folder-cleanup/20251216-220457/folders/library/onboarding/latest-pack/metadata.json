@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2025-11-19T10:48:31.2275252Z",
+  "packageId": "onboarding-pack-20251119-104831Z",
+  "commit": "215ad18443b07b145986db6ef893ae484f4b930d",
+  "sprint": {
+    "name": "Sprint 01 – EVA Management Pod Launch",
+    "startDate": "2025-11-18",
+    "endDate": "2025-11-25"
+  },
+  "sources": [
+    "docs/sprint-kit/onboarding/bootstrap-checklist.md",
+    "docs/sprint-kit/onboarding/future-automation.md",
+    "docs/onboarding/README.md",
+    "sm-qa-toolbox/onboarding/README.md"
+  ],
+  "files": [
+    "docs/sprint-kit/onboarding/bootstrap-checklist.md",
+    "docs/sprint-kit/onboarding/future-automation.md",
+    "docs/onboarding/README.md",
+    "sm-qa-toolbox/onboarding/README.md"
+  ]
+}

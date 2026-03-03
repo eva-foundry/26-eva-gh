@@ -1,0 +1,85 @@
+{
+  "esdc": {
+    "title": "Empleo y Desarrollo Social de Canadá",
+    "titleShort": "ESDC",
+    "hero": {
+      "title": "Construyendo una fuerza laboral calificada, adaptable e inclusiva",
+      "description": "Acceda a servicios de empleo, beneficios y programas de apoyo que ayudan a los canadienses a tener éxito"
+    },
+    "programs": {
+      "title": "Programas y Servicios",
+      "ei": {
+        "title": "Seguro de Empleo",
+        "titleShort": "EI",
+        "description": "Asistencia financiera temporal mientras busca trabajo o mejora sus habilidades",
+        "details": "El Seguro de Empleo (EI) proporciona apoyo temporal de ingresos a canadienses desempleados mientras buscan trabajo o mejoran sus habilidades. Los beneficios regulares están disponibles para personas que pierden su trabajo sin culpa propia y han acumulado suficientes horas asegurables."
+      },
+      "oas": {
+        "title": "Seguridad de Vejez",
+        "titleShort": "OAS",
+        "description": "Pago mensual para personas mayores de 65 años o más",
+        "details": "La Seguridad de Vejez (OAS) es un pago mensual disponible para la mayoría de los canadienses de 65 años o más. No necesita haber trabajado para recibir OAS. La cantidad que recibe depende de cuánto tiempo ha vivido en Canadá después de los 18 años."
+      },
+      "cpp": {
+        "title": "Plan de Pensiones de Canadá",
+        "titleShort": "CPP",
+        "description": "Programa contributivo de pensión de jubilación para trabajadores canadienses",
+        "details": "El Plan de Pensiones de Canadá (CPP) es un programa contributivo de seguro social relacionado con los ingresos. Forma parte del sistema de ingresos de jubilación de Canadá. CPP proporciona beneficios básicos de jubilación, discapacidad y sobrevivientes."
+      }
+    },
+    "services": {
+      "jobSearch": {
+        "title": "Búsqueda de Empleo",
+        "description": "Encuentre oportunidades de empleo en todo Canadá con Job Bank",
+        "details": "Job Bank es el servicio nacional de empleo de Canadá. Busque miles de trabajos, explore tendencias del mercado laboral y acceda a herramientas de planificación de carrera para ayudarle a encontrar su próxima oportunidad."
+      },
+      "benefitsFinder": {
+        "title": "Buscador de Beneficios",
+        "description": "Descubra qué beneficios y servicios gubernamentales puede ser elegible para recibir",
+        "details": "Responda algunas preguntas simples para obtener una lista personalizada de beneficios y servicios federales, provinciales y territoriales para los que puede ser elegible."
+      }
+    }
+  },
+  "chat": {
+    "title": "Preguntar a EVA",
+    "subtitle": "Asistente Virtual de Empleo",
+    "placeholder": "¿Cómo puedo ayudarte hoy?",
+    "send": "Enviar",
+    "voice": "Entrada de voz",
+    "thinking": "EVA está pensando...",
+    "suggestedTopics": "Temas sugeridos:",
+    "topics": {
+      "ei": "Seguro de Empleo",
+      "oas": "Seguridad de Vejez",
+      "cpp": "Plan de Pensiones de Canadá",
+      "jobs": "Encontrar un trabajo"
+    }
+  },
+  "navigation": {
+    "skipToMain": "Saltar al contenido principal",
+    "home": "Inicio",
+    "programs": "Programas",
+    "services": "Servicios",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "copyright": "© Su Majestad el Rey en Derecho de España",
+    "privacy": "Privacidad",
+    "terms": "Términos y condiciones",
+    "accessibility": "Accesibilidad",
+    "canada": "España.es"
+  },
+  "common": {
+    "learnMore": "Aprende más",
+    "apply": "Aplicar ahora",
+    "english": "English",
+    "french": "Français",
+    "spanish": "Español",
+    "italian": "Italiano",
+    "german": "Deutsch",
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "close": "Cerrar"
+  }
+}

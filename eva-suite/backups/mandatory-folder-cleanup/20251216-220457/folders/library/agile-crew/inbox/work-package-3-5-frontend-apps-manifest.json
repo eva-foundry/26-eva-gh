@@ -1,0 +1,10 @@
+{
+  "feature_slug": "work-package-3-5-frontend-apps",
+  "priority": "MEDIUM",
+  "feature_key": "P02-AUTO-fe5881b7",
+  "p02_artifacts_path": "docs/features/work-package-3-5-frontend-apps",
+  "created_timestamp": "2025-12-09T12:42:16.2145241Z",
+  "title": "Work Package 3-5: Frontend Applications (eva-ui, eva-admin, eva-da-2)",
+  "source_intake_file": "WORK-PACKAGE-3-5-FRONTEND-APPS.md",
+  "status": "ready-for-crew"
+}

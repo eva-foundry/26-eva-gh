@@ -1,0 +1,49 @@
+{
+	"folders": [
+		{
+			"path": "../_SeniorAdv-office"
+		},
+		{
+			"path": "../-empty-workspace"
+		},
+		{
+			"path": "../eva-api"
+		},
+		{
+			"path": "../eva-apim-governance-poc"
+		},
+		{
+			"path": "../eva-docs"
+		},
+		{
+			"path": "../eva-meta"
+		},
+		{
+			"path": "../eva-metering"
+		},
+		{
+			"path": "../eva-openai"
+		},
+		{
+			"path": "../eva-rag"
+		},
+		{
+			"path": "../eva-sandbox"
+		},
+		{
+			"path": "../eva-suite"
+		},
+		{
+			"path": "../eva-ui"
+		},
+		{
+			"path": "../PubSec-Info-Assistant"
+		},
+		{
+			"path": "../eva-orchestrator"
+		},
+		{
+			"path": "."
+		}
+	]
+}

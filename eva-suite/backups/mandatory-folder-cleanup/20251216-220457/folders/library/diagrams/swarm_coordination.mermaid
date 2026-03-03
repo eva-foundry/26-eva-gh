@@ -1,0 +1,7 @@
+graph TD;
+    A[Identify Task] --> B{Form Swarm};
+    B -->|Yes| C[Assign Roles];
+    C --> D[Execute Task];
+    D --> E[Review Outcome];
+    E -->|Approved| F[Complete];
+    E -->|Rework| C;

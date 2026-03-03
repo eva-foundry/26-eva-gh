@@ -1,0 +1,88 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master, merge-spark-copilot]
+  pull_request:
+    branches: [main, master, merge-spark-copilot]
+
+jobs:
+  test:
+    name: Test & Lint
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run tests
+        run: npm test
+        
+      - name: Generate coverage report
+        run: npm run test:coverage
+        
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: false
+          
+      - name: Run TypeScript type check
+        run: npx tsc --noEmit
+        
+      - name: Run linter
+        run: npm run lint
+        continue-on-error: true
+      - name: Run style lint
+        run: npm run lint:styles
+        continue-on-error: true
+        
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build project
+        run: npm run build
+      - name: Generate status matrix
+        run: npm run status:matrix
+      - name: Upload status matrix
+        uses: actions/upload-artifact@v3
+        with:
+          name: completion-status
+          path: COMPLETION-STATUS.md
+          retention-days: 7
+        
+      - name: Check bundle size
+        run: |
+          du -sh dist/ || echo "No dist directory"
+          
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-output
+          path: dist/
+          retention-days: 7

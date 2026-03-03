@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-vision-voice-interface.md",
+  "feature_key": "P02-AUTO-c92a0ccc",
+  "title": "CDD: EVA Vision Voice Interface",
+  "p02_artifacts_path": "docs/features/eva-vision-voice-interface",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-vision-voice-interface",
+  "created_timestamp": "2025-11-25T23:55:27.8547695Z"
+}

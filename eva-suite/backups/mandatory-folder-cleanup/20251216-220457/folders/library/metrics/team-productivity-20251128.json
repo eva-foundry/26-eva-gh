@@ -1,0 +1,41 @@
+{
+  "Period": "Last 7 days",
+  "Commits": {
+    "ByAuthor": [
+      {
+        "Name": "Marco",
+        "Count": 27
+      },
+      {
+        "Name": "github-actions[bot]",
+        "Count": 3
+      }
+    ],
+    "Total": 30
+  },
+  "PullRequests": {
+    "AvgCycleTimeHours": 22.3,
+    "Total": 2,
+    "ByAuthor": [
+      {
+        "Name": "app/copilot-swe-agent",
+        "Count": 1
+      },
+      {
+        "Name": "app/github-actions",
+        "Count": 1
+      }
+    ],
+    "Merged": 1
+  },
+  "ActiveContributors": 5,
+  "Timestamp": "2025-11-28T11:15:27.2856591+00:00",
+  "Issues": {
+    "AvgCycleTimeHours": 0.0,
+    "Closed": 4,
+    "ByAuthor": {
+      "Name": "MarcoPolo483",
+      "Count": 4
+    }
+  }
+}

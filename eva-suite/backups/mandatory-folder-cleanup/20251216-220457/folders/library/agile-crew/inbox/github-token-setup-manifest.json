@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "🔑 GitHub Token Setup Guide",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/github-token-setup",
+  "created_timestamp": "2025-11-27T12:40:26.2353432Z",
+  "source_intake_file": "GITHUB-TOKEN-SETUP.md",
+  "feature_key": "P02-AUTO-f0488585",
+  "feature_slug": "github-token-setup"
+}

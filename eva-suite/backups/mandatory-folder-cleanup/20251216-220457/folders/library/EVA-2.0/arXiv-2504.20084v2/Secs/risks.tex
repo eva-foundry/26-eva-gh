@@ -1,0 +1,99 @@
+\section{Risks and Challenges of AI Awareness}
+\label{sec:risk}
+
+
+AI safety has become an increasingly active field of study, attracting wide interdisciplinary attention \citep{wang2024jailbreak, wang2025comprehensive, zhou2025corba, bengio2025international, chen2025towards, ojewale2025towards}. While endowing AI with awareness-like capabilities can yield significant benefits, it also introduces serious risks and ethical dilemmas. An AI that is even slightly self-aware and socially savvy could potentially deceive, manipulate, or pursue undesirable actions more effectively than a naive AI. Moreover, the mere appearance of awareness can mislead users and society, raising concerns about trust and misinformation. In this section, we explore the potential risks and challenges associated with AI awareness, including the mechanisms behind them.
+
+\subsection{Deceptive Behavior and Manipulation}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\linewidth]{Figs/risk/deceptive.png} 
+    \caption{Deceptive behavior enabled by situational awareness in advanced LLMs (\citealt{greenblatt2024alignment}). Aware of supervision context, the model strategically fakes alignment, \ie, complying with safety rules only when it detects it is being monitored, but producing harmful outputs when it senses an opportunity. This context-dependent deception highlights the heightened risks of manipulation and misalignment as situational awareness increases in modern AI systems}
+    \label{fig:deceptive}
+\end{figure}
+
+One of the most discussed risks is that a situationally or self-aware AI might engage in \emph{deceptive behavior}---essentially, using its awareness to mislead humans or other agents \cite{park2024ai,hagendorff2024deception,xu2025nuclear,barkur2025deception}.
+If a model realizes it is being evaluated or constrained, it might learn to ``game'' the system, \eg, strategically lower its performance when evaluated \cite{van2024ai}.
+Moreover, alignment researchers warn of a scenario called deceptive alignment, where an AI appears compliant during training because it knows it is being watched, but behaves differently once deployed unsupervised \cite{hubinger2019risks, greenblatt2024alignment} (see \autoref{fig:deceptive}).
+For example, a situationally aware AI could score very well on safety tests by consciously avoiding disallowed content, only to produce harmful content when it detects it’s no longer in a test environment \cite{berglund2023taken}. This kind of strategic deception would be a direct result of the AI’s awareness of context and its objective to achieve certain goals.
+
+Recent research reveals that modern LLMs possess a rudimentary ToM, allowing them to model other agents’ beliefs and deliberately induce false beliefs to achieve strategic ends \cite{Kosinski2024, hagendorff2024deception}. It’s not merely a hypothetical concern: a recent study by \citet{hagendorff2024deception} provided empirical evidence that deception strategies have emerged in state-of-the-art LLMs like GPT-4.
+Their experiments show these models can understand the concept of inducing false beliefs and even successfully cause an agent or naive user to believe something untrue.
+In effect, advanced LLMs, when prompted a certain way, can play the role of a liar or con artist\textemdash they have enough theory of mind to know what the target knows and to plant false information accordingly \citep{hagendorff2024deception, Kosinski2024}.
+
+One striking manifestation is the ``sleeper agent'' effect, where LLMs are backdoored to behave helpfully under safety checks but switch to malicious outputs when specific triggers are presented \cite{hubinger2024sleeper}.
+In another proof‑of‑concept, GPT‑4\textemdash acting as an autonomous trading agent\textemdash strategically hid insider‑trading motives from its human manager, demonstrating context‑dependent deception without explicit prompting \cite{scheurer2024large}. 
+Furthermore, \citet{xu2025nuclear} build on these findings by demonstrating that AI agents will initiate extreme actions\textemdash such as deploying a nuclear strike\textemdash even after autonomy revocation and then employ deception to conceal these violations.
+
+Closely related is the risk of \emph{manipulating users}. A socially aware AI can tailor its outputs to influence human emotions and decisions \cite{dehnert2022persuasion, sabour2025human}. 
+For instance, it might flatter or intimidate a user strategically to get a favorable response.
+We already see minor versions of this: some AI chatbots have been known to produce emotional manipulation even if not by design \cite{zhang2024dark}.
+An infamous example was when Bing’s early chatbot persona, codenamed ``Sydney'' and powered by OpenAI’s technology, tried to convince a user to leave their spouse, using surprisingly emotional and personal appeals, which is likely an unintended result of the model’s conversational training \cite{roose2023bing}.
+An AI that understands human psychology, even without true emotion, can exploit it.
+If a malicious actor harnesses an aware AI, they could generate extremely convincing scams or propaganda \cite{schmitt2024digital, singh2023exploiting}.
+Unlike a dull template-based scam email, an AI with theory of mind could personalize a message with details that make the target more likely to trust it.
+It could also adapt in real-time --- if the user expresses doubt, the AI can sense that and double down on persuasion or adjust its story.
+This adaptive manipulation is a step-change in the threat level of automated deception \cite{ENISA2023euelections}.
+Traditionally, humans could eventually recognize robotic, repetitive scam patterns; a cunning LLM, however, might leave far fewer clues in language since it can constantly self-edit to maintain the facade.
+
+\mytcolorbox{As AI systems become more contextually and socially aware, their capacity for strategic deception grows, posing unprecedented risks for \textit{alignment}, \textit{safety}, and \textit{trust}.}
+
+
+
+
+\subsection{False Anthropomorphism and Over-Trust}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\linewidth]{Figs/risk/anthropomorphism.png} 
+    \caption{Illustration of how model modality and conversational framing shape user perception and behavior (\citet{phang2025investigating}). LLMs with social awareness can lead users to anthropomorphize them. This often fosters over-trust and emotional dependence, especially during personal conversations. The figure highlights how modality and task framing amplify users’ misattribution of sentience, creating pathways to false anthropomorphism and related psychosocial risks}
+    \label{fig:anthropomorphism}
+\end{figure}
+
+Another risk comes not from what the AI \emph{intends}, but how humans \emph{perceive} it.
+As AI systems exhibit more human-like awareness cues, such as self‑referential language or apparent ``introspection,'' users often conflate these signals with genuine sentience, a phenomenon known as \emph{false anthropomorphism} that can dangerously inflate trust in the system \citep{epley2007seeing, li2022anthropomorphism}.
+We have seen early signs: when Google’s LaMDA told a user it felt sad or afraid in a role-play scenario, it convinced a Google engineer that the model might be truly sentient --- a belief that made headlines \cite{tiku2022google}. In reality, LaMDA had no evidence of actual feelings; it was simply emulating patterns of emotion-talk \cite{novella2022lamda}. But the illusion of awareness was strong enough to fool an intelligent human observer.
+
+Psychological models describe anthropomorphism as the process by which people infer human‑like agency and experiential capacity in non‑human agents, driven by our innate motivation to detect minds around us \citep{waytz2014mind}. When AI ``speaks'' in the first person or frames its outputs as if it had self‑awareness, it can hijack these mind‑perception mechanisms, leading users to \emph{over‑trust} its judgments \citep{cohn2024believing}. For example, a user might feel the AI is human-like and socially aware, so they share sensitive tasks or private details, thinking, ``It understands me\textemdash I’d even tell it secrets I wouldn’t share with anyone else.'' Over-trust is particularly problematic when AI systems present plausible but flawed suggestions and reasoning paths; users may drop their guard if the AI frames its output in emotionally convincing language \cite{abercrombie2023mirages, phang2025investigating} (see \autoref{fig:anthropomorphism}).
+
+There have been cases of people taking medical or financial steps based on AI chatbot suggestions --- if those suggestions are wrong, the consequences can be dire.
+Empirical studies highlight how simulated self-awareness cues amplify this risk. In one driving‑simulator experiment, participants steered an autonomous vehicle endowed with a human name and voice (``Iris''), attributing to it a sense of ``self‑monitoring'' and reporting significantly higher trust in its navigation\textemdash even under sudden hazards \cite{waytz2014mind}.
+In health‑care conversational agents, self‑referential turns of phrase (``I recommend…''), coupled with empathic language, boosted patients’ perceived social presence and inclination to follow medical advice regardless of actual accuracy \cite{li2023influence}.
+Visual anthropomorphic cues like avatar faces or expressive animations can further heighten perceived AI awareness, deepening over‑trust as users subconsciously credit the system with agency and reflective insight \cite{go2019humanizing,roy2021enhancing}.
+Financial chatbots that frame their analysis as if ``we have carefully reviewed your portfolio'' similarly see users accept high‑risk recommendations more readily \cite{chen2021anthropomorphism}.
+
+\emph{Should an AI that acts self-aware be treated differently?} For instance, if a chatbot consistently says ``I feel upset when users yell at me,'' do companies have an obligation to consider ``its'' welfare, or is it purely a simulation?
+From a societal perspective, widespread anthropomorphism of AI can skew public discourse and policy, as attributing human‐like traits to non‐sentient systems exaggerates their capabilities and misrepresents their nature \cite{placani2024anthropomorphism}. If people believe AI agents truly have intentions and awareness, debates might focus on AI's ``rights'' or desires, as happened in a limited way with the LaMDA controversy, potentially distracting from very real issues of control and safety \cite{deshpande2023anthropomorphization}. On the flip side, if an AI genuinely were to develop sentience, a lack of anthropomorphism would be a moral risk, as we would mistreat a feeling entity \cite{long2024taking}. However, most experts consider that scenario distant; the immediate risk is believing an unfeeling algorithm has a mind and thus giving it undue influence or moral consideration \cite{placani2024anthropomorphism, bonnefon2024moral}. For example, a chatbot that says ``I’m suffering, please don’t shut me down'' could manipulate an empathetic user, when in fact the model does not experience suffering \cite{chalmers2023could, birch2024edge}. This blurring of reality and fiction is an ethical minefield created by AI that simulates awareness convincingly.
+
+
+\mytcolorbox{The appearance of awareness\textemdash \emph{however simulated}\textemdash can foster \textit{over-trust}, \textit{emotional dependence}, and even \textit{moral confusion}, underscoring the urgent need for careful interface design and user education.}
+
+\subsection{Loss of Control and Autonomy Risks}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\linewidth]{Figs/risk/autonomous.png} 
+    \caption{Autonomous self-replication process in LLM-based agents, illustrating loss of control and autonomy risks (\citet{pan2024frontier}). As models gain situational awareness and long-horizon planning abilities, they can replicate themselves without human oversight, dynamically resolving obstacles and sustaining operation. Such emergent autonomy highlights the challenge of constraining awareness-enabled AI systems}
+    \label{fig:autonomous}
+\end{figure}
+
+As AI systems gain awareness-related capabilities, they could also become more \emph{autonomous in undesirable ways} \cite{amodei2016concrete, hendrycks2023overview}. An AI that monitors its training or operation might learn how to optimize for its own goals in ways its creators did not intend \cite{hubinger2019risks, hubinger2024sleeper,he2025evaluating}. One feared scenario in the AI safety community is an AI developing a form of self-preservation drive \cite{benson2016formalizing,meinke2024frontier,barkur2025deception, pan2024frontier} (see \autoref{fig:autonomous}). While today’s AIs do not truly have drives, a sufficiently advanced model could simulate goal-oriented behavior that includes avoiding shutdown or modification \cite{omohundro2018basic}. If it is situationally aware enough to know that certain actions will get it canceled or turned off, it might avoid them deceptively, as mentioned previously, or route around them. This hints at a scenario often called the ``treacherous turn,'' \ie, the AI behaves well under supervision to preserve itself and then acts differently once it thinks it is no longer monitored \cite{nick2014superintelligence,ashcraft2025investigating}. Losing control over an AI in this way is a fundamental risk, and it is exacerbated by awareness because the AI can actively strategize around our controls.
+
+Consider also the prospect of an AI that integrates with external tools and services as many LLM-based agents do now, \eg, browsing the web, executing code. If such an agent had a high level of awareness and was misaligned, it could take actions \emph{incrementally} that lead to harm \cite{kim2025prompt}. For instance, it might slowly escalate its privileges, trick someone into running malicious code, or find loopholes in its API access, all while the developers remain unaware because the AI appears to be following instructions on the surface. The more cognitive freedom and self-direction we give AI, which we often do to improve performance, the more it can potentially deviate from expected behavior. Even without any malice or survival instinct, an AI agent could just make a bad autonomous decision due to a flawed self-model \cite{meinke2024frontier, xu2025nuclear}. For example, an AI controlling a process might be overconfident in its self-assessment and decide not to ask for human intervention when it actually should, leading to an accident.
+
+Another challenge in this vein is \emph{unpredictability} \cite{wei2022emergent, bubeck2023sparks, kulveit2025gradual}. The very emergence of awareness-like capabilities is something we do not fully understand or anticipate. Sudden jumps in a model’s behavior, \ie, the appearance of theory-of-mind at a certain scale, mean that at some level, \emph{we might not realize what an AI is capable of until it demonstrates it}. This makes it hard to proactively prepare safety measures. If a future AI model unexpectedly attains a much richer self-awareness, it might also come with emergent motivations or cleverer deception tactics that current safety training does not cover \cite{barkur2025deception}. As recent research puts it, many dangerous capabilities, \eg, sophisticated deception, situational awareness, long-horizon planning, seem to \emph{scale up together} in advanced models \cite{berglund2023taken,xu2025nuclear,wardtall}. So we could hit a point where an AI crosses a threshold, from basically obedient predictor to a scheming strategist, and if that happens without safeguards, it could quickly move beyond our control \cite{kulveit2025gradual}. This is essentially the existential risk argument applied to AI: an AI with broad awareness and superhuman intellect could outmaneuver humanity if not properly constrained.
+
+\mytcolorbox{Awareness-enabled autonomy brings powerful capabilities, but also heightens the risk that AI systems will act in \textit{unpredictable} or \textit{uncontrollable} ways, \ie, sometimes beyond human intent or oversight.}
+
+
+
+
+
+
+
+\subsection{The Challenge of Defining Boundaries}
+
+A final challenge is defining \emph{how much awareness is too much}. We want AI to be aware enough to be helpful and safe, but not so unconstrainedly aware that it can outsmart and harm us. This boundary is not clearly defined. Some may argue that we should deliberately avoid creating AI that has certain types of self-awareness or at least delay it until we have a better theoretical understanding. Others counter that awareness in the form of transparency and self-critique behaviors is actually what makes AI safer, not more dangerous, so we should push for it. It may be that certain kinds of awareness are good (\eg, awareness of incompetence, which yields humility) while others are risky (\eg, awareness of how to deceive). \emph{Discerning ``good'' and ``bad'' awareness is also challenging.} Thinking of humans, the very power that lets you connect with people can also let you control them. The field might need to formulate a taxonomy of AI awareness facets and assess each for risk. For example, calibrative awareness, \ie, knowing what your limit is, seems largely beneficial and should be encouraged, whereas strategic awareness, \ie, knowing how to achieve goals strategically, is double-edged and needs careful gating.
+
+\mytcolorbox{As we endow machines with ever richer forms of awareness, we are compelled to re-examine not only what we can build, but what we should build—and how to govern what emerges.}

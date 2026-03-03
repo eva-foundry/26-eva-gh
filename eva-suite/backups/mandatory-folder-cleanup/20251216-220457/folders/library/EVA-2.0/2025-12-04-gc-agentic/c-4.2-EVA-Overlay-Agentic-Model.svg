@@ -1,0 +1,22 @@
+<svg width="700" height="900" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text { font-family: Arial, sans-serif; font-size: 18px; }
+    rect { stroke: black; stroke-width: 2; fill: white; }
+  </style>
+
+  <rect x="60" y="60" width="580" height="140" fill="#e8f0ff"/>
+  <text x="80" y="100">Level 3 — EVA Agentic</text>
+  <text x="80" y="130">Jarvis, P01–P15, LiveOps, EVA Core</text>
+
+  <rect x="60" y="240" width="580" height="140" fill="#f3faff"/>
+  <text x="80" y="280">Level 2 — EVA Domain Assistant 2.0</text>
+  <text x="80" y="310">RAG ingestion, Planner, Reviewer</text>
+
+  <rect x="60" y="420" width="580" height="140" fill="#ffffff"/>
+  <text x="80" y="460">Level 1 — EVA Chat</text>
+  <text x="80" y="490">Retrieval, Summaries, Drafts</text>
+
+  <rect x="60" y="600" width="580" height="140" fill="#fafafa"/>
+  <text x="80" y="640">Level 0 (Legacy Search)</text>
+
+</svg>

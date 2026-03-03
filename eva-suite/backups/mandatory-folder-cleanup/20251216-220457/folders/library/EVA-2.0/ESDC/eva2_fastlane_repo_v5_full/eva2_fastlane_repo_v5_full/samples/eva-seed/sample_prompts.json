@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "projects": {
+    "canadaLife": [
+      "Summarize the key benefits for a new Canada Life claimant.",
+      "Explain the eligibility criteria for this Canada Life scenario."
+    ],
+    "jurisprudence": [
+      "Find relevant CPP-D jurisprudence cases for a chronic illness scenario.",
+      "Summarize precedent for appeals involving late evidence submission."
+    ],
+    "admin": [
+      "Show me EVA DA usage stats for the last week (mock).",
+      "List the current projects and their themes."
+    ]
+  }
+}

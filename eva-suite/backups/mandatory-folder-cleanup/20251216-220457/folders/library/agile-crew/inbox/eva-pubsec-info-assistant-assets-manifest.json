@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-pubsec-info-assistant-assets.md",
+  "feature_key": "P02-AUTO-1becc476",
+  "title": "PubSec Info Assistant Assets Import Backlog",
+  "p02_artifacts_path": "docs/features/eva-pubsec-info-assistant-assets",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-pubsec-info-assistant-assets",
+  "created_timestamp": "2025-11-25T23:55:03.5818312Z"
+}

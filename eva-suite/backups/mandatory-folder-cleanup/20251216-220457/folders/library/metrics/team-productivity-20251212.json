@@ -1,0 +1,43 @@
+{
+  "Issues": {
+    "ByAuthor": {
+      "Count": 31,
+      "Name": "MarcoPolo483"
+    },
+    "AvgCycleTimeHours": 189.7,
+    "Closed": 31
+  },
+  "Commits": {
+    "ByAuthor": [
+      {
+        "Count": 18,
+        "Name": "EVA Queue Bot"
+      },
+      {
+        "Count": 9,
+        "Name": "EVA Memory Bot"
+      },
+      {
+        "Count": 2,
+        "Name": "Copilot"
+      },
+      {
+        "Count": 1,
+        "Name": "github-actions[bot]"
+      }
+    ],
+    "Total": 30
+  },
+  "Timestamp": "2025-12-12T11:17:19.7507430+00:00",
+  "Period": "Last 7 days",
+  "ActiveContributors": 6,
+  "PullRequests": {
+    "ByAuthor": {
+      "Count": 4,
+      "Name": "app/copilot-swe-agent"
+    },
+    "Merged": 2,
+    "Total": 4,
+    "AvgCycleTimeHours": 57.0
+  }
+}

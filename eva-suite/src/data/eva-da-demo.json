@@ -1,0 +1,54 @@
+{
+  "default_domain": "cppd",
+  "domains": [
+    {
+      "id": "cppd",
+      "label": "CPP-D (Disability)"
+    },
+    {
+      "id": "ei",
+      "label": "Employment Insurance"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "cppd_demo_1",
+      "domain": "cppd",
+      "question": "Is the claimant likely eligible for CPP-D if they have a severe and prolonged condition, stopped work 18 months ago, and meet the minimum contribution period?",
+      "answer": {
+        "decision": "Likely eligible (demo only)",
+        "explanation": "Based on the demo rules, a claimant may be eligible if the disability is both severe and prolonged, they have stopped work, and they meet the minimum contribution period (MCP). In this scenario, all three conditions are met.",
+        "conditions": [
+          "Severe impairment that prevents regular work.",
+          "Prolonged condition expected to last at least one year or lead to death.",
+          "Contributions paid in at least 4 of the last 6 years (simplified MCP rule)."
+        ],
+        "sources": [
+          "CPP-D Policy Manual – Severe and Prolonged criteria (demo reference).",
+          "CPP-D Adjudication Guidelines – Contribution requirements (demo reference)."
+        ],
+        "notes": "This is a static demo. In the real EVA DA, the answer would be backed by live RAG retrieval and a rule engine."
+      }
+    },
+    {
+      "id": "ei_demo_1",
+      "domain": "ei",
+      "question": "Am I likely eligible for regular EI if I worked 600 insurable hours and was laid off due to shortage of work?",
+      "answer": {
+        "decision": "Likely eligible (demo only)",
+        "explanation": "In this demo, a claimant laid off due to shortage of work with at least 600 insurable hours is treated as likely eligible for regular EI benefits, assuming other standard conditions are met.",
+        "conditions": [
+          "Reason for separation is shortage of work (no misconduct).",
+          "At least 420–700 insurable hours depending on regional unemployment (simplified here to 600).",
+          "Capable of and available for work (not assessed in this demo)."
+        ],
+        "sources": [
+          "EI Act – Regular benefits (demo reference).",
+          "EI Digest – Shortage of work vs misconduct (demo reference)."
+        ],
+        "notes": "Static demo only. Real EVA DA would verify hours, ROE codes and regional thresholds from authoritative data."
+      }
+    }
+  ],
+  "generic_disclaimer": "This EVA DA demo uses static mock data. It does not provide real eligibility decisions and must not be used for actual client files."
+}

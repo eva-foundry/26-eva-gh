@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/garbage-cleanup-plan",
+  "feature_key": "P02-AUTO-aae970e3",
+  "title": "EVA Garbage Cleanup Plan",
+  "source_intake_file": "GARBAGE-CLEANUP-PLAN.md",
+  "feature_slug": "garbage-cleanup-plan",
+  "priority": "MEDIUM",
+  "created_timestamp": "2025-12-15T01:42:18.2937963Z"
+}

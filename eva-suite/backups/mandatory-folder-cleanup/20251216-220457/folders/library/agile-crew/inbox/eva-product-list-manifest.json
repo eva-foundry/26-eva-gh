@@ -1,0 +1,10 @@
+{
+  "p02_artifacts_path": "docs/features/eva-product-list",
+  "priority": "MEDIUM",
+  "status": "ready-for-crew",
+  "title": "EVA Product Catalog",
+  "feature_slug": "eva-product-list",
+  "created_timestamp": "2025-12-12T01:38:26.5487819Z",
+  "source_intake_file": "EVA-PRODUCT-LIST.md",
+  "feature_key": "P02-AUTO-8a516d62"
+}

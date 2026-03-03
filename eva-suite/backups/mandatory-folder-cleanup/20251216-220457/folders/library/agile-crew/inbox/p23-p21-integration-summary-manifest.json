@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/p23-p21-integration-summary",
+  "feature_key": "P02-AUTO-b4da652f",
+  "title": "P23 + P21 Integration Summary",
+  "source_intake_file": "P23-P21-INTEGRATION-SUMMARY.md",
+  "feature_slug": "p23-p21-integration-summary",
+  "priority": "MEDIUM",
+  "created_timestamp": "2025-12-15T01:42:21.7611166Z"
+}

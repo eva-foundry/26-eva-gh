@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-vision-screenshot-analysis.md",
+  "feature_key": "P02-AUTO-3ae40f16",
+  "title": "CDD: EVA Vision Screenshot Analysis",
+  "p02_artifacts_path": "docs/features/eva-vision-screenshot-analysis",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-vision-screenshot-analysis",
+  "created_timestamp": "2025-11-25T23:55:26.1198249Z"
+}

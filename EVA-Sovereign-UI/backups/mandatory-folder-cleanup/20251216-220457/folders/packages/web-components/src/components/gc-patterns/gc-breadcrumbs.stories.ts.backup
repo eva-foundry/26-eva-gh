@@ -1,0 +1,629 @@
+import type { Meta, StoryObj } from '@storybook/web-components';
+import { html } from 'lit';
+import type { BreadcrumbItem } from '../src/components/gc-patterns/gc-breadcrumbs.js';
+import '../src/components/gc-patterns/gc-breadcrumbs.ts';
+
+/**
+ * GC Breadcrumbs Component
+ * 
+ * Navigation breadcrumb trail showing the user's path through the site hierarchy.
+ * Provides structured data support for SEO, responsive collapsing for mobile, and full accessibility.
+ * 
+ * ## Design Specifications
+ * - Must comply with https://design.canada.ca/common-design-patterns/breadcrumb-trail.html
+ * - Uses GC blue (#284162) for links
+ * - Lato font family for consistency
+ * - Schema.org BreadcrumbList structured data for SEO
+ * - Auto-collapses long trails on mobile
+ * - WCAG 2.2 AAA compliant
+ * - Bilingual EN-CA/FR-CA support
+ */
+const meta = {
+  title: 'GC Patterns/Breadcrumbs',
+  component: 'gc-breadcrumbs',
+  tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+The GC Breadcrumbs component provides a navigation trail showing the user's current location
+within the site hierarchy. It helps users understand where they are and navigate back to
+parent pages.
+
+### Key Features
+- **Structured Data**: Automatic Schema.org markup for SEO
+- **Responsive Collapse**: Long trails collapse on mobile with expand option
+- **Accessible Navigation**: Proper ARIA labels and semantic HTML
+- **Current Page Indicator**: Last item marked with aria-current="page"
+- **Customizable Separators**: Use  (default), /, or custom characters
+- **Event Tracking**: Emits gc-breadcrumb-click for analytics
+- **Bilingual Support**: French/English text switching
+
+### Compliance
+- Federal Identity Program (FIP) compliant
+- Treasury Board Secretariat (TBS) approved
+- Canada.ca design system requirement
+- WCAG 2.2 Level AAA accessibility
+- SEO optimized with structured data
+
+### Usage Note
+The last item in the breadcrumb trail is always the current page and is rendered as plain text
+(not a link) with aria-current="page". Links before it allow navigation to parent pages.
+        `,
+      },
+    },
+  },
+  argTypes: {
+    items: {
+      control: 'object',
+      description: 'Array of breadcrumb items with text and href',
+      table: {
+        type: { summary: 'BreadcrumbItem[]' },
+      },
+    },
+    separator: {
+      control: 'text',
+      description: 'Separator character between items',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '' },
+      },
+    },
+    autoCollapse: {
+      control: 'boolean',
+      description: 'Enable responsive collapse for long trails',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'true' },
+      },
+    },
+    maxItems: {
+      control: 'number',
+      description: 'Maximum items before collapsing (when autoCollapse is true)',
+      table: {
+        type: { summary: 'number' },
+        defaultValue: { summary: '3' },
+      },
+    },
+    compact: {
+      control: 'boolean',
+      description: 'Use compact mode with reduced padding',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+      },
+    },
+    inverted: {
+      control: 'boolean',
+      description: 'Use inverted colors for dark backgrounds',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+      },
+    },
+    showStructuredData: {
+      control: 'boolean',
+      description: 'Include Schema.org structured data for SEO',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'true' },
+      },
+    },
+    locale: {
+      control: 'select',
+      options: ['en-CA', 'fr-CA'],
+      description: 'Current locale (English or French Canadian)',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'en-CA' },
+      },
+    },
+  },
+} satisfies Meta;
+
+export default meta;
+type Story = StoryObj;
+
+const sampleItems: BreadcrumbItem[] = [
+  { text: 'Home', href: '/' },
+  { text: 'Services', href: '/services' },
+  { text: 'Passports and travel', href: '/services/passports' },
+];
+
+const longItems: BreadcrumbItem[] = [
+  { text: 'Canada.ca', href: '/' },
+  { text: 'Immigration and citizenship', href: '/immigration' },
+  { text: 'Services', href: '/immigration/services' },
+  { text: 'Canadian citizenship', href: '/immigration/services/citizenship' },
+  { text: 'Apply for citizenship', href: '/immigration/services/citizenship/apply' },
+  { text: 'Eligibility requirements', href: '/immigration/services/citizenship/apply/eligibility' },
+];
+
+/**
+ * Default breadcrumb trail with 3 levels.
+ * This is the standard implementation for most pages.
+ */
+export const Default: Story = {
+  args: {
+    items: sampleItems,
+    separator: '',
+    autoCollapse: true,
+    maxItems: 3,
+    compact: false,
+    inverted: false,
+    showStructuredData: true,
+    locale: 'en-CA',
+  },
+  render: (args) => html`
+    <gc-breadcrumbs
+      .items="${args.items}"
+      .separator="${args.separator}"
+      .autoCollapse="${args.autoCollapse}"
+      .maxItems="${args.maxItems}"
+      ?compact="${args.compact}"
+      ?inverted="${args.inverted}"
+      .showStructuredData="${args.showStructuredData}"
+      .locale="${args.locale}"
+      @gc-breadcrumb-click="${(e: CustomEvent) => {
+        console.log('Breadcrumb clicked:', e.detail);
+      }}"
+    ></gc-breadcrumbs>
+  `,
+};
+
+/**
+ * Long breadcrumb trail demonstrating auto-collapse feature.
+ * Middle items collapse into "..." ellipsis on mobile/narrow viewports.
+ */
+export const LongTrail: Story = {
+  args: {
+    items: longItems,
+    autoCollapse: true,
+    maxItems: 3,
+  },
+  render: (args) => html`
+    <div style="padding: 2rem;">
+      <gc-breadcrumbs
+        .items="${args.items}"
+        .autoCollapse="${args.autoCollapse}"
+        .maxItems="${args.maxItems}"
+      ></gc-breadcrumbs>
+      <p style="margin-top: 1rem; color: #666;">
+        Long trails collapse to show first item, ellipsis, and last 2 items.
+        Click "..." to expand all levels.
+      </p>
+    </div>
+  `,
+};
+
+/**
+ * Breadcrumb trail without auto-collapse showing all 6 levels.
+ */
+export const FullTrail: Story = {
+  args: {
+    items: longItems,
+    autoCollapse: false,
+  },
+  render: (args) => html`
+    <div style="padding: 2rem;">
+      <gc-breadcrumbs
+        .items="${args.items}"
+        .autoCollapse="${args.autoCollapse}"
+      ></gc-breadcrumbs>
+      <p style="margin-top: 1rem; color: #666;">
+        All breadcrumb levels displayed without collapsing.
+      </p>
+    </div>
+  `,
+};
+
+/**
+ * French language version (Français).
+ * "Vous êtes ici :" instead of "You are here:".
+ */
+export const French: Story = {
+  args: {
+    items: [
+      { text: 'Accueil', href: '/' },
+      { text: 'Services', href: '/services' },
+      { text: 'Passeports', href: '/services/passeports' },
+    ],
+    locale: 'fr-CA',
+  },
+  render: (args) => html`
+    <div style="padding: 2rem;">
+      <gc-breadcrumbs
+        .items="${args.items}"
+        .locale="${args.locale}"
+      ></gc-breadcrumbs>
+      <p style="margin-top: 1rem; color: #666;">
+        Fil d'Ariane en français
+      </p>
+    </div>
+  `,
+};
+
+/**
+ * Custom separator using "/" instead of default "".
+ */
+export const CustomSeparator: Story = {
+  args: {
+    items: sampleItems,
+    separator: '/',
+  },
+  render: (args) => html`
+    <div style="padding: 2rem;">
+      <gc-breadcrumbs
+        .items="${args.items}"
+        .separator="${args.separator}"
+      ></gc-breadcrumbs>
+      <p style="margin-top: 1rem; color: #666;">
+        Using "/" as separator instead of ""
+      </p>
+    </div>
+  `,
+};
+
+/**
+ * Compact mode with reduced padding and smaller text.
+ * Ideal for dense layouts or repeated patterns.
+ */
+export const Compact: Story = {
+  args: {
+    items: sampleItems,
+    compact: true,
+  },
+  render: (args) => html`
+    <div style="padding: 2rem;">
+      <gc-breadcrumbs
+        .items="${args.items}"
+        ?compact="${args.compact}"
+      ></gc-breadcrumbs>
+      <p style="margin-top: 1rem; color: #666;">
+        Compact mode with reduced padding and font size
+      </p>
+    </div>
+  `,
+};
+
+/**
+ * Inverted colors for dark backgrounds.
+ * White text with proper contrast.
+ */
+export const Inverted: Story = {
+  args: {
+    items: sampleItems,
+    inverted: true,
+  },
+  render: (args) => html`
+    <div style="padding: 3rem; background-color: #1a1a1a;">
+      <gc-breadcrumbs
+        .items="${args.items}"
+        ?inverted="${args.inverted}"
+      ></gc-breadcrumbs>
+      <p style="margin-top: 1rem; color: #ffffff;">
+        Inverted breadcrumbs for dark backgrounds
+      </p>
+    </div>
+  `,
+};
+
+/**
+ * Breadcrumbs in typical page header layout.
+ */
+export const InPageHeader: Story = {
+  args: {
+    items: sampleItems,
+  },
+  render: (args) => html`
+    <div style="background-color: #f8f8f8; border-bottom: 1px solid #d1d1d1;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 1rem 2rem;">
+        <gc-breadcrumbs .items="${args.items}"></gc-breadcrumbs>
+        
+        <h1 style="margin: 2rem 0 1rem 0; font-size: 2.5rem; font-weight: 700; color: #333;">
+          Passports and travel
+        </h1>
+        
+        <p style="font-size: 1.125rem; line-height: 1.6; color: #666; margin-bottom: 2rem;">
+          Apply for a passport, check processing times, and find travel advisories.
+        </p>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * Minimal 2-level breadcrumb.
+ */
+export const MinimalTrail: Story = {
+  args: {
+    items: [
+      { text: 'Home', href: '/' },
+      { text: 'About', href: '/about' },
+    ],
+  },
+  render: (args) => html`
+    <div style="padding: 2rem;">
+      <gc-breadcrumbs .items="${args.items}"></gc-breadcrumbs>
+      <p style="margin-top: 1rem; color: #666;">
+        Simple 2-level breadcrumb trail
+      </p>
+    </div>
+  `,
+};
+
+/**
+ * Maximum depth breadcrumb (7 levels).
+ */
+export const MaxDepth: Story = {
+  args: {
+    items: [
+      { text: 'Home', href: '/' },
+      { text: 'Level 1', href: '/level-1' },
+      { text: 'Level 2', href: '/level-1/level-2' },
+      { text: 'Level 3', href: '/level-1/level-2/level-3' },
+      { text: 'Level 4', href: '/level-1/level-2/level-3/level-4' },
+      { text: 'Level 5', href: '/level-1/level-2/level-3/level-4/level-5' },
+      { text: 'Current Page', href: '/level-1/level-2/level-3/level-4/level-5/current' },
+    ],
+    autoCollapse: false,
+  },
+  render: (args) => html`
+    <div style="padding: 2rem;">
+      <gc-breadcrumbs
+        .items="${args.items}"
+        .autoCollapse="${args.autoCollapse}"
+      ></gc-breadcrumbs>
+      <p style="margin-top: 1rem; color: #666;">
+        Very deep breadcrumb trail (not recommended - consider simplifying site structure)
+      </p>
+    </div>
+  `,
+};
+
+/**
+ * Interactive demo showing breadcrumb navigation.
+ */
+export const InteractiveDemo: Story = {
+  args: {},
+  render: (args) => {
+    const items: BreadcrumbItem[] = [
+      { text: 'Home', href: '#home' },
+      { text: 'Services', href: '#services' },
+      { text: 'Passports', href: '#passports' },
+    ];
+
+    return html`
+      <div style="padding: 2rem; max-width: 800px;">
+        <gc-breadcrumbs
+          .items="${items}"
+          @gc-breadcrumb-click="${(e: CustomEvent) => {
+            e.preventDefault();
+            console.log('Navigating to:', e.detail);
+            alert(\`Would navigate to: \${e.detail.item.text}\`);
+          }}"
+        ></gc-breadcrumbs>
+
+        <div style="margin-top: 3rem; padding: 2rem; background-color: #f8f8f8; border-radius: 4px;">
+          <h2 style="margin-top: 0;">Current Page: Passports and travel</h2>
+          <p style="line-height: 1.6;">
+            The breadcrumb above shows your current location in the site hierarchy.
+            Click any breadcrumb link to navigate to that page (in this demo, it will show an alert).
+          </p>
+          
+          <h3>How Breadcrumbs Help Users</h3>
+          <ul style="line-height: 1.8;">
+            <li><strong>Orientation:</strong> Shows where you are in the site structure</li>
+            <li><strong>Navigation:</strong> Quick links back to parent pages</li>
+            <li><strong>Context:</strong> Helps understand relationship between pages</li>
+            <li><strong>SEO:</strong> Structured data helps search engines understand site hierarchy</li>
+          </ul>
+        </div>
+      </div>
+    `;
+  },
+};
+
+/**
+ * Breadcrumbs with collapsed middle items.
+ * Click ellipsis to expand.
+ */
+export const CollapsedDemo: Story = {
+  args: {
+    items: longItems,
+    autoCollapse: true,
+    maxItems: 3,
+  },
+  render: (args) => html`
+    <div style="padding: 2rem; max-width: 800px;">
+      <gc-breadcrumbs
+        .items="${args.items}"
+        .autoCollapse="${args.autoCollapse}"
+        .maxItems="${args.maxItems}"
+      ></gc-breadcrumbs>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background-color: #fff3cd; border-left: 4px solid #ffc107;">
+        <p style="margin: 0; font-weight: 700;">Responsive Collapse Feature</p>
+        <p style="margin: 0.5rem 0 0 0;">
+          Long breadcrumb trails automatically collapse on mobile to save space.
+          The pattern shows: <strong>First  ...  Last Two</strong>
+        </p>
+        <p style="margin: 0.5rem 0 0 0;">
+          Click the "..." ellipsis button to expand and see all levels.
+        </p>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * Accessibility features demonstration.
+ */
+export const AccessibilityFeatures: Story = {
+  args: {
+    items: sampleItems,
+  },
+  render: (args) => html`
+    <div style="padding: 2rem; max-width: 800px;">
+      <gc-breadcrumbs .items="${args.items}"></gc-breadcrumbs>
+
+      <div style="margin-top: 2rem;">
+        <h2>Accessibility Features</h2>
+        <ul>
+          <li><strong>Semantic HTML:</strong> Uses &lt;nav&gt; and &lt;ol&gt; elements</li>
+          <li><strong>ARIA Labels:</strong> Nav labeled with "You are here:"</li>
+          <li><strong>Current Page Marker:</strong> aria-current="page" on last item</li>
+          <li><strong>Keyboard Navigation:</strong> All links accessible via Tab key</li>
+          <li><strong>Focus Indicators:</strong> Clear 3px outline on focus</li>
+          <li><strong>Screen Reader Support:</strong> Proper reading order and context</li>
+          <li><strong>Separator Hiding:</strong> Separators marked aria-hidden="true"</li>
+          <li><strong>Expand Button:</strong> Accessible label for ellipsis button</li>
+          <li><strong>Color Contrast:</strong> Meets AAA standards (7:1 ratio)</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Try It</h3>
+        <ol>
+          <li>Press Tab to focus each breadcrumb link</li>
+          <li>Press Enter to activate links</li>
+          <li>Use a screen reader to hear "You are here:"</li>
+          <li>Navigate to "Passports and travel" (current page, not a link)</li>
+        </ol>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * SEO structured data demonstration.
+ */
+export const StructuredData: Story = {
+  args: {
+    items: sampleItems,
+    showStructuredData: true,
+  },
+  render: (args) => html`
+    <div style="padding: 2rem; max-width: 800px;">
+      <gc-breadcrumbs
+        .items="${args.items}"
+        .showStructuredData="${args.showStructuredData}"
+      ></gc-breadcrumbs>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f0f0; border-left: 4px solid #4caf50;">
+        <p style="margin: 0; font-weight: 700;">Schema.org Structured Data</p>
+        <p style="margin: 0.5rem 0 0 0;">
+          This component automatically generates Schema.org BreadcrumbList JSON-LD
+          for search engines. Check the browser DevTools to see the hidden &lt;script&gt;
+          tag with type="application/ld+json".
+        </p>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <h3>Example Structured Data</h3>
+        <pre style="background-color: #272822; color: #f8f8f2; padding: 1rem; border-radius: 4px; overflow-x: auto;"><code>{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Passports and travel",
+      "item": "/services/passports"
+    }
+  ]
+}</code></pre>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <h3>SEO Benefits</h3>
+        <ul>
+          <li>Search engines understand your site hierarchy</li>
+          <li>Breadcrumbs may appear in search results</li>
+          <li>Improves site navigation in SERPs</li>
+          <li>Better crawling and indexing</li>
+        </ul>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * Responsive behavior demonstration.
+ */
+export const ResponsiveBehavior: Story = {
+  args: {
+    items: longItems,
+  },
+  render: (args) => html`
+    <div style="padding: 2rem;">
+      <div style="max-width: 1200px; background-color: #f8f8f8; padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">
+        <h3 style="margin: 0 0 1rem 0;">Desktop View (Wide)</h3>
+        <gc-breadcrumbs .items="${args.items}" .autoCollapse="${false}"></gc-breadcrumbs>
+      </div>
+
+      <div style="max-width: 600px; background-color: #f8f8f8; padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">
+        <h3 style="margin: 0 0 1rem 0;">Tablet View (Medium)</h3>
+        <gc-breadcrumbs .items="${args.items}" .autoCollapse="${true}" .maxItems="${4}"></gc-breadcrumbs>
+      </div>
+
+      <div style="max-width: 375px; background-color: #f8f8f8; padding: 1rem; border-radius: 4px;">
+        <h3 style="margin: 0 0 1rem 0;">Mobile View (Narrow)</h3>
+        <gc-breadcrumbs .items="${args.items}" .autoCollapse="${true}" .maxItems="${3}"></gc-breadcrumbs>
+      </div>
+
+      <p style="margin-top: 2rem; color: #666;">
+        The breadcrumb component adapts to different viewport widths by collapsing
+        long trails into "First  ...  Last Two" format.
+      </p>
+    </div>
+  `,
+};
+
+/**
+ * All separator styles comparison.
+ */
+export const SeparatorStyles: Story = {
+  args: {},
+  render: (args) => html`
+    <div style="padding: 2rem; display: flex; flex-direction: column; gap: 2rem;">
+      <div>
+        <h3 style="margin: 0 0 1rem 0;">Default ()</h3>
+        <gc-breadcrumbs .items=${sampleItems} separator="\u203A"></gc-breadcrumbs>
+      </div>
+
+      <div>
+        <h3 style="margin: 0 0 1rem 0;">Forward Slash (/)</h3>
+        <gc-breadcrumbs .items=${sampleItems} separator="/"></gc-breadcrumbs>
+      </div>
+
+      <div>
+        <h3 style="margin: 0 0 1rem 0;">Greater Than (&gt;)</h3>
+        <gc-breadcrumbs .items=${sampleItems} separator=">"></gc-breadcrumbs>
+      </div>
+
+      <div>
+        <h3 style="margin: 0 0 1rem 0;">Chevron ()</h3>
+        <gc-breadcrumbs .items=${sampleItems} separator="\u00BB"></gc-breadcrumbs>
+      </div>
+
+      <div>
+        <h3 style="margin: 0 0 1rem 0;">Arrow ()</h3>
+        <gc-breadcrumbs .items=${sampleItems} separator="\u2192"></gc-breadcrumbs>
+      </div>
+    </div>
+  `,
+};
+
+
+

@@ -1,0 +1,190 @@
+{
+  "header": {
+    "skip": "Skip to main content",
+    "brand": "Government of Canada",
+    "customize": "Customize",
+    "language": {
+      "english": "English",
+      "french": "Français"
+    }
+  },
+  "footer": {
+    "brand": "Government of Canada",
+    "topics": {
+      "title": "Government of Canada Topics",
+      "jobs": "Jobs",
+      "immigration": "Immigration and citizenship",
+      "travel": "Travel and tourism",
+      "business": "Business",
+      "benefits": "Benefits",
+      "health": "Health",
+      "taxes": "Taxes",
+      "environment": "Environment and natural resources"
+    },
+    "corporate": {
+      "social": "Social media",
+      "mobile": "Mobile applications",
+      "about": "About Canada.ca",
+      "terms": "Terms and conditions",
+      "privacy": "Privacy"
+    },
+    "modified": "Date modified"
+  },
+  "chat": {
+    "title": "EVA Assistant",
+    "subtitle": "Ask questions about government policies and procedures",
+    "knowledgeSpace": "Knowledge Space",
+    "selectSpace": "Select a knowledge space",
+    "loading": "Loading...",
+    "documents": "documents",
+    "placeholder": "Type your question...",
+    "send": "Send",
+    "sending": "Sending...",
+    "copy": "Copy",
+    "copied": "Copied to clipboard",
+    "you": "You",
+    "eva": "EVA",
+    "error": "Failed to send message. Please try again.",
+    "empty": {
+      "title": "Welcome to EVA",
+      "message": "Select a knowledge space above and start asking questions."
+    },
+    "spaces": {
+      "general": {
+        "name": "General Knowledge",
+        "description": "General government information"
+      },
+      "hr": {
+        "name": "HR Policies",
+        "description": "Human resources and workplace policies"
+      },
+      "it": {
+        "name": "IT Security",
+        "description": "Information technology security guidelines"
+      },
+      "procurement": {
+        "name": "Procurement",
+        "description": "Procurement and contracting procedures"
+      }
+    }
+  },
+  "backstage": {
+    "title": "Customize EVA",
+    "close": "Close customization panel",
+    "navigation": "Customization navigation",
+    "nav": {
+      "home": "Home",
+      "theme": "Theme",
+      "text": "Text & Content",
+      "i18n": "Languages",
+      "features": "Features",
+      "deploy": "Deploy",
+      "importExport": "Import / Export"
+    },
+    "actions": {
+      "save": "Save Changes",
+      "reset": "Reset to Defaults"
+    },
+    "preview": {
+      "title": "Live Preview",
+      "live": "Live",
+      "description": "Live preview will appear here when changes are made"
+    },
+    "home": {
+      "welcome": "Welcome to EVA Customization",
+      "description": "Configure your EVA instance with custom branding, content, and features",
+      "currentConfig": "Current Configuration",
+      "theme": "Theme",
+      "languages": "Languages",
+      "features": "Features",
+      "enabled": "enabled",
+      "knowledgeSpace": "Active Knowledge Space",
+      "messages": "Chat Messages",
+      "quickActions": "Quick Actions",
+      "exportConfig": "Export Configuration",
+      "importConfig": "Import Configuration",
+      "resetDefaults": "Reset to Defaults"
+    },
+    "theme": {
+      "title": "Theme Customization",
+      "description": "Customize colors, typography, and visual appearance",
+      "colors": "Color Palette",
+      "typography": "Typography",
+      "spacing": "Spacing & Layout",
+      "primaryFont": "Primary Font",
+      "primaryFontDesc": "Used for headings and emphasis",
+      "secondaryFont": "Secondary Font",
+      "secondaryFontDesc": "Used for extended Unicode support"
+    },
+    "text": {
+      "title": "Text & Content",
+      "description": "Override default text strings and customize content",
+      "overrides": "Text Overrides",
+      "appTitle": "Application Title",
+      "appSubtitle": "Application Subtitle",
+      "welcomeMessage": "Welcome Message",
+      "tip": "Pro Tip",
+      "tipDescription": "Text overrides support markdown formatting and can be localized per language."
+    },
+    "i18n": {
+      "title": "Languages & Localization",
+      "description": "Manage bilingual content and translation coverage",
+      "supportedLanguages": "Supported Languages",
+      "currentLanguage": "Current Language",
+      "activeLanguage": "Active Language",
+      "note": "Note",
+      "noteDescription": "EVA-UI meets federal bilingualism requirements with 100% translation coverage for EN-CA and FR-CA."
+    },
+    "features": {
+      "title": "Feature Management",
+      "description": "Enable or disable EVA features and capabilities",
+      "available": "Available Features",
+      "chat": "Chat Interface",
+      "chatDesc": "Enable the main chat interface",
+      "knowledgeSpaces": "Knowledge Spaces",
+      "knowledgeSpacesDesc": "Allow users to select different knowledge bases",
+      "messageHistory": "Message History",
+      "messageHistoryDesc": "Persist chat messages across sessions",
+      "copyMessages": "Copy Messages",
+      "copyMessagesDesc": "Allow users to copy messages to clipboard",
+      "streaming": "Streaming Responses",
+      "streamingDesc": "Stream AI responses in real-time (coming soon)",
+      "warning": "Warning",
+      "warningDescription": "Disabling core features may impact user experience. Test thoroughly before deploying."
+    },
+    "deploy": {
+      "title": "Deployment Management",
+      "description": "Review deployment readiness and deploy your configuration",
+      "preDeploymentChecks": "Pre-Deployment Checks",
+      "checks": {
+        "accessibility": "WCAG 2.2 AA Compliance",
+        "i18n": "Bilingual Coverage",
+        "designSystem": "GC Design System Compliance",
+        "apiConnection": "EVA-API Connection"
+      },
+      "deploymentActions": "Deployment Actions",
+      "deployProduction": "Deploy to Production",
+      "deployStaging": "Deploy to Staging",
+      "runTests": "Run All Tests",
+      "info": "Info",
+      "infoDescription": "All configuration changes are validated before deployment to ensure GC Design System compliance."
+    },
+    "importExport": {
+      "title": "Import / Export Configuration",
+      "description": "Export your current configuration or import a saved configuration",
+      "exportConfig": "Export Configuration",
+      "exportDescription": "Download your current EVA configuration as a JSON file",
+      "downloadJson": "Download JSON",
+      "copy": "Copy",
+      "importConfig": "Import Configuration",
+      "importDescription": "Upload or paste a JSON configuration file to restore settings",
+      "pasteJsonHere": "Paste JSON configuration here...",
+      "uploadFile": "Upload File",
+      "applyConfig": "Apply Configuration",
+      "exportSuccess": "Configuration exported successfully",
+      "copiedToClipboard": "Configuration copied to clipboard",
+      "warning": "Warning",
+      "warningDescription": "Importing a configuration will overwrite your current settings. Make sure to export your current configuration first."
+    }
+  }
+}

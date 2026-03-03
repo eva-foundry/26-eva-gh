@@ -1,0 +1,137 @@
+{
+  "eva_suite_2_0": {
+    "vision": {
+      "tagline": "EVA isn’t just a chatbot — it’s a shared AI platform.",
+      "core_idea": "A faceless AI brain exposing reusable RAG, document, ingestion, safety, and agent services via APIs consumed by many UIs and solutions.",
+      "principles": [
+        "Faceless core, many faces (UIs).",
+        "Reuse-first, single trunk codebase.",
+        "Governed and monitored by design.",
+        "Multi-tenant, multi-client, multi-language.",
+        "Accessible and bilingual by default."
+      ]
+    },
+    "components": {
+      "eva_foundation": {
+        "description": "Core backend on Azure hosting GenAI, RAG, document, ingestion, and safety services.",
+        "tech_stack": [
+          "Azure OpenAI (GPT-4 family, Canada)",
+          "Azure AI Search (semantic + vector)",
+          "Azure API Management (APIM)",
+          "Azure Functions / Logic Apps / Web Apps",
+          "PostgreSQL and storage for config and logs"
+        ],
+        "services": [
+          "/rag/retrieve",
+          "/rag/answer",
+          "/doc/summarize",
+          "/doc/compare",
+          "/doc/extract",
+          "/doc/translate",
+          "/ingest/preview",
+          "/ingest/queue",
+          "/ingest/status",
+          "/safety/check",
+          "/safety/redact",
+          "/safety/explain",
+          "/agent/route (future)",
+          "/agent/tools (future)"
+        ]
+      },
+      "eva_chat": {
+        "role": "General-purpose conversational assistant for employees.",
+        "constraints": [
+          "Protected B only.",
+          "No file uploads.",
+          "Strong guardrails and logging."
+        ]
+      },
+      "eva_domain_assistant": {
+        "role": "Primary RAG UI for project-based domain assistants.",
+        "stack": [
+          "React",
+          "Vite",
+          "TypeScript",
+          "Tailwind",
+          "A11y Library"
+        ],
+        "features": [
+          "Project dropdown with dynamic theming (e.g., red for Canada Life, blue for Jurisprudence).",
+          "EN/FR toggle and personalization controls (font size, contrast).",
+          "Admin screens with accordion sections for UI, RAG, safety, data sources, prompts."
+        ]
+      },
+      "eva_liveops": {
+        "role": "Central ops console for monitoring and management.",
+        "capabilities": [
+          "Usage and cost dashboards via APIM headers.",
+          "Safety event monitoring and triage.",
+          "Feature flag and environment visibility."
+        ]
+      },
+      "eva_da_workspace_portal": {
+        "role": "Self-service entry point for requesting and configuring Domain Assistant spaces.",
+        "capabilities": [
+          "Project requests with metadata and governance routing.",
+          "Hooks into IIAID for environment provisioning."
+        ]
+      },
+      "shared_services_and_agents": {
+        "role": "Reusable services and future agent orchestration capabilities.",
+        "agent_vision": [
+          "EVA APIs consumable by external agents (e.g., SK, AutoGen).",
+          "EVA-hosted agents orchestrating tools behind UIs."
+        ]
+      }
+    },
+    "project_registry": {
+      "purpose": "Source of truth for all EVA project spaces and their configuration.",
+      "categories": [
+        "Project metadata (owner, sponsor, cost center, classification, status).",
+        "UI configuration (themes, text, localization, a11y defaults).",
+        "RAG configuration (index, chunking, retrieval parameters, prompts).",
+        "Data sources (SharePoint, file shares, web, APIs).",
+        "Safety & policy (allowed content, PII handling, disclaimers)."
+      ]
+    },
+    "apim_and_tool_catalog": {
+      "apim_headers": [
+        "x-project",
+        "x-app",
+        "x-feature",
+        "x-environment",
+        "x-cost-center",
+        "x-user"
+      ],
+      "tool_catalog": {
+        "purpose": "Expose all EVA services and metadata so UIs and agents can dynamically bind to tools.",
+        "example_fields": [
+          "toolId",
+          "name",
+          "category",
+          "path",
+          "method",
+          "description",
+          "required_headers",
+          "request_schema_ref",
+          "response_schema_ref",
+          "permissions_required",
+          "rate_limit_policy",
+          "cost_profile"
+        ]
+      }
+    },
+    "governance_and_monitoring": {
+      "governance_hooks": [
+        "AI Review Panel, AI Register, AIOB integration.",
+        "PIA, SAQ, ST&E, RAIDE alignment.",
+        "Terms of Use gating and user accountability."
+      ],
+      "monitoring": [
+        "SIEM integration for anomalies.",
+        "Application Insights and logging.",
+        "Cost and usage dashboards."
+      ]
+    }
+  }
+}

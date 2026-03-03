@@ -1,0 +1,93 @@
+{
+  "workflow_templates": [
+    {
+      "id": "prd_template",
+      "name": "Product Requirements Document (PRD)",
+      "purpose": "Capture functional and non-functional requirements for a new solution or feature.",
+      "when_to_use": "Any time a new EVA feature, RAG solution, or AI-assisted tool is being proposed or refined.",
+      "sections": [
+        "1. Overview & Context",
+        "2. Problem Statement & Goals",
+        "3. In-Scope / Out-of-Scope",
+        "4. User Personas & Use Cases",
+        "5. Functional Requirements",
+        "6. Non-Functional Requirements (performance, security, accessibility, bilingualism)",
+        "7. Data & Integration Requirements",
+        "8. Governance & Compliance Considerations",
+        "9. Risks & Assumptions",
+        "10. Success Metrics & ROI"
+      ],
+      "style_notes": [
+        "Use clear headings and numbered sections.",
+        "Include both narrative and bullet lists.",
+        "Prefer plain language with occasional technical detail where needed."
+      ]
+    },
+    {
+      "id": "ai_software_assessment_template",
+      "name": "AI Software Proposal Self-Assessment",
+      "purpose": "Evaluate new AI-related software or tools for alignment with policy, risk appetite, and EVA strategy.",
+      "when_to_use": "Any time a vendor or internal team proposes adopting a new AI or web tool.",
+      "sections": [
+        "Requestor & Context",
+        "Intended Use & Users",
+        "Data Types & Sensitivity (incl. personal/protected/classified)",
+        "Model / AI Capabilities (GenAI vs non-GenAI)",
+        "Risk Factors (8-factor scoring)",
+        "Mitigations & Controls",
+        "Alignment with TBS GenAI Guidance",
+        "Recommendation (Low/Medium/High risk)"
+      ]
+    },
+    {
+      "id": "eva_workplan_item_template",
+      "name": "EVA Work Plan Item",
+      "purpose": "Describe and track a specific work item in the EVA Work Plan.",
+      "fields": [
+        "Workstream (A–E)",
+        "Project ID & Name",
+        "Owner",
+        "Description",
+        "Drivers / Strategic Alignment",
+        "Scope & Deliverables",
+        "Dependencies",
+        "Timeline (Start, End, Milestones)",
+        "Resource Assumptions (FTE, vendor, infra)",
+        "Risks & Issues",
+        "Status (Not started / In progress / Blocked / Complete)"
+      ]
+    },
+    {
+      "id": "raci_template",
+      "name": "RACI Matrix",
+      "purpose": "Clarify who is Responsible, Accountable, Consulted, and Informed for key activities.",
+      "when_to_use": "For major projects like EVA DA 2.0, Jurisprudence integration, AssistMe migration.",
+      "structure": {
+        "rows": "Activities or deliverables",
+        "columns": "Stakeholders or roles",
+        "cell_values": "R, A, C, I"
+      },
+      "notes": [
+        "Exactly one A per activity.",
+        "Avoid too many Rs or Cs on a single line; optimize for clarity."
+      ]
+    },
+    {
+      "id": "raid_log_template",
+      "name": "RAID / RAIDE Log",
+      "purpose": "Track Risks, Assumptions, Issues, Dependencies, and (optionally) Decisions.",
+      "fields": [
+        "ID",
+        "Type (Risk / Assumption / Issue / Dependency / Decision)",
+        "Description",
+        "Owner",
+        "Impact",
+        "Likelihood (for risks)",
+        "Mitigation / Response",
+        "Status",
+        "Target Date",
+        "Links to evidence / docs"
+      ]
+    }
+  ]
+}

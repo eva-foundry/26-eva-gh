@@ -1,0 +1,10 @@
+{
+  "p02_artifacts_path": "docs/features/qualitative-assessment",
+  "priority": "MEDIUM",
+  "status": "ready-for-crew",
+  "title": "Qualitative Assessment: eva-orchestrator",
+  "feature_slug": "qualitative-assessment",
+  "created_timestamp": "2025-12-12T01:38:38.2722889Z",
+  "source_intake_file": "QUALITATIVE-ASSESSMENT.md",
+  "feature_key": "P02-AUTO-827bbfac"
+}

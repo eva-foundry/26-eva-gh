@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-wsl2-claude-integration.md",
+  "feature_key": "P02-AUTO-a5c1c2aa",
+  "title": "WSL2 + Claude Integration Backlog",
+  "p02_artifacts_path": "docs/features/eva-wsl2-claude-integration",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-wsl2-claude-integration",
+  "created_timestamp": "2025-11-25T23:55:29.5562347Z"
+}

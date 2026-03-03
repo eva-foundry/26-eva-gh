@@ -1,0 +1,59 @@
+{
+  "enabled": true,
+  "patterns": [
+    "Three Concepts Pattern"
+  ],
+  "qualityGates": [
+    {
+      "name": "Three Concepts Pattern Compliance",
+      "description": "All PowerShell scripts must have complete Three Concepts headers",
+      "automated": false,
+      "frequency": "pre-commit"
+    },
+    {
+      "name": "PowerShell Script Headers",
+      "description": "All 5 sections required: CONTEXT, CONTEXT_ENGINEERING, HOUSEKEEPING, WORKSPACE_MANAGEMENT, COMPLIANCE",
+      "automated": false,
+      "frequency": "pre-commit"
+    },
+    {
+      "name": "Documentation Completeness",
+      "description": "README.md and copilot-instructions.md up to date",
+      "automated": false,
+      "frequency": "weekly"
+    }
+  ],
+  "automation": {
+    "healthCheck": {
+      "enabled": true,
+      "schedule": "hourly",
+      "script": "../eva-orchestrator/scripts/Invoke-AutomationHealthCheck.ps1"
+    },
+    "treeRefresh": {
+      "enabled": true,
+      "schedule": "daily",
+      "script": "../eva-orchestrator/scripts/refresh-eva-suite-tree.ps1"
+    },
+    "sessionManagement": {
+      "enabled": true,
+      "script": "../eva-orchestrator/scripts/Invoke-EvaHousekeeping.ps1"
+    }
+  },
+  "monitoring": {
+    "scriptCount": 0,
+    "patternCompliance": "100%",
+    "lastValidation": "[REPLACE: YYYY-MM-DD]"
+  },
+  "cleanup": {
+    "tempFiles": {
+      "enabled": true,
+      "frequency": "daily",
+      "paths": [".tmp", ".cache", "temp"]
+    },
+    "oldLogs": {
+      "enabled": true,
+      "frequency": "weekly",
+      "retentionDays": 90
+    }
+  }
+}

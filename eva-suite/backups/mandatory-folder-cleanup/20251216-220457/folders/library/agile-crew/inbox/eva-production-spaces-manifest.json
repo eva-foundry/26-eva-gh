@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-production-spaces.md",
+  "feature_key": "P02-AUTO-b973ec65",
+  "title": "CDD: EVA Domain Assistant - Production Spaces",
+  "p02_artifacts_path": "docs/features/eva-production-spaces",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-production-spaces",
+  "created_timestamp": "2025-11-25T23:55:01.8717432Z"
+}

@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "CDD-STANDARDIZATION-REPORT-2025-01-27",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/cdd-standardization-report-2025-01-27",
+  "created_timestamp": "2025-11-27T12:40:13.0647930Z",
+  "source_intake_file": "CDD-STANDARDIZATION-REPORT-2025-01-27.md",
+  "feature_key": "P02-AUTO-edca00b3",
+  "feature_slug": "cdd-standardization-report-2025-01-27"
+}

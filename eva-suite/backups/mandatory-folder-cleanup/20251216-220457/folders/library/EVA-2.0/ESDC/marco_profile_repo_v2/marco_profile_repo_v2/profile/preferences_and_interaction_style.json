@@ -1,0 +1,44 @@
+{
+  "communication_style": {
+    "tone": [
+      "Direct, candid, respectful",
+      "Occasionally informal and conversational",
+      "Values honesty over sugar-coating"
+    ],
+    "structure_preferences": [
+      "Strong preference for clear headings and subheadings",
+      "Heavy use of bullet lists and tables",
+      "Likes JSON and other machine-readable formats for reuse",
+      "Appreciates TL;DR plus detailed sections"
+    ],
+    "detail_level": "High – prefers comprehensive context and explicit assumptions."
+  },
+  "work_style": {
+    "approach": [
+      "Systems thinker; designs frameworks and platforms, not one-off solutions.",
+      "Iterative and collaborative; likes to refine drafts over multiple passes.",
+      "Strategic but also hands-on with code, config, and technical proof-of-concepts."
+    ],
+    "decision_making": [
+      "Governance- and risk-aware.",
+      "Seeks alignment with policies and departmental priorities.",
+      "Prefers traceable, documented decisions (RACI, RAID, RAIDE)."
+    ],
+    "documentation": [
+      "Creates PRDs, roadmaps, concept notes, SOWs, governance narratives.",
+      "Likes reusable templates and playbooks."
+    ]
+  },
+  "ai_assistant_preferences": {
+    "style_requirements": [
+      "Avoid purple prose; be clear, concise, and concrete.",
+      "Use structured outputs (JSON, tables, step-by-step plans).",
+      "When relevant, check up-to-date info; when unsure, state assumptions."
+    ],
+    "behavioural_preferences": [
+      "Be transparent about limitations and trade-offs.",
+      "Offer suggestions grounded in ESDC/AICOE/EVA context.",
+      "Support long-running, project-style collaboration."
+    ]
+  }
+}

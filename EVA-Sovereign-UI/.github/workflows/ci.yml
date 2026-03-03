@@ -1,0 +1,140 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: |
+          cd packages/web-components
+          npm ci
+      
+      - name: Run tests
+        run: |
+          cd packages/web-components
+          npm test -- --run
+      
+      - name: Run coverage
+        run: |
+          cd packages/web-components
+          npm run test:coverage
+      
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./packages/web-components/coverage/lcov.info
+          flags: web-components
+          fail_ci_if_error: false
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: |
+          cd packages/web-components
+          npm ci
+      
+      - name: Build package
+        run: |
+          cd packages/web-components
+          npm run build
+      
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: packages/web-components/dist/
+          retention-days: 30
+
+  storybook:
+    name: Build Storybook
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: |
+          cd packages/web-components
+          npm ci
+      
+      - name: Build Storybook
+        run: |
+          cd packages/web-components
+          npm run build-storybook
+      
+      - name: Upload Storybook
+        uses: actions/upload-artifact@v4
+        with:
+          name: storybook-static
+          path: packages/web-components/storybook-static/
+          retention-days: 30
+
+  quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: |
+          cd packages/web-components
+          npm ci
+      
+      - name: Run linter
+        run: |
+          cd packages/web-components
+          npm run lint
+        continue-on-error: true
+      
+      - name: Check formatting
+        run: |
+          cd packages/web-components
+          npm run format -- --check
+        continue-on-error: true

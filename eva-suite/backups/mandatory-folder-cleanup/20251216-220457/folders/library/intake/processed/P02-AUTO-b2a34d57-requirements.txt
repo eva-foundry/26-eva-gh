@@ -1,0 +1,10 @@
+# EVA Suite Orchestrator Python Dependencies
+# Required packages for YAML parsing and HTTP requests
+
+pyyaml
+requests
+
+# Documentation Publishing (P22-DPB)
+mkdocs-material>=9.5.0
+mkdocs-minify-plugin>=0.8.0
+pymdown-extensions>=10.7.0

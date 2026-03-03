@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/temp-issue-58",
+  "feature_key": "P02-AUTO-6635cc54",
+  "title": "temp-issue-58",
+  "source_intake_file": "temp-issue-58.txt",
+  "feature_slug": "temp-issue-58",
+  "priority": "MEDIUM",
+  "created_timestamp": "2025-12-15T01:42:26.8575046Z"
+}

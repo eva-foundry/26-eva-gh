@@ -1,0 +1,48 @@
+\begingroup
+\small
+\begin{center}          %
+\begin{longtable}{%
+    >{\raggedright\arraybackslash}p{0.18\linewidth}
+    >{\raggedright\arraybackslash}p{0.34\linewidth}
+    >{\centering\arraybackslash}p{0.14\linewidth}
+    >{\centering\arraybackslash}p{0.12\linewidth}
+    >{\raggedright\arraybackslash}p{0.14\linewidth}}
+\caption{Summary of literature on self-awareness evaluation}
+\label{tab:self-eval-long}\\   %
+\toprule
+\makecell{\textbf{Authors}} &
+\makecell{\textbf{Key Contribution}} &
+\makecell{\textbf{Focus on}\\\textbf{Self-}\\\textbf{Awareness}} &
+\makecell{\textbf{Using}\\\textbf{Human}\\\textbf{Baseline}} &
+\makecell{\textbf{Code}\\\textbf{Links}}\\
+\midrule
+\endfirsthead            %
+
+\multicolumn{5}{l}{\small\itshape (Continued)}\\
+\toprule
+\makecell{\textbf{Authors}} &
+\makecell{\textbf{Key Contribution}} &
+\makecell{\textbf{Focus on}\\\textbf{Self-}\\\textbf{Awareness}} &
+\makecell{\textbf{Using}\\\textbf{Human}\\\textbf{Baseline}} &
+\makecell{\textbf{Code}\\\textbf{Links}}\\
+\midrule
+\endhead                 %
+
+\midrule
+\multicolumn{5}{r}{\small\itshape Continued on next page}\\
+\endfoot                 %
+\endlastfoot 
+        \citet{yin2023large} & Assessed models’ confidence in responding to questions beyond their knowledge or without definitive answers via the SelfAware benchmark. & \checkmark & \checkmark & \texttt{\href{https://github.com/yinzhangyue/SelfAware}{GitHub repo}}\\
+        \citet{laine2024me} & Introduces the SAD benchmark; while targeting situational awareness in general, its \textbf{Self-Knowledge} subset (FACTS, INTROSPECT, SELF-RECOGNITION) partially evaluates LLM self-awareness. & \XSolidBrush & \checkmark & \texttt{\href{https://github.com/LrudL/sad}{GitHub repo}}\\
+        \citet{liu2024trustworthiness} & Think–Solve–Verify (TSV) pipeline; studies trustworthiness \& \emph{introspective} reasoning, incl. & \checkmark & \XSolidBrush & \texttt{N/A}\\
+        \citet{cheng2024can} & Builds model-specific \textit{Idk} dataset; trains chat LLMs to refuse unknowns, mapping knowledge quadrants. & \checkmark & \checkmark & \texttt{\href{https://github.com/OpenMOSS/Say-I-Dont-Know}{GitHub repo}}\\
+        \citet{tan2024can} & `First-Generate-Then-Verify'' framework; gauges whether a model can solve its own self-generated questions. & \checkmark & \XSolidBrush & \texttt{N/A}\\
+        \citet{kapoor2024large} & Shows fine-tuning on \textit{graded correctness} yields calibrated `I don’t know'' confidence usable in open-ended QA. & \checkmark & \XSolidBrush & \texttt{\href{https://github.com/activatedgeek/calibration-tuning}{GitHub repo}}\\
+        \citet{chen2023universal} & Universal Self-Consistency (USC) for answer selection; improves quality but is a reasoning aid, \emph{not} an SA metric. & \XSolidBrush & \XSolidBrush & \texttt{N/A}\\
+        \citet{davidson2024self} & `Security-question'' protocol to test \emph{self-recognition} across 10 LLMs; find no robust self-ID. & \checkmark & \XSolidBrush & \texttt{\href{https://github.com/trdavidson/self-recognition}{GitHub repo}}\\
+        \citet{binder2024looking} & Shows GPT-4, GPT-4o, Llama-3 can \emph{introspectively} predict their own future outputs better than other models can. & \checkmark & \XSolidBrush & \texttt{\href{https://huggingface.co/datasets/thejaminator/introspection_self_predict}{HuggingFace repo}}\\
+        \citet{tamoyan2025factual} & Linear-probe evidence that \emph{factual self-awareness} (know / forget attributes) is encoded during generation. & \checkmark & \XSolidBrush & \texttt{\href{https://github.com/UKPLab/arxiv2025-self-awareness}{GitHub repo}}\\
+        \bottomrule
+\end{longtable}
+\end{center}
+\endgroup

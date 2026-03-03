@@ -1,0 +1,36 @@
+# MS-InfoJP Requirements
+
+# Core dependencies for MS-InfoJP MVP
+# Based on Microsoft PubSec-Info-Assistant platform
+
+# Python version: 3.11+
+
+# HTTP and async
+aiohttp>=3.9.0
+httpx>=0.25.0
+
+# Azure SDK
+azure-identity>=1.15.0
+azure-core>=1.29.0
+azure-storage-blob>=12.19.0
+azure-cosmos>=4.5.1
+
+# Azure AI Services
+azure-search-documents>=11.4.0
+openai>=1.10.0  # For Azure OpenAI
+
+# Data processing
+pandas>=2.1.0
+numpy>=1.24.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+
+# Evidence collection
+playwright>=1.40.0  # For UI automation if needed
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.5.0

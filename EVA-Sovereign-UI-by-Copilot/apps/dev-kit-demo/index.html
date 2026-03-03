@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVA-Sovereign-UI Developer Kit</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Noto Sans", sans-serif;
+    }
+
+    .component-demo {
+      border: 1px solid #ccc;
+      padding: 24px;
+      margin: 24px 0;
+      border-radius: 4px;
+      background: #fff;
+    }
+
+    .demo-title {
+      font-family: "Lato", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #26374A;
+    }
+
+    .code-example {
+      background: #f5f5f5;
+      padding: 16px;
+      font-family: monospace;
+      font-size: 14px;
+      overflow-x: auto;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+
+    .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .theme-selector {
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #26374A;
+      border-radius: 4px;
+      background: #fff;
+      min-height: 44px;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <eva-page-shell>
+    <eva-gc-header slot="header"
+      app-name-key="devkit.title"
+      profile="canada_gc">
+      <eva-language-switcher slot="actions"></eva-language-switcher>
+    </eva-gc-header>
+    
+    <eva-container max-width="1200px">
+      <h1 style="font-family: 'Lato', sans-serif; font-size: 41px; margin-bottom: 24px; color: #26374A;">EVA-Sovereign-UI Component Gallery</h1>
+      <p style="font-size: 20px; margin-bottom: 32px;">Comprehensive demonstration of Web Components for government applications</p>
+      
+      <!-- Theme Switcher -->
+      <section class="component-demo">
+        <h2 class="demo-title">Theme Selection</h2>
+        <p style="margin-bottom: 16px;">Select a Five Eyes sovereign profile to see the components adapt:</p>
+        <select id="theme-selector" class="theme-selector">
+          <option value="canada_gc">🇨🇦 Government of Canada</option>
+          <option value="usa_gov">🇺🇸 US Government</option>
+          <option value="uk_gov">🇬🇧 UK Government</option>
+          <option value="australia_gov">🇦🇺 Australian Government</option>
+          <option value="nz_gov">🇳🇿 New Zealand Government</option>
+        </select>
+      </section>
+      
+      <!-- Button Examples -->
+      <section class="component-demo">
+        <h2 class="demo-title">GC Buttons</h2>
+        <p style="margin-bottom: 16px;">Six official button variants from the Government of Canada Design System:</p>
+        <div class="button-grid">
+          <eva-gc-button variant="supertask">Supertask Button</eva-gc-button>
+          <eva-gc-button variant="primary">Primary Button</eva-gc-button>
+          <eva-gc-button variant="secondary">Secondary Button</eva-gc-button>
+          <eva-gc-button variant="danger">Danger Button</eva-gc-button>
+          <eva-gc-button variant="link">Link Button</eva-gc-button>
+          <eva-gc-button variant="contextual-signin">Sign In</eva-gc-button>
+        </div>
+        <eva-gc-button variant="primary" loading>Loading...</eva-gc-button>
+        <eva-gc-button variant="secondary" disabled>Disabled</eva-gc-button>
+        
+        <div class="code-example">&lt;eva-gc-button variant="supertask"&gt;Supertask Button&lt;/eva-gc-button&gt;
+&lt;eva-gc-button variant="primary"&gt;Primary Button&lt;/eva-gc-button&gt;
+&lt;eva-gc-button variant="secondary"&gt;Secondary Button&lt;/eva-gc-button&gt;
+&lt;eva-gc-button variant="danger"&gt;Danger Button&lt;/eva-gc-button&gt;
+&lt;eva-gc-button variant="link"&gt;Link Button&lt;/eva-gc-button&gt;
+&lt;eva-gc-button variant="contextual-signin"&gt;Sign In&lt;/eva-gc-button&gt;</div>
+      </section>
+      
+      <!-- Language Switcher -->
+      <section class="component-demo">
+        <h2 class="demo-title">Language Switcher</h2>
+        <p style="margin-bottom: 16px;">Toggle between English and French (Official Languages Act compliance):</p>
+        <eva-language-switcher
+          current-locale="en-CA"
+          available-locales='["en-CA", "fr-CA"]'>
+        </eva-language-switcher>
+        
+        <div class="code-example">&lt;eva-language-switcher
+  current-locale="en-CA"
+  available-locales='["en-CA", "fr-CA"]'&gt;
+&lt;/eva-language-switcher&gt;</div>
+      </section>
+      
+      <!-- Program Cards -->
+      <section class="component-demo">
+        <h2 class="demo-title">Program Cards</h2>
+        <p style="margin-bottom: 16px;">ESDC program showcase cards with internationalized content:</p>
+        <div class="button-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+          <eva-program-card
+            title-key="esdc.programs.ei.title"
+            description-key="esdc.programs.ei.description"
+            icon="💼"
+            link="#ei">
+          </eva-program-card>
+          
+          <eva-program-card
+            title-key="esdc.programs.oas.title"
+            description-key="esdc.programs.oas.description"
+            icon="🧓"
+            link="#oas">
+          </eva-program-card>
+        </div>
+        
+        <div class="code-example">&lt;eva-program-card
+  title-key="esdc.programs.ei.title"
+  description-key="esdc.programs.ei.description"
+  icon="💼"
+  link="/programs/ei.html"&gt;
+&lt;/eva-program-card&gt;</div>
+      </section>
+      
+      <!-- Accessibility Features -->
+      <section class="component-demo">
+        <h2 class="demo-title">Accessibility Features</h2>
+        <ul style="font-size: 18px; line-height: 1.7; padding-left: 24px;">
+          <li>✅ <strong>WCAG 2.2 AAA</strong> compliance (7:1 contrast ratio)</li>
+          <li>✅ <strong>Full keyboard navigation</strong> (Tab, Enter, Escape, Arrows)</li>
+          <li>✅ <strong>Screen reader optimization</strong> (ARIA labels, landmarks, live regions)</li>
+          <li>✅ <strong>Focus indicators</strong> (3px outline, 3:1 contrast)</li>
+          <li>✅ <strong>Skip links</strong> for main content</li>
+          <li>✅ <strong>Semantic HTML</strong> (proper heading hierarchy, landmarks)</li>
+        </ul>
+      </section>
+      
+      <!-- Internationalization -->
+      <section class="component-demo">
+        <h2 class="demo-title">Internationalization</h2>
+        <p style="margin-bottom: 16px;">Supported locales:</p>
+        <ul style="font-size: 18px; line-height: 1.7; padding-left: 24px;">
+          <li>🇨🇦 <strong>en-CA</strong> - English (Canada)</li>
+          <li>🇨🇦 <strong>fr-CA</strong> - Français (Canada)</li>
+          <li>🇺🇸 <strong>en-US</strong> - English (United States)</li>
+          <li>🇬🇧 <strong>en-GB</strong> - English (United Kingdom)</li>
+          <li>🇦🇺 <strong>en-AU</strong> - English (Australia)</li>
+        </ul>
+        <p style="margin-top: 16px; font-size: 18px;">Features:</p>
+        <ul style="font-size: 18px; line-height: 1.7; padding-left: 24px;">
+          <li>Date, number, and currency formatters</li>
+          <li>RTL support preparation</li>
+          <li>Nested translation keys with parameters</li>
+          <li>Reactive updates on locale change</li>
+        </ul>
+      </section>
+      
+    </eva-container>
+    
+    <eva-gc-footer slot="footer" profile="canada_gc"></eva-gc-footer>
+  </eva-page-shell>
+  
+  <script type="module" src="/packages/eva-sovereign-ui-wc/src/index.ts"></script>
+  <script type="module">
+    // Theme switcher functionality
+    document.getElementById('theme-selector').addEventListener('change', (e) => {
+      const profile = e.target.value;
+      document.querySelectorAll('eva-gc-header, eva-gc-footer').forEach(el => {
+        el.setAttribute('profile', profile);
+      });
+    });
+  </script>
+</body>
+</html>

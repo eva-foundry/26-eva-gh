@@ -1,0 +1,36 @@
+
+> eva-chat@0.1.0 test
+> vitest --coverage --run
+
+
+[1m[46m RUN [49m[22m [36mv4.0.14 [39m[90mC:/Users/marco/Documents/_AI Dev/EVA Suite/eva-ui/apps/eva-chat[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+ [32mΓ£ô[39m src/test/ChatMessageList.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 284[2mms[22m[39m
+ [32mΓ£ô[39m src/test/MicButton.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 446[2mms[22m[39m
+ [32mΓ£ô[39m src/test/ModeToggle.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 458[2mms[22m[39m
+ [32mΓ£ô[39m src/test/ChatInputBar.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1105[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m syncs the draft with user input [33m 421[2mms[22m[39m
+ [32mΓ£ô[39m src/test/ChatShell.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1072[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m renders the chat frame landmarks [33m 314[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m sends a message and renders the assistant reply [33m 303[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m clears the history when a new thread is created [33m 452[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m5 passed[39m[22m[90m (5)[39m
+[2m      Tests [22m [1m[32m16 passed[39m[22m[90m (16)[39m
+[2m   Start at [22m 17:55:43
+[2m   Duration [22m 5.97s[2m (transform 284ms, setup 3.50s, import 1.15s, tests 3.36s, environment 15.22s)[22m
+
+[34m % [39m[2mCoverage report from [22m[33mv8[39m
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   85.39 |    75.67 |   87.09 |   90.12 |                   
+ ChatInputBar.tsx  |   78.94 |       70 |   71.42 |   88.23 | 50-51             
+ ChatMessage.tsx   |    87.5 |     87.5 |     100 |    87.5 | 19                
+ ...essageList.tsx |   85.71 |    83.33 |     100 |   85.71 | 16                
+ ChatShell.tsx     |   85.36 |       50 |   83.33 |   88.88 | 63-64,100-101     
+ ChatSidebar.tsx   |     100 |      100 |     100 |     100 |                   
+ MicButton.tsx     |      80 |    66.66 |     100 |     100 | 14                
+ ModeToggle.tsx    |     100 |      100 |     100 |     100 |                   
+-------------------|---------|----------|---------|---------|-------------------

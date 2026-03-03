@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-learning-lab-environments.md",
+  "feature_key": "P02-AUTO-02cd2b1a",
+  "title": "CDD: EVA Learning Lab Environments",
+  "p02_artifacts_path": "docs/features/eva-learning-lab-environments",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-learning-lab-environments",
+  "created_timestamp": "2025-11-25T23:54:25.1062561Z"
+}

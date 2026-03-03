@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "EVA Suite - Repository Quick Reference",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/repo-quick-reference",
+  "created_timestamp": "2025-11-27T12:40:41.0663020Z",
+  "source_intake_file": "REPO-QUICK-REFERENCE.md",
+  "feature_key": "P02-AUTO-6b0a1273",
+  "feature_slug": "repo-quick-reference"
+}

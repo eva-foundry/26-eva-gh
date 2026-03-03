@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../eva-i11y"
+		},
+		{
+			"path": "../eva-i18n"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../eva-orchestrator"
+		},
+		{
+			"path": "../OpenWebUI"
+		}
+	]
+}

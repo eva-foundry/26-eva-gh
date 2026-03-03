@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-os-deployment-models.md",
+  "feature_key": "P02-AUTO-df70fd31",
+  "title": "CDD: EVA OS Deployment Models",
+  "p02_artifacts_path": "docs/features/eva-os-deployment-models",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-os-deployment-models",
+  "created_timestamp": "2025-11-25T23:54:44.3280179Z"
+}

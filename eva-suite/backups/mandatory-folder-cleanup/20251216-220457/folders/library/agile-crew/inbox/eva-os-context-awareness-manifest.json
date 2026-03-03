@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-os-context-awareness.md",
+  "feature_key": "P02-AUTO-b2fe2ebd",
+  "title": "CDD: EVA OS Context Awareness",
+  "p02_artifacts_path": "docs/features/eva-os-context-awareness",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-os-context-awareness",
+  "created_timestamp": "2025-11-25T23:54:42.6255521Z"
+}

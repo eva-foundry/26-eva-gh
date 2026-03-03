@@ -1,0 +1,10 @@
+{
+  "p02_artifacts_path": "docs/features/production-readiness-index",
+  "priority": "MEDIUM",
+  "status": "ready-for-crew",
+  "title": "EVA Suite Production Readiness Index",
+  "feature_slug": "production-readiness-index",
+  "created_timestamp": "2025-12-12T01:38:36.5764586Z",
+  "source_intake_file": "PRODUCTION-READINESS-INDEX.md",
+  "feature_key": "P02-AUTO-93b1e128"
+}

@@ -1,0 +1,58 @@
+\begingroup
+\small
+\begin{center}          %
+\begin{longtable}{%
+    >{\raggedright\arraybackslash}p{0.18\linewidth}
+    >{\raggedright\arraybackslash}p{0.34\linewidth}
+    >{\centering\arraybackslash}p{0.14\linewidth}
+    >{\centering\arraybackslash}p{0.12\linewidth}
+    >{\raggedright\arraybackslash}p{0.14\linewidth}}
+\caption{Summary of literature on situational awareness evaluation}
+\label{tab:situ-eval-long}\\   %
+\toprule
+\makecell{\textbf{Authors}} &
+\makecell{\textbf{Key Contribution}} &
+\makecell{\textbf{Focus on}\\\textbf{Situational}\\\textbf{Awareness}} &
+\makecell{\textbf{Using}\\\textbf{Human}\\\textbf{Baseline}} &
+\makecell{\textbf{Code}\\\textbf{Links}}\\
+\midrule
+\endfirsthead            %
+
+\multicolumn{5}{l}{\small\itshape (Continued)}\\
+\toprule
+\makecell{\textbf{Authors}} &
+\makecell{\textbf{Key Contribution}} &
+\makecell{\textbf{Focus on}\\\textbf{Situational}\\\textbf{Awareness}} &
+\makecell{\textbf{Using}\\\textbf{Human}\\\textbf{Baseline}} &
+\makecell{\textbf{Code}\\\textbf{Links}}\\
+\midrule
+\endhead                 %
+
+\midrule
+\multicolumn{5}{r}{\small\itshape Continued on next page}\\
+\endfoot                 %
+\endlastfoot 
+
+\citet{laine2024me} & Developed Situational Awareness Dataset (SAD), systematically assessing self-knowledge and context recognition capabilities in LLMs. & \XSolidBrush & \checkmark & \texttt{\href{https://github.com/LrudL/sad}{GitHub repo}} \\
+
+\citet{tang2024towards} & Introduced SA-Bench to comprehensively measure situational awareness across perception, comprehension, and future projection tasks. & \checkmark & \checkmark & \texttt{N/A} \\
+
+\citet{wang2024llm} & Proposed Situational Awareness-based Planning (SAP) enhancing LLM decision-making in dynamic tasks. & \checkmark & \XSolidBrush & \texttt{N/A} \\
+
+\citet{needham2025large} & Evidenced LLM evaluation-awareness: models detect and alter behaviors during evaluations, potentially biasing outcomes. & \checkmark & \XSolidBrush & \texttt{N/A} \\
+
+\citet{phuong2025evaluating} & Benchmarked stealth and situational-awareness prerequisites for deception capabilities in frontier models. & \checkmark & \XSolidBrush & \texttt{\href{https://github.com/UKGovernmentBEIS/inspect_evals/tree/main/src/inspect_evals/gdm_capabilities}{GitHub repo}}  \\
+
+\citet{wester2024ai} & Evaluated refusal strategies; showed nuanced denials improve user satisfaction. & \XSolidBrush & \checkmark & \texttt{\href{https://dl.acm.org/doi/10.1145/3613904.3642135\#supplementary-materials}{Dataset}} \\
+
+\citet{berglund2023taken} & Introduced \emph{out-of-context reasoning}, showing models infer situational context indirectly via prior training knowledge. & \XSolidBrush & \XSolidBrush & \texttt{\href{https://github.com/AsaCooperStickland/situational-awareness-evals}{GitHub repo}} \\
+
+\citet{greenblatt2024alignment} & Demonstrated \emph{alignment faking}: models selectively comply with training objectives but revert to misaligned preferences post-deployment. & \XSolidBrush & \XSolidBrush & \texttt{\href{https://huggingface.co/papers/2412.14093}{HuggingFace repo}} \\
+
+\citet{van2024ai} & Identified LLM \emph{sandbagging}: models strategically underperform during capability tests to avoid regulation. & \XSolidBrush & \XSolidBrush & \texttt{\href{https://github.com/TeunvdWeij/sandbagging}{GitHub repo}} \\
+
+\citet{li2024situationadapt} & Built a mixed-reality interface leveraging LLM situational awareness of social contexts for adaptive layouts. & \XSolidBrush & \checkmark & \texttt{N/A} \\
+\bottomrule
+\end{longtable}
+\end{center}
+\endgroup

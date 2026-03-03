@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVA Sovereign UI - Demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .demo-controls {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      min-width: 220px;
+    }
+    
+    .demo-controls h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #333;
+    }
+    
+    .control-group {
+      margin-bottom: 16px;
+    }
+    
+    .control-group:last-child {
+      margin-bottom: 0;
+    }
+    
+    .control-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: #666;
+    }
+    
+    .control-select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      font-family: inherit;
+      background: white;
+      cursor: pointer;
+    }
+    
+    .control-select:focus {
+      outline: none;
+      border-color: #0033a0;
+    }
+    
+    .content-grid {
+      display: grid;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    
+    @media (min-width: 1024px) {
+      .content-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: #666;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: #0033a0;
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      .demo-controls {
+        position: static;
+        margin: 16px;
+        width: calc(100% - 32px);
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+  
+  <link rel="stylesheet" href="../packages/eva-sovereign-ui-wc/src/themes/canada-gc.css">
+  <link rel="stylesheet" href="../packages/eva-sovereign-ui-wc/src/themes/uk-gov.css">
+  <link rel="stylesheet" href="../packages/eva-sovereign-ui-wc/src/themes/us-gov.css">
+</head>
+<body class="eva-theme-canada_gc_intranet">
+
+  <div class="demo-controls">
+    <h3>🎨 Demo Controls</h3>
+    
+    <div class="control-group">
+      <label class="control-label">Sovereign Profile</label>
+      <select id="profile-selector" class="control-select">
+        <option value="canada_gc_intranet">Canada GC</option>
+        <option value="uk_gov_internal">UK Government</option>
+        <option value="us_gov_internal">US Government</option>
+      </select>
+    </div>
+    
+    <div class="control-group">
+      <label class="control-label">Language</label>
+      <div id="language-toggle-container"></div>
+    </div>
+  </div>
+
+  <eva-page-shell>
+    <eva-gc-header slot="header" app-name-key="app.name">
+      <div slot="actions" id="header-language-switcher"></div>
+    </eva-gc-header>
+    
+    <eva-hero-banner title-key="hero.title" description-key="hero.description">
+    </eva-hero-banner>
+    
+    <div class="content-grid">
+      <eva-quick-actions></eva-quick-actions>
+      <eva-chat-panel></eva-chat-panel>
+    </div>
+    
+    <div slot="footer" class="footer-content">
+      <div id="footer-copyright"></div>
+      <div class="footer-links">
+        <a href="#" id="footer-privacy"></a>
+        <a href="#" id="footer-terms"></a>
+        <a href="#" id="footer-accessibility"></a>
+      </div>
+    </div>
+  </eva-page-shell>
+
+  <script type="module" src="./demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+Sent: December 13, 2023 9:34 PM
+To: Gill, Darren DG [NC] <darren.gill@hrsdc-rhdcc.gc.ca>; Pollock, Jonathan JR [NC] <jonathan.pollock@hrsdc-rhdcc.gc.ca>; Ngo, Quan Q [NC] <quan.ngo@hrsdc-rhdcc.gc.ca>; Brewer, Andrew AW [NC] <andrew.brewer@hrsdc-rhdcc.gc.ca>; Ilambo, Poma PL [NC] <poma.ilambo@hrsdc-rhdcc.gc.ca>; Chen, Zhong Z [NC] <zhongpaul.chen@hrsdc-rhdcc.gc.ca>; Lemay, Sébastien S [NC] <sebastien.lemay@hrsdc-rhdcc.gc.ca>; Simon Lee, Victor V [NC] <victor.simonlee@hrsdc-rhdcc.gc.ca>
+Cc: Whitley, Todd TW [NC] <todd.whitley@hrsdc-rhdcc.gc.ca>; Bernard, Rémy RB [NC] <remy.bernard@hrsdc-rhdcc.gc.ca>; Mailloux, Annick A [NC] <annick.mailloux@hrsdc-rhdcc.gc.ca>
+Subject: EVA - from an idea to the Agile board
+
+That’s how I envisioned EVA, ESDC Virtual Assistant, based on Todd’s initial idea back in the Enterprise Chatbot project last year.
+
+A citizen, a business enterprise or an employee calls the 1 800 O-Canada service phone number.
+EVA ESDC Virtual Assistant answers the phone, identifies itself, offers to speak in the client’s language of choice, asks the client to state their request, proceeds with the client authentication and continues its workflow to process the client request to its successful completion. 
+If needed as per client request, or determined by the EVA’s sentiment analysis, the phone call and its transcript would be routed to a more specialized chatbot or to a Call Centre representative within the department or to any other GoC AI-based Call Centre.
+Besides making a phone call to the 1-800 number, all three clients: the citizen, the business or the employee would be served by EVA hosted in all ESDC channels: ESDC web page, ESDC App, ESDC in Linkedin, in Facebook.
+In case a Call Centre representative is needed, the user handoff from the chatbot would be seamless as the whole transcript would be available to the representative. Depending on the case and client’s approval, further request processing could be completed by another specialized chatbot that the Call Centre representative would engage.
+The same transcript would be used in Analytics, Knowledge Management, Training, linked to the associated cases. Client’s satisfaction would be measure on the fly….
+
+Now I envision EVA everywhere in Protected B environments. 
+Again, ChatGPT and Bing Chat are just appetizers for our business partners.
+The 5-service menu is on us. 
+
+EVA, the AI-based IVR for citizens, business and employees
+EVA, the Service Canada Chatbot & Insights  
+EVA, the Benefits Finder for Citizens
+EVA, the Chat portal for employees that replicates ChatGPT capabilities
+EVA, the Desktop companion of adaptive accessibility tools
+EVA, the Second Language Tutor
+EVA, the Official Languages Translator
+EVA, the CPPD medical adjudicator research assistant
+EVA, the Grants & Contribution (or any report) Summary generator
+EVA, the Sharepoint Information Categorization Tool (ICT) that helps employees to classify sensitive of files
+EVA, the Sharepoint ICT Auditor that scan files and determine their classification is accurate
+EVA, the Chat with your Sharepoint data assistant
+EVA, the SA&A assistant
+EVA, the HR consultant for employees
+EVA, the iService & NSD time saver
+EVA, the BDM Knowledge Management Librarian
+EVA, the Developer’s Pal
+
+Which technologies and resources are involved and should be integrated ?
+The AI Ecosystem + open-source models that can run in the cloud and in desktops and laptops (CSPS experience) AI CoE Ecosystem - v0.1.potx (sharepoint.com)
+MS Copilot – The Power Platform
+Sharepoint 
+The Data Lake supported by JFL
+ML and data science expertise from CDOB
+RPA expertise of RPA team 
+
+How we get that started?
+Collaborating and using the tech and resources available leveraged by MS Info Assistant Accelerator offer, getting Francis help
+
+Roadmap
+Today we have one Azure OpenAI sandbox and several teams interested on it.. AI COE, WTM, SABR, BDM, CDOB (probably), other branches.
+The end state is a scalable Dev-Test-Production Protected B environments in the cloud or in premisses supported by DevOps framework. 
+
+Using the Chat portal for employees as an example we could have several MVP iterations 
+
+MVP version	Azure OpenAI
+0	URL in the public web to display “Welcome to EVA world”
+1	Text box for user prompts and GenAI answers 
+2	Text box for user prompts + text box for grounding text, and GenAI answers 
+3	Free text for prompt + .TXT file path for grounding text
+4	Free text for prompt + multiple .TXT file path for grounding text
+5	Free text for prompt + folder with multiple .TXT files 
+6	Free text for prompt + Multiple folders (each folder one subject) with multiple .TXT files
+
+The same is done in AWS, then Azure & AWS services are combined on a multi cloud strategy, then open-source models stored in the cloud, then on premisses.. that could be applied on a high-availability and very secure scenarios.
+
+The future is bright.. I just hope we don’t get blind by it.
+
+Regards
+
+Marco
+
+

@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "EVA Suite Repository Tree - Health Check Report",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/health-check-report",
+  "created_timestamp": "2025-11-27T12:40:27.8974446Z",
+  "source_intake_file": "HEALTH-CHECK-REPORT.md",
+  "feature_key": "P02-AUTO-48dfe1bc",
+  "feature_slug": "health-check-report"
+}

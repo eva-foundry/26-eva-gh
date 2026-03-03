@@ -1,0 +1,289 @@
+#!/usr/bin/env pwsh
+# MS-InfoJP Fresh Deployment Script
+# For Info-JP (Fresh Microsoft baseline, NOT ESDC EVA-JP-v1.2)
+# Location: C:\Users\marco.presta\OneDrive - ESDC EDSC\Documents\AICOE\EVA-JP-v1.2\docs\eva-foundation\projects\11-MS-InfoJP\
+
+<#
+.SYNOPSIS
+    Deploy MS-InfoJP Jurisprudence Assistant from fresh Info-JP baseline
+    
+.DESCRIPTION
+    Orchestrates full deployment of Microsoft PubSec-Info-Assistant for jurisprudence use case
+    Uses base-platform/ subdirectory (fresh clone), NOT EVA-JP-v1.2 root
+    
+.PARAMETER Phase
+    Deployment phase to execute: Config, Infrastructure, Build, Deploy, Test, All
+    
+.EXAMPLE
+    .\deploy-infojp.ps1 -Phase All
+    Full deployment from scratch
+    
+.EXAMPLE
+    .\deploy-infojp.ps1 -Phase Config
+    Create environment configuration only
+#>
+
+param(
+    [Parameter(Mandatory=$false)]
+    [ValidateSet('Config', 'Infrastructure', 'Build', 'Deploy', 'Test', 'All')]
+    [string]$Phase = 'All'
+)
+
+# Configuration
+$ErrorActionPreference = 'Stop'
+$ProjectRoot = $PSScriptRoot
+$DeploymentRoot = Join-Path $ProjectRoot "base-platform"
+$EnvFile = Join-Path $DeploymentRoot "scripts\environments\.env"
+$TerraformDir = Join-Path $DeploymentRoot "infra"
+
+# Color output
+function Write-Status {
+    param([string]$Message, [string]$Level = 'INFO')
+    $color = switch ($Level) {
+        'SUCCESS' { 'Green' }
+        'ERROR' { 'Red' }
+        'WARNING' { 'Yellow' }
+        default { 'Cyan' }
+    }
+    Write-Host "[$(Get-Date -Format 'HH:mm:ss')] [$Level] $Message" -ForegroundColor $color
+}
+
+# Validate prerequisites
+function Test-Prerequisites {
+    Write-Status "Validating prerequisites..." "INFO"
+    
+    $required = @(
+        @{Name='terraform'; Command='terraform version'},
+        @{Name='Azure CLI'; Command='az version'},
+        @{Name='Python'; Command='python --version'},
+        @{Name='Node.js'; Command='node --version'}
+    )
+    
+    foreach ($tool in $required) {
+        try {
+            $null = Invoke-Expression $tool.Command
+            Write-Status "$($tool.Name) [FOUND]" "SUCCESS"
+        }
+        catch {
+            Write-Status "$($tool.Name) not found" "ERROR"
+            exit 1
+        }
+    }
+    
+    # Validate deployment root
+    if (-not (Test-Path $DeploymentRoot)) {
+        Write-Status "Deployment root not found: $DeploymentRoot" "ERROR"
+        Write-Status "Expected base-platform/ subdirectory from fresh clone" "ERROR"
+        exit 1
+    }
+    Write-Status "Deployment root validated: $DeploymentRoot" "SUCCESS"
+}
+
+# Phase 1: Configuration
+function Invoke-ConfigurationPhase {
+    Write-Status "=== PHASE 1: Configuration ===" "INFO"
+    
+    # Check if .env already exists
+    if (Test-Path $EnvFile) {
+        Write-Status ".env file already exists at: $EnvFile" "WARNING"
+        $response = Read-Host "Overwrite existing .env? (y/N)"
+        if ($response -ne 'y') {
+            Write-Status "Using existing .env file" "INFO"
+            return
+        }
+    }
+    
+    # Create .env from template
+    $templatePath = Join-Path $ProjectRoot ".env.template"
+    if (-not (Test-Path $templatePath)) {
+        Write-Status ".env.template not found at: $templatePath" "ERROR"
+        Write-Status "Create .env.template first with required configuration" "ERROR"
+        exit 1
+    }
+    
+    $envDir = Split-Path $EnvFile -Parent
+    if (-not (Test-Path $envDir)) {
+        New-Item -ItemType Directory -Path $envDir -Force | Out-Null
+    }
+    
+    Copy-Item $templatePath $EnvFile -Force
+    Write-Status ".env created at: $EnvFile" "SUCCESS"
+    Write-Status "Review and customize before proceeding" "WARNING"
+}
+
+# Phase 2: Infrastructure Deployment
+function Invoke-InfrastructurePhase {
+    Write-Status "=== PHASE 2: Infrastructure Deployment ===" "INFO"
+    
+    # Validate .env exists
+    if (-not (Test-Path $EnvFile)) {
+        Write-Status ".env not found. Run with -Phase Config first" "ERROR"
+        exit 1
+    }
+    
+    # Load environment variables
+    Write-Status "Loading environment from: $EnvFile" "INFO"
+    Get-Content $EnvFile | Where-Object { $_ -match '^export\s+(\w+)=(.*)$' } | ForEach-Object {
+        $name = $matches[1]
+        $value = $matches[2] -replace '"', '' -replace "'", ''
+        [Environment]::SetEnvironmentVariable($name, $value, 'Process')
+    }
+    
+    # Navigate to Terraform directory
+    Push-Location $TerraformDir
+    try {
+        Write-Status "Initializing Terraform..." "INFO"
+        terraform init
+        if ($LASTEXITCODE -ne 0) { throw "Terraform init failed" }
+        
+        Write-Status "Creating Terraform plan..." "INFO"
+        terraform plan -out=tfplan
+        if ($LASTEXITCODE -ne 0) { throw "Terraform plan failed" }
+        
+        Write-Status "Applying Terraform plan (this takes 30-45 minutes)..." "WARNING"
+        terraform apply tfplan
+        if ($LASTEXITCODE -ne 0) { throw "Terraform apply failed" }
+        
+        Write-Status "Infrastructure deployment complete" "SUCCESS"
+    }
+    catch {
+        Write-Status "Infrastructure deployment failed: $_" "ERROR"
+        exit 1
+    }
+    finally {
+        Pop-Location
+    }
+}
+
+# Phase 3: Build Applications
+function Invoke-BuildPhase {
+    Write-Status "=== PHASE 3: Build Applications ===" "INFO"
+    
+    Push-Location $DeploymentRoot
+    try {
+        Write-Status "Building applications..." "INFO"
+        bash ./scripts/build.sh
+        if ($LASTEXITCODE -ne 0) { throw "Build failed" }
+        
+        Write-Status "Build complete" "SUCCESS"
+    }
+    catch {
+        Write-Status "Build failed: $_" "ERROR"
+        exit 1
+    }
+    finally {
+        Pop-Location
+    }
+}
+
+# Phase 4: Deploy Applications
+function Invoke-DeployPhase {
+    Write-Status "=== PHASE 4: Deploy Applications ===" "INFO"
+    
+    Push-Location $DeploymentRoot
+    try {
+        Write-Status "Deploying webapp..." "INFO"
+        bash ./scripts/deploy-webapp.sh
+        if ($LASTEXITCODE -ne 0) { throw "Webapp deployment failed" }
+        
+        Write-Status "Deploying enrichment service..." "INFO"
+        bash ./scripts/deploy-enrichment-webapp.sh
+        if ($LASTEXITCODE -ne 0) { throw "Enrichment deployment failed" }
+        
+        Write-Status "Deploying functions..." "INFO"
+        bash ./scripts/deploy-functions.sh
+        if ($LASTEXITCODE -ne 0) { throw "Functions deployment failed" }
+        
+        Write-Status "Application deployment complete" "SUCCESS"
+    }
+    catch {
+        Write-Status "Deployment failed: $_" "ERROR"
+        exit 1
+    }
+    finally {
+        Pop-Location
+    }
+}
+
+# Phase 5: Test Deployment
+function Invoke-TestPhase {
+    Write-Status "=== PHASE 5: Test Deployment ===" "INFO"
+    
+    # Extract webapp URL from Terraform outputs
+    Push-Location $TerraformDir
+    try {
+        $webappUrl = terraform output -raw webapp_url 2>$null
+        if ($webappUrl) {
+            Write-Status "Webapp URL: $webappUrl" "SUCCESS"
+            Write-Status "Opening in browser..." "INFO"
+            Start-Process $webappUrl
+        }
+        else {
+            Write-Status "Could not retrieve webapp URL from Terraform outputs" "WARNING"
+        }
+    }
+    catch {
+        Write-Status "Test phase warning: $_" "WARNING"
+    }
+    finally {
+        Pop-Location
+    }
+    
+    Write-Status "Manual verification required:" "INFO"
+    Write-Status "1. Navigate to webapp URL" "INFO"
+    Write-Status "2. Upload test document (PDF)" "INFO"
+    Write-Status "3. Ask jurisprudence question" "INFO"
+    Write-Status "4. Verify citations and answer quality" "INFO"
+}
+
+# Main execution
+try {
+    Write-Status "MS-InfoJP Fresh Deployment" "INFO"
+    Write-Status "Project: 11-MS-InfoJP" "INFO"
+    Write-Status "Deployment Root: $DeploymentRoot" "INFO"
+    Write-Status "Phase: $Phase" "INFO"
+    Write-Status "" "INFO"
+    
+    Test-Prerequisites
+    
+    switch ($Phase) {
+        'Config' {
+            Invoke-ConfigurationPhase
+        }
+        'Infrastructure' {
+            Invoke-InfrastructurePhase
+        }
+        'Build' {
+            Invoke-BuildPhase
+        }
+        'Deploy' {
+            Invoke-DeployPhase
+        }
+        'Test' {
+            Invoke-TestPhase
+        }
+        'All' {
+            Invoke-ConfigurationPhase
+            
+            Write-Status "" "INFO"
+            Write-Status "Configuration complete. Review .env before continuing." "WARNING"
+            $response = Read-Host "Continue with infrastructure deployment? (y/N)"
+            if ($response -ne 'y') {
+                Write-Status "Deployment paused. Run with -Phase Infrastructure when ready" "INFO"
+                exit 0
+            }
+            
+            Invoke-InfrastructurePhase
+            Invoke-BuildPhase
+            Invoke-DeployPhase
+            Invoke-TestPhase
+        }
+    }
+    
+    Write-Status "" "INFO"
+    Write-Status "Deployment phase '$Phase' completed successfully" "SUCCESS"
+}
+catch {
+    Write-Status "Deployment failed: $_" "ERROR"
+    exit 1
+}

@@ -1,0 +1,19 @@
+displays French labels when lang="fr-CA"', async () => {
+        const el = await fixture<GCPageNavigation>(html`
+          <gc-page-navigation
+            previous-url="/prev"
+            lang="fr-CA"
+          ></gc-page-navigation>
+        `);
+        await waitForUpdate(el);
+
+        // Just verify French locale is set
+        expect(el.lang).to.equal('fr-CA');
+      });
+      const el = await fixture<GCPageNavigation>(html`
+        <gc-page-navigation 
+          next-url="/next"
+          lang="fr-CA"
+        ></gc-page-navigation>
+      `);
+

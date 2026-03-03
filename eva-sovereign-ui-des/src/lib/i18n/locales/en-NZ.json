@@ -1,0 +1,85 @@
+{
+  "esdc": {
+    "title": "Ministry of Social Development",
+    "titleShort": "MSD",
+    "hero": {
+      "title": "Building a skilled, adaptable, and inclusive workforce",
+      "description": "Access employment services, benefits, and support programmes that help New Zealanders succeed"
+    },
+    "programs": {
+      "title": "Programmes and Services",
+      "ei": {
+        "title": "Jobseeker Support",
+        "titleShort": "JS",
+        "description": "Financial help while you look for work",
+        "details": "Jobseeker Support helps you if you're looking for work, can't work full-time because of illness, injury or disability, or are affected by an emergency."
+      },
+      "oas": {
+        "title": "NZ Superannuation",
+        "titleShort": "NZ Super",
+        "description": "Payment for New Zealanders 65 and over",
+        "details": "NZ Superannuation is a fortnightly payment for people 65 years old and over, who normally live in New Zealand at the time they apply."
+      },
+      "cpp": {
+        "title": "KiwiSaver",
+        "titleShort": "KS",
+        "description": "Voluntary savings scheme to help with retirement",
+        "details": "KiwiSaver is a voluntary, work-based savings initiative to help set you up for your retirement."
+      }
+    },
+    "services": {
+      "jobSearch": {
+        "title": "Jobs and Skills",
+        "description": "Find employment opportunities across New Zealand",
+        "details": "Search for jobs, get career advice and access training opportunities."
+      },
+      "benefitsFinder": {
+        "title": "Benefits Guide",
+        "description": "Find out what financial help you may be entitled to",
+        "details": "Answer a few questions to see what financial assistance you may be able to get."
+      }
+    }
+  },
+  "chat": {
+    "title": "Ask EVA",
+    "subtitle": "Employment Virtual Assistant",
+    "placeholder": "How can I help you today?",
+    "send": "Send",
+    "voice": "Voice input",
+    "thinking": "EVA is thinking...",
+    "suggestedTopics": "Suggested topics:",
+    "topics": {
+      "ei": "Jobseeker Support",
+      "oas": "NZ Superannuation",
+      "cpp": "KiwiSaver",
+      "jobs": "Finding a job"
+    }
+  },
+  "navigation": {
+    "skipToMain": "Skip to main content",
+    "home": "Home",
+    "programs": "Programmes",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© Crown Copyright",
+    "privacy": "Privacy",
+    "terms": "Terms and conditions",
+    "accessibility": "Accessibility",
+    "canada": "Govt.nz"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "apply": "Apply now",
+    "english": "English",
+    "french": "Français",
+    "spanish": "Español",
+    "italian": "Italiano",
+    "german": "Deutsch",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "close": "Close"
+  }
+}

@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EVA Suite - Enterprise AI Platform Status Dashboard. Real-time sprint progress, CDD completion, and development metrics.">
+    <title>EVA Suite - AI Platform Development Dashboard</title>
+    <style>
+        :root {
+            --primary: #0078d4;
+            --secondary: #50e6ff;
+            --dark: #1a1a1a;
+            --light: #f5f5f5;
+            --success: #107c10;
+            --warning: #ff8c00;
+            --danger: #d13438;
+            --neutral: #605e5c;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        .vision-banner {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            border-bottom: 4px solid var(--warning);
+        }
+        .vision-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+            background: linear-gradient(135deg, var(--secondary), var(--warning));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .vision-banner .vision-story {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        .vision-banner .vision-story strong {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+        .vision-banner .vision-highlight {
+            background: rgba(255, 140, 0, 0.15);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px auto;
+            border-left: 4px solid var(--warning);
+            max-width: 850px;
+        }
+        .vision-banner .vision-highlight p {
+            font-size: 1.15rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .vision-banner .signature {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            margin-top: 30px;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin: 5px;
+        }
+        .badge-success { background: var(--success); color: white; }
+        .badge-warning { background: var(--warning); color: white; }
+        .badge-info { background: var(--primary); color: white; }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--primary);
+        }
+        .card h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .metric:last-child { border-bottom: none; }
+        .metric-value {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--success) 0%, var(--primary) 100%);
+            transition: width 0.3s ease;
+        }
+        .sprint-timeline {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        .timeline-date {
+            font-weight: 600;
+            color: var(--primary);
+            min-width: 100px;
+            margin-right: 20px;
+        }
+        .eva-products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        @media (max-width: 1400px) {
+            .eva-products { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 1000px) {
+            .eva-products { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .eva-products { grid-template-columns: 1fr; }
+        }
+        .product-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .product-card.expanded {
+            grid-column: span 2;
+            text-align: left;
+        }
+        .product-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .product-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .product-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+        .product-btn:hover {
+            background: var(--secondary);
+            color: var(--dark);
+        }
+        .product-btn.active {
+            background: var(--success);
+        }
+        .product-description, .product-usecase {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid var(--primary);
+            color: var(--neutral);
+            line-height: 1.8;
+            text-align: left;
+        }
+        .product-card.show-description .product-description {
+            display: block;
+        }
+        .product-card.show-usecase .product-usecase {
+            display: block;
+        }
+        .product-category {
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            color: #666;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid #d0d0d0;
+        }
+        .last-updated {
+            text-align: center;
+            color: var(--neutral);
+            margin: 50px 0;
+            font-style: italic;
+        }
+        .repo-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .repo-stat {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .repo-stat .number {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .repo-stat .label {
+            color: var(--neutral);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .dashboard-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 15px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Vision Banner -->
+    <div class="vision-banner">
+        <div class="container">
+            <h2>💫 The EVA Suite: A Visionary's Personal Project</h2>
+            <div class="vision-story">
+                <p><strong>EVA Suite</strong> is an enterprise AI platform comprising <strong>24 products</strong> across 5 categories: <strong>EVA Chat</strong> (your AI conversational interface), <strong>EVA DA</strong> (Document & Data Intelligence), <strong>EVA Portal</strong> (unified workspace), <strong>EVA CloneMe</strong> (your AI proxy attending meetings), <strong>EVA Home</strong> (work-life AI continuity on Alexa/Google Home), <strong>EVA Vision</strong> (accessibility-first AI), <strong>EVA IQ</strong> (Work Graph + Domain Intelligence), <strong>EVA RaC</strong> (Rules as Code neurosymbolic engine), <strong>EVA OS</strong> (native Windows AI layer), <strong>EVA Channel Interactivity</strong> (UI/Chat/Voice simultaneously), and 14 more revolutionary products including Developer Tools and Moonshot projects.</p>
+                
+                <div class="vision-highlight">
+                    <p><strong>"I see EVA everywhere... agents talking to agents."</strong></p>
+                    <p>– Marco's email, December 2023</p>
+                </div>
+                
+                <p>Back in <strong>December 2023</strong>, before the world fully understood agentic AI, Marco wrote those prophetic words. He saw it: <strong>agents talking to agents</strong>, autonomous systems collaborating, AI that doesn't just answer questions but <em>takes action</em>. The vision was already there.</p>
+                
+                <p><strong>Now, in 2025, Marco is making that vision real.</strong></p>
+                
+                <p>This is not a corporate committee product. This is <strong>one visionary's personal mission</strong> to build what he saw coming two years ago. EVA Suite is <strong>sensational</strong>. It's <strong>huge</strong>. It's the future of enterprise AI, and it's being built right now, one sprint at a time.</p>
+            </div>
+            <div class="signature">Personal project of Marco • Vision from December 2023 • Reality in 2025</div>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="container">
+            <h1>🚀 EVA Suite Dashboard</h1>
+            <p>Enterprise AI Platform - Development Status & Progress Tracking</p>
+            <div>
+                <span class="status-badge badge-success">✅ Sprint 4 Planning</span>
+                <span class="status-badge badge-info">📊 148 Story Points Planned</span>
+                <span class="status-badge badge-warning">🎯 14 Days to Demo</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Live Metrics -->
+        <div class="dashboard-grid">
+            <div class="card">
+                <h2>🎯 Sprint Progress</h2>
+                <div class="metric">
+                    <span>Current Sprint</span>
+                    <span class="metric-value">Sprint 4 (Planning)</span>
+                </div>
+                <div class="metric">
+                    <span>Story Points Planned</span>
+                    <span class="metric-value">148 SP (44 tasks)</span>
+                </div>
+                <div class="metric">
+                    <span>Sprint 3 Completion</span>
+                    <span class="metric-value">81.55% (31/38 SP)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 81.55%"></div>
+                </div>
+                <div class="metric">
+                    <span>Days Ahead/Behind</span>
+                    <span class="metric-value" style="color: var(--success)">+14 days ahead</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📚 CDD Ecosystem</h2>
+                <div class="metric">
+                    <span>Total Components</span>
+                    <span class="metric-value">63 CDDs</span>
+                </div>
+                <div class="metric">
+                    <span>Standardized (Ready)</span>
+                    <span class="metric-value">2 Components</span>
+                </div>
+                <div class="metric">
+                    <span>Active Backlog</span>
+                    <span class="metric-value">61 Components</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 95%"></div>
+                </div>
+                <div class="metric">
+                    <span>Completion Rate</span>
+                    <span class="metric-value">95% (eva-ui, eva-i11y)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🏗️ System Health</h2>
+                <div class="metric">
+                    <span>Active Blockers</span>
+                    <span class="metric-value" style="color: var(--success)">0 Open</span>
+                </div>
+                <div class="metric">
+                    <span>Quality Gates</span>
+                    <span class="metric-value" style="color: var(--success)">✅ Defined</span>
+                </div>
+                <div class="metric">
+                    <span>Test Coverage Target</span>
+                    <span class="metric-value">≥80% per repo</span>
+                </div>
+                <div class="metric">
+                    <span>Automation Status</span>
+                    <span class="metric-value" style="color: var(--success)">✅ Operational</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📊 Development Stats</h2>
+                <div class="repo-stats">
+                    <div class="repo-stat">
+                        <div class="number">17</div>
+                        <div class="label">Days on GitHub</div>
+                    </div>
+                    <div class="repo-stat">
+                        <div class="number">14</div>
+                        <div class="label">Active Repositories</div>
+                    </div>
+                    <div class="repo-stat">
+                        <div class="number">148</div>
+                        <div class="label">Planned Story Points</div>
+                    </div>
+                    <div class="repo-stat">
+                        <div class="number">44</div>
+                        <div class="label">Sprint 4 Tasks</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sprint Timeline -->
+        <div class="sprint-timeline">
+            <h2>🗓️ Sprint Timeline & Milestones</h2>
+            <div class="timeline-item">
+                <span class="timeline-date">Nov 26</span>
+                <span>🎯 Sprint 4 Complete - 3-repo batch (eva-agent + eva-openai + eva-rag)</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">Dec 3</span>
+                <span>🎪 Live Demo - Sprint 5 Launch</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">Jan 31</span>
+                <span>🏗️ Infrastructure MVP - Core platform ready</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">Mar 31</span>
+                <span>🚀 Q1 Demo - Full platform demonstration</span>
+            </div>
+        </div>
+
+        <!-- EVA Suite Products -->
+        <div class="card">
+            <h2>🎯 EVA Suite Product Lineup (24 Products) - Real Examples</h2>
+            <p style="color: var(--neutral); margin-bottom: 20px; font-style: italic;">Every EVA product works 3 ways: Traditional UI clicks, Chat with keyboard, or Voice commands. Click any product to see concrete examples.</p>
+            <div class="eva-products">
+                <!-- User Products -->
+                <div class="product-card">
+                    <div class="product-icon">💬</div>
+                    <h3>EVA Chat</h3>
+                    <span class="product-category">User Product</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Example:</strong> You type: "Search our SharePoint for the Q3 budget template Susan used last year, then email it to my team with a note that we need to submit by Friday." EVA Chat orchestrates multiple agents: finds the document, drafts the email with your signature, shows you the preview, sends on your approval. <strong>The Art:</strong> Eventually becomes your universal enterprise console - everything you do at work, you just tell EVA.</div>
+                    <div class="product-usecase"><strong>Use Case: Manager's Monday Morning Routine</strong><br>
+                    <strong>1)</strong> Opens EVA Chat: "Show me all team updates from last week"<br>
+                    <strong>2)</strong> EVA searches Teams, Outlook, SharePoint → summarizes 12 updates<br>
+                    <strong>3)</strong> "Schedule 1-on-1s with anyone who mentioned blockers"<br>
+                    <strong>4)</strong> EVA finds 3 people, checks calendars, books 30-min slots<br>
+                    <strong>5)</strong> "Draft status report for my VP highlighting the product launch milestone"<br>
+                    <strong>6)</strong> EVA drafts email with timeline, shows preview<br>
+                    <strong>7)</strong> Manager edits subject line, says "Send"<br>
+                    <strong>Result:</strong> 45-minute Monday morning routine → 10 minutes with EVA</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🔍</div>
+                    <h3>EVA DA</h3>
+                    <span class="product-category">User Product</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Example:</strong> Policy advisor asks: "Show me all CPP-D appeals where medical evidence was insufficient, jurisprudence cited, and claimant was under 45." EVA DA queries structured databases + RAG over documents + RaC rule engine, returns: 47 cases with citations, decision patterns, and common themes. <strong>The Art:</strong> RAG+RaC neurosymbolic reasoning - probabilistic search meets logical rules, no hallucinations on eligibility.</div>
+                    <div class="product-usecase"><strong>Use Case: Legal Researcher Finding Precedents</strong><br>
+                    <strong>1)</strong> Lawyer asks EVA DA: "Show appeals in Atlantic region, 2023-2024, where tribunal overturned initial decision"<br>
+                    <strong>2)</strong> EVA DA queries database (structured) + jurisprudence library (RAG) + RaC rules<br>
+                    <strong>3)</strong> Returns 23 cases with: decision text, key factors, cited statutes, outcome<br>
+                    <strong>4)</strong> Lawyer: "Which ones cited section 42(2)(a) medical evidence requirements?"<br>
+                    <strong>5)</strong> EVA DA filters → 8 cases, highlights relevant paragraphs<br>
+                    <strong>6)</strong> Lawyer: "Summarize common themes in overturns"<br>
+                    <strong>7)</strong> EVA DA: "Main themes: insufficient specialist reports (6 cases), outdated evidence (4 cases), tribunal found new functional limitations (3 cases)"<br>
+                    <strong>Result:</strong> 3 days of manual research → 20 minutes with EVA DA</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🌐</div>
+                    <h3>EVA Portal</h3>
+                    <span class="product-category">User Product</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Example:</strong> IT Director logs in, sees dashboard: "47 active EVA spaces, $12K monthly cost, 8 spaces over budget alerts, 3 pending security reviews." Clicks "CPP-D Project" space, reviews: 1,200 queries this month, avg response 2.3s, 94% user satisfaction, top 5 documents accessed. Sets new budget cap: $2K/month. Gets alert when 80% threshold hit. <strong>The Art:</strong> Enterprise governance hub - who's using what, spending how much, achieving what results. Single pane of glass for AI platform oversight.</div>
+                    <div class="product-usecase"><strong>Use Case: IT Director Monthly Review</strong><br>
+                    <strong>1)</strong> Opens EVA Portal → sees 47 spaces across organization<br>
+                    <strong>2)</strong> Filters by "over budget" → 8 spaces flagged red<br>
+                    <strong>3)</strong> Clicks "Legal Discovery" space (highest spend: $3.2K this month)<br>
+                    <strong>4)</strong> Reviews usage: 450 queries, 12 active users, mostly document summarization<br>
+                    <strong>5)</strong> Sees spike on Nov 15-17 (court deadline prep)<br>
+                    <strong>6)</strong> Approves overage, sets alert for next spike<br>
+                    <strong>7)</strong> Exports cost report for Finance<br>
+                    <strong>Result:</strong> 15 min monthly review vs 3 hours manually tracking spreadsheets</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">💭</div>
+                    <h3>EVA AskMe</h3>
+                    <span class="product-category">User Product</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Example:</strong> HR embeds EVA AskMe widget on Benefits Portal. Widget crawls all portal pages, learns navigation structure: "Dental plan is under Health → Coverage Options." Employee asks widget: "How do I add my spouse to dental?" EVA AskMe answers: "Go to Health Coverage → Manage Dependents, click Add Spouse, upload marriage certificate, effective next pay period. FYI: deadline is 30 days after marriage." Widget learned this from portal content + HR policy docs. <strong>The Art:</strong> Embeddable chatbot that becomes an expert on YOUR application by learning its navigation and content.</div>
+                    <div class="product-usecase"><strong>Use Case: New Employee Onboarding Portal</strong><br>
+                    <strong>Scenario:</strong> Company has complex onboarding portal (20+ pages, 50+ forms)<br>
+                    <strong>1)</strong> HR embeds EVA AskMe widget in corner of portal<br>
+                    <strong>2)</strong> AskMe crawls portal, maps: Home → Direct Deposit → Tax Forms → Benefits → IT Access...<br>
+                    <strong>3)</strong> New hire Day 1, confused: "Where do I set up direct deposit?"<br>
+                    <strong>4)</strong> AskMe answers: "Click 'Payroll Setup' in left menu, then 'Direct Deposit Form'"<br>
+                    <strong>5)</strong> Employee: "What info do I need?"<br>
+                    <strong>6)</strong> AskMe: "Bank name, routing number, account number. You can find these on a check."<br>
+                    <strong>Result:</strong> 80% reduction in HR help desk tickets for navigation questions</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">👤</div>
+                    <h3>EVA CloneMe</h3>
+                    <span class="product-category">User Product</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Example:</strong> You say: "Book me a meeting room for two next week, afternoon, 30 minutes. Find a slot in Shannon's calendar and send him an invite to discuss our common interests." CloneMe checks your calendars, finds Tuesday 2pm works, books Room 405, drafts invite referencing your last 3 email threads with Shannon. Then: "Ask CloneMe to attend the CIO debriefing I'll miss Friday, then make me a summary with my next steps." CloneMe joins Teams meeting, takes notes, emails you: "CIO approved the AI budget. Your action: submit Q1 forecast by Nov 30. P.S. I can now answer any questions about the AI governance proposal you presented - I've indexed your deck, the Q&A discussion, and CIO's feedback." <strong>The Twist:</strong> CloneMe builds a RAG index of every meeting it attends FOR YOU, becoming your expert proxy on those topics. <strong>Moonshot 2027:</strong> Saves 2+ hours/day.</div>
+                    <div class="product-usecase"><strong>Use Case: Executive's Crazy Thursday</strong><br>
+                    <strong>Morning:</strong> "CloneMe, I have back-to-back meetings 9-5 today. Monitor my Outlook for urgent items, draft holding responses."<br>
+                    <strong>10:30am:</strong> CFO emails: "Need Q4 forecast ASAP." CloneMe drafts: "Working on it, will have by EOD."<br>
+                    <strong>2pm:</strong> Double-booked conflict detected. CloneMe: "You're double-booked at 3pm: Product Review vs HR Budget. Which should I reschedule?"<br>
+                    <strong>2:05pm:</strong> You: "Move Product Review to tomorrow afternoon."<br>
+                    <strong>2:06pm:</strong> CloneMe finds slot, moves meeting, notifies 6 attendees<br>
+                    <strong>3pm:</strong> CloneMe attends HR Budget meeting you couldn't make, takes notes<br>
+                    <strong>5:30pm:</strong> You: "CloneMe, what did I miss today?"<br>
+                    <strong>5:31pm:</strong> CloneMe summary: "3 urgent emails (drafted responses, await your approval), 2 meeting conflicts resolved, Shannon confirmed coffee tomorrow 10am, reminder: Q4 forecast due EOD."<br>
+                    <strong>5:32pm:</strong> You: "What was decided in the HR budget meeting?"<br>
+                    <strong>5:33pm:</strong> CloneMe: "Hiring freeze through Q1 except critical roles, training budget cut 15%, bonus pool protected. Your next step: revise Q1 hiring plan by next Wednesday. Want me to draft it based on current open reqs?"<br>
+                    <strong>Result:</strong> Stayed on top of 47 emails, 8 meetings, 0 dropped balls + instant recall of meetings you missed</div>
+                </div>
+                
+                <!-- AI Intelligence Products -->
+                <div class="product-card">
+                    <div class="product-icon">👁️</div>
+                    <h3>EVA Vision</h3>
+                    <span class="product-category">AI Intelligence</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>The Accessibility Revolution:</strong> Computer vision + AI narration for screen readers and voice navigation. <strong>Example:</strong> Blind analyst Sarah opens Power BI dashboard, says: "EVA, what's on this screen?" EVA: "Revenue dashboard, 6 charts. Top left shows Q3 down 12% in Atlantic region, red bar." Sarah: "Drill into Atlantic, show me by product line." EVA: "Opening Atlantic detail... Software licenses down 23%, consulting up 8%." Sarah: "Create what-if scenario: if we discount software 15%, what's revenue impact?" EVA runs calculation, narrates results: "15% discount generates 31% volume increase, net revenue up 11.6%." <strong>The Impact:</strong> Data analysis without sight barriers - every chart, every insight, fully accessible through conversation.</div>
+                    <div class="product-usecase"><strong>Use Case: Accessible Power BI Analysis</strong><br>
+                    <strong>Step 1:</strong> Sarah (blind data analyst) opens quarterly dashboard, asks: "EVA, describe this screen"<br>
+                    <strong>Step 2:</strong> EVA Vision analyzes visual layout: "Dashboard titled 'Q3 Revenue Analysis' with 6 panels - bar charts (top row), line graphs (middle), pie charts (bottom). Top-left bar chart shows regions, Atlantic region highlighted in red indicating decline."<br>
+                    <strong>Step 3:</strong> Sarah: "Navigate to Atlantic region chart, tell me the values" → EVA: "Atlantic Q3: $12.4M down from $14.1M last quarter, -12% change. Breakdown: Software Licenses $4.8M (-23%), Consulting Services $7.6M (+8%)"<br>
+                    <strong>Step 4:</strong> Sarah: "Compare Atlantic to other regions" → EVA: "Pacific $18.2M (+5%), Central $15.9M (+2%), Atlantic $12.4M (-12%). Atlantic is only declining region."<br>
+                    <strong>Step 5:</strong> Sarah: "Drill down into Atlantic Software Licenses, what are the top 3 declining products?" → EVA opens drill-down view: "Product A -35% ($890K lost), Product B -28% ($720K lost), Product C -15% ($410K lost)"<br>
+                    <strong>Step 6:</strong> Sarah: "Create scenario analysis: if we offer 15% discount on Product A and Product B, model the revenue impact" → EVA runs calculation: "15% discount typically drives 30-35% volume increase based on historical elasticity. Projected net revenue: Product A +$245K, Product B +$189K, combined recovery of $434K."<br>
+                    <strong>Step 7:</strong> Sarah: "Export this analysis to Word document for executive briefing" → EVA: "Document created with charts converted to data tables, scenario analysis included. Saved to OneDrive/Q3-Atlantic-Analysis.docx"<br>
+                    <strong>Result:</strong> Sarah completed complex data analysis entirely through voice - no mouse, no keyboard, no visual inspection. Dashboard accessibility went from impossible to effortless. 45 minutes saved per analysis session.</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🧠</div>
+                    <h3>EVA IQ</h3>
+                    <span class="product-category">AI Intelligence</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>The Context Engine:</strong> Enterprise work graph + domain ontology builder - Microsoft Work IQ equivalent for EVA Suite. Indexes WHO works on WHAT using WHICH artifacts, builds semantic understanding of your organization. <strong>Example:</strong> Developer asks EVA Chat: "Who's the expert on payment processing integration?" Without IQ: generic answer. With IQ: "Sarah Chen (Payments Team, 4 years). She authored the Stripe integration (payments-api repo), reviewed 47 PRs on payment flows, presents at Payment Architecture Guild monthly. Currently working on PCI-DSS compliance upgrade. Would you like me to check her calendar availability?" <strong>The Intelligence:</strong> EVA IQ transforms generic AI into YOUR organization's AI - understanding your people (roles, expertise, relationships), projects (repos, artifacts, dependencies), and domain semantics (business entities, metrics, processes). Every EVA product gets smarter through shared context.</div>
+                    <div class="product-usecase"><strong>Use Case: Intelligent Project Context</strong><br>
+                    <strong>Step 1:</strong> New developer Jake joins EVA Suite team, asks EVA Chat: "What's the architecture of the authentication system?"<br>
+                    <strong>Step 2:</strong> EVA IQ queries work graph: finds eva-auth repo, identifies Michel as primary author (87% commits), discovers related repos (eva-api, eva-core), maps architecture diagrams in eva-docs<br>
+                    <strong>Step 3:</strong> EVA responds: "Authentication system uses OAuth 2.0 + Entra ID integration. Primary repo: eva-auth (Michel Tremblay is architect/owner). Key components: Token Service (eva-auth/src/token-service.ts), Session Manager (eva-auth/src/session.ts), RBAC Engine (eva-core/src/rbac). Architecture diagram: eva-docs/architecture/auth-flow.md. Michel presented 'Auth Security Patterns' at last Tech Guild - would you like the recording?"<br>
+                    <strong>Step 4:</strong> Jake: "Who should I talk to about adding MFA support?" → EVA IQ searches expertise graph: "Michel Tremblay (authentication architect) and Sarah Chen (security lead) both worked on MFA spike last quarter (eva-auth PR #234). Sarah has availability Thursday 2-3pm. Should I schedule a meeting?"<br>
+                    <strong>Step 5:</strong> Jake: "Yes, and pull up any existing MFA documentation" → EVA books meeting, attaches: MFA spike document (eva-docs/spikes/mfa-evaluation.md), security requirements (eva-docs/security/mfa-requirements.md), related Jira epic (EVA-892)<br>
+                    <strong>Step 6:</strong> During meeting, Michel shares screen, EVA IQ automatically indexes discussion topics: TOTP implementation, backup codes, recovery flow. Updates work graph: Jake now linked to MFA feature, Michel/Sarah marked as collaborators<br>
+                    <strong>Step 7:</strong> Next week, another developer asks: "Who's working on MFA?" → EVA: "Jake Morrison (started last week), collaborating with Michel (architect) and Sarah (security). Current status: requirements finalized, implementation in progress (eva-auth branch: feature/mfa-totp). Epic EVA-892 tracking 5 stories, 2 completed."<br>
+                    <strong>Result:</strong> EVA IQ transformed generic AI into organizational intelligence. Jake onboarded 10x faster - instant expert identification, automatic context gathering, living knowledge graph that evolves with every commit, meeting, and conversation. Zero manual documentation, always current.</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">⚖️</div>
+                    <h3>EVA RaC</h3>
+                    <span class="product-category">AI Intelligence</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Rules as Code - Neurosymbolic AI:</strong> Policy and legislation encoded as executable Python logic (OpenFisca framework), exposed via APIM. The guardrail preventing AI hallucination on eligibility, compliance, and entitlements. <strong>Example:</strong> Citizen asks EVA AskMe: "Am I eligible for parental leave benefits?" LLM alone might hallucinate. With RaC: EVA queries symbolic rules: <code>is_eligible = (employed_12_months AND earnings > threshold AND birth_within_52_weeks)</code> → returns deterministic answer with legislation references. <strong>The Power:</strong> LLMs explain in natural language, RaC enforces precise logic. AI provides friendly interface, rules ensure mathematical correctness. No hallucinations on money, rights, or compliance. <strong>Moonshot:</strong> Policy changes go from 18-month implementation cycles to instant deployment - update rules, AI immediately enforces new legislation.</div>
+                    <div class="product-usecase"><strong>Use Case: Legislative Change Impact Analysis</strong><br>
+                    <strong>Step 1:</strong> Government announces Bill C-123: "Parental Leave Extended" - increases benefit duration from 52 weeks to 78 weeks, effective Jan 1, 2026<br>
+                    <strong>Step 2:</strong> Policy analyst opens EVA RaC studio, inputs legislative text: "Amend Employment Insurance Act Section 23(1): maximum benefit period increased from 52 to 78 weeks for births after January 1, 2026"<br>
+                    <strong>Step 3:</strong> EVA RaC parses legislation using NLP, identifies affected rules: <code>parental_leave.maximum_weeks</code> parameter (currently 52), <code>benefit_calculation.duration</code> formula, <code>eligibility.effective_date</code> logic<br>
+                    <strong>Step 4:</strong> Analyst clicks "Generate Rule Changes" → EVA produces Python diff:<br><code>- PARENTAL_LEAVE_MAX_WEEKS = 52<br>+ PARENTAL_LEAVE_MAX_WEEKS = 78<br>+ PARENTAL_LEAVE_EXTENDED_EFFECTIVE_DATE = date(2026, 1, 1)</code><br>
+                    <strong>Step 5:</strong> Analyst: "Run scenario analysis - how many current claimants affected?" → EVA queries production database (anonymized): "2,847 active claims with birth dates after Jan 1, 2026. Projected benefit increase: $127M additional payout over next 12 months. Peak claim processing: March 2026 (+340 claims/week)."<br>
+                    <strong>Step 6:</strong> Analyst: "Simulate 5 test cases" → EVA runs rules engine:<br>• Case 1: Birth Dec 15, 2025 → 52 weeks (old rules)<br>• Case 2: Birth Jan 5, 2026 → 78 weeks (new rules)<br>• Case 3: Birth Jan 1, 2026 → 78 weeks (effective date inclusive)<br>• Case 4: Adoption Feb 2026 → 78 weeks (adoption counts as "birth")<br>• Case 5: Multiple births Jan 2026 → 78 weeks (no multiplier change)<br>
+                    <strong>Step 7:</strong> Analyst approves changes, clicks "Deploy to Staging" → EVA publishes updated rules to APIM staging endpoint, generates test suite (47 automated scenarios), updates documentation, notifies QA team<br>
+                    <strong>Step 8:</strong> QA runs regression tests against staging APIM → all 47 tests pass, including edge cases (timezone handling, retroactive claims, split benefit years). Promotes to production with audit trail: Bill C-123 implementation certified compliant.<br>
+                    <strong>Result:</strong> Legislative change implemented in 3 hours instead of 6 months. Zero coding by developers - policy analysts directly encode legislation. Instant scenario testing caught 2 edge cases before production. Digital twin simulation projected budget impact before deployment. When rules go live Jan 1, citizens immediately see correct 78-week calculations in EVA AskMe portal with zero system downtime.</div>
+                </div>
+                
+                <!-- Platform Products -->
+                <div class="product-card">
+                    <div class="product-icon">💻</div>
+                    <h3>EVA OS</h3>
+                    <span class="product-category">Platform</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Your Company's Windows Copilot:</strong> Windows 11 OS integration bringing company-branded AI assistant to desktop experience. <strong>Example:</strong> Employee presses Win+C hotkey, EVA OS appears (not Microsoft Copilot, YOUR EVA with company logo). "EVA, find that contract Sarah sent last week" → searches enterprise OneDrive/SharePoint, returns document with context. "EVA, summarize my Teams messages from this morning" → EVA reads chat history, highlights action items. "EVA, join my next meeting" → opens Teams call with automatic transcription. <strong>The Vision:</strong> Windows becomes YOUR enterprise AI platform - seamless integration with file system, clipboard, notifications, apps. Every Windows action can invoke EVA intelligence.</div>
+                    <div class="product-usecase"><strong>Use Case: Seamless Desktop AI Integration</strong><br>
+                    <strong>Step 1:</strong> Employee arrives at desk, logs into Windows 11. EVA OS auto-starts in system tray with company logo (replaces generic Copilot icon)<br>
+                    <strong>Step 2:</strong> Employee presses Win+C hotkey → EVA sidebar slides in from right: "Good morning! You have 3 meetings today. Your 10am 'Budget Review' has new pre-read document from CFO (uploaded 8:47am). Would you like me to summarize it?"<br>
+                    <strong>Step 3:</strong> Employee: "Yes, summarize the CFO document" → EVA: "CFO proposes 15% budget cut to IT infrastructure, prioritizing cloud migration over on-premise expansion. Key impact: $2.3M reduction, affects Q2 server refresh project. Action needed: your input on cloud migration timeline by Friday."<br>
+                    <strong>Step 4:</strong> Employee copies data from Excel spreadsheet (Ctrl+C). EVA OS detects clipboard: "I see you copied Q3 revenue data. Would you like me to: (a) Create chart visualization, (b) Compare to Q2 trends, (c) Draft executive summary?"<br>
+                    <strong>Step 5:</strong> Employee: "Create chart visualization" → EVA generates PowerPoint slide with bar chart, pastes into current presentation. "Chart added to Slide 7. Should I match the color scheme to your corporate template?" → Employee: "Yes" → Chart recolors to brand guidelines<br>
+                    <strong>Step 6:</strong> Notification pops up: Teams meeting starting in 2 minutes. Employee clicks EVA tray icon: "Join my next meeting and take notes" → EVA opens Teams, joins call, starts transcription. During 45-minute meeting, EVA captures: 12 action items, 3 decisions, 2 parking lot topics<br>
+                    <strong>Step 7:</strong> Meeting ends. EVA notification: "Meeting summary ready. I identified 4 action items assigned to you. Should I create Jira tickets?" → Employee: "Yes, and email the summary to attendees" → EVA creates tickets (Jira API), emails formatted summary with timestamps and attendee list<br>
+                    <strong>Result:</strong> Windows became intelligent assistant - clipboard awareness, meeting automation, file system integration, notification intelligence. Employee saved 90 minutes of manual note-taking, ticket creation, and email drafting. EVA OS transformed generic Windows into enterprise-aware productivity platform.</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">📚</div>
+                    <h3>EVA Learning</h3>
+                    <span class="product-category">Platform</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Adaptive AI Training Platform:</strong> Continuous model improvement through human feedback loops + organizational learning library. <strong>Example:</strong> Legal analyst corrects EVA DA: "This precedent interpretation is wrong - 2019 Supreme Court ruling changed this." EVA Learning captures correction, updates legal knowledge base, fine-tunes DA model, validates with 5 similar cases, deploys improvement within 24 hours. Next time ANY user asks about that precedent, EVA gives updated answer. <strong>The Intelligence:</strong> Your EVA gets smarter every day through usage - learns your terminology, corrects mistakes, adapts to organizational context. Not generic AI trained on internet - specialized AI trained on YOUR corrections, YOUR documents, YOUR workflows.</div>
+                    <div class="product-usecase"><strong>Use Case: Organizational Knowledge Evolution</strong><br>
+                    <strong>Step 1:</strong> Legal analyst Maria asks EVA DA: "What's the precedent on remote work privacy rights in Canada?" → EVA responds: "2018 Federal Court ruling established that employers can monitor work devices without notice."<br>
+                    <strong>Step 2:</strong> Maria clicks "This is incorrect" feedback button → EVA Learning captures: timestamp, user, query, incorrect response<br>
+                    <strong>Step 3:</strong> Maria provides correction: "2023 Supreme Court ruling R v. TechCorp REVERSED the 2018 decision - employers now require explicit consent before monitoring. This is a major precedent change." Attaches case citation: [2023] SCC 47<br>
+                    <strong>Step 4:</strong> EVA Learning workflow triggers: (a) Validates citation (real case, correct date), (b) Fetches full ruling from CanLII database, (c) Identifies 8 related queries in past 90 days that received outdated answer, (d) Flags for knowledge base update<br>
+                    <strong>Step 5:</strong> EVA sends notification to Legal Team lead: "Maria identified precedent update - 2023 SCC ruling supersedes 2018 answer. 8 users received outdated information. Approve knowledge base update?" → Lead reviews, approves<br>
+                    <strong>Step 6:</strong> EVA Learning deploys update: (a) Adds 2023 SCC ruling to legal knowledge base with "supersedes" relationship to 2018 case, (b) Fine-tunes DA model on 12 privacy-related scenarios, (c) Validates new answer against 5 test cases, (d) Notifies 8 users who received old answer: "FYI: Privacy monitoring precedent has been updated - see corrected guidance"<br>
+                    <strong>Step 7:</strong> Next day, different analyst asks same question → EVA DA: "2023 Supreme Court ruling (R v. TechCorp [2023] SCC 47) requires explicit employee consent before workplace monitoring - this REVERSED the 2018 Federal Court decision. Key change: privacy rights strengthened significantly."<br>
+                    <strong>Step 8:</strong> After 30 days, EVA Learning analytics dashboard shows: "Legal Knowledge Base: +127 corrections this month, 94% approved. Top contributor: Maria (23 corrections, 100% approval rate). Model accuracy improved 8.3% on legal queries. User satisfaction: 4.7/5 stars (up from 4.2 last month)."<br>
+                    <strong>Result:</strong> Organization's AI evolved from generic knowledge to specialized expertise. Maria's correction helped 94 employees get accurate answers. EVA Learning closed the feedback loop - mistake identified, validated, corrected, and deployed in 24 hours. Knowledge base became living asset that grows with every interaction.</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">📊</div>
+                    <h3>EVA LiveOps</h3>
+                    <span class="product-category">Platform</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>AI-Powered Production Operations:</strong> Real-time monitoring + intelligent incident management for EVA Suite platform. <strong>Example:</strong> 2:47am - EVA Chat response times spike to 8 seconds (SLA: 2 seconds). EVA LiveOps detects anomaly, analyzes logs, identifies root cause: Azure OpenAI rate limit hit due to overnight batch job misconfiguration. Automatically: (1) Throttles batch job, (2) Scales up OpenAI quota, (3) Pages on-call engineer with diagnosis, (4) Posts incident summary in Teams. By 2:52am, response times back to 1.8 seconds. Engineer wakes up to resolved incident with full RCA document already drafted. <strong>The Intelligence:</strong> AI that monitors AI - understands patterns, predicts failures, auto-remediates common issues, only escalates complex problems with actionable diagnostics.</div>
+                    <div class="product-usecase"><strong>Use Case: Intelligent Incident Response</strong><br>
+                    <strong>2:47:23am:</strong> EVA LiveOps monitoring detects anomaly - EVA Chat API response times jumped from 1.2s average to 8.3s (SLA breach: >2s). Alert severity: HIGH<br>
+                    <strong>2:47:31am:</strong> EVA LiveOps triggers diagnostic workflow: (a) Queries Application Insights for error patterns, (b) Checks Azure OpenAI service health, (c) Analyzes recent deployments, (d) Scans background job logs<br>
+                    <strong>2:47:45am:</strong> Root cause identified: Overnight data migration job (started 2:30am) sending 400 requests/minute to Azure OpenAI API → hitting rate limit (300 req/min) → causing throttling errors → EVA Chat retries → latency spike<br>
+                    <strong>2:48:00am:</strong> EVA LiveOps auto-remediation: (a) Pauses data migration job via Azure DevOps API, (b) Requests temporary quota increase from Azure OpenAI (documented in runbook), (c) Clears rate limit backlog<br>
+                    <strong>2:48:30am:</strong> Response times recovering: 8.3s → 4.1s → 2.7s → 1.9s (back under SLA)<br>
+                    <strong>2:49:00am:</strong> EVA LiveOps pages on-call engineer (Sarah) via PagerDuty: "INCIDENT AUTO-RESOLVED: EVA Chat latency spike caused by data migration job exceeding OpenAI rate limits. Job paused, quota increased, latency restored to 1.9s. Review needed: adjust job throttling before resuming. RCA draft ready."<br>
+                    <strong>2:52:00am:</strong> All metrics green. Response time: 1.8s average. Zero customer impact (spike lasted 5 minutes, 3am EST = low traffic). EVA LiveOps posts incident summary in Teams #incidents channel with timeline, graphs, and remediation steps<br>
+                    <strong>7:15am:</strong> Sarah wakes up, checks phone. Incident already resolved. Reviews EVA-generated RCA document: timeline, root cause analysis, remediation steps, prevention recommendations ("Add rate limit buffer to batch jobs, implement exponential backoff, schedule migrations during maintenance windows")<br>
+                    <strong>9:00am:</strong> Sarah's morning standup: "Overnight incident auto-resolved by EVA LiveOps. Data migration job hit OpenAI rate limits, system paused job and scaled quota. I'll update the job config with throttling today. Total customer impact: zero. Mean time to resolution: 5 minutes."<br>
+                    <strong>Result:</strong> AI-managed incident that would typically take 45-90 minutes (detection + diagnosis + remediation + documentation) resolved in 5 minutes with zero human intervention. On-call engineer got full night's sleep. RCA documentation auto-generated. System learned new pattern - next time similar issue occurs, prevention kicks in BEFORE SLA breach.</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">📈</div>
+                    <h3>EVA Analytics</h3>
+                    <span class="product-category">Platform</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Business Intelligence for AI Operations:</strong> Usage analytics, cost tracking, ROI measurement across all EVA Suite products. <strong>Example:</strong> CFO asks: "What's our AI ROI this quarter?" EVA Analytics dashboard shows: EVA Chat handled 47,234 employee queries (avg resolution time: 43 seconds, human equivalent: 12 minutes = 8,726 hours saved). EVA DA processed 3,891 legal research requests ($450/hour paralegal rate = $1.75M cost avoidance). EVA CloneMe attended 892 meetings (12 hours/week executive time recovered = $340K productivity gain). Total AI investment: $89K/quarter. ROI: 2,340%. <strong>The Insight:</strong> Transforms "AI is expensive" into "AI saves millions" with quantified impact metrics - time saved, costs avoided, productivity gained, user satisfaction measured.</div>
+                    <div class="product-usecase"><strong>Use Case: Quarterly AI ROI Report</strong><br>
+                    <strong>Step 1:</strong> CFO prepares for board meeting, needs AI investment justification. Opens EVA Analytics dashboard, sets filter: Q3 2025<br>
+                    <strong>Step 2:</strong> EVA Analytics aggregates data across all products:<br>• <strong>EVA Chat:</strong> 47,234 queries, 1.2 avg turns per conversation, 43s avg resolution time. Benchmark: IT helpdesk human resolution = 12 min avg. Time saved: 8,726 hours. Cost avoidance: $350K (@ $40/hr IT support rate)<br>• <strong>EVA DA:</strong> 3,891 legal research requests, 8.7 min avg research time. Benchmark: paralegal manual research = 2.5 hours. Time saved: 9,540 hours. Cost avoidance: $1.75M (@ $450/hr paralegal rate)<br>• <strong>EVA Portal:</strong> 12,847 logins, 67% self-service success rate for policy lookups. Support ticket reduction: 8,607 avoided tickets. Cost avoidance: $215K (@ $25/ticket)<br>• <strong>EVA CloneMe:</strong> 892 meetings attended, avg 45 min/meeting. Executive time recovered: 668 hours. Productivity value: $340K (@ $510/hr executive rate)<br>• <strong>EVA AskMe:</strong> 23,103 citizen inquiries, 89% deflection rate from call center. Call reduction: 20,562 calls. Cost avoidance: $411K (@ $20/call)<br>
+                    <strong>Step 3:</strong> CFO clicks "Cost Breakdown" → EVA Analytics shows quarterly spend:<br>• Azure OpenAI API: $67K (GPT-4 usage)<br>• Azure infrastructure: $18K (compute, storage, networking)<br>• Support & operations: $4K (monitoring, incidents)<br>• <strong>Total Investment: $89K</strong><br>
+                    <strong>Step 4:</strong> CFO clicks "Generate ROI Summary" → EVA produces executive report:<br>• Total Cost Avoidance: $3.07M<br>• Total Investment: $89K<br>• Net Benefit: $2.98M<br>• <strong>ROI: 3,348%</strong><br>• Payback Period: 8.7 days<br>• Productivity Hours Recovered: 27,541 hours (13.2 FTE equivalents)<br>
+                    <strong>Step 5:</strong> CFO clicks "User Satisfaction Trends" → EVA shows:<br>• EVA Chat: 4.6/5 stars (8,234 ratings), 87% positive sentiment<br>• EVA DA: 4.8/5 stars (1,247 ratings), 92% "saved me significant time"<br>• EVA Portal: 4.4/5 stars (3,891 ratings), 78% prefer self-service vs calling helpdesk<br>• Net Promoter Score (NPS): +67 ("world-class" tier)<br>
+                    <strong>Step 6:</strong> CFO clicks "Download Board Deck" → EVA generates PowerPoint with 12 slides: Executive Summary, ROI Calculation, Product Usage Breakdown, Cost Avoidance Details, User Satisfaction, Adoption Trends, Comparison to Industry Benchmarks, Q4 Projections, Risk Assessment, Scaling Recommendations<br>
+                    <strong>Step 7:</strong> Board meeting next day. CFO presents: "Our AI investment of $89K generated $3.07M in measurable value this quarter - 34x return. We recovered 27,541 productivity hours, equivalent to hiring 13 additional FTEs. User satisfaction is 4.6/5 stars with 87% positive sentiment. Recommendation: increase AI investment by 50% in Q4 to accelerate adoption across remaining departments."<br>
+                    <strong>Result:</strong> AI shifted from "experimental technology" to "proven strategic asset" backed by quantified ROI data. Board approved Q4 budget increase. EVA Analytics transformed qualitative AI benefits ("it's helpful") into executive-grade financial metrics ("3,348% ROI, 8.7-day payback").</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🛒</div>
+                    <h3>EVA Marketplace</h3>
+                    <span class="product-category">Platform</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Enterprise App Store for AI Agents:</strong> Internal marketplace where teams publish, discover, and deploy custom AI agents with governance controls. <strong>Example:</strong> Developer publishes "Contract Analyzer" agent to marketplace. Legal team discovers it, reads reviews (4.8 stars, 127 uses), clicks "Deploy to my EVA Portal." Agent appears in their EVA Chat with custom slash-command: <code>/contract-analyze [document]</code>. <strong>The Governance:</strong> Enterprise pre-approval required before listing - security scan, compliance check, data access audit. Prevents shadow AI while enabling innovation. <strong>The Art:</strong> Community-driven extensibility (anyone can build agents) + enterprise controls (IT approves before deployment) = democratized AI with safety rails.</div>
+                    <div class="product-usecase"><strong>Use Case: Discover, Deploy, Use Custom Agent</strong><br>
+                    <strong>Step 1:</strong> Legal analyst Jennifer hears from colleague: "There's a contract analyzer agent in the marketplace - it's amazing!" Jennifer opens EVA Portal → clicks Marketplace tab<br>
+                    <strong>Step 2:</strong> Jennifer browses Marketplace: 47 approved agents available. Filters by category: "Legal" → sees 8 agents. Spots "Contract Risk Analyzer" (4.8 stars, 127 uses, published by IT Innovation Lab)<br>
+                    <strong>Step 3:</strong> Jennifer clicks agent tile, reads description: "Scans contracts for risky clauses - indemnification, liability caps, IP ownership, termination terms. Highlights concerns with severity ratings and suggests negotiation points. Supports Word, PDF formats. Trained on 10,000+ enterprise contracts."<br>
+                    <strong>Step 4:</strong> Jennifer reads reviews: “Saved me 2 hours on vendor contract review” (Sarah, Procurement), “Caught 3 risky clauses I missed” (Tom, Legal), “Wish I had this 5 years ago” (Director of Contracts). Average rating: 4.8/5<br>
+                    <strong>Step 5:</strong> Jennifer checks governance badges: ✅ Security Scanned (no data exfiltration), ✅ Privacy Compliant (GDPR/PIPEDA), ✅ IT Approved (December 2024), ✅ Data Access: SharePoint Legal folder only<br>
+                    <strong>Step 6:</strong> Jennifer clicks "Deploy to My EVA" → EVA Marketplace: "Installing Contract Risk Analyzer... Agent added to your EVA Chat. Use slash-command: <code>/contract-analyze [document]</code>. Permissions granted: read SharePoint Legal folder. Would you like a tutorial?"<br>
+                    <strong>Step 7:</strong> Jennifer: "No tutorial needed." Opens EVA Chat, types: <code>/contract-analyze https://sharepoint/legal/VendorX-MSA-Draft3.docx</code><br>
+                    <strong>Step 8:</strong> Agent responds in 23 seconds:<br><strong>🚨 HIGH RISK (3 clauses):</strong><br>• Section 8.2 - Unlimited liability cap removed (previous draft had $5M cap)<br>• Section 12.4 - Vendor owns all "derivative works" - our customizations become their IP<br>• Section 15.1 - Termination requires 180-day notice (industry standard: 60 days)<br><br><strong>⚠️ MEDIUM RISK (2 clauses):</strong><br>• Section 6.3 - Force majeure excludes cyber incidents (should be included)<br>• Section 9.1 - Indemnification one-sided (we indemnify them, they don't reciprocate)<br><br><strong>🛡️ RECOMMENDATIONS:</strong><br>1. Restore $5M liability cap (cite Section 8.2 from Draft 2)<br>2. Amend IP clause: "Vendor owns product, Customer owns customizations and configurations"<br>3. Reduce termination notice to 90 days (compromise between 60/180)<br>4. Add cyber incidents to force majeure<br>5. Make indemnification mutual<br><br><strong>Step 9:</strong> Jennifer copies recommendations into email to Vendor: "We need these 5 amendments before signing..." Negotiation starts. Vendor agrees to 4 out of 5 changes. Contract revised, risks mitigated.<br>
+                    <strong>Step 10:</strong> Jennifer returns to Marketplace, rates agent 5 stars, writes review: "Incredible tool - caught risky clauses I would have missed. Saved 3 hours of manual review. Negotiation talking points were perfect. Every legal team needs this."<br>
+                    <strong>Result:</strong> Jennifer discovered agent through word-of-mouth → deployed in 30 seconds → analyzed contract in 23 seconds → identified 5 risky clauses → provided negotiation ammunition → saved 3 hours + potentially millions in liability exposure. Marketplace enabled innovation (developer built tool) + governance (IT approved security) + adoption (legal discovered and deployed instantly). 127 uses became 128.</div>
+                </div>
+
+                <!-- Channel Interactivity -->
+                <div class="product-card">
+                    <div class="product-icon">🎛️</div>
+                    <h3>EVA Channel Interactivity</h3>
+                    <span class="product-category">Platform</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>The Paradigm Shift:</strong> Every EVA product works 3 ways simultaneously:<br><strong>1) Traditional UI:</strong> Click menus, fill forms, navigate screens (classic software)<br><strong>2) Chat Interface:</strong> Type commands in natural language, EVA executes multi-step workflows<br><strong>3) Voice Commands:</strong> Speak requests, EVA responds via audio + screen updates<br><br><strong>Example - "Create expense report for Paris trip":</strong><br>• <strong>UI Mode:</strong> Click Expenses → New → Select Trip → Add receipts → Calculate totals → Submit (7 clicks, 3 min)<br>• <strong>Chat Mode:</strong> Type: "EVA, create expense report for Paris trip Nov 10-15, attach hotel/flight receipts from OneDrive" (1 command, 12 seconds)<br>• <strong>Voice Mode:</strong> Say: "EVA, expense report Paris trip" → EVA narrates steps, you approve with "yes" or "submit" (hands-free, 18 seconds)<br><br><strong>The Art:</strong> Users choose interaction style. Power users use voice for speed. New users use UI with chat hints. Accessibility users rely on voice narration. Same powerful features, your preferred channel.</div>
+                    <div class="product-usecase"><strong>Use Case: Multi-Channel Employee Onboarding</strong><br>
+                    <strong>Scenario:</strong> Three new employees need to complete onboarding tasks - access requests, training enrollment, equipment setup. Each chooses different interaction channel based on preference and context.<br><br>
+                    <strong>EMPLOYEE A - UI Mode (Traditional User):</strong><br>
+                    <strong>Step 1:</strong> Opens EVA Portal in browser, sees "Onboarding Checklist" dashboard with 8 tasks<br>
+                    <strong>Step 2:</strong> Clicks "Request System Access" → Form appears with checkboxes: Email, SharePoint, Jira, Azure DevOps. Selects all 4, clicks Submit<br>
+                    <strong>Step 3:</strong> Clicks "Enroll in Training" → Course catalog loads. Filters by "Required for Engineers." Sees 3 courses, clicks "Add to Cart" for each, clicks Enroll<br>
+                    <strong>Step 4:</strong> Clicks "Order Equipment" → Hardware selection page. Chooses laptop model, monitor, headset, mouse. Clicks "Add to Order," clicks Checkout<br>
+                    <strong>Step 5:</strong> Dashboard updates: 3/8 tasks completed (green checkmarks). Clicks "Mark Complete" for manager approval<br>
+                    <strong>Time: 8 minutes, 23 clicks**<br><br>
+                    <strong>EMPLOYEE B - Chat Mode (Power User):</strong><br>
+                    <strong>Step 1:</strong> Opens EVA Chat, types: "EVA, show my onboarding tasks"<br>
+                    <strong>Step 2:</strong> EVA responds: "You have 8 onboarding tasks. Top 3 urgent: System Access, Training Enrollment, Equipment Order. Would you like me to complete them now?"<br>
+                    <strong>Step 3:</strong> Employee B types: "Yes, request access to Email, SharePoint, Jira, and Azure DevOps"<br>
+                    <strong>Step 4:</strong> EVA: "Access requests submitted to IT (approval in ~30 min). Next: training enrollment. I found 3 required courses for engineers: 'Security 101', 'Code Standards', 'Agile Basics'. Enroll in all 3?"<br>
+                    <strong>Step 5:</strong> Employee B: "Yes" → EVA: "Enrolled. Security 101 starts Monday 9am. Next: equipment order. Standard dev setup is: ThinkPad X1 laptop, dual 27" monitors, wireless headset, ergonomic mouse. Proceed?"<br>
+                    <strong>Step 6:</strong> Employee B: "Yes" → EVA: "Equipment ordered, ships to your address on file (123 Main St). Delivery: Nov 28. Anything else?" → Employee B: "No, thanks" → EVA: "3 tasks completed. Notified your manager for approval. You're 37% done with onboarding."<br>
+                    <strong>Time: 2 minutes, 6 messages**<br><br>
+                    <strong>EMPLOYEE C - Voice Mode (Accessibility User):</strong><br>
+                    <strong>Step 1:</strong> Employee C (blind user) activates EVA OS voice assistant: "EVA, what's on my onboarding checklist?"<br>
+                    <strong>Step 2:</strong> EVA (audio response): "You have 8 onboarding tasks. I can help complete the top 3 now: System Access, Training, and Equipment. Want to start with system access?"<br>
+                    <strong>Step 3:</strong> Employee C: "Yes" → EVA: "I'll request access to 4 systems: Email, SharePoint, Jira, Azure DevOps. Confirm?" → Employee C: "Confirm"<br>
+                    <strong>Step 4:</strong> EVA: "Access requested. Next: training enrollment. 3 required courses found. Should I enroll you in all?" → Employee C: "Yes, enroll me"<br>
+                    <strong>Step 5:</strong> EVA: "Enrolled in Security 101, Code Standards, Agile Basics. First class is Monday 9am - I've added it to your calendar. Next: equipment order. Standard developer kit includes laptop, monitors, headset, mouse. Order it?" → Employee C: "Yes"<br>
+                    <strong>Step 6:</strong> EVA: "Equipment ordered, ships to your home address, arrives November 28. I'll remind you when it's delivered. 3 tasks completed, manager notified. Would you like to continue with remaining tasks or save for later?" → Employee C: "Save for later"<br>
+                    <strong>Step 7:</strong> EVA: "Saved. You're 37% done with onboarding. I'll check in tomorrow morning. Have a great day!"<br>
+                    <strong>Time: 90 seconds, fully hands-free**<br><br>
+                    <strong>Result Comparison:</strong><br>• <strong>UI Mode (Employee A):</strong> 8 minutes, 23 clicks - familiar interface, full visual control<br>• <strong>Chat Mode (Employee B):</strong> 2 minutes, 6 messages - conversational efficiency, natural language commands<br>• <strong>Voice Mode (Employee C):</strong> 90 seconds, hands-free - accessible, fastest for simple workflows<br><br><strong>All three completed identical tasks, same backend logic, same compliance checks, same manager approval workflow.** Channel Interactivity gave each user their preferred interface - Employee A needed visual confirmation (UI), Employee B wanted speed (chat), Employee C required accessibility (voice). EVA adapted to users, users didn't adapt to EVA.</div>
+                </div>
+
+                <!-- EVA Home Device -->
+                <div class="product-card">
+                    <div class="product-icon">🏠</div>
+                    <h3>EVA Home</h3>
+                    <span class="product-category">User Product</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>The Origin Story:</strong> Marco renamed his Alexa to "EVA" - and realized the vision extends beyond the office. <strong>EVA Home</strong> brings your enterprise AI assistant to your home device (Alexa, Google Home, Apple HomePod). <strong>Example:</strong> You're driving home, you say: "EVA, what did I miss at work today?" EVA summarizes: "3 urgent emails (Shannon needs Q1 forecast by EOD), CloneMe attended your 3pm budget meeting (hiring freeze through Q1), and your VP approved the AI proposal - you present to executives next Wednesday." Then: "EVA, remind me tomorrow morning to review the executive deck." EVA: "Reminder set for 8am." <strong>The Twist:</strong> Your work EVA and home EVA are the same intelligence - seamless context across devices. <strong>Moonshot 2027:</strong> Work-life AI continuity - your assistant follows you everywhere.</div>
+                    <div class="product-usecase"><strong>Use Case: Executive's Evening Routine</strong><br>
+                    <strong>6:30pm:</strong> Marco arrives home, says: "EVA, catch me up"<br>
+                    <strong>6:31pm:</strong> EVA Home (via Alexa speaker): "You have 2 urgent items: CFO needs Q4 forecast by 9am tomorrow, and Shannon confirmed coffee meeting moved to Wednesday 10am. CloneMe attended your HR budget meeting - hiring freeze through Q1 except critical roles. Your action: revise Q1 hiring plan by next Wednesday."<br>
+                    <strong>6:32pm:</strong> Marco: "EVA, set reminder for 7am tomorrow: finish Q4 forecast before CFO meeting"<br>
+                    <strong>6:33pm:</strong> EVA: "Reminder set for 7am. Also, I see you have a 9:30am meeting with CFO - should I block 7-9am on your calendar as focus time?"<br>
+                    <strong>6:34pm:</strong> Marco: "Yes, and draft the forecast outline so I can review it tomorrow morning"<br>
+                    <strong>6:35pm:</strong> EVA: "Focus time blocked. Outline drafted based on Q3 template and current pipeline data. I'll email it to you now."<br>
+                    <strong>7:45am next day:</strong> Marco's phone alarm + EVA reminder: "Good morning. Your Q4 forecast outline is ready for review. You have 2 hours before the CFO meeting."<br>
+                    <strong>Result:</strong> Work continues seamlessly across office EVA → home EVA → morning EVA. Zero context loss, proactive planning, always prepared.</div>
+                </div>
+                
+                <!-- Developer Platform -->
+                <div class="product-card">
+                    <div class="product-icon">🔌</div>
+                    <h3>EVA Chat SDK</h3>
+                    <span class="product-category">Developer</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Embeddable AI Chat for Legacy Apps:</strong> React/JavaScript SDK bringing EVA Chat capabilities into existing applications - no rewrite required. <strong>Example:</strong> 15-year-old HR portal (ASP.NET Web Forms) has zero AI. Developer adds 3 lines of JavaScript: <code>&lt;script src="eva-chat-sdk.js"&gt;&lt;/script&gt;</code> + <code>&lt;div id="eva-chat"&gt;&lt;/div&gt;</code> + <code>EVAChat.init({apiKey: 'xxx', context: 'hr-portal'})</code>. Instantly: chat widget appears in bottom-right corner. Employees ask: "What's my vacation balance?" EVA queries legacy database, responds in natural language. Legacy app becomes AI-powered - zero backend changes. <strong>The Art:</strong> Modernize old apps through composition, not replacement.</div>
+                    <div class="product-usecase"><strong>Use Case: Legacy Portal AI Upgrade</strong><br>
+                    <strong>Context:</strong> 15-year-old HR Benefits Portal (ASP.NET 2.0) serves 8,000 employees. Complex navigation (47 pages), outdated UI, high support ticket volume (320/month: "How do I...?"). IT has no budget for rewrite.<br>
+                    <strong>Step 1:</strong> Developer receives mandate: "Add AI assistant to benefits portal without breaking production system." Downloads EVA Chat SDK documentation<br>
+                    <strong>Step 2:</strong> Developer adds SDK to portal master page (site.master): <code>&lt;script src="https://cdn.eva-suite.com/chat-sdk/v2.1.js"&gt;&lt;/script&gt;</code> + <code>&lt;div id="eva-chat-widget"&gt;&lt;/div&gt;</code><br>
+                    <strong>Step 3:</strong> Developer initializes SDK with 8 lines of JavaScript:<br><code>EVAChat.init({<br>  apiKey: process.env.EVA_API_KEY,<br>  context: 'hr-benefits-portal',<br>  dataSource: 'legacy-sql-db',<br>  allowedQueries: ['vacation', 'benefits', 'payroll', 'forms'],<br>  theme: 'corporate-blue',<br>  position: 'bottom-right'<br>});</code><br>
+                    <strong>Step 4:</strong> Developer configures data access: EVA SDK connects to legacy SQL database (read-only) with schema mapping: <code>employee_vacation_balance</code> table, <code>benefits_enrollment</code> table, <code>payroll_history</code> table. SDK auto-generates natural language queries against these tables<br>
+                    <strong>Step 5:</strong> Developer deploys to staging, tests 20 common questions:<br>• "What's my vacation balance?" → EVA: "You have 14.5 days remaining (accrued 18, used 3.5). Next accrual: Jan 1 (+2 days)."<br>• "How do I enroll in dental benefits?" → EVA: "Open enrollment runs Nov 1-30. Go to Benefits → Dental → Select Plan. Deadline: Nov 30. [Link to enrollment page]"<br>• "When is my next paycheck?" → EVA: "Your next pay date is November 30 (biweekly schedule). Direct deposit to account ending in 4892."<br>
+                    <strong>Step 6:</strong> All 20 test queries work. Developer promotes to production. Chat widget appears for all 8,000 employees. Announcement email: "Try the new AI assistant in the HR portal - ask questions, get instant answers!"<br>
+                    <strong>Step 7:</strong> Week 1 metrics: 2,847 questions asked, 91% answered successfully, avg response time 1.8 seconds. Top questions: vacation balance (673), benefit enrollment (412), pay stubs (389), tax forms (301)<br>
+                    <strong>Step 8:</strong> Month 1 impact: Support tickets dropped from 320/month to 87/month (73% reduction). Employees love it: 4.7/5 star rating, feedback like "Finally I can get answers without calling HR" and "This should have existed 10 years ago"<br>
+                    <strong>Step 9:</strong> Developer adds 2 more features with SDK extensions: (a) File upload support ("EVA, where do I submit my expense report?" → EVA provides upload widget), (b) Form prefill ("EVA, start my benefits enrollment" → EVA opens form with employee data pre-populated)<br>
+                    <strong>Result:</strong> Legacy portal transformed from "clunky relic" to "AI-powered modern experience" with 10 lines of code and zero backend changes. No database migrations, no API rewrites, no UI overhaul. SDK bridged 15-year-old ASP.NET app with cutting-edge AI. Support tickets down 73%, employee satisfaction up 41%. Total dev time: 3 days. Business impact: $180K/year in reduced support costs + immeasurable improvement in employee experience.</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🎨</div>
+                    <h3>EVA UI/UX Tools</h3>
+                    <span class="product-category">Developer</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Visual IDE for Accessible UIs:</strong> Drag-and-drop interface builder with built-in accessibility and internationalization. <strong>Example:</strong> Designer creates employee onboarding form: drags components from palette (text input, date picker, dropdown, file upload), arranges layout, sets validation rules. IDE auto-generates: (a) React TypeScript code with proper semantic HTML, (b) WCAG 2.1 AA compliant markup (ARIA labels, keyboard navigation, screen reader support), (c) i18n translation keys (English/French), (d) Automated accessibility tests (Axe-core integration). No manual coding for accessibility - IDE enforces best practices. <strong>The Vision:</strong> Every EVA UI is accessible by default, not as afterthought. Design system + automation = inclusive design at scale.</div>
+                    <div class="product-usecase"><strong>Use Case: Build Accessible Form with Zero Manual Accessibility Code</strong><br>
+                    <strong>Step 1:</strong> UX designer Sarah receives requirement: "Create employee equipment request form - accessible, bilingual, mobile-responsive." Opens EVA UI/UX Tools (web-based IDE)<br>
+                    <strong>Step 2:</strong> Sarah starts with template: "Form - Multi-Step Wizard" (pre-built accessible pattern). IDE displays canvas with 3-step wizard structure<br>
+                    <strong>Step 3:</strong> Sarah drags components from palette onto Step 1 ("Employee Info"):<br>• Text Input: "Full Name" (IDE auto-adds: aria-label, required attribute, error message slot)<br>• Email Input: "Work Email" (IDE auto-adds: type="email", validation pattern, format helper text)<br>• Dropdown: "Department" (IDE auto-adds: aria-describedby for instructions, keyboard navigation)<br>
+                    <strong>Step 4:</strong> Sarah drags components onto Step 2 ("Equipment Selection"):<br>• Checkbox Group: "Select Equipment" (IDE auto-adds: fieldset/legend, aria-controls for dynamic pricing)<br>• Radio Group: "Laptop Model" (IDE auto-adds: role="radiogroup", roving tabindex for keyboard navigation)<br>• File Upload: "Manager Approval" (IDE auto-adds: aria-live region for upload progress, accessible error handling)<br>
+                    <strong>Step 5:</strong> Sarah clicks "Preview" → IDE generates live preview with 3 test modes:<br>• <strong>Visual Mode:</strong> Normal browser rendering<br>• <strong>Screen Reader Mode:</strong> Shows ARIA tree + semantic structure + keyboard focus order<br>• <strong>Mobile Mode:</strong> Responsive layout test (iPhone, Android, tablet)<br>
+                    <strong>Step 6:</strong> Sarah enables "Accessibility Inspector" → IDE runs live Axe-core scan, reports: ✅ 15 WCAG checks passed, ⚠️ 1 warning: "Consider adding helper text to 'Laptop Model' radio group." Sarah adds helper text: "Select the model that matches your job requirements."<br>
+                    <strong>Step 7:</strong> Sarah clicks "i18n Panel" → IDE extracted 23 translatable strings (labels, errors, instructions). Sarah adds French translations: "Full Name" → "Nom complet", "Work Email" → "Courriel professionnel", etc. IDE validates: ✅ All strings translated<br>
+                    <strong>Step 8:</strong> Sarah clicks "Generate Code" → IDE produces:<br>• <strong>React Component:</strong> EquipmentRequestForm.tsx (247 lines, TypeScript, semantic HTML)<br>• <strong>i18n Keys:</strong> equipment-form.en.json + equipment-form.fr.json (JSON translation files)<br>• <strong>CSS Module:</strong> EquipmentRequestForm.module.css (responsive styles, focus indicators, dark mode support)<br>• <strong>Test Suite:</strong> EquipmentRequestForm.test.tsx (12 accessibility tests using @testing-library/react + jest-axe)<br>• <strong>Storybook Stories:</strong> EquipmentRequestForm.stories.tsx (5 component states for design system docs)<br>
+                    <strong>Step 9:</strong> Sarah downloads code bundle, developer Jake imports into codebase: <code>import { EquipmentRequestForm } from '@eva/forms'</code>. Runs <code>npm test</code> → all 12 accessibility tests pass (focus management, keyboard navigation, ARIA attributes, color contrast, semantic HTML)<br>
+                    <strong>Step 10:</strong> Deploys to staging. QA runs manual accessibility audit with NVDA screen reader + keyboard-only navigation → zero issues found. Form submitted to accessibility champion for final review → approved for production<br>
+                    <strong>Result:</strong> Sarah built fully accessible, bilingual, responsive form in 45 minutes with ZERO manual accessibility code. IDE enforced WCAG 2.1 AA compliance automatically - no expertise required. Generated code included: semantic HTML, proper ARIA attributes, keyboard navigation, screen reader support, focus management, error handling, i18n translations, automated tests. Traditional development: 8-12 hours + accessibility specialist review. EVA UI/UX Tools: 45 minutes + instant compliance. Accessibility shifted from "expensive add-on" to "built-in by default."</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">♿</div>
+                    <h3>EVA Accessibility</h3>
+                    <span class="product-category">Developer</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>WCAG 2.1 AA Component Library:</strong> React component library (eva-i11y) with accessibility built-in + automated testing toolkit. <strong>Example:</strong> Developer needs data table component. Instead of custom build, imports: <code>import { AccessibleTable } from '@eva/i11y'</code>. Component includes: sortable headers with aria-sort, row selection with aria-selected, keyboard navigation (arrow keys, Home/End, Page Up/Down), screen reader announcements for sort/filter changes, focus management, high contrast mode support. Zero accessibility code written - all built into component. Testing: <code>npm run a11y-test</code> runs Axe-core + jest-axe → validates WCAG compliance automatically. <strong>The Mission:</strong> Make accessibility the path of least resistance - easier to use compliant components than build non-compliant ones.</div>
+                    <div class="product-usecase"><strong>Use Case: Automated Accessibility Testing in CI/CD</strong><br>
+                    <strong>Context:</strong> Development team building employee dashboard with 12 UI components. Accessibility champion mandates: "All components must meet WCAG 2.1 AA before production."<br>
+                    <strong>Step 1:</strong> Tech lead Jake installs EVA Accessibility toolkit: <code>npm install @eva/i11y @eva/i11y-testing --save-dev</code><br>
+                    <strong>Step 2:</strong> Jake adds accessibility test script to package.json:<br><code>"scripts": {<br>  "test:a11y": "eva-a11y-test --components src/components --wcag AA --output report"<br>}</code><br>
+                    <strong>Step 3:</strong> Jake runs <code>npm run test:a11y</code> → EVA toolkit scans 12 components, generates report:<br><br>✅ <strong>PASSED (7 components):</strong><br>• EmployeeCard: WCAG AA compliant (color contrast 4.8:1, keyboard navigation, ARIA labels)<br>• DataTable: WCAG AA compliant (sortable headers, row selection, screen reader support)<br>• SearchBar: WCAG AA compliant (live region updates, clear button, error handling)<br>• NavigationMenu: WCAG AA compliant (roving tabindex, aria-expanded, submenu navigation)<br>• NotificationBanner: WCAG AA compliant (role="alert", dismissible, focus management)<br>• DatePicker: WCAG AA compliant (keyboard date selection, month/year navigation)<br>• ProgressIndicator: WCAG AA compliant (aria-valuenow, status announcements)<br><br>⚠️ <strong>WARNINGS (3 components):</strong><br>• ChartWidget: Color contrast 3.2:1 on axis labels (minimum: 4.5:1) - FIX: Increase text darkness<br>• ModalDialog: Focus not trapped (keyboard can escape modal) - FIX: Add focus trap on modal open<br>• FilterPanel: Checkbox group missing fieldset/legend - FIX: Wrap in &lt;fieldset&gt; with &lt;legend&gt;<br><br>❌ <strong>FAILED (2 components):</strong><br>• CustomDropdown: Missing aria-expanded, aria-controls, keyboard navigation (Enter/Escape/Arrow keys) - BLOCKER: Implement keyboard handlers + ARIA attributes<br>• ImageGallery: Images missing alt text, no keyboard navigation for carousel - BLOCKER: Add alt attributes + keyboard controls<br><br>
+                    <strong>Step 4:</strong> Jake assigns fixes to team:<br>• ChartWidget (Sarah): "Increase axis label contrast to 4.5:1"<br>• ModalDialog (Tom): "Add focus trap library (focus-trap-react)"<br>• FilterPanel (Lisa): "Wrap checkbox group in fieldset/legend semantic structure"<br>• CustomDropdown (Jake): "Implement ARIA dropdown pattern + keyboard navigation"<br>• ImageGallery (Maria): "Add alt text + keyboard carousel controls (Left/Right arrows)"<br>
+                    <strong>Step 5:</strong> Team fixes issues over 2 days. Each developer runs <code>npm run test:a11y</code> locally after changes to verify fixes<br>
+                    <strong>Step 6:</strong> Jake adds accessibility gate to CI/CD pipeline (GitHub Actions):<br><code>- name: Accessibility Tests<br>  run: npm run test:a11y<br>  continue-on-error: false  # Fail build if violations found</code><br>
+                    <strong>Step 7:</strong> Developer Maria pushes fix for ImageGallery, creates PR. GitHub Actions runs accessibility tests → detects remaining issue: "Carousel buttons missing aria-label." PR blocked from merge<br>
+                    <strong>Step 8:</strong> Maria adds aria-labels: <code>&lt;button aria-label="Previous image"&gt;&lt;/button&gt;</code> + <code>&lt;button aria-label="Next image"&gt;&lt;/button&gt;</code>. Pushes update, tests pass → PR approved<br>
+                    <strong>Step 9:</strong> All 12 components now pass WCAG AA tests. Jake generates compliance report: <code>npm run test:a11y --format pdf --output compliance-report.pdf</code> → produces executive summary with component scores, violation details, fix history<br>
+                    <strong>Step 10:</strong> Jake submits report to accessibility champion: "All 12 dashboard components WCAG 2.1 AA compliant. Automated tests integrated into CI/CD - future violations block deployment." Champion approves for production release<br>
+                    <strong>Result:</strong> Accessibility shifted from manual audits (expensive, slow, error-prone) to automated testing (fast, consistent, enforced). CI/CD pipeline prevents regression - no non-compliant code reaches production. Team learned accessibility patterns through test feedback - not through separate training. Development time for fixes: 16 developer-hours. Traditional manual audit: 40+ hours + external consultant ($8K-12K). EVA Accessibility toolkit: $0 + faster + better coverage. Dashboard launched with WCAG AA certification on day 1.</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🌍</div>
+                    <h3>EVA i18n</h3>
+                    <span class="product-category">Developer</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Enterprise Internationalization Framework:</strong> React i18n library (eva-i18n) with AI-assisted translation workflow for bilingual Canadian deployments (EN/FR). <strong>Example:</strong> Developer writes code: <code>const message = t('employee.welcome', {name: user.firstName})</code>. Framework auto-generates translation key in en.json: <code>{"employee.welcome": "Welcome, {name}!"}</code>. EVA i18n flags for translation. Translator opens dashboard, sees pending keys, provides French: <code>{"employee.welcome": "Bienvenue, {name}!"}</code>. AI assists with context: "This greeting appears on employee login screen, tone should be professional/friendly." Plural rules handled automatically: <code>t('notifications.count', {count: 5})</code> → EN: "5 notifications", FR: "5 notifications" (plural logic built-in). <strong>The Power:</strong> Bilingual compliance without developer overhead - translation workflow separated from code deployment.</div>
+                    <div class="product-usecase"><strong>Use Case: Bilingual Product Launch</strong><br>
+                    <strong>Context:</strong> EVA Portal launching new "Benefits Enrollment" feature. Canadian government mandate: all citizen-facing features must be available in English and French simultaneously (Official Languages Act compliance).<br>
+                    <strong>Step 1:</strong> Developer Emma builds enrollment workflow in English: 12 screens, 247 UI strings (labels, buttons, error messages, instructions, tooltips)<br>
+                    <strong>Step 2:</strong> Emma uses eva-i18n translation function throughout code:<br><code>import { useTranslation } from '@eva/i18n';<br>const { t } = useTranslation('benefits');<br><br>return (<br>  &lt;h1&gt;{t('enrollment.title')}&lt;/h1&gt;<br>  &lt;p&gt;{t('enrollment.instructions')}&lt;/p&gt;<br>  &lt;Button&gt;{t('enrollment.submit')}&lt;/Button&gt;<br>)</code><br>
+                    <strong>Step 3:</strong> Emma runs <code>npm run i18n:extract</code> → EVA i18n scans codebase, extracts all t() calls, generates benefits.en.json with 247 keys:<br><code>{<br>  "enrollment.title": "Benefits Enrollment",<br>  "enrollment.instructions": "Select your coverage options below...",<br>  "enrollment.submit": "Submit Enrollment",<br>  ...<br>}</code><br>
+                    <strong>Step 4:</strong> EVA i18n creates translation task in dashboard: "Benefits Enrollment - 247 strings pending French translation. Priority: HIGH (launch date: Nov 30). Assigned to: Translation Services team."<br>
+                    <strong>Step 5:</strong> Translator Marie opens EVA i18n dashboard, sees 247 pending strings with AI-powered context assistance:<br>• <strong>Key:</strong> enrollment.title<br>• <strong>English:</strong> "Benefits Enrollment"<br>• <strong>Context (AI):</strong> "Page title for employee benefits selection workflow. Formal/professional tone. Character limit: ~30 (fits mobile header)."<br>• <strong>AI Suggestion:</strong> "Inscription aux avantages sociaux" (96% confidence)<br>• <strong>Marie's translation:</strong> "Inscription aux avantages sociaux" (accepts AI suggestion)<br>
+                    <strong>Step 6:</strong> Marie translates 247 strings over 3 days. EVA i18n AI assists with:<br>• Consistency checks: "You translated 'submit' as 'soumettre' 43 times, but 'envoyer' twice - unify terminology?"<br>• Plural rules: "English has 2 plural forms (one, other). French also has 2. Auto-generated: {count} notification → {count} notification, {count} notifications"<br>• Variable validation: "English string has {name} and {date} variables. French translation missing {date} - add placeholder."<br>• Length warnings: "French translation 47% longer than English - may overflow button width on mobile. Consider shorter phrasing."<br>
+                    <strong>Step 7:</strong> Marie marks translation complete. EVA i18n generates benefits.fr.json with all 247 translations validated. Developer Emma runs <code>npm run i18n:verify</code> → checks:<br>✅ All keys have translations<br>✅ Variable placeholders match between languages<br>✅ No missing punctuation or formatting<br>✅ Character limits respected<br>✅ Plural rules correctly implemented<br>
+                    <strong>Step 8:</strong> Emma deploys to staging with language toggle: EN/FR switcher in header. QA tests both languages:<br>• <strong>English:</strong> All 247 strings display correctly<br>• <strong>French:</strong> All 247 strings display correctly, layouts don't break (longer French text handled by responsive design)<br>• <strong>Language switching:</strong> User can toggle EN ↔ FR mid-workflow, form data persists, UI updates instantly<br>
+                    <strong>Step 9:</strong> Accessibility champion reviews: "French screen reader announces 'Inscription aux avantages sociaux' correctly, ARIA labels translated, keyboard navigation works in both languages." → Approved<br>
+                    <strong>Step 10:</strong> Benefits Enrollment launches Nov 30. User selects language preference (EN or FR), entire workflow displays in chosen language. Post-launch metrics: 67% English users, 33% French users. Zero reported translation errors. Official Languages Act compliance: ✅ Certified<br>
+                    <strong>Result:</strong> Bilingual product launch completed in 11 days (development 8 days + translation 3 days) instead of traditional 6-8 weeks. AI-assisted translation saved 40% of Marie's time through context suggestions, consistency checks, and automated validation. Developer Emma never touched translation files - separation of concerns maintained. When bug fix required UI text change (Week 2), Eva i18n flagged affected French strings, Marie updated in 15 minutes, deployed same day. Scalable bilingual workflow enabled Canadian compliance without developer bottlenecks.</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🛠️</div>
+                    <h3>EVA Agent Tooling</h3>
+                    <span class="product-category">Developer</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Low-Code AI Agent Builder:</strong> Visual IDE + Reasoning-as-Code (RaC) helpers for building custom AI agents without deep ML expertise. <strong>Example:</strong> Business analyst wants "Invoice Approval Agent" - opens Agent Tooling, describes requirements in natural language: "Agent reviews purchase order invoices, checks budget availability, validates approval chain, flags discrepancies, routes to appropriate manager." Agent Tooling generates: (1) Agent skeleton with conversation flow, (2) Budget lookup integration (queries finance API), (3) RaC rules for approval logic (amount thresholds, org hierarchy), (4) Exception handling (flags invoices >$10K for manual review), (5) Test suite with 12 scenarios. Analyst customizes rules via visual editor (no coding), deploys to EVA Marketplace. <strong>The Vision:</strong> Democratize AI agent development - business users build agents, not just developers.</div>
+                    <div class="product-usecase"><strong>Use Case: Build Invoice Approval Agent (No Coding Required)</strong><br>
+                    <strong>Step 1:</strong> Business analyst Lisa receives mandate: "Automate invoice approval workflow - 400 invoices/month currently require manual review (8 hours/week admin time)."<br>
+                    <strong>Step 2:</strong> Lisa opens EVA Agent Tooling, clicks "New Agent from Template" → selects "Document Review Agent" template (pre-built pattern for analyzing documents and making decisions)<br>
+                    <strong>Step 3:</strong> Lisa describes agent requirements in natural language:<br>"<strong>Agent Name:</strong> Invoice Approval Assistant<br><strong>Purpose:</strong> Review purchase order invoices, validate against budget, check approval chain, flag discrepancies<br><strong>Inputs:</strong> Invoice PDF (amount, vendor, PO number, department)<br><strong>Rules:</strong><br>• Invoices under $1K: auto-approve if budget available<br>• Invoices $1K-$10K: route to department manager for approval<br>• Invoices over $10K: route to director + finance for dual approval<br>• Flag if: amount doesn't match PO, vendor not on approved list, budget exceeded<br><strong>Outputs:</strong> Approval decision (auto-approved, pending review, rejected) + routing to appropriate manager<br><strong>Integrations:</strong> Finance API (budget lookup), SharePoint (invoice storage), Teams (notification to managers)"<br>
+                    <strong>Step 4:</strong> Agent Tooling AI parses requirements, generates agent blueprint in visual flow editor:<br>[Invoice Upload] → [Extract Data] → [Validate PO Match] → [Check Budget] → [Apply Approval Rules] → [Route Decision]<br><br>Lisa sees 6 workflow nodes connected with logic branches (IF budget available THEN auto-approve ELSE reject)<br>
+                    <strong>Step 5:</strong> Lisa clicks "Approval Rules" node, opens visual rule editor (no code):<br>• <strong>Rule 1:</strong> IF amount < $1000 AND budget_available = TRUE → ACTION: auto_approve<br>• <strong>Rule 2:</strong> IF amount >= $1000 AND amount < $10000 → ACTION: route_to_manager(department)<br>• <strong>Rule 3:</strong> IF amount >= $10000 → ACTION: route_to_director AND route_to_finance<br>• <strong>Rule 4:</strong> IF invoice_amount != po_amount → FLAG: discrepancy_detected<br>• <strong>Rule 5:</strong> IF vendor NOT IN approved_vendor_list → FLAG: vendor_risk<br><br>Lisa adjusts threshold in Rule 2: changes $10K to $15K (matches company policy update)<br>
+                    <strong>Step 6:</strong> Lisa configures integrations (point-and-click, no coding):<br>• <strong>Finance API:</strong> Selects endpoint "/budget/check" with parameters: department, amount → returns: budget_available (boolean)<br>• <strong>SharePoint:</strong> Configures invoice storage location: /Finance/Invoices/{year}/{month}/<br>• <strong>Teams:</strong> Sets notification template: "New invoice requires your approval: {vendor} - {amount} - [Review Link]"<br>
+                    <strong>Step 7:</strong> Lisa clicks "Generate Test Scenarios" → Agent Tooling creates 12 test cases:<br>• Test 1: $800 invoice, budget available → Expected: auto-approve<br>• Test 2: $5K invoice, budget available → Expected: route to manager<br>• Test 3: $20K invoice, budget available → Expected: route to director + finance<br>• Test 4: $2K invoice, budget exceeded → Expected: reject with budget warning<br>• Test 5: Invoice amount $3K, PO shows $2.5K → Expected: flag discrepancy<br>• Test 6: Vendor not on approved list → Expected: flag vendor risk<br>• ... (6 more edge cases)<br>
+                    <strong>Step 8:</strong> Lisa runs tests → 11/12 pass, 1 fails: Test 5 (discrepancy detection). Lisa reviews: rule needs tolerance threshold for minor differences. Adjusts: "IF ABS(invoice_amount - po_amount) > $100 THEN flag" → Re-runs tests → 12/12 pass<br>
+                    <strong>Step 9:</strong> Lisa clicks "Deploy to Staging" → Agent Tooling packages agent, deploys to EVA test environment. Lisa uploads 5 real invoices (from last month) as validation test:<br>• Invoice 1: $650 office supplies → Auto-approved in 8 seconds<br>• Invoice 2: $4,200 software license → Routed to IT manager, notification sent to Teams<br>• Invoice 3: $18,500 consulting fees → Routed to director + finance, dual approval required<br>• Invoice 4: $2,800 invoice doesn't match $2,500 PO → Flagged discrepancy, routed to accounting for investigation<br>• Invoice 5: $1,100 from unknown vendor → Flagged vendor risk, routed to procurement for verification<br>
+                    <strong>Step 10:</strong> All 5 invoices processed correctly. Lisa promotes agent to production, publishes to EVA Marketplace with description: "Automates invoice approval workflow with budget validation, approval routing, and discrepancy detection." Finance team deploys agent to their EVA Portal. Week 1 results: 94 invoices processed, 67 auto-approved, 22 routed to managers, 5 flagged for review. Admin time: 8 hours/week → 45 minutes/week (94% reduction). Accuracy: 100% (zero incorrect approvals).<br>
+                    <strong>Result:</strong> Lisa (business analyst, zero coding skills) built production AI agent in 2 hours using visual tools + natural language configuration. No developer involvement required. Agent handles complex logic (budget checks, approval routing, discrepancy detection) with RaC rules ensuring deterministic decisions. Finance team saved 7.25 hours/week (377 hours/year = $18,850 in productivity gains). EVA Agent Tooling democratized AI development - domain experts build agents for their own workflows.</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🤖</div>
+                    <h3>EVA MCP</h3>
+                    <span class="product-category">Developer</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>The Orchestration Layer:</strong> Model Context Protocol (MCP) servers enabling cross-LLM agent coordination - Claude, GPT-4, Gemini, Llama speak universal language. <strong>Example:</strong> Complex workflow requires 3 specialized agents: (1) Legal Agent (Claude - best at reasoning over contracts), (2) Financial Agent (GPT-4 - excellent with numerical analysis), (3) Risk Agent (Gemini - strong at multi-modal risk assessment with charts). EVA MCP orchestrates handoff: Legal Agent extracts contract terms → passes structured context to Financial Agent → Financial calculates exposure → passes results to Risk Agent → Risk generates executive summary with visual risk matrix. All three LLMs collaborate seamlessly via standardized MCP interfaces - no custom integration code. <strong>The Power:</strong> Best AI for each task, unified context management, workflow spans multiple providers.</div>
+                    <div class="product-usecase"><strong>Use Case: Multi-LLM Contract Risk Analysis</strong><br>
+                    <strong>Context:</strong> Legal team needs comprehensive analysis of vendor contract combining: (1) Legal clause review, (2) Financial liability calculation, (3) Risk visualization. No single LLM excels at all three tasks.<br>
+                    <strong>Step 1:</strong> Analyst uploads 47-page Master Services Agreement to EVA Portal, requests: "Comprehensive risk analysis"<br>
+                    <strong>Step 2:</strong> EVA MCP orchestrator analyzes request, determines multi-agent workflow required:<br>• <strong>Agent 1 - Legal Analyzer:</strong> Claude Sonnet 4 (best reasoning over legal text, 200K context window)<br>• <strong>Agent 2 - Financial Calculator:</strong> GPT-4 (excellent numerical reasoning, financial modeling)<br>• <strong>Agent 3 - Risk Visualizer:</strong> Gemini 1.5 Pro (multi-modal, generates charts/matrices)<br>
+                    <strong>Step 3:</strong> MCP orchestrator initiates workflow, passes contract to Legal Analyzer (Claude):<br><strong>AGENT 1 TASK:</strong> "Extract risky clauses - identify liability caps, indemnification terms, IP ownership, termination conditions, dispute resolution. Provide structured output for financial analysis."<br><br><strong>Claude response (12 seconds):</strong><br><code>{<br>  "liability_cap": "$5M per incident, $15M aggregate",<br>  "indemnification": "mutual, but customer indemnifies vendor for data breaches (one-sided on privacy)",<br>  "ip_ownership": "vendor retains all IP including derivative works and customer customizations",<br>  "termination": "180-day notice required, early termination penalty: 50% of remaining contract value",<br>  "dispute_resolution": "binding arbitration in vendor's jurisdiction (Delaware)",<br>  "risk_flags": [<br>    "One-sided data breach indemnification - customer liable for vendor's security failures",<br>    "IP clause captures customer's custom configurations - lose ownership of our work",<br>    "Early termination penalty unreasonable - 50% of 3-year contract = $750K"<br>  ]<br>}</code><br>
+                    <strong>Step 4:</strong> MCP passes Claude's structured output to Financial Calculator (GPT-4) via context protocol:<br><strong>AGENT 2 TASK:</strong> "Given contract terms and risk flags, calculate: (a) Maximum financial exposure, (b) Expected loss scenarios, (c) Cost of risk mitigation vs. contract value. Contract value: $1.5M/year, 3-year term ($4.5M total)."<br><br><strong>GPT-4 response (8 seconds):</strong><br><code>{<br>  "max_exposure": "$15.75M (liability cap $15M + early termination penalty $750K)",<br>  "expected_loss_scenarios": {<br>    "data_breach": {<br>      "probability": "8% (vendor has 2 breaches in past 5 years)",<br>      "cost": "$2M-8M (notification, credit monitoring, regulatory fines, legal defense)",<br>      "expected_value": "$400K"<br>    },<br>    "early_termination": {<br>      "probability": "15% (if vendor underperforms or we switch platforms)",<br>      "cost": "$750K (50% penalty on remaining 18 months)",<br>      "expected_value": "$112.5K"<br>    },<br>    "ip_dispute": {<br>      "probability": "5% (if we want to reuse our customizations with different vendor)",<br>      "cost": "$500K-2M (legal fees to reclaim IP rights)",<br>      "expected_value": "$75K"<br>    }<br>  },<br>  "total_expected_loss": "$587.5K over 3 years",<br>  "risk_adjusted_contract_value": "$4.5M - $587.5K = $3.91M effective cost (13% risk premium)",<br>  "mitigation_recommendations": [<br>    "Negotiate liability cap increase to $25M (industry standard)",<br>    "Add mutual data breach indemnification clause",<br>    "Reduce early termination penalty to 25% or 6-month notice period",<br>    "Clarify IP ownership - customer retains rights to customizations",<br>    "Estimated cost of mitigation: $50K in additional vendor concessions"<br>  ]<br>}</code><br>
+                    <strong>Step 5:</strong> MCP passes combined Claude + GPT-4 outputs to Risk Visualizer (Gemini) with instruction: "Generate executive summary with visual risk matrix"<br><strong>AGENT 3 TASK:</strong> "Create risk visualization and executive briefing. Include: (1) Risk matrix (likelihood vs. impact), (2) Financial exposure chart, (3) Executive summary with recommendations."<br><br><strong>Gemini response (15 seconds):</strong><br>[Generates 3-page executive briefing with:]<br>• <strong>Page 1 - Risk Matrix:</strong> 2x2 grid (likelihood/impact) showing Data Breach (high impact, medium likelihood), Early Termination (medium impact, high likelihood), IP Dispute (high impact, low likelihood)<br>• <strong>Page 2 - Financial Chart:</strong> Bar chart comparing contract value ($4.5M) vs. max exposure ($15.75M) vs. expected loss ($587.5K) vs. mitigation cost ($50K)<br>• <strong>Page 3 - Executive Summary:</strong><br>"<strong>RECOMMENDATION: NEGOTIATE BEFORE SIGNING</strong><br><br>This $4.5M contract carries $15.75M maximum exposure (3.5x contract value) with $587.5K expected loss (13% risk premium). Three critical issues identified:<br><br>1. <strong>Data Breach Liability (HIGH RISK):</strong> One-sided indemnification makes us liable for vendor's security failures. Vendor has 2 breaches in 5 years. Expected cost: $400K. <strong>MITIGATION:</strong> Require mutual indemnification.<br><br>2. <strong>IP Ownership (HIGH RISK):</strong> Vendor claims our custom configurations. If we switch platforms, we lose $2M in development work. <strong>MITIGATION:</strong> Clarify customer owns customizations.<br><br>3. <strong>Early Termination Penalty (MEDIUM RISK):</strong> 50% penalty ($750K) is 2x industry standard. Locks us into underperforming vendor. <strong>MITIGATION:</strong> Reduce to 25% or 6-month notice.<br><br><strong>BUSINESS DECISION:</strong> Invest $50K in legal negotiation to secure $587.5K in risk reduction (11x ROI). Do not sign current version."<br>
+                    <strong>Step 6:</strong> EVA MCP packages complete analysis (Claude legal review + GPT-4 financial model + Gemini executive brief) into single report, delivers to analyst in 35 seconds total (multi-agent orchestration)<br>
+                    <strong>Step 7:</strong> Analyst reviews report, presents to leadership: "Comprehensive AI analysis identified $15.75M exposure. Recommend contract renegotiation - 3 critical clauses need amendment. Estimated negotiation cost: $50K. Expected risk reduction: $587.5K."<br>
+                    <strong>Step 8:</strong> Leadership approves negotiation. Legal team uses AI-generated analysis as talking points with vendor. Vendor agrees to: (1) Mutual data breach indemnification, (2) Customer owns customizations, (3) Early termination penalty reduced to 30%. New expected loss: $187K (68% risk reduction).<br>
+                    <strong>Result:</strong> EVA MCP orchestrated 3 specialized LLMs (Claude for legal reasoning, GPT-4 for financial modeling, Gemini for visualization) in seamless workflow. No custom integration code - MCP protocol handled context passing between different AI providers. Analysis completed in 35 seconds vs. 8-12 hours for human team (legal + finance + risk analysts). Identified $587.5K in expected losses, negotiation saved $400K in risk exposure. Multi-LLM collaboration delivered insights no single AI could produce alone.</div>
+                </div>
+                
+                <!-- Moonshot Platform -->
+                <div class="product-card">
+                    <div class="product-icon">🛠️</div>
+                    <h3>EVA DevTools</h3>
+                    <span class="product-category">🚀 Moonshot</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>AI-Speed SDLC Optimization:</strong> Complete agentic landscape with Orchestrator/Super/Utility agent architecture. <strong>10 Super Agents:</strong> (1) <strong>Backlog Guardian</strong> - INVEST quality validation, story refinement, acceptance criteria generation; (2) <strong>Test Architect</strong> - coverage optimization, test suite generation, mutation testing; (3) <strong>Legacy Analyzer</strong> - mainframe documentation, COBOL-to-modern translation, technical debt mapping; (4) <strong>Impact Analyzer</strong> - policy change assessment, ripple effect analysis, change backlog generation; (5) <strong>Release Navigator</strong> - WSJF prioritization, dependency mapping, release planning; (6) <strong>Agile Coach</strong> - retrospective insights, velocity trends, team health metrics; (7) <strong>Skills Mentor</strong> - capability gap analysis, learning path recommendations, certification tracking; (8) <strong>Governance Reporter</strong> - automated compliance documentation, audit trail generation, policy adherence checking; (9) <strong>Observability Wizard</strong> - diagnostic intelligence, root cause analysis, incident prediction; (10) <strong>Code Review Assistant</strong> - PR analysis, security scanning, style enforcement. <strong>The Vision:</strong> SDLC at AI speed - what takes teams weeks now takes minutes.</div>
+                    <div class="product-usecase"><strong>Use Case: Sprint Planning Acceleration with 10 Super Agents</strong><br>
+                    <strong>Context:</strong> Development team planning Sprint 12 - 42 backlog items, unclear priorities, technical debt concerns, compliance requirements. Traditional planning: 8-hour session + 2 days of story refinement.<br><br>
+                    <strong>PHASE 1 - BACKLOG REFINEMENT (Backlog Guardian Agent):</strong><br>
+                    <strong>9:00am:</strong> Scrum Master activates Backlog Guardian: "Analyze 42 backlog items, validate INVEST quality, recommend refinements."<br>
+                    <strong>9:12am (12 min later):</strong> Backlog Guardian report:<br>• ✅ <strong>18 items READY:</strong> Clear acceptance criteria, sized appropriately, no blockers<br>• ⚠️ <strong>16 items NEEDS REFINEMENT:</strong> Missing acceptance criteria (9), too large (4), vague requirements (3)<br>• ❌ <strong>8 items BLOCKED:</strong> External dependencies (5), technical spikes required (3)<br><br>Backlog Guardian auto-generates:<br>• Acceptance criteria for 9 stories: "Given...When...Then" format with edge cases<br>• Story splitting for 4 large items: breaks into smaller, independent stories<br>• Clarification questions for 3 vague stories: "Does 'improve performance' mean <2s response time?"<br><br><strong>PHASE 2 - TECHNICAL DEBT ANALYSIS (Legacy Analyzer Agent):</strong><br>
+                    <strong>9:15am:</strong> Tech Lead activates Legacy Analyzer: "Assess technical debt impact on Sprint 12 velocity."<br>
+                    <strong>9:22am (7 min later):</strong> Legacy Analyzer report:<br>• <strong>Code Debt Hotspots:</strong> Payment module (87% complexity, 340 lines/function), AuthService (12 nested conditionals, untested)<br>• <strong>Documentation Gaps:</strong> 23 APIs missing OpenAPI specs, 8 database tables undocumented<br>• <strong>Test Coverage:</strong> 64% overall (below 80% target), payment module at 31% (HIGH RISK)<br>• <strong>Recommendations:</strong> Allocate 20% sprint capacity to debt reduction - refactor AuthService (8 SP), add payment tests (5 SP)<br><br><strong>PHASE 3 - IMPACT ANALYSIS (Impact Analyzer Agent):</strong><br>
+                    <strong>9:25am:</strong> Product Owner activates Impact Analyzer: "New regulation effective Jan 1 - privacy consent requirement. What systems are affected?"<br>
+                    <strong>9:31am (6 min later):</strong> Impact Analyzer report:<br>• <strong>Affected Systems (7):</strong> User registration, profile management, marketing preferences, analytics tracking, third-party integrations, mobile app, admin portal<br>• <strong>Code Changes Required (142 files):</strong> Add consent checkboxes (23 forms), update privacy policy links (47 pages), implement consent API (12 services), add audit logging (18 databases), update mobile SDK (8 screens)<br>• <strong>Testing Impact:</strong> 89 existing tests need updates, 34 new test scenarios required<br>• <strong>Documentation:</strong> Update API docs (23 endpoints), privacy policy (legal review), user guides (12 pages)<br>• <strong>Effort Estimate:</strong> 89 story points across 7 teams, 3 sprints minimum<br>• <strong>Critical Path:</strong> Consent API must be deployed before UI changes (dependency chain identified)<br><br><strong>PHASE 4 - PRIORITIZATION (Release Navigator Agent):</strong><br>
+                    <strong>9:35am:</strong> Scrum Master activates Release Navigator: "Prioritize Sprint 12 backlog using WSJF (Weighted Shortest Job First). Consider: business value, urgency, dependencies, risk."<br>
+                    <strong>9:43am (8 min later):</strong> Release Navigator report:<br><strong>TOP PRIORITIES (WSJF Score):</strong><br>1. Privacy consent API (WSJF: 87) - CRITICAL: blocks 6 other stories, regulatory deadline<br>2. Payment security fix (WSJF: 72) - HIGH RISK: 31% test coverage, compliance issue<br>3. User dashboard performance (WSJF: 65) - CUSTOMER IMPACT: 2,300 complaints, 8s load time<br>4. Mobile app crash fix (WSJF: 58) - QUALITY: 12% crash rate on Android<br>5. Analytics export feature (WSJF: 44) - BUSINESS VALUE: $340K ARR customer request<br>...<br>18. Code refactoring (WSJF: 12) - TECH DEBT: deferred to Sprint 13<br><br><strong>RECOMMENDED SPRINT 12 COMMITMENT (54 SP):</strong><br>• Privacy consent API (21 SP) - critical path for compliance<br>• Payment security fix (13 SP) - risk mitigation<br>• Dashboard performance (8 SP) - customer satisfaction<br>• Mobile crash fix (5 SP) - quality improvement<br>• Analytics export (5 SP) - revenue protection<br>• Buffer (2 SP) - contingency<br><br><strong>PHASE 5 - SKILLS ASSESSMENT (Skills Mentor Agent):</strong><br>
+                    <strong>9:45am:</strong> Tech Lead activates Skills Mentor: "Do we have the skills for Sprint 12 work?"<br>
+                    <strong>9:49am (4 min later):</strong> Skills Mentor report:<br>• ✅ <strong>Privacy API:</strong> 3 developers proficient in consent management (Sarah, Tom, Lisa)<br>• ⚠️ <strong>Payment Security:</strong> Only 1 developer (Jake) has PCI-DSS experience - RISK: single point of failure. <strong>RECOMMENDATION:</strong> Pair Jake with Maria (upskilling opportunity)<br>• ✅ <strong>Performance Optimization:</strong> 2 developers (Chen, Priya) experienced with React performance tuning<br>• ❌ <strong>Mobile Android:</strong> No team members with Kotlin expertise - BLOCKER. <strong>RECOMMENDATION:</strong> Contract mobile specialist or defer to Sprint 13<br><br><strong>PHASE 6 - TEST STRATEGY (Test Architect Agent):</strong><br>
+                    <strong>9:50am:</strong> QA Lead activates Test Architect: "Generate test strategy for Sprint 12 stories."<br>
+                    <strong>9:58am (8 min later):</strong> Test Architect report:<br><strong>TEST COVERAGE PLAN (127 test scenarios):</strong><br>• Privacy API: 34 unit tests, 12 integration tests, 8 E2E scenarios (happy path + edge cases: consent withdrawal, minor users, GDPR requests)<br>• Payment Security: 28 unit tests, 15 security tests (SQL injection, XSS, CSRF), 6 PCI compliance checks<br>• Dashboard Performance: 12 load tests (100/500/1000 concurrent users), 8 rendering benchmarks<br>• Mobile Crash Fix: 18 unit tests, 9 device-specific tests (Android 11-14), crash analytics validation<br>• Analytics Export: 8 data validation tests, 4 format tests (CSV/Excel/PDF/JSON)<br><br><strong>AUTO-GENERATED TEST SUITES:</strong><br>Test Architect produced:<br>• 147 Jest unit tests (TypeScript)<br>• 23 Playwright E2E tests<br>• 15 K6 load test scripts<br>• 8 security scan configurations (OWASP ZAP)<br>• Estimated execution time: 12 minutes (parallelized CI/CD)<br><br><strong>PHASE 7 - GOVERNANCE (Governance Reporter Agent):</strong><br>
+                    <strong>10:00am:</strong> Compliance Officer activates Governance Reporter: "Validate Sprint 12 compliance with enterprise policies."<br>
+                    <strong>10:05am (5 min later):</strong> Governance Reporter:<br>• ✅ Privacy API: GDPR compliant, audit logging enabled, data retention policy enforced<br>• ✅ Payment Security: PCI-DSS Level 1 requirements met, encryption at rest/transit, tokenization implemented<br>• ⚠️ Dashboard Performance: Missing accessibility audit for WCAG 2.1 AA - <strong>ACTION:</strong> Add accessibility testing to Definition of Done<br>• ✅ Mobile Crash Fix: Crash reporting configured (Firebase Crashlytics), privacy policy updated<br>• ✅ Analytics Export: Data export logging enabled, PIPEDA compliant<br><br><strong>AUTO-GENERATED COMPLIANCE DOCUMENTATION:</strong><br>• Privacy Impact Assessment (PIA) - 8 pages<br>• Security Control Matrix - 23 controls validated<br>• Audit Trail Report - all changes logged with justification<br><br><strong>PHASE 8 - RETROSPECTIVE INSIGHTS (Agile Coach Agent):</strong><br>
+                    <strong>10:10am:</strong> Scrum Master activates Agile Coach: "Analyze Sprint 11 retrospective, provide Sprint 12 recommendations."<br>
+                    <strong>10:14am (4 min later):</strong> Agile Coach report:<br><strong>SPRINT 11 PATTERNS:</strong><br>• <strong>Velocity:</strong> Planned 52 SP, completed 47 SP (90% - consistent with 6-sprint average)<br>• <strong>Bottleneck:</strong> Code review delays (avg 18 hours) - blockers cleared by Jake only. <strong>RECOMMENDATION:</strong> Distribute review responsibility, pair programming for knowledge transfer<br>• <strong>Quality:</strong> 8 bugs escaped to production (up from 3 in Sprint 10) - root cause: insufficient E2E testing. <strong>RECOMMENDATION:</strong> Allocate 10% sprint time to automated E2E test expansion<br>• <strong>Team Morale:</strong> Sentiment analysis of retro comments shows 78% positive (down from 85% Sprint 10) - concerns about technical debt accumulation. <strong>RECOMMENDATION:</strong> Dedicate 20% Sprint 12 capacity to debt reduction (Legacy Analyzer's suggestion validated)<br><br><strong>10:15am - SPRINT PLANNING COMPLETE:</strong><br>Team reviews AI-generated insights, makes final decisions:<br>• <strong>Sprint 12 Commitment:</strong> 5 stories (54 SP) - aligns with Release Navigator prioritization<br>• <strong>Mobile Crash Fix deferred:</strong> No Android expertise - contract specialist for Sprint 13<br>• <strong>Pair Programming:</strong> Jake + Maria on payment security (Skills Mentor recommendation)<br>• <strong>Tech Debt:</strong> AuthService refactoring added (Legacy Analyzer + Agile Coach recommendations)<br>• <strong>Testing:</strong> Adopt Test Architect's 127-scenario plan, E2E coverage increased to 85%<br>• <strong>Compliance:</strong> Accessibility audit added to DoD (Governance Reporter finding)<br><br><strong>Result:</strong> Sprint planning completed in 75 minutes instead of 8 hours + 2 days. 10 Super Agents provided:<br>1. Backlog Guardian: Story quality validation + auto-generation (18 ready, 16 refined, 8 blocked)<br>2. Legacy Analyzer: Technical debt assessment (87% complexity hotspots, 64% coverage gaps)<br>3. Impact Analyzer: Regulatory change ripple analysis (142 affected files, 89 SP effort, 3-sprint timeline)<br>4. Release Navigator: WSJF prioritization (54 SP commitment, critical path identified)<br>5. Skills Mentor: Team capability assessment (identified Android skills gap, pairing recommendation)<br>6. Test Architect: Auto-generated 127 test scenarios + executable test suites<br>7. Governance Reporter: Compliance validation + automated documentation (PIA, security matrix, audit trail)<br>8. Agile Coach: Retrospective insights + velocity trends (90% completion rate, morale analysis)<br>9. Code Review Assistant: (not used in planning, but available for PR review during sprint)<br>10. Observability Wizard: (not used in planning, monitors production during sprint)<br><br>Team productivity increased 10x - AI agents handled analysis, documentation, test generation, compliance checks. Humans focused on decision-making and creative problem-solving. Sprint 12 launched with higher confidence, better test coverage, and validated compliance.</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🗺️</div>
+                    <h3>EVA Process Mapper</h3>
+                    <span class="product-category">🚀 Moonshot</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Natural Language → BPMN:</strong> Auto-generate process maps, user journeys, and system flows from conversational descriptions. <strong>Example:</strong> Business analyst says: "When a user applies for benefit X, they first verify eligibility, then submit documents, system validates against rules engine, if approved routes to payment processing, if rejected sends appeal instructions..." EVA Process Mapper generates complete Mermaid/BPMN diagram with: swimlanes (user, system, back-office), decision nodes (approve/reject), parallel processes (document validation + fraud check), error paths (timeout, invalid data), and system integrations (rules engine API, payment gateway). Diagram is editable, exportable (PNG/PDF/SVG), and includes documentation for each step. <strong>The Revolution:</strong> BA work accelerates 10x - from weeks of diagramming to minutes of conversation. Process knowledge captured in real-time during requirements workshops.</div>
+                    <div class="product-usecase"><strong>Use Case: Requirements Workshop → Instant Process Diagrams</strong><br>
+                    <strong>Context:</strong> Business analyst facilitating requirements workshop for new "Employment Insurance Claim" process. 8 stakeholders (operations, IT, legal, fraud, finance, call center, accessibility, bilingual services). Traditional approach: 3-day workshop + 2 weeks of diagram creation + 1 week of stakeholder review cycles.<br><br>
+                    <strong>9:00am - WORKSHOP BEGINS:</strong><br>
+                    <strong>Step 1:</strong> BA activates EVA Process Mapper with screen-sharing: "I'll map this process in real-time as we discuss. Everyone see the shared screen?"<br>
+                    <strong>Step 2:</strong> Operations Manager describes happy path: "Claimant visits portal, selects EI claim type - regular benefits or sickness. If regular, they answer 8 eligibility questions: employed in last 52 weeks, hours worked, reason for job separation, available for work, etc. System validates answers against RaC rules engine. If eligible, claimant uploads 3 documents: ROE from employer, proof of ID, direct deposit form. System sends confirmation email with claim number."<br>
+                    <strong>Step 3:</strong> EVA Process Mapper listens (speech-to-text), generates Mermaid diagram in real-time (15 seconds):<br><br><code>graph TD<br>    A[Claimant visits portal] --> B{Select claim type}<br>    B -->|Regular| C[Answer 8 eligibility questions]<br>    B -->|Sickness| D[Medical certificate required]<br>    C --> E[System validates via RaC rules engine]<br>    E -->|Eligible| F[Upload 3 documents: ROE, ID, direct deposit]<br>    E -->|Not eligible| G[Display ineligibility reasons + appeal info]<br>    F --> H[System sends confirmation email with claim #]<br></code><br><br>Diagram appears on shared screen. Stakeholders see process flow visually.<br>
+                    <strong>Step 4:</strong> Fraud team adds complexity: "Wait - between document upload and confirmation, we need fraud screening. System checks: duplicate claims, blacklisted SIN numbers, suspicious ROE patterns. If fraud flags trigger, route to manual investigation queue, block payment, notify fraud team. This takes 24-48 hours for manual review."<br>
+                    <strong>Step 5:</strong> BA: "EVA, add fraud screening step between document upload and confirmation. Include manual investigation path." EVA updates diagram (8 seconds):<br><br><code>graph TD<br>    A[Claimant visits portal] --> B{Select claim type}<br>    B -->|Regular| C[Answer 8 eligibility questions]<br>    B -->|Sickness| D[Medical certificate required]<br>    C --> E[System validates via RaC rules engine]<br>    E -->|Eligible| F[Upload 3 documents: ROE, ID, direct deposit]<br>    E -->|Not eligible| G[Display ineligibility reasons + appeal info]<br>    F --> I[Fraud screening: duplicate claims, blacklist check, ROE validation]<br>    I -->|Clean| H[System sends confirmation email with claim #]<br>    I -->|Fraud flags| J[Route to manual investigation queue]<br>    J --> K{Investigation result}<br>    K -->|Legitimate| H<br>    K -->|Fraudulent| L[Block claim, notify fraud team, SIN flagged]<br></code><br><br>Diagram updated live. Fraud team: "Perfect - that's our process."<br>
+                    <strong>Step 6:</strong> IT Architect asks: "What systems are involved? I need integration points." BA: "EVA, add swimlanes showing which system handles each step." EVA generates BPMN with swimlanes (12 seconds):<br><br><code>swimlanes:<br>  Claimant Portal (Azure App Service):<br>    - Visit portal<br>    - Select claim type<br>    - Answer questions<br>    - Upload documents<br>  <br>  RaC Rules Engine (Azure Functions + OpenFisca):<br>    - Validate eligibility<br>    - Calculate benefit amounts<br>  <br>  Fraud Detection Service (ML model + manual queue):<br>    - Screen for fraud patterns<br>    - Route to investigators<br>  <br>  Notification Service (SendGrid + Twilio):<br>    - Send confirmation email<br>    - SMS alerts for status updates<br>  <br>  Document Storage (Azure Blob + OCR):<br>    - Store uploaded docs<br>    - Extract text for validation<br></code><br><br>IT Architect: "Great - I can see all integration touchpoints. We'll need API contracts for 5 services."<br>
+                    <strong>Step 7:</strong> Call Center Manager: "What happens if claimant calls us during processing? They need status updates." BA: "EVA, add call center interaction - claimant can call for status, agent looks up claim by SIN or claim number, sees current stage in workflow." EVA adds call center swimlane + "Check Status" decision node (7 seconds)<br>
+                    <strong>Step 8:</strong> Accessibility champion: "Claimants with visual impairments - how do they upload documents?" BA: "EVA, add accessibility note: portal must support screen readers, document upload via voice commands (EVA Vision integration), alternative: call center can accept documents via phone/fax." EVA adds annotation box to diagram: "Accessibility: Screen reader support (WCAG 2.1 AA), voice upload via EVA Vision, phone/fax alternative for non-digital users."<br>
+                    <strong>Step 9:</strong> Bilingual Services: "Everything must be available in French. How do we handle bilingual validation messages?" BA: "EVA, note that all user-facing text (questions, errors, confirmations) requires EN/FR translation via eva-i18n framework." EVA adds i18n annotation<br>
+                    <strong>Step 10:</strong> Legal: "What's the SLA for claim processing? We have regulatory timelines." Operations: "RaC validation: instant. Fraud screening: 24-48 hours. If no fraud flags, confirmation within 2 business days. If manual investigation, 5-10 business days." BA: "EVA, add timing annotations to each step." EVA updates diagram with duration estimates at each node<br><br>
+                    <strong>10:45am - WORKSHOP BREAK:</strong><br>BA: "EVA, export this diagram as: (1) PNG for executive presentation, (2) Mermaid code for developer documentation, (3) BPMN XML for process automation tools, (4) Word document with step-by-step narrative."<br><br>EVA generates 4 deliverables in 18 seconds:<br>• <strong>PNG diagram:</strong> High-res image with swimlanes, color-coded by system (used in project charter)<br>• <strong>Mermaid code:</strong> 127 lines of markdown (developers embed in README files)<br>• <strong>BPMN XML:</strong> Standard format imported into Camunda/ProcessMaker for workflow automation<br>• <strong>Word document:</strong> 12-page process description with screenshots, decision trees, system integration details, accessibility notes, SLA timelines<br><br>Stakeholders review during break. IT Architect: "This is the clearest requirements doc I've seen in 15 years."<br><br>
+                    <strong>11:00am - WORKSHOP RESUMES (Exception Paths):</strong><br>
+                    <strong>Step 11:</strong> Operations: "Let's document failure scenarios. What if RaC rules engine is down? What if document upload times out? What if fraud screening takes longer than 48 hours?" <br>
+                    <strong>Step 12:</strong> BA: "EVA, add error handling paths: (a) RaC timeout → retry 3 times, then route to manual review queue; (b) Upload timeout → save progress, let claimant resume later; (c) Fraud screening exceeds 48 hours → escalate to fraud supervisor, notify claimant of delay."<br><br>EVA updates diagram with error paths shown in red dashed lines (9 seconds). Diagram now has 47 nodes (happy path + exceptions + decision branches).<br>
+                    <strong>Step 13:</strong> Finance: "I need payment flow. After claim approved, how does money reach claimant?" Operations: "Approval triggers payment processing: validate direct deposit info, calculate benefit amount (RaC rules), submit to payment gateway (bank transfer), claimant receives funds in 3-5 business days, system sends payment confirmation." <br>
+                    <strong>Step 14:</strong> BA: "EVA, extend diagram - add payment processing flow after claim approval." EVA adds 8 new nodes for payment workflow (6 seconds)<br><br>
+                    <strong>12:00pm - WORKSHOP COMPLETE:</strong><br>Final diagram has:<br>• <strong>67 process nodes</strong> (steps, decisions, integrations)<br>• <strong>5 swimlanes</strong> (claimant portal, RaC engine, fraud service, payment gateway, call center)<br>• <strong>12 decision branches</strong> (claim type, eligibility, fraud check, investigation result, payment validation)<br>• <strong>8 error paths</strong> (timeouts, system failures, edge cases)<br>• <strong>14 system integrations</strong> (APIs, databases, external services)<br>• <strong>23 annotations</strong> (SLAs, accessibility notes, i18n requirements, regulatory compliance)<br><br>BA: "EVA, generate final deliverables package." EVA produces:<br>1. <strong>Executive Summary:</strong> 2-page process overview with key milestones and SLAs<br>2. <strong>Technical Spec:</strong> 47-page document with API contracts, data schemas, integration points<br>3. <strong>User Stories:</strong> 34 Jira-ready stories with acceptance criteria extracted from process flow<br>4. <strong>Test Scenarios:</strong> 89 test cases covering happy path, exceptions, edge cases<br>5. <strong>Accessibility Checklist:</strong> WCAG 2.1 AA requirements mapped to each UI step<br>6. <strong>i18n Translation Keys:</strong> 247 UI strings requiring EN/FR translation<br>7. <strong>Compliance Matrix:</strong> Regulatory requirements (Employment Insurance Act) mapped to process steps<br><br>
+                    <strong>Result:</strong> 3-hour requirements workshop produced complete process documentation that traditionally takes 3 weeks:<br>• <strong>Traditional BA work:</strong> 3-day workshop notes → 2 weeks creating Visio diagrams → 1 week of stakeholder review/revisions → 3 weeks total<br>• <strong>EVA Process Mapper:</strong> Real-time diagram generation during 3-hour workshop → instant export to multiple formats → zero revision cycles (stakeholders approved live) → 3 hours total<br><br><strong>Productivity gain: 10x faster (3 weeks → 3 hours)</strong>. Stakeholders left workshop with:<br>• Validated process diagram (67 nodes, 5 swimlanes)<br>• Technical specifications (47 pages)<br>• User stories (34 stories)<br>• Test scenarios (89 cases)<br>• Compliance documentation (regulatory mapping)<br><br>Development team started implementation next day - no waiting for BA documentation. Process knowledge captured in real-time, visually validated by all stakeholders during workshop. EVA Process Mapper transformed requirements gathering from documentation bottleneck to collaborative, real-time process design session.</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🎯</div>
+                    <h3>EVA Impact Analyzer</h3>
+                    <span class="product-category">🚀 Moonshot</span>
+                    <div class="product-buttons">
+                        <button class="product-btn" onclick="showProductInfo(this, 'description'); event.stopPropagation();">Description</button>
+                        <button class="product-btn" onclick="showProductInfo(this, 'usecase'); event.stopPropagation();">Use Case</button>
+                    </div>
+                    <div class="product-description"><strong>Policy Change Intelligence:</strong> Compare old vs new policy/legislation text, identify affected rules, services, UIs, tests, documentation - generate prioritized change backlog. <strong>Example:</strong> Government announces Bill C-456: "Parental leave extended from 52 to 78 weeks effective Jan 1." Policy analyst inputs old Employment Insurance Act + new Bill text. Impact Analyzer returns: (1) <strong>Affected Rules:</strong> 12 RaC rules need updates (benefit duration calculation, eligibility windows, payment schedules), (2) <strong>System Changes:</strong> 47 files (8 services, 23 UI components, 16 database schemas), (3) <strong>Test Updates:</strong> 89 existing tests invalidated + 34 new scenarios required, (4) <strong>Documentation:</strong> 18 user guides, 12 API specs, 5 training materials, (5) <strong>Backlog:</strong> 67 stories (prioritized by dependency + compliance deadline). <strong>The Revolution:</strong> Legislative changes implemented in weeks instead of 18-month cycles. Digital twin simulation shows impact BEFORE deployment.</div>
+                    <div class="product-usecase"><strong>Use Case: Legislative Change - Instant Impact Assessment</strong><br>
+                    <strong>Context:</strong> December 2025 - Federal government announces Bill C-456: "<strong>Employment Insurance Modernization Act</strong>" with 8 major changes effective April 1, 2026. Policy team has 4 months to implement across 12-year-old legacy EI system. Traditional impact analysis: 6-8 weeks of manual code review + spreadsheet tracking.<br><br>
+                    <strong>DECEMBER 10 - BILL ANNOUNCEMENT:</strong><br>
+                    <strong>Step 1:</strong> Policy analyst receives 347-page Bill C-456 PDF. Opens EVA Impact Analyzer, uploads: (a) Current Employment Insurance Act (482 pages), (b) Bill C-456 (347 pages with amendments)<br>
+                    <strong>Step 2:</strong> Impact Analyzer performs legislative diff analysis (3 minutes processing):<br><br><strong>8 MAJOR CHANGES DETECTED:</strong><br>1. <strong>Parental Leave Extension:</strong> 52 weeks → 78 weeks (Section 23.1 amended)<br>2. <strong>Benefit Rate Increase:</strong> 55% → 60% of insurable earnings (Section 14.2 amended)<br>3. <strong>Qualifying Hours Reduction:</strong> 700 hours → 420 hours for regular benefits (Section 7.1 amended)<br>4. <strong>Waiting Period Elimination:</strong> 1-week waiting period removed (Section 11.4 repealed)<br>5. <strong>Self-Employment Eligibility:</strong> Self-employed now eligible with voluntary opt-in (new Section 152.01 added)<br>6. <strong>Training Allowance:</strong> New $1,500 skills training allowance during claim (new Section 25.3 added)<br>7. <strong>Regional Pilot Extended:</strong> Extended benefits in high-unemployment regions (Section 45 amended, 15 regions added)<br>8. <strong>Digital Service Standard:</strong> 95% of claims must be processed online within 28 days (new Section 68.1 accountability)<br><br>
+                    <strong>Step 3:</strong> Impact Analyzer maps changes to codebase (connected to all 32 EVA repos via Git integration). Scans: services, UIs, databases, RaC rules, tests, documentation (8 minutes analysis):<br><br><strong>IMPACT REPORT - 847 AFFECTED ITEMS:</strong><br><br><strong>A) RaC RULES ENGINE (47 rules affected):</strong><br>• Parental leave: <code>MAX_WEEKS</code> parameter (1 rule), benefit duration calculation (3 rules), calendar year boundary logic (2 rules)<br>• Benefit rate: <code>BENEFIT_RATE</code> constant (1 rule), earnings calculation (8 rules), maximum benefit caps (4 rules)<br>• Qualifying hours: Eligibility threshold (12 rules), regional variations (15 regions × 1 rule each = 15 rules)<br>• Waiting period: Remove 1-week deduction logic (2 rules)<br>• Self-employment: New eligibility category (6 new rules), opt-in logic, contribution calculations<br>• Training allowance: New $1,500 entitlement rule, disbursement schedule, proof-of-enrollment validation<br><br><strong>B) BACKEND SERVICES (67 files across 8 microservices):</strong><br>• <code>claim-service</code>: 18 files (eligibility validation, benefit calculation, payment scheduling)<br>• <code>payment-service</code>: 12 files (amount calculation, direct deposit, payment history)<br>• <code>user-service</code>: 8 files (self-employment registration, opt-in workflow)<br>• <code>notification-service</code>: 6 files (email templates for new benefit amounts, training allowance notifications)<br>• <code>reporting-service</code>: 9 files (dashboard metrics, compliance reporting for 28-day processing SLA)<br>• <code>training-service</code>: NEW SERVICE REQUIRED (training allowance management, course validation, $1,500 disbursement)<br>• <code>analytics-service</code>: 7 files (forecasting models, budget impact projections)<br>• <code>integration-service</code>: 7 files (provincial systems, CRA data exchange for self-employment income verification)<br><br><strong>C) FRONTEND / UI COMPONENTS (94 components):</strong><br>• Claim application form: 23 components (new self-employment questions, training allowance opt-in)<br>• Benefit calculator: 12 components (60% rate display, updated estimates)<br>• Dashboard: 18 components (training allowance status, updated payment schedules)<br>• Admin portal: 15 components (new reports for 28-day processing SLA monitoring)<br>• Mobile app: 26 components (iOS + Android updates for all changes)<br><br><strong>D) DATABASE SCHEMA (23 tables, 47 columns):</strong><br>• <code>claims</code> table: Add columns: <code>self_employed</code> (boolean), <code>training_allowance_eligible</code> (boolean), <code>training_allowance_disbursed</code> (decimal)<br>• <code>benefits</code> table: Update: <code>benefit_rate</code> (55% → 60%), <code>max_weeks</code> (52 → 78 for parental)<br>• <code>eligibility</code> table: Update: <code>qualifying_hours_threshold</code> (700 → 420)<br>• <code>payments</code> table: Add column: <code>waiting_period_applied</code> (boolean, set to FALSE for all new claims)<br>• <code>training_allowance</code> table: NEW TABLE (claim_id, course_name, institution, allowance_amount, disbursement_date)<br>• Migration scripts: 12 scripts to update existing claims (recalculate benefits for active claimants under new rules)<br><br><strong>E) TESTS (312 tests affected, 127 new tests required):</strong><br>• Unit tests: 187 tests invalidated (benefit calculations, eligibility checks, payment schedules)<br>• Integration tests: 68 tests need updates (API contracts changed, new endpoints for training allowance)<br>• E2E tests: 57 tests affected (UI workflows changed, new self-employment registration flow)<br>• New test scenarios: 127 new tests required (self-employment edge cases, training allowance validation, 28-day SLA monitoring)<br><br><strong>F) DOCUMENTATION (147 documents affected):</strong><br>• User guides: 34 documents (claimant portal help, benefit estimator, FAQs)<br>• API documentation: 28 specs (OpenAPI schemas updated for 12 endpoints)<br>• Training materials: 18 guides (call center scripts, admin procedures)<br>• Compliance docs: 12 reports (audit trail, regulatory mapping, privacy impact assessments)<br>• Release notes: 8 communications (internal announcements, public-facing change summaries)<br>• Policy manuals: 47 pages (adjudicator guidelines, appeals process updates)<br><br><strong>G) THIRD-PARTY INTEGRATIONS (8 systems):</strong><br>• CRA (Canada Revenue Agency): API changes for self-employment income verification<br>• Provincial systems: 13 provinces/territories need benefit amount updates (60% rate)<br>• Banking partners: Direct deposit validation for training allowance payments<br>• Training institutions: New API integration for course enrollment verification<br>• Fraud detection: Update ML models for new self-employment patterns<br><br>
+                    <strong>Step 4:</strong> Impact Analyzer generates prioritized backlog with effort estimates (2 minutes):<br><br><strong>CHANGE BACKLOG - 178 STORIES (892 STORY POINTS):</strong><br><br><strong>EPIC 1 - RaC Rules Updates (89 SP):</strong><br>Critical path - must complete first (all other changes depend on rules)<br>• Story 1.1: Update parental leave duration rules (13 SP) - 47 rule changes<br>• Story 1.2: Update benefit rate to 60% (8 SP) - 12 rule changes<br>• Story 1.3: Reduce qualifying hours threshold (21 SP) - 15 regional variations<br>• Story 1.4: Remove waiting period logic (5 SP) - 2 rule changes<br>• Story 1.5: Add self-employment eligibility rules (21 SP) - 6 new rules + validation<br>• Story 1.6: Add training allowance entitlement rule (13 SP) - new rule + disbursement logic<br>• Story 1.7: Extend regional pilot benefits (8 SP) - 15 new regions<br><br><strong>EPIC 2 - Backend Services (247 SP):</strong><br>• Story 2.1: Update claim-service eligibility logic (34 SP)<br>• Story 2.2: Update payment-service benefit calculations (29 SP)<br>• Story 2.3: Build training-service microservice (55 SP) - NEW SERVICE<br>• Story 2.4: Add self-employment registration to user-service (34 SP)<br>• Story 2.5: Update notification templates (13 SP)<br>• Story 2.6: Add 28-day SLA monitoring to reporting-service (21 SP)<br>• Story 2.7: CRA integration for self-employment income (34 SP)<br>• Story 2.8: Update analytics forecasting models (27 SP)<br><br><strong>EPIC 3 - Frontend / UI (156 SP):</strong><br>• Story 3.1: Update claim application form (34 SP) - 23 components<br>• Story 3.2: Update benefit calculator (21 SP) - 60% rate display<br>• Story 3.3: Add training allowance UI (29 SP) - enrollment, status tracking<br>• Story 3.4: Self-employment registration workflow (34 SP) - opt-in, contribution setup<br>• Story 3.5: Update dashboard widgets (21 SP) - new payment schedules<br>• Story 3.6: Mobile app updates (iOS + Android) (17 SP)<br><br><strong>EPIC 4 - Database / Infrastructure (92 SP):</strong><br>• Story 4.1: Add database columns (13 SP) - 47 column changes<br>• Story 4.2: Create training_allowance table (8 SP)<br>• Story 4.3: Data migration scripts (34 SP) - recalculate 340,000 active claims under new rules<br>• Story 4.4: Performance testing (21 SP) - ensure system handles 60% benefit rate calculations<br>• Story 4.5: Backup and rollback procedures (16 SP)<br><br><strong>EPIC 5 - Testing (187 SP):</strong><br>• Story 5.1: Update existing unit tests (55 SP) - 187 tests<br>• Story 5.2: Update integration tests (34 SP) - 68 tests<br>• Story 5.3: Update E2E tests (29 SP) - 57 tests<br>• Story 5.4: Create new test scenarios (55 SP) - 127 new tests<br>• Story 5.5: Load testing for April 1 launch (14 SP)<br><br><strong>EPIC 6 - Documentation & Training (89 SP):</strong><br>• Story 6.1: Update user guides (21 SP) - 34 documents<br>• Story 6.2: Update API documentation (13 SP) - 28 specs<br>• Story 6.3: Call center training materials (21 SP) - new scripts<br>• Story 6.4: Public communications (13 SP) - website updates, FAQs<br>• Story 6.5: Compliance documentation (21 SP) - audit trails<br><br><strong>EPIC 7 - Third-Party Integrations (32 SP):</strong><br>• Story 7.1: CRA API integration (13 SP)<br>• Story 7.2: Provincial system notifications (8 SP)<br>• Story 7.3: Training institution API (11 SP)<br><br><strong>TOTAL: 178 stories, 892 story points, estimated 16 sprints (4 months)**<br><br>
+                    <strong>Step 5:</strong> Impact Analyzer generates risk assessment + critical path analysis:<br><br><strong>CRITICAL PATH (blocks April 1 launch if delayed):</strong><br>1. RaC Rules Updates (Epic 1) - MUST complete by Jan 15 (enables all other work)<br>2. Backend Services (Epic 2) - MUST complete by Feb 28 (API changes needed for UI)<br>3. Data Migration (Story 4.3) - MUST complete by Mar 15 (340K claims recalculated)<br>4. Testing (Epic 5) - MUST complete by Mar 25 (1-week buffer for bug fixes)<br><br><strong>HIGH-RISK ITEMS:</strong><br>• Data migration (340,000 active claims) - rollback plan required<br>• Training-service (new microservice) - no existing codebase, greenfield development<br>• CRA integration (external dependency) - requires CRA cooperation, potential delays<br>• 28-day SLA monitoring - new compliance requirement, monitoring infrastructure needed<br><br><strong>BUDGET IMPACT:</strong><br>• Development effort: 892 SP × $800/SP = $713,600<br>• Testing effort: 187 SP × $600/SP = $112,200<br>• Third-party integrations: $45,000 (CRA, training institutions)<br>• Infrastructure upgrades: $28,000 (database scaling, monitoring tools)<br>• <strong>Total estimated cost: $898,800</strong><br><br>
+                    <strong>Step 6:</strong> Policy team reviews Impact Analyzer report (same day). Leadership approves $900K budget, commits to April 1 deadline. Development starts next week with Epic 1 (RaC rules) - critical path item.<br><br>
+                    <strong>Result:</strong> Legislative impact analysis completed in 15 minutes instead of 6-8 weeks:<br>• <strong>Traditional approach:</strong> 4-6 analysts × 6-8 weeks manually reviewing code, creating spreadsheets, meeting with teams = 960-1,920 hours<br>• <strong>EVA Impact Analyzer:</strong> 15 minutes automated analysis = 0.25 hours<br><br><strong>Productivity gain: 3,840x-7,680x faster**<br><br>Impact Analyzer identified:<br>• 847 affected items across 7 categories (rules, services, UIs, databases, tests, docs, integrations)<br>• 178 stories with effort estimates (892 SP total)<br>• Critical path with risk mitigation (4-month timeline validated as feasible)<br>• Budget projection ($898,800) approved by leadership same day<br><br>Development team started implementation Week 1 with complete visibility into scope, dependencies, and risks. By March 28 (1 week before deadline), all 178 stories completed, 340,000 claims successfully migrated, system ready for April 1 launch. Bill C-456 went live on schedule - first time in agency history that major legislative change deployed without delays or overruns. EVA Impact Analyzer transformed 18-month implementation cycles into 4-month sprints.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Stack -->
+        <div class="card">
+            <h2>🔧 Technical Architecture</h2>
+            <div class="metric">
+                <span>Core Platform</span>
+                <span class="metric-value">Azure Cloud + Cosmos DB</span>
+            </div>
+            <div class="metric">
+                <span>Frontend</span>
+                <span class="metric-value">React 18+ TypeScript</span>
+            </div>
+            <div class="metric">
+                <span>AI Integration</span>
+                <span class="metric-value">Azure OpenAI + Custom Agents</span>
+            </div>
+            <div class="metric">
+                <span>Security & Compliance</span>
+                <span class="metric-value">Entra ID + WCAG 2.1 AA</span>
+            </div>
+            <div class="metric">
+                <span>Accessibility</span>
+                <span class="metric-value">eva-i11y Library + Automated Testing</span>
+            </div>
+            <div class="metric">
+                <span>Internationalization</span>
+                <span class="metric-value">eva-i18n (EN/FR Bilingual)</span>
+            </div>
+        </div>
+
+        <!-- Current Focus -->
+        <div class="card">
+            <h2>🔥 Current Sprint 4 Focus</h2>
+            <div style="margin: 20px 0;">
+                <h3 style="color: var(--primary); margin-bottom: 15px;">3-Repo Batch Strategy</h3>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <strong>eva-agent</strong> - AI Agent Runtime & Planning Engine (44 SP)
+                </div>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <strong>eva-openai</strong> - Azure OpenAI Integration Layer (52 SP)  
+                </div>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <strong>eva-rag</strong> - Retrieval-Augmented Generation Engine (52 SP)
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <p style="text-align: center; margin-top: 10px; color: var(--neutral);">
+                Sprint 4 Progress: Planning Phase Complete
+            </p>
+        </div>
+
+        <!-- Certifications Track -->
+        <div class="card">
+            <h2>🏆 Certification & Compliance Roadmap</h2>
+            <div class="metric">
+                <span>ISO/IEC 27001</span>
+                <span class="metric-value">📋 Planned</span>
+            </div>
+            <div class="metric">
+                <span>WCAG 2.1 AA</span>
+                <span class="metric-value" style="color: var(--success)">✅ In Progress</span>
+            </div>
+            <div class="metric">
+                <span>SOC 2 Type II</span>
+                <span class="metric-value">📋 Planned</span>
+            </div>
+            <div class="metric">
+                <span>GC Cloud Guardrails</span>
+                <span class="metric-value">📋 Planned</span>
+            </div>
+            <div class="metric">
+                <span>AI Transparency Charter</span>
+                <span class="metric-value" style="color: var(--success)">✅ In Progress</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="last-updated">
+        <p>🔄 Last Updated: November 19, 2025 | 🚀 Ad Astra - Building the airplane while flying it</p>
+        <p>📊 Live dashboard powered by EVA personal automation system</p>
+    </div>
+
+    <script>
+        // Product tile interaction
+        function showProductInfo(button, type) {
+            const card = button.closest('.product-card');
+            const allCards = document.querySelectorAll('.product-card');
+            const buttons = card.querySelectorAll('.product-btn');
+            
+            // Close all other cards first
+            allCards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.remove('show-description', 'show-usecase', 'expanded');
+                    otherCard.querySelectorAll('.product-btn').forEach(btn => btn.classList.remove('active'));
+                }
+            });
+            
+            // Remove active/expanded states from current card
+            buttons.forEach(btn => btn.classList.remove('active'));
+            card.classList.remove('show-description', 'show-usecase', 'expanded');
+            
+            // Add new state
+            button.classList.add('active');
+            card.classList.add('show-' + type, 'expanded');
+        }
+        
+        // Auto-refresh every 5 minutes
+        setTimeout(() => {
+            window.location.reload();
+        }, 300000);
+
+        // Add some subtle animations
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".card");
+            cards.forEach((card, index) => {
+                card.style.opacity = "0";
+                card.style.transform = "translateY(20px)";
+                setTimeout(() => {
+                    card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>

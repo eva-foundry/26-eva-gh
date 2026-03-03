@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "generated_at_iso8601": "2025-11-15T16:07:48.080422",
+  "projects": [
+    {
+      "projectId": "canadaLife",
+      "name": "Canada Life Assistant",
+      "description": "Benefits and policy Q&A assistant for Canada Life integration use cases.",
+      "theme": {
+        "primaryColor": "#c8102e",
+        "backgroundColor": "#fff5f7",
+        "headerTextColor": "#ffffff"
+      },
+      "i18n": {
+        "headlineKeyEn": "projects.canadaLife.headline",
+        "headlineKeyFr": "projects.canadaLife.headline_fr",
+        "subtitleKeyEn": "projects.canadaLife.subtitle",
+        "subtitleKeyFr": "projects.canadaLife.subtitle_fr"
+      },
+      "api": {
+        "ragEndpoint": "/rag/answer",
+        "safetyProfile": "standard"
+      }
+    },
+    {
+      "projectId": "jurisprudence",
+      "name": "Jurisprudence Research Assistant",
+      "description": "Legal and jurisprudence search assistant for caseworkers and policy analysts.",
+      "theme": {
+        "primaryColor": "#004f9f",
+        "backgroundColor": "#f3f7ff",
+        "headerTextColor": "#ffffff"
+      },
+      "i18n": {
+        "headlineKeyEn": "projects.jurisprudence.headline",
+        "headlineKeyFr": "projects.jurisprudence.headline_fr",
+        "subtitleKeyEn": "projects.jurisprudence.subtitle",
+        "subtitleKeyFr": "projects.jurisprudence.subtitle_fr"
+      },
+      "api": {
+        "ragEndpoint": "/rag/answer",
+        "safetyProfile": "standard"
+      }
+    },
+    {
+      "projectId": "admin",
+      "name": "EVA Admin & LiveOps",
+      "description": "Administrative and monitoring console for EVA Domain Assistant and backend services.",
+      "theme": {
+        "primaryColor": "#111827",
+        "backgroundColor": "#f9fafb",
+        "headerTextColor": "#ffffff"
+      },
+      "i18n": {
+        "headlineKeyEn": "projects.admin.headline",
+        "headlineKeyFr": "projects.admin.headline_fr",
+        "subtitleKeyEn": "projects.admin.subtitle",
+        "subtitleKeyFr": "projects.admin.subtitle_fr"
+      },
+      "api": {
+        "ragEndpoint": "/rag/answer",
+        "safetyProfile": "admin"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "p02_artifacts_path": "docs/features/session-handoff-meta-integration",
+  "priority": "MEDIUM",
+  "status": "ready-for-crew",
+  "title": "Session Handoff Note - Meta Integration Work",
+  "feature_slug": "session-handoff-meta-integration",
+  "created_timestamp": "2025-12-12T01:38:39.9173252Z",
+  "source_intake_file": "SESSION-HANDOFF-META-INTEGRATION.md",
+  "feature_key": "P02-AUTO-ac6ca828"
+}

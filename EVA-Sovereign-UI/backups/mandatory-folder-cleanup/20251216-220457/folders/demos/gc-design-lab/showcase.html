@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVA Sovereign UI - Component Library (Dynamic)</title>
+    <script type="module" src="./eva-sovereign-ui.es.js"></script>
+    <link rel="stylesheet" href="./styles/playground.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* GC Design System Tokens */
+        :root {
+            --gc-red: oklch(50% 0.12 29);
+            --gc-blue: oklch(30% 0.12 254);
+            --gc-blue-light: oklch(64% 0.21 254);
+            --gc-gray-50: oklch(98% 0 0);
+            --gc-gray-900: oklch(15% 0 0);
+            --font-family: 'Noto Sans', -apple-system, sans-serif;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-family);
+            background: var(--gc-gray-50);
+            color: var(--gc-gray-900);
+            line-height: 1.6;
+        }
+        
+        .app-header {
+            background: var(--gc-blue);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .app-main {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .component-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Simple hover - no animations (GC pattern) */
+        .component-card:hover,
+        .component-card:focus {
+            border-color: var(--gc-blue);
+            outline: 3px solid var(--gc-blue-light);
+            outline-offset: 2px;
+        }
+        
+        .component-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gc-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .component-description {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .component-preview {
+            padding: 1rem;
+            background: var(--gc-gray-50);
+            border-radius: 4px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--gc-blue-light);
+            color: white;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-shell">
+        <header class="app-header">
+            <h1>EVA Sovereign UI Component Library</h1>
+            <p>14 Production-Ready Web Components • WCAG 2.2 AAA • Bilingual EN-CA/FR-CA</p>
+        </header>
+        
+        <main class="app-main">
+            <div id="component-grid" class="component-grid">
+                <!-- Dynamically generated -->
+            </div>
+        </main>
+    </div>
+    
+    <script type="module">
+        import { componentMetadata } from './component-metadata.generated.js';
+        import { showPlayground } from './ComponentPlayground.js';
+        import { parseComponentExample, applyParsedExample } from './example-parser.js';
+        
+        const grid = document.getElementById('component-grid');
+        
+        // Render all components from metadata
+        Object.entries(componentMetadata).forEach(([componentId, metadata]) => {
+            const card = document.createElement('article');
+            card.className = 'component-card';
+            card.tabIndex = 0;
+            
+            const name = document.createElement('div');
+            name.className = 'component-name';
+            name.textContent = `<${componentId}>`;
+            
+            const description = document.createElement('p');
+            description.className = 'component-description';
+            description.textContent = metadata.description;
+            
+            const preview = document.createElement('div');
+            preview.className = 'component-preview';
+            
+            // Create actual component for preview using example code
+            const component = document.createElement(componentId);
+            
+            // Parse and apply the webcomponent example
+            if (metadata.examples && metadata.examples.webcomponent) {
+                const parsed = parseComponentExample(metadata.examples.webcomponent);
+                applyParsedExample(component, parsed);
+            } else {
+                // Fallback to generic preview
+                component.textContent = metadata.slots?.default || 'Preview';
+            }
+            
+            preview.appendChild(component);
+            
+            const badge = document.createElement('span');
+            badge.className = 'badge';
+            badge.textContent = metadata.category.toUpperCase();
+            
+            card.appendChild(name);
+            card.appendChild(description);
+            card.appendChild(preview);
+            card.appendChild(badge);
+            
+            // Click to open playground
+            card.addEventListener('click', () => showPlayground(componentId));
+            card.addEventListener('keypress', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    showPlayground(componentId);
+                }
+            });
+            
+            grid.appendChild(card);
+        });
+        
+        console.log(`✅ Rendered ${Object.keys(componentMetadata).length} components`);
+    </script>
+</body>
+</html>

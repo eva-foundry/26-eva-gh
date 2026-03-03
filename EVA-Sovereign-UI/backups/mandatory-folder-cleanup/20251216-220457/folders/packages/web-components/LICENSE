@@ -1,0 +1,89 @@
+MIT License
+
+Copyright (c) 2025 EVA Suite - Enterprise Virtual Assistant
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Government of Canada Design System
+
+This software incorporates design patterns and guidelines from the Government 
+of Canada Design System (https://design.canada.ca/), which is available under 
+the Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada).
+
+The GC Design System components included in this software are provided for 
+compliance with Canadian government digital standards and are subject to the 
+terms of the Open Government Licence - Canada in addition to the MIT License above.
+
+## Third-Party Licenses
+
+This software uses the following third-party libraries:
+
+- Lit (https://lit.dev/) - BSD 3-Clause License
+- TypeScript (https://www.typescriptlang.org/) - Apache License 2.0
+- Vitest (https://vitest.dev/) - MIT License
+- @open-wc/testing (https://open-wc.org/) - MIT License
+
+For complete third-party license information, see the node_modules directory
+or visit the respective project websites.
+
+---
+
+## Trademark Notice
+
+"EVA Suite" and related marks are trademarks of their respective owners.
+The Government of Canada wordmark and related official marks are protected
+under the Trade-marks Act and may only be used in accordance with federal
+identity program guidelines.
+
+## Export Control
+
+This software may be subject to Canadian export control laws and regulations.
+By using this software, you agree to comply with all applicable export control
+laws and regulations, including but not limited to the Export and Import 
+Permits Act (Canada).
+
+## Privacy & Data Residency
+
+This software is designed to support Canadian data residency requirements and
+compliance with the Personal Information Protection and Electronic Documents
+Act (PIPEDA). Users are responsible for ensuring their use of this software
+complies with applicable privacy laws and regulations.
+
+## Accessibility Statement
+
+This software is designed to meet Web Content Accessibility Guidelines (WCAG) 2.2
+Level AAA standards. We are committed to ensuring digital accessibility for people
+with disabilities and continually improving the user experience for everyone.
+
+If you encounter any accessibility barriers, please report them to:
+accessibility@eva-sovereign.ca
+
+## Support & Contributions
+
+For questions, issues, or contributions, please visit:
+https://github.com/eva-suite/web-components
+
+For security vulnerabilities, please email:
+security@eva-sovereign.ca
+
+---
+
+Last Updated: December 8, 2025

@@ -1,0 +1,339 @@
+
+> @eva-sovereign/web-components@1.0.0 test
+> vitest --run
+
+
+[7m[1m[36m RUN [39m[22m[27m [36mv1.6.1[39m [90mC:/Users/marco/Documents/_AI Dev/EVA Suite/EVA-Sovereign-UI/packages/web-components[39m
+
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | test/gc-site-menu.test.ts > gc-site-menu > Initialization > renders with default properties
+Element gc-site-menu scheduled an update (generally because a property was set) after an update completed, causing a new update to be scheduled. This is inefficient and should be avoided unless the next update can only be scheduled as a side effect of the previous update. See https://lit.dev/msg/change-in-update for more information.
+
+ [33mΓ¥»[39m src/components/gc-page-navigation/test/gc-page-navigation.test.ts [2m ([22m[2m42 tests[22m [2m|[22m [31m2 failed[39m[2m)[22m[33m 382[2mms[22m[39m
+[31m   [33mΓ¥»[31m src/components/gc-page-navigation/test/gc-page-navigation.test.ts[2m > [22mGCPageNavigation[2m > [22mBilingual Support[2m > [22mdisplays English labels when lang="en-CA"[39m
+[31m     ΓåÆ expected 'pageNav.previous' to not equal 'pageNav.previous'[39m
+[31m   [33mΓ¥»[31m src/components/gc-page-navigation/test/gc-page-navigation.test.ts[2m > [22mGCPageNavigation[2m > [22mBilingual Support[2m > [22mdisplays French labels when lang="fr-CA"[39m
+[31m     ΓåÆ expected 'pageNav.next' to not equal 'pageNav.next'[39m
+ [32mΓ£ô[39m test/gc-action-menu.test.ts [2m ([22m[2m56 tests[22m[2m)[22m[33m 578[2mms[22m[39m
+ [32mΓ£ô[39m test/gc-side-nav.test.ts [2m ([22m[2m50 tests[22m[2m)[22m[33m 585[2mms[22m[39m
+ [32mΓ£ô[39m test/gc-site-menu.test.ts [2m ([22m[2m49 tests[22m[2m)[22m[33m 649[2mms[22m[39m
+ [32mΓ£ô[39m test/gc-global-header.test.ts [2m ([22m[2m47 tests[22m[2m)[22m[33m 698[2mms[22m[39m
+ [32mΓ£ô[39m test/gc-skip-links.test.ts [2m ([22m[2m44 tests[22m[2m)[22m[33m 778[2mms[22m[39m
+ [32mΓ£ô[39m test/gc-language-toggle.test.ts [2m ([22m[2m52 tests[22m[2m)[22m[33m 816[2mms[22m[39m
+ [32mΓ£ô[39m test/gc-global-footer.test.ts [2m ([22m[2m42 tests[22m[2m)[22m[33m 831[2mms[22m[39m
+stderr | test/gc-global-footer.test.ts
+Error: Not implemented: navigation (except hash changes)
+    at module.exports (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at navigateFetch (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\jsdom\lib\jsdom\living\window\navigation.js:77:3)
+    at exports.navigate (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\jsdom\lib\jsdom\living\window\navigation.js:55:3)
+    at Timeout._onTimeout (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\jsdom\lib\jsdom\living\nodes\HTMLHyperlinkElementUtils-impl.js:81:7)
+    at listOnTimeout (node:internal/timers:608:17)
+    at processTimers (node:internal/timers:543:7) undefined
+
+stderr | test/gc-breadcrumbs.test.ts > GC Breadcrumbs > Accessibility > passes aXe accessibility audit
+Error: Not implemented: HTMLCanvasElement.prototype.getContext (without installing the canvas npm package)
+    at module.exports (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLCanvasElementImpl.getContext (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\jsdom\lib\jsdom\living\nodes\HTMLCanvasElement-impl.js:42:5)
+    at HTMLCanvasElement.getContext (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\jsdom\lib\jsdom\living\generated\HTMLCanvasElement.js:131:58)
+    at C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\axe-core\axe.min.js:12:236566
+    at Object.get (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\axe-core\axe.min.js:12:163282)
+    at Lc (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\axe-core\axe.min.js:12:236495)
+    at C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\axe-core\axe.min.js:12:422992
+    at Array.some (<anonymous>)
+    at z0.color-contrast-matches [as matches] (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\axe-core\axe.min.js:12:422940)
+    at C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\axe-core\axe.min.js:12:444791 undefined
+
+ [33mΓ¥»[39m src/components/gc-report-problem/test/gc-report-problem.test.ts [2m ([22m[2m50 tests[22m [2m|[22m [31m5 failed[39m[2m)[22m[33m 910[2mms[22m[39m
+[31m   [33mΓ¥»[31m src/components/gc-report-problem/test/gc-report-problem.test.ts[2m > [22mGCReportProblem[2m > [22mForm Rendering[2m > [22mrenders heading[39m
+[31m     ΓåÆ expected 'reportProblem.heading' to not equal 'reportProblem.heading'[39m
+[31m   [33mΓ¥»[31m src/components/gc-report-problem/test/gc-report-problem.test.ts[2m > [22mGCReportProblem[2m > [22mForm Rendering[2m > [22mrenders intro text[39m
+[31m     ΓåÆ expected 'reportProblem.intro' to not equal 'reportProblem.intro'[39m
+[31m   [33mΓ¥»[31m src/components/gc-report-problem/test/gc-report-problem.test.ts[2m > [22mGCReportProblem[2m > [22mForm Rendering[2m > [22mrenders privacy note[39m
+[31m     ΓåÆ expected 'reportProblem.privacyNote' to not equal 'reportProblem.privacyNote'[39m
+[31m   [33mΓ¥»[31m src/components/gc-report-problem/test/gc-report-problem.test.ts[2m > [22mGCReportProblem[2m > [22mBilingual Support[2m > [22mdisplays English labels when lang="en-CA"[39m
+[31m     ΓåÆ expected 'reportProblem.heading' to not equal 'reportProblem.heading'[39m
+[31m   [33mΓ¥»[31m src/components/gc-report-problem/test/gc-report-problem.test.ts[2m > [22mGCReportProblem[2m > [22mBilingual Support[2m > [22mdisplays French labels when lang="fr-CA"[39m
+[31m     ΓåÆ expected 'reportProblem.heading' to not equal 'reportProblem.heading'[39m
+ [32mΓ£ô[39m test/gc-pagination.test.ts [2m ([22m[2m47 tests[22m[2m)[22m[33m 933[2mms[22m[39m
+ [32mΓ£ô[39m test/gc-breadcrumbs.test.ts [2m ([22m[2m54 tests[22m[2m)[22m[33m 1061[2mms[22m[39m
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ [32mΓ£ô[39m test/gc-signature.test.ts [2m ([22m[2m44 tests[22m[2m)[22m[90m 221[2mms[22m[39m
+stderr | VirtualConsole.<anonymous> (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\jsdom\lib\jsdom\virtual-console.js:29:45)
+Error: Not implemented: navigation (except hash changes)
+    at module.exports (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at navigateFetch (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\jsdom\lib\jsdom\living\window\navigation.js:77:3)
+    at exports.navigate (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\jsdom\lib\jsdom\living\window\navigation.js:55:3)
+    at Timeout._onTimeout (C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\jsdom\lib\jsdom\living\nodes\HTMLHyperlinkElementUtils-impl.js:81:7)
+    at listOnTimeout (node:internal/timers:608:17)
+    at processTimers (node:internal/timers:543:7) undefined
+
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ [32mΓ£ô[39m src/components/gc-page-details/test/gc-page-details.test.ts [2m ([22m[2m38 tests[22m[2m)[22m[33m 337[2mms[22m[39m
+ [32mΓ£ô[39m src/components/gc-date-modified/test/gc-date-modified.test.ts [2m ([22m[2m36 tests[22m[2m)[22m[90m 177[2mms[22m[39m
+ [32mΓ£ô[39m src/components/eva-chat-panel.test.ts [2m ([22m[2m30 tests[22m[2m)[22m[90m 171[2mms[22m[39m
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ [32mΓ£ô[39m src/components/eva-modal.test.ts [2m ([22m[2m24 tests[22m[2m)[22m[90m 170[2mms[22m[39m
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ [32mΓ£ô[39m src/components/eva-button.test.ts [2m ([22m[2m36 tests[22m[2m)[22m[90m 211[2mms[22m[39m
+ [32mΓ£ô[39m src/components/eva-select.test.ts [2m ([22m[2m19 tests[22m[2m)[22m[90m 141[2mms[22m[39m
+ [32mΓ£ô[39m src/components/eva-checkbox.test.ts [2m ([22m[2m20 tests[22m[2m)[22m[90m 123[2mms[22m[39m
+ [32mΓ£ô[39m src/components/gc-share/test/gc-share.test.ts [2m ([22m[2m39 tests[22m[2m)[22m[33m 721[2mms[22m[39m
+stderr | src/components/eva-tabs.test.ts > eva-tabs > Initialization > should create tabs element
+Element eva-tabs scheduled an update (generally because a property was set) after an update completed, causing a new update to be scheduled. This is inefficient and should be avoided unless the next update can only be scheduled as a side effect of the previous update. See https://lit.dev/msg/change-in-update for more information.
+
+ [32mΓ£ô[39m src/components/eva-tabs.test.ts [2m ([22m[2m22 tests[22m[2m)[22m[90m 209[2mms[22m[39m
+ [32mΓ£ô[39m src/components/eva-input.test.ts [2m ([22m[2m26 tests[22m[2m)[22m[90m 159[2mms[22m[39m
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ [32mΓ£ô[39m src/components/eva-radio.test.ts [2m ([22m[2m17 tests[22m[2m)[22m[90m 104[2mms[22m[39m
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ [32mΓ£ô[39m src/components/EVAElement.test.ts [2m ([22m[2m21 tests[22m[2m)[22m[90m 34[2mms[22m[39m
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+stderr | issueWarning (file:\C:\Users\marco\Documents\_AI%20Dev\EVA%20Suite\EVA-Sovereign-UI\node_modules\lit-html\node\development\lit-html.js:42:21)
+Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+
+(node:42468) [DEP0151] DeprecationWarning: No "main" or "exports" field defined in the package.json for C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\semantic-dom-diff\ resolving the main entry point "index.js", imported from C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\node_modules\@open-wc\testing\register-chai-plugins.js.
+Default "index" lookups for the main are deprecated for ES modules.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ [32mΓ£ô[39m src/components/eva-alert.test.ts [2m ([22m[2m12 tests[22m[2m)[22m[90m 50[2mms[22m[39m
+ [32mΓ£ô[39m src/components/eva-card.test.ts [2m ([22m[2m17 tests[22m[2m)[22m[90m 60[2mms[22m[39m
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ» Failed Tests 7 ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+
+ FAIL  src/components/gc-page-navigation/test/gc-page-navigation.test.ts > GCPageNavigation > Bilingual Support > displays English labels when lang="en-CA"
+AssertionError: expected 'pageNav.previous' to not equal 'pageNav.previous'
+ Γ¥» src/components/gc-page-navigation/test/gc-page-navigation.test.ts:365:41
+    363|       const label = el.shadowRoot!.querySelector('.nav-label');
+    364|       expect(label).to.exist;
+    365|       expect(label!.textContent).to.not.equal('pageNav.previous');
+       |                                         ^
+    366|     });
+    367| 
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[1/7]ΓÄ»
+
+ FAIL  src/components/gc-page-navigation/test/gc-page-navigation.test.ts > GCPageNavigation > Bilingual Support > displays French labels when lang="fr-CA"
+AssertionError: expected 'pageNav.next' to not equal 'pageNav.next'
+ Γ¥» src/components/gc-page-navigation/test/gc-page-navigation.test.ts:379:41
+    377|       const label = el.shadowRoot!.querySelector('.nav-label');
+    378|       expect(label).to.exist;
+    379|       expect(label!.textContent).to.not.equal('pageNav.next');
+       |                                         ^
+    380|     });
+    381|   });
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[2/7]ΓÄ»
+
+ FAIL  src/components/gc-report-problem/test/gc-report-problem.test.ts > GCReportProblem > Form Rendering > renders heading
+AssertionError: expected 'reportProblem.heading' to not equal 'reportProblem.heading'
+ Γ¥» src/components/gc-report-problem/test/gc-report-problem.test.ts:67:43
+     65|       const heading = el.shadowRoot!.querySelector('.heading');
+     66|       expect(heading).to.exist;
+     67|       expect(heading!.textContent).to.not.equal('reportProblem.headingΓÇª
+       |                                           ^
+     68|     });
+     69| 
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[3/7]ΓÄ»
+
+ FAIL  src/components/gc-report-problem/test/gc-report-problem.test.ts > GCReportProblem > Form Rendering > renders intro text
+AssertionError: expected 'reportProblem.intro' to not equal 'reportProblem.intro'
+ Γ¥» src/components/gc-report-problem/test/gc-report-problem.test.ts:76:41
+     74|       const intro = el.shadowRoot!.querySelector('.intro');
+     75|       expect(intro).to.exist;
+     76|       expect(intro!.textContent).to.not.equal('reportProblem.intro');
+       |                                         ^
+     77|     });
+     78| 
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[4/7]ΓÄ»
+
+ FAIL  src/components/gc-report-problem/test/gc-report-problem.test.ts > GCReportProblem > Form Rendering > renders privacy note
+AssertionError: expected 'reportProblem.privacyNote' to not equal 'reportProblem.privacyNote'
+ Γ¥» src/components/gc-report-problem/test/gc-report-problem.test.ts:113:47
+    111|       const privacyNote = el.shadowRoot!.querySelector('.privacy-note'ΓÇª
+    112|       expect(privacyNote).to.exist;
+    113|       expect(privacyNote!.textContent).to.not.equal('reportProblem.priΓÇª
+       |                                               ^
+    114|     });
+    115|   });
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[5/7]ΓÄ»
+
+ FAIL  src/components/gc-report-problem/test/gc-report-problem.test.ts > GCReportProblem > Bilingual Support > displays English labels when lang="en-CA"
+AssertionError: expected 'reportProblem.heading' to not equal 'reportProblem.heading'
+ Γ¥» src/components/gc-report-problem/test/gc-report-problem.test.ts:562:43
+    560|       const heading = el.shadowRoot!.querySelector('.heading');
+    561|       expect(heading).to.exist;
+    562|       expect(heading!.textContent).to.not.equal('reportProblem.headingΓÇª
+       |                                           ^
+    563|     });
+    564| 
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[6/7]ΓÄ»
+
+ FAIL  src/components/gc-report-problem/test/gc-report-problem.test.ts > GCReportProblem > Bilingual Support > displays French labels when lang="fr-CA"
+AssertionError: expected 'reportProblem.heading' to not equal 'reportProblem.heading'
+ Γ¥» src/components/gc-report-problem/test/gc-report-problem.test.ts:571:43
+    569|       const heading = el.shadowRoot!.querySelector('.heading');
+    570|       expect(heading).to.exist;
+    571|       expect(heading!.textContent).to.not.equal('reportProblem.headingΓÇª
+       |                                           ^
+    572|     });
+    573|   });
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[7/7]ΓÄ»
+
+[2m Test Files [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m24 passed[39m[22m[90m (26)[39m
+[2m      Tests [22m [1m[31m7 failed[39m[22m[2m | [22m[1m[32m927 passed[39m[22m[90m (934)[39m
+[2m   Start at [22m 19:38:07
+[2m   Duration [22m 21.21s[2m (transform 2.27s, setup 38.57s, collect 9.51s, tests 11.11s, environment 117.24s, prepare 17.83s)[22m
+
+npm error Lifecycle script `test` failed with error:
+npm error code 1
+npm error path C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\packages\web-components
+npm error workspace @eva-sovereign/web-components@1.0.0
+npm error location C:\Users\marco\Documents\_AI Dev\EVA Suite\EVA-Sovereign-UI\packages\web-components
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c vitest --run

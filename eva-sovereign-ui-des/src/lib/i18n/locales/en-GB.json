@@ -1,0 +1,85 @@
+{
+  "esdc": {
+    "title": "Department for Work and Pensions",
+    "titleShort": "DWP",
+    "hero": {
+      "title": "Building a skilled, adaptable, and inclusive workforce",
+      "description": "Access employment services, benefits, and support programmes that help citizens succeed"
+    },
+    "programs": {
+      "title": "Programmes and Services",
+      "ei": {
+        "title": "Universal Credit",
+        "titleShort": "UC",
+        "description": "Financial support if you're on a low income or out of work",
+        "details": "Universal Credit is a payment to help with your living costs. It's paid monthly - or twice a month for some people in Scotland."
+      },
+      "oas": {
+        "title": "State Pension",
+        "titleShort": "SP",
+        "description": "Regular payment from the government when you reach State Pension age",
+        "details": "The State Pension is a regular payment from the government most people can claim when they reach State Pension age."
+      },
+      "cpp": {
+        "title": "Pension Credit",
+        "titleShort": "PC",
+        "description": "Extra money for pensioners on a low income",
+        "details": "Pension Credit gives you extra money to help with your living costs if you're over State Pension age and on a low income."
+      }
+    },
+    "services": {
+      "jobSearch": {
+        "title": "Find a Job",
+        "description": "Search and apply for jobs across the United Kingdom",
+        "details": "Find a job is a service from the Department for Work and Pensions. Search thousands of jobs and apply online."
+      },
+      "benefitsFinder": {
+        "title": "Benefits Calculator",
+        "description": "Work out what benefits you could get",
+        "details": "Use an independent benefits calculator to check what benefits you could get."
+      }
+    }
+  },
+  "chat": {
+    "title": "Ask EVA",
+    "subtitle": "Employment Virtual Assistant",
+    "placeholder": "How can I help you today?",
+    "send": "Send",
+    "voice": "Voice input",
+    "thinking": "EVA is thinking...",
+    "suggestedTopics": "Suggested topics:",
+    "topics": {
+      "ei": "Universal Credit",
+      "oas": "State Pension",
+      "cpp": "Pension Credit",
+      "jobs": "Finding a job"
+    }
+  },
+  "navigation": {
+    "skipToMain": "Skip to main content",
+    "home": "Home",
+    "programs": "Programmes",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© Crown copyright",
+    "privacy": "Privacy",
+    "terms": "Terms and conditions",
+    "accessibility": "Accessibility",
+    "canada": "GOV.UK"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "apply": "Apply now",
+    "english": "English",
+    "french": "Français",
+    "spanish": "Español",
+    "italian": "Italiano",
+    "german": "Deutsch",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "close": "Close"
+  }
+}

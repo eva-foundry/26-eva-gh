@@ -1,0 +1,85 @@
+{
+  "esdc": {
+    "title": "Occupazione e Sviluppo Sociale del Canada",
+    "titleShort": "ESDC",
+    "hero": {
+      "title": "Costruire una forza lavoro qualificata, adattabile e inclusiva",
+      "description": "Accedi ai servizi per l'impiego, ai benefici e ai programmi di supporto che aiutano i canadesi ad avere successo"
+    },
+    "programs": {
+      "title": "Programmi e Servizi",
+      "ei": {
+        "title": "Assicurazione per l'Occupazione",
+        "titleShort": "EI",
+        "description": "Assistenza finanziaria temporanea mentre cerchi lavoro o migliori le tue competenze",
+        "details": "L'Assicurazione per l'Occupazione (EI) fornisce supporto temporaneo al reddito ai canadesi disoccupati mentre cercano lavoro o migliorano le loro competenze. I benefici regolari sono disponibili per le persone che perdono il lavoro senza colpa propria e hanno accumulato abbastanza ore assicurabili."
+      },
+      "oas": {
+        "title": "Sicurezza per la Vecchiaia",
+        "titleShort": "OAS",
+        "description": "Pagamento mensile per anziani di 65 anni o più",
+        "details": "La Sicurezza per la Vecchiaia (OAS) è un pagamento mensile disponibile per la maggior parte dei canadesi di 65 anni o più. Non è necessario aver lavorato per ricevere OAS. L'importo che ricevi dipende da quanto tempo hai vissuto in Canada dopo i 18 anni."
+      },
+      "cpp": {
+        "title": "Piano Pensionistico del Canada",
+        "titleShort": "CPP",
+        "description": "Programma pensionistico contributivo per lavoratori canadesi",
+        "details": "Il Piano Pensionistico del Canada (CPP) è un programma di assicurazione sociale contributivo basato sui guadagni. Costituisce una parte del sistema di reddito pensionistico del Canada. CPP fornisce benefici di base per pensionamento, disabilità e superstiti."
+      }
+    },
+    "services": {
+      "jobSearch": {
+        "title": "Ricerca Lavoro",
+        "description": "Trova opportunità di lavoro in tutto il Canada con Job Bank",
+        "details": "Job Bank è il servizio nazionale per l'occupazione del Canada. Cerca migliaia di lavori, esplora le tendenze del mercato del lavoro e accedi agli strumenti di pianificazione della carriera per aiutarti a trovare la tua prossima opportunità."
+      },
+      "benefitsFinder": {
+        "title": "Trova Benefici",
+        "description": "Scopri quali benefici e servizi governativi potresti essere idoneo a ricevere",
+        "details": "Rispondi ad alcune semplici domande per ottenere un elenco personalizzato di benefici e servizi federali, provinciali e territoriali per i quali potresti essere idoneo."
+      }
+    }
+  },
+  "chat": {
+    "title": "Chiedi a EVA",
+    "subtitle": "Assistente Virtuale per l'Occupazione",
+    "placeholder": "Come posso aiutarti oggi?",
+    "send": "Invia",
+    "voice": "Input vocale",
+    "thinking": "EVA sta pensando...",
+    "suggestedTopics": "Argomenti suggeriti:",
+    "topics": {
+      "ei": "Assicurazione per l'Occupazione",
+      "oas": "Sicurezza per la Vecchiaia",
+      "cpp": "Piano Pensionistico del Canada",
+      "jobs": "Trovare un lavoro"
+    }
+  },
+  "navigation": {
+    "skipToMain": "Vai al contenuto principale",
+    "home": "Home",
+    "programs": "Programmi",
+    "services": "Servizi",
+    "about": "Informazioni",
+    "contact": "Contatto"
+  },
+  "footer": {
+    "copyright": "© Repubblica Italiana",
+    "privacy": "Privacy",
+    "terms": "Termini e condizioni",
+    "accessibility": "Accessibilità",
+    "canada": "Italia.it"
+  },
+  "common": {
+    "learnMore": "Scopri di più",
+    "apply": "Applica ora",
+    "english": "English",
+    "french": "Français",
+    "spanish": "Español",
+    "italian": "Italiano",
+    "german": "Deutsch",
+    "loading": "Caricamento...",
+    "error": "Si è verificato un errore",
+    "close": "Chiudi"
+  }
+}

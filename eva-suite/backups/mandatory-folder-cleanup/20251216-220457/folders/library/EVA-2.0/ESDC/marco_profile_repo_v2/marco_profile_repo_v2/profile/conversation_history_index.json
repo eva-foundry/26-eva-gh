@@ -1,0 +1,88 @@
+{
+  "conversation_history_index": {
+    "note": "High-level index of major themes across ChatGPT conversations with Marco.",
+    "entries": [
+      {
+        "period": "2024-09 to 2024-10",
+        "themes": [
+          "Early EVA vision and business case.",
+          "EVA Chat vs EVA Domain Assistant definitions.",
+          "Women in the Bible (Old and New Testament)."
+        ]
+      },
+      {
+        "period": "2024-10 to 2025-02",
+        "themes": [
+          "Risk and impact assessment for EVA DA (Protected B).",
+          "Relationship letters using biblical references.",
+          "Keto, fasting, and health questions.",
+          "Early gardening and home-project planning."
+        ]
+      },
+      {
+        "period": "2025-03",
+        "themes": [
+          "Advanced RAG use cases (translation, risk analysis, document workflows).",
+          "Idea to rebuild MS PubSec Info Assistant UI with accessible React interface.",
+          "AI Software Proposal Self-Assessment and risk matrix.",
+          "IITB Retooling Program concept."
+        ]
+      },
+      {
+        "period": "2025-04",
+        "themes": [
+          "Jurisprudence and AssistMe integration strategies.",
+          "EVA as a faceless AI platform.",
+          "AI governance narrative (accountable access).",
+          "Accessibility & Personalization Library concept."
+        ]
+      },
+      {
+        "period": "2025-05",
+        "themes": [
+          "EVA Work Plan and multi-stream portfolio.",
+          "APIM cost attribution demo and policies.",
+          "AI COE intake and ITIL-inspired operations.",
+          "MCP interest and mainframe analogies."
+        ]
+      },
+      {
+        "period": "2025-06",
+        "themes": [
+          "EVA Dev Sandbox packaging idea.",
+          "Jurisprudence and AssistMe next steps.",
+          "Gardening and indoor grow experiments.",
+          "AI literacy and awareness content."
+        ]
+      },
+      {
+        "period": "2025-07",
+        "themes": [
+          "Microsoft / Deloitte / Accenture / BDM workshop – EVA + IIAID dual-trunk architecture.",
+          "Budget 2025 context for AI initiatives.",
+          "Patio restoration details.",
+          "More APIM troubleshooting."
+        ]
+      },
+      {
+        "period": "2025-08 to 2025-10",
+        "themes": [
+          "GitHub vs Visual Studio workflows.",
+          "Docker/WSL and Cosmos DB emulator experiments.",
+          "Vite + React + Tailwind setup and EVA DA mock UI.",
+          "Project Registry data model and RAG chunking lab UI."
+        ]
+      },
+      {
+        "period": "2025-11 (recent)",
+        "themes": [
+          "EVA Suite 2.0 narrative (orchestrator, infra, core, auth, agent, openai, rag, api, mcp, safety, metering, ops, ui, i18n, i11y, seed, enterprise).",
+          "PowerShell scaffolding for GitHub repos.",
+          "RAG complexity levels and EVA vs Copilot vs MS Info Assistant comparisons.",
+          "Upcoming fasting week with partner.",
+          "This profile/export exercise."
+        ]
+      }
+    ]
+  }
+}

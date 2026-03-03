@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-os-app-integrations.md",
+  "feature_key": "P02-AUTO-1b29c66a",
+  "title": "CDD: EVA OS App Integrations",
+  "p02_artifacts_path": "docs/features/eva-os-app-integrations",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-os-app-integrations",
+  "created_timestamp": "2025-11-25T23:54:40.9360083Z"
+}

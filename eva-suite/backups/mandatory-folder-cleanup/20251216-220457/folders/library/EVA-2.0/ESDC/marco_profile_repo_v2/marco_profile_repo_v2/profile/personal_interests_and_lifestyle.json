@@ -1,0 +1,80 @@
+{
+  "personal_profile": {
+    "relationships": {
+      "partner": {
+        "description": "Chinese girlfriend; both in 60s; active relationship in adaptation phase.",
+        "shared_activities": [
+          "Cycling",
+          "Snowboarding",
+          "Short field trips",
+          "Occasional car-camping"
+        ],
+        "themes": [
+          "Communication and expectations.",
+          "Balancing support with respect for experience and autonomy."
+        ]
+      }
+    },
+    "health_and_wellbeing": {
+      "fitness": [
+        "Long history in CrossFit (especially gymnastics and Olympic lifting).",
+        "Currently focused on yoga, stretching, and antagonist muscle work.",
+        "Goals include firefly pose and press to handstand, with emphasis on compression strength."
+      ],
+      "fasting": [
+        "1–2 extended fasts per year (5–7 days; max 11 days so far).",
+        "Uses salt-water gut flush before fasts.",
+        "Interested in Atkinson-style protocols and safe refeeding."
+      ],
+      "nutrition": {
+        "style": "Keto-oriented (high fat, low carb, moderate protein).",
+        "typical_meals": {
+          "breakfast": "2 slices of bacon and 2 eggs, or just bacon.",
+          "lunch": "Can of tuna in water with some carbs (moving toward lower-carb variants).",
+          "dinner": "Legume and vegetable soup; roasted pork or beef weekly."
+        },
+        "snacks": [
+          "Almonds, pistachios, cashews",
+          "Chocolate (moderation)",
+          "Butter, coconut oil, olive oil, sesame oil",
+          "Chia seeds, avocado snacks",
+          "Dried figs and dates (carb-conscious)"
+        ]
+      }
+    },
+    "intellectual_and_spiritual_interests": {
+      "bible_study": "Focused on women in the Bible (OT to NT), using scripture to reflect on relationships and values.",
+      "philosophy_of_mind_and_language": [
+        "Language of Thought hypothesis",
+        "Linguistic determinism and relativity",
+        "Chomsky’s innateness",
+        "Theory of mind and neural correlates of language"
+      ],
+      "chinese_language_and_culture": [
+        "Learning Mandarin with LingLing Beginner Bundle.",
+        "Curious about Mandarin vs Cantonese (tones, writing, culture)."
+      ]
+    },
+    "hobbies_and_projects": {
+      "gardening_and_food_forest": [
+        "Kiwi (2 female, 1 male) and grapes on 8-foot pergola.",
+        "Raspberries, strawberries, goji berries, ground cherries.",
+        "Raised bed with 10+ herbs ('petri dish' experiment)."
+      ],
+      "diy_and_home_projects": [
+        "Paver patio restoration (16x16 pavers, 6x10 grid).",
+        "Future shed floor/foundation rebuild (2x6m).",
+        "Enjoys tools (miter saw, circular saw, jig saw, table saw, Ryobi nailer).",
+        "Self-aware about challenges with fine precision work."
+      ],
+      "indoor_growing": [
+        "VIVOSUN VS1000 LED and Barrina T5 lights in 3-tier reflective nursery.",
+        "Cannabis, lavender, tomatoes, and seedlings.",
+        "Curiosity-driven horticulture experiment."
+      ],
+      "cooking_and_hosting": [
+        "Enjoys cooking thoughtful meals (e.g., lasagna primavera with custom sauce and vegetables)."
+      ]
+    }
+  }
+}

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVA-Sovereign-UI Demo | Government of Canada Design System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      padding: 2rem;
+      line-height: 1.5;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-bottom: 4px solid #af3c43;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-family: 'Lato', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #284162;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 1.125rem;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section {
+      background-color: #ffffff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #284162;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e1e4e7;
+      padding-bottom: 0.5rem;
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .demo-item {
+      padding: 1rem;
+      border: 1px solid #e1e4e7;
+      border-radius: 0.25rem;
+    }
+
+    .demo-item h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #666;
+    }
+
+    .language-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .wcag-badge {
+      display: inline-block;
+      background-color: #278400;
+      color: #ffffff;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      margin-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-toggle">
+    <h3 style="margin-bottom: 0.5rem; font-size: 0.875rem;">Language / Langue</h3>
+    <eva-button variant="secondary" size="small" id="toggleEnBtn">EN</eva-button>
+    <eva-button variant="secondary" size="small" id="toggleFrBtn">FR</eva-button>
+  </div>
+
+  <header>
+    <h1>EVA-Sovereign-UI Demo <span class="wcag-badge">WCAG 2.2 AAA</span></h1>
+    <p class="subtitle">Government of Canada Design System Web Components</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>EVA Button - 6 Variants</h2>
+      <div class="demo-grid">
+        <div class="demo-item">
+          <h3>Supertask (Most Prominent)</h3>
+          <eva-button variant="supertask">Apply Now</eva-button>
+        </div>
+        <div class="demo-item">
+          <h3>Primary (Default)</h3>
+          <eva-button variant="primary">Submit Form</eva-button>
+        </div>
+        <div class="demo-item">
+          <h3>Secondary</h3>
+          <eva-button variant="secondary">Cancel</eva-button>
+        </div>
+        <div class="demo-item">
+          <h3>Danger (Destructive)</h3>
+          <eva-button variant="danger">Delete Account</eva-button>
+        </div>
+        <div class="demo-item">
+          <h3>Link (Hyperlink Style)</h3>
+          <eva-button variant="link">Learn More</eva-button>
+        </div>
+        <div class="demo-item">
+          <h3>Contextual Sign-in</h3>
+          <eva-button variant="contextual-signin">Sign In</eva-button>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <h3 style="margin-bottom: 1rem;">Button Sizes</h3>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <eva-button variant="primary" size="small">Small</eva-button>
+          <eva-button variant="primary" size="medium">Medium (Default)</eva-button>
+          <eva-button variant="primary" size="large">Large</eva-button>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <h3 style="margin-bottom: 1rem;">Disabled State</h3>
+        <eva-button variant="primary" disabled>Disabled Button</eva-button>
+      </div>
+    </section>
+
+    <section>
+      <h2>EVA Alert - 4 Types</h2>
+      <eva-alert type="success" dismissible>
+        <strong slot="title">Success!</strong>
+        Your application has been submitted successfully.
+      </eva-alert>
+
+      <eva-alert type="info" dismissible>
+        <strong slot="title">Information</strong>
+        You have 5 unread messages in your inbox.
+      </eva-alert>
+
+      <eva-alert type="warning" dismissible>
+        <strong slot="title">Warning</strong>
+        Your session will expire in 5 minutes. Please save your work.
+      </eva-alert>
+
+      <eva-alert type="danger" dismissible>
+        <strong slot="title">Error</strong>
+        There was an error processing your request. Please try again.
+      </eva-alert>
+    </section>
+
+    <section>
+      <h2>EVA Card - Content Containers</h2>
+      <div class="demo-grid">
+        <eva-card variant="default">
+          <h3 slot="header">Default Card</h3>
+          <p>This is a default card with no border or shadow. Simple and clean.</p>
+          <div slot="footer">
+            <eva-button variant="link">Read More</eva-button>
+          </div>
+        </eva-card>
+
+        <eva-card variant="bordered">
+          <h3 slot="header">Bordered Card</h3>
+          <p>This card has a border for better visual separation.</p>
+          <div slot="footer">
+            <eva-button variant="link">Read More</eva-button>
+          </div>
+        </eva-card>
+
+        <eva-card variant="elevated">
+          <h3 slot="header">Elevated Card</h3>
+          <p>This card has a shadow for a floating appearance.</p>
+          <div slot="footer">
+            <eva-button variant="link">Read More</eva-button>
+          </div>
+        </eva-card>
+      </div>
+    </section>
+
+    <section>
+      <h2>Form Components</h2>
+
+      <div class="component-section">
+        <h3>Text Input</h3>
+        <div class="button-grid">
+          <eva-input
+            label="Full Name"
+            placeholder="Enter your name"
+            hint="First and last name required"
+          ></eva-input>
+
+          <eva-input
+            label="Email Address"
+            type="email"
+            required
+            placeholder="you@example.com"
+          ></eva-input>
+
+          <eva-input
+            label="Password"
+            type="password"
+            required
+            maxlength="20"
+          ></eva-input>
+
+          <eva-input
+            label="Phone Number"
+            type="tel"
+            error="Invalid phone number format"
+            value="123-456"
+          ></eva-input>
+        </div>
+      </div>
+
+      <div class="component-section">
+        <h3>Select Dropdown</h3>
+        <div class="button-grid">
+          <eva-select
+            label="Province"
+            placeholder="Select your province"
+            required
+          >
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NL">Newfoundland and Labrador</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="ON">Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+          </eva-select>
+
+          <eva-select
+            label="Language"
+            hint="Select your preferred language"
+          >
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+          </eva-select>
+
+          <eva-select
+            label="Department"
+            error="Please select a department"
+          >
+            <option value="">Select...</option>
+            <option value="it">Information Technology</option>
+            <option value="hr">Human Resources</option>
+            <option value="finance">Finance</option>
+          </eva-select>
+        </div>
+      </div>
+
+      <div class="component-section">
+        <h3>Checkbox</h3>
+        <div class="button-grid">
+          <eva-checkbox checked>I agree to the terms and conditions</eva-checkbox>
+          <eva-checkbox>Subscribe to newsletter</eva-checkbox>
+          <eva-checkbox disabled>This option is disabled</eva-checkbox>
+          <eva-checkbox checked disabled>Checked and disabled</eva-checkbox>
+        </div>
+      </div>
+
+      <div class="component-section">
+        <h3>Radio Buttons</h3>
+        <div class="button-grid">
+          <eva-radio name="gender" value="male" checked>Male</eva-radio>
+          <eva-radio name="gender" value="female">Female</eva-radio>
+          <eva-radio name="gender" value="other">Other</eva-radio>
+          <eva-radio name="gender" value="prefer-not-to-say">Prefer not to say</eva-radio>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Modal Dialog</h2>
+      <div class="component-section">
+        <eva-button variant="primary" id="openModal">Open Modal</eva-button>
+        
+        <eva-modal id="demoModal" size="medium">
+          <h2 slot="header">Example Modal</h2>
+          <p>This is a modal dialog with GC Design System styling.</p>
+          <p>It includes:</p>
+          <ul>
+            <li>Focus trap (keyboard navigation contained)</li>
+            <li>Escape key to close</li>
+            <li>Backdrop click to close</li>
+            <li>ARIA dialog role for screen readers</li>
+          </ul>
+          <div slot="footer">
+            <eva-button variant="secondary" id="closeModal">Close</eva-button>
+            <eva-button variant="primary">Confirm</eva-button>
+          </div>
+        </eva-modal>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tabs Navigation</h2>
+      <div class="component-section">
+        <eva-tabs>
+          <eva-tab label="Overview">
+            <h3>Overview</h3>
+            <p>This is the overview tab content. Tabs support keyboard navigation with arrow keys.</p>
+          </eva-tab>
+          <eva-tab label="Details">
+            <h3>Details</h3>
+            <p>This is the details tab. Press Left/Right arrows to navigate between tabs.</p>
+          </eva-tab>
+          <eva-tab label="Settings">
+            <h3>Settings</h3>
+            <p>This is the settings tab. Press Home/End to jump to first/last tab.</p>
+          </eva-tab>
+        </eva-tabs>
+      </div>
+    </section>
+
+    <section>
+      <h2>EVA Chat Panel</h2>
+      <p style="margin-bottom: 1.5rem;">
+        Signature component for EVA Suite - Production-ready RAG chatbot UI with bilingual support.
+      </p>
+      <eva-chat-panel
+        id="chatPanel"
+        greeting="Hello! I'm EVA, your Government of Canada assistant. How can I help you today?"
+      ></eva-chat-panel>
+    </section>
+
+    <section>
+      <h2>Accessibility Features</h2>
+      <ul style="list-style: disc; margin-left: 2rem; line-height: 2;">
+        <li><strong>WCAG 2.2 AAA Compliant:</strong> 7:1 contrast ratios, 44px touch targets</li>
+        <li><strong>Keyboard Navigation:</strong> All components fully keyboard accessible (Tab, Enter, Esc)</li>
+        <li><strong>Screen Reader Support:</strong> ARIA labels, live regions, semantic HTML</li>
+        <li><strong>Focus Management:</strong> Visible 3px focus outlines</li>
+        <li><strong>High Contrast Mode:</strong> Windows High Contrast Mode supported</li>
+        <li><strong>Reduced Motion:</strong> Respects prefers-reduced-motion</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Bilingual Support (EN-CA / FR-CA)</h2>
+      <p>All components support English and French. Use the language toggle in the top-right corner to switch languages.</p>
+      <p style="margin-top: 1rem;"><strong>Current Locale:</strong> <span id="currentLocale">en-CA</span></p>
+    </section>
+  </main>
+
+  <script type="module">
+    // Import EVA components
+    import { setGlobalLocale, getGlobalLocale } from './src/index.js';
+
+    // Language toggle buttons
+    const toggleEnBtn = document.getElementById('toggleEnBtn');
+    const toggleFrBtn = document.getElementById('toggleFrBtn');
+    const currentLocaleSpan = document.getElementById('currentLocale');
+
+    toggleEnBtn.addEventListener('click', () => {
+      setGlobalLocale('en-CA');
+      currentLocaleSpan.textContent = 'en-CA';
+      document.documentElement.lang = 'en-CA';
+    });
+
+    toggleFrBtn.addEventListener('click', () => {
+      setGlobalLocale('fr-CA');
+      currentLocaleSpan.textContent = 'fr-CA';
+      document.documentElement.lang = 'fr-CA';
+    });
+
+    // Initialize with system locale
+    const initialLocale = getGlobalLocale();
+    currentLocaleSpan.textContent = initialLocale;
+    document.documentElement.lang = initialLocale;
+
+    // Modal event handlers
+    const openModalBtn = document.getElementById('openModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const demoModal = document.getElementById('demoModal');
+
+    openModalBtn.addEventListener('click', () => {
+      demoModal.open = true;
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      demoModal.open = false;
+    });
+
+    // Chat panel demo
+    const chatPanel = document.getElementById('chatPanel');
+    
+    chatPanel.addEventListener('eva-message-send', (event) => {
+      const userMessage = event.detail.message;
+      console.log('User sent:', userMessage);
+
+      // Simulate typing indicator
+      chatPanel.isTyping = true;
+
+      // Simulate assistant response after 1.5 seconds
+      setTimeout(() => {
+        chatPanel.isTyping = false;
+        
+        // Mock responses based on user input
+        const lowerContent = userMessage.content.toLowerCase();
+        let response = '';
+
+        if (lowerContent.includes('hello') || lowerContent.includes('hi') || lowerContent.includes('bonjour')) {
+          response = currentLocaleSpan.textContent === 'fr-CA'
+            ? 'Bonjour! Comment puis-je vous aider aujourd\'hui?'
+            : 'Hello! How can I assist you today?';
+        } else if (lowerContent.includes('help') || lowerContent.includes('aide')) {
+          response = currentLocaleSpan.textContent === 'fr-CA'
+            ? 'Je peux vous aider avec des informations sur les services du gouvernement du Canada, les formulaires, les demandes de prestations et plus encore.'
+            : 'I can help you with information about Government of Canada services, forms, benefit applications, and more.';
+        } else if (lowerContent.includes('language') || lowerContent.includes('langue')) {
+          response = currentLocaleSpan.textContent === 'fr-CA'
+            ? 'Vous pouvez changer la langue en utilisant les boutons EN/FR en haut à droite.'
+            : 'You can change the language using the EN/FR buttons in the top right corner.';
+        } else {
+          response = currentLocaleSpan.textContent === 'fr-CA'
+            ? `Merci pour votre message: "${userMessage.content}". Je suis un assistant de démonstration. Dans un environnement de production, je serais connecté à un backend RAG pour fournir des réponses basées sur les connaissances.`
+            : `Thank you for your message: "${userMessage.content}". I'm a demo assistant. In production, I would be connected to a RAG backend to provide knowledge-based answers.`;
+        }
+
+        chatPanel.addMessage({
+          sender: 'assistant',
+          content: response,
+          type: 'text',
+        });
+      }, 1500);
+    });
+
+    console.log('EVA-Sovereign-UI Demo Loaded');
+    console.log('Current Locale:', getGlobalLocale());
+  </script>
+</body>
+</html>

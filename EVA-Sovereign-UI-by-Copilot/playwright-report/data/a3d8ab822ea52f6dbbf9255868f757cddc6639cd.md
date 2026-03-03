@@ -1,0 +1,125 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - heading "EVA GC Button Component Enhanced" [level=1] [ref=e3]:
+    - text: EVA GC Button Component
+    - generic [ref=e4]: Enhanced
+  - paragraph [ref=e5]: Now featuring Spark's beautiful design with oklch() colors, smooth transitions, and modern shadows
+  - generic [ref=e6]:
+    - heading "✨ What's New" [level=2] [ref=e7]
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]: 🎨 Modern Colors
+        - generic [ref=e11]: Using oklch() color space for smooth, perceptually uniform color transitions
+      - generic [ref=e12]:
+        - generic [ref=e13]: 💎 Refined Shadows
+        - generic [ref=e14]: Subtle elevation system (xs/sm/md) for depth without distraction
+      - generic [ref=e15]:
+        - generic [ref=e16]: 🌊 Smooth Transitions
+        - generic [ref=e17]: 200ms transitions with cubic-bezier easing for professional feel
+      - generic [ref=e18]:
+        - generic [ref=e19]: 🎯 Enhanced Focus
+        - generic [ref=e20]: WCAG 2.2 AAA compliant focus rings with 3px outline + glow
+      - generic [ref=e21]:
+        - generic [ref=e22]: ♿ Accessibility First
+        - generic [ref=e23]: Reduced motion support, high contrast mode, 44px touch targets
+      - generic [ref=e24]:
+        - generic [ref=e25]: 📐 Size Variants
+        - generic [ref=e26]: Four sizes (sm/default/lg/icon) with smart padding for icons
+  - generic [ref=e27]:
+    - heading "🎨 Button Variants" [level=2] [ref=e28]
+    - heading "All Variants - Default Size" [level=3] [ref=e29]
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]: Default (Primary)
+        - generic [ref=e33]: Primary Action
+      - generic [ref=e34]:
+        - generic [ref=e35]: Destructive
+        - generic [ref=e36]: Delete Item
+      - generic [ref=e37]:
+        - generic [ref=e38]: Outline
+        - generic [ref=e39]: Cancel
+      - generic [ref=e40]:
+        - generic [ref=e41]: Secondary
+        - generic [ref=e42]: Secondary Action
+      - generic [ref=e43]:
+        - generic [ref=e44]: Ghost
+        - generic [ref=e45]: Ghost Button
+      - generic [ref=e46]:
+        - generic [ref=e47]: Link
+        - generic [ref=e48]: Link Style
+    - heading "Size Variants" [level=3] [ref=e49]
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]: Small
+        - generic [ref=e53]: Small Button
+      - generic [ref=e54]:
+        - generic [ref=e55]: Default
+        - generic [ref=e56]: Default Size
+      - generic [ref=e57]:
+        - generic [ref=e58]: Large
+        - generic [ref=e59]: Large Button
+      - generic [ref=e60]:
+        - generic [ref=e61]: Icon
+        - generic [ref=e62]: →
+    - heading "States" [level=3] [ref=e63]
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - generic [ref=e66]: Normal
+        - generic [ref=e67]: Normal State
+      - generic [ref=e68]:
+        - generic [ref=e69]: Disabled
+        - generic [ref=e70]: Disabled State
+      - generic [ref=e71]:
+        - generic [ref=e72]: Loading
+        - generic [ref=e73]: Loading...
+      - generic [ref=e74]:
+        - generic [ref=e75]: Focus (Tab to see)
+        - generic [ref=e76]: Focus Me
+  - generic [ref=e77]:
+    - heading "🔧 Usage" [level=2] [ref=e78]
+    - paragraph [ref=e79]: "Simple, declarative API with Web Components:"
+    - code [ref=e81]: <!-- Basic usage --> <eva-gc-button>Click Me</eva-gc-button> <!-- With variant --> <eva-gc-button variant="destructive">Delete</eva-gc-button> <!-- With size --> <eva-gc-button size="lg">Large Button</eva-gc-button> <!-- Disabled state --> <eva-gc-button disabled>Can't Click</eva-gc-button> <!-- Loading state --> <eva-gc-button loading>Processing...</eva-gc-button>
+  - generic [ref=e82]:
+    - heading "📊 Technical Improvements" [level=2] [ref=e83]
+    - table [ref=e84]:
+      - rowgroup [ref=e85]:
+        - row "Feature Before After" [ref=e86]:
+          - columnheader "Feature" [ref=e87]
+          - columnheader "Before" [ref=e88]
+          - columnheader "After" [ref=e89]
+      - rowgroup [ref=e90]:
+        - 'row "Color System #26374A (hex) oklch(0.30 0.04 250)" [ref=e91]':
+          - cell "Color System" [ref=e92]
+          - cell "#26374A (hex)" [ref=e93]:
+            - code [ref=e94]: "#26374A"
+            - text: (hex)
+          - cell "oklch(0.30 0.04 250)" [ref=e95]:
+            - code [ref=e96]: oklch(0.30 0.04 250)
+        - row "Hover Effect Hardcoded colors color-mix() function" [ref=e97]:
+          - cell "Hover Effect" [ref=e98]
+          - cell "Hardcoded colors" [ref=e99]
+          - cell "color-mix() function" [ref=e100]:
+            - code [ref=e101]: color-mix()
+            - text: function
+        - row "Shadows 0 2px 4px rgba(0,0,0,0.2) Design system tokens" [ref=e102]:
+          - cell "Shadows" [ref=e103]
+          - cell "0 2px 4px rgba(0,0,0,0.2)" [ref=e104]:
+            - code [ref=e105]: 0 2px 4px rgba(0,0,0,0.2)
+          - cell "Design system tokens" [ref=e106]
+        - row "Focus Ring 3px outline only 3px outline + 3px glow" [ref=e107]:
+          - cell "Focus Ring" [ref=e108]
+          - cell "3px outline only" [ref=e109]
+          - cell "3px outline + 3px glow" [ref=e110]
+        - row "Transitions all 0.2s ease all 200ms cubic-bezier(0.4,0,0.2,1)" [ref=e111]:
+          - cell "Transitions" [ref=e112]
+          - cell "all 0.2s ease" [ref=e113]:
+            - code [ref=e114]: all 0.2s ease
+          - cell "all 200ms cubic-bezier(0.4,0,0.2,1)" [ref=e115]:
+            - code [ref=e116]: all 200ms cubic-bezier(0.4,0,0.2,1)
+        - row "Variants 6 (GC-specific) 6 (Spark-style) + 4 sizes" [ref=e117]:
+          - cell "Variants" [ref=e118]
+          - cell "6 (GC-specific)" [ref=e119]
+          - cell "6 (Spark-style) + 4 sizes" [ref=e120]
+```

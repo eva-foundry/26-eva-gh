@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MARCO HUB - EVA 2.0 Command Center</title>
+    <style>
+      :root {
+        --primary: #0078d4;
+        --secondary: #50e6ff;
+        --dark: #1a1a1a;
+        --light: #f5f5f5;
+        --success: #107c10;
+        --warning: #ff8c00;
+        --danger: #d13438;
+        --sidebar-width: 250px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--dark);
+        background: var(--light);
+        display: flex;
+        min-height: 100vh;
+      }
+
+      .sidebar {
+        width: var(--sidebar-width);
+        background: var(--dark);
+        color: white;
+        padding: 2rem 1rem;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+      }
+
+      .sidebar h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--secondary);
+      }
+
+      .sidebar .subtitle {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        margin-bottom: 2rem;
+      }
+
+      .sidebar nav ul {
+        list-style: none;
+      }
+
+      .sidebar nav ul li {
+        margin: 0.5rem 0;
+      }
+
+      .sidebar nav a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s;
+      }
+
+      .sidebar nav a:hover {
+        background: var(--primary);
+        transform: translateX(5px);
+      }
+
+      .sidebar .section-title {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: var(--secondary);
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      .main-content {
+        margin-left: var(--sidebar-width);
+        flex: 1;
+        padding: 2rem;
+      }
+
+      header {
+        background: linear-gradient(135deg, var(--primary) 0%, #005a9e 100%);
+        color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      header h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      header .date {
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h3 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--secondary);
+      }
+
+      .stat-large {
+        font-size: 3rem;
+        font-weight: bold;
+        color: var(--primary);
+        display: block;
+        margin: 1rem 0;
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        color: #666;
+        display: block;
+      }
+
+      .progress-bar {
+        background: var(--light);
+        height: 24px;
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 1rem 0;
+      }
+
+      .progress-fill {
+        background: linear-gradient(
+          90deg,
+          var(--primary) 0%,
+          var(--secondary) 100%
+        );
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: width 0.3s;
+      }
+
+      .status-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin: 0.25rem;
+      }
+
+      .status-badge.on-track {
+        background: #d3f3d3;
+        color: var(--success);
+      }
+      .status-badge.at-risk {
+        background: #fff4ce;
+        color: var(--warning);
+      }
+      .status-badge.blocked {
+        background: #fdd;
+        color: var(--danger);
+      }
+
+      .quick-link {
+        display: block;
+        background: var(--light);
+        padding: 1rem;
+        margin: 0.5rem 0;
+        border-radius: 4px;
+        text-decoration: none;
+        color: var(--dark);
+        transition: all 0.3s;
+        border-left: 4px solid var(--primary);
+      }
+
+      .quick-link:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateX(5px);
+      }
+
+      .quick-link .emoji {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+      }
+
+      .challenge-lever {
+        background: var(--light);
+        padding: 1rem;
+        margin: 0.5rem 0;
+        border-radius: 4px;
+        border-left: 4px solid var(--success);
+      }
+
+      .challenge-lever strong {
+        color: var(--success);
+      }
+
+      ul {
+        margin-left: 1.5rem;
+      }
+
+      ul li {
+        margin: 0.5rem 0;
+      }
+
+      .section-heading {
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+      }
+
+      .progress-0 {
+        width: 0%;
+      }
+
+      .muted-note {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .spaced-note {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .spaced-subheading {
+        margin-top: 1.5rem;
+      }
+
+      .card-lead {
+        margin-bottom: 1rem;
+      }
+
+      .italic-note {
+        margin-top: 1rem;
+        font-style: italic;
+        color: #666;
+      }
+
+      .coming-soon {
+        background: var(--light);
+        padding: 2rem;
+        text-align: center;
+        border-radius: 8px;
+        margin-top: 1rem;
+      }
+
+      .muted-text {
+        color: #666;
+      }
+
+      .fine-print {
+        font-size: 0.9rem;
+        color: #999;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+
+      table th,
+      table td {
+        border: 1px solid #e0e0e0;
+        padding: 0.5rem;
+        font-size: 0.85rem;
+        text-align: left;
+      }
+
+      table thead {
+        background: var(--light);
+      }
+
+      .milestone-list {
+        list-style: none;
+        margin-left: 0;
+      }
+
+      .milestone-list li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--light);
+      }
+
+      .milestone-list li:last-child {
+        border-bottom: none;
+      }
+
+      .checkmark {
+        color: var(--success);
+        margin-right: 0.5rem;
+        font-weight: bold;
+      }
+
+      @media (max-width: 768px) {
+        .sidebar {
+          position: relative;
+          width: 100%;
+          height: auto;
+        }
+
+        .main-content {
+          margin-left: 0;
+        }
+
+        .dashboard-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <h1>🎯 MARCO HUB</h1>
+      <p class="subtitle">Your EVA 2.0 Springboard</p>
+
+      <nav>
+        <ul>
+          <li><a href="#today">📊 Today's Stats</a></li>
+          <li><a href="#week">🎯 This Week</a></li>
+          <li><a href="#requests">🗂️ User Requests</a></li>
+          <li><a href="#challenge">🏆 Beat the Clock</a></li>
+          <li><a href="#links">⚡ Quick Links</a></li>
+        </ul>
+
+        <p class="section-title">Sprint Management</p>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/MarcoPolo483/eva-orchestrator/projects"
+              target="_blank"
+              rel="noopener"
+              >📋 Sprint Board</a
+            >
+          </li>
+          <li>
+            <a href="./backlog-status.md" target="_blank" rel="noopener"
+              >📦 Backlog Status</a
+            >
+          </li>
+          <li>
+            <a
+              href="./sprint-history/2025-11-sprint-01/"
+              target="_blank"
+              rel="noopener"
+              >📝 Sprint History</a
+            >
+          </li>
+        </ul>
+
+        <p class="section-title">Metrics & Analytics</p>
+        <ul>
+          <li>
+            <a href="#powerbi" target="_blank" rel="noopener"
+              >📈 Power BI Dashboards</a
+            >
+          </li>
+          <li>
+            <a
+              href="./eva-agile-metrics-powerbi-design.md"
+              target="_blank"
+              rel="noopener"
+              >🎨 Dashboard Design</a
+            >
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener">📊 Velocity Trends</a>
+          </li>
+        </ul>
+
+        <p class="section-title">Team & Tools</p>
+        <ul>
+          <li>
+            <a
+              href="./eva-agile-command-community-board.md"
+              target="_blank"
+              rel="noopener"
+              >👥 Community Board</a
+            >
+          </li>
+          <li>
+            <a href="../sm-qa-toolbox/" target="_blank" rel="noopener"
+              >🔧 SM/QA Toolbox</a
+            >
+          </li>
+          <li>
+            <a href="../tools/" target="_blank" rel="noopener"
+              >⚙️ Dev Toolbox</a
+            >
+          </li>
+        </ul>
+
+        <p class="section-title">Governance</p>
+        <ul>
+          <li>
+            <a
+              href="./compliance/canada-ai-guidelines-alignment.md"
+              target="_blank"
+              rel="noopener"
+              >🍁 Canada AI Guidelines</a
+            >
+          </li>
+          <li>
+            <a href="./DEFINITION-OF-DONE.md" target="_blank" rel="noopener"
+              >✅ Definition of Done</a
+            >
+          </li>
+          <li>
+            <a href="./lessons-learned/" target="_blank" rel="noopener"
+              >📚 Lessons Learned</a
+            >
+          </li>
+        </ul>
+
+        <p class="section-title">Architecture</p>
+        <ul>
+          <li>
+            <a href="./EVA-2.0/" target="_blank" rel="noopener"
+              >📐 Architecture Docs</a
+            >
+          </li>
+          <li>
+            <a href="./master-plan.md" target="_blank" rel="noopener"
+              >🗺️ Master Plan</a
+            >
+          </li>
+          <li>
+            <a href="../agents/registry.yaml" target="_blank" rel="noopener"
+              >🤖 Agent Registry</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <h2>🚀 MARCO HUB - EVA 2.0 Command Center</h2>
+        <p class="date">📅 November 18, 2025 | Sprint 01 Day 0</p>
+      </header>
+
+      <section id="today">
+        <h2 class="section-heading">📊 Today's Stats</h2>
+        <div class="dashboard-grid">
+          <div class="card">
+            <h3>Sprint Progress</h3>
+            <span class="stat-large">0 / 4</span>
+            <span class="stat-label">Management Pod Deliverables Complete</span>
+            <div class="progress-bar">
+              <div class="progress-fill progress-0">0%</div>
+            </div>
+            <span class="status-badge on-track">🟢 Kickoff Complete</span>
+          </div>
+
+          <div class="card">
+            <h3>Days to Go-Live</h3>
+            <span class="stat-large">409</span>
+            <span class="stat-label">Days until Q4 2026 Beta</span>
+            <p class="muted-note">Target: December 31, 2026</p>
+          </div>
+
+          <div class="card">
+            <h3>Current Sprint</h3>
+            <span class="stat-large">Sprint 01</span>
+            <span class="stat-label">Management Pod Automation Launch</span>
+            <div class="card">
+              <h3>🎯 This Week's Goals (Sprint 01: Nov 18-25)</h3>
+              <ul>
+                <li>
+                  <strong>Board Sync Automation:</strong> Promote script to workflow, add docs/tests (Issue #20)
+                </li>
+                <li>
+                  <strong>Metrics Feed Prototype:</strong> Define schema, commit sample JSON, outline workflow (Issue #21)
+                </li>
+                <li>
+                  <strong>Onboarding Bootstrap Pack:</strong> Checklist + automation outline delivered (Issue #22)
+                </li>
+                <li>
+                  <strong>Executive Digest Draft:</strong> Template + sample digest ready for leadership review (Issue #23)
+                </li>
+                <li>
+                  <strong>Carryover:</strong> Close NuEnergy brief (#16) and feedback workflow framing (#17)
+                </li>
+              </ul>
+
+              <h4 class="spaced-subheading">Work Distribution</h4>
+              <ul>
+                <li>
+                  <strong>GitHub Copilot (SM/QA):</strong> Backlog hygiene (#16-#18), board sync workflow (#20), executive digest (#23)
+                </li>
+                <li>
+                  <strong>ai2 (Dev Master):</strong> Metrics automation build-out once schema ready (#21)
+                </li>
+                <li>
+                  <strong>windowsGuy (Dev Master):</strong> Onboarding pack checklist + scripts (#22)
+                </li>
+              </ul>
+          </ul>
+        </div>
+      </section>
+
+      <section id="requests">
+        <h2 class="section-heading">🗂️ User Request Backlog</h2>
+                                                                        <!-- BEGIN USER REQUEST BACKLOG -->
+        <div class="dashboard-grid">
+          <div class="card">
+            <h3>In Progress (1)</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Owner</th>
+                  <th>Issue</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>REQ-2025-11-17-002</td>
+                  <td>Confidential trust intake</td>
+                  <td>Scrum Master → assign to Dev Master</td>
+                  <td><a href="https://github.com/MarcoPolo483/eva-orchestrator/issues/16" target="_blank" rel="noopener">#16</a></td>
+                  <td>Sanitized summary captured in `docs/EVA-2.0/backlog/machine-trust-knowledge-brief.md`; hand-off steps documented in `docs/backlog/REQ-2025-11-17-002-hand-off-plan.md`.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="fine-print">
+              Source: docs/backlog/user-request-backlog.md
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Waiting List (6)</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Owner</th>
+                  <th>Issue</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>REQ-2025-11-17-003</td>
+                  <td>Feedback thumbs workflow</td>
+                  <td>Scrum Master</td>
+                  <td><a href="https://github.com/MarcoPolo483/eva-orchestrator/issues/17" target="_blank" rel="noopener">#17</a></td>
+                  <td>Link new GitHub issues to `User Feedback Loop` epic.</td>
+                </tr>
+                <tr>
+                  <td>REQ-2025-11-17-004</td>
+                  <td>Sprint 01 issue seeding</td>
+                  <td>Scrum Master</td>
+                  <td><a href="https://github.com/MarcoPolo483/eva-orchestrator/issues/18" target="_blank" rel="noopener">#18</a></td>
+                  <td>Needed to show real activity before public launch.</td>
+                </tr>
+                <tr>
+                  <td>REQ-2025-11-18-001</td>
+                  <td>Project board sync automation</td>
+                  <td>Scrum Master</td>
+                  <td><a href="https://github.com/MarcoPolo483/eva-orchestrator/issues/20" target="_blank" rel="noopener">#20</a></td>
+                  <td>Script hardened; promote to workflow + regression tests.</td>
+                </tr>
+                <tr>
+                  <td>REQ-2025-11-18-002</td>
+                  <td>Sprint metrics feed</td>
+                  <td>Scrum Master</td>
+                  <td><a href="https://github.com/MarcoPolo483/eva-orchestrator/issues/21" target="_blank" rel="noopener">#21</a></td>
+                  <td>Define schema + prototype JSON for sprint telemetry.</td>
+                </tr>
+                <tr>
+                  <td>REQ-2025-11-18-003</td>
+                  <td>Onboarding bootstrap pack</td>
+                  <td>Scrum Master</td>
+                  <td><a href="https://github.com/MarcoPolo483/eva-orchestrator/issues/22" target="_blank" rel="noopener">#22</a></td>
+                  <td>Checklist + automation outline to spin up new pods in &lt;1 hour.</td>
+                </tr>
+                <tr>
+                  <td>REQ-2025-11-18-004</td>
+                  <td>Executive digest generator</td>
+                  <td>Scrum Master</td>
+                  <td><a href="https://github.com/MarcoPolo483/eva-orchestrator/issues/23" target="_blank" rel="noopener">#23</a></td>
+                  <td>Leadership-ready template pulling metrics + board data.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card">
+            <h3>Done &amp; Parked</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Done</td>
+                  <td>REQ-2025-11-17-001</td>
+                  <td>Backlog capture automation</td>
+                  <td>Automation merged via PR #19; hub sync workflow verified on main.</td>
+                </tr>
+                <tr>
+                  <td>Parked</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- END USER REQUEST BACKLOG -->
+      </section>
+
+      <section id="challenge">
+        <div class="card">
+          <h3>🏆 Beat the Clock Challenge</h3>
+          <p class="card-lead">
+            Your goal: <strong>Beat the Q4 2026 estimate</strong> by
+            accelerating velocity through these levers:
+          </p>
+
+          <div class="challenge-lever">
+            <strong>1. Higher Velocity:</strong> Achieve 35+ SP/sprint vs. 30 SP
+            baseline (17% faster)
+          </div>
+
+          <div class="challenge-lever">
+            <strong>2. Automation Savings:</strong> POD Tools Box saves 15-30
+            min/day (5-10 hours/sprint)
+          </div>
+
+          <div class="challenge-lever">
+            <strong>3. Learning Curve:</strong> Plateau after Sprint 02 (agents
+            work autonomously without hand-holding)
+          </div>
+
+          <div class="challenge-lever">
+            <strong>4. Parallel Work:</strong> ai2 + windowsGuy work
+            simultaneously (2x throughput on independent issues)
+          </div>
+
+          <div class="challenge-lever">
+            <strong>5. Scope Optimization:</strong> Defer non-critical features
+            (focus on MVP, add "nice-to-haves" post-Beta)
+          </div>
+
+          <p class="italic-note">
+            💡 If we hit all levers, we could go-live
+            <strong>~6-8 weeks early</strong> (mid-October 2026 vs. Dec 31
+            2026).
+          </p>
+        </div>
+      </section>
+
+      <section id="links">
+        <div class="card">
+          <h3>⚡ Quick Links - Your Springboard</h3>
+
+          <a
+            href="https://github.com/MarcoPolo483/eva-orchestrator/projects"
+            target="_blank"
+            rel="noopener"
+            class="quick-link"
+          >
+            <span class="emoji">📋</span>
+            <strong>Sprint Board</strong> - Track active issues and pull
+            requests
+          </a>
+
+          <a
+            href="./backlog-status.md"
+            target="_blank"
+            rel="noopener"
+            class="quick-link"
+          >
+            <span class="emoji">📦</span>
+            <strong>Backlog Status</strong> - 22 epics, ~1,213 SP inventory
+          </a>
+
+          <a
+            href="./eva-agile-command-community-board.md"
+            target="_blank"
+            rel="noopener"
+            class="quick-link"
+          >
+            <span class="emoji">👥</span>
+            <strong>Community Board</strong> - Team introductions and
+            collaboration
+          </a>
+
+          <a
+            href="../sm-qa-toolbox/"
+            target="_blank"
+            rel="noopener"
+            class="quick-link"
+          >
+            <span class="emoji">🔧</span>
+            <strong>SM/QA Toolbox</strong> - Ceremony automation, quality gates
+          </a>
+
+          <a href="../tools/" target="_blank" rel="noopener" class="quick-link">
+            <span class="emoji">⚙️</span>
+            <strong>Dev Toolbox</strong> - Feature automation (ai2, windowsGuy)
+          </a>
+
+          <a
+            href="./compliance/canada-ai-guidelines-alignment.md"
+            target="_blank"
+            rel="noopener"
+            class="quick-link"
+          >
+            <span class="emoji">🍁</span>
+            <strong>Canada AI Guidelines</strong> - FASTER principles compliance
+          </a>
+
+          <a
+            href="./EVA-2.0/"
+            target="_blank"
+            rel="noopener"
+            class="quick-link"
+          >
+            <span class="emoji">📐</span>
+            <strong>Architecture Docs</strong> - Technical design and ADRs
+          </a>
+
+          <a
+            href="./lessons-learned/"
+            target="_blank"
+            rel="noopener"
+            class="quick-link"
+          >
+            <span class="emoji">📚</span>
+            <strong>Lessons Learned</strong> - Retrospectives and improvements
+          </a>
+        </div>
+      </section>
+
+      <section id="github-basics">
+        <div class="card">
+          <h3>🛠️ GitHub Basics – Personal Access Tokens</h3>
+          <p class="card-lead">
+            Use these steps whenever you need to create or refresh a Personal Access Token (PAT) for EVA automation. Copy the token immediately after creation—GitHub only shows it once.
+          </p>
+          <ol>
+            <li>Sign in to <a href="https://github.com" target="_blank" rel="noopener">GitHub.com</a>.</li>
+            <li>Select your avatar (top-right) ➜ <strong>Settings</strong>.</li>
+            <li>In the left sidebar, scroll to the bottom and choose <strong>Developer settings</strong>.</li>
+            <li>Open <strong>Personal access tokens → Fine-grained tokens</strong>, then click <strong>Generate new token</strong>.</li>
+            <li>Name the token (example: <code>EVA Orchestrator Automation</code>), set an expiry, and pick the target repository.</li>
+            <li>Select the required permissions (Projects, Contents, Issues as needed) and press <strong>Generate token</strong>.</li>
+            <li>Copy the token value and store it in a password manager.</li>
+            <li>Navigate to the EVA repository ➜ <strong>Settings → Secrets and variables → Actions → New repository secret</strong> to store the token (e.g., <code>PROJECT_SYNC_TOKEN</code>).</li>
+          </ol>
+          <p class="muted-note">Tip: Repeat from step 4 whenever a token expires or scopes change.</p>
+        </div>
+      </section>
+
+      <section id="milestones">
+        <div class="card">
+          <h3>🏅 Recent Milestones</h3>
+          <ul class="milestone-list">
+            <li>
+              <span class="checkmark">✅</span> Sprint 01 Plan Complete (Nov 17,
+              2025)
+            </li>
+            <li>
+              <span class="checkmark">✅</span> Backlog Status Comprehensive
+              Inventory (Nov 17)
+            </li>
+            <li>
+              <span class="checkmark">✅</span> Power BI Agile Metrics Dashboard
+              Design (Nov 17)
+            </li>
+            <li>
+              <span class="checkmark">✅</span> EVA Agile Command Community
+              Board Created (Nov 17)
+            </li>
+            <li>
+              <span class="checkmark">✅</span> Segregation of Duties: SM/QA
+              Toolbox + Dev Toolbox (Nov 17)
+            </li>
+            <li>
+              <span class="checkmark">✅</span> Canada AI Guidelines Compliance
+              Mapping (Nov 17)
+            </li>
+            <li>
+              <span class="checkmark">✅</span> sprint-standup-notes.ps1
+              Ceremony Automation (Nov 17)
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="powerbi">
+        <div class="card">
+          <h3>📈 Power BI Dashboards (Deferred to Sprint 02)</h3>
+          <p class="card-lead">
+            Private analytics dashboards will be embedded here:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Sprint Command Center:</strong> Primary sprint metrics
+              (velocity, burn-down, blockers)
+            </li>
+            <li>
+              <strong>Velocity Trends:</strong> SP per sprint, acceleration
+              factors, forecast
+            </li>
+            <li>
+              <strong>Quality Metrics:</strong> Test coverage, lint pass rate,
+              security alerts
+            </li>
+            <li>
+              <strong>Productivity Analytics:</strong> Cycle time, lead time,
+              throughput
+            </li>
+            <li>
+              <strong>Backlog Health:</strong> Epic progress, dependencies, risk
+              indicators
+            </li>
+            <li>
+              <strong>Lessons Learned:</strong> Retrospective themes,
+              improvement tracking
+            </li>
+            <li>
+              <strong>Public Tracker:</strong> External-facing progress
+              (embedded in GitHub Pages)
+            </li>
+          </ul>
+
+          <div class="coming-soon">
+            <p class="muted-text">🚧 Dashboards Coming Soon 🚧</p>
+            <p class="fine-print">
+              Sprint 02 (Dec 2025): Power BI build + data pipeline (after automation spine ships)
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+
+
+
+
+
+
+

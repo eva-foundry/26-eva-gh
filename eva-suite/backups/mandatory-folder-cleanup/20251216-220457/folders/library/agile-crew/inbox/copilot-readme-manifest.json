@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "🤖 GitHub Copilot Quick Reference",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/copilot-readme",
+  "created_timestamp": "2025-11-27T12:40:16.3620014Z",
+  "source_intake_file": "COPILOT-README.md",
+  "feature_key": "P02-AUTO-96acd085",
+  "feature_slug": "copilot-readme"
+}

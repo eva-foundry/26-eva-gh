@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "CDD-CONSOLIDATION-REPORT-2025-01-27",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/cdd-consolidation-report-2025-01-27",
+  "created_timestamp": "2025-11-27T12:40:09.7612939Z",
+  "source_intake_file": "CDD-CONSOLIDATION-REPORT-2025-01-27.md",
+  "feature_key": "P02-AUTO-f9c2f2c8",
+  "feature_slug": "cdd-consolidation-report-2025-01-27"
+}

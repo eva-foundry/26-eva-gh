@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-tools-marketplace.md",
+  "feature_key": "P02-AUTO-913fcf09",
+  "title": "CDD: EVA Tools Marketplace",
+  "p02_artifacts_path": "docs/features/eva-tools-marketplace",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-tools-marketplace",
+  "created_timestamp": "2025-11-25T23:55:17.4095680Z"
+}

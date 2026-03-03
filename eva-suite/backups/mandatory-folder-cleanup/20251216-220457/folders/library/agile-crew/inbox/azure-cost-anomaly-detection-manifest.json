@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": ".sample-cost-anomaly-detection.md",
+  "feature_key": "P02-FINOPS-007",
+  "title": "Azure Cost Anomaly Detection System",
+  "p02_artifacts_path": "docs/features/azure-cost-anomaly-detection",
+  "priority": "HIGH",
+  "feature_slug": "azure-cost-anomaly-detection",
+  "created_timestamp": "2025-11-25T23:53:45.1979498Z"
+}

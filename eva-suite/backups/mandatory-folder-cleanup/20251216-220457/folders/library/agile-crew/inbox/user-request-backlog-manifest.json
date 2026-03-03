@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "user-request-backlog.md",
+  "feature_key": "P02-AUTO-32da9fa8",
+  "title": "EVA 2.0 User Request Backlog",
+  "p02_artifacts_path": "docs/features/user-request-backlog",
+  "priority": "MEDIUM",
+  "feature_slug": "user-request-backlog",
+  "created_timestamp": "2025-11-25T23:55:34.6876849Z"
+}

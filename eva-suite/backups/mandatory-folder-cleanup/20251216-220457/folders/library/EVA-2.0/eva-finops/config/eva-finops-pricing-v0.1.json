@@ -1,0 +1,192 @@
+[
+  {
+    "EVA_Key": "aoai_gpt4_1_input",
+    "Category": "LLM",
+    "Service": "GPT-4.1",
+    "SkuOrModel": "Standard",
+    "MeterType": "Input",
+    "Unit": "per 1M tokens",
+    "Price_USD": 5.00,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "aoai_gpt4_1_output",
+    "Category": "LLM",
+    "Service": "GPT-4.1",
+    "SkuOrModel": "Standard",
+    "MeterType": "Output",
+    "Unit": "per 1M tokens",
+    "Price_USD": 15.00,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "aoai_gpt4_1mini_input",
+    "Category": "LLM",
+    "Service": "GPT-4.1-mini",
+    "SkuOrModel": "Standard",
+    "MeterType": "Input",
+    "Unit": "per 1M tokens",
+    "Price_USD": 0.15,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "aoai_gpt4_1mini_output",
+    "Category": "LLM",
+    "Service": "GPT-4.1-mini",
+    "SkuOrModel": "Standard",
+    "MeterType": "Output",
+    "Unit": "per 1M tokens",
+    "Price_USD": 0.60,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "aoai_gpt4o_input",
+    "Category": "LLM",
+    "Service": "GPT-4o",
+    "SkuOrModel": "Standard",
+    "MeterType": "Input",
+    "Unit": "per 1M tokens",
+    "Price_USD": 5.00,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "aoai_gpt4o_output",
+    "Category": "LLM",
+    "Service": "GPT-4o",
+    "SkuOrModel": "Standard",
+    "MeterType": "Output",
+    "Unit": "per 1M tokens",
+    "Price_USD": 15.00,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "aoai_gpt4o_mini_input",
+    "Category": "LLM",
+    "Service": "GPT-4o-mini",
+    "SkuOrModel": "Standard",
+    "MeterType": "Input",
+    "Unit": "per 1M tokens",
+    "Price_USD": 0.15,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "aoai_gpt4o_mini_output",
+    "Category": "LLM",
+    "Service": "GPT-4o-mini",
+    "SkuOrModel": "Standard",
+    "MeterType": "Output",
+    "Unit": "per 1M tokens",
+    "Price_USD": 0.60,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "ai_docint_s0_prebuilt",
+    "Category": "OCR",
+    "Service": "Azure AI Document Intelligence",
+    "SkuOrModel": "S0",
+    "MeterType": "Prebuilt",
+    "Unit": "per page",
+    "Price_USD": 0.03,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "ai_docint_s0_custom_extract",
+    "Category": "OCR",
+    "Service": "Azure AI Document Intelligence",
+    "SkuOrModel": "S0",
+    "MeterType": "Custom extract",
+    "Unit": "per page",
+    "Price_USD": 0.03,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "ai_docint_s0_custom_gen_extract",
+    "Category": "OCR",
+    "Service": "Azure AI Document Intelligence",
+    "SkuOrModel": "S0",
+    "MeterType": "Custom generative extract",
+    "Unit": "per page",
+    "Price_USD": 0.03,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "ai_search_s1",
+    "Category": "Search",
+    "Service": "Azure AI Search",
+    "SkuOrModel": "S1",
+    "MeterType": "Compute",
+    "Unit": "per hour",
+    "Price_USD": 0.336,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "ai_search_s2",
+    "Category": "Search",
+    "Service": "Azure AI Search",
+    "SkuOrModel": "S2",
+    "MeterType": "Compute",
+    "Unit": "per hour",
+    "Price_USD": 1.344,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "cache_redis_std_c0",
+    "Category": "Cache",
+    "Service": "Azure Cache for Redis",
+    "SkuOrModel": "Standard C0",
+    "MeterType": "Flat",
+    "Unit": "per month",
+    "Price_USD": 40.15,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "cache_redis_std_c1",
+    "Category": "Cache",
+    "Service": "Azure Cache for Redis",
+    "SkuOrModel": "Standard C1",
+    "MeterType": "Flat",
+    "Unit": "per month",
+    "Price_USD": 100.74,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "storage_blob_hot",
+    "Category": "Storage",
+    "Service": "Azure Blob Storage",
+    "SkuOrModel": "Hot",
+    "MeterType": "Tier",
+    "Unit": "per GB-month",
+    "Price_USD": 0.0184,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "storage_datalake_hot",
+    "Category": "Storage",
+    "Service": "Azure Data Lake",
+    "SkuOrModel": "Hot",
+    "MeterType": "Tier",
+    "Unit": "per GB-month",
+    "Price_USD": 0.0190,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "appsvc_evada_small",
+    "Category": "App",
+    "Service": "App Service / ACA",
+    "SkuOrModel": "Small",
+    "MeterType": "Instance",
+    "Unit": "per month",
+    "Price_USD": 75.00,
+    "Notes": ""
+  },
+  {
+    "EVA_Key": "appsvc_evada_medium",
+    "Category": "App",
+    "Service": "App Service / ACA",
+    "SkuOrModel": "Medium",
+    "MeterType": "Instance",
+    "Unit": "per month",
+    "Price_USD": 150.00,
+    "Notes": ""
+  }
+]

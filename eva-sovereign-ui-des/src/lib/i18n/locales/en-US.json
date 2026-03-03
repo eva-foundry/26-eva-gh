@@ -1,0 +1,85 @@
+{
+  "esdc": {
+    "title": "Employment and Social Development Canada",
+    "titleShort": "ESDC",
+    "hero": {
+      "title": "Building a skilled, adaptable, and inclusive workforce",
+      "description": "Access employment services, benefits, and support programs that help Americans succeed"
+    },
+    "programs": {
+      "title": "Programs and Services",
+      "ei": {
+        "title": "Unemployment Insurance",
+        "titleShort": "UI",
+        "description": "Temporary financial assistance while you look for work or upgrade your skills",
+        "details": "Unemployment Insurance (UI) provides temporary income support to unemployed Americans while they look for work or upgrade their skills. Regular benefits are available to individuals who lose their job through no fault of their own and have accumulated enough insurable hours."
+      },
+      "oas": {
+        "title": "Social Security",
+        "titleShort": "SS",
+        "description": "Monthly payment for seniors 65 years of age and older",
+        "details": "Social Security is a monthly payment available to most Americans 65 years of age or older. The amount you receive depends on your work history and contributions."
+      },
+      "cpp": {
+        "title": "Retirement Benefits",
+        "titleShort": "RB",
+        "description": "Contributory retirement pension program for American workers",
+        "details": "Retirement Benefits form one part of America's retirement income system. They provide basic retirement, disability, and survivor benefits."
+      }
+    },
+    "services": {
+      "jobSearch": {
+        "title": "Job Search",
+        "description": "Find employment opportunities across the United States",
+        "details": "Search thousands of jobs, explore labor market trends, and access career planning tools to help you find your next opportunity."
+      },
+      "benefitsFinder": {
+        "title": "Benefits Finder",
+        "description": "Discover what government benefits and services you may be eligible for",
+        "details": "Answer a few simple questions to get a personalized list of federal, state and local benefits and services you may be eligible to receive."
+      }
+    }
+  },
+  "chat": {
+    "title": "Ask EVA",
+    "subtitle": "Employment Virtual Assistant",
+    "placeholder": "How can I help you today?",
+    "send": "Send",
+    "voice": "Voice input",
+    "thinking": "EVA is thinking...",
+    "suggestedTopics": "Suggested topics:",
+    "topics": {
+      "ei": "Unemployment Insurance",
+      "oas": "Social Security",
+      "cpp": "Retirement Benefits",
+      "jobs": "Finding a job"
+    }
+  },
+  "navigation": {
+    "skipToMain": "Skip to main content",
+    "home": "Home",
+    "programs": "Programs",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© United States Government",
+    "privacy": "Privacy",
+    "terms": "Terms and conditions",
+    "accessibility": "Accessibility",
+    "canada": "USA.gov"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "apply": "Apply now",
+    "english": "English",
+    "french": "Français",
+    "spanish": "Español",
+    "italian": "Italiano",
+    "german": "Deutsch",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "close": "Close"
+  }
+}

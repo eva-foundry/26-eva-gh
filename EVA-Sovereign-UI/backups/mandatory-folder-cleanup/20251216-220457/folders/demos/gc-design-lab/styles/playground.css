@@ -1,0 +1,433 @@
+/**
+ * playground.css
+ * Styles for Interactive Component Playground
+ * WCAG 2.2 AAA compliant, GC Design System colors
+ */
+
+/* Modal Overlay */
+.playground-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadeIn 200ms ease-in-out;
+}
+
+.modal-content {
+  position: relative;
+  width: 95%;
+  max-width: 1400px;
+  max-height: 90vh;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: slideUp 300ms ease-out;
+  z-index: 10000;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 2px solid oklch(50% 0.12 29);
+  color: oklch(50% 0.12 29);
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  transition: all 200ms;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background: oklch(50% 0.12 29);
+  color: #ffffff;
+  outline: 3px solid oklch(64% 0.21 254);
+  outline-offset: 2px;
+}
+
+/* Component Playground Layout */
+.component-playground {
+  padding: 2rem;
+  overflow-y: auto;
+  max-height: calc(90vh - 4rem);
+}
+
+.playground-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e1e4e7;
+}
+
+.playground-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: oklch(30% 0.12 29);
+  margin: 0 0 0.5rem 0;
+}
+
+.playground-description {
+  font-size: 1rem;
+  color: #555555;
+  margin: 0 0 1rem 0;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.category-badge.category-eva {
+  background: oklch(64% 0.21 254);
+  color: #ffffff;
+}
+
+.category-badge.category-gc {
+  background: oklch(50% 0.12 29);
+  color: #ffffff;
+}
+
+/* 2-Column Layout */
+.playground-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .playground-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.playground-left,
+.playground-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Property Editor */
+.property-editor {
+  background: #f8f9fa;
+  border: 1px solid #e1e4e7;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.property-editor-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: oklch(30% 0.12 29);
+}
+
+.property-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.property-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.property-label {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #333333;
+}
+
+.property-hint {
+  font-size: 0.75rem;
+  color: #666666;
+  font-style: italic;
+}
+
+.property-select,
+.property-number,
+.property-text {
+  padding: 0.75rem;
+  border: 2px solid #e1e4e7;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  min-height: 44px;
+  transition: border-color 200ms;
+}
+
+.property-select:focus,
+.property-number:focus,
+.property-text:focus {
+  outline: 3px solid oklch(64% 0.21 254);
+  outline-offset: 2px;
+  border-color: oklch(64% 0.21 254);
+}
+
+.property-select {
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* Toggle Switch */
+.toggle-wrapper {
+  position: relative;
+  width: 60px;
+  height: 32px;
+}
+
+.property-toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 400ms;
+  border-radius: 32px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 400ms;
+  border-radius: 50%;
+}
+
+.property-toggle:checked + .toggle-slider {
+  background-color: oklch(64% 0.21 254);
+}
+
+.property-toggle:checked + .toggle-slider:before {
+  transform: translateX(28px);
+}
+
+.property-toggle:focus + .toggle-slider {
+  outline: 3px solid oklch(64% 0.21 254);
+  outline-offset: 2px;
+}
+
+/* Live Preview */
+.live-preview {
+  background: #ffffff;
+  border: 2px solid oklch(50% 0.12 29);
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-height: 300px;
+}
+
+.live-preview-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: oklch(30% 0.12 29);
+}
+
+.preview-area {
+  background: #f8f9fa;
+  border: 1px dashed #e1e4e7;
+  border-radius: 4px;
+  padding: 2rem;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Code Generator */
+.code-generator {
+  background: #f8f9fa;
+  border: 1px solid #e1e4e7;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.code-generator-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: oklch(30% 0.12 29);
+}
+
+.code-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e1e4e7;
+  flex-wrap: wrap;
+}
+
+.code-tab {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #555555;
+  transition: all 200ms;
+  min-height: 44px;
+}
+
+.code-tab:hover {
+  color: oklch(50% 0.12 29);
+}
+
+.code-tab.active {
+  color: oklch(50% 0.12 29);
+  border-bottom-color: oklch(50% 0.12 29);
+}
+
+.code-tab:focus {
+  outline: 3px solid oklch(64% 0.21 254);
+  outline-offset: 2px;
+}
+
+.code-wrapper {
+  position: relative;
+  background: #1e1e1e;
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.code-wrapper pre {
+  margin: 0;
+  padding: 0;
+}
+
+.code-wrapper code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.875rem;
+  color: #d4d4d4;
+  line-height: 1.6;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: oklch(50% 0.12 29);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  min-height: 44px;
+  transition: all 200ms;
+}
+
+.copy-button:hover {
+  background: oklch(40% 0.12 29);
+}
+
+.copy-button:focus {
+  outline: 3px solid oklch(64% 0.21 254);
+  outline-offset: 2px;
+}
+
+.copy-button.success {
+  background: oklch(60% 0.15 145);
+}
+
+/* No Props Message */
+.no-props-message {
+  color: #666666;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .property-select,
+  .property-number,
+  .property-text {
+    border-width: 3px;
+  }
+
+  .modal-close {
+    border-width: 3px;
+  }
+}
+
+/* Focus Visible (Modern browsers) */
+:focus-visible {
+  outline: 3px solid oklch(64% 0.21 254);
+  outline-offset: 2px;
+}

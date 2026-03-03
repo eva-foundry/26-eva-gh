@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": ".sample-ai-code-review.md",
+  "feature_key": "P02-AUTO-0df52c54",
+  "title": "Sample Feature Idea: AI Code Review Assistant",
+  "p02_artifacts_path": "docs/features/sample-ai-code-review",
+  "priority": "MEDIUM",
+  "feature_slug": "sample-ai-code-review",
+  "created_timestamp": "2025-11-25T23:53:43.4459302Z"
+}

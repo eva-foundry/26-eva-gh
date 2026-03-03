@@ -1,0 +1,143 @@
+{
+  "process": {
+    "id": "oas_enquiry_flow",
+    "name": "OAS enquiry – triage and knowledge support",
+    "description": "High-level view of how a citizen enquiry about Old Age Security (OAS) flows across channels, call centre, EVA, and program systems. This is a simplified demo, not an official process map.",
+    "scenario": "Citizen calls Service Canada to ask about OAS eligibility and next steps.",
+    "actors": [
+      { "id": "citizen", "label": "Citizen" },
+      { "id": "ivr", "label": "IVR / Phone System" },
+      { "id": "agent", "label": "Call Centre Agent" },
+      { "id": "eva", "label": "EVA Suite" },
+      { "id": "program", "label": "Program Systems" }
+    ],
+    "lanes": [
+      {
+        "actor_id": "citizen",
+        "steps": [
+          {
+            "id": "C1",
+            "order": 1,
+            "label": "Dials Service Canada OAS number",
+            "type": "action",
+            "assisted_by_eva": false,
+            "notes": "Entry point into the service journey."
+          },
+          {
+            "id": "C2",
+            "order": 4,
+            "label": "Explains situation to the agent and asks questions",
+            "type": "interaction",
+            "assisted_by_eva": false,
+            "notes": "Free-form explanation; key facts captured by the agent."
+          },
+          {
+            "id": "C3",
+            "order": 9,
+            "label": "Receives explanation and next steps",
+            "type": "outcome",
+            "assisted_by_eva": true,
+            "notes": "Guidance informed by EVA-assisted knowledge and rules (demo)."
+          }
+        ]
+      },
+      {
+        "actor_id": "ivr",
+        "steps": [
+          {
+            "id": "I1",
+            "order": 2,
+            "label": "Presents OAS / benefits menu",
+            "type": "system",
+            "assisted_by_eva": false,
+            "notes": "Static IVR tree in this demo."
+          },
+          {
+            "id": "I2",
+            "order": 3,
+            "label": "Routes call to OAS agent queue",
+            "type": "routing",
+            "assisted_by_eva": false,
+            "notes": "Future EVA integration could improve routing."
+          }
+        ]
+      },
+      {
+        "actor_id": "agent",
+        "steps": [
+          {
+            "id": "A1",
+            "order": 5,
+            "label": "Greets caller and opens client profile",
+            "type": "interaction",
+            "assisted_by_eva": false,
+            "notes": "Standard call opening."
+          },
+          {
+            "id": "A2",
+            "order": 6,
+            "label": "Summarizes client situation in EVA prompt",
+            "type": "knowledge_capture",
+            "assisted_by_eva": true,
+            "notes": "Agent uses EVA DA / EVA Chat to capture the scenario."
+          },
+          {
+            "id": "A3",
+            "order": 10,
+            "label": "Explains eligibility result and next steps",
+            "type": "explanation",
+            "assisted_by_eva": true,
+            "notes": "Agent uses EVA answer as a base, then adapts in their own words."
+          }
+        ]
+      },
+      {
+        "actor_id": "eva",
+        "steps": [
+          {
+            "id": "E1",
+            "order": 7,
+            "label": "Retrieves OAS policies and job aids (RAG)",
+            "type": "knowledge",
+            "assisted_by_eva": true,
+            "notes": "EVA DA pulls from curated OAS content (demo)."
+          },
+          {
+            "id": "E2",
+            "order": 8,
+            "label": "Applies simplified eligibility rules (RaC-style)",
+            "type": "rules",
+            "assisted_by_eva": true,
+            "notes": "Static demo rule check: age, residency, contributions."
+          }
+        ]
+      },
+      {
+        "actor_id": "program",
+        "steps": [
+          {
+            "id": "P1",
+            "order": 11,
+            "label": "Receives updated claim or application (future step)",
+            "type": "system",
+            "assisted_by_eva": false,
+            "notes": "Out of scope for this demo."
+          }
+        ]
+      }
+    ],
+    "summary": {
+      "highlights": [
+        "Shows how EVA sits between call centre agents and curated knowledge / rules.",
+        "Demonstrates a citizen-to-system journey without exposing real client data.",
+        "Provides a starting point for more detailed BPMN / swimlane models."
+      ],
+      "opportunities": [
+        "Automate capture of client situations as structured prompts.",
+        "Integrate with IVR for better routing and early advice.",
+        "Connect to downstream program systems for end-to-end visibility."
+      ],
+      "disclaimer": "Static demo only – this is not an official OAS process and must not be treated as authoritative."
+    }
+  }
+}

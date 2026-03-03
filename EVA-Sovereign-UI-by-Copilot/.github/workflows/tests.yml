@@ -1,0 +1,32 @@
+name: tests
+on:
+  push:
+    paths:
+      - '**/*.ts'
+      - 'package.json'
+      - 'vitest.config.ts'
+      - '.github/workflows/tests.yml'
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests (no skips enforced)
+        run: node scripts/check-no-skips.mjs
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run visual regression tests
+        run: npm run test:vr:ci
+      - name: Build bundle
+        run: npm run build
+      - name: Bundle size guard
+        run: npm run size:guard
+      - name: Performance benchmark
+        run: npm run benchmark

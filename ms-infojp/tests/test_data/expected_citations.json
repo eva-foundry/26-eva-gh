@@ -1,0 +1,208 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Citation Validation Patterns",
+  "description": "Expected citation formats and validation patterns for MS-InfoJP EI jurisprudence",
+  "version": "1.0",
+  "last_updated": "2026-01-24",
+  "citation_patterns": {
+    "federal_court": {
+      "pattern": "\\b(\\d{4})\\s+FC\\s+(\\d+)\\b",
+      "description": "Federal Court decisions",
+      "example": "2024 FC 679",
+      "court_name": "Federal Court",
+      "court_abbreviation": "FC",
+      "validation_rules": {
+        "year_range": [1970, 2030],
+        "case_number_max": 9999
+      }
+    },
+    "federal_court_appeal": {
+      "pattern": "\\b(\\d{4})\\s+FCA\\s+(\\d+)\\b",
+      "description": "Federal Court of Appeal decisions",
+      "example": "2011 FCA 190",
+      "court_name": "Federal Court of Appeal",
+      "court_abbreviation": "FCA",
+      "validation_rules": {
+        "year_range": [1970, 2030],
+        "case_number_max": 999
+      }
+    },
+    "social_security_tribunal": {
+      "pattern": "\\b(\\d{4})\\s+SST\\s+(\\d+)\\b",
+      "description": "Social Security Tribunal decisions",
+      "example": "2021 SST 188",
+      "court_name": "Social Security Tribunal",
+      "court_abbreviation": "SST",
+      "validation_rules": {
+        "year_range": [2013, 2030],
+        "case_number_max": 9999
+      },
+      "notes": "SST created in 2013, replaced UMPIRE and PAB"
+    },
+    "supreme_court_canada": {
+      "pattern": "\\b(\\d{4})\\s+SCC\\s+(\\d+)\\b",
+      "description": "Supreme Court of Canada decisions",
+      "example": "2015 SCC 42",
+      "court_name": "Supreme Court of Canada",
+      "court_abbreviation": "SCC",
+      "validation_rules": {
+        "year_range": [1970, 2030],
+        "case_number_max": 99
+      }
+    },
+    "canlii_legacy": {
+      "pattern": "\\b(\\d{4})\\s+CanLII\\s+(\\d+)\\b",
+      "description": "CanLII legacy citation format",
+      "example": "1995 CanLII 3547",
+      "court_name": "Various (legacy format)",
+      "court_abbreviation": "CanLII",
+      "validation_rules": {
+        "year_range": [1900, 2015],
+        "case_number_max": 99999
+      },
+      "notes": "Older cases before neutral citation standardization"
+    },
+    "umpire": {
+      "pattern": "\\bCUB\\s+(\\d+)\\b",
+      "description": "Chief Umpire decisions (pre-2013)",
+      "example": "CUB 68452",
+      "court_name": "Umpire",
+      "court_abbreviation": "CUB",
+      "validation_rules": {
+        "case_number_range": [1, 99999]
+      },
+      "notes": "Pre-2013 EI appeals, replaced by SST"
+    },
+    "board_of_referees": {
+      "pattern": "\\bBOR\\s+\\d+\\b",
+      "description": "Board of Referees decisions (pre-2013)",
+      "example": "BOR 12345",
+      "court_name": "Board of Referees",
+      "court_abbreviation": "BOR",
+      "notes": "Pre-2013 first-level EI appeals, replaced by SST"
+    }
+  },
+  "valid_courts_for_ei": [
+    "FC",
+    "FCA",
+    "SST",
+    "SCC",
+    "CanLII",
+    "CUB",
+    "BOR",
+    "ONCA",
+    "BCCA",
+    "QCCA",
+    "ABCA",
+    "SKCA",
+    "MBCA",
+    "NSCA",
+    "NBCA",
+    "PECA",
+    "NLCA"
+  ],
+  "citation_quality_thresholds": {
+    "minimum_citations_per_response": 1,
+    "target_citation_rate": 0.9,
+    "acceptable_citation_rate": 0.75,
+    "description": "AC-003 targets >=90% citation rate across all queries"
+  },
+  "citation_validation_rules": {
+    "format_checks": [
+      "Year must be 4 digits",
+      "Court abbreviation must be valid",
+      "Case number must be digits only",
+      "Space required between year and court",
+      "Space required between court and case number"
+    ],
+    "content_checks": [
+      "Citation must appear in response text",
+      "Citation should be linked to CanLII or court website",
+      "Case name should accompany citation",
+      "Decision summary should reference citation"
+    ]
+  },
+  "extraction_regex": {
+    "comprehensive_pattern": "\\b(\\d{4})\\s+([A-Z]{2,5})\\s+(\\d+)\\b",
+    "description": "Matches YYYY COURT ### format",
+    "capture_groups": {
+      "1": "year",
+      "2": "court_abbreviation",
+      "3": "case_number"
+    }
+  },
+  "test_cases": [
+    {
+      "input": "In Canada (Attorney General) v White, 2011 FCA 190, the court held...",
+      "expected_extraction": {
+        "year": "2011",
+        "court": "FCA",
+        "number": "190",
+        "full_citation": "2011 FCA 190"
+      },
+      "valid": true
+    },
+    {
+      "input": "See also Imran v Canada (Attorney General), 2008 FCA 17.",
+      "expected_extraction": {
+        "year": "2008",
+        "court": "FCA",
+        "number": "17",
+        "full_citation": "2008 FCA 17"
+      },
+      "valid": true
+    },
+    {
+      "input": "The tribunal in 2021 SST 188 found that...",
+      "expected_extraction": {
+        "year": "2021",
+        "court": "SST",
+        "number": "188",
+        "full_citation": "2021 SST 188"
+      },
+      "valid": true
+    },
+    {
+      "input": "As stated in CUB 68452, the claimant must...",
+      "expected_extraction": {
+        "citation": "CUB 68452"
+      },
+      "valid": true,
+      "notes": "Legacy format"
+    },
+    {
+      "input": "The case decided in 2024FC679 is not properly formatted.",
+      "expected_extraction": null,
+      "valid": false,
+      "reason": "Missing spaces between year, court, and number"
+    }
+  ],
+  "canlii_url_patterns": {
+    "federal_court": "https://www.canlii.org/en/ca/fct/doc/{year}/fc{number}/fc{number}.html",
+    "federal_court_appeal": "https://www.canlii.org/en/ca/fca/doc/{year}/fca{number}/fca{number}.html",
+    "social_security_tribunal": "https://www.canlii.org/en/ca/sst/doc/{year}/sst{number}/sst{number}.html",
+    "supreme_court_canada": "https://www.canlii.org/en/ca/scc/doc/{year}/scc{number}/scc{number}.html"
+  },
+  "usage_in_tests": {
+    "ac_003_citation_quality": {
+      "description": "Test citation presence and format in responses",
+      "validation_steps": [
+        "Extract all citations using comprehensive_pattern regex",
+        "Filter citations by valid_courts_for_ei list",
+        "Validate citation format against patterns",
+        "Calculate citation rate (responses with valid citations / total responses)",
+        "Assert citation_rate >= target_citation_rate (0.90)"
+      ]
+    },
+    "ac_012_search_recall": {
+      "description": "Verify correct citations retrieved for queries",
+      "validation_steps": [
+        "For each query in ei_queries.json, execute search",
+        "Extract citations from response",
+        "Compare against expected_citations from query",
+        "Calculate recall (expected citations found / total expected)",
+        "Assert recall >= 0.85"
+      ]
+    }
+  }
+}

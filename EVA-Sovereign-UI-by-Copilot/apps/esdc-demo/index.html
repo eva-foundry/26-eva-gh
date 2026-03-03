@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employment and Social Development Canada | Emploi et Développement social Canada</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Noto Sans", sans-serif;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .program-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- Skip link -->
+  <eva-skip-link target="#main-content">Skip to main content</eva-skip-link>
+  
+  <!-- Page shell -->
+  <eva-page-shell>
+    
+    <!-- Header -->
+    <eva-gc-header slot="header"
+      app-name-key="esdc.title"
+      profile="canada_gc">
+      <eva-language-switcher slot="actions"
+        current-locale="en-CA"
+        available-locales='["en-CA", "fr-CA"]'>
+      </eva-language-switcher>
+    </eva-gc-header>
+    
+    <!-- Main content -->
+    <eva-hero-banner
+      title-key="esdc.hero.title"
+      description-key="esdc.hero.description">
+    </eva-hero-banner>
+    
+    <eva-container max-width="1200px">
+      <h2 style="font-family: 'Lato', sans-serif; font-size: 32px; margin-bottom: 16px;">Programs and Services</h2>
+      
+      <div class="program-grid">
+        <eva-program-card
+          title-key="esdc.programs.ei.title"
+          description-key="esdc.programs.ei.description"
+          icon="💼"
+          link="/programs/employment-insurance.html">
+        </eva-program-card>
+        
+        <eva-program-card
+          title-key="esdc.programs.oas.title"
+          description-key="esdc.programs.oas.description"
+          icon="🧓"
+          link="/programs/old-age-security.html">
+        </eva-program-card>
+        
+        <eva-program-card
+          title-key="esdc.programs.cpp.title"
+          description-key="esdc.programs.cpp.description"
+          icon="💰"
+          link="/programs/canada-pension.html">
+        </eva-program-card>
+      </div>
+      
+      <!-- EVA Chat -->
+      <eva-chat-panel
+        title-key="chat.title"
+        placeholder-key="chat.placeholder"
+        assistant-name="EVA">
+      </eva-chat-panel>
+    </eva-container>
+    
+    <!-- Footer -->
+    <eva-gc-footer slot="footer" profile="canada_gc"></eva-gc-footer>
+    
+  </eva-page-shell>
+  
+  <!-- Load Web Components -->
+  <script type="module" src="/packages/eva-sovereign-ui-wc/src/index.ts"></script>
+</body>
+</html>

@@ -1,0 +1,1437 @@
+{
+  "meta": {
+    "schema": "eva.reconciliation.v2",
+    "generated_at": "2026-02-25T11:56:21.470Z",
+    "repo": "C:\\AICOE\\eva-foundation\\26-eva-gh",
+    "discovery_path": "C:\\AICOE\\eva-foundation\\26-eva-gh\\.eva\\discovery.json"
+  },
+  "coverage": {
+    "stories_total": 728,
+    "stories_with_artifacts": 728,
+    "stories_with_evidence": 0,
+    "consistency_score": 0
+  },
+  "features": [
+    {
+      "id": "F26-01",
+      "title": "EVA Core Sub-Repos",
+      "story_count": 5,
+      "stories_with_artifacts": 5,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-02",
+      "title": "EVA Sovereign UI",
+      "story_count": 5,
+      "stories_with_artifacts": 5,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-03",
+      "title": "InfoAssistant Variants",
+      "story_count": 3,
+      "stories_with_artifacts": 3,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-04",
+      "title": "Infrastructure Clones",
+      "story_count": 3,
+      "stories_with_artifacts": 3,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-05",
+      "title": "Cloud Housekeeping",
+      "story_count": 3,
+      "stories_with_artifacts": 3,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-ACTIVE",
+      "title": "ACTIVE API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-ADD",
+      "title": "ADD API",
+      "story_count": 3,
+      "stories_with_artifacts": 3,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-ADMIN",
+      "title": "ADMIN API",
+      "story_count": 7,
+      "stories_with_artifacts": 7,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-ALL",
+      "title": "ALL API",
+      "story_count": 6,
+      "stories_with_artifacts": 6,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-API",
+      "title": "API API",
+      "story_count": 25,
+      "stories_with_artifacts": 25,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-API_KEY",
+      "title": "API_KEY API",
+      "story_count": 3,
+      "stories_with_artifacts": 3,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-ARCHIVE",
+      "title": "ARCHIVE API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-ARCHIVED",
+      "title": "ARCHIVED API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-ASSETS",
+      "title": "ASSETS API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-AUDIO",
+      "title": "AUDIO API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-AUTO",
+      "title": "AUTO API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-BANNERS",
+      "title": "BANNERS API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-BASE",
+      "title": "BASE API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-CACHE",
+      "title": "CACHE API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-CHANGELOG",
+      "title": "CHANGELOG API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-CHAT",
+      "title": "CHAT API",
+      "story_count": 11,
+      "stories_with_artifacts": 11,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-CODE",
+      "title": "CODE API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-CODE_EXECUTI",
+      "title": "CODE_EXECUTI API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-COLLECTION",
+      "title": "COLLECTION API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-COMMAND",
+      "title": "COMMAND API",
+      "story_count": 3,
+      "stories_with_artifacts": 3,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-COMPLETIONS",
+      "title": "COMPLETIONS API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-CONFIG",
+      "title": "CONFIG API",
+      "story_count": 16,
+      "stories_with_artifacts": 16,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-CONNECTIONS",
+      "title": "CONNECTIONS API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-COPY",
+      "title": "COPY API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-CREATE",
+      "title": "CREATE API",
+      "story_count": 10,
+      "stories_with_artifacts": 10,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-DB",
+      "title": "DB API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-DEFAULT",
+      "title": "DEFAULT API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-DELETE",
+      "title": "DELETE API",
+      "story_count": 6,
+      "stories_with_artifacts": 6,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-DELETEITEMS",
+      "title": "DELETEITEMS API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-DOCUMENTS",
+      "title": "DOCUMENTS API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-EDIT",
+      "title": "EDIT API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-EF",
+      "title": "EF API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-EMBED",
+      "title": "EMBED API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-EMBEDDING",
+      "title": "EMBEDDING API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-EMBEDDINGS",
+      "title": "EMBEDDINGS API",
+      "story_count": 4,
+      "stories_with_artifacts": 4,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-EMOJI",
+      "title": "EMOJI API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-EXPORT",
+      "title": "EXPORT API",
+      "story_count": 4,
+      "stories_with_artifacts": 4,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-FEEDBACK",
+      "title": "FEEDBACK API",
+      "story_count": 4,
+      "stories_with_artifacts": 4,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-FEEDBACKS",
+      "title": "FEEDBACKS API",
+      "story_count": 6,
+      "stories_with_artifacts": 6,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-FILE",
+      "title": "FILE API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-FOLDER",
+      "title": "FOLDER API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-FOLLOW_UP",
+      "title": "FOLLOW_UP API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GENERATE",
+      "title": "GENERATE API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GENERATIONS",
+      "title": "GENERATIONS API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETALLTAGS",
+      "title": "GETALLTAGS API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETALLUPLOAD",
+      "title": "GETALLUPLOAD API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETAPPLICATI",
+      "title": "GETAPPLICATI API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETCITATION",
+      "title": "GETCITATION API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETFEATUREFL",
+      "title": "GETFEATUREFL API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETFILE",
+      "title": "GETFILE API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETFOLDERS",
+      "title": "GETFOLDERS API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETHINT",
+      "title": "GETHINT API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETINFODATA",
+      "title": "GETINFODATA API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETMAXCSVFIL",
+      "title": "GETMAXCSVFIL API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETTAGS",
+      "title": "GETTAGS API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETTDANALYSI",
+      "title": "GETTDANALYSI API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETTEMPIMAGE",
+      "title": "GETTEMPIMAGE API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GETWARNINGBA",
+      "title": "GETWARNINGBA API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GRAVATAR",
+      "title": "GRAVATAR API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-GROUPS",
+      "title": "GROUPS API",
+      "story_count": 7,
+      "stories_with_artifacts": 7,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-HEALTH",
+      "title": "HEALTH API",
+      "story_count": 7,
+      "stories_with_artifacts": 7,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-ID",
+      "title": "ID API",
+      "story_count": 78,
+      "stories_with_artifacts": 78,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-IMAGE_PROMPT",
+      "title": "IMAGE_PROMPT API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-IMPORT",
+      "title": "IMPORT API",
+      "story_count": 3,
+      "stories_with_artifacts": 3,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-INFRA",
+      "title": "Infrastructure Resources",
+      "story_count": 228,
+      "stories_with_artifacts": 228,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-INGEST",
+      "title": "INGEST API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-LAYOUTS",
+      "title": "LAYOUTS API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-LDAP",
+      "title": "LDAP API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-LIST",
+      "title": "LIST API",
+      "story_count": 10,
+      "stories_with_artifacts": 10,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-LOAD",
+      "title": "LOAD API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-LOGSTATUS",
+      "title": "LOGSTATUS API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-MANIFESTJSON",
+      "title": "MANIFESTJSON API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-MARKDOWN",
+      "title": "MARKDOWN API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-MEMORY_ID",
+      "title": "MEMORY_ID API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-MOA",
+      "title": "MOA API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-MODEL",
+      "title": "MODEL API",
+      "story_count": 5,
+      "stories_with_artifacts": 5,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-MODELS",
+      "title": "MODELS API",
+      "story_count": 21,
+      "stories_with_artifacts": 21,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-NEW",
+      "title": "NEW API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-OAUTH",
+      "title": "OAUTH API",
+      "story_count": 6,
+      "stories_with_artifacts": 6,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-OPENSEARCHXM",
+      "title": "OPENSEARCHXM API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-OPS",
+      "title": "Operations Scripts",
+      "story_count": 29,
+      "stories_with_artifacts": 29,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-PDF",
+      "title": "PDF API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-PERMISSIONS",
+      "title": "PERMISSIONS API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-PINNED",
+      "title": "PINNED API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-PIPELINE_ID",
+      "title": "PIPELINE_ID API",
+      "story_count": 3,
+      "stories_with_artifacts": 3,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-POSTTD",
+      "title": "POSTTD API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-PRICING",
+      "title": "PRICING API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-PROCESS",
+      "title": "PROCESS API",
+      "story_count": 6,
+      "stories_with_artifacts": 6,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-PROCESS_AGEN",
+      "title": "PROCESS_AGEN API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-PROCESS_TD_A",
+      "title": "PROCESS_TD_A API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-PROJECTS",
+      "title": "PROJECTS API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-PS",
+      "title": "PS API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-PULL",
+      "title": "PULL API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-PUSH",
+      "title": "PUSH API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-QUERIES",
+      "title": "QUERIES API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-QUERY",
+      "title": "QUERY API",
+      "story_count": 5,
+      "stories_with_artifacts": 5,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-RAG",
+      "title": "RAG API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-READY",
+      "title": "READY API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-REFRESH",
+      "title": "REFRESH API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-REINDEX",
+      "title": "REINDEX API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-RESET",
+      "title": "RESET API",
+      "story_count": 3,
+      "stories_with_artifacts": 3,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-RESOURCE",
+      "title": "RESOURCE API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-RESOURCETYPE",
+      "title": "RESOURCETYPE API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-RESUBMITITEM",
+      "title": "RESUBMITITEM API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-SCHEMAS",
+      "title": "SCHEMAS API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-SEARCH",
+      "title": "SEARCH API",
+      "story_count": 3,
+      "stories_with_artifacts": 3,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-SERVICEPROVI",
+      "title": "SERVICEPROVI API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-SHARE",
+      "title": "SHARE API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-SHOW",
+      "title": "SHOW API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-SIGNIN",
+      "title": "SIGNIN API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-SIGNOUT",
+      "title": "SIGNOUT API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-SIGNUP",
+      "title": "SIGNUP API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-SPEECH",
+      "title": "SPEECH API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-STREAM",
+      "title": "STREAM API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-SUGGESTIONS",
+      "title": "SUGGESTIONS API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-SYNC",
+      "title": "SYNC API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-TAGS",
+      "title": "TAGS API",
+      "story_count": 5,
+      "stories_with_artifacts": 5,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-TASKS",
+      "title": "TASKS API",
+      "story_count": 3,
+      "stories_with_artifacts": 3,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-TDSTREAM",
+      "title": "TDSTREAM API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-TEMPLATES",
+      "title": "TEMPLATES API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-TENANT",
+      "title": "TENANT API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-TITLE",
+      "title": "TITLE API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-TOOL_SERVERS",
+      "title": "TOOL_SERVERS API",
+      "story_count": 3,
+      "stories_with_artifacts": 3,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-TRANSCRIPTIO",
+      "title": "TRANSCRIPTIO API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-UI",
+      "title": "UI Pages",
+      "story_count": 9,
+      "stories_with_artifacts": 9,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-UNARCHIVE",
+      "title": "UNARCHIVE API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-UNLOAD",
+      "title": "UNLOAD API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-UPDATE",
+      "title": "UPDATE API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-UPLOAD",
+      "title": "UPLOAD API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-USAGE",
+      "title": "USAGE API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-USER",
+      "title": "USER API",
+      "story_count": 4,
+      "stories_with_artifacts": 4,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-USER_ID",
+      "title": "USER_ID API",
+      "story_count": 7,
+      "stories_with_artifacts": 7,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-USERS",
+      "title": "USERS API",
+      "story_count": 6,
+      "stories_with_artifacts": 6,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-VERIFY",
+      "title": "VERIFY API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-VERSION",
+      "title": "VERSION API",
+      "story_count": 4,
+      "stories_with_artifacts": 4,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-VOICES",
+      "title": "VOICES API",
+      "story_count": 1,
+      "stories_with_artifacts": 1,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F26-WEBHOOK",
+      "title": "WEBHOOK API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    }
+  ],
+  "gaps": []
+}

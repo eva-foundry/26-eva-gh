@@ -1,0 +1,39 @@
+{
+  "Period": "Last 7 days",
+  "Issues": {
+    "ByAuthor": {
+      "Name": "MarcoPolo483",
+      "Count": 6
+    },
+    "Closed": 6,
+    "AvgCycleTimeHours": 348.5
+  },
+  "PullRequests": {
+    "AvgCycleTimeHours": 0,
+    "ByAuthor": {
+      "Name": "app/github-actions",
+      "Count": 1
+    },
+    "Merged": 0,
+    "Total": 1
+  },
+  "Commits": {
+    "ByAuthor": [
+      {
+        "Name": "EVA Memory Bot",
+        "Count": 26
+      },
+      {
+        "Name": "github-actions[bot]",
+        "Count": 3
+      },
+      {
+        "Name": "Marco Presta",
+        "Count": 1
+      }
+    ],
+    "Total": 30
+  },
+  "Timestamp": "2025-12-06T11:13:19.3007106+00:00",
+  "ActiveContributors": 5
+}

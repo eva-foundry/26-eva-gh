@@ -1,0 +1,66 @@
+{
+  "baseline": {
+    "description": "Department-wide EVA rollout for knowledge workers.",
+    "notes": "Numbers are illustrative only and not based on real Service Canada data."
+  },
+  "scenarios": [
+    {
+      "id": "conservative",
+      "label": "Conservative",
+      "inputs": {
+        "employees": 500,
+        "hours_saved_per_week": 0.5,
+        "hourly_cost_cad": 60,
+        "weeks_per_year": 46,
+        "annual_platform_cost_cad": 200000
+      },
+      "outputs": {
+        "annual_hours_saved": 11500,
+        "annual_gross_savings_cad": 690000,
+        "annual_net_savings_cad": 490000,
+        "roi_pct": 245,
+        "payback_months": 4.0
+      },
+      "narrative": "Even with half an hour saved per person per week, the EVA Suite rollout more than pays for itself within the first year."
+    },
+    {
+      "id": "expected",
+      "label": "Expected",
+      "inputs": {
+        "employees": 1000,
+        "hours_saved_per_week": 1.0,
+        "hourly_cost_cad": 60,
+        "weeks_per_year": 46,
+        "annual_platform_cost_cad": 300000
+      },
+      "outputs": {
+        "annual_hours_saved": 46000,
+        "annual_gross_savings_cad": 2760000,
+        "annual_net_savings_cad": 2460000,
+        "roi_pct": 820,
+        "payback_months": 1.5
+      },
+      "narrative": "At roughly one hour saved per week per knowledge worker, EVA becomes a major productivity lever with fast payback."
+    },
+    {
+      "id": "ambitious",
+      "label": "Ambitious",
+      "inputs": {
+        "employees": 1500,
+        "hours_saved_per_week": 1.5,
+        "hourly_cost_cad": 60,
+        "weeks_per_year": 46,
+        "annual_platform_cost_cad": 450000
+      },
+      "outputs": {
+        "annual_hours_saved": 103500,
+        "annual_gross_savings_cad": 6210000,
+        "annual_net_savings_cad": 5760000,
+        "roi_pct": 1280,
+        "payback_months": 0.9
+      },
+      "narrative": "With deep adoption across 1,500 staff and strong workflow integration, EVA Suite looks more like a structural shift in capacity than a marginal tool."
+    }
+  ],
+  "disclaimer": "This EVA Impact Analyzer hero uses static illustrative scenarios and is not a financial forecast."
+}

@@ -1,0 +1,10 @@
+{
+  "feature_slug": "week-1-agent-1-test-fixes",
+  "priority": "MEDIUM",
+  "feature_key": "P02-AUTO-75bf7bd5",
+  "p02_artifacts_path": "docs/features/week-1-agent-1-test-fixes",
+  "created_timestamp": "2025-12-09T12:42:04.5980293Z",
+  "title": "Week 1 Agent 1: Fix Tests & 100% Coverage",
+  "source_intake_file": "WEEK-1-AGENT-1-TEST-FIXES.md",
+  "status": "ready-for-crew"
+}

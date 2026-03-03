@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-external-customer-support.md",
+  "feature_key": "P02-AUTO-b6acb76d",
+  "title": "CDD: EVA External Customer Support Widget",
+  "p02_artifacts_path": "docs/features/eva-external-customer-support",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-external-customer-support",
+  "created_timestamp": "2025-11-25T23:54:16.3856375Z"
+}

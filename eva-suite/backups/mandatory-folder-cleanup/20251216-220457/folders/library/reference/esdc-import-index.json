@@ -1,0 +1,118 @@
+{
+  "generated_at": "2025-11-15T00:00:00Z",
+  "notes": "Machine-readable catalog of assets imported under docs/EVA-2.0/ESDC for EVA 2.0 planning.",
+  "sources": [
+    {
+      "path": "docs/EVA-2.0/ESDC/EVA-HUB.md",
+      "category": "navigation",
+      "summary": "Repository index and agile command resources for all eva-* projects.",
+      "keywords": ["hub", "repository-map", "agile"]
+    },
+    {
+      "path": "docs/EVA-2.0/ESDC/Vision.txt",
+      "category": "vision",
+      "summary": "Email memo detailing omnichannel EVA vision, assistant personas, and technology stack assumptions.",
+      "keywords": ["vision", "ivr", "personas", "protected-b"]
+    },
+    {
+      "path": "docs/EVA-2.0/ESDC/EVA Backlog/EVA Backlog/",
+      "category": "backlog",
+      "summary": "Folder of CDD and roadmap DOCX files covering APIs, governance, live ops, session-aware wrappers, and accelerator programs.",
+      "keywords": ["cdd", "roadmap", "governance"],
+      "format": "docx",
+      "action": "convert_to_markdown"
+    },
+    {
+      "path": "docs/EVA-2.0/ESDC/EVA Backlog/EVA Backlog/Env Provisioning/",
+      "category": "environment",
+      "summary": "Governance and sandbox enablement playbooks for provisioning EVA environments.",
+      "keywords": ["env", "sandbox", "lifecycle"],
+      "format": "docx",
+      "action": "convert_to_markdown"
+    },
+    {
+      "path": "docs/EVA-2.0/ESDC/EVA Backlog/EVA Backlog/archive/",
+      "category": "archive",
+      "summary": "Historic PDFs/DOCX covering EVA capability evolution, roadmaps, and sandbox slide decks.",
+      "keywords": ["archive", "roadmap"],
+      "format": "mixed",
+      "action": "review_for_relevance"
+    },
+    {
+      "path": "docs/EVA-2.0/eva-1.0 repo/",
+      "category": "legacy-code",
+      "summary": "React/Vite demo showcasing project registry CRUD, AppAdmin UI, mock APIM, bilingual theming, and scripts for EVA DA v0.75.",
+      "keywords": ["react", "registry", "mock-apim"],
+      "format": "typescript"
+    },
+    {
+      "path": "docs/EVA-2.0/eva-1.0 goodies/README.md",
+      "category": "legacy-notes",
+      "summary": "Pointers to critical artifacts within the EVA 1.0 demo for diffing and reference.",
+      "keywords": ["legacy", "apim", "roadmap"]
+    },
+    {
+      "path": "docs/EVA-2.0/eva-1.0-book/",
+      "category": "legacy-book",
+      "summary": "Curated copy of EVA 1.0 artifacts including admin backlog, APIM contract, deployment guide, and component sources.",
+      "keywords": ["book", "reference"],
+      "format": "mixed"
+    },
+    {
+      "path": "docs/EVA-2.0/ESDC/eva2_fastlane_repo_v5_full/eva2_fastlane_repo_v5_full/docs/",
+      "category": "fastlane-docs",
+      "summary": "Architecture overview, fastlane demo scope, UI metadata design, and EVA API contract for the Azure demo.",
+      "keywords": ["architecture", "fastlane", "api-contract"],
+      "format": "markdown"
+    },
+    {
+      "path": "docs/EVA-2.0/ESDC/eva2_fastlane_repo_v5_full/eva2_fastlane_repo_v5_full/plans/minimum_readiness_matrix.md",
+      "category": "planning",
+      "summary": "Definition of done and priority per eva-* repo for fastlane demo readiness.",
+      "keywords": ["dod", "planning", "matrix"],
+      "format": "markdown"
+    },
+    {
+      "path": "docs/EVA-2.0/ESDC/eva2_fastlane_repo_v5_full/eva2_fastlane_repo_v5_full/copilot_briefs/",
+      "category": "copilot-briefs",
+      "summary": "AI briefs for each eva-* repo with context, priorities, and tasks for pair programming.",
+      "keywords": ["copilot", "brief", "guidance"],
+      "format": "markdown"
+    },
+    {
+      "path": "docs/EVA-2.0/ESDC/eva2_fastlane_repo_v5_full/eva2_fastlane_repo_v5_full/samples/eva-api/expressHandlers.ts",
+      "category": "sample-code",
+      "summary": "Express implementation sketch covering /projects, /layouts/:pageId, /assets, /templates, and /rag/answer with safety + metering stubs.",
+      "keywords": ["express", "rag", "safety"],
+      "format": "typescript"
+    },
+    {
+      "path": "docs/EVA-2.0/ESDC/eva2_fastlane_repo_v5_full/eva2_fastlane_repo_v5_full/samples/eva-seed/projects.json",
+      "category": "seed-data",
+      "summary": "Project registry sample defining Canada Life, Jurisprudence, and Admin spaces with theming and i18n keys.",
+      "keywords": ["projects", "registry", "theme"],
+      "format": "json"
+    },
+    {
+      "path": "docs/EVA-2.0/ESDC/eva2_fastlane_repo_v5_full/eva2_fastlane_repo_v5_full/samples/eva-ui/LayoutRenderer.tsx",
+      "category": "sample-code",
+      "summary": "Generic layout renderer consuming metadata-defined sections and component registry.",
+      "keywords": ["react", "layout", "metadata"],
+      "format": "typescript"
+    },
+    {
+      "path": "docs/EVA-2.0/ESDC/marco_profile_repo_v2/marco_profile_repo_v2/profile/",
+      "category": "profile",
+      "summary": "JSON corpus describing Marco's identity, preferences, values, project dossiers, EVA architecture, prompt patterns, and workflows.",
+      "keywords": ["profile", "preferences", "projects"],
+      "format": "json"
+    },
+    {
+      "path": "docs/EVA-2.0/ESDC/marco_profile_repo_v2/marco_profile_repo_v2/meeting_summaries/meeting_summary_template.json",
+      "category": "template",
+      "summary": "Standard meeting summary schema with context, decisions, actions, and attachments.",
+      "keywords": ["template", "meetings"],
+      "format": "json"
+    }
+  ]
+}

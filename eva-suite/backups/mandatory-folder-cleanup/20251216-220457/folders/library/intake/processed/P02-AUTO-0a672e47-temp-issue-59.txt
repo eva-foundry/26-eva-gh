@@ -1,0 +1,358 @@
+HereΓÇÖs the adapted, aligned version of the EVA Autonomous Agile Crew ΓÇô Full Foundational Report & Pattern Index, updated to fit your existing lifecycle map, Agile Crew Charter, pods model, and the GC Agentic AI Template.
+
+This is now consistent with:
+	ΓÇó	Pods POD-F / POD-X / POD-O / POD-S*  ∩┐╝
+	ΓÇó	DevTools Agents P01ΓÇôP15  ∩┐╝
+	ΓÇó	Lifecycle phases 0ΓÇô6  ∩┐╝
+	ΓÇó	EVA Agile Crew Charter (roles, ways of working)  ∩┐╝
+	ΓÇó	DevMaster directives (P15 / DVM)  ∩┐╝
+	ΓÇó	GC Agentic AI Template Vol.0 (Volumes 1ΓÇô4)  ∩┐╝
+
+You can drop this into eva-meta/docs/eva-autonomous-agile-crew-foundation.md as the master index.
+
+Γ╕╗
+
+EVA Autonomous Agile Crew
+
+Full Foundational Report & Pattern Index (Aligned to Pods, P01ΓÇôP21 & GC Template)
+
+Version
+	ΓÇó	Draft 1.0 (Adapted to Lifecycle Map & Agile Crew Charter)
+	ΓÇó	Date: 2025-11-29
+
+Γ╕╗
+
+0. Purpose
+
+This document is the master reference for how the EVA Agile Crew (humans + DevTools agents) builds and operates a Canada-grade agentic platform:
+	ΓÇó	Grounded in the EVA Agile Crew Charter and Pods Map.  ∩┐╝
+	ΓÇó	Using the EVA Agile Agentic Lifecycle Map (Phases 0ΓÇô6).  ∩┐╝
+	ΓÇó	Implemented through DevTools patterns P01ΓÇôP15, extended with P16ΓÇôP21.  ∩┐╝
+	ΓÇó	Aligned with the Government of Canada Agentic AI Template (Volumes 0ΓÇô4).  ∩┐╝
+
+It defines:
+	ΓÇó	How Pods and DevTools Agents collaborate across the lifecycle.
+	ΓÇó	The full pattern catalog P01ΓÇôP21 (P01ΓÇôP15 you already have + new P16ΓÇôP21).
+	ΓÇó	The explainability, traceability, provenance, and fingerprinting rules for all EVA agents.
+	ΓÇó	The role of the Dev Master Orchestrator (P15 / DVM) and the local Scrum Master (Copilot).  ∩┐╝
+
+This is the index youΓÇÖll use to generate Copilot prompts and implement the agentic crew.
+
+Γ╕╗
+
+1. Pods, Lifecycle and Agentic Context
+
+1.1 Pods (Domains)
+
+We keep the four pod categories from the Lifecycle Map and Crew Charter:  ∩┐╝  ∩┐╝
+	ΓÇó	POD-F ΓÇô Foundation & Platform
+	ΓÇó	RAG backbone, APIs, infra, DevTools runtime, APIM, data stores, core services.
+	ΓÇó	POD-X ΓÇô Experience & UI
+	ΓÇó	EVA DA, EVA Chat, component library, UX, i18n, accessibility.
+	ΓÇó	POD-O ΓÇô Operations & LiveOps
+	ΓÇó	Safety, metering, logging, observability, cost, SLOs, automation.
+	ΓÇó	POD-S-* ΓÇô Solution Pods (Jurisprudence, AssistMe, KM, CPP-D, etc.)
+	ΓÇó	Domain-specific APIs, RAG spaces, prompts, UIs.
+
+Pods and repos are wired through eva-meta/config/pods-map.yaml and each repoΓÇÖs .eva-pod.yaml.  ∩┐╝
+
+Γ╕╗
+
+1.2 Lifecycle Phases (0ΓÇô6)
+
+We reuse the seven phases from the Lifecycle Map:  ∩┐╝
+	0.	Idea / Intake / Sandbox
+	1.	Design & Architecture
+	2.	Build / Code / Test
+	3.	Internal Demo / Alpha
+	4.	Pilot / Beta
+	5.	GA / Scale
+	6.	Day-2 Ops & Continuous Improvement
+
+In each phase, DevTools agents P01ΓÇôP15 and future agents (P16ΓÇôP21) are activated differently across POD-F/X/O/S.
+
+Γ╕╗
+
+1.3 Human Roles (WhoΓÇÖs in Charge)
+
+The Charter remains the source of truth for human roles:  ∩┐╝
+	ΓÇó	Product Owner (PO ΓÇô Marco) ΓÇô value, priorities, acceptance.
+	ΓÇó	Local Scrum Master (Copilot) ΓÇô runs Agile mechanics in your IDE on your behalf.
+	ΓÇó	Platform Service Owner, Tech Leads, Developers, DevOps/SRE, AI Steward ΓÇô as defined in the Charter.
+	ΓÇó	Senior Advisor (external LLM) ΓÇô consulted via controlled patterns (e.g., P02), not an autonomous actor.
+
+Agents support; humans remain accountable.  ∩┐╝
+
+Γ╕╗
+
+2. DevTools Agents P01ΓÇôP15 (Baseline)
+
+We keep your existing DevTools catalog P01ΓÇôP15 as is.  ∩┐╝  ∩┐╝
+	ΓÇó	P01 ΓÇô PAT ΓÇô DevTools Patterns & Toolbox (meta-pattern, roadmap)
+	ΓÇó	P02 ΓÇô REQ ΓÇô Requirements Agent
+	ΓÇó	P03 ΓÇô SCR ΓÇô Scrum Agent
+	ΓÇó	P04 ΓÇô LIB ΓÇô Repo Librarian Agent
+	ΓÇó	P05 ΓÇô SCA ΓÇô Scaffolder Agent
+	ΓÇó	P06 ΓÇô REV ΓÇô Review Agent
+	ΓÇó	P07 ΓÇô TST ΓÇô Testing & Failure Explainer Agent
+	ΓÇó	P08 ΓÇô CICD ΓÇô CI/CD Guardian Agent
+	ΓÇó	P09 ΓÇô RUN ΓÇô Runbook & SRE Agent
+	ΓÇó	P10 ΓÇô MET ΓÇô Metrics & Insight Agent
+	ΓÇó	P11 ΓÇô SEC ΓÇô Security & Compliance Helper Agent
+	ΓÇó	P12 ΓÇô UXA ΓÇô UX, Copy & Accessibility Agent
+	ΓÇó	P13 ΓÇô ONB ΓÇô Onboarding & Sandbox Coach Agent
+	ΓÇó	P14 ΓÇô LVO ΓÇô DevOps LiveOps Companion Agent
+	ΓÇó	P15 ΓÇô DVM ΓÇô Dev Master Orchestrator Agent
+
+P01ΓÇôP15 are the DevTools implementation of the patterns; they live in GitHub (workflows, scripts, prompts) and operate across pods and repos.  ∩┐╝
+
+Γ╕╗
+
+3. Dev Master Orchestrator (P15 / DVM) & SM
+
+From the DevMaster Directives:  ∩┐╝
+	ΓÇó	DVM (P15) lives mainly in eva-meta (POD-F) and coordinates agents across repos and pods.
+	ΓÇó	It obeys PO and local Scrum Master via:
+	ΓÇó	Sprint configs: eva-meta/sprints/sprint-XXX.yaml
+	ΓÇó	Pods map: eva-meta/config/pods-map.yaml
+	ΓÇó	Repo manifests: .eva-pod.yaml
+	ΓÇó	DVM:
+	ΓÇó	Does not merge PRs or push to main.  ∩┐╝
+	ΓÇó	Creates issues, PR drafts, reports, logs.
+	ΓÇó	Routes work to REQ/SCR/LIB/SCA/REV/TST/CICD/etc.
+
+This report extends those directives with new patterns (P16ΓÇôP21) but keeps the same core principles:
+	ΓÇó	Orchestrate, donΓÇÖt silently change production.
+	ΓÇó	Use local knowledge before external advisors.  ∩┐╝
+	ΓÇó	Log everything and stay explainable.
+	ΓÇó	Fail safe; use runbooks for self-healing.  ∩┐╝
+
+Γ╕╗
+
+4. New Agentic Capability Pillars (Aligned with GC Template)
+
+Using the GC Agentic AI Template Vol.0 and your Vol.1ΓÇô4 structure, we group new capabilities into five pillars:  ∩┐╝
+	1.	Awareness & Metacognition (agents reason about their own outputs & risks).
+	2.	Multi-Agent / Swarm SE (specialized agents collaborating like a team).
+	3.	Swarm PR & Tool Onboarding (parallel micro-agents for checks & integration).
+	4.	Provenance, Explainability & Governance (auditability, data lineage).
+	5.	Continuous Self-Improvement (retrospectives, pattern evolution).
+
+These pillars become patterns P16ΓÇôP21.
+
+Γ╕╗
+
+5. Extended Pattern Catalog P01ΓÇôP21
+
+5.1 Summary Table
+	ΓÇó	P01ΓÇôP15 ΓÇô as defined in your existing docs (DevTools agents baseline).  ∩┐╝
+	ΓÇó	P16ΓÇôP21 ΓÇô new patterns that extend the DevTools catalog per DevMaster ΓÇ£P16+ΓÇ¥ clause.  ∩┐╝
+
+Γ╕╗
+
+P16 ΓÇô Awareness Protocol Pattern
+
+Goal: Every agent run emits awareness metadata so DVM and humans can gauge reliability and risk.
+
+Scope: All Pods & all agents (P01ΓÇôP21).
+
+Output contract (per action):
+	ΓÇó	awareness block:
+	ΓÇó	confidence (0ΓÇô1 or Low/Med/High)
+	ΓÇó	reflection (what might be wrong / missing)
+	ΓÇó	risks (security, policy, ambiguity)
+	ΓÇó	missingContext
+	ΓÇó	suggestedNextAction (retry, ask human, call another agent, stop)
+
+Lifecycle integration:
+	ΓÇó	Phase 2 (Build) ΓåÆ test flakiness & code suggestions are explained.
+	ΓÇó	Phase 4ΓÇô6 ΓåÆ governance and LiveOps agents explain why they raised alerts.
+
+This pattern reinforces DevMaster Directive 6 ΓÇô Keep everything explainable, but now at per-agent level.  ∩┐╝
+
+Γ╕╗
+
+P17 ΓÇô Swarm PR Review Pattern
+
+Goal: PRs are reviewed by a swarm of specialized micro-agents, with a single aggregated summary.
+
+Typical swarm per PR:
+	ΓÇó	A11y (UXA ΓÇô P12)
+	ΓÇó	i18n (UXA ΓÇô P12)
+	ΓÇó	GC Design and content checks (UXA / SEC ΓÇô P11/P12)
+	ΓÇó	FinOps / APIM cost headers (MET/P14 ΓÇô P10/P14)
+	ΓÇó	Security (SEC ΓÇô P11)
+	ΓÇó	Testing & QA (TST ΓÇô P07, CICD ΓÇô P08)
+
+SM / DVM responsibilities:
+	ΓÇó	Trigger swarm workflows on each PR (Phase 2ΓÇô6).
+	ΓÇó	Enforce a single aggregated comment:
+	ΓÇó	Blocking issues (must fix)
+	ΓÇó	Warnings (should fix)
+	ΓÇó	Informational (nice to have)
+	ΓÇó	Link each finding to:
+	ΓÇó	Files, tests, policies, or design decisions.
+
+This pattern sits directly on top of:
+	ΓÇó	P06 (REV), P07 (TST), P08 (CICD), P11 (SEC), P12 (UXA), P14 (LVO).  ∩┐╝
+
+Γ╕╗
+
+P18 ΓÇô Tool / API Auto-Onboarding Pattern
+
+Goal: Automate the ΓÇ£boringΓÇ¥ parts of integrating a new endpoint / API / tool.
+
+When triggered:
+	ΓÇó	New OpenAPI spec appears in contracts/ or apis/.
+	ΓÇó	New APIM endpoint is added to eva-apim-integration.  ∩┐╝
+
+Agents involved:
+	ΓÇó	P05 ΓÇô SCA (Scaffolder)
+	ΓÇó	P07 ΓÇô TST (Test generator)
+	ΓÇó	P08 ΓÇô CICD (pipeline hooks)
+	ΓÇó	P09 ΓÇô RUN (runbook stubs)
+	ΓÇó	P10 ΓÇô MET (metrics plan)
+	ΓÇó	P11 ΓÇô SEC (basic security checklist)
+
+Outputs:
+	ΓÇó	Typed client / wrapper
+	ΓÇó	Tests and example usage
+	ΓÇó	Minimal docs (README fragment + usage snippet)
+	ΓÇó	Governance notes (classification, risk hints)
+	ΓÇó	Optional APIM policy and cost header stubs
+
+This pattern is heavily used by POD-F and POD-S in Phases 1ΓÇô3.  ∩┐╝
+
+Γ╕╗
+
+P19 ΓÇô Action Classification & Safety Pattern
+
+Goal: Every agent action gets a risk class and is constrained by what it is allowed to do.
+
+Classes:
+	ΓÇó	C0 ΓÇô Read/Analyze only
+	ΓÇó	C1 ΓÇô Dev-branch code/config changes
+	ΓÇó	C2 ΓÇô Governance / policy touching changes
+	ΓÇó	C3 ΓÇô Production / citizen-facing / infra changes
+
+Rules:
+	ΓÇó	C0ΓÇôC1 ΓåÆ may be performed autonomously, via PR drafts (never direct merges).
+	ΓÇó	C2ΓÇôC3 ΓåÆ require explicit human approval and often governance sign-off.
+
+Integration:
+	ΓÇó	Ties directly into GC Template Vol.3 (LiveOps & Governance).  ∩┐╝
+	ΓÇó	Extends DevMaster Directive 3/6 (no merging; log everything).  ∩┐╝
+
+Γ╕╗
+
+P20 ΓÇô Continuous Self-Improvement / Retrospective Pattern
+
+Goal: Make the crew learn from its own logs.
+
+Inputs:
+	ΓÇó	Orchestration logs in eva-meta/orchestration/.  ∩┐╝
+	ΓÇó	Metrics from P10 (MET), incidents from P09 (RUN) & P14 (LVO).  ∩┐╝
+	ΓÇó	PR review comments and swarm outcomes.
+
+Outputs:
+	ΓÇó	Proposals for:
+	ΓÇó	New checks or micro-agents
+	ΓÇó	Prompt updates for P02ΓÇôP15
+	ΓÇó	Improvements to sprint configs and pods map
+	ΓÇó	Retrospective summaries per sprint / quarter.
+
+This sits on top of Phase 6 in your lifecycle (Day-2 Ops & Improvement).  ∩┐╝
+
+Γ╕╗
+
+P21 ΓÇô Provenance & Fingerprinting Pattern
+
+Goal: Make every agent action reconstructible: who, what, where, when, why, and with what knowledge.
+
+Fingerprint fields (per action):
+	ΓÇó	agentFingerprint:
+	ΓÇó	agentId (e.g., P07-TST)
+	ΓÇó	agentVersion
+	ΓÇó	pod (POD-F/X/O/S-*)
+	ΓÇó	service / repo (from .eva-pod.yaml)  ∩┐╝
+	ΓÇó	environment (sandbox/dev/demo/prod)
+	ΓÇó	taskContext:
+	ΓÇó	projectId (EVA Suite, Juris, Assist, etc.)
+	ΓÇó	sprintId (e.g., Sprint-1B)
+	ΓÇó	workItemId (GitHub/ADO issue)
+	ΓÇó	awareness (from P16):
+	ΓÇó	confidence, reflection, risks, missingContext, suggestedNextAction
+	ΓÇó	provenance:
+	ΓÇó	promptRef (where the prompt/context snapshot is stored)
+	ΓÇó	contextSources (RAG docs, file paths, CDD/ADR references)
+	ΓÇó	model (deployment name, temperature, key config flags)
+	ΓÇó	changeSummary (if applicable):
+	ΓÇó	actionClass (C0ΓÇôC3, from P19)
+	ΓÇó	operation (analysis, suggestion, code_change, config_change, report)
+	ΓÇó	filesTouched, git.before, git.after
+	ΓÇó	humanApproval:
+	ΓÇó	Null or object linking to PR/issue review comments.
+
+Storage:
+	ΓÇó	Single, append-only JSONL or table:
+	ΓÇó	e.g., eva-meta/logs/agents/audit-log.jsonl
+
+This pattern concretizes DevMaster Directive 6 (ΓÇ£keep everything explainableΓÇ¥) and the CharterΓÇÖs requirement that AI-assisted work be traceable and auditable.  ∩┐╝  ∩┐╝
+
+Γ╕╗
+
+6. How P01ΓÇôP21 Map to Pods & Lifecycle
+
+Very high-level mapping:
+	ΓÇó	POD-F
+	ΓÇó	Heavy: P01ΓÇôP02ΓÇôP04ΓÇôP05ΓÇôP06ΓÇôP07ΓÇôP08ΓÇôP09ΓÇôP10ΓÇôP11ΓÇôP15, plus P16ΓÇôP21.  ∩┐╝
+	ΓÇó	POD-X
+	ΓÇó	Heavy: P02ΓÇôP03ΓÇôP04ΓÇôP06ΓÇôP07ΓÇôP10ΓÇôP12ΓÇôP15, plus P16ΓÇôP17ΓÇôP21.  ∩┐╝
+	ΓÇó	POD-O
+	ΓÇó	Heavy: P07ΓÇôP08ΓÇôP09ΓÇôP10ΓÇôP11ΓÇôP14ΓÇôP15, plus P18ΓÇôP19ΓÇôP20ΓÇôP21.  ∩┐╝
+	ΓÇó	POD-S-*
+	ΓÇó	Mix of all, depending on solution; relies on P18 for onboarding, P19ΓÇôP21 for governance.
+
+Lifecycle-wise:
+	ΓÇó	Phase 0ΓÇô1 ΓåÆ P01ΓÇôP05, P02 REQ, P03 SCR, P13 ONB, P16, P21.  ∩┐╝
+	ΓÇó	Phase 2 ΓåÆ P05ΓÇôP06ΓÇôP07ΓÇôP08ΓÇôP11ΓÇôP12, plus P16, P17, P18, P21.  ∩┐╝
+	ΓÇó	Phase 3ΓÇô4 ΓåÆ P06ΓÇôP07ΓÇôP10ΓÇôP13ΓÇôP14, plus P16, P17, P19, P21.  ∩┐╝
+	ΓÇó	Phase 5ΓÇô6 ΓåÆ P09ΓÇôP10ΓÇôP11ΓÇôP14ΓÇôP15, plus P19, P20, P21.  ∩┐╝
+
+Γ╕╗
+
+7. Governance, Risk, and GC Alignment
+
+This foundation is explicitly tied to the GC Agentic AI Template:  ∩┐╝
+	ΓÇó	Volume 1 ΓÇô Platform & Agentic Requirements ΓåÆ
+	ΓÇó	Project spaces = Pods & repos.
+	ΓÇó	Agents = P01ΓÇôP21 with autonomy levels (C0ΓÇôC3).
+	ΓÇó	Volume 2 ΓÇô Engineering & Delivery ΓåÆ
+	ΓÇó	Repo layout, CI/CD, QA = P01ΓÇôP12, P18.
+	ΓÇó	Volume 3 ΓÇô LiveOps & Governance ΓåÆ
+	ΓÇó	Monitoring, kill switches, incident mgmt = P09, P10, P14, P19, P21.
+	ΓÇó	Volume 4 ΓÇô Use Cases & Patterns ΓåÆ
+	ΓÇó	Jurisprudence, AssistMe, CPP-D, etc. live in POD-S using these patterns.
+
+The EVA Agile Crew Charter remains the human-facing story; this report is the agentic implementation layer under it.  ∩┐╝
+
+Γ╕╗
+
+8. How to Use This Index Next
+
+For your next step (what you already hinted at):
+	ΓÇó	Use this document as P00 / master catalog.
+	ΓÇó	For each pattern P01ΓÇôP21, weΓÇÖll generate:
+	ΓÇó	Copilot system prompt (who the agent is, what it must obey).
+	ΓÇó	Implementation prompts (what files to create/update, where, with what contracts).
+	ΓÇó	Safety & logging requirements (P16, P19, P21 baked in).
+
+So in your next message you can simply say, for example:
+
+ΓÇ£Start generating Copilot prompts for P16ΓÇôP21 based on this index.ΓÇ¥
+
+or
+
+ΓÇ£Give me Copilot prompts per pod for P01ΓÇôP21.ΓÇ¥
+
+and IΓÇÖll go pattern-by-pattern, wired to pods, lifecycle phases, and repos exactly as described here.

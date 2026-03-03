@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-tool-email-draft-assistant.md",
+  "feature_key": "P02-AUTO-dfaa9026",
+  "title": "CDD: EVA Email Draft Assistant Tool",
+  "p02_artifacts_path": "docs/features/eva-tool-email-draft-assistant",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-tool-email-draft-assistant",
+  "created_timestamp": "2025-11-25T23:55:13.9517679Z"
+}

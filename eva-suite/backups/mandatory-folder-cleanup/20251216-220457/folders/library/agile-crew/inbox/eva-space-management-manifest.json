@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-space-management.md",
+  "feature_key": "P02-AUTO-8f14eaa0",
+  "title": "CDD: EVA Domain Assistant - Space Management",
+  "p02_artifacts_path": "docs/features/eva-space-management",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-space-management",
+  "created_timestamp": "2025-11-25T23:55:07.0306551Z"
+}

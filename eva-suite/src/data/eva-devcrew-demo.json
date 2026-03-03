@@ -1,0 +1,127 @@
+{
+  "current_sprint": 3,
+  "sprints": [
+    {
+      "id": 3,
+      "name": "Sprint 3 – EVA Suite Heroes",
+      "goal": "Deliver LiveOps, EVA DA and Dev Crew hero demos for the Dec 24 EVA Suite showcase.",
+      "agents": [
+        {
+          "id": "planner",
+          "name": "Planner Agent",
+          "role": "Breaks down features into executable plans and tasks.",
+          "status": "Working",
+          "focus": "LiveOps + EVA DA hero flows",
+          "capacity_pct": 85
+        },
+        {
+          "id": "frontend",
+          "name": "Frontend Agent",
+          "role": "Implements React components, routing and pages.",
+          "status": "Working",
+          "focus": "EVA Suite shell + hero UIs",
+          "capacity_pct": 90
+        },
+        {
+          "id": "docs",
+          "name": "Docs Agent",
+          "role": "Keeps architecture notes, sprint docs and playbooks up to date.",
+          "status": "Idle",
+          "focus": "Waiting for Sprint 3 review tasks",
+          "capacity_pct": 40
+        },
+        {
+          "id": "qa",
+          "name": "QA Agent",
+          "role": "Runs checks, catches regressions and suggests fixes.",
+          "status": "Reviewing",
+          "focus": "Manual checks of hero demos",
+          "capacity_pct": 60
+        }
+      ],
+      "tasks": [
+        {
+          "id": "DEV-101",
+          "title": "Build EVA Suite product explorer shell",
+          "type": "feature",
+          "assignee": "Frontend Agent",
+          "status": "Done",
+          "confidence": "High"
+        },
+        {
+          "id": "DEV-102",
+          "title": "Implement LiveOps dashboard demo",
+          "type": "feature",
+          "assignee": "Frontend Agent",
+          "status": "In progress",
+          "confidence": "High"
+        },
+        {
+          "id": "DEV-103",
+          "title": "Implement EVA DA decision-support demo",
+          "type": "feature",
+          "assignee": "Planner Agent",
+          "status": "In progress",
+          "confidence": "Medium"
+        },
+        {
+          "id": "DEV-104",
+          "title": "Add Dev Crew sprint overview dashboard",
+          "type": "feature",
+          "assignee": "Planner Agent",
+          "status": "Not started",
+          "confidence": "Medium"
+        },
+        {
+          "id": "DOC-201",
+          "title": "Document EVA Suite Dec 24 demo scope",
+          "type": "docs",
+          "assignee": "Docs Agent",
+          "status": "Done",
+          "confidence": "High"
+        },
+        {
+          "id": "QA-301",
+          "title": "Smoke test EVA Suite hero demos",
+          "type": "qa",
+          "assignee": "QA Agent",
+          "status": "Planned",
+          "confidence": "Medium"
+        }
+      ],
+      "summary": {
+        "status": "On track (demo data)",
+        "highlights": [
+          "Core EVA Suite shell is in place.",
+          "LiveOps and EVA DA demos are being refined.",
+          "Dev Crew dashboard is the last hero piece."
+        ],
+        "risks": [
+          "Timebox is tight for polishing all three heroes.",
+          "Automation of the AI Dev Orchestrator is not wired yet (demo-only view)."
+        ],
+        "next_steps": [
+          "Finish Dev Crew dashboard UI.",
+          "Run a mini sprint review to validate narratives.",
+          "Prepare groundwork for future automation (AI Dev Orchestrator)."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Sprint 4 – Automation First Pass",
+      "goal": "Start wiring AI Dev Orchestrator plans to generate code and docs automatically (future work).",
+      "agents": [],
+      "tasks": [],
+      "summary": {
+        "status": "Future",
+        "highlights": [
+          "Will focus on automation of EVA Suite work.",
+          "Not part of the Dec 24 demo."
+        ],
+        "risks": [],
+        "next_steps": []
+      }
+    }
+  ]
+}

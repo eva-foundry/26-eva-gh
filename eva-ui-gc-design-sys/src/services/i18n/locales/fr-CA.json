@@ -1,0 +1,190 @@
+{
+  "header": {
+    "skip": "Passer au contenu principal",
+    "brand": "Gouvernement du Canada",
+    "customize": "Personnaliser",
+    "language": {
+      "english": "English",
+      "french": "Français"
+    }
+  },
+  "footer": {
+    "brand": "Gouvernement du Canada",
+    "topics": {
+      "title": "Thèmes du gouvernement du Canada",
+      "jobs": "Emplois",
+      "immigration": "Immigration et citoyenneté",
+      "travel": "Voyage et tourisme",
+      "business": "Entreprises",
+      "benefits": "Prestations",
+      "health": "Santé",
+      "taxes": "Impôts",
+      "environment": "Environnement et ressources naturelles"
+    },
+    "corporate": {
+      "social": "Médias sociaux",
+      "mobile": "Applications mobiles",
+      "about": "À propos de Canada.ca",
+      "terms": "Avis",
+      "privacy": "Confidentialité"
+    },
+    "modified": "Date de modification"
+  },
+  "chat": {
+    "title": "Assistant EVA",
+    "subtitle": "Posez des questions sur les politiques et procédures gouvernementales",
+    "knowledgeSpace": "Espace de connaissances",
+    "selectSpace": "Sélectionnez un espace de connaissances",
+    "loading": "Chargement...",
+    "documents": "documents",
+    "placeholder": "Tapez votre question...",
+    "send": "Envoyer",
+    "sending": "Envoi en cours...",
+    "copy": "Copier",
+    "copied": "Copié dans le presse-papiers",
+    "you": "Vous",
+    "eva": "EVA",
+    "error": "Échec de l'envoi du message. Veuillez réessayer.",
+    "empty": {
+      "title": "Bienvenue à EVA",
+      "message": "Sélectionnez un espace de connaissances ci-dessus et commencez à poser des questions."
+    },
+    "spaces": {
+      "general": {
+        "name": "Connaissances générales",
+        "description": "Informations gouvernementales générales"
+      },
+      "hr": {
+        "name": "Politiques RH",
+        "description": "Politiques de ressources humaines et de milieu de travail"
+      },
+      "it": {
+        "name": "Sécurité TI",
+        "description": "Directives de sécurité des technologies de l'information"
+      },
+      "procurement": {
+        "name": "Approvisionnement",
+        "description": "Procédures d'approvisionnement et de passation de marchés"
+      }
+    }
+  },
+  "backstage": {
+    "title": "Personnaliser EVA",
+    "close": "Fermer le panneau de personnalisation",
+    "navigation": "Navigation de personnalisation",
+    "nav": {
+      "home": "Accueil",
+      "theme": "Thème",
+      "text": "Texte et contenu",
+      "i18n": "Langues",
+      "features": "Fonctionnalités",
+      "deploy": "Déployer",
+      "importExport": "Importer / Exporter"
+    },
+    "actions": {
+      "save": "Enregistrer les modifications",
+      "reset": "Réinitialiser aux valeurs par défaut"
+    },
+    "preview": {
+      "title": "Aperçu en direct",
+      "live": "En direct",
+      "description": "L'aperçu en direct apparaîtra ici lorsque des modifications seront apportées"
+    },
+    "home": {
+      "welcome": "Bienvenue dans la personnalisation d'EVA",
+      "description": "Configurez votre instance EVA avec une image de marque, du contenu et des fonctionnalités personnalisés",
+      "currentConfig": "Configuration actuelle",
+      "theme": "Thème",
+      "languages": "Langues",
+      "features": "Fonctionnalités",
+      "enabled": "activées",
+      "knowledgeSpace": "Espace de connaissances actif",
+      "messages": "Messages de chat",
+      "quickActions": "Actions rapides",
+      "exportConfig": "Exporter la configuration",
+      "importConfig": "Importer la configuration",
+      "resetDefaults": "Réinitialiser aux valeurs par défaut"
+    },
+    "theme": {
+      "title": "Personnalisation du thème",
+      "description": "Personnalisez les couleurs, la typographie et l'apparence visuelle",
+      "colors": "Palette de couleurs",
+      "typography": "Typographie",
+      "spacing": "Espacement et disposition",
+      "primaryFont": "Police principale",
+      "primaryFontDesc": "Utilisée pour les titres et l'emphase",
+      "secondaryFont": "Police secondaire",
+      "secondaryFontDesc": "Utilisée pour la prise en charge étendue d'Unicode"
+    },
+    "text": {
+      "title": "Texte et contenu",
+      "description": "Remplacer les chaînes de texte par défaut et personnaliser le contenu",
+      "overrides": "Remplacements de texte",
+      "appTitle": "Titre de l'application",
+      "appSubtitle": "Sous-titre de l'application",
+      "welcomeMessage": "Message de bienvenue",
+      "tip": "Conseil professionnel",
+      "tipDescription": "Les remplacements de texte prennent en charge le formatage Markdown et peuvent être localisés par langue."
+    },
+    "i18n": {
+      "title": "Langues et localisation",
+      "description": "Gérer le contenu bilingue et la couverture de traduction",
+      "supportedLanguages": "Langues prises en charge",
+      "currentLanguage": "Langue actuelle",
+      "activeLanguage": "Langue active",
+      "note": "Remarque",
+      "noteDescription": "EVA-UI répond aux exigences fédérales en matière de bilinguisme avec une couverture de traduction de 100 % pour EN-CA et FR-CA."
+    },
+    "features": {
+      "title": "Gestion des fonctionnalités",
+      "description": "Activer ou désactiver les fonctionnalités et capacités d'EVA",
+      "available": "Fonctionnalités disponibles",
+      "chat": "Interface de chat",
+      "chatDesc": "Activer l'interface de chat principale",
+      "knowledgeSpaces": "Espaces de connaissances",
+      "knowledgeSpacesDesc": "Permettre aux utilisateurs de sélectionner différentes bases de connaissances",
+      "messageHistory": "Historique des messages",
+      "messageHistoryDesc": "Conserver les messages de chat entre les sessions",
+      "copyMessages": "Copier les messages",
+      "copyMessagesDesc": "Permettre aux utilisateurs de copier les messages dans le presse-papiers",
+      "streaming": "Réponses en continu",
+      "streamingDesc": "Diffuser les réponses de l'IA en temps réel (à venir)",
+      "warning": "Avertissement",
+      "warningDescription": "La désactivation des fonctionnalités principales peut affecter l'expérience utilisateur. Testez minutieusement avant le déploiement."
+    },
+    "deploy": {
+      "title": "Gestion du déploiement",
+      "description": "Examiner l'état de préparation au déploiement et déployer votre configuration",
+      "preDeploymentChecks": "Vérifications avant le déploiement",
+      "checks": {
+        "accessibility": "Conformité WCAG 2.2 AA",
+        "i18n": "Couverture bilingue",
+        "designSystem": "Conformité au système de conception GC",
+        "apiConnection": "Connexion EVA-API"
+      },
+      "deploymentActions": "Actions de déploiement",
+      "deployProduction": "Déployer en production",
+      "deployStaging": "Déployer en pré-production",
+      "runTests": "Exécuter tous les tests",
+      "info": "Info",
+      "infoDescription": "Toutes les modifications de configuration sont validées avant le déploiement pour garantir la conformité au système de conception GC."
+    },
+    "importExport": {
+      "title": "Importer / Exporter la configuration",
+      "description": "Exportez votre configuration actuelle ou importez une configuration enregistrée",
+      "exportConfig": "Exporter la configuration",
+      "exportDescription": "Téléchargez votre configuration EVA actuelle sous forme de fichier JSON",
+      "downloadJson": "Télécharger JSON",
+      "copy": "Copier",
+      "importConfig": "Importer la configuration",
+      "importDescription": "Téléchargez ou collez un fichier de configuration JSON pour restaurer les paramètres",
+      "pasteJsonHere": "Collez la configuration JSON ici...",
+      "uploadFile": "Télécharger le fichier",
+      "applyConfig": "Appliquer la configuration",
+      "exportSuccess": "Configuration exportée avec succès",
+      "copiedToClipboard": "Configuration copiée dans le presse-papiers",
+      "warning": "Avertissement",
+      "warningDescription": "L'importation d'une configuration écrasera vos paramètres actuels. Assurez-vous d'exporter d'abord votre configuration actuelle."
+    }
+  }
+}

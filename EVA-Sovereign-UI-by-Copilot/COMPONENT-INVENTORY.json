@@ -1,0 +1,255 @@
+{
+  "counts": {
+    "defined": 91,
+    "documented": 41,
+    "undocumentedCount": 50,
+    "missingImplementationsCount": 0
+  },
+  "undocumented": [
+    "eva-accordion-item",
+    "eva-avatar-fallback",
+    "eva-avatar-image",
+    "eva-breadcrumb-item",
+    "eva-breadcrumb-link",
+    "eva-breadcrumb-list",
+    "eva-breadcrumb-page",
+    "eva-breadcrumb-separator",
+    "eva-card-content",
+    "eva-card-description",
+    "eva-card-footer",
+    "eva-card-header",
+    "eva-card-title",
+    "eva-carousel-item",
+    "eva-chat-message",
+    "eva-chat-panel",
+    "eva-collapsible-content",
+    "eva-collapsible-trigger",
+    "eva-container",
+    "eva-context-menu-item",
+    "eva-dialog-description",
+    "eva-dialog-footer",
+    "eva-dialog-header",
+    "eva-dialog-title",
+    "eva-dropdown-menu-item",
+    "eva-dropdown-menu-label",
+    "eva-dropdown-menu-separator",
+    "eva-gc-button",
+    "eva-gc-footer",
+    "eva-gc-header",
+    "eva-hero-banner",
+    "eva-language-switcher",
+    "eva-menubar-item",
+    "eva-menubar-menu",
+    "eva-page-shell",
+    "eva-program-card",
+    "eva-sheet-description",
+    "eva-sheet-footer",
+    "eva-sheet-header",
+    "eva-sheet-title",
+    "eva-skip-link",
+    "eva-table-body",
+    "eva-table-cell",
+    "eva-table-head",
+    "eva-table-header",
+    "eva-table-row",
+    "eva-tabs-content",
+    "eva-tabs-list",
+    "eva-tabs-trigger",
+    "eva-test-element"
+  ],
+  "missingImplementations": [],
+  "files": {
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\accessibility\\eva-skip-link.ts": [
+      "eva-skip-link"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\chat\\eva-chat-message.ts": [
+      "eva-chat-message"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\chat\\eva-chat-panel.ts": [
+      "eva-chat-panel"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\esdc\\eva-program-card.ts": [
+      "eva-program-card"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\gc-design\\eva-gc-button.ts": [
+      "eva-gc-button"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\gc-design\\eva-gc-footer.ts": [
+      "eva-gc-footer"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\gc-design\\eva-gc-header.ts": [
+      "eva-gc-header"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\i18n\\eva-language-switcher.ts": [
+      "eva-language-switcher"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\layout\\eva-container.ts": [
+      "eva-container"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\layout\\eva-hero-banner.ts": [
+      "eva-hero-banner"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\layout\\eva-page-shell.ts": [
+      "eva-page-shell"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-accordion.ts": [
+      "eva-accordion",
+      "eva-accordion-item"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-alert-dialog.ts": [
+      "eva-alert-dialog"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-alert.ts": [
+      "eva-alert"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-aspect-ratio.ts": [
+      "eva-aspect-ratio"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-avatar.ts": [
+      "eva-avatar",
+      "eva-avatar-image",
+      "eva-avatar-fallback"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-badge.ts": [
+      "eva-badge"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-breadcrumb.ts": [
+      "eva-breadcrumb",
+      "eva-breadcrumb-list",
+      "eva-breadcrumb-item",
+      "eva-breadcrumb-link",
+      "eva-breadcrumb-page",
+      "eva-breadcrumb-separator"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-calendar.ts": [
+      "eva-calendar"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-card.ts": [
+      "eva-card",
+      "eva-card-header",
+      "eva-card-title",
+      "eva-card-description",
+      "eva-card-content",
+      "eva-card-footer"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-carousel.ts": [
+      "eva-carousel",
+      "eva-carousel-item"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-checkbox.ts": [
+      "eva-checkbox"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-collapsible.ts": [
+      "eva-collapsible",
+      "eva-collapsible-trigger",
+      "eva-collapsible-content"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-context-menu.ts": [
+      "eva-context-menu",
+      "eva-context-menu-item"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-dialog.ts": [
+      "eva-dialog",
+      "eva-dialog-header",
+      "eva-dialog-footer",
+      "eva-dialog-title",
+      "eva-dialog-description"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-drawer.ts": [
+      "eva-drawer"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-dropdown-menu.ts": [
+      "eva-dropdown-menu",
+      "eva-dropdown-menu-item",
+      "eva-dropdown-menu-separator",
+      "eva-dropdown-menu-label"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-hover-card.ts": [
+      "eva-hover-card"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-input-otp.ts": [
+      "eva-input-otp"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-input.ts": [
+      "eva-input"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-label.ts": [
+      "eva-label"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-menubar.ts": [
+      "eva-menubar",
+      "eva-menubar-menu",
+      "eva-menubar-item"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-pagination.ts": [
+      "eva-pagination"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-popover.ts": [
+      "eva-popover"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-progress.ts": [
+      "eva-progress"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-radio-group.ts": [
+      "eva-radio-group",
+      "eva-radio-group-item"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-scroll-area.ts": [
+      "eva-scroll-area"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-select.ts": [
+      "eva-select",
+      "eva-select-item"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-separator.ts": [
+      "eva-separator"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-sheet.ts": [
+      "eva-sheet",
+      "eva-sheet-header",
+      "eva-sheet-footer",
+      "eva-sheet-title",
+      "eva-sheet-description"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-skeleton.ts": [
+      "eva-skeleton"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-slider.ts": [
+      "eva-slider"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-switch.ts": [
+      "eva-switch"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-table.ts": [
+      "eva-table",
+      "eva-table-header",
+      "eva-table-body",
+      "eva-table-row",
+      "eva-table-head",
+      "eva-table-cell"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-tabs.ts": [
+      "eva-tabs",
+      "eva-tabs-list",
+      "eva-tabs-trigger",
+      "eva-tabs-content"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-textarea.ts": [
+      "eva-textarea"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-toggle-group.ts": [
+      "eva-toggle-group",
+      "eva-toggle-group-item"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-toggle.ts": [
+      "eva-toggle"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\components\\ui\\eva-tooltip.ts": [
+      "eva-tooltip"
+    ],
+    "C:\\Users\\marco\\Documents\\_AI Dev\\EVA Suite\\EVA-Sovereign-UI-by-Copilot\\packages\\eva-sovereign-ui-wc\\src\\__tests__\\setup.ts": [
+      "eva-test-element"
+    ]
+  },
+  "timestamp": "2025-11-30T13:42:51.916Z"
+}

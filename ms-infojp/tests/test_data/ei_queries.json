@@ -1,0 +1,365 @@
+{
+  "$schema": "./ei_queries_schema.json",
+  "description": "Sample Employment Insurance jurisprudence queries for MS-InfoJP testing",
+  "version": "1.0",
+  "last_updated": "2026-01-24",
+  "queries": [
+    {
+      "id": "query-001",
+      "category": "voluntary_leaving",
+      "query": "What are the conditions for just cause when voluntarily leaving employment?",
+      "expected_citations": [
+        "Canada (Attorney General) v White, 2011 FCA 190",
+        "Imran v Canada (Attorney General), 2008 FCA 17"
+      ],
+      "expected_topics": ["voluntary leaving", "just cause", "reasonable alternative"],
+      "complexity": "medium",
+      "expected_response_elements": [
+        "definition of just cause",
+        "reasonable alternative test",
+        "case citations"
+      ]
+    },
+    {
+      "id": "query-002",
+      "category": "misconduct",
+      "query": "When is an employee disqualified for misconduct under the EI Act?",
+      "expected_citations": [
+        "Lemire v Canada (Attorney General), 2010 FCA 314",
+        "Canada (Attorney General) v Secours, 1995 CanLII 3547"
+      ],
+      "expected_topics": ["misconduct", "disqualification", "willful conduct"],
+      "complexity": "medium",
+      "expected_response_elements": [
+        "definition of misconduct",
+        "willful or reckless conduct",
+        "breach of duty"
+      ]
+    },
+    {
+      "id": "query-003",
+      "category": "availability",
+      "query": "What does it mean to be available for work under section 18 of the EI Act?",
+      "expected_citations": [
+        "Canada (Attorney General) v Whiffen, 2010 FCA 39",
+        "Faucher v Canada (Employment Insurance Commission), 2012 FCA 45"
+      ],
+      "expected_topics": ["availability", "labor market attachment", "restrictions"],
+      "complexity": "high",
+      "expected_response_elements": [
+        "three-part test for availability",
+        "desire to work",
+        "labor market attachment",
+        "efforts to find employment"
+      ]
+    },
+    {
+      "id": "query-004",
+      "category": "hours_of_work",
+      "query": "How are insurable hours calculated for EI eligibility?",
+      "expected_citations": [
+        "Canada (Attorney General) v Huruglica, 2016 FCA 93",
+        "Still v MNR, 1998 CanLII 7598"
+      ],
+      "expected_topics": ["insurable hours", "eligibility", "calculation"],
+      "complexity": "low",
+      "expected_response_elements": [
+        "definition of insurable hours",
+        "calculation method",
+        "minimum hours requirement"
+      ]
+    },
+    {
+      "id": "query-005",
+      "category": "earnings_allocation",
+      "query": "How are earnings allocated when determining benefit entitlement?",
+      "expected_citations": [
+        "Canada (Attorney General) v Drolet, 2004 FCA 52",
+        "Canada (Attorney General) v Martin, 2005 FCA 156"
+      ],
+      "expected_topics": ["earnings allocation", "benefit calculation", "weeks worked"],
+      "complexity": "high",
+      "expected_response_elements": [
+        "earnings allocation rules",
+        "when earnings are considered paid",
+        "impact on benefit entitlement"
+      ]
+    },
+    {
+      "id": "query-006",
+      "category": "refusal_of_work",
+      "query": "When can a claimant refuse an offer of employment without penalty?",
+      "expected_citations": [
+        "Canada (Attorney General) v Campeau, 2008 FCA 13",
+        "Henrichson v Canada (Employment Insurance Commission), 2009 FCA 7"
+      ],
+      "expected_topics": ["refusal of work", "suitable employment", "good cause"],
+      "complexity": "medium",
+      "expected_response_elements": [
+        "definition of suitable employment",
+        "good cause for refusal",
+        "consequences of refusal"
+      ]
+    },
+    {
+      "id": "query-007",
+      "category": "training_course",
+      "query": "What are the requirements for attending a training course while receiving EI benefits?",
+      "expected_citations": [
+        "Canada (Attorney General) v Gagnon, 2013 FCA 51",
+        "Cloutier v Canada (Attorney General), 2007 FCA 22"
+      ],
+      "expected_topics": ["training", "availability", "course approval"],
+      "complexity": "medium",
+      "expected_response_elements": [
+        "approval requirements",
+        "impact on availability",
+        "exceptions to availability requirement"
+      ]
+    },
+    {
+      "id": "query-008",
+      "category": "self_employment",
+      "query": "Can a person receive EI benefits while self-employed?",
+      "expected_citations": [
+        "Canada (Attorney General) v Chafe, 2010 FCA 33",
+        "Canada (Attorney General) v Deschenes, 2011 FCA 83"
+      ],
+      "expected_topics": ["self-employment", "availability", "minor employment"],
+      "complexity": "high",
+      "expected_response_elements": [
+        "self-employment while on claim",
+        "minor vs major self-employment",
+        "impact on availability and benefits"
+      ]
+    },
+    {
+      "id": "query-009",
+      "category": "family_reasons",
+      "query": "Can family obligations be just cause for leaving employment?",
+      "expected_citations": [
+        "Canada (Attorney General) v Boivin, 2003 FCA 278",
+        "Bedell v Canada (Attorney General), 2007 FCA 210"
+      ],
+      "expected_topics": ["just cause", "family obligations", "reasonable alternative"],
+      "complexity": "medium",
+      "expected_response_elements": [
+        "circumstances that constitute family obligations",
+        "reasonable alternative analysis",
+        "burden of proof"
+      ]
+    },
+    {
+      "id": "query-010",
+      "category": "antedate",
+      "query": "When can a claimant antedate their EI claim?",
+      "expected_citations": [
+        "Canada (Attorney General) v Burke, 2012 FCA 139",
+        "Canada (Attorney General) v Kaler, 2011 FCA 266"
+      ],
+      "expected_topics": ["antedate", "good cause", "delay"],
+      "complexity": "medium",
+      "expected_response_elements": [
+        "good cause for delay",
+        "reasonable explanation",
+        "acting promptly when circumstances permit"
+      ]
+    },
+    {
+      "id": "query-011",
+      "category": "labour_dispute",
+      "query": "What is the effect of a labour dispute on EI entitlement?",
+      "expected_citations": [
+        "Canada (Attorney General) v Piascik, 2008 FCA 59",
+        "Canada (Attorney General) v Elbourne, 2008 FCA 13"
+      ],
+      "expected_topics": ["labour dispute", "disqualification", "financing strike"],
+      "complexity": "high",
+      "expected_response_elements": [
+        "labour dispute definition",
+        "disqualification period",
+        "exceptions to disqualification"
+      ]
+    },
+    {
+      "id": "query-012",
+      "category": "seasonal_work",
+      "query": "How does seasonal work affect EI eligibility and benefit calculation?",
+      "expected_citations": [
+        "Canada (Attorney General) v Caron, 2011 FCA 263",
+        "Canada (Attorney General) v McDonald, 2011 FCA 80"
+      ],
+      "expected_topics": ["seasonal work", "insurable hours", "benefit period"],
+      "complexity": "medium",
+      "expected_response_elements": [
+        "seasonal work definition",
+        "impact on benefit calculation",
+        "variable entrance requirements"
+      ]
+    },
+    {
+      "id": "query-013",
+      "category": "benefit_period",
+      "query": "How long can an EI benefit period last?",
+      "expected_citations": [
+        "Canada (Attorney General) v Lévesque, 2001 FCA 304",
+        "Canada (Attorney General) v Lessard, 2002 FCA 469"
+      ],
+      "expected_topics": ["benefit period", "weeks of benefits", "extensions"],
+      "complexity": "low",
+      "expected_response_elements": [
+        "minimum and maximum benefit period",
+        "factors affecting benefit duration",
+        "extensions and interruptions"
+      ]
+    },
+    {
+      "id": "query-014",
+      "category": "penalty_violation",
+      "query": "What are the consequences of making false statements on an EI claim?",
+      "expected_citations": [
+        "Canada (Attorney General) v Brace, 2010 FCA 284",
+        "Canada (Attorney General) v Purcell, 1996 CanLII 3807"
+      ],
+      "expected_topics": ["penalties", "violations", "false statements"],
+      "complexity": "medium",
+      "expected_response_elements": [
+        "types of violations",
+        "penalty calculation",
+        "prosecution for fraud"
+      ]
+    },
+    {
+      "id": "query-015",
+      "category": "appeal_process",
+      "query": "What is the process for appealing an EI decision?",
+      "expected_citations": [
+        "Canada (Attorney General) v Krausse, 2009 FCA 8",
+        "Canada (Attorney General) v Albrecht, 2010 FCA 7"
+      ],
+      "expected_topics": ["appeal", "reconsideration", "SST procedure"],
+      "complexity": "low",
+      "expected_response_elements": [
+        "reconsideration request",
+        "Social Security Tribunal appeal",
+        "timelines and procedures"
+      ]
+    },
+    {
+      "id": "query-016",
+      "category": "working_while_on_claim",
+      "query": "Can I work part-time while receiving EI benefits?",
+      "expected_citations": [
+        "Canada (Attorney General) v Lamonde, 2006 FCA 44",
+        "Canada (Attorney General) v Larivière, 2007 FCA 27"
+      ],
+      "expected_topics": ["working while on claim", "earnings deduction", "availability"],
+      "complexity": "medium",
+      "expected_response_elements": [
+        "working while on claim allowance",
+        "earnings deduction rules",
+        "impact on availability"
+      ]
+    },
+    {
+      "id": "query-017",
+      "category": "constructive_dismissal",
+      "query": "What constitutes constructive dismissal for EI purposes?",
+      "expected_citations": [
+        "Canada (Attorney General) v Cartier, 2001 FCA 274",
+        "Canada (Attorney General) v Patel, 2010 FCA 95"
+      ],
+      "expected_topics": ["constructive dismissal", "voluntary leaving", "substantial change"],
+      "complexity": "high",
+      "expected_response_elements": [
+        "definition of constructive dismissal",
+        "unilateral change by employer",
+        "whether treated as voluntary leaving"
+      ]
+    },
+    {
+      "id": "query-018",
+      "category": "waiting_period",
+      "query": "What is the EI waiting period and when does it apply?",
+      "expected_citations": [
+        "Canada (Attorney General) v Melanson, 2000 CanLII 15194",
+        "Canada (Attorney General) v Villeneuve, 2004 FCA 137"
+      ],
+      "expected_topics": ["waiting period", "benefit entitlement", "exceptions"],
+      "complexity": "low",
+      "expected_response_elements": [
+        "waiting period duration",
+        "when waiting period applies",
+        "exceptions to waiting period"
+      ]
+    },
+    {
+      "id": "query-019",
+      "category": "medical_reasons",
+      "query": "Can medical reasons be just cause for leaving employment?",
+      "expected_citations": [
+        "Canada (Attorney General) v Campeau, 2003 FCA 22",
+        "Canada (Attorney General) v White, 2011 FCA 190"
+      ],
+      "expected_topics": ["medical reasons", "just cause", "reasonable alternative"],
+      "complexity": "medium",
+      "expected_response_elements": [
+        "medical evidence requirements",
+        "reasonable alternatives analysis",
+        "accommodation obligations"
+      ]
+    },
+    {
+      "id": "query-020",
+      "category": "separation_payment",
+      "query": "How do severance payments affect EI benefit entitlement?",
+      "expected_citations": [
+        "Canada (Attorney General) v Gauthier, 2007 FCA 275",
+        "Canada (Attorney General) v McNamara, 2007 FCA 107"
+      ],
+      "expected_topics": ["separation payment", "allocation", "benefit delay"],
+      "complexity": "high",
+      "expected_response_elements": [
+        "types of separation payments",
+        "allocation of payments",
+        "impact on benefit start date"
+      ]
+    }
+  ],
+  "test_metadata": {
+    "total_queries": 20,
+    "categories": [
+      "voluntary_leaving",
+      "misconduct",
+      "availability",
+      "hours_of_work",
+      "earnings_allocation",
+      "refusal_of_work",
+      "training_course",
+      "self_employment",
+      "family_reasons",
+      "antedate",
+      "labour_dispute",
+      "seasonal_work",
+      "benefit_period",
+      "penalty_violation",
+      "appeal_process",
+      "working_while_on_claim",
+      "constructive_dismissal",
+      "waiting_period",
+      "medical_reasons",
+      "separation_payment"
+    ],
+    "complexity_distribution": {
+      "low": 4,
+      "medium": 11,
+      "high": 5
+    },
+    "usage_notes": [
+      "Use these queries for AC-002 (response time <30s) validation",
+      "Expected citations are exemplary, not exhaustive",
+      "Complexity rating guides test timeout configuration",
+      "Each query tests specific jurisprudence domain knowledge"
+    ]
+  }
+}

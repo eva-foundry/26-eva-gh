@@ -1,0 +1,10 @@
+{
+  "feature_key": "P02-AUTO-cf6047b7",
+  "created_timestamp": "2025-12-13T01:24:54.6203143Z",
+  "status": "ready-for-crew",
+  "feature_slug": "task-result",
+  "title": "task-result",
+  "priority": "MEDIUM",
+  "p02_artifacts_path": "docs/features/task-result",
+  "source_intake_file": "task-result.txt"
+}

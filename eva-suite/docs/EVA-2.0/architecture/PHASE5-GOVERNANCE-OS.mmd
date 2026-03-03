@@ -1,0 +1,61 @@
+flowchart TB
+  DEV[Developer / Copilot / Agents] --> PR[Pull Request]
+
+  subgraph REPO[Per-Repo (x40+)]
+    TPL[PR Template\n(CLAIM tokens + Scope + Evidence Paths)]
+    MEM[.eva-memory.json]
+    EVD[.eva/evidence/*\n(reports, audits, coverage)]
+    CI[Repo CI\n(policy-linter + claim-validator + bootstrap)]
+  end
+
+  PR --> TPL
+  PR --> CI
+  MEM --> CI
+  EVD --> CI
+
+  subgraph GOVPOLICY[Central Policy]
+    MAP[claim-evidence-map.json]
+    SCH[claim-evidence-map.schema.json]
+    BUNDLE[Enforcement Bundle\n(manifest + deploy script)]
+    LIFE[Lifecycle Rules\n(active/deprecated/removed)]
+  end
+
+  GOVPOLICY --> CI
+
+  subgraph REG[Evidence Registry (Git repo)]
+    WCAG[WCAG Audit Packs]
+    GCDS[GC-DS Compliance Packs]
+    I18N[Bilingual Evidence Packs]
+    PROV[provenance.json\n(origin + freshness)]
+  end
+
+  REG --> CI
+
+  subgraph TELEMETRY[Governance Telemetry]
+    AGG[Daily Aggregator Job]
+    MET[governance-metrics.json]
+    DASH[Dashboards\n(Power BI / reports)]
+  end
+
+  CI -->|Results| AGG
+  AGG --> MET
+  MET --> DASH
+
+  subgraph LIFECYCLE[Policy Evolution]
+    DEPREC[Deprecation Engine\nwarn -> soft-fail -> hard-fail]
+    MIG[Migration PR Generator]
+  end
+
+  LIFE --> DEPREC
+  DEPREC --> MIG
+  MIG --> PR
+
+  subgraph GCCTRL[GC Controls Integration]
+    ATO[ATO Package Builder]
+    AIRA[AIRA/EARB Evidence Export]
+  end
+
+  MET --> ATO
+  MET --> AIRA
+  CI --> ATO
+  CI --> AIRA

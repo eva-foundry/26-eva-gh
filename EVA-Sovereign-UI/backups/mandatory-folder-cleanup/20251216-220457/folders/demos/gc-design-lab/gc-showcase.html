@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVA Sovereign UI - Component Library - Canada.ca</title>
+    <script type="module" src="./eva-sovereign-ui.es.js"></script>
+    <link rel="stylesheet" href="./styles/playground.css">
+    
+    <!-- GC Design System - Official Canada.ca styles -->
+    <style>
+        /* Official GC Colors */
+        :root {
+            --gc-red: #af3c43;
+            --gc-link: #284162;
+            --gc-visited: #7834bc;
+            --gc-bg: #f8f8f8;
+            --gc-bg-alt: #e1e4e7;
+            --gc-border: #ddd;
+            --gc-text: #333;
+            --gc-footer-bg: #f8f8f8;
+            --gc-footer-border: #af3c43;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: Lato, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--gc-text);
+            background: #fff;
+        }
+        
+        /* Skip to main content (WCAG requirement) */
+        .wb-skip {
+            position: absolute;
+            left: -9999px;
+            background: #000;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+        }
+        
+        .wb-skip:focus {
+            left: 0;
+            z-index: 10000;
+        }
+        
+        /* Official GC Header */
+        .gc-header {
+            background: #fff;
+            border-bottom: 4px solid var(--gc-red);
+        }
+        
+        .gc-header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .gc-sig {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .gc-sig img {
+            width: 300px;
+            height: auto;
+        }
+        
+        /* Language toggle */
+        .gc-lang {
+            font-weight: 700;
+        }
+        
+        .gc-lang a {
+            color: var(--gc-text);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--gc-border);
+            background: var(--gc-bg);
+        }
+        
+        .gc-lang a:hover,
+        .gc-lang a:focus {
+            background: var(--gc-bg-alt);
+            text-decoration: underline;
+        }
+        
+        /* Site menu bar */
+        .gc-menu {
+            background: var(--gc-bg);
+            border-bottom: 1px solid var(--gc-border);
+        }
+        
+        .gc-menu-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .gc-breadcrumb {
+            list-style: none;
+            display: flex;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            padding: 0.75rem 0;
+        }
+        
+        .gc-breadcrumb li:not(:last-child)::after {
+            content: "›";
+            margin-left: 0.5rem;
+            color: #666;
+        }
+        
+        .gc-breadcrumb a {
+            color: var(--gc-link);
+            text-decoration: none;
+        }
+        
+        .gc-breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Accessibility & Language controls */
+        .gc-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .gc-btn {
+            background: var(--gc-link);
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .gc-btn:hover,
+        .gc-btn:focus {
+            background: #1a2e47;
+            outline: 3px solid #ffbf47;
+            outline-offset: 2px;
+        }
+        
+        .gc-btn-secondary {
+            background: #fff;
+            color: var(--gc-link);
+            border: 2px solid var(--gc-link);
+        }
+        
+        /* Main content */
+        .gc-main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .gc-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--gc-text);
+            border-bottom: 4px solid var(--gc-red);
+            padding-bottom: 0.5rem;
+        }
+        
+        .gc-intro {
+            font-size: 1.1rem;
+            margin: 1.5rem 0;
+            color: #555;
+        }
+        
+        /* Component grid */
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .component-card {
+            background: #fff;
+            border: 1px solid var(--gc-border);
+            padding: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .component-card:hover,
+        .component-card:focus {
+            border-color: var(--gc-link);
+            outline: 3px solid #ffbf47;
+            outline-offset: 2px;
+        }
+        
+        .component-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gc-link);
+            margin-bottom: 0.5rem;
+        }
+        
+        .component-description {
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .component-preview {
+            padding: 1rem;
+            background: var(--gc-bg);
+            border: 1px solid var(--gc-border);
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--gc-red);
+            color: #fff;
+            border-radius: 2px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+        }
+        
+        /* Official GC Footer */
+        .gc-footer {
+            background: var(--gc-footer-bg);
+            border-top: 4px solid var(--gc-footer-border);
+            margin-top: 4rem;
+            padding: 2rem 0;
+        }
+        
+        .gc-footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .gc-footer h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--gc-text);
+        }
+        
+        .gc-footer-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .gc-footer-links ul {
+            list-style: none;
+        }
+        
+        .gc-footer-links a {
+            color: var(--gc-link);
+            text-decoration: none;
+            line-height: 2;
+        }
+        
+        .gc-footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .gc-footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gc-border);
+        }
+        
+        .gc-footer-brand img {
+            height: 40px;
+        }
+        
+        /* Accessibility settings applied dynamically */
+        body.large-text { font-size: 18px; }
+        body.larger-text { font-size: 20px; }
+        body.largest-text { font-size: 24px; }
+        
+        body.high-contrast {
+            --gc-text: #000;
+            --gc-bg: #fff;
+            --gc-link: #0000ff;
+        }
+        
+        body.reduce-motion * {
+            animation: none !important;
+            transition: none !important;
+        }
+        
+        /* Backdrop for settings panels */
+        .settings-backdrop {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100%;
+            background: white;
+            box-shadow: -4px 0 12px rgba(0,0,0,0.2);
+            transition: right 0.3s ease;
+            z-index: 9999;
+            overflow-y: auto;
+        }
+        
+        .settings-backdrop.open {
+            right: 0;
+        }
+        
+        .settings-panel {
+            padding: 2rem;
+        }
+        
+        .settings-panel h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gc-text);
+        }
+        
+        .setting-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .setting-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .setting-group button,
+        .setting-group select {
+            width: 100%;
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            border: 1px solid var(--gc-border);
+            background: var(--gc-bg);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .setting-group button:hover,
+        .setting-group button:focus {
+            background: var(--gc-bg-alt);
+            outline: 3px solid #ffbf47;
+        }
+        
+        .close-panel {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            width: auto;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#wb-cont" class="wb-skip">Skip to main content</a>
+    
+    <!-- Official GC Header -->
+    <header class="gc-header">
+        <div class="gc-header-inner">
+            <div class="gc-sig">
+                <img src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg" alt="Government of Canada">
+            </div>
+            <div class="gc-lang">
+                <a href="#" id="lang-toggle" lang="fr">Français</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Site menu with breadcrumbs and controls -->
+    <nav class="gc-menu">
+        <div class="gc-menu-inner">
+            <ul class="gc-breadcrumb">
+                <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+                <li><a href="#">Design System</a></li>
+                <li>Component Library</li>
+            </ul>
+            <div class="gc-controls">
+                <button class="gc-btn gc-btn-secondary" id="a11y-btn" aria-label="Accessibility settings">
+                    <span aria-hidden="true">♿</span> Accessibility
+                </button>
+                <button class="gc-btn gc-btn-secondary" id="settings-btn" aria-label="Page settings">
+                    <span aria-hidden="true">⚙</span> Settings
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main content -->
+    <main class="gc-main" id="wb-cont">
+        <h1 class="gc-title">EVA Sovereign UI Component Library</h1>
+        <p class="gc-intro">
+            14 production-ready Web Components built for the Government of Canada.
+            WCAG 2.2 AAA compliant, bilingual (EN-CA/FR-CA), and fully accessible.
+        </p>
+        
+        <div id="component-grid" class="component-grid">
+            <!-- Dynamically generated -->
+        </div>
+    </main>
+    
+    <!-- Official GC Footer -->
+    <footer class="gc-footer">
+        <div class="gc-footer-inner">
+            <div class="gc-footer-links">
+                <div>
+                    <h3>About this site</h3>
+                    <ul>
+                        <li><a href="#">About Canada.ca</a></li>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact us</h3>
+                    <ul>
+                        <li><a href="#">All contacts</a></li>
+                        <li><a href="#">Departments and agencies</a></li>
+                        <li><a href="#">About government</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gc-footer-brand">
+                <img src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/wmms-blk.svg" alt="Symbol of the Government of Canada">
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Accessibility Settings Panel -->
+    <div id="a11y-panel" class="settings-backdrop">
+        <div class="settings-panel">
+            <button class="close-panel" aria-label="Close accessibility settings">&times;</button>
+            <h2>Accessibility Settings</h2>
+            
+            <div class="setting-group">
+                <label for="font-size">Text Size</label>
+                <select id="font-size">
+                    <option value="normal">Normal (16px)</option>
+                    <option value="large">Large (18px)</option>
+                    <option value="larger">Larger (20px)</option>
+                    <option value="largest">Largest (24px)</option>
+                </select>
+            </div>
+            
+            <div class="setting-group">
+                <label>Contrast</label>
+                <button id="high-contrast-toggle">Toggle High Contrast</button>
+            </div>
+            
+            <div class="setting-group">
+                <label>Animations</label>
+                <button id="reduce-motion-toggle">Reduce Motion</button>
+            </div>
+            
+            <div class="setting-group">
+                <label>Reset</label>
+                <button id="reset-a11y">Reset All Settings</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Settings Panel -->
+    <div id="settings-panel" class="settings-backdrop">
+        <div class="settings-panel">
+            <button class="close-panel" aria-label="Close settings">&times;</button>
+            <h2>Page Settings</h2>
+            
+            <div class="setting-group">
+                <label for="language-select">Language / Langue</label>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+            
+            <div class="setting-group">
+                <label>Component Filter</label>
+                <button id="filter-all">All Components</button>
+                <button id="filter-eva">EVA Components Only</button>
+                <button id="filter-gc">GC Components Only</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module">
+        import { componentMetadata } from './component-metadata.generated.js';
+        import { showPlayground } from './ComponentPlayground.js';
+        import { parseComponentExample, applyParsedExample } from './example-parser.js';
+        
+        const grid = document.getElementById('component-grid');
+        let currentFilter = 'all';
+        
+        // Render components
+        function renderComponents() {
+            grid.innerHTML = '';
+            
+            Object.entries(componentMetadata).forEach(([componentId, metadata]) => {
+                if (currentFilter !== 'all' && metadata.category !== currentFilter) return;
+                
+                const card = document.createElement('article');
+                card.className = 'component-card';
+                card.tabIndex = 0;
+                
+                const name = document.createElement('div');
+                name.className = 'component-name';
+                name.textContent = `<${componentId}>`;
+                
+                const description = document.createElement('p');
+                description.className = 'component-description';
+                description.textContent = metadata.description;
+                
+                const preview = document.createElement('div');
+                preview.className = 'component-preview';
+                
+                const component = document.createElement(componentId);
+                if (metadata.examples && metadata.examples.webcomponent) {
+                    const parsed = parseComponentExample(metadata.examples.webcomponent);
+                    applyParsedExample(component, parsed);
+                }
+                
+                preview.appendChild(component);
+                
+                const badge = document.createElement('span');
+                badge.className = 'badge';
+                badge.textContent = metadata.category.toUpperCase();
+                
+                card.appendChild(name);
+                card.appendChild(description);
+                card.appendChild(preview);
+                card.appendChild(badge);
+                
+                card.addEventListener('click', () => showPlayground(componentId));
+                card.addEventListener('keypress', e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        showPlayground(componentId);
+                    }
+                });
+                
+                grid.appendChild(card);
+            });
+        }
+        
+        // Accessibility settings
+        document.getElementById('a11y-btn').addEventListener('click', () => {
+            document.getElementById('a11y-panel').classList.add('open');
+        });
+        
+        document.getElementById('settings-btn').addEventListener('click', () => {
+            document.getElementById('settings-panel').classList.add('open');
+        });
+        
+        document.querySelectorAll('.close-panel').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.settings-backdrop').forEach(panel => {
+                    panel.classList.remove('open');
+                });
+            });
+        });
+        
+        // Font size
+        document.getElementById('font-size').addEventListener('change', (e) => {
+            document.body.classList.remove('large-text', 'larger-text', 'largest-text');
+            if (e.target.value !== 'normal') {
+                document.body.classList.add(`${e.target.value}-text`);
+            }
+            localStorage.setItem('gc-font-size', e.target.value);
+        });
+        
+        // High contrast
+        document.getElementById('high-contrast-toggle').addEventListener('click', () => {
+            document.body.classList.toggle('high-contrast');
+            localStorage.setItem('gc-high-contrast', document.body.classList.contains('high-contrast'));
+        });
+        
+        // Reduce motion
+        document.getElementById('reduce-motion-toggle').addEventListener('click', () => {
+            document.body.classList.toggle('reduce-motion');
+            localStorage.setItem('gc-reduce-motion', document.body.classList.contains('reduce-motion'));
+        });
+        
+        // Reset
+        document.getElementById('reset-a11y').addEventListener('click', () => {
+            document.body.classList.remove('large-text', 'larger-text', 'largest-text', 'high-contrast', 'reduce-motion');
+            document.getElementById('font-size').value = 'normal';
+            localStorage.removeItem('gc-font-size');
+            localStorage.removeItem('gc-high-contrast');
+            localStorage.removeItem('gc-reduce-motion');
+        });
+        
+        // Language toggle
+        document.getElementById('lang-toggle').addEventListener('click', (e) => {
+            e.preventDefault();
+            const currentLang = document.documentElement.lang;
+            const newLang = currentLang === 'en' ? 'fr' : 'en';
+            document.documentElement.lang = newLang;
+            e.target.textContent = newLang === 'en' ? 'Français' : 'English';
+            e.target.lang = newLang === 'en' ? 'fr' : 'en';
+            localStorage.setItem('gc-lang', newLang);
+        });
+        
+        document.getElementById('language-select').addEventListener('change', (e) => {
+            document.documentElement.lang = e.target.value;
+            document.getElementById('lang-toggle').textContent = e.target.value === 'en' ? 'Français' : 'English';
+            localStorage.setItem('gc-lang', e.target.value);
+        });
+        
+        // Filters
+        document.getElementById('filter-all').addEventListener('click', () => {
+            currentFilter = 'all';
+            renderComponents();
+        });
+        
+        document.getElementById('filter-eva').addEventListener('click', () => {
+            currentFilter = 'eva';
+            renderComponents();
+        });
+        
+        document.getElementById('filter-gc').addEventListener('click', () => {
+            currentFilter = 'gc';
+            renderComponents();
+        });
+        
+        // Restore settings from localStorage
+        const savedFontSize = localStorage.getItem('gc-font-size');
+        if (savedFontSize && savedFontSize !== 'normal') {
+            document.body.classList.add(`${savedFontSize}-text`);
+            document.getElementById('font-size').value = savedFontSize;
+        }
+        
+        if (localStorage.getItem('gc-high-contrast') === 'true') {
+            document.body.classList.add('high-contrast');
+        }
+        
+        if (localStorage.getItem('gc-reduce-motion') === 'true') {
+            document.body.classList.add('reduce-motion');
+        }
+        
+        const savedLang = localStorage.getItem('gc-lang');
+        if (savedLang) {
+            document.documentElement.lang = savedLang;
+            document.getElementById('lang-toggle').textContent = savedLang === 'en' ? 'Français' : 'English';
+            document.getElementById('language-select').value = savedLang;
+        }
+        
+        // Initial render
+        renderComponents();
+        
+        console.log(`✅ Rendered ${Object.keys(componentMetadata).length} components in GC template`);
+    </script>
+</body>
+</html>

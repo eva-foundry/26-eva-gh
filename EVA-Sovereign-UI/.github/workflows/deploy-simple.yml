@@ -1,0 +1,199 @@
+name: Deploy Simple GitHub Pages
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies and build components
+        run: |
+          npm install
+          cd packages/web-components
+          npm install
+          npm run build
+      
+      - name: Create deployment structure
+        run: |
+          mkdir -p public
+          mkdir -p public/demos
+          mkdir -p public/docs
+          mkdir -p public/components
+          
+          # Copy built web components
+          cp -r packages/web-components/dist/* public/components/
+          
+          # Copy demos
+          cp -r demos/* public/demos/
+          
+          # Copy documentation
+          cp README.md public/docs/README.md
+          cp -r packages/web-components/docs public/docs/api || true
+          
+          # Create index.html
+          cat > public/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>EVA Sovereign UI - Government of Canada Web Components</title>
+            <style>
+              * { box-sizing: border-box; margin: 0; padding: 0; }
+              body {
+                font-family: "Noto Sans", Arial, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+              }
+              .container {
+                max-width: 900px;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border-radius: 20px;
+                padding: 3rem;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+              }
+              h1 {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+              }
+              p {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+                opacity: 0.9;
+              }
+              .links {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin-top: 2rem;
+              }
+              .link-card {
+                background: rgba(255, 255, 255, 0.15);
+                border-radius: 12px;
+                padding: 1.5rem;
+                text-decoration: none;
+                color: white;
+                transition: all 0.3s;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+              }
+              .link-card:hover {
+                transform: translateY(-5px);
+                background: rgba(255, 255, 255, 0.25);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+              }
+              .link-card h3 {
+                font-size: 1.3rem;
+                margin-bottom: 0.5rem;
+              }
+              .link-card p {
+                font-size: 0.95rem;
+                margin: 0;
+                opacity: 0.85;
+              }
+              .badge {
+                display: inline-block;
+                background: #26374a;
+                padding: 0.3rem 0.8rem;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                margin-right: 0.5rem;
+                margin-top: 1rem;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>🇨🇦 EVA Sovereign UI</h1>
+              <p>Production-ready Web Components for Government of Canada applications</p>
+              
+              <div style="margin: 2rem 0;">
+                <span class="badge">WCAG AAA</span>
+                <span class="badge">Bilingual</span>
+                <span class="badge">GC Design System</span>
+                <span class="badge">Lit 3.x</span>
+              </div>
+
+              <div class="links">
+                <a href="demos/canada-chatbot/" class="link-card">
+                  <h3>💬 Canada Chatbot</h3>
+                  <p>RAG integration demo with Government of Canada styling</p>
+                </a>
+                
+                <a href="demos/gc-design-lab/" class="link-card">
+                  <h3>🎨 GC Design Lab</h3>
+                  <p>Interactive component showcase and playground</p>
+                </a>
+                
+                <a href="demos/devkit/" class="link-card">
+                  <h3>⚡ DevKit</h3>
+                  <p>5-minute developer onboarding guide</p>
+                </a>
+                
+                <a href="https://github.com/MarcoPolo483/EVA-Sovereign-UI" class="link-card">
+                  <h3>📦 GitHub Repository</h3>
+                  <p>View source code and documentation</p>
+                </a>
+                
+                <a href="docs/README.md" class="link-card">
+                  <h3>📚 Documentation</h3>
+                  <p>Complete API reference and guides</p>
+                </a>
+                
+                <a href="https://www.npmjs.com/package/@eva-sovereign/web-components" class="link-card">
+                  <h3>📥 npm Package</h3>
+                  <p>Install via npm</p>
+                </a>
+              </div>
+
+              <p style="margin-top: 3rem; font-size: 0.9rem; opacity: 0.7;">
+                ✅ Production-Ready | Version 1.0.0 | MIT License<br>
+                POD-X | Marco Presta + GitHub Copilot
+              </p>
+            </div>
+          </body>
+          </html>
+          EOF
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

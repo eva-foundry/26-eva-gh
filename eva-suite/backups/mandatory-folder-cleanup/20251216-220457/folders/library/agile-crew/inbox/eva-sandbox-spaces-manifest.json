@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-sandbox-spaces.md",
+  "feature_key": "P02-AUTO-590908df",
+  "title": "CDD: EVA Domain Assistant - Sandbox Spaces",
+  "p02_artifacts_path": "docs/features/eva-sandbox-spaces",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-sandbox-spaces",
+  "created_timestamp": "2025-11-25T23:55:05.3014937Z"
+}

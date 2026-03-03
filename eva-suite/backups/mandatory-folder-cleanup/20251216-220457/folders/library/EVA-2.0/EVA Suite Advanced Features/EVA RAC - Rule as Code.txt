@@ -1,0 +1,340 @@
+### EVA Rule as Code
+
+Version: 0.5
+Audience: Scrum Master, Agile Crew & Humans
+Date: 2025-11-23
+
+EVA should treat Rules as Code as **another first-class backend service** (like RAG, safety, metering) and expose it through APIM so *all* EVA “faces” (EVA DA, EVA Chat, AssistMe, Jurisprudence, KM, etc.) can call the **same RaC engine** for decisions, explanations, and simulations.
+
+
+## 1. Quick alignment: what RaC gives you
+
+From CSPS and your internal briefs, RaC is essentially:
+
+> “Legislation/policy encoded as machine-readable logic, exposed as an API so any channel can consume the same rules.”
+
+You already have:
+
+* **OpenFisca Canada instance + APIs** (CERB, post-CERB benefits finder, EI Act sections)
+* Test suites and a browser-based scenario builder for policy–dev collaboration.
+* A strategic framing that **RaC is the guardrail / single source of truth** that LLMs (Cohere, Azure OpenAI) should sit on top of.
+* A vision of AI + RaC enabling **continuous program review**, scenario testing, and auditability (digital twin of rules).
+
+So EVA doesn’t need to *invent* RaC – it needs to **standardize and expose it**.
+
+---
+
+## 2. Add a new core service: EVA Rules Service (RaC)
+
+In EVA 2.0 terms, treat RaC as a **new backend capability** alongside RAG:
+
+> **EVA Rules Service** (backed by OpenFisca or similar engines)
+
+Expose via APIM something like:
+
+* `POST /rules/evaluate`
+
+  * Input: `program`, `ruleSetVersion`, `variables` (client situation)
+  * Output: eligibility decisions, amounts, reasons, trace metadata
+
+* `POST /rules/trace`
+
+  * Input: same as above
+  * Output: **decision tree / trace** showing which conditions fired, which variables were defaults (this mirrors the “calculation vs default” work Rocket did).
+
+* `POST /rules/scenario`
+
+  * Input: baseline scenario + list of “what-if” changes
+  * Output: comparative results (current vs proposed rules)
+
+* `GET /rules/metadata`
+
+  * Which programs and rule sets exist, their versions, owners, and source (Act / regulation).
+
+Internally, EVA Rules Service can:
+
+* Wrap **OpenFisca Canada** for EI / CERB-like experiments.
+* Later support other RaC engines (e.g., CPP/OAS, GIS, BDM Cúram rule exports).
+* Register each rule set as a **Project Space artifact** with its own versioning, tests, and governance.
+
+This immediately lets EVA act as a **RaC gateway for ESDC**, instead of RaC living as “that one experimental Heroku instance”.
+
+---
+
+## 3. How EVA uses RaC internally (EVA DA + EVA Chat)
+
+### 3.1 EVA DA: RAG + RaC = neurosymbolic assistant
+
+For something like Jurisprudence or EI DA, your EVA DA pipeline becomes:
+
+1. **User asks**: “Am I eligible for benefit X if I worked 600 hours and was laid off due to shortage of work?”
+2. EVA DA flow:
+
+   * Use RAG to retrieve relevant **policy / guidance / jurisprudence** documents.
+   * Use **EVA Rules Service** to *actually evaluate* eligibility for the scenario (using machine-readable rules).
+   * LLM composes an answer:
+
+     * The *decision* (from RaC).
+     * The *explanation* citing law/policy (from RAG).
+     * Optional trace snippet (“because conditions A, B, C were true”).
+
+This is exactly the **neurosymbolic AI** pattern your two-pager flags: probabilistic LLM, but logical RaC enforcing rule fidelity.
+
+Result: EVA DA becomes:
+
+* Less hallucination-prone on **rules** (because the decision comes from RaC).
+* Still able to produce **human-friendly explanations** (LLM handles wording and nuance).
+
+
+sample machine-readable code
+
+**OpenFisca-style YAML** for “Benefit X eligibility” and then a **JSON request** to your `EVA Rules Service`.
+
+### Example 1 – OpenFisca-style rules (YAML)
+
+```yaml
+# benefit_x_eligibility.yaml
+
+entities:
+  person:
+    plural: persons
+
+parameters:
+  benefit_x:
+    min_hours:
+      description: Minimum insurable hours required in qualifying period
+      values:
+        2025-01-01:
+          value: 420
+    allowed_separation_reasons:
+      description: Reasons for job separation that preserve eligibility
+      values:
+        2025-01-01:
+          value:
+            - "shortage_of_work"
+            - "layoff"
+            - "business_closure"
+
+variables:
+  hours_worked_last_52_weeks:
+    entity: person
+    label: "Total insurable hours in last 52 weeks"
+    value_type: float
+
+  separation_reason:
+    entity: person
+    label: "Reason for job separation from last employer"
+    value_type: string
+
+  benefit_x_eligible:
+    entity: person
+    label: "Eligibility for Benefit X"
+    value_type: bool
+    definition_period: month
+    formula: |
+      hours_ok = hours_worked_last_52_weeks >= parameters.benefit_x.min_hours
+      reason_ok = separation_reason in parameters.benefit_x.allowed_separation_reasons
+      return hours_ok and reason_ok
+
+  benefit_x_amount:
+    entity: person
+    label: "Weekly Benefit X amount"
+    value_type: float
+    definition_period: month
+    formula: |
+      if not benefit_x_eligible:
+          return 0.0
+      # very simplified: flat amount for example
+      return 500.0
+```
+
+What this gives you:
+
+* **Variables**: `hours_worked_last_52_weeks`, `separation_reason`, `benefit_x_eligible`, `benefit_x_amount`.
+* **Parameters**: `min_hours`, `allowed_separation_reasons`.
+* **Formula**: explicit logic for eligibility and amount – no prose, just code.
+
+---
+
+### Example 2 – EVA Rules Service call (JSON)
+
+This is how EVA DA would call the rules engine for a user who worked **600 hours** and was laid off due to **shortage of work**:
+
+```json
+POST /rules/evaluate
+Content-Type: application/json
+
+{
+  "program": "benefit_x",
+  "ruleSetVersion": "2025-01-01",
+  "variables": {
+    "person": {
+      "hours_worked_last_52_weeks": 600,
+      "separation_reason": "shortage_of_work"
+    }
+  }
+}
+```
+
+Possible response:
+
+```json
+{
+  "program": "benefit_x",
+  "ruleSetVersion": "2025-01-01",
+  "results": {
+    "person": {
+      "benefit_x_eligible": true,
+      "benefit_x_amount": 500.0
+    }
+  },
+  "trace": {
+    "person": {
+      "benefit_x_eligible": {
+        "hours_ok": true,
+        "reason_ok": true,
+        "min_hours_required": 420,
+        "allowed_reasons": [
+          "shortage_of_work",
+          "layoff",
+          "business_closure"
+        ]
+      }
+    }
+  }
+}
+```
+
+Then your EVA DA neurosymbolic flow is literally:
+
+* **Decision** = `benefit_x_eligible` + `benefit_x_amount` (from JSON above – RaC).
+* **Explanation** = LLM uses `trace` + RAG’d policy text to say:
+
+> “Yes, you appear eligible for Benefit X because you worked 600 hours (above the required 420) and your separation reason ‘shortage of work’ is one of the allowed reasons (shortage of work, layoff, business closure).”
+
+
+### 3.2 EVA Chat: “Policy Copilot” backed by RaC
+
+For EVA Chat:
+
+* New tool: **“RaC Query”**:
+
+  * User asks: “What are the hours thresholds for EI maternity benefits?”
+  * Chat:
+
+    * Calls `EVA Rules Service /rules/metadata` and `/rules/trace` for a canonical answer.
+    * Uses RAG only to add nuance (exceptions, examples, operational guidance).
+* For caseworkers:
+
+  * They can paste a client scenario.
+  * Chat:
+
+    * Normalizes it to variables.
+    * Calls `/rules/evaluate`.
+    * Returns: “According to EI rules, this scenario is eligible/ineligible *because…*” with trace.
+
+This aligns with the “self-assessment tools and chat-bots consuming RaC APIs for any channel” described in the Rocket/ESDC update.
+
+---
+
+## 4. How EVA exposes RaC to *other* systems
+
+EVA’s “faceless brain” idea works perfectly here:
+
+> EVA becomes the **enterprise RaC API** for ESDC.
+
+Concrete patterns:
+
+1. **AssistMe / Curam / BDM KM**
+
+   * Instead of each system re-implementing EI rules:
+
+     * They call `EVA Rules Service` for eligibility/entitlement.
+   * They rely on EVA for:
+
+     * Rules versions.
+     * Traceability.
+     * Testing.
+
+2. **Program review dashboards**
+
+   * Program Review function uses RaC to:
+
+     * Simulate scenarios across demographic cohorts.
+     * Compare outcomes for different versions of rules.
+   * EVA feeds:
+
+     * AI dashboards integrating admin data + RaC outcomes for real-time program review.
+
+3. **Cohere / Azure OpenAI integration**
+
+   * For “Cohere in EI” or similar:
+
+     * LLM fine-tuned or RAG-augmented on **RaC artifacts** (schema + documentation).
+     * LLM **must not** decide eligibility by itself; it calls `EVA Rules Service` and explains results.
+
+EVA APIM is your **single front door** for these RaC APIs, with cost tracking and governance just like RAG.
+
+---
+
+## 5. Add RaC into EVA 2.0 governance and tooling
+
+### 5.1 Project Spaces + RaC
+
+For each Project Space, add RaC artifacts alongside RAG:
+
+* **Rule Sets** (by program / product).
+* **Test Suites** (like OpenFisca tests + policy scenarios).
+* **Scenarios** for “what-if” simulations.
+* **Policy–to–Service trace** (Act → regulation → RaC → service).
+
+This plugs directly into your **NIST-style requirements**:
+
+* REQ-TRC: trace from rule to outcome.
+* REQ-XAI: ability to show the decision path.
+* REQ-GOV: review cycle and rule versioning.
+
+### 5.2 EVA IDE Tools – RaC workbenches
+
+You don’t need EVA IDE to *author* all rules on day one, but you can:
+
+* Integrate a **“Rules Workbench” tab** in EVA IDE Tools:
+
+  * Visualize variables, decision trees, and rule topology (coming from OpenFisca or similar).
+  * Let policy + dev teams run **concept modeling workshops** with live scenarios (Rocket’s HTML simulator, but inside EVA).
+  * Manage **gold scenario sets** that feed both Test Bench (accuracy) and Program Review dashboards.
+
+Later, you can extend EVA IDE to:
+
+* Help author rule fragments.
+* Generate tests from examples.
+* Show impact when a rule changes (which services, flows, and cohorts are affected).
+
+### 5.3 EVA Command Center – RaC views
+
+Add RaC-specific widgets to Command Center:
+
+* At platform level:
+
+  * Which rule sets are active, by program / space.
+  * Recent changes to rules (who changed what, when).
+* At space level:
+
+  * Current rule version, next planned version.
+  * Scenario outcomes and fairness indicators (e.g., by region, age group).
+
+This makes RaC visible as **infrastructure**, not as a side experiment (like the French/NSW examples you already saw in the original project).
+
+---
+
+## 6. Summary in “EVA language”
+
+If you want a very EVA-2.0-style tagline:
+
+> * EVA Core gets a new **EVA Rules Service** (RaC engine via APIM).
+> * EVA DA and EVA Chat use RaC for **decisions**, and RAG for **explanations**.
+> * EVA exposes RaC to AssistMe, BDM KM, EI, CPP/OAS, etc. as a **shared rules API**.
+> * EVA IDE Tools and Command Center give policy + dev teams **RaC workbenches, scenarios, and dashboards**.
+> * Program Review uses AI + RaC to move from retrospective audits to a **continuous policy-to-service feedback loop**.
+
+If you’d like, next step I can draft a **one-pager “EVA + RaC” architecture view** (boxes + arrows + APIs) that you can recycle in PPT for SSPB / BDM / IITB conversations.

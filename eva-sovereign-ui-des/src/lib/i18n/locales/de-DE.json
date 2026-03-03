@@ -1,0 +1,85 @@
+{
+  "esdc": {
+    "title": "Beschäftigung und soziale Entwicklung Kanadas",
+    "titleShort": "ESDC",
+    "hero": {
+      "title": "Aufbau einer qualifizierten, anpassungsfähigen und inklusiven Arbeitskraft",
+      "description": "Zugang zu Beschäftigungsdiensten, Leistungen und Unterstützungsprogrammen, die Kanadiern zum Erfolg verhelfen"
+    },
+    "programs": {
+      "title": "Programme und Dienstleistungen",
+      "ei": {
+        "title": "Arbeitslosenversicherung",
+        "titleShort": "EI",
+        "description": "Vorübergehende finanzielle Unterstützung während Sie Arbeit suchen oder Ihre Fähigkeiten verbessern",
+        "details": "Die Arbeitslosenversicherung (EI) bietet vorübergehende Einkommensunterstützung für arbeitslose Kanadier, während sie Arbeit suchen oder ihre Fähigkeiten verbessern. Reguläre Leistungen stehen Personen zur Verfügung, die ihren Job ohne eigenes Verschulden verlieren und genügend versicherbare Stunden angesammelt haben."
+      },
+      "oas": {
+        "title": "Alterssicherheit",
+        "titleShort": "OAS",
+        "description": "Monatliche Zahlung für Senioren ab 65 Jahren",
+        "details": "Die Alterssicherheit (OAS) ist eine monatliche Zahlung, die den meisten Kanadiern ab 65 Jahren zur Verfügung steht. Sie müssen nicht gearbeitet haben, um OAS zu erhalten. Der Betrag, den Sie erhalten, hängt davon ab, wie lange Sie nach dem 18. Lebensjahr in Kanada gelebt haben."
+      },
+      "cpp": {
+        "title": "Kanadischer Rentenplan",
+        "titleShort": "CPP",
+        "description": "Beitragsorientiertes Rentenprogramm für kanadische Arbeitnehmer",
+        "details": "Der Kanadische Rentenplan (CPP) ist ein beitragsorientiertes, einkommensabhängiges Sozialversicherungsprogramm. Es bildet einen Teil des kanadischen Rentensystems. CPP bietet grundlegende Renten-, Invaliditäts- und Hinterbliebenenleistungen."
+      }
+    },
+    "services": {
+      "jobSearch": {
+        "title": "Jobsuche",
+        "description": "Finden Sie Beschäftigungsmöglichkeiten in ganz Kanada mit Job Bank",
+        "details": "Job Bank ist Kanadas nationaler Beschäftigungsdienst. Suchen Sie Tausende von Jobs, erkunden Sie Arbeitsmarkttrends und greifen Sie auf Karriereplanungstools zu, um Ihre nächste Gelegenheit zu finden."
+      },
+      "benefitsFinder": {
+        "title": "Leistungsfinder",
+        "description": "Entdecken Sie, für welche staatlichen Leistungen und Dienste Sie berechtigt sein könnten",
+        "details": "Beantworten Sie ein paar einfache Fragen, um eine personalisierte Liste von Bundes-, Provinz- und Territorialleistungen und -diensten zu erhalten, für die Sie berechtigt sein könnten."
+      }
+    }
+  },
+  "chat": {
+    "title": "EVA fragen",
+    "subtitle": "Virtueller Beschäftigungsassistent",
+    "placeholder": "Wie kann ich Ihnen heute helfen?",
+    "send": "Senden",
+    "voice": "Spracheingabe",
+    "thinking": "EVA denkt nach...",
+    "suggestedTopics": "Vorgeschlagene Themen:",
+    "topics": {
+      "ei": "Arbeitslosenversicherung",
+      "oas": "Alterssicherheit",
+      "cpp": "Kanadischer Rentenplan",
+      "jobs": "Einen Job finden"
+    }
+  },
+  "navigation": {
+    "skipToMain": "Zum Hauptinhalt springen",
+    "home": "Startseite",
+    "programs": "Programme",
+    "services": "Dienstleistungen",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "copyright": "© Bundesrepublik Deutschland",
+    "privacy": "Datenschutz",
+    "terms": "Geschäftsbedingungen",
+    "accessibility": "Barrierefreiheit",
+    "canada": "Deutschland.de"
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "apply": "Jetzt bewerben",
+    "english": "English",
+    "french": "Français",
+    "spanish": "Español",
+    "italian": "Italiano",
+    "german": "Deutsch",
+    "loading": "Wird geladen...",
+    "error": "Ein Fehler ist aufgetreten",
+    "close": "Schließen"
+  }
+}

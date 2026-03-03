@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-analytics-learning-dashboard.md",
+  "feature_key": "P02-AUTO-3bfdc2d0",
+  "title": "CDD: EVA Analytics Learning Dashboard",
+  "p02_artifacts_path": "docs/features/eva-analytics-learning-dashboard",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-analytics-learning-dashboard",
+  "created_timestamp": "2025-11-25T23:53:57.3517382Z"
+}

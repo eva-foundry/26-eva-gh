@@ -1,0 +1,502 @@
+# EVA Agents Registry
+# Central registry for all DevTools patterns (P00-P22) and Service Personas (SP00-SPxx)
+# Version: 1.1.0
+# Last Updated: 2025-12-13
+
+org: "MarcoPolo483"
+defaultBranch: "main"
+
+# DevTools Patterns (P00-P22)
+# These are internal development patterns used by the EVA Agile Crew
+devtools_patterns:
+  - code: P00
+    name: DevTools Agents Spec
+    type: devtools
+    scope: meta-pattern
+    description: Catalog and specification for all DevTools patterns P01-P15+
+    home: docs/agents/devtools/P00-DevTools-Agents-Spec.md
+    maturity: stable
+    related_repos:
+      - eva-orchestrator
+      - eva-meta
+
+  - code: P01
+    name: Agent Patterns & Toolbox
+    short_code: PAT
+    type: devtools
+    scope: meta
+    description: Meta-pattern and roadmap for how all DevTools agents are used
+    home: docs/agents/devtools/P01-Agent-Patterns-Toolbox.md
+    maturity: stable
+    primary_users:
+      - Platform Owner
+      - Tech Leads
+      - DVM (P15)
+
+  - code: P02
+    name: Requirements Engine
+    short_code: REQ
+    type: devtools
+    scope: requirements
+    description: Recursively refines ideas into canvases, epics, stories, tasks
+    home: docs/agents/devtools/P02-Requirements-Engine.md
+    maturity: stable
+    primary_users:
+      - Product Owner
+      - Tech Leads
+      - AI Steward
+
+  - code: P03
+    name: Scrum Agent
+    short_code: SCR
+    type: devtools
+    scope: agile
+    description: Helps with epics, stories, acceptance criteria, notes, releases
+    home: docs/agents/devtools/P03-Scrum-Agent.md
+    maturity: stable
+    primary_users:
+      - Product Owner
+      - Scrum Master
+      - Tech Leads
+
+  - code: P04
+    name: Repo Librarian
+    short_code: LIB
+    type: devtools
+    scope: documentation
+    description: Keeps READMEs, docs, ADRs in sync with evolving codebase
+    home: docs/agents/devtools/P04-Repo-Librarian.md
+    maturity: stable
+    primary_users:
+      - Developers
+      - Tech Leads
+      - Architects
+
+  - code: P05
+    name: Scaffolder Agent
+    short_code: SCA
+    type: devtools
+    scope: scaffolding
+    description: Bootstraps repos, modules, pipelines following EVA patterns
+    home: docs/agents/devtools/P05-Scaffolder-Agent.md
+    maturity: stable
+    primary_users:
+      - Developers
+      - Tech Leads
+      - DevOps
+
+  - code: P06
+    name: Review Agent
+    short_code: REV
+    type: devtools
+    scope: code-review
+    description: First-pass PR reviewer for tests, docs, smells, consistency
+    home: docs/agents/devtools/P06-Review-Agent.md
+    maturity: stable
+    primary_users:
+      - Developers
+      - Human Reviewers
+
+  - code: P07
+    name: Testing & Failure Explainer
+    short_code: TST
+    type: devtools
+    scope: testing
+    description: Proposes tests, explains failures, suggests fixes
+    home: docs/agents/devtools/P07-Testing-Failure-Explainer.md
+    maturity: stable
+    primary_users:
+      - Developers
+      - Testers
+      - SRE
+
+  - code: P08
+    name: CI/CD Guardian
+    short_code: CICD
+    type: devtools
+    scope: cicd
+    description: Reviews and suggests improvements to pipelines and checks
+    home: docs/agents/devtools/P08-CICD-Guardian.md
+    maturity: stable
+    primary_users:
+      - DevOps
+      - SRE
+      - Tech Leads
+
+  - code: P09
+    name: Runbook & SRE Agent
+    short_code: RUN
+    type: devtools
+    scope: operations
+    description: Drafts/updates runbooks from incidents, logs, alerts
+    home: docs/agents/devtools/P09-Runbook-SRE-Agent.md
+    maturity: stable
+    primary_users:
+      - Operations
+      - SRE
+      - Platform Owner
+
+  - code: P10
+    name: Metrics & Insight Agent
+    short_code: MET
+    type: devtools
+    scope: metrics
+    description: Summarizes delivery and ops metrics; suggests improvements
+    home: docs/agents/devtools/P10-Metrics-Insight-Agent.md
+    maturity: stable
+    primary_users:
+      - Platform Owner
+      - Scrum Master
+      - Tech Leads
+
+  - code: P11
+    name: Security & Compliance Helper
+    short_code: SEC
+    type: devtools
+    scope: security
+    description: Flags security/privacy issues, supports evidence for governance
+    home: docs/agents/devtools/P11-Security-Compliance-Helper.md
+    maturity: stable
+    primary_users:
+      - Developers
+      - Security SMEs
+      - AI Steward
+
+  - code: P12
+    name: UX, Copy & Accessibility Agent
+    short_code: UXA
+    type: devtools
+    scope: ux-accessibility
+    description: Reviews flows, copy, EN/FR, a11y, and consistency across UIs
+    home: docs/agents/devtools/P12-UX-Copy-Accessibility-Agent.md
+    maturity: stable
+    primary_users:
+      - UX
+      - Content
+      - EVA UI Pod (POD-X)
+
+  - code: P13
+    name: Onboarding & Sandbox Coach
+    short_code: ONB
+    type: devtools
+    scope: onboarding
+    description: Guides teams into sandboxes, templates, and guardrails
+    home: docs/agents/devtools/P13-Onboarding-Sandbox-Coach.md
+    maturity: stable
+    primary_users:
+      - New Teams
+      - POD-S
+      - Platform Owner
+
+  - code: P14
+    name: DevOps LiveOps Companion
+    short_code: LVO
+    type: devtools
+    scope: liveops
+    description: Helps interpret logs, incidents and LiveOps dashboards
+    home: docs/agents/devtools/P14-DevOps-LiveOps-Companion.md
+    maturity: stable
+    primary_users:
+      - POD-O
+      - SRE
+      - Operations
+      - Platform Owner
+
+  - code: P15
+    name: Dev Master Orchestrator (Jarvis)
+    short_code: DVM
+    type: devtools
+    scope: orchestration
+    description: Orchestrates other agents via Jarvis workflows across repos
+    home: docs/agents/devtools/P15-Dev-Master-Orchestrator.md
+    maturity: stable
+    primary_users:
+      - Jarvis
+      - Platform Owner
+      - Tech Leads
+    related_repos:
+      - eva-meta
+      - eva-orchestrator
+
+  # New patterns P16-P21
+  - code: P16
+    name: Awareness Protocol
+    short_code: AWR
+    type: devtools
+    scope: awareness
+    description: Makes EVA Agile Crew self-aware through awareness blocks, assumptions tracking, and explicit uncertainties
+    home: docs/agents/devtools/P16-Awareness-Protocol.md
+    maturity: alpha
+    primary_users:
+      - All DevTools Agents
+      - Platform Owner
+      - Tech Leads
+
+  - code: P17
+    name: Swarm PR Review
+    short_code: SWR
+    type: devtools
+    scope: code-review
+    description: Multi-agent swarm review for PRs with aggregated feedback from multiple perspectives
+    home: docs/agents/devtools/P17-Swarm-PR-Review.md
+    maturity: alpha
+    primary_users:
+      - Developers
+      - Human Reviewers
+      - Tech Leads
+
+  - code: P18
+    name: Tool/API Auto-Onboarding
+    short_code: TON
+    type: devtools
+    scope: integration
+    description: Automatically onboard new tools and APIs with standardized integration patterns
+    home: docs/agents/devtools/P18-Tool-API-Auto-Onboarding.md
+    maturity: concept
+    primary_users:
+      - Developers
+      - Integration Engineers
+      - Platform Owner
+
+  - code: P19
+    name: Action Classification & Safety
+    short_code: ACS
+    type: devtools
+    scope: safety
+    description: Classify actions by autonomy level (C0-C3) and enforce safety guardrails
+    home: docs/agents/devtools/P19-Action-Classification-Safety.md
+    maturity: concept
+    primary_users:
+      - All DevTools Agents
+      - Security SMEs
+      - AI Steward
+    related_frameworks:
+      - GC Agentic AI Framework (C0-C3 autonomy levels)
+
+  - code: P20
+    name: Continuous Self-Improvement
+    short_code: CSI
+    type: devtools
+    scope: improvement
+    description: Feed logs and metrics into retrospectives for continuous improvement
+    home: docs/agents/devtools/P20-Continuous-Self-Improvement.md
+    maturity: concept
+    primary_users:
+      - Platform Owner
+      - Scrum Master
+      - All Pods
+
+  - code: P21
+    name: Provenance & Fingerprinting
+    short_code: PRV
+    type: devtools
+    scope: traceability
+    description: Capture provenance and fingerprints for all actions to support audits and ATO
+    home: docs/agents/devtools/P21-Provenance-Fingerprinting.md
+    maturity: concept
+    primary_users:
+      - ATO Auditor
+      - Security SMEs
+      - AI Steward
+      - Operations
+
+  - code: P22
+    name: Documentation Publishing Bot
+    short_code: DPB
+    type: devtools
+    scope: documentation
+    description: Full documentation lifecycle - implementation → .md → .html → .rag.txt. Step 1 (MISSING) - Scan implementations and extract JSDoc/docstrings to generate API docs. Step 2 (IMPLEMENTED) - MkDocs builds HTML with GC Design System theming, WCAG 2.1 AA, bilingual EN-CA/FR-CA. Step 3 (IMPLEMENTED) - Extract RAG text with RBAC metadata for vector ingestion. Automates documentation from code, not hand-written markdown.
+    home: docs/agents/devtools/P22-Documentation-Publishing-Bot.md
+    maturity: alpha
+    primary_users:
+      - Developers
+      - Tech Leads
+      - Documentation Writers
+    related_repos:
+      - eva-orchestrator
+      - eva-sovereign-ui
+      - eva-da-2
+      - eva-chat
+
+# Service Personas (SP00-SPxx)
+# These are external-facing EVA services that users invoke
+service_personas:
+  - code: SP00
+    name: Senior Advisor
+    type: service_persona
+    scope: strategic-advisory
+    description: ChatGPT-based Senior Advisor & Requirements Analyst providing strategic guidance and architectural recommendations
+    home: docs/agents/personas/SP00-Senior-Advisor.md
+    maturity: stable
+    invocation: "Via docs/chatgpt-bridge.md (asynchronous)"
+    inputs:
+      - Context documents
+      - Architectural questions
+      - Requirements analysis requests
+    outputs:
+      - Strategic recommendations
+      - Architecture guidance
+      - Detailed requirements
+    limitations:
+      - Asynchronous only (no real-time)
+      - Requires manual bridging via Marco
+    primary_users:
+      - Product Owner
+      - Tech Leads
+      - Architects
+    related_repos:
+      - eva-lwo
+      - eva-orchestrator
+    related_patterns:
+      - P02 (REQ)
+      - P04 (LIB)
+
+  - code: SP01
+    name: EVA Data Ingestion
+    type: service_persona
+    scope: data-ingestion
+    description: Automated data ingestion service for RAG pipelines, drives P02 requirements into ingestion plans
+    home: docs/agents/personas/SP01-Data-Ingestion.md
+    maturity: alpha
+    invocation: "P02 task submission → ingestion pipeline"
+    inputs:
+      - Ingestion brief (what data, why, constraints)
+      - Source specifications (SharePoint, Azure Storage, etc.)
+      - Processing requirements (chunking, metadata extraction)
+    outputs:
+      - Ingestion plan
+      - Processed documents in vector store
+      - Side stores (metadata, provenance)
+      - Ingestion report
+    limitations:
+      - Protected B data only
+      - Canada data residency enforced
+      - Requires approval for new data sources
+    safety_rules:
+      - No PII without explicit approval
+      - Automatic content safety filtering
+      - Audit trail required (P21)
+    primary_users:
+      - Domain Experts
+      - Data Stewards
+      - Solution Pods (POD-S)
+    related_repos:
+      - jurispipeline
+      - assistme-pipeline
+      - cppd-pipeline
+      - eva-rag
+    related_patterns:
+      - P02 (REQ)
+      - P11 (SEC)
+      - P19 (ACS)
+      - P21 (PRV)
+
+  - code: SP02
+    name: ATO Auditor
+    type: service_persona
+    scope: compliance-audit
+    description: Automated ATO compliance auditor, validates evidence for Authority to Operate
+    home: docs/agents/personas/SP02-ATO-Auditor.md
+    maturity: concept
+    invocation: "On-demand audit request → compliance report"
+    inputs:
+      - Audit scope (repos, services, time period)
+      - Compliance requirements (TBS, SSC, departmental)
+      - Evidence sources (logs, provenance, docs)
+    outputs:
+      - Compliance report
+      - Gap analysis
+      - Evidence inventory
+      - Risk register updates
+    limitations:
+      - Advisory only (human approval required)
+      - Cannot grant ATO (human authority required)
+    primary_users:
+      - Security SMEs
+      - AI Steward
+      - Platform Owner
+      - Governance Panels
+    related_repos:
+      - eva-meta
+      - eva-ops
+      - eva-audit
+    related_patterns:
+      - P11 (SEC)
+      - P21 (PRV)
+    related_frameworks:
+      - GC Agentic AI Framework
+      - TBS Policy on Service and Digital
+      - SSC Cloud Security
+
+# Conceptual Split: SPxx vs Pxx
+conceptual_model:
+  service_personas:
+    description: "What users see - external-facing EVA services"
+    examples:
+      - "EVA Chat Assistant"
+      - "EVA Data Ingestion"
+      - "Jurisprudence Research Assistant"
+      - "Senior Advisor"
+      - "ATO Auditor"
+    governance: "Per GC Agentic Framework (C0-C3 autonomy levels)"
+    documentation: "PIAs, AIIAs, risk registers"
+
+  devtools_patterns:
+    description: "How we build - internal development patterns"
+    examples:
+      - "P03-SCR (Scrum Agent)"
+      - "P05-SCA (Scaffolder)"
+      - "P15-DVM (Dev Master Orchestrator)"
+    governance: "Internal SDLC standards"
+    documentation: "Pattern specs, runbooks, workflows"
+
+# Maturity Levels
+maturity_definitions:
+  stable: "Production-ready, fully documented, actively used"
+  alpha: "Working implementation, documentation in progress, limited use"
+  beta: "Feature-complete, documentation complete, broader testing"
+  concept: "Design complete, implementation pending"
+  deprecated: "No longer recommended, migration path available"
+
+# Autonomy Levels (C0-C3)
+# Per GC Agentic AI Framework
+autonomy_levels:
+  C0:
+    name: "Human-in-the-loop"
+    description: "AI suggests, human approves every action"
+    examples:
+      - "P06 Review Agent (suggests changes, human merges)"
+      - "ATO Auditor (generates report, human decides)"
+
+  C1:
+    name: "Human-on-the-loop"
+    description: "AI acts autonomously, human monitors and can intervene"
+    examples:
+      - "P04 Librarian (auto-updates docs, human reviews)"
+      - "P10 Metrics Agent (auto-generates reports)"
+
+  C2:
+    name: "Human-over-the-loop"
+    description: "AI acts autonomously with constraints, human reviews periodically"
+    examples:
+      - "P07 Testing Agent (generates tests, runs in CI)"
+      - "EVA Data Ingestion (auto-processes approved sources)"
+
+  C3:
+    name: "Full autonomy"
+    description: "AI acts fully autonomously within well-defined boundaries"
+    examples:
+      - "Not yet implemented in EVA Suite"
+    notes: "Requires extensive safety validation and governance approval"
+
+# Version History
+version_history:
+  - version: 1.0.0
+    date: 2025-12-06
+    changes:
+      - Initial creation
+      - Added P00-P15 stable patterns
+      - Added P16-P21 new patterns
+      - Added SP00-SP02 service personas
+      - Documented conceptual split between SPxx and Pxx
+      - Mapped autonomy levels (C0-C3)

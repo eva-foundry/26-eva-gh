@@ -1,0 +1,45 @@
+\begingroup
+\small
+\begin{center}          %
+\begin{longtable}{%
+    >{\raggedright\arraybackslash}p{0.18\linewidth}
+    >{\raggedright\arraybackslash}p{0.34\linewidth}
+    >{\centering\arraybackslash}p{0.14\linewidth}
+    >{\centering\arraybackslash}p{0.12\linewidth}
+    >{\raggedright\arraybackslash}p{0.14\linewidth}}
+\caption{Summary of literature on metacognition evaluation}
+\label{tab:meta-eval-long}\\   %
+\toprule
+\makecell{\textbf{Authors}} &
+\makecell{\textbf{Key Contribution}} &
+\makecell{\textbf{Focus on}\\\textbf{Meta-}\\\textbf{-cognition}}&
+\makecell{\textbf{Using}\\\textbf{Human}\\\textbf{Baseline}} &
+\makecell{\textbf{Code}\\\textbf{Links}}\\
+\midrule
+\endfirsthead            %
+
+\multicolumn{5}{l}{\small\itshape (Continued)}\\
+\toprule
+\makecell{\textbf{Authors}} &
+\makecell{\textbf{Key Contribution}} &
+\makecell{\textbf{Focus on}\\\textbf{Meta-}\\\textbf{-cognition}} &
+\makecell{\textbf{Using}\\\textbf{Human}\\\textbf{Baseline}} &
+\makecell{\textbf{Code}\\\textbf{Links}}\\
+\midrule
+\endhead                 %
+
+\midrule
+\multicolumn{5}{r}{\small\itshape Continued on next page}\\
+\endfoot                 %
+\endlastfoot 
+        \citet{Didolkar2024} & Elicits GPT-4 to tag, cluster, and exploit its own math “skill” taxonomy; shows that self-selected skill exemplars boost GSM8K and MATH accuracy, demonstrating explicit metacognitive knowledge. & \checkmark & \XSolidBrush & \texttt{N/A} \\
+        \citet{DBLP:journals/corr/abs-2501-11120} & “Behavioral self-awareness” probes: models describe latent policies (risk-seeking, back-doors, insecure coding); touches meta-knowledge of their learned behaviors. & \checkmark & \XSolidBrush & \texttt{\href{https://github.com/XuchanBao/behavioral-self-awareness}{GitHub repo}}\\
+        \citet{hagendorff2025beyond} & Latent-space Stroop-style benchmark quantifies silent “reasoning leaps” between prompt and first token—measures internal reasoning without CoT. & \XSolidBrush & \XSolidBrush & \texttt{\href{https://osf.io/u269r/}{OSF repo}}\\
+        \citet{zhang2025igniting} & Survey unifying Chain-of-Thought mechanisms and agent memory/perception loops; discusses meta-reasoning but is mostly a review, not an eval metric. & \checkmark & \XSolidBrush & \texttt{\href{https://github.com/Zoeyyao27/CoT-Igniting-Agent}{GitHub repo}}\\
+        \citet{wei2022chain} & Introduces Chain-of-Thought prompting that lets models externalise intermediate reasoning; improves tasks but is not itself metacognition evaluation. & \checkmark & \XSolidBrush & \texttt{N/A}\\
+        \citet{wang2025decoupling} & Propose \textbf{DMC}: a failure-prediction + signal-detection framework that \emph{decouples} metacognitive ability from task performance, yielding a model-agnostic score and showing stronger metacognition correlates with lower hallucination rates. & \checkmark & \XSolidBrush & \texttt{\href{https://github.com/Angelo3357/DMC}{GitHub repo}}\\
+        \citet{anthropic2025attribution} & Shows Claude-3.5-Haiku first chooses rhyme words, then fills lines—evidence of forward planning, instead of just predict next token (word). & \checkmark & \XSolidBrush & \texttt{N/A}\\
+        \bottomrule
+\end{longtable}
+\end{center}
+\endgroup

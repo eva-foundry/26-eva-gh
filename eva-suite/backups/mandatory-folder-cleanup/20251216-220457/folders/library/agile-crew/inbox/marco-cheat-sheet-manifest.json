@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "MARCO-CHEAT-SHEET",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/marco-cheat-sheet",
+  "created_timestamp": "2025-11-27T12:40:29.5425899Z",
+  "source_intake_file": "MARCO-CHEAT-SHEET.md",
+  "feature_key": "P02-AUTO-ad903980",
+  "feature_slug": "marco-cheat-sheet"
+}

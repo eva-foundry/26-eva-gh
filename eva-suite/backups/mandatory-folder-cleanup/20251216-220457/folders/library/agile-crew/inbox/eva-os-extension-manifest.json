@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-os-extension.md",
+  "feature_key": "P02-AUTO-ff62ae64",
+  "title": "EVA OS Extension Backlog",
+  "p02_artifacts_path": "docs/features/eva-os-extension",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-os-extension",
+  "created_timestamp": "2025-11-25T23:54:46.0338678Z"
+}

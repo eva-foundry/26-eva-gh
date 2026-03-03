@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "Create 17 EVA Module Repositories",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/create-eva-repos",
+  "created_timestamp": "2025-11-27T12:40:17.9890985Z",
+  "source_intake_file": "CREATE-EVA-REPOS.md",
+  "feature_key": "P02-AUTO-462b22f6",
+  "feature_slug": "create-eva-repos"
+}

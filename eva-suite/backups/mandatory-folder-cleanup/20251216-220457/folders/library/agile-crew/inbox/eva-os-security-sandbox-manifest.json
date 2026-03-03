@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-os-security-sandbox.md",
+  "feature_key": "P02-AUTO-4e50db4e",
+  "title": "CDD: EVA OS Security Sandbox",
+  "p02_artifacts_path": "docs/features/eva-os-security-sandbox",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-os-security-sandbox",
+  "created_timestamp": "2025-11-25T23:54:47.9768062Z"
+}

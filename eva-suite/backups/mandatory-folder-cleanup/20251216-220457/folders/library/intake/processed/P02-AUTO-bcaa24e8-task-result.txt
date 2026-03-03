@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "summary": "Generated Copilot prompt for P08 pattern and created the corresponding markdown file.",
+  "files": [
+    {
+      "path": "docs/agentic/prompts/p08.md",
+      "content": "# P08 Pattern Prompt\n\n## Overview\nThe P08 pattern is designed to facilitate autonomous decision-making and execution within a specified domain. This pattern leverages advanced AI capabilities to operate without human intervention, ensuring efficiency and accuracy in task completion.\n\n## Objective\nTo create a robust and effective Copilot prompt that aligns with the P08 pattern, enabling seamless integration and operation within the designated environment.\n\n## Prompt Structure\n1. **Introduction**: Briefly introduce the task and its significance.\n2. **Task Description**: Clearly outline the task requirements and objectives.\n3. **Execution Guidelines**: Provide detailed instructions on how the task should be executed autonomously.\n4. **Output Format**: Specify the required output format, ensuring it aligns with the system's expectations.\n5. **Error Handling**: Describe how to handle potential errors or exceptions during execution.\n\n## Example Prompt\n```\n**Task**: Execute autonomous data analysis\n\n**Description**: Analyze the provided dataset to identify key trends and insights. Ensure the analysis is comprehensive and accurate.\n\n**Execution Guidelines**:\n- Load the dataset from the specified source\n- Perform data cleaning and preprocessing\n- Apply relevant analytical models\n- Summarize findings in a clear and concise manner\n\n**Output Format**: JSON object with summary and detailed analysis\n\n**Error Handling**: Log any data inconsistencies and proceed with available data\n```\n\n## Dependencies\n- PROD-023: Ensure compatibility with existing production systems and protocols.\n\n## Conclusion\nThe P08 pattern prompt is a critical component for enabling autonomous operations within AI-driven environments. By adhering to the outlined structure, the prompt ensures clarity, precision, and effectiveness in task execution.",
+      "action": "create"
+    }
+  ],
+  "nextSteps": "Review the generated prompt for alignment with project goals and integrate it into the Copilot system for testing and validation."
+}

@@ -1,0 +1,10 @@
+graph TD;
+    A[Code Commit] --> B[Build];
+    B --> C[Test];
+    C --> D{Tests Passed?};
+    D -->|Yes| E[Deploy to Staging];
+    D -->|No| F[Fix Issues];
+    E --> G[Staging Tests];
+    G --> H{Staging Passed?};
+    H -->|Yes| I[Deploy to Production];
+    H -->|No| F;

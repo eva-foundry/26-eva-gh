@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-directory-user-administration.md",
+  "feature_key": "P02-AUTO-a4cc0393",
+  "title": "CDD: EVA Directory & User Administration",
+  "p02_artifacts_path": "docs/features/eva-directory-user-administration",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-directory-user-administration",
+  "created_timestamp": "2025-11-25T23:54:11.1963000Z"
+}

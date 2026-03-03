@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVA DevKit - Quick Start Guide</title>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: #26374a;
+      --secondary: #667eea;
+      --success: #4caf50;
+      --warning: #ff9800;
+      --danger: #f44336;
+      --info: #2196f3;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f9fa;
+      --text-primary: #333;
+      --text-secondary: #666;
+      --border: #e5e5e5;
+    }
+
+    body {
+      font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    /* Sidebar Navigation */
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      background: var(--primary);
+      color: white;
+      padding: 2rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .sidebar-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar-subtitle {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 2rem;
+    }
+
+    .nav-section {
+      margin-bottom: 2rem;
+    }
+
+    .nav-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.7;
+      margin-bottom: 0.75rem;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .nav-link:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .nav-link.active {
+      background: rgba(255,255,255,0.2);
+      font-weight: 600;
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 3rem;
+      max-width: 1200px;
+    }
+
+    .page-header {
+      margin-bottom: 3rem;
+    }
+
+    .page-title {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .page-description {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+    }
+
+    /* Content Sections */
+    .content-section {
+      background: var(--bg-primary);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Code Blocks */
+    .code-block {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 1.5rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 1rem 0;
+      position: relative;
+    }
+
+    .code-block code {
+      font-family: "Courier New", Consolas, Monaco, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .code-language {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: rgba(255,255,255,0.1);
+      padding: 0.25rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    /* Steps */
+    .step-list {
+      counter-reset: step;
+      list-style: none;
+    }
+
+    .step-item {
+      counter-increment: step;
+      margin-bottom: 2rem;
+      padding-left: 3rem;
+      position: relative;
+    }
+
+    .step-item::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      background: var(--secondary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .step-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    /* Feature Grid */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--bg-secondary);
+      padding: 1.5rem;
+      border-radius: 6px;
+      border-left: 4px solid var(--secondary);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    /* Demo Container */
+    .demo-container {
+      background: var(--bg-secondary);
+      padding: 2rem;
+      border-radius: 6px;
+      margin: 1.5rem 0;
+      border: 2px dashed var(--border);
+    }
+
+    .demo-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Alert Boxes */
+    .alert-box {
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .alert-box.info {
+      background: #e3f2fd;
+      border-left: 4px solid var(--info);
+      color: #0d47a1;
+    }
+
+    .alert-box.success {
+      background: #e8f5e9;
+      border-left: 4px solid var(--success);
+      color: #1b5e20;
+    }
+
+    .alert-box.warning {
+      background: #fff3e0;
+      border-left: 4px solid var(--warning);
+      color: #e65100;
+    }
+
+    .alert-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    /* Links */
+    a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        height: auto;
+      }
+
+      .main-content {
+        padding: 2rem 1rem;
+      }
+
+      .page-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">EVA DevKit</div>
+      <div class="sidebar-subtitle">Quick Start Guide</div>
+
+      <nav>
+        <div class="nav-section">
+          <div class="nav-title">Getting Started</div>
+          <a href="#installation" class="nav-link active">Installation</a>
+          <a href="#quickstart" class="nav-link">Quick Start</a>
+          <a href="#components" class="nav-link">Components</a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-title">Integration</div>
+          <a href="#react" class="nav-link">React</a>
+          <a href="#vue" class="nav-link">Vue</a>
+          <a href="#vanilla" class="nav-link">Vanilla JS</a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-title">Advanced</div>
+          <a href="#theming" class="nav-link">Theming</a>
+          <a href="#i18n" class="nav-link">i18n</a>
+          <a href="#accessibility" class="nav-link">Accessibility</a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-title">Resources</div>
+          <a href="#storybook" class="nav-link">Storybook</a>
+          <a href="#api-docs" class="nav-link">API Docs</a>
+          <a href="#examples" class="nav-link">Examples</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">Welcome to EVA DevKit</h1>
+        <p class="page-description">
+          Get started with EVA Sovereign UI components in minutes. This guide will walk you through
+          installation, basic usage, and integration with your favorite framework.
+        </p>
+      </div>
+
+      <!-- Installation Section -->
+      <section id="installation" class="content-section">
+        <h2 class="section-title">Installation</h2>
+        
+        <p>EVA components are distributed as standard Web Components and can be used in any modern web application.</p>
+
+        <h3 class="section-subtitle">Option 1: npm (Recommended)</h3>
+        <div class="code-block">
+          <span class="code-language">bash</span>
+          <code>npm install @eva-sovereign/web-components</code>
+        </div>
+
+        <h3 class="section-subtitle">Option 2: CDN</h3>
+        <div class="code-block">
+          <span class="code-language">html</span>
+          <code>&lt;script type="module" src="https://unpkg.com/@eva-sovereign/web-components"&gt;&lt;/script&gt;</code>
+        </div>
+
+        <div class="alert-box info">
+          <span class="alert-icon">ℹ️</span>
+          <div>
+            <strong>Browser Support:</strong> EVA components work in all modern browsers (Chrome 67+, Firefox 63+, Safari 13.1+, Edge 79+).
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Start Section -->
+      <section id="quickstart" class="content-section">
+        <h2 class="section-title">Quick Start</h2>
+        
+        <p>Follow these steps to create your first EVA-powered application:</p>
+
+        <ol class="step-list">
+          <li class="step-item">
+            <div class="step-title">Import the components</div>
+            <div class="code-block">
+              <span class="code-language">javascript</span>
+              <code>import '@eva-sovereign/web-components';</code>
+            </div>
+          </li>
+
+          <li class="step-item">
+            <div class="step-title">Use components in your HTML</div>
+            <div class="code-block">
+              <span class="code-language">html</span>
+              <code>&lt;eva-button variant="primary"&gt;Click Me&lt;/eva-button&gt;
+&lt;eva-input type="email" placeholder="Enter your email"&gt;&lt;/eva-input&gt;</code>
+            </div>
+          </li>
+
+          <li class="step-item">
+            <div class="step-title">Handle events with JavaScript</div>
+            <div class="code-block">
+              <span class="code-language">javascript</span>
+              <code>const button = document.querySelector('eva-button');
+
+button.addEventListener('eva-click', () => {
+  console.log('Button clicked!');
+});</code>
+            </div>
+          </li>
+        </ol>
+
+        <div class="demo-container">
+          <div class="demo-title">🎮 Try It Live</div>
+          <eva-input id="demo-input" type="text" placeholder="Type something..."></eva-input>
+          <eva-button variant="primary" id="demo-button" style="margin-top: 1rem;">Submit</eva-button>
+          <div id="demo-output" style="margin-top: 1rem; padding: 1rem; background: white; border-radius: 4px; min-height: 3rem;"></div>
+        </div>
+
+        <div class="alert-box success">
+          <span class="alert-icon">✅</span>
+          <div>
+            <strong>That's it!</strong> You now have a working EVA component in your application. Continue reading to learn more advanced patterns.
+          </div>
+        </div>
+      </section>
+
+      <!-- Components Overview -->
+      <section id="components" class="content-section">
+        <h2 class="section-title">Available Components</h2>
+        
+        <p>EVA provides 11 production-ready components, all WCAG AAA compliant and GC Design System certified.</p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🔘</div>
+            <div class="feature-title">eva-button</div>
+            <p>6 variants: supertask, primary, secondary, danger, link, contextual-signin</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <div class="feature-title">eva-input</div>
+            <p>Text, email, password, tel, url, number with validation</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📋</div>
+            <div class="feature-title">eva-select</div>
+            <p>Dropdown with keyboard navigation and error states</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">☑️</div>
+            <div class="feature-title">eva-checkbox</div>
+            <p>Custom styled with 44px touch targets</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔘</div>
+            <div class="feature-title">eva-radio</div>
+            <p>Mutual exclusion with arrow navigation</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🗂️</div>
+            <div class="feature-title">eva-tabs</div>
+            <p>Tabbed interface with Home/End shortcuts</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🪟</div>
+            <div class="feature-title">eva-modal</div>
+            <p>3 sizes with focus trap and Esc close</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🃏</div>
+            <div class="feature-title">eva-card</div>
+            <p>Default, bordered, elevated variants</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">⚠️</div>
+            <div class="feature-title">eva-alert</div>
+            <p>Success, info, warning, danger (dismissible)</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <div class="feature-title">eva-chat-panel</div>
+            <p>Message bubbles, typing indicator, RAG-ready</p>
+          </div>
+        </div>
+
+        <div class="alert-box info">
+          <span class="alert-icon">📚</span>
+          <div>
+            <strong>Full Documentation:</strong> Visit the <a href="#storybook">Storybook</a> for interactive examples and the <a href="#api-docs">API Docs</a> for detailed property/event references.
+          </div>
+        </div>
+      </section>
+
+      <!-- React Integration -->
+      <section id="react" class="content-section">
+        <h2 class="section-title">React Integration</h2>
+        
+        <p>EVA components work seamlessly with React. Use refs and addEventListener for event handling:</p>
+
+        <div class="code-block">
+          <span class="code-language">jsx</span>
+          <code>import { useRef, useEffect, useState } from 'react';
+import '@eva-sovereign/web-components';
+
+function LoginForm() {
+  const buttonRef = useRef(null);
+  const inputRef = useRef(null);
+  const [email, setEmail] = useState('');
+
+  useEffect(() => {
+    const button = buttonRef.current;
+    const input = inputRef.current;
+
+    const handleClick = () => {
+      console.log('Email:', email);
+    };
+
+    const handleInput = (e) => {
+      setEmail(e.detail.value);
+    };
+
+    button.addEventListener('eva-click', handleClick);
+    input.addEventListener('eva-input', handleInput);
+
+    return () => {
+      button.removeEventListener('eva-click', handleClick);
+      input.removeEventListener('eva-input', handleInput);
+    };
+  }, [email]);
+
+  return (
+    &lt;div&gt;
+      &lt;eva-input ref={inputRef} type="email" placeholder="Email"&gt;&lt;/eva-input&gt;
+      &lt;eva-button ref={buttonRef} variant="primary"&gt;Sign In&lt;/eva-button&gt;
+    &lt;/div&gt;
+  );
+}</code>
+        </div>
+
+        <div class="alert-box warning">
+          <span class="alert-icon">⚠️</span>
+          <div>
+            <strong>Important:</strong> Use refs + addEventListener, not JSX props. Web Components don't support React synthetic events.
+          </div>
+        </div>
+      </section>
+
+      <!-- Vue Integration -->
+      <section id="vue" class="content-section">
+        <h2 class="section-title">Vue Integration</h2>
+        
+        <p>Configure Vue to recognize EVA components as custom elements:</p>
+
+        <h3 class="section-subtitle">vite.config.ts</h3>
+        <div class="code-block">
+          <span class="code-language">typescript</span>
+          <code>import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+
+export default defineConfig({
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('eva-')
+        }
+      }
+    })
+  ]
+});</code>
+        </div>
+
+        <h3 class="section-subtitle">Component Usage</h3>
+        <div class="code-block">
+          <span class="code-language">vue</span>
+          <code>&lt;script setup lang="ts"&gt;
+import { ref, onMounted } from 'vue';
+import '@eva-sovereign/web-components';
+
+const email = ref('');
+const buttonRef = ref(null);
+
+onMounted(() => {
+  buttonRef.value?.addEventListener('eva-click', () => {
+    console.log('Email:', email.value);
+  });
+});
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;eva-input v-model="email" type="email" placeholder="Email" /&gt;
+  &lt;eva-button ref="buttonRef" variant="primary"&gt;Sign In&lt;/eva-button&gt;
+&lt;/template&gt;</code>
+        </div>
+      </section>
+
+      <!-- Vanilla JS Integration -->
+      <section id="vanilla" class="content-section">
+        <h2 class="section-title">Vanilla JavaScript</h2>
+        
+        <p>Using EVA components with vanilla JavaScript is straightforward:</p>
+
+        <div class="code-block">
+          <span class="code-language">html</span>
+          <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;script type="module" src="path/to/eva-components.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;eva-input id="emailInput" type="email"&gt;&lt;/eva-input&gt;
+  &lt;eva-button id="submitBtn" variant="primary"&gt;Submit&lt;/eva-button&gt;
+
+  &lt;script&gt;
+    const input = document.getElementById('emailInput');
+    const button = document.getElementById('submitBtn');
+
+    button.addEventListener('eva-click', () => {
+      console.log('Email:', input.value);
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+        </div>
+      </section>
+
+      <!-- Theming Section -->
+      <section id="theming" class="content-section">
+        <h2 class="section-title">Theming</h2>
+        
+        <p>EVA components use CSS custom properties for theming. Override these variables to customize appearance:</p>
+
+        <div class="code-block">
+          <span class="code-language">css</span>
+          <code>:root {
+  /* GC Design System Colors */
+  --eva-color-primary: #26374a;
+  --eva-color-secondary: #2b8a3e;
+  --eva-color-danger: #c92a2a;
+  
+  /* Spacing */
+  --eva-spacing-sm: 0.5rem;
+  --eva-spacing-md: 1rem;
+  --eva-spacing-lg: 1.5rem;
+  
+  /* Typography */
+  --eva-font-family: "Noto Sans", Arial, sans-serif;
+  --eva-font-size-base: 1rem;
+  
+  /* Borders */
+  --eva-border-radius: 4px;
+  --eva-border-width: 1px;
+}</code>
+        </div>
+
+        <div class="alert-box info">
+          <span class="alert-icon">🎨</span>
+          <div>
+            <strong>GC Compliance:</strong> EVA components ship with GC Design System defaults. Customize only if needed for your application.
+          </div>
+        </div>
+      </section>
+
+      <!-- i18n Section -->
+      <section id="i18n" class="content-section">
+        <h2 class="section-title">Internationalization (i18n)</h2>
+        
+        <p>EVA components support EN-CA and FR-CA out of the box. Switch locales globally:</p>
+
+        <div class="code-block">
+          <span class="code-language">javascript</span>
+          <code>import { setGlobalLocale } from '@eva-sovereign/web-components';
+
+// Switch to French
+setGlobalLocale('fr-CA');
+
+// Switch back to English
+setGlobalLocale('en-CA');</code>
+        </div>
+
+        <p>Or set locale per component:</p>
+
+        <div class="code-block">
+          <span class="code-language">html</span>
+          <code>&lt;eva-button locale="fr-CA"&gt;Soumettre&lt;/eva-button&gt;</code>
+        </div>
+
+        <div class="demo-container">
+          <div class="demo-title">🌐 Locale Switcher</div>
+          <eva-button variant="secondary" onclick="setGlobalLocale('en-CA')">English</eva-button>
+          <eva-button variant="secondary" onclick="setGlobalLocale('fr-CA')" style="margin-left: 0.5rem;">Français</eva-button>
+        </div>
+      </section>
+
+      <!-- Accessibility Section -->
+      <section id="accessibility" class="content-section">
+        <h2 class="section-title">Accessibility</h2>
+        
+        <p>All EVA components meet WCAG 2.2 AAA standards:</p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⌨️</div>
+            <div class="feature-title">Keyboard Navigation</div>
+            <p>Tab, Enter, Space, Arrow keys, Home/End shortcuts</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">👁️</div>
+            <div class="feature-title">Screen Readers</div>
+            <p>ARIA labels, live regions, semantic HTML</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">High Contrast</div>
+            <p>7:1 contrast ratio, visible focus indicators</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <div class="feature-title">Touch Targets</div>
+            <p>44px minimum size (WCAG AAA)</p>
+          </div>
+        </div>
+
+        <div class="alert-box success">
+          <span class="alert-icon">♿</span>
+          <div>
+            <strong>Government Compliance:</strong> EVA components are certified for use in Government of Canada applications requiring accessibility compliance.
+          </div>
+        </div>
+      </section>
+
+      <!-- Resources Section -->
+      <section id="storybook" class="content-section">
+        <h2 class="section-title">Resources</h2>
+        
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📖</div>
+            <div class="feature-title">Storybook</div>
+            <p>Interactive component documentation with 40+ stories</p>
+            <a href="../packages/web-components/storybook-static/index.html">View Storybook →</a>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <div class="feature-title">API Documentation</div>
+            <p>Complete API reference generated from TypeScript</p>
+            <a href="../packages/web-components/docs/api/index.html">View API Docs →</a>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <div class="feature-title">Canada.ca Chatbot</div>
+            <p>Production demo with RAG integration</p>
+            <a href="../demos/canada-chatbot/index.html">View Demo →</a>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">GC Design Lab</div>
+            <p>Complete component showcase</p>
+            <a href="../demos/gc-design-lab/index.html">View Showcase →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Import EVA Web Components -->
+  <script type="module" src="../../components/eva-sovereign-ui.es.js"></script>
+  
+  <!-- Demo Logic -->
+  <script>
+    // Demo: Input + Button interaction
+    const demoInput = document.getElementById('demo-input');
+    const demoButton = document.getElementById('demo-button');
+    const demoOutput = document.getElementById('demo-output');
+
+    demoButton.addEventListener('eva-click', () => {
+      const value = demoInput.value;
+      demoOutput.innerHTML = `
+        <strong>You entered:</strong> "${value}"<br>
+        <small style="color: #666;">Event triggered at ${new Date().toLocaleTimeString()}</small>
+      `;
+    });
+
+    // Smooth scroll for navigation
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          
+          // Update active state
+          document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "EVA Suite Orchestrator",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/eva-orchestrator-readme",
+  "created_timestamp": "2025-11-27T12:40:21.3210212Z",
+  "source_intake_file": "EVA-ORCHESTRATOR-README.md",
+  "feature_key": "P02-AUTO-d3b4ad52",
+  "feature_slug": "eva-orchestrator-readme"
+}

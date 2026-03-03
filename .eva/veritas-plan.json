@@ -1,0 +1,6810 @@
+{
+  "schema": "eva.veritas-plan.v1",
+  "generated_at": "2026-02-25T11:56:15.209Z",
+  "generated_from": [
+    "PLAN.md"
+  ],
+  "format_detected": "veritas",
+  "prefix": "F26",
+  "features": [
+    {
+      "id": "F26-01",
+      "title": "EVA Core Sub-Repos",
+      "source_heading": "## Feature: EVA Core Sub-Repos [ID=F26-01]",
+      "stories": [
+        {
+          "id": "F26-01-001",
+          "title": "eva-rag clone and sync",
+          "feature_id": "F26-01",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-01-002",
+          "title": "eva-registry clone and sync",
+          "feature_id": "F26-01",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-01-003",
+          "title": "eva-safety clone and sync",
+          "feature_id": "F26-01",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-01-004",
+          "title": "eva-seed clone and sync",
+          "feature_id": "F26-01",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-01-005",
+          "title": "eva-utils clone and sync",
+          "feature_id": "F26-01",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-02",
+      "title": "EVA Sovereign UI",
+      "source_heading": "## Feature: EVA Sovereign UI [ID=F26-02]",
+      "stories": [
+        {
+          "id": "F26-02-001",
+          "title": "EVA-Sovereign-UI baseline",
+          "feature_id": "F26-02",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-02-002",
+          "title": "EVA-Sovereign-UI-by-Copilot variant",
+          "feature_id": "F26-02",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-02-003",
+          "title": "eva-sovereign-ui-des design system",
+          "feature_id": "F26-02",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-02-004",
+          "title": "eva-ui GC design system integration",
+          "feature_id": "F26-02",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-02-005",
+          "title": "ux-accessibility audit",
+          "feature_id": "F26-02",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-03",
+      "title": "InfoAssistant Variants",
+      "source_heading": "## Feature: InfoAssistant Variants [ID=F26-03]",
+      "stories": [
+        {
+          "id": "F26-03-001",
+          "title": "PubSec-Info-Assistant baseline clone",
+          "feature_id": "F26-03",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-03-002",
+          "title": "PubSec-Info-Assistant-by-Copilot variant",
+          "feature_id": "F26-03",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-03-003",
+          "title": "ms-infojp fork sync",
+          "feature_id": "F26-03",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-04",
+      "title": "Infrastructure Clones",
+      "source_heading": "## Feature: Infrastructure Clones [ID=F26-04]",
+      "stories": [
+        {
+          "id": "F26-04-001",
+          "title": "ia-gateway clone and review",
+          "feature_id": "F26-04",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-04-002",
+          "title": "ia-ingestion-service clone and review",
+          "feature_id": "F26-04",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-04-003",
+          "title": "OpenWebUI integration baseline",
+          "feature_id": "F26-04",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-05",
+      "title": "Cloud Housekeeping",
+      "source_heading": "## Feature: Cloud Housekeeping [ID=F26-05]",
+      "stories": [
+        {
+          "id": "F26-05-001",
+          "title": "Stale branch cleanup across sub-repos",
+          "feature_id": "F26-05",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-05-002",
+          "title": "Dependency version audit",
+          "feature_id": "F26-05",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F26-05-003",
+          "title": "EVA Sandbox isolation review",
+          "feature_id": "F26-05",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-MODELS",
+      "title": "MODELS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-MODELS-001",
+          "title": "GET /api/models",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-002",
+          "title": "GET /api/v1/models",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-003",
+          "title": "GET /api/models/base",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-004",
+          "title": "GET /models",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-005",
+          "title": "GET /models/{model}",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-006",
+          "title": "POST /models/{model}/embed",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-007",
+          "title": "GET /models",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-008",
+          "title": "GET /models/{model}",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-009",
+          "title": "POST /models/{model}/embed",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-010",
+          "title": "GET /models",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-011",
+          "title": "GET /models",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-012",
+          "title": "POST /models",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-013",
+          "title": "GET /models",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-014",
+          "title": "GET /v1/models",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-015",
+          "title": "GET /v1/models/{url_idx}",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-016",
+          "title": "POST /models/download",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-017",
+          "title": "POST /models/download/{url_idx}",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-018",
+          "title": "POST /models/upload",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-019",
+          "title": "POST /models/upload/{url_idx}",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-020",
+          "title": "GET /models",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODELS-021",
+          "title": "GET /models/{url_idx}",
+          "feature_id": "F26-MODELS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-EMBEDDINGS",
+      "title": "EMBEDDINGS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-EMBEDDINGS-001",
+          "title": "POST /api/embeddings",
+          "feature_id": "F26-EMBEDDINGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-EMBEDDINGS-002",
+          "title": "POST /api/v1/embeddings",
+          "feature_id": "F26-EMBEDDINGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-EMBEDDINGS-003",
+          "title": "POST /api/embeddings",
+          "feature_id": "F26-EMBEDDINGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-EMBEDDINGS-004",
+          "title": "POST /api/embeddings/{url_idx}",
+          "feature_id": "F26-EMBEDDINGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-CHAT",
+      "title": "CHAT API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-CHAT-001",
+          "title": "POST /api/chat/completions",
+          "feature_id": "F26-CHAT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CHAT-002",
+          "title": "POST /api/v1/chat/completions",
+          "feature_id": "F26-CHAT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CHAT-003",
+          "title": "POST /api/chat/completed",
+          "feature_id": "F26-CHAT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CHAT-004",
+          "title": "POST /api/chat/actions/{action_id}",
+          "feature_id": "F26-CHAT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CHAT-005",
+          "title": "POST /chat",
+          "feature_id": "F26-CHAT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CHAT-006",
+          "title": "POST /chat",
+          "feature_id": "F26-CHAT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CHAT-007",
+          "title": "POST /api/chat",
+          "feature_id": "F26-CHAT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CHAT-008",
+          "title": "POST /api/chat/{url_idx}",
+          "feature_id": "F26-CHAT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CHAT-009",
+          "title": "POST /v1/chat/completions",
+          "feature_id": "F26-CHAT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CHAT-010",
+          "title": "POST /v1/chat/completions/{url_idx}",
+          "feature_id": "F26-CHAT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CHAT-011",
+          "title": "POST /chat/completions",
+          "feature_id": "F26-CHAT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-TASKS",
+      "title": "TASKS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-TASKS-001",
+          "title": "POST /api/tasks/stop/{task_id}",
+          "feature_id": "F26-TASKS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-TASKS-002",
+          "title": "GET /api/tasks",
+          "feature_id": "F26-TASKS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-TASKS-003",
+          "title": "GET /api/tasks/chat/{chat_id}",
+          "feature_id": "F26-TASKS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-CONFIG",
+      "title": "CONFIG API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-CONFIG-001",
+          "title": "GET /api/config",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-002",
+          "title": "GET /config",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-003",
+          "title": "POST /config/update",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-004",
+          "title": "GET /config",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-005",
+          "title": "POST /config",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-006",
+          "title": "GET /config",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-007",
+          "title": "POST /config/update",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-008",
+          "title": "GET /config/url/verify",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-009",
+          "title": "GET /config",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-010",
+          "title": "POST /config/update",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-011",
+          "title": "GET /config",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-012",
+          "title": "POST /config/update",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-013",
+          "title": "GET /config",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-014",
+          "title": "POST /config/update",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-015",
+          "title": "GET /config",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONFIG-016",
+          "title": "POST /config/update",
+          "feature_id": "F26-CONFIG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-WEBHOOK",
+      "title": "WEBHOOK API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-WEBHOOK-001",
+          "title": "GET /api/webhook",
+          "feature_id": "F26-WEBHOOK",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-WEBHOOK-002",
+          "title": "POST /api/webhook",
+          "feature_id": "F26-WEBHOOK",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-VERSION",
+      "title": "VERSION API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-VERSION-001",
+          "title": "GET /api/version",
+          "feature_id": "F26-VERSION",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-VERSION-002",
+          "title": "GET /api/version/updates",
+          "feature_id": "F26-VERSION",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-VERSION-003",
+          "title": "GET /api/version",
+          "feature_id": "F26-VERSION",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-VERSION-004",
+          "title": "GET /api/version/{url_idx}",
+          "feature_id": "F26-VERSION",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-CHANGELOG",
+      "title": "CHANGELOG API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-CHANGELOG-001",
+          "title": "GET /api/changelog",
+          "feature_id": "F26-CHANGELOG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-USAGE",
+      "title": "USAGE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-USAGE-001",
+          "title": "GET /api/usage",
+          "feature_id": "F26-USAGE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-OAUTH",
+      "title": "OAUTH API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-OAUTH-001",
+          "title": "GET /oauth/clients/{client_id}/authorize",
+          "feature_id": "F26-OAUTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OAUTH-002",
+          "title": "GET /oauth/clients/{client_id}/callback",
+          "feature_id": "F26-OAUTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OAUTH-003",
+          "title": "GET /oauth/{provider}/login",
+          "feature_id": "F26-OAUTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OAUTH-004",
+          "title": "GET /oauth/{provider}/login/callback",
+          "feature_id": "F26-OAUTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OAUTH-005",
+          "title": "GET /oauth/{provider}/callback",
+          "feature_id": "F26-OAUTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OAUTH-006",
+          "title": "POST /oauth/clients/register",
+          "feature_id": "F26-OAUTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-MANIFESTJSON",
+      "title": "MANIFESTJSON API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-MANIFESTJSON-001",
+          "title": "GET /manifest.json",
+          "feature_id": "F26-MANIFESTJSON",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-OPENSEARCHXM",
+      "title": "OPENSEARCHXM API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-OPENSEARCHXM-001",
+          "title": "GET /opensearch.xml",
+          "feature_id": "F26-OPENSEARCHXM",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-HEALTH",
+      "title": "HEALTH API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-HEALTH-001",
+          "title": "GET /health",
+          "feature_id": "F26-HEALTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-HEALTH-002",
+          "title": "GET /health/db",
+          "feature_id": "F26-HEALTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-HEALTH-003",
+          "title": "GET /health",
+          "feature_id": "F26-HEALTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-HEALTH-004",
+          "title": "GET /health",
+          "feature_id": "F26-HEALTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-HEALTH-005",
+          "title": "GET /health",
+          "feature_id": "F26-HEALTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-HEALTH-006",
+          "title": "GET /health",
+          "feature_id": "F26-HEALTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-HEALTH-007",
+          "title": "GET /health",
+          "feature_id": "F26-HEALTH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-CACHE",
+      "title": "CACHE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-CACHE-001",
+          "title": "GET /cache/{path:path}",
+          "feature_id": "F26-CACHE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-API",
+      "title": "API API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-API-001",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-002",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-003",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-004",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-005",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-006",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-007",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-008",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-009",
+          "title": "DELETE /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-010",
+          "title": "POST /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-011",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-012",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-013",
+          "title": "POST /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-014",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-015",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-016",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-017",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-018",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-019",
+          "title": "HEAD /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-020",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-021",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-022",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-023",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-024",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API-025",
+          "title": "GET /",
+          "feature_id": "F26-API",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETALLUPLOAD",
+      "title": "GETALLUPLOAD API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETALLUPLOAD-001",
+          "title": "POST /getalluploadstatus",
+          "feature_id": "F26-GETALLUPLOAD",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETALLUPLOAD-002",
+          "title": "POST /getalluploadstatus",
+          "feature_id": "F26-GETALLUPLOAD",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETFOLDERS",
+      "title": "GETFOLDERS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETFOLDERS-001",
+          "title": "POST /getfolders",
+          "feature_id": "F26-GETFOLDERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETFOLDERS-002",
+          "title": "POST /getfolders",
+          "feature_id": "F26-GETFOLDERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-DELETEITEMS",
+      "title": "DELETEITEMS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-DELETEITEMS-001",
+          "title": "POST /deleteItems",
+          "feature_id": "F26-DELETEITEMS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-DELETEITEMS-002",
+          "title": "POST /deleteItems",
+          "feature_id": "F26-DELETEITEMS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-RESUBMITITEM",
+      "title": "RESUBMITITEM API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-RESUBMITITEM-001",
+          "title": "POST /resubmitItems",
+          "feature_id": "F26-RESUBMITITEM",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-RESUBMITITEM-002",
+          "title": "POST /resubmitItems",
+          "feature_id": "F26-RESUBMITITEM",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETTAGS",
+      "title": "GETTAGS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETTAGS-001",
+          "title": "POST /gettags",
+          "feature_id": "F26-GETTAGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETTAGS-002",
+          "title": "POST /gettags",
+          "feature_id": "F26-GETTAGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-LOGSTATUS",
+      "title": "LOGSTATUS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-LOGSTATUS-001",
+          "title": "POST /logstatus",
+          "feature_id": "F26-LOGSTATUS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-LOGSTATUS-002",
+          "title": "POST /logstatus",
+          "feature_id": "F26-LOGSTATUS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETINFODATA",
+      "title": "GETINFODATA API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETINFODATA-001",
+          "title": "GET /getInfoData",
+          "feature_id": "F26-GETINFODATA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETINFODATA-002",
+          "title": "GET /getInfoData",
+          "feature_id": "F26-GETINFODATA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETWARNINGBA",
+      "title": "GETWARNINGBA API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETWARNINGBA-001",
+          "title": "GET /getWarningBanner",
+          "feature_id": "F26-GETWARNINGBA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETWARNINGBA-002",
+          "title": "GET /getWarningBanner",
+          "feature_id": "F26-GETWARNINGBA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETMAXCSVFIL",
+      "title": "GETMAXCSVFIL API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETMAXCSVFIL-001",
+          "title": "GET /getMaxCSVFileSize",
+          "feature_id": "F26-GETMAXCSVFIL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETMAXCSVFIL-002",
+          "title": "GET /getMaxCSVFileSize",
+          "feature_id": "F26-GETMAXCSVFIL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETCITATION",
+      "title": "GETCITATION API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETCITATION-001",
+          "title": "POST /getcitation",
+          "feature_id": "F26-GETCITATION",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETCITATION-002",
+          "title": "POST /getcitation",
+          "feature_id": "F26-GETCITATION",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETAPPLICATI",
+      "title": "GETAPPLICATI API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETAPPLICATI-001",
+          "title": "GET /getApplicationTitle",
+          "feature_id": "F26-GETAPPLICATI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETAPPLICATI-002",
+          "title": "GET /getApplicationTitle",
+          "feature_id": "F26-GETAPPLICATI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETALLTAGS",
+      "title": "GETALLTAGS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETALLTAGS-001",
+          "title": "GET /getalltags",
+          "feature_id": "F26-GETALLTAGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETALLTAGS-002",
+          "title": "GET /getalltags",
+          "feature_id": "F26-GETALLTAGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETTEMPIMAGE",
+      "title": "GETTEMPIMAGE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETTEMPIMAGE-001",
+          "title": "GET /getTempImages",
+          "feature_id": "F26-GETTEMPIMAGE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETTEMPIMAGE-002",
+          "title": "GET /getTempImages",
+          "feature_id": "F26-GETTEMPIMAGE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETHINT",
+      "title": "GETHINT API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETHINT-001",
+          "title": "GET /getHint",
+          "feature_id": "F26-GETHINT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETHINT-002",
+          "title": "GET /getHint",
+          "feature_id": "F26-GETHINT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-POSTTD",
+      "title": "POSTTD API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-POSTTD-001",
+          "title": "POST /posttd",
+          "feature_id": "F26-POSTTD",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-POSTTD-002",
+          "title": "POST /posttd",
+          "feature_id": "F26-POSTTD",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-PROCESS_TD_A",
+      "title": "PROCESS_TD_A API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-PROCESS_TD_A-001",
+          "title": "GET /process_td_agent_response",
+          "feature_id": "F26-PROCESS_TD_A",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-PROCESS_TD_A-002",
+          "title": "GET /process_td_agent_response",
+          "feature_id": "F26-PROCESS_TD_A",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETTDANALYSI",
+      "title": "GETTDANALYSI API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETTDANALYSI-001",
+          "title": "GET /getTdAnalysis",
+          "feature_id": "F26-GETTDANALYSI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETTDANALYSI-002",
+          "title": "GET /getTdAnalysis",
+          "feature_id": "F26-GETTDANALYSI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-REFRESH",
+      "title": "REFRESH API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-REFRESH-001",
+          "title": "POST /refresh",
+          "feature_id": "F26-REFRESH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-REFRESH-002",
+          "title": "POST /refresh",
+          "feature_id": "F26-REFRESH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-STREAM",
+      "title": "STREAM API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-STREAM-001",
+          "title": "GET /stream",
+          "feature_id": "F26-STREAM",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-STREAM-002",
+          "title": "GET /stream",
+          "feature_id": "F26-STREAM",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-TDSTREAM",
+      "title": "TDSTREAM API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-TDSTREAM-001",
+          "title": "GET /tdstream",
+          "feature_id": "F26-TDSTREAM",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-TDSTREAM-002",
+          "title": "GET /tdstream",
+          "feature_id": "F26-TDSTREAM",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-PROCESS_AGEN",
+      "title": "PROCESS_AGEN API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-PROCESS_AGEN-001",
+          "title": "GET /process_agent_response",
+          "feature_id": "F26-PROCESS_AGEN",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-PROCESS_AGEN-002",
+          "title": "GET /process_agent_response",
+          "feature_id": "F26-PROCESS_AGEN",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETFEATUREFL",
+      "title": "GETFEATUREFL API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETFEATUREFL-001",
+          "title": "GET /getFeatureFlags",
+          "feature_id": "F26-GETFEATUREFL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETFEATUREFL-002",
+          "title": "GET /getFeatureFlags",
+          "feature_id": "F26-GETFEATUREFL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-FILE",
+      "title": "FILE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-FILE-001",
+          "title": "POST /file",
+          "feature_id": "F26-FILE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-FILE-002",
+          "title": "POST /file",
+          "feature_id": "F26-FILE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GETFILE",
+      "title": "GETFILE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GETFILE-001",
+          "title": "POST /get-file",
+          "feature_id": "F26-GETFILE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GETFILE-002",
+          "title": "POST /get-file",
+          "feature_id": "F26-GETFILE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-READY",
+      "title": "READY API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-READY-001",
+          "title": "GET /ready",
+          "feature_id": "F26-READY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-INGEST",
+      "title": "INGEST API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-INGEST-001",
+          "title": "POST /api/v1/ingest",
+          "feature_id": "F26-INGEST",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-DOCUMENTS",
+      "title": "DOCUMENTS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-DOCUMENTS-001",
+          "title": "DELETE /api/v1/documents/{document_id}",
+          "feature_id": "F26-DOCUMENTS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-COLLECTION",
+      "title": "COLLECTION API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-COLLECTION-001",
+          "title": "GET /api/v1/collection/stats",
+          "feature_id": "F26-COLLECTION",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-QUERY",
+      "title": "QUERY API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-QUERY-001",
+          "title": "OPTIONS /api/v1/query",
+          "feature_id": "F26-QUERY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-QUERY-002",
+          "title": "POST /api/v1/query",
+          "feature_id": "F26-QUERY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-QUERY-003",
+          "title": "POST /query",
+          "feature_id": "F26-QUERY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-QUERY-004",
+          "title": "POST /query/doc",
+          "feature_id": "F26-QUERY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-QUERY-005",
+          "title": "POST /query/collection",
+          "feature_id": "F26-QUERY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-TENANT",
+      "title": "TENANT API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-TENANT-001",
+          "title": "GET /api/v1/tenant/stats",
+          "feature_id": "F26-TENANT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-RESOURCE",
+      "title": "RESOURCE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-RESOURCE-001",
+          "title": "GET /api/v1/resource",
+          "feature_id": "F26-RESOURCE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-SPEECH",
+      "title": "SPEECH API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-SPEECH-001",
+          "title": "POST /speech",
+          "feature_id": "F26-SPEECH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-TRANSCRIPTIO",
+      "title": "TRANSCRIPTIO API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-TRANSCRIPTIO-001",
+          "title": "POST /transcriptions",
+          "feature_id": "F26-TRANSCRIPTIO",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-VOICES",
+      "title": "VOICES API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-VOICES-001",
+          "title": "GET /voices",
+          "feature_id": "F26-VOICES",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-UPDATE",
+      "title": "UPDATE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-UPDATE-001",
+          "title": "POST /update/profile",
+          "feature_id": "F26-UPDATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-UPDATE-002",
+          "title": "POST /update/password",
+          "feature_id": "F26-UPDATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-LDAP",
+      "title": "LDAP API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-LDAP-001",
+          "title": "POST /ldap",
+          "feature_id": "F26-LDAP",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-SIGNIN",
+      "title": "SIGNIN API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-SIGNIN-001",
+          "title": "POST /signin",
+          "feature_id": "F26-SIGNIN",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-SIGNUP",
+      "title": "SIGNUP API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-SIGNUP-001",
+          "title": "POST /signup",
+          "feature_id": "F26-SIGNUP",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-SIGNOUT",
+      "title": "SIGNOUT API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-SIGNOUT-001",
+          "title": "GET /signout",
+          "feature_id": "F26-SIGNOUT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-ADD",
+      "title": "ADD API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-ADD-001",
+          "title": "POST /add",
+          "feature_id": "F26-ADD",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ADD-002",
+          "title": "POST /add",
+          "feature_id": "F26-ADD",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ADD-003",
+          "title": "POST /add",
+          "feature_id": "F26-ADD",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-ADMIN",
+      "title": "ADMIN API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-ADMIN-001",
+          "title": "GET /admin/details",
+          "feature_id": "F26-ADMIN",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ADMIN-002",
+          "title": "GET /admin/config",
+          "feature_id": "F26-ADMIN",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ADMIN-003",
+          "title": "POST /admin/config",
+          "feature_id": "F26-ADMIN",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ADMIN-004",
+          "title": "GET /admin/config/ldap/server",
+          "feature_id": "F26-ADMIN",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ADMIN-005",
+          "title": "POST /admin/config/ldap/server",
+          "feature_id": "F26-ADMIN",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ADMIN-006",
+          "title": "GET /admin/config/ldap",
+          "feature_id": "F26-ADMIN",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ADMIN-007",
+          "title": "POST /admin/config/ldap",
+          "feature_id": "F26-ADMIN",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-API_KEY",
+      "title": "API_KEY API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-API_KEY-001",
+          "title": "POST /api_key",
+          "feature_id": "F26-API_KEY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API_KEY-002",
+          "title": "DELETE /api_key",
+          "feature_id": "F26-API_KEY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-API_KEY-003",
+          "title": "GET /api_key",
+          "feature_id": "F26-API_KEY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-LIST",
+      "title": "LIST API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-LIST-001",
+          "title": "GET /list",
+          "feature_id": "F26-LIST",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-LIST-002",
+          "title": "GET /list",
+          "feature_id": "F26-LIST",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-LIST-003",
+          "title": "GET /list/user/{user_id}",
+          "feature_id": "F26-LIST",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-LIST-004",
+          "title": "GET /list",
+          "feature_id": "F26-LIST",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-LIST-005",
+          "title": "GET /list",
+          "feature_id": "F26-LIST",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-LIST-006",
+          "title": "GET /list",
+          "feature_id": "F26-LIST",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-LIST-007",
+          "title": "GET /list",
+          "feature_id": "F26-LIST",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-LIST-008",
+          "title": "GET /list",
+          "feature_id": "F26-LIST",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-LIST-009",
+          "title": "GET /list",
+          "feature_id": "F26-LIST",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-LIST-010",
+          "title": "GET /list",
+          "feature_id": "F26-LIST",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-CREATE",
+      "title": "CREATE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-CREATE-001",
+          "title": "POST /create",
+          "feature_id": "F26-CREATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CREATE-002",
+          "title": "POST /create",
+          "feature_id": "F26-CREATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CREATE-003",
+          "title": "POST /create",
+          "feature_id": "F26-CREATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CREATE-004",
+          "title": "POST /create",
+          "feature_id": "F26-CREATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CREATE-005",
+          "title": "POST /create",
+          "feature_id": "F26-CREATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CREATE-006",
+          "title": "POST /create",
+          "feature_id": "F26-CREATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CREATE-007",
+          "title": "POST /api/create",
+          "feature_id": "F26-CREATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CREATE-008",
+          "title": "POST /api/create/{url_idx}",
+          "feature_id": "F26-CREATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CREATE-009",
+          "title": "POST /create",
+          "feature_id": "F26-CREATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CREATE-010",
+          "title": "POST /create",
+          "feature_id": "F26-CREATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-ID",
+      "title": "ID API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-ID-001",
+          "title": "GET /{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-002",
+          "title": "GET /{id}/users",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-003",
+          "title": "POST /{id}/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-004",
+          "title": "DELETE /{id}/delete",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-005",
+          "title": "GET /{id}/messages",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-006",
+          "title": "POST /{id}/messages/post",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-007",
+          "title": "GET /{id}/messages/{message_id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-008",
+          "title": "GET /{id}/messages/{message_id}/thread",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-009",
+          "title": "POST /{id}/messages/{message_id}/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-010",
+          "title": "POST /{id}/messages/{message_id}/reactions/add",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-011",
+          "title": "POST /{id}/messages/{message_id}/reactions/remove",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-012",
+          "title": "DELETE /{id}/messages/{message_id}/delete",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-013",
+          "title": "GET /{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-014",
+          "title": "POST /{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-015",
+          "title": "POST /{id}/messages/{message_id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-016",
+          "title": "POST /{id}/messages/{message_id}/event",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-017",
+          "title": "DELETE /{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-018",
+          "title": "GET /{id}/pinned",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-019",
+          "title": "POST /{id}/pin",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-020",
+          "title": "POST /{id}/clone",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-021",
+          "title": "POST /{id}/clone/shared",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-022",
+          "title": "POST /{id}/archive",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-023",
+          "title": "POST /{id}/share",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-024",
+          "title": "DELETE /{id}/share",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-025",
+          "title": "POST /{id}/folder",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-026",
+          "title": "GET /{id}/tags",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-027",
+          "title": "POST /{id}/tags",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-028",
+          "title": "DELETE /{id}/tags",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-029",
+          "title": "DELETE /{id}/tags/all",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-030",
+          "title": "GET /{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-031",
+          "title": "GET /{id}/process/status",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-032",
+          "title": "GET /{id}/data/content",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-033",
+          "title": "POST /{id}/data/content/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-034",
+          "title": "GET /{id}/content",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-035",
+          "title": "GET /{id}/content/html",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-036",
+          "title": "GET /{id}/content/{file_name}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-037",
+          "title": "DELETE /{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-038",
+          "title": "GET /{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-039",
+          "title": "POST /{id}/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-040",
+          "title": "POST /{id}/update/parent",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-041",
+          "title": "POST /{id}/update/expanded",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-042",
+          "title": "DELETE /{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-043",
+          "title": "GET /id/{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-044",
+          "title": "POST /id/{id}/toggle",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-045",
+          "title": "POST /id/{id}/toggle/global",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-046",
+          "title": "POST /id/{id}/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-047",
+          "title": "DELETE /id/{id}/delete",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-048",
+          "title": "GET /id/{id}/valves",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-049",
+          "title": "GET /id/{id}/valves/spec",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-050",
+          "title": "POST /id/{id}/valves/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-051",
+          "title": "GET /id/{id}/valves/user",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-052",
+          "title": "GET /id/{id}/valves/user/spec",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-053",
+          "title": "POST /id/{id}/valves/user/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-054",
+          "title": "GET /id/{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-055",
+          "title": "POST /id/{id}/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-056",
+          "title": "POST /id/{id}/users/add",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-057",
+          "title": "POST /id/{id}/users/remove",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-058",
+          "title": "DELETE /id/{id}/delete",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-059",
+          "title": "GET /{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-060",
+          "title": "POST /{id}/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-061",
+          "title": "POST /{id}/file/add",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-062",
+          "title": "POST /{id}/file/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-063",
+          "title": "POST /{id}/file/remove",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-064",
+          "title": "DELETE /{id}/delete",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-065",
+          "title": "POST /{id}/reset",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-066",
+          "title": "POST /{id}/files/batch/add",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-067",
+          "title": "GET /{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-068",
+          "title": "POST /{id}/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-069",
+          "title": "DELETE /{id}/delete",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-070",
+          "title": "GET /id/{id}",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-071",
+          "title": "POST /id/{id}/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-072",
+          "title": "DELETE /id/{id}/delete",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-073",
+          "title": "GET /id/{id}/valves",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-074",
+          "title": "GET /id/{id}/valves/spec",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-075",
+          "title": "POST /id/{id}/valves/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-076",
+          "title": "GET /id/{id}/valves/user",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-077",
+          "title": "GET /id/{id}/valves/user/spec",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ID-078",
+          "title": "POST /id/{id}/valves/user/update",
+          "feature_id": "F26-ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-NEW",
+      "title": "NEW API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-NEW-001",
+          "title": "POST /new",
+          "feature_id": "F26-NEW",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-IMPORT",
+      "title": "IMPORT API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-IMPORT-001",
+          "title": "POST /import",
+          "feature_id": "F26-IMPORT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-IMPORT-002",
+          "title": "POST /import",
+          "feature_id": "F26-IMPORT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-IMPORT-003",
+          "title": "POST /import",
+          "feature_id": "F26-IMPORT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-SEARCH",
+      "title": "SEARCH API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-SEARCH-001",
+          "title": "GET /search",
+          "feature_id": "F26-SEARCH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-SEARCH-002",
+          "title": "GET /search",
+          "feature_id": "F26-SEARCH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-SEARCH-003",
+          "title": "GET /search",
+          "feature_id": "F26-SEARCH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-FOLDER",
+      "title": "FOLDER API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-FOLDER-001",
+          "title": "GET /folder/{folder_id}",
+          "feature_id": "F26-FOLDER",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-FOLDER-002",
+          "title": "GET /folder/{folder_id}/list",
+          "feature_id": "F26-FOLDER",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-PINNED",
+      "title": "PINNED API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-PINNED-001",
+          "title": "GET /pinned",
+          "feature_id": "F26-PINNED",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-ALL",
+      "title": "ALL API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-ALL-001",
+          "title": "GET /all",
+          "feature_id": "F26-ALL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ALL-002",
+          "title": "GET /all/archived",
+          "feature_id": "F26-ALL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ALL-003",
+          "title": "GET /all/tags",
+          "feature_id": "F26-ALL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ALL-004",
+          "title": "GET /all/db",
+          "feature_id": "F26-ALL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ALL-005",
+          "title": "DELETE /all",
+          "feature_id": "F26-ALL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-ALL-006",
+          "title": "GET /all",
+          "feature_id": "F26-ALL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-ARCHIVED",
+      "title": "ARCHIVED API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-ARCHIVED-001",
+          "title": "GET /archived",
+          "feature_id": "F26-ARCHIVED",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-ARCHIVE",
+      "title": "ARCHIVE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-ARCHIVE-001",
+          "title": "POST /archive/all",
+          "feature_id": "F26-ARCHIVE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-UNARCHIVE",
+      "title": "UNARCHIVE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-UNARCHIVE-001",
+          "title": "POST /unarchive/all",
+          "feature_id": "F26-UNARCHIVE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-SHARE",
+      "title": "SHARE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-SHARE-001",
+          "title": "GET /share/{share_id}",
+          "feature_id": "F26-SHARE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-TAGS",
+      "title": "TAGS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-TAGS-001",
+          "title": "POST /tags",
+          "feature_id": "F26-TAGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-TAGS-002",
+          "title": "GET /tags",
+          "feature_id": "F26-TAGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-TAGS-003",
+          "title": "GET /api/tags",
+          "feature_id": "F26-TAGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-TAGS-004",
+          "title": "GET /api/tags/{url_idx}",
+          "feature_id": "F26-TAGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-TAGS-005",
+          "title": "POST /tags/completions",
+          "feature_id": "F26-TAGS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-EXPORT",
+      "title": "EXPORT API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-EXPORT-001",
+          "title": "GET /export",
+          "feature_id": "F26-EXPORT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-EXPORT-002",
+          "title": "GET /export",
+          "feature_id": "F26-EXPORT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-EXPORT-003",
+          "title": "GET /export",
+          "feature_id": "F26-EXPORT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-EXPORT-004",
+          "title": "GET /export",
+          "feature_id": "F26-EXPORT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-CONNECTIONS",
+      "title": "CONNECTIONS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-CONNECTIONS-001",
+          "title": "GET /connections",
+          "feature_id": "F26-CONNECTIONS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CONNECTIONS-002",
+          "title": "POST /connections",
+          "feature_id": "F26-CONNECTIONS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-TOOL_SERVERS",
+      "title": "TOOL_SERVERS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-TOOL_SERVERS-001",
+          "title": "GET /tool_servers",
+          "feature_id": "F26-TOOL_SERVERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-TOOL_SERVERS-002",
+          "title": "POST /tool_servers",
+          "feature_id": "F26-TOOL_SERVERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-TOOL_SERVERS-003",
+          "title": "POST /tool_servers/verify",
+          "feature_id": "F26-TOOL_SERVERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-CODE_EXECUTI",
+      "title": "CODE_EXECUTI API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-CODE_EXECUTI-001",
+          "title": "GET /code_execution",
+          "feature_id": "F26-CODE_EXECUTI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CODE_EXECUTI-002",
+          "title": "POST /code_execution",
+          "feature_id": "F26-CODE_EXECUTI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-SUGGESTIONS",
+      "title": "SUGGESTIONS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-SUGGESTIONS-001",
+          "title": "POST /suggestions",
+          "feature_id": "F26-SUGGESTIONS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-BANNERS",
+      "title": "BANNERS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-BANNERS-001",
+          "title": "POST /banners",
+          "feature_id": "F26-BANNERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-BANNERS-002",
+          "title": "GET /banners",
+          "feature_id": "F26-BANNERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-FEEDBACKS",
+      "title": "FEEDBACKS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-FEEDBACKS-001",
+          "title": "GET /feedbacks/all",
+          "feature_id": "F26-FEEDBACKS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-FEEDBACKS-002",
+          "title": "DELETE /feedbacks/all",
+          "feature_id": "F26-FEEDBACKS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-FEEDBACKS-003",
+          "title": "GET /feedbacks/all/export",
+          "feature_id": "F26-FEEDBACKS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-FEEDBACKS-004",
+          "title": "GET /feedbacks/user",
+          "feature_id": "F26-FEEDBACKS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-FEEDBACKS-005",
+          "title": "DELETE /feedbacks",
+          "feature_id": "F26-FEEDBACKS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-FEEDBACKS-006",
+          "title": "GET /feedbacks/list",
+          "feature_id": "F26-FEEDBACKS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-FEEDBACK",
+      "title": "FEEDBACK API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-FEEDBACK-001",
+          "title": "POST /feedback",
+          "feature_id": "F26-FEEDBACK",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-FEEDBACK-002",
+          "title": "GET /feedback/{id}",
+          "feature_id": "F26-FEEDBACK",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-FEEDBACK-003",
+          "title": "POST /feedback/{id}",
+          "feature_id": "F26-FEEDBACK",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-FEEDBACK-004",
+          "title": "DELETE /feedback/{id}",
+          "feature_id": "F26-FEEDBACK",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-LOAD",
+      "title": "LOAD API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-LOAD-001",
+          "title": "POST /load/url",
+          "feature_id": "F26-LOAD",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-LOAD-002",
+          "title": "POST /load/url",
+          "feature_id": "F26-LOAD",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-SYNC",
+      "title": "SYNC API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-SYNC-001",
+          "title": "POST /sync",
+          "feature_id": "F26-SYNC",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-SYNC-002",
+          "title": "POST /sync",
+          "feature_id": "F26-SYNC",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GENERATIONS",
+      "title": "GENERATIONS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GENERATIONS-001",
+          "title": "POST /generations",
+          "feature_id": "F26-GENERATIONS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-EDIT",
+      "title": "EDIT API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-EDIT-001",
+          "title": "POST /edit",
+          "feature_id": "F26-EDIT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-REINDEX",
+      "title": "REINDEX API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-REINDEX-001",
+          "title": "POST /reindex",
+          "feature_id": "F26-REINDEX",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-EF",
+      "title": "EF API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-EF-001",
+          "title": "GET /ef",
+          "feature_id": "F26-EF",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-EF-002",
+          "title": "GET /ef/{text}",
+          "feature_id": "F26-EF",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-RESET",
+      "title": "RESET API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-RESET-001",
+          "title": "POST /reset",
+          "feature_id": "F26-RESET",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-RESET-002",
+          "title": "POST /reset/db",
+          "feature_id": "F26-RESET",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-RESET-003",
+          "title": "POST /reset/uploads",
+          "feature_id": "F26-RESET",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-DELETE",
+      "title": "DELETE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-DELETE-001",
+          "title": "DELETE /delete/user",
+          "feature_id": "F26-DELETE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-DELETE-002",
+          "title": "DELETE /delete/all",
+          "feature_id": "F26-DELETE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-DELETE-003",
+          "title": "DELETE /api/delete",
+          "feature_id": "F26-DELETE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-DELETE-004",
+          "title": "DELETE /api/delete/{url_idx}",
+          "feature_id": "F26-DELETE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-DELETE-005",
+          "title": "DELETE /delete",
+          "feature_id": "F26-DELETE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-DELETE-006",
+          "title": "POST /delete",
+          "feature_id": "F26-DELETE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-MEMORY_ID",
+      "title": "MEMORY_ID API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-MEMORY_ID-001",
+          "title": "POST /{memory_id}/update",
+          "feature_id": "F26-MEMORY_ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MEMORY_ID-002",
+          "title": "DELETE /{memory_id}",
+          "feature_id": "F26-MEMORY_ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-BASE",
+      "title": "BASE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-BASE-001",
+          "title": "GET /base",
+          "feature_id": "F26-BASE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-MODEL",
+      "title": "MODEL API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-MODEL-001",
+          "title": "GET /model",
+          "feature_id": "F26-MODEL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODEL-002",
+          "title": "GET /model/profile/image",
+          "feature_id": "F26-MODEL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODEL-003",
+          "title": "POST /model/toggle",
+          "feature_id": "F26-MODEL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODEL-004",
+          "title": "POST /model/update",
+          "feature_id": "F26-MODEL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-MODEL-005",
+          "title": "POST /model/delete",
+          "feature_id": "F26-MODEL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-VERIFY",
+      "title": "VERIFY API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-VERIFY-001",
+          "title": "POST /verify",
+          "feature_id": "F26-VERIFY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-VERIFY-002",
+          "title": "POST /verify",
+          "feature_id": "F26-VERIFY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-PS",
+      "title": "PS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-PS-001",
+          "title": "GET /api/ps",
+          "feature_id": "F26-PS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-UNLOAD",
+      "title": "UNLOAD API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-UNLOAD-001",
+          "title": "POST /api/unload",
+          "feature_id": "F26-UNLOAD",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-PULL",
+      "title": "PULL API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-PULL-001",
+          "title": "POST /api/pull",
+          "feature_id": "F26-PULL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-PULL-002",
+          "title": "POST /api/pull/{url_idx}",
+          "feature_id": "F26-PULL",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-PUSH",
+      "title": "PUSH API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-PUSH-001",
+          "title": "DELETE /api/push",
+          "feature_id": "F26-PUSH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-PUSH-002",
+          "title": "DELETE /api/push/{url_idx}",
+          "feature_id": "F26-PUSH",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-COPY",
+      "title": "COPY API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-COPY-001",
+          "title": "POST /api/copy",
+          "feature_id": "F26-COPY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-COPY-002",
+          "title": "POST /api/copy/{url_idx}",
+          "feature_id": "F26-COPY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-SHOW",
+      "title": "SHOW API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-SHOW-001",
+          "title": "POST /api/show",
+          "feature_id": "F26-SHOW",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-EMBED",
+      "title": "EMBED API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-EMBED-001",
+          "title": "POST /api/embed",
+          "feature_id": "F26-EMBED",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-EMBED-002",
+          "title": "POST /api/embed/{url_idx}",
+          "feature_id": "F26-EMBED",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GENERATE",
+      "title": "GENERATE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GENERATE-001",
+          "title": "POST /api/generate",
+          "feature_id": "F26-GENERATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GENERATE-002",
+          "title": "POST /api/generate/{url_idx}",
+          "feature_id": "F26-GENERATE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-COMPLETIONS",
+      "title": "COMPLETIONS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-COMPLETIONS-001",
+          "title": "POST /v1/completions",
+          "feature_id": "F26-COMPLETIONS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-COMPLETIONS-002",
+          "title": "POST /v1/completions/{url_idx}",
+          "feature_id": "F26-COMPLETIONS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-AUDIO",
+      "title": "AUDIO API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-AUDIO-001",
+          "title": "POST /audio/speech",
+          "feature_id": "F26-AUDIO",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-UPLOAD",
+      "title": "UPLOAD API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-UPLOAD-001",
+          "title": "POST /upload",
+          "feature_id": "F26-UPLOAD",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-PIPELINE_ID",
+      "title": "PIPELINE_ID API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-PIPELINE_ID-001",
+          "title": "GET /{pipeline_id}/valves",
+          "feature_id": "F26-PIPELINE_ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-PIPELINE_ID-002",
+          "title": "GET /{pipeline_id}/valves/spec",
+          "feature_id": "F26-PIPELINE_ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-PIPELINE_ID-003",
+          "title": "POST /{pipeline_id}/valves/update",
+          "feature_id": "F26-PIPELINE_ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-COMMAND",
+      "title": "COMMAND API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-COMMAND-001",
+          "title": "GET /command/{command}",
+          "feature_id": "F26-COMMAND",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-COMMAND-002",
+          "title": "POST /command/{command}/update",
+          "feature_id": "F26-COMMAND",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-COMMAND-003",
+          "title": "DELETE /command/{command}/delete",
+          "feature_id": "F26-COMMAND",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-EMBEDDING",
+      "title": "EMBEDDING API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-EMBEDDING-001",
+          "title": "GET /embedding",
+          "feature_id": "F26-EMBEDDING",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-EMBEDDING-002",
+          "title": "POST /embedding/update",
+          "feature_id": "F26-EMBEDDING",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-PROCESS",
+      "title": "PROCESS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-PROCESS-001",
+          "title": "POST /process/file",
+          "feature_id": "F26-PROCESS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-PROCESS-002",
+          "title": "POST /process/text",
+          "feature_id": "F26-PROCESS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-PROCESS-003",
+          "title": "POST /process/youtube",
+          "feature_id": "F26-PROCESS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-PROCESS-004",
+          "title": "POST /process/web",
+          "feature_id": "F26-PROCESS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-PROCESS-005",
+          "title": "POST /process/web/search",
+          "feature_id": "F26-PROCESS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-PROCESS-006",
+          "title": "POST /process/files/batch",
+          "feature_id": "F26-PROCESS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-SERVICEPROVI",
+      "title": "SERVICEPROVI API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-SERVICEPROVI-001",
+          "title": "GET /ServiceProviderConfig",
+          "feature_id": "F26-SERVICEPROVI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-RESOURCETYPE",
+      "title": "RESOURCETYPE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-RESOURCETYPE-001",
+          "title": "GET /ResourceTypes",
+          "feature_id": "F26-RESOURCETYPE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-SCHEMAS",
+      "title": "SCHEMAS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-SCHEMAS-001",
+          "title": "GET /Schemas",
+          "feature_id": "F26-SCHEMAS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-USERS",
+      "title": "USERS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-USERS-001",
+          "title": "GET /Users",
+          "feature_id": "F26-USERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USERS-002",
+          "title": "GET /Users/{user_id}",
+          "feature_id": "F26-USERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USERS-003",
+          "title": "POST /Users",
+          "feature_id": "F26-USERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USERS-004",
+          "title": "PUT /Users/{user_id}",
+          "feature_id": "F26-USERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USERS-005",
+          "title": "PATCH /Users/{user_id}",
+          "feature_id": "F26-USERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USERS-006",
+          "title": "DELETE /Users/{user_id}",
+          "feature_id": "F26-USERS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GROUPS",
+      "title": "GROUPS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GROUPS-001",
+          "title": "GET /Groups",
+          "feature_id": "F26-GROUPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GROUPS-002",
+          "title": "GET /Groups/{group_id}",
+          "feature_id": "F26-GROUPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GROUPS-003",
+          "title": "POST /Groups",
+          "feature_id": "F26-GROUPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GROUPS-004",
+          "title": "PUT /Groups/{group_id}",
+          "feature_id": "F26-GROUPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GROUPS-005",
+          "title": "PATCH /Groups/{group_id}",
+          "feature_id": "F26-GROUPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GROUPS-006",
+          "title": "DELETE /Groups/{group_id}",
+          "feature_id": "F26-GROUPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-GROUPS-007",
+          "title": "GET /groups",
+          "feature_id": "F26-GROUPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-TITLE",
+      "title": "TITLE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-TITLE-001",
+          "title": "POST /title/completions",
+          "feature_id": "F26-TITLE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-FOLLOW_UP",
+      "title": "FOLLOW_UP API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-FOLLOW_UP-001",
+          "title": "POST /follow_up/completions",
+          "feature_id": "F26-FOLLOW_UP",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-IMAGE_PROMPT",
+      "title": "IMAGE_PROMPT API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-IMAGE_PROMPT-001",
+          "title": "POST /image_prompt/completions",
+          "feature_id": "F26-IMAGE_PROMPT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-QUERIES",
+      "title": "QUERIES API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-QUERIES-001",
+          "title": "POST /queries/completions",
+          "feature_id": "F26-QUERIES",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-AUTO",
+      "title": "AUTO API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-AUTO-001",
+          "title": "POST /auto/completions",
+          "feature_id": "F26-AUTO",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-EMOJI",
+      "title": "EMOJI API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-EMOJI-001",
+          "title": "POST /emoji/completions",
+          "feature_id": "F26-EMOJI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-MOA",
+      "title": "MOA API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-MOA-001",
+          "title": "POST /moa/completions",
+          "feature_id": "F26-MOA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-ACTIVE",
+      "title": "ACTIVE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-ACTIVE-001",
+          "title": "GET /active",
+          "feature_id": "F26-ACTIVE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-PERMISSIONS",
+      "title": "PERMISSIONS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-PERMISSIONS-001",
+          "title": "GET /permissions",
+          "feature_id": "F26-PERMISSIONS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-DEFAULT",
+      "title": "DEFAULT API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-DEFAULT-001",
+          "title": "GET /default/permissions",
+          "feature_id": "F26-DEFAULT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-DEFAULT-002",
+          "title": "POST /default/permissions",
+          "feature_id": "F26-DEFAULT",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-USER",
+      "title": "USER API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-USER-001",
+          "title": "GET /user/settings",
+          "feature_id": "F26-USER",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USER-002",
+          "title": "POST /user/settings/update",
+          "feature_id": "F26-USER",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USER-003",
+          "title": "GET /user/info",
+          "feature_id": "F26-USER",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USER-004",
+          "title": "POST /user/info/update",
+          "feature_id": "F26-USER",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-USER_ID",
+      "title": "USER_ID API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-USER_ID-001",
+          "title": "GET /{user_id}",
+          "feature_id": "F26-USER_ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USER_ID-002",
+          "title": "GET /{user_id}/oauth/sessions",
+          "feature_id": "F26-USER_ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USER_ID-003",
+          "title": "GET /{user_id}/profile/image",
+          "feature_id": "F26-USER_ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USER_ID-004",
+          "title": "GET /{user_id}/active",
+          "feature_id": "F26-USER_ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USER_ID-005",
+          "title": "POST /{user_id}/update",
+          "feature_id": "F26-USER_ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USER_ID-006",
+          "title": "DELETE /{user_id}",
+          "feature_id": "F26-USER_ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-USER_ID-007",
+          "title": "GET /{user_id}/groups",
+          "feature_id": "F26-USER_ID",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-GRAVATAR",
+      "title": "GRAVATAR API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-GRAVATAR-001",
+          "title": "GET /gravatar",
+          "feature_id": "F26-GRAVATAR",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-CODE",
+      "title": "CODE API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-CODE-001",
+          "title": "POST /code/format",
+          "feature_id": "F26-CODE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-CODE-002",
+          "title": "POST /code/execute",
+          "feature_id": "F26-CODE",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-MARKDOWN",
+      "title": "MARKDOWN API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-MARKDOWN-001",
+          "title": "POST /markdown",
+          "feature_id": "F26-MARKDOWN",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-PDF",
+      "title": "PDF API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-PDF-001",
+          "title": "POST /pdf",
+          "feature_id": "F26-PDF",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-DB",
+      "title": "DB API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-DB-001",
+          "title": "GET /db/download",
+          "feature_id": "F26-DB",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-RAG",
+      "title": "RAG API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-RAG-001",
+          "title": "POST /rag/answer",
+          "feature_id": "F26-RAG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-RAG-002",
+          "title": "POST /rag/answer",
+          "feature_id": "F26-RAG",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-PRICING",
+      "title": "PRICING API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-PRICING-001",
+          "title": "GET /pricing",
+          "feature_id": "F26-PRICING",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-PRICING-002",
+          "title": "GET /pricing/:evaKey",
+          "feature_id": "F26-PRICING",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-PROJECTS",
+      "title": "PROJECTS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-PROJECTS-001",
+          "title": "GET /projects",
+          "feature_id": "F26-PROJECTS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-LAYOUTS",
+      "title": "LAYOUTS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-LAYOUTS-001",
+          "title": "GET /layouts/:pageId",
+          "feature_id": "F26-LAYOUTS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-ASSETS",
+      "title": "ASSETS API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-ASSETS-001",
+          "title": "GET /assets",
+          "feature_id": "F26-ASSETS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-TEMPLATES",
+      "title": "TEMPLATES API",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-TEMPLATES-001",
+          "title": "GET /templates",
+          "feature_id": "F26-TEMPLATES",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-UI",
+      "title": "UI Pages",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-UI-001",
+          "title": "Route /products/:id",
+          "feature_id": "F26-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-UI-002",
+          "title": "Route /devtools",
+          "feature_id": "F26-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-UI-003",
+          "title": "Route /gc-demo",
+          "feature_id": "F26-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-UI-004",
+          "title": "Route /project-stats",
+          "feature_id": "F26-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-UI-005",
+          "title": "Route /ops/batch",
+          "feature_id": "F26-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-UI-006",
+          "title": "Route /rag/ingest",
+          "feature_id": "F26-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-UI-007",
+          "title": "Route /events",
+          "feature_id": "F26-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-UI-008",
+          "title": "Route /metrics",
+          "feature_id": "F26-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-UI-009",
+          "title": "Route /safety",
+          "feature_id": "F26-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-INFRA",
+      "title": "Infrastructure Resources",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-INFRA-001",
+          "title": "azurerm_resource_group \"rg\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-002",
+          "title": "azurerm_cosmosdb_sql_role_assignment \"user_cosmosdb_data_contributor\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-003",
+          "title": "azurerm_cosmosdb_sql_role_assignment \"webApp_cosmosdb_data_contributor\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-004",
+          "title": "azurerm_cosmosdb_sql_role_assignment \"functionApp_cosmosdb_data_contributor\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-005",
+          "title": "azurerm_cosmosdb_sql_role_assignment \"enrichmentApp_cosmosdb_data_contributor\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-006",
+          "title": "azurerm_resource_group_template_deployment \"customer_attribution\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-007",
+          "title": "azurerm_resource_group \"main\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-008",
+          "title": "azurerm_resource_group \"rg\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-009",
+          "title": "azurerm_cosmosdb_sql_role_assignment \"user_cosmosdb_data_contributor\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-010",
+          "title": "azurerm_cosmosdb_sql_role_assignment \"webApp_cosmosdb_data_contributor\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-011",
+          "title": "azurerm_cosmosdb_sql_role_assignment \"functionApp_cosmosdb_data_contributor\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-012",
+          "title": "azurerm_cosmosdb_sql_role_assignment \"enrichmentApp_cosmosdb_data_contributor\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-013",
+          "title": "azurerm_resource_group_template_deployment \"customer_attribution\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-014",
+          "title": "azurerm_container_registry \"acr\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-015",
+          "title": "azurerm_private_endpoint \"ContainerRegistryPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-016",
+          "title": "azurerm_cosmosdb_account \"cosmosdb_account\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-017",
+          "title": "azurerm_cosmosdb_sql_database \"log_database\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-018",
+          "title": "azurerm_cosmosdb_sql_container \"log_container\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-019",
+          "title": "azurerm_private_endpoint \"cosmosPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-020",
+          "title": "azurerm_search_service \"search\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-021",
+          "title": "azurerm_private_endpoint \"searchPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-022",
+          "title": "azurerm_resource_group_template_deployment \"sharepoint_logicapp\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-023",
+          "title": "azurerm_storage_account \"storage\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-024",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-025",
+          "title": "azurerm_monitor_diagnostic_setting \"blob_diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-026",
+          "title": "azurerm_monitor_diagnostic_setting \"file_diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-027",
+          "title": "azurerm_monitor_diagnostic_setting \"queue_diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-028",
+          "title": "azurerm_monitor_diagnostic_setting \"table_diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-029",
+          "title": "azurerm_resource_group_template_deployment \"container\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-030",
+          "title": "azurerm_resource_group_template_deployment \"queue\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-031",
+          "title": "azurerm_private_endpoint \"blobPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-032",
+          "title": "azurerm_private_endpoint \"filePrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-033",
+          "title": "azurerm_private_endpoint \"tablePrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-034",
+          "title": "azurerm_private_endpoint \"queuePrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-035",
+          "title": "azurerm_storage_blob \"config\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-036",
+          "title": "azurerm_container_registry \"acr\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-037",
+          "title": "azurerm_private_endpoint \"acr\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-038",
+          "title": "azurerm_kubernetes_cluster \"aks\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-039",
+          "title": "azurerm_kubernetes_cluster_node_pool \"user\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-040",
+          "title": "azurerm_role_assignment \"aks_acr_pull\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-041",
+          "title": "azurerm_public_ip \"appgw\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-042",
+          "title": "azurerm_application_gateway \"appgw\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-043",
+          "title": "azurerm_monitor_diagnostic_setting \"appgw\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-044",
+          "title": "azurerm_log_analytics_workspace \"law\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-045",
+          "title": "azurerm_application_insights \"ai\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-046",
+          "title": "azurerm_monitor_action_group \"main\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-047",
+          "title": "azurerm_monitor_metric_alert \"aks_cpu\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-048",
+          "title": "azurerm_monitor_metric_alert \"aks_memory\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-049",
+          "title": "azurerm_key_vault \"kv\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-050",
+          "title": "azurerm_private_endpoint \"kv\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-051",
+          "title": "azurerm_role_assignment \"aks_secrets_user\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-052",
+          "title": "azurerm_role_assignment \"kv_secrets_officer_current\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-053",
+          "title": "azurerm_key_vault_secret \"secrets\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-054",
+          "title": "azurerm_virtual_network \"vnet\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-055",
+          "title": "azurerm_subnet \"aks\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-056",
+          "title": "azurerm_subnet \"appgw\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-057",
+          "title": "azurerm_subnet \"private_endpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-058",
+          "title": "azurerm_subnet \"database\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-059",
+          "title": "azurerm_network_security_group \"aks\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-060",
+          "title": "azurerm_subnet_network_security_group_association \"aks\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-061",
+          "title": "azurerm_private_dns_zone \"acr\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-062",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"acr\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-063",
+          "title": "azurerm_private_dns_zone \"keyvault\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-064",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"keyvault\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-065",
+          "title": "azurerm_private_dns_zone \"aks\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-066",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"aks\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-067",
+          "title": "azurerm_container_registry \"acr\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-068",
+          "title": "azurerm_private_endpoint \"ContainerRegistryPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-069",
+          "title": "azurerm_cosmosdb_account \"cosmosdb_account\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-070",
+          "title": "azurerm_cosmosdb_sql_database \"log_database\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-071",
+          "title": "azurerm_cosmosdb_sql_container \"log_container\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-072",
+          "title": "azurerm_private_endpoint \"cosmosPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-073",
+          "title": "azurerm_search_service \"search\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-074",
+          "title": "azurerm_private_endpoint \"searchPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-075",
+          "title": "azurerm_resource_group_template_deployment \"sharepoint_logicapp\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-076",
+          "title": "azurerm_storage_account \"storage\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-077",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-078",
+          "title": "azurerm_monitor_diagnostic_setting \"blob_diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-079",
+          "title": "azurerm_monitor_diagnostic_setting \"file_diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-080",
+          "title": "azurerm_monitor_diagnostic_setting \"queue_diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-081",
+          "title": "azurerm_monitor_diagnostic_setting \"table_diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-082",
+          "title": "azurerm_resource_group_template_deployment \"container\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-083",
+          "title": "azurerm_resource_group_template_deployment \"queue\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-084",
+          "title": "azurerm_private_endpoint \"blobPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-085",
+          "title": "azurerm_private_endpoint \"filePrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-086",
+          "title": "azurerm_private_endpoint \"tablePrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-087",
+          "title": "azurerm_private_endpoint \"queuePrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-088",
+          "title": "azurerm_storage_blob \"config\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-089",
+          "title": "azurerm_cognitive_account \"cognitiveService\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-090",
+          "title": "azurerm_private_endpoint \"accountPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-091",
+          "title": "azurerm_resource_group_template_deployment \"bing_search\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-092",
+          "title": "azurerm_cognitive_account \"openaiAccount\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-093",
+          "title": "azurerm_cognitive_deployment \"deployment\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-094",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-095",
+          "title": "azurerm_private_endpoint \"openaiPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-096",
+          "title": "azurerm_cognitive_account \"docIntelligenceAccount\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-097",
+          "title": "azurerm_private_endpoint \"docintPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-098",
+          "title": "azurerm_service_plan \"funcServicePlan\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-099",
+          "title": "azurerm_monitor_autoscale_setting \"scaleout\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-100",
+          "title": "azurerm_role_assignment \"acr_pull_role\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-101",
+          "title": "azurerm_linux_function_app \"function_app\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-102",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs_commercial\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-103",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs_usgov\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-104",
+          "title": "azurerm_key_vault_access_policy \"policy\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-105",
+          "title": "azurerm_private_endpoint \"privateFunctionEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-106",
+          "title": "azurerm_service_plan \"appServicePlan\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-107",
+          "title": "azurerm_monitor_autoscale_setting \"scaleout\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-108",
+          "title": "azurerm_linux_web_app \"enrichmentapp\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-109",
+          "title": "azurerm_role_assignment \"acr_pull_role\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-110",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs_commercial\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-111",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs_usgov\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-112",
+          "title": "azurerm_private_endpoint \"privateEnrichmentEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-113",
+          "title": "azurerm_key_vault_access_policy \"policy\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-114",
+          "title": "azurerm_service_plan \"appServicePlan\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-115",
+          "title": "azurerm_monitor_autoscale_setting \"scaleout\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-116",
+          "title": "azurerm_role_assignment \"acr_pull_role\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-117",
+          "title": "azurerm_linux_web_app \"app_service\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-118",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs_commercial\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-119",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs_usgov\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-120",
+          "title": "azurerm_key_vault_access_policy \"policy\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-121",
+          "title": "azurerm_private_endpoint \"backendPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-122",
+          "title": "azurerm_log_analytics_workspace \"logAnalytics\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-123",
+          "title": "azurerm_application_insights \"applicationInsights\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-124",
+          "title": "azurerm_monitor_diagnostic_setting \"nsg_diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-125",
+          "title": "azurerm_monitor_private_link_scope \"ampls\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-126",
+          "title": "azurerm_monitor_private_link_scoped_service \"ampl-ss_log_analytics\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-127",
+          "title": "azurerm_monitor_private_link_scoped_service \"ampl_ss_app_insights\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-128",
+          "title": "azurerm_private_endpoint \"ampls\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-129",
+          "title": "azurerm_private_dns_zone \"monitor\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-130",
+          "title": "azurerm_private_dns_a_record \"monitor_api\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-131",
+          "title": "azurerm_private_dns_a_record \"monitor_global\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-132",
+          "title": "azurerm_private_dns_a_record \"monitor_profiler\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-133",
+          "title": "azurerm_private_dns_a_record \"monitor_live\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-134",
+          "title": "azurerm_private_dns_a_record \"monitor_snapshot\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-135",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"monitor-net\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-136",
+          "title": "azurerm_private_dns_zone \"oms\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-137",
+          "title": "azurerm_private_dns_a_record \"oms_law_id\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-138",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"oms-net\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-139",
+          "title": "azurerm_private_dns_zone \"ods\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-140",
+          "title": "azurerm_private_dns_a_record \"ods_law_id\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-141",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"ods-net\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-142",
+          "title": "azurerm_private_dns_zone \"agentsvc\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-143",
+          "title": "azurerm_private_dns_a_record \"agentsvc_law_id\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-144",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"agentsvc-net\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-145",
+          "title": "azurerm_private_dns_a_record \"blob_scadvisorcontentpld\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-146",
+          "title": "azurerm_application_insights_workbook \"example\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-147",
+          "title": "azurerm_private_dns_zone \"pr_dns_zone\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-148",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"pr_dns_vnet_link\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-149",
+          "title": "azurerm_network_security_group \"nsg\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-150",
+          "title": "azurerm_network_ddos_protection_plan \"ddos\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-151",
+          "title": "azurerm_resource_group_template_deployment \"vnet_w_subnets\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-152",
+          "title": "azurerm_private_dns_resolver \"private_dns_resolver\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-153",
+          "title": "azurerm_private_dns_resolver_inbound_endpoint \"private_dns_resolver\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-154",
+          "title": "azurerm_key_vault \"kv\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-155",
+          "title": "azurerm_key_vault_access_policy \"infoasst\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-156",
+          "title": "azurerm_private_endpoint \"kv_private_endpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-157",
+          "title": "azurerm_role_assignment \"role\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-158",
+          "title": "azurerm_resource_group_template_deployment \"kv_secret\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-159",
+          "title": "azurerm_resource_group_template_deployment \"bing_search\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-160",
+          "title": "azurerm_cognitive_account \"cognitiveService\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-161",
+          "title": "azurerm_private_endpoint \"accountPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-162",
+          "title": "azurerm_cognitive_account \"docIntelligenceAccount\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-163",
+          "title": "azurerm_private_endpoint \"docintPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-164",
+          "title": "azurerm_cognitive_account \"openaiAccount\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-165",
+          "title": "azurerm_cognitive_deployment \"deployment\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-166",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-167",
+          "title": "azurerm_private_endpoint \"openaiPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-168",
+          "title": "azurerm_service_plan \"appServicePlan\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-169",
+          "title": "azurerm_monitor_autoscale_setting \"scaleout\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-170",
+          "title": "azurerm_linux_web_app \"enrichmentapp\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-171",
+          "title": "azurerm_role_assignment \"acr_pull_role\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-172",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs_commercial\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-173",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs_usgov\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-174",
+          "title": "azurerm_private_endpoint \"privateEnrichmentEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-175",
+          "title": "azurerm_key_vault_access_policy \"policy\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-176",
+          "title": "azurerm_service_plan \"funcServicePlan\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-177",
+          "title": "azurerm_monitor_autoscale_setting \"scaleout\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-178",
+          "title": "azurerm_role_assignment \"acr_pull_role\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-179",
+          "title": "azurerm_linux_function_app \"function_app\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-180",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs_commercial\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-181",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs_usgov\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-182",
+          "title": "azurerm_key_vault_access_policy \"policy\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-183",
+          "title": "azurerm_private_endpoint \"privateFunctionEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-184",
+          "title": "azurerm_service_plan \"appServicePlan\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-185",
+          "title": "azurerm_monitor_autoscale_setting \"scaleout\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-186",
+          "title": "azurerm_role_assignment \"acr_pull_role\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-187",
+          "title": "azurerm_linux_web_app \"app_service\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-188",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs_commercial\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-189",
+          "title": "azurerm_monitor_diagnostic_setting \"diagnostic_logs_usgov\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-190",
+          "title": "azurerm_key_vault_access_policy \"policy\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-191",
+          "title": "azurerm_private_endpoint \"backendPrivateEndpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-192",
+          "title": "azurerm_log_analytics_workspace \"logAnalytics\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-193",
+          "title": "azurerm_application_insights \"applicationInsights\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-194",
+          "title": "azurerm_monitor_diagnostic_setting \"nsg_diagnostic_logs\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-195",
+          "title": "azurerm_monitor_private_link_scope \"ampls\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-196",
+          "title": "azurerm_monitor_private_link_scoped_service \"ampl-ss_log_analytics\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-197",
+          "title": "azurerm_monitor_private_link_scoped_service \"ampl_ss_app_insights\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-198",
+          "title": "azurerm_private_endpoint \"ampls\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-199",
+          "title": "azurerm_private_dns_zone \"monitor\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-200",
+          "title": "azurerm_private_dns_a_record \"monitor_api\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-201",
+          "title": "azurerm_private_dns_a_record \"monitor_global\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-202",
+          "title": "azurerm_private_dns_a_record \"monitor_profiler\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-203",
+          "title": "azurerm_private_dns_a_record \"monitor_live\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-204",
+          "title": "azurerm_private_dns_a_record \"monitor_snapshot\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-205",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"monitor-net\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-206",
+          "title": "azurerm_private_dns_zone \"oms\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-207",
+          "title": "azurerm_private_dns_a_record \"oms_law_id\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-208",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"oms-net\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-209",
+          "title": "azurerm_private_dns_zone \"ods\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-210",
+          "title": "azurerm_private_dns_a_record \"ods_law_id\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-211",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"ods-net\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-212",
+          "title": "azurerm_private_dns_zone \"agentsvc\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-213",
+          "title": "azurerm_private_dns_a_record \"agentsvc_law_id\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-214",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"agentsvc-net\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-215",
+          "title": "azurerm_private_dns_a_record \"blob_scadvisorcontentpld\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-216",
+          "title": "azurerm_application_insights_workbook \"example\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-217",
+          "title": "azurerm_network_security_group \"nsg\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-218",
+          "title": "azurerm_network_ddos_protection_plan \"ddos\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-219",
+          "title": "azurerm_resource_group_template_deployment \"vnet_w_subnets\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-220",
+          "title": "azurerm_private_dns_resolver \"private_dns_resolver\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-221",
+          "title": "azurerm_private_dns_resolver_inbound_endpoint \"private_dns_resolver\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-222",
+          "title": "azurerm_private_dns_zone \"pr_dns_zone\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-223",
+          "title": "azurerm_private_dns_zone_virtual_network_link \"pr_dns_vnet_link\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-224",
+          "title": "azurerm_key_vault \"kv\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-225",
+          "title": "azurerm_key_vault_access_policy \"infoasst\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-226",
+          "title": "azurerm_private_endpoint \"kv_private_endpoint\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-227",
+          "title": "azurerm_resource_group_template_deployment \"kv_secret\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-INFRA-228",
+          "title": "azurerm_role_assignment \"role\"",
+          "feature_id": "F26-INFRA",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F26-OPS",
+      "title": "Operations Scripts",
+      "source": "code-structure",
+      "stories": [
+        {
+          "id": "F26-OPS-001",
+          "title": "command_exists()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-002",
+          "title": "install_azure_cli()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-003",
+          "title": "get_gpu_driver()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-004",
+          "title": "show_loading()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-005",
+          "title": "extract_value()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-006",
+          "title": "check_cmd()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-007",
+          "title": "check_dir()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-008",
+          "title": "write_array_block()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-009",
+          "title": "printInfo()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-010",
+          "title": "set_yellow_text()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-011",
+          "title": "reset_text_color()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-012",
+          "title": "escape_string()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-013",
+          "title": "import_resource_if_needed()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-014",
+          "title": "get_secret()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-015",
+          "title": "set_yellow_text()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-016",
+          "title": "reset_text_color()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-017",
+          "title": "show_usage()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-018",
+          "title": "printInfo()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-019",
+          "title": "write_array_block()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-020",
+          "title": "printInfo()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-021",
+          "title": "set_yellow_text()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-022",
+          "title": "reset_text_color()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-023",
+          "title": "escape_string()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-024",
+          "title": "import_resource_if_needed()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-025",
+          "title": "get_secret()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-026",
+          "title": "set_yellow_text()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-027",
+          "title": "reset_text_color()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-028",
+          "title": "show_usage()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F26-OPS-029",
+          "title": "printInfo()",
+          "feature_id": "F26-OPS",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    }
+  ]
+}

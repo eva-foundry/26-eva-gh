@@ -1,0 +1,23 @@
+{
+  "name": "@esdc/ux-accessibility",
+  "version": "0.1.0",
+  "description": "Shareable, transformative accessibility UI library for ESDC IT and Canadians.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",  "scripts": {
+    "demo": "vite --config demo/vite.config.ts",
+    "build": "tsc -b",
+    "test:a11y": "echo 'Accessibility tests would run here'",
+    "lint:a11y": "echo 'Accessibility linting would run here'"
+  },"dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "@axe-core/react": "^4.8.2",
+    "axe-core": "^4.8.2",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2"
+  },
+  "license": "MIT"
+}

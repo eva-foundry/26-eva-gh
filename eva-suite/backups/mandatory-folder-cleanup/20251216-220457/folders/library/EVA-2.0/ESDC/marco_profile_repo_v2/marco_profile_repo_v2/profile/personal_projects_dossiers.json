@@ -1,0 +1,74 @@
+{
+  "personal_projects": [
+    {
+      "id": "relationship_growth",
+      "name": "Relationship & Communication with Partner",
+      "category": "relationships",
+      "description": "Developing a strong, respectful, long-term partnership with a Chinese girlfriend, with attention to communication and cultural understanding.",
+      "status_2025_11": "Active and evolving."
+    },
+    {
+      "id": "bible_study_women",
+      "name": "Bible Study – Women in the Bible",
+      "category": "spiritual_growth",
+      "description": "Structured exploration of women in the Bible, OT to NT, and application to life and relationships.",
+      "status_2025_11": "Ongoing."
+    },
+    {
+      "id": "chinese_language_learning",
+      "name": "Chinese Language & Culture Learning",
+      "category": "education",
+      "description": "Learning Mandarin and understanding Chinese culture and history.",
+      "status_2025_11": "Active but intermittent."
+    },
+    {
+      "id": "health_yoga_handstand",
+      "name": "Health & Mobility – Yoga & Press to Handstand",
+      "category": "health_fitness",
+      "description": "Shift from heavy CrossFit to yoga and bodyweight skills, focusing on compression strength and mobility.",
+      "status_2025_11": "Active."
+    },
+    {
+      "id": "fasting_experiments",
+      "name": "Fasting & Metabolic Health",
+      "category": "health_nutrition",
+      "description": "Periodic extended fasts and dietary experiments within a keto-style approach.",
+      "status_2025_11": "Active; planned joint fasts with partner."
+    },
+    {
+      "id": "backyard_food_forest",
+      "name": "Backyard Food Forest",
+      "category": "gardening",
+      "description": "Creating a small food forest with kiwi, grapes, berries, and herbs.",
+      "status_2025_11": "Active development."
+    },
+    {
+      "id": "patio_restoration",
+      "name": "Patio Restoration – 16x16 Pavers",
+      "category": "home_improvement",
+      "description": "Restoring and leveling a 6x10 grid of 16x16 pavers with proper base and polymeric sand.",
+      "status_2025_11": "In progress (planning / early work)."
+    },
+    {
+      "id": "shed_rebuild",
+      "name": "Tool Shed Floor & Foundation Rebuild",
+      "category": "home_improvement",
+      "description": "Rebuilding a 2x6m shed floor/foundation to address moisture and mold.",
+      "status_2025_11": "Deferred to next year."
+    },
+    {
+      "id": "indoor_grow_lab",
+      "name": "Indoor Grow & Nursery Experiment",
+      "category": "hobby_experiment",
+      "description": "Indoor horticulture lab with LED lights and multi-tier shelves for cannabis and seedlings.",
+      "status_2025_11": "Active."
+    },
+    {
+      "id": "career_narrative",
+      "name": "Life & Career Narrative (1984–Present)",
+      "category": "reflection_writing",
+      "description": "Writing a structured narrative of a 41-year IT career and key turning points.",
+      "status_2025_11": "In progress (high-level outline in mind)."
+    }
+  ]
+}

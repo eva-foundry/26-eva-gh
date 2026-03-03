@@ -1,0 +1,64 @@
+{
+  "insights": [
+    {
+      "viewpoint": "overview",
+      "label": "Overview",
+      "summary": "Traffic is healthy with under 1% error rate and stable latency within acceptable thresholds.",
+      "findings": [
+        "Usage peaks around 15:00–18:00 with more than 900 sessions.",
+        "Overnight traffic is low but consistent, which suggests global or batch usage.",
+        "No major spikes in errors across the last 24 hours."
+      ],
+      "recommendations": [
+        "Keep current capacity settings; no scale-up required.",
+        "Monitor upcoming releases for potential impact on p95 latency.",
+        "Use this pattern as a baseline for future anomaly detection."
+      ]
+    },
+    {
+      "viewpoint": "reliability",
+      "label": "Reliability",
+      "summary": "Error rate is below 1%, with no critical failure windows.",
+      "findings": [
+        "Highest error count is 6 events in the 15:00 window.",
+        "Error distribution is proportional to traffic volume.",
+        "No single hour shows a sustained spike."
+      ],
+      "recommendations": [
+        "Continue to log root causes for all 5xx errors.",
+        "Introduce SLOs: 99.5% success rate over rolling 7 days.",
+        "Prepare runbooks for incident response even if volume is low."
+      ]
+    },
+    {
+      "viewpoint": "performance",
+      "label": "Performance",
+      "summary": "p95 latency is ~640 ms, acceptable but with room for improvement.",
+      "findings": [
+        "Latency correlates with peak sessions but stays under 800 ms.",
+        "No evidence of persistent queuing or timeouts.",
+        "Largest spikes align with mid-day batch-type workloads."
+      ],
+      "recommendations": [
+        "Profile the busiest endpoints during 12:00–18:00.",
+        "Cache static metadata where possible to shave off 50–100 ms.",
+        "Set early-warning alerts at 900 ms p95 latency."
+      ]
+    },
+    {
+      "viewpoint": "cost",
+      "label": "Cost",
+      "summary": "APIM cost for the last 24 hours is moderate compared to traffic volume.",
+      "findings": [
+        "Blended APIM cost is about $37.45 for 4.8k sessions.",
+        "Cost per 1k sessions is within the expected envelope.",
+        "No abnormal bursts in call volume."
+      ],
+      "recommendations": [
+        "Track trends over 30 days to detect gradual cost creep.",
+        "Tag all EVA workloads by app and feature for chargeback.",
+        "Introduce cost dashboards for product owners (future EVA LiveOps feature)."
+      ]
+    }
+  ]
+}

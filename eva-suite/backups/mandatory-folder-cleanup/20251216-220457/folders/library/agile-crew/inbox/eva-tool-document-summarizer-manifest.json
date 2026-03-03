@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-tool-document-summarizer.md",
+  "feature_key": "P02-AUTO-536fbe32",
+  "title": "CDD: EVA Document Summarizer Tool",
+  "p02_artifacts_path": "docs/features/eva-tool-document-summarizer",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-tool-document-summarizer",
+  "created_timestamp": "2025-11-25T23:55:12.2714469Z"
+}

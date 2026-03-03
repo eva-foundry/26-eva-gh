@@ -1,0 +1,10 @@
+{
+  "feature_slug": "work-package-2-react-first",
+  "priority": "MEDIUM",
+  "feature_key": "P02-AUTO-840d0d1d",
+  "p02_artifacts_path": "docs/features/work-package-2-react-first",
+  "created_timestamp": "2025-12-09T12:42:14.5843925Z",
+  "title": "Work Package 2: React-First Components (Optional Path)",
+  "source_intake_file": "WORK-PACKAGE-2-REACT-FIRST.md",
+  "status": "ready-for-crew"
+}

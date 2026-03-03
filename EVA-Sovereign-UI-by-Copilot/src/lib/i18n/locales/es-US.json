@@ -1,0 +1,85 @@
+{
+  "esdc": {
+    "title": "Empleo y Desarrollo Social de Estados Unidos",
+    "titleShort": "ESDC",
+    "hero": {
+      "title": "Construyendo una fuerza laboral calificada, adaptable e inclusiva",
+      "description": "Acceda a servicios de empleo, beneficios y programas de apoyo que ayudan a los estadounidenses a tener éxito"
+    },
+    "programs": {
+      "title": "Programas y Servicios",
+      "ei": {
+        "title": "Seguro de Desempleo",
+        "titleShort": "UI",
+        "description": "Asistencia financiera temporal mientras busca trabajo o mejora sus habilidades",
+        "details": "El Seguro de Desempleo (UI) proporciona apoyo temporal de ingresos a estadounidenses desempleados mientras buscan trabajo o mejoran sus habilidades."
+      },
+      "oas": {
+        "title": "Seguridad Social",
+        "titleShort": "SS",
+        "description": "Pago mensual para personas mayores de 65 años o más",
+        "details": "La Seguridad Social es un pago mensual disponible para la mayoría de los estadounidenses de 65 años o más."
+      },
+      "cpp": {
+        "title": "Beneficios de Jubilación",
+        "titleShort": "RB",
+        "description": "Programa contributivo de pensión de jubilación",
+        "details": "Los Beneficios de Jubilación forman parte del sistema de ingresos de jubilación de Estados Unidos."
+      }
+    },
+    "services": {
+      "jobSearch": {
+        "title": "Búsqueda de Empleo",
+        "description": "Encuentre oportunidades de empleo en todos los Estados Unidos",
+        "details": "Busque miles de trabajos, explore tendencias del mercado laboral y acceda a herramientas de planificación de carrera."
+      },
+      "benefitsFinder": {
+        "title": "Buscador de Beneficios",
+        "description": "Descubra qué beneficios y servicios gubernamentales puede ser elegible para recibir",
+        "details": "Responda algunas preguntas simples para obtener una lista personalizada de beneficios y servicios."
+      }
+    }
+  },
+  "chat": {
+    "title": "Preguntar a EVA",
+    "subtitle": "Asistente Virtual de Empleo",
+    "placeholder": "¿Cómo puedo ayudarte hoy?",
+    "send": "Enviar",
+    "voice": "Entrada de voz",
+    "thinking": "EVA está pensando...",
+    "suggestedTopics": "Temas sugeridos:",
+    "topics": {
+      "ei": "Seguro de Desempleo",
+      "oas": "Seguridad Social",
+      "cpp": "Beneficios de Jubilación",
+      "jobs": "Encontrar un trabajo"
+    }
+  },
+  "navigation": {
+    "skipToMain": "Saltar al contenido principal",
+    "home": "Inicio",
+    "programs": "Programas",
+    "services": "Servicios",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "copyright": "© Gobierno de los Estados Unidos",
+    "privacy": "Privacidad",
+    "terms": "Términos y condiciones",
+    "accessibility": "Accesibilidad",
+    "canada": "USA.gov"
+  },
+  "common": {
+    "learnMore": "Aprende más",
+    "apply": "Aplicar ahora",
+    "english": "English",
+    "french": "Français",
+    "spanish": "Español",
+    "italian": "Italiano",
+    "german": "Deutsch",
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "close": "Cerrar"
+  }
+}

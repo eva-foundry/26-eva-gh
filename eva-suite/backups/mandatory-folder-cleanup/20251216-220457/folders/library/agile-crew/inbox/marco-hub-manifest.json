@@ -1,0 +1,10 @@
+{
+  "created_timestamp": "2025-12-15T06:34:25.0521721Z",
+  "priority": "MEDIUM",
+  "status": "ready-for-crew",
+  "title": "🎯 Marco's EVA 2.0 Command Hub",
+  "feature_slug": "marco-hub",
+  "p02_artifacts_path": "docs/features/marco-hub",
+  "source_intake_file": "MARCO-HUB.md",
+  "feature_key": "P02-AUTO-d3ff9fa5"
+}

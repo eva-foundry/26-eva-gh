@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-analytics-command-center-dashboard.md",
+  "feature_key": "P02-AUTO-a7750ab1",
+  "title": "CDD: EVA Analytics Command Center Dashboard",
+  "p02_artifacts_path": "docs/features/eva-analytics-command-center-dashboard",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-analytics-command-center-dashboard",
+  "created_timestamp": "2025-11-25T23:53:53.9025933Z"
+}

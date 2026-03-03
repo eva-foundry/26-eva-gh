@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-portal-sso-user-profiles.md",
+  "feature_key": "P02-AUTO-55706a26",
+  "title": "CDD: EVA Portal SSO & User Profiles",
+  "p02_artifacts_path": "docs/features/eva-portal-sso-user-profiles",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-portal-sso-user-profiles",
+  "created_timestamp": "2025-11-25T23:55:00.1664157Z"
+}

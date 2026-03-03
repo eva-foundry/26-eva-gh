@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "summary": "Generated Copilot prompt for P02 pattern and documented it.",
+  "files": [
+    {
+      "path": "docs/agentic/prompts/p02.md",
+      "content": "# P02 Pattern Prompt\n\n## Overview\nThe P02 pattern is designed to facilitate the creation of structured JSON objects based on specific input tasks. This pattern is particularly useful for automating the generation of configuration files, documentation, and other structured data outputs.\n\n## Prompt Structure\nTo effectively use the P02 pattern, the prompt should include:\n\n1. **Task Description**: A clear and concise description of the task to be executed.\n2. **Deliverables**: A list of expected output files with their paths.\n3. **Dependencies**: Any dependencies or prerequisites required for the task.\n4. **Output Format**: A strict JSON format that includes status, summary, files, and next steps.\n\n## Example Prompt\n```\n**Task**: Generate a configuration file for a new service.\n\n**Description**: Create a JSON configuration file that includes service name, version, and endpoint details.\n\n**Deliverables**: [\n  \"config/service-config.json\"\n]\n\n**Dependencies**: [\n  \"CONFIG-SCHEMA-001\"\n]\n```\n\n## Expected Output\nThe output should be a JSON object with the following structure:\n\n```json\n{\n  \"status\": \"success\",\n  \"summary\": \"Generated configuration file for the new service.\",\n  \"files\": [\n    {\n      \"path\": \"config/service-config.json\",\n      \"content\": \"{\\\"serviceName\\\": \\\"ExampleService\\\", \\\"version\\\": \\\"1.0.0\\\", \\\"endpoint\\\": \\\"https://api.example.com\\\"}\",\n      \"action\": \"create\"\n    }\n  ],\n  \"nextSteps\": \"Deploy the service using the generated configuration file.\"\n}\n```\n\n## Usage Notes\n- Ensure all deliverables are clearly defined and paths are correct.\n- Validate dependencies before executing the task.\n- Follow the output format strictly to ensure compatibility with automation systems.\n",
+      "action": "create"
+    }
+  ],
+  "nextSteps": "Review the generated prompt documentation and integrate it into the Copilot system for automated task execution."
+}

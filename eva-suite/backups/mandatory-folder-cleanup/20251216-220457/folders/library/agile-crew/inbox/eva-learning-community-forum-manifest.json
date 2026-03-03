@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-learning-community-forum.md",
+  "feature_key": "P02-AUTO-2436041b",
+  "title": "CDD: EVA Learning Community Forum",
+  "p02_artifacts_path": "docs/features/eva-learning-community-forum",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-learning-community-forum",
+  "created_timestamp": "2025-11-25T23:54:23.2877643Z"
+}

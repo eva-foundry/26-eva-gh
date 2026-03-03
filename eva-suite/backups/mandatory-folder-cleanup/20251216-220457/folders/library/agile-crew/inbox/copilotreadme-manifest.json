@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "priority": "MEDIUM",
+  "created_timestamp": "2025-12-08T01:27:36.6407392Z",
+  "p02_artifacts_path": "docs/features/copilotreadme",
+  "feature_key": "P02-AUTO-02fe0f05",
+  "feature_slug": "copilotreadme",
+  "title": "GitHub Copilot (Scrum Master) - Memory & Context",
+  "source_intake_file": "copilot.readme.md"
+}

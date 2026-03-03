@@ -1,0 +1,852 @@
+Folder PATH listing for volume Windows
+Volume serial number is 0042-8355
+C:.
+|   .gitignore
+|   .sprint-1-marker
+|   calculate-time.ps1
+|   CDD-ARCHIVE-REPORT-2025-01-27.md
+|   CDD-CONSOLIDATION-COMPLETE-REPORT-2025-01-27.md
+|   CDD-CONSOLIDATION-REPORT-2025-01-27.md
+|   CDD-ECOSYSTEM-FINAL-REPORT-2025-01-27.md
+|   CDD-STANDARDIZATION-REPORT-2025-01-27.md
+|   CHATGPT-REPO-STATUS.md
+|   check-repos.ps1
+|   COPILOT-README.md
+|   create-eva-repos-wizard.ps1
+|   CREATE-EVA-REPOS.md
+|   create-repos-now.ps1
+|   create-repos-simple.ps1
+|   create-repos.ps1
+|   EVA-2.0.code-workspace
+|   EVA-HUB.md
+|   EVA-ORCHESTRATOR-README.md
+|   EVA-PRODUCT-LIST.md
+|   eva-suite-full-tree.txt
+|   GITHUB-TOKEN-SETUP.md
+|   list-sessions.ps1
+|   login.ps1
+|   logoff.ps1
+|   MARCO-HUB.md
+|   orchestrator.yml
+|   package-lock.json
+|   package.json
+|   PR_DESCRIPTION.md
+|   PR_SUMMARY.md
+|   QUICK-START.md
+|   README.md
+|   READY-TO-CREATE.md
+|   REPO-QUICK-REFERENCE.md
+|   requirements.txt
+|   run-orchestrator.ps1
+|   SAFE-DELETION-CHECKLIST.md
+|   save-all-work.ps1
+|   START-HERE.md
+|   test-cdd-agent.mjs
+|   test-list-sessions.ps1
+|   test-token.ps1
+|   time-report.ps1
+|   tsconfig.json
+|   work-sessions.json
+|   
++---.devcontainer
+|       devcontainer.json
+|       
++---.github
+|   |   copilot-instructions.md
+|   |   eva-context.instructions.md
+|   |   
+|   \---workflows
+|           agent-bootstrap.yml
+|           daily-metrics.yml
+|           hub-sync.yml
+|           hub-update-test.yml
+|           hub-update.yml
+|           orchestrate.yml
+|           orchestrator-auto.yml
+|           project-board-sync.yml
+|           propose-patch-test.yml
+|           qa-gate.yml
+|           report-ingest.yml
+|           retro-update.yml
+|           scheduled-scan.yml
+|           senior-advisor-smoke-test.yml
+|           siebel-import.yml
+|           sm-job.yml
+|           sprint-metrics.yml
+|           sprint-planning.yml
+|           sync-secrets.yml
+|           weekly-status-report.yml
+|           
++---.vscode
+|       settings.json
+|       
++---agents
+|   |   cdd-inventory.yaml
+|   |   registry.yaml
+|   |   
+|   +---memory
+|   |       dev-master-ai2.md
+|   |       dev-master-windowsguy.md
+|   |       product-owner.md
+|   |       README.md
+|   |       scrum-master.md
+|   |       senior-advisor.md
+|   |       
+|   \---siebel-agent
+|           README.md
+|           run.mjs
+|           
++---azure
+|       azure-login.ps1
+|       azure-logoff.ps1
+|       azure.config.json
+|       
++---cdds
+|       eva-i11y-cdd.md
+|       eva-ui-cdd.md
+|       
++---dashboards
+|   |   README.md
+|   |   
+|   \---sample-data
+|           costs.csv
+|           feedback.csv
+|           generate-learning-metrics.py
+|           generate-platform-metrics.py
+|           generate-space-metrics.py
+|           learning-metrics.json
+|           learning-progress.csv
+|           platform-metrics.csv
+|           platform-metrics.json
+|           queries.csv
+|           space-metrics.json
+|           spaces.csv
+|           test-runs.csv
+|           users.csv
+|           
++---docs
+|   |   AGILE-OPERATING-MODE.md
+|   |   backlog-status.md
+|   |   chatgpt-bridge-checklist.md
+|   |   chatgpt-bridge.md
+|   |   chatgpt-missing-cdds.md
+|   |   CHATGPT-TEST-MESSAGE.md
+|   |   client-preferences.md
+|   |   DEFINITION-OF-DONE.md
+|   |   EVA-2.0-GOV-DEMO-PLAYBOOK.md
+|   |   EVA-2.0-MASTER-CONTEXT.md
+|   |   eva-agile-command-community-board.md
+|   |   EVA-PORTAL-VISION.md
+|   |   EXECUTION-POLICY-TEST-REPORT.md
+|   |   FILE-ORGANIZATION-REPORT-2025-11-19.md
+|   |   marco-hub.html
+|   |   master-plan.md
+|   |   naming-conventions.md
+|   |   PROJECT-JOURNAL-2025-11-24.md
+|   |   qa-master-pod-integration.md
+|   |   SPRINT-ZERO-PLAYBOOK.md
+|   |   TESTING-codespaces-secrets.md
+|   |   TESTING-propose-patch.md
+|   |   why-gh-cli-better.md
+|   |   
+|   +---adr
+|   |       0001-modular-architecture.md
+|   |       0002-tech-stack-and-baselines.md
+|   |       0003-internal-comms-workflow.md
+|   |       index.md
+|   |       
+|   +---analysis
+|   |       scrum-vs-pods-analysis.md
+|   |       
+|   +---architecture
+|   |   \---decisions
+|   |           ADR-001-azure-region-selection.md
+|   |           ADR-002-private-endpoints-zero-trust.md
+|   |           ADR-003-terraform-module-structure.md
+|   |           ADR-004-terraform-state-management.md
+|   |           ADR-005-rbac-security-model.md
+|   |           
+|   +---backlog
+|   |       CDD-INVENTORY-OLD.md
+|   |       CDD-INVENTORY-UPDATED.md
+|   |       CDD-INVENTORY.md
+|   |       eva-analytics-command-center-dashboard.md
+|   |       eva-analytics-dashboard-suite.md
+|   |       eva-analytics-learning-dashboard.md
+|   |       eva-analytics-space-dashboard.md
+|   |       eva-api-platform-developers.md
+|   |       eva-audit-logs-compliance.md
+|   |       eva-bilingual-quality-evaluation.md
+|   |       eva-chat-service.md
+|   |       eva-chat-widget.md
+|   |       eva-directory-user-administration.md
+|   |       eva-domain-assistant-core.md
+|   |       eva-ecosystem-partnerships.md
+|   |       eva-external-customer-support.md
+|   |       eva-feature-flags-ab-testing.md
+|   |       eva-github-projects-dashboard-agent.md
+|   |       eva-learning-cms.md
+|   |       eva-learning-community-forum.md
+|   |       eva-learning-lab-environments.md
+|   |       eva-learning-progress-tracking.md
+|   |       eva-liveops-alerting.md
+|   |       eva-liveops-command-center.md
+|   |       eva-machine-trust-knowledge-brief.md
+|   |       eva-marketplace-internal-tools-community.md
+|   |       eva-mobile-app.md
+|   |       eva-multi-tenant-architecture.md
+|   |       eva-notification-system.md
+|   |       eva-os-app-integrations.md
+|   |       eva-os-context-awareness.md
+|   |       eva-os-deployment-models.md
+|   |       eva-os-extension.md
+|   |       eva-os-security-sandbox.md
+|   |       eva-os-system-service.md
+|   |       eva-os-ui-components.md
+|   |       eva-os-voice-activation.md
+|   |       eva-portability-and-ai-pairing.md
+|   |       eva-portal-landing-page.md
+|   |       eva-portal-navigation-ux.md
+|   |       eva-portal-sso-user-profiles.md
+|   |       eva-production-spaces.md
+|   |       eva-pubsec-info-assistant-assets.md
+|   |       eva-sandbox-spaces.md
+|   |       eva-space-management.md
+|   |       eva-tool-code-review-helper.md
+|   |       eva-tool-data-analysis-copilot.md
+|   |       eva-tool-document-summarizer.md
+|   |       eva-tool-email-draft-assistant.md
+|   |       eva-tool-meeting-transcription.md
+|   |       eva-tools-marketplace.md
+|   |       eva-vision-accessibility.md
+|   |       eva-vision-core-engine.md
+|   |       eva-vision-database-drilldown.md
+|   |       eva-vision-powerbi-integration.md
+|   |       eva-vision-screenshot-analysis.md
+|   |       eva-vision-voice-interface.md
+|   |       eva-wsl2-claude-integration.md
+|   |       issue-draft-commands.md
+|   |       power-bi-dashboard-architecture.md
+|   |       user-request-backlog.md
+|   |       
+|   +---compliance
+|   |       canada-ai-guidelines-alignment.md
+|   |       
+|   +---EVA-2.0
+|   |   |   AI Agents guidebook.pdf
+|   |   |   EVA 2 brainstorm with Claude Sonnet 4.5.docx
+|   |   |   
+|   |   +---archived-backlog
+|   |   |       api-gateway-integration-layer.md
+|   |   |       audit-trail-metadata-traceability.md
+|   |   |       eva-agent-foundry.md
+|   |   |       eva-cost-recovery-model.md
+|   |   |       eva-enhanced-two-tier-csat.md
+|   |   |       eva-foundation-apis.md
+|   |   |       eva-live-ops-monitoring.md
+|   |   |       eva-session-aware-wrapper-api.md
+|   |   |       model-context-protocol-reference-design.md
+|   |   |       scalable-load-testing-framework.md
+|   |   |       
+|   |   +---dashboards
+|   |   |       eva-agile-metrics-powerbi-design.md
+|   |   |       
+|   |   +---ESDC
+|   |   |   |   Claude chat.docx
+|   |   |   |   EVA 2.0.docx
+|   |   |   |   EVA-HUB.md
+|   |   |   |   Vision.txt
+|   |   |   |   
+|   |   |   +---EVA Backlog
+|   |   |   |   \---EVA Backlog
+|   |   |   |       |   AgenticAISystems_ACA.png
+|   |   |   |       |   CDD  Audit Trail and Metadata Traceabi.docx
+|   |   |   |       |   CDD Bilingual Quality Evaluation Framework.docx
+|   |   |   |       |   CDD Enhanced Two-Tier CSAT with MTP Alignment.docx
+|   |   |   |       |   CDD EVA API Gateway & Integration Layer.docx
+|   |   |   |       |   CDD EVA Cost Recovery Model.docx
+|   |   |   |       |   CDD EVA Foundation APIs.docx
+|   |   |   |       |   CDD EVA Live Ops Layer for Real-Time Monitoring and Human-in.docx
+|   |   |   |       |   CDD EVA Session-Aware Wrapper API Layer.docx
+|   |   |   |       |   CDD Scalable Load Testing Framework.docx
+|   |   |   |       |   CDD_Model_Context_Protocol_Reference_Design.docx
+|   |   |   |       |   Eva Agentic — Technical Implementation Guide (aicoe • Ais • Bdm Innovation • Sis) — Baseline V0.docx
+|   |   |   |       |   EVA Chat Teams Collaboration.docx
+|   |   |   |       |   EVA Domain Assistant Reference Architecture.docx
+|   |   |   |       |   EVA Foundation API Strategy.docx
+|   |   |   |       |   EVA Microservices Reference Architecture.docx
+|   |   |   |       |   EVA Roadmap.docx
+|   |   |   |       |   EVA_Documentation_Inventory_Rebuilt_July11.docx
+|   |   |   |       |   Introduction To Eva Agentic.docx
+|   |   |   |       |   Self-Service EVA Domain Assistant Accelerator Program.docx
+|   |   |   |       |   
+|   |   |   |       +---archive
+|   |   |   |       |       2024-12-PERRON-LOGIE.pdf
+|   |   |   |       |       BDM vs EVA Capability Evolution.docx
+|   |   |   |       |       Enhanced CSAT Implementation Roadmap.docx
+|   |   |   |       |       Epic Title Reinforcement Learning & Anomaly-Aware Agents in.docx
+|   |   |   |       |       EVA DA backlog based on CFOB UAT.docx
+|   |   |   |       |       EVA DA- from single trick to Agentic.docx
+|   |   |   |       |       EVA Foundation Documentation & Capability Inventory and map.docx
+|   |   |   |       |       EVA Roadmap1.docx
+|   |   |   |       |       Old eva roadmap.docx
+|   |   |   |       |       RaC State of Art.docx
+|   |   |   |       |       Slide Deck EVA Dev Sandbox Kit.docx
+|   |   |   |       |       
+|   |   |   |       \---Env Provisioning
+|   |   |   |               01 - Gov - 01 CDD Code & Infrastructure Governance.docx
+|   |   |   |               01 Gov - 02 EVA Environment & Data Lifecycle Roadmap (2025–2027).docx
+|   |   |   |               02 Sandbox - 01 EVA Dev Sandbox Enablement Playbook.docx
+|   |   |   |               02 Sandbox - 02 CDD SI Sandbox Enablement into two realistic paths.docx
+|   |   |   |               03 Lifecycle - 01 CDD EVA Data & Environment Lifecycle.docx
+|   |   |   |               Core CDDs & Playbooks Supporting Trunk-Based Development + S.docx
+|   |   |   |               EVA Environment Provisioning Scenarios.docx
+|   |   |   |               
+|   |   |   +---eva2_fastlane_repo_v5_full
+|   |   |   |   \---eva2_fastlane_repo_v5_full
+|   |   |   |       |   CHANGELOG.md
+|   |   |   |       |   README.md
+|   |   |   |       |   
+|   |   |   |       +---copilot_briefs
+|   |   |   |       |       eva-agent.md
+|   |   |   |       |       eva-api.md
+|   |   |   |       |       eva-auth.md
+|   |   |   |       |       eva-core.md
+|   |   |   |       |       eva-enterprise.md
+|   |   |   |       |       eva-i11y.md
+|   |   |   |       |       eva-i18n.md
+|   |   |   |       |       eva-infra.md
+|   |   |   |       |       eva-mcp.md
+|   |   |   |       |       eva-metering.md
+|   |   |   |       |       eva-mobile.md
+|   |   |   |       |       eva-openai.md
+|   |   |   |       |       eva-ops.md
+|   |   |   |       |       eva-orchestrator.md
+|   |   |   |       |       eva-rag.md
+|   |   |   |       |       eva-safety.md
+|   |   |   |       |       eva-seed.md
+|   |   |   |       |       eva-ui.md
+|   |   |   |       |       eva-utils.md
+|   |   |   |       |       
+|   |   |   |       +---docs
+|   |   |   |       |       api_eva_api_contract.md
+|   |   |   |       |       architecture_overview.md
+|   |   |   |       |       fastlane_demo_scope.md
+|   |   |   |       |       ui_templates_and_assets.md
+|   |   |   |       |       
+|   |   |   |       +---plans
+|   |   |   |       |       minimum_readiness_matrix.md
+|   |   |   |       |       project_readiness_matrix.json
+|   |   |   |       |       
+|   |   |   |       \---samples
+|   |   |   |           +---eva-api
+|   |   |   |           |       azureFunctionExample.ts
+|   |   |   |           |       expressHandlers.ts
+|   |   |   |           |       
+|   |   |   |           +---eva-seed
+|   |   |   |           |   |   projects.json
+|   |   |   |           |   |   sample_prompts.json
+|   |   |   |           |   |   
+|   |   |   |           |   +---assets
+|   |   |   |           |   |       assetCatalog.json
+|   |   |   |           |   |       
+|   |   |   |           |   +---layouts
+|   |   |   |           |   |       home.layout.json
+|   |   |   |           |   |       
+|   |   |   |           |   \---templates
+|   |   |   |           |           screenTemplates.json
+|   |   |   |           |           
+|   |   |   |           \---eva-ui
+|   |   |   |                   LayoutRenderer.tsx
+|   |   |   |                   themeExamples.ts
+|   |   |   |                   WIRING_NOTES.md
+|   |   |   |                   
+|   |   |   \---marco_profile_repo_v2
+|   |   |       \---marco_profile_repo_v2
+|   |   |           |   CHANGELOG.md
+|   |   |           |   README.md
+|   |   |           |   
+|   |   |           +---meeting_summaries
+|   |   |           |       meeting_summary_template.json
+|   |   |           |       
+|   |   |           \---profile
+|   |   |                   conversation_history_index.json
+|   |   |                   eva_suite_2_0_architecture.json
+|   |   |                   identity_and_background.json
+|   |   |                   personal_interests_and_lifestyle.json
+|   |   |                   personal_projects_dossiers.json
+|   |   |                   preferences_and_interaction_style.json
+|   |   |                   professional_profile_and_projects.json
+|   |   |                   professional_projects_dossiers.json
+|   |   |                   prompts_playbook.json
+|   |   |                   values_and_meta_goals.json
+|   |   |                   workflow_templates.json
+|   |   |                   
+|   |   +---EVA Suite Advanced Features
+|   |   |       EVA IQ.txt
+|   |   |       EVA RaC - RaC-example-benefit-x.md
+|   |   |       EVA RAC - Rule as Code.txt
+|   |   |       EVA Suite - EVA-2.0-Advanced-Services.md
+|   |   |       EVA-DevTools-Agentic-Landscape.md
+|   |   |       
+|   |   +---eva-1.0 goodies
+|   |   |       README.md
+|   |   |       
+|   |   +---eva-1.0-book
+|   |   |   |   azure_devops_todos.csv
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   +---docs
+|   |   |   |       ADMIN_TODO.md
+|   |   |   |       APIM_CONTRACT.md
+|   |   |   |       DEPLOY.md
+|   |   |   |       
+|   |   |   +---scripts
+|   |   |   |       mock-apim.js
+|   |   |   |       run-demo.ps1
+|   |   |   |       
+|   |   |   \---src
+|   |   |       \---components
+|   |   |               ProjectRegistry.tsx
+|   |   |               ProjectRegistry.tsx.txt
+|   |   |               
+|   |   +---eva-finops
+|   |   |   \---config
+|   |   |           eva-finops-pricing-v0.1.csv
+|   |   |           eva-finops-pricing-v0.1.json
+|   |   |           
+|   |   +---governance
+|   |   |       eva-governance-telemetry-mti.md
+|   |   |       
+|   |   \---vision
+|   |           eva-cloneme.md
+|   |           
+|   +---lessons-learned
+|   |       LESSON-001-qa-master-pod-integration.md
+|   |       LESSON-002-github-models-api-unavailable.md
+|   |       LESSON-003-hybrid-scrum-pods-model.md
+|   |       LESSON-004-avoid-repetitive-commands-build-tools.md
+|   |       LESSON-005-user-feedback-and-self-learning-content.md
+|   |       LESSON-006-sm-first-tool.md
+|   |       LESSON-011-session-guardrail.md
+|   |       
+|   +---metrics
+|   |       README.md
+|   |       
+|   +---onboarding
+|   |   |   checklist-template.md
+|   |   |   README.md
+|   |   |   
+|   |   \---latest-pack
+|   |       |   metadata.json
+|   |       |   README.md
+|   |       |   
+|   |       +---docs
+|   |       |   +---onboarding
+|   |       |   |       README.md
+|   |       |   |       
+|   |       |   \---sprint-kit
+|   |       |       \---onboarding
+|   |       |               bootstrap-checklist.md
+|   |       |               future-automation.md
+|   |       |               
+|   |       \---sm-qa-toolbox
+|   |           \---onboarding
+|   |                   README.md
+|   |                   
+|   +---pull-requests
+|   |       PR_DESCRIPTION.md
+|   |       PR_SUMMARY.md
+|   |       
+|   +---reference
+|   |   |   esdc-import-index.json
+|   |   |   esdc-import-summary.md
+|   |   |   eva-matrix-architecture.md
+|   |   |   her-2013-film.md
+|   |   |   hub-automation-troubleshooting.md
+|   |   |   hub-automation.md
+|   |   |   mcp-and-agents-overview.md
+|   |   |   outdated-branches-analysis.md
+|   |   |   secret-management.md
+|   |   |   vscode-auto-apply-settings.md
+|   |   |   
+|   |   \---chatgpt-discussions
+|   |           2025-11-16-eva-development-plan.json
+|   |           2025-11-16-nist-requirements.json
+|   |           README.md
+|   |           
+|   +---runbooks
+|   |       sm-job-runbook.md
+|   |       terraform-operations.md
+|   |       
+|   +---session-summaries
+|   |       2025-11-14.md
+|   |       
+|   +---sprint-001
+|   |       sprint-001-plan.md
+|   |       
+|   +---sprint-002
+|   |       sprint-002-plan.md
+|   |       SPRINT-2-STATUS.md
+|   |       
+|   +---sprint-003
+|   |       sprint-003-plan.md
+|   |       SPRINT-3-STATUS.md
+|   |       
+|   +---sprint-004
+|   |       sprint-004-plan.md
+|   |       SPRINT-4-STATUS.md
+|   |       
+|   +---sprint-history
+|   |   |   AUTOMATION-DEPLOYMENT-SUMMARY.md
+|   |   |   README.md
+|   |   |   SCRUM-MASTER-BOOTSTRAP.md
+|   |   |   
+|   |   +---2025-11-dry-run-02
+|   |   |       ceremony-notes.md
+|   |   |       dev-master-brief.md
+|   |   |       retro.md
+|   |   |       sprint-plan.md
+|   |   |       
+|   |   +---2025-11-dry-run-03
+|   |   |       sprint-plan.md
+|   |   |       
+|   |   +---2025-11-dry-run-04
+|   |   |       retro.md
+|   |   |       sprint-plan.md
+|   |   |       
+|   |   +---2025-11-sprint-01
+|   |   |       executive-digest-draft.md
+|   |   |       onboarding-log.md
+|   |   |       sprint-01-kickoff.md
+|   |   |       sprint-plan.md
+|   |   |       standup-day-1.md
+|   |   |       
+|   |   \---templates
+|   |           executive-digest-runbook.md
+|   |           executive-digest.md
+|   |           
+|   +---sprint-kit
+|   |   |   ceremony-notes-template.md
+|   |   |   CONTEXT-SAVE-NOV-16-EVENING.md
+|   |   |   dashboard-agent.md
+|   |   |   environment-readiness.md
+|   |   |   raci-matrix.md
+|   |   |   README.md
+|   |   |   second-team-setup-guide.md
+|   |   |   sprint-plan-template.md
+|   |   |   team-operating-checklist.md
+|   |   |   
+|   |   +---onboarding
+|   |   |       bootstrap-checklist.md
+|   |   |       future-automation.md
+|   |   |       
+|   |   \---runbooks
+|   |           automation-wrangler.md
+|   |           compliance-sentinel.md
+|   |           dev-master.md
+|   |           observability-scribe.md
+|   |           qa-master.md
+|   |           release-steward.md
+|   |           scrum-master.md
+|   |           
+|   +---sprint-zero
+|   |   |   SPRINT-0-COMPLETE.md
+|   |   |   
+|   |   \---sm-job
+|   |           overview.md
+|   |           stage-01-metrics-foundation.md
+|   |           stage-02-automation-expansion.md
+|   |           stage-03-hardening.md
+|   |           
+|   +---templates
+|   |       lesson-learned-template.md
+|   |       
+|   \---user-guide
+|           README.md
+|           sprint-lifecycle.md
+|           
++---local-backup-2025-11-21
+|   +---docs
+|   +---logs
+|   +---modules
+|   +---reports
+|   \---scripts
++---metrics
+|       .gitkeep
+|       latest-metrics.json
+|       manual-overrides.json
+|       
++---out
+|   |   eva-suite-heroes-prompts.md
+|   |   
+|   \---proposals
+|           eva-suite-polish-deploy-v1__suite-i18n-scaffold__20251124_124017.md
+|           
++---plans
+|   \---eva-suite
+|           eva-suite-master-plan-v1.yml
+|           eva-suite-polish-deploy-v1.yml
+|           sprint-heroes-demo.yml
+|           
++---reports
+|       CDD-ARCHIVE-REPORT-2025-11-19.md
+|       CDD-CONSOLIDATION-COMPLETE-REPORT-2025-11-19.md
+|       CDD-CONSOLIDATION-REPORT-2025-11-19.md
+|       CDD-ECOSYSTEM-FINAL-REPORT-2025-11-19.md
+|       CDD-STANDARDIZATION-REPORT-2025-11-19.md
+|       dry-run-1.json
+|       executive-digest.html
+|       executive-digest.md
+|       README.md
+|       
++---scripts
+|       agent-bootstrap.mjs
+|       azure-setup-oidc-and-tfstate.ps1
+|       BulkGitCommitPush.ps1
+|       generate-hub-update.mjs
+|       generate-matrix-site.mjs
+|       orchestrator-ingest.mjs
+|       qa-check.ps1
+|       retro-append.mjs
+|       
++---sm-qa-toolbox
+|   |   README.md
+|   |   registry.json
+|   |   
+|   +---backlog
+|   |       add-user-request.ps1
+|   |       
+|   +---guardrails
+|   |       manage-session-evidence.md
+|   |       manage-session.ps1
+|   |       README.md
+|   |       
+|   +---hello-world-sm
+|   |       evidence.md
+|   |       hello-world-sm.ps1
+|   |       README.md
+|   |       
+|   +---hub
+|   |       sync-marco-hub.ps1
+|   |       
+|   +---observability
+|   |       sm-job-dashboard.ps1
+|   |       
+|   +---onboarding
+|   |   |   bootstrap-onboarding.ps1
+|   |   |   evidence.md
+|   |   |   generate-onboarding-pack.ps1
+|   |   |   onboarding-pack.manifest.json
+|   |   |   README.md
+|   |   |   
+|   |   \---tests
+|   |           generate-onboarding-pack.Tests.ps1
+|   |           
+|   +---project
+|   |       check-project-access.ps1
+|   |       project-sync.config.template.json
+|   |       README.md
+|   |       show-project-statuses.ps1
+|   |       sync-project-board.ps1
+|   |       
+|   +---shared
+|   |       Write-StructuredLog.ps1
+|   |       
+|   +---sprint-ceremonies
+|   |       sprint-standup-notes.ps1
+|   |       
+|   \---sprint-metrics
+|       |   generate-executive-digest.ps1
+|       |   generate-sprint-metrics.ps1
+|       |   
+|       \---tests
+|               generate-executive-digest.Tests.ps1
+|               generate-sprint-metrics.Tests.ps1
+|               
++---src
+|   |   github.ts
+|   |   orchestrator.ts
+|   |   
+|   +---agents
+|   |       recursive-cdd-agent.ts
+|   |       update-dashboard-agent.ts
+|   |       
+|   +---eva_suite_orchestrator
+|   |   |   cli.py
+|   |   |   openai_agent.py
+|   |   |   plan_model.py
+|   |   |   prompt_builder.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           cli.cpython-314.pyc
+|   |           openai_agent.cpython-314.pyc
+|   |           plan_model.cpython-314.pyc
+|   |           prompt_builder.cpython-314.pyc
+|   |           __init__.cpython-314.pyc
+|   |           
+|   \---__tests__
+|           dryRunTest1.test.ts
+|           
++---temp-offline
+|       eva-suite-polish-deploy-v1__suite-i18n-scaffold__20251124_132814.md
+|       
++---templates
+|   +---eva-agent
+|   |       README.md
+|   |       
+|   +---eva-api
+|   |       README.md
+|   |       
+|   +---eva-auth
+|   |       README.md
+|   |       
+|   +---eva-core
+|   |       README.md
+|   |       
+|   +---eva-enterprise
+|   |       README.md
+|   |       
+|   +---eva-i11y
+|   |       README.md
+|   |       
+|   +---eva-i18n
+|   |       README.md
+|   |       
+|   +---eva-infra
+|   |   |   providers.tf
+|   |   |   README.md
+|   |   |   
+|   |   +---.github
+|   |   |   \---workflows
+|   |   |           terraform-plan.yml
+|   |   |           
+|   |   +---env
+|   |   |   \---dev
+|   |   |           backend.tf
+|   |   |           main.tf
+|   |   |           variables.tf
+|   |   |           
+|   |   \---modules
+|   |       \---networking
+|   |               main.tf
+|   |               
+|   +---eva-mcp
+|   |       README.md
+|   |       
+|   +---eva-metering
+|   |       README.md
+|   |       
+|   +---eva-openai
+|   |       README.md
+|   |       
+|   +---eva-ops
+|   |       README.md
+|   |       
+|   +---eva-rag
+|   |       README.md
+|   |       
+|   +---eva-safety
+|   |       README.md
+|   |       
+|   +---eva-seed
+|   |       README.md
+|   |       
+|   \---eva-ui
+|           README.md
+|           
++---tests
+|   \---sm-qa-toolbox
+|       +---guardrails
+|       |       manage-session.Tests.ps1
+|       |       
+|       \---hub
+|               sync-marco-hub.Tests.ps1
+|               
++---to upload
+|   +---EVA Suite plan
+|   |       EVA Agile Crew charter.txt
+|   |       EVA BACKLOG.txt
+|   |       EVA CDD EVA Domain Assistant 2.0.txt
+|   |       EVA DASHBOARD.txt
+|   |       EVA Foundation CDD.txt
+|   |       EVA PROJECT-JOURNAL.txt
+|   |       EVA Quick repo reference.txt
+|   |       EVA QUICK-STARTER guide.txt
+|   |       EVA RUNBOOK Scrum Master.txt
+|   |       EVA SCRIPTS-AUTOMATION.txt
+|   |       EVA Scrum Master and Agile Crew dynamic.txt
+|   |       EVA Scrum Master integration with OpenAI.txt
+|   |       EVA Suite - Repository Quick Refe.txt
+|   |       EVA Suite Plan.txt
+|   |       
+|   +---eva-devtools
+|   |   \---EVA Crew
+|   |           EVA Agile Agentic Lifecycle Map.md
+|   |           EVA Agile Crew Charter DIRECTIVES.md
+|   |           EVA Agile Crew Charter.md
+|   |           EVA Agile Crew implementation.md
+|   |           EVA Agile Folders n Maintenance.md
+|   |           EVA Agile PODs.md
+|   |           EVA P00 - DevTools Agents spec.md
+|   |           EVA P00 - DevTools runtime + Review Agent profile.md
+|   |           EVA P01 - DevTools - Agent Patterns n Toolbox Roadmap.md
+|   |           EVA P02 - Requirements - CDDs.md
+|   |           EVA P02 - Requirements Agent.md
+|   |           EVA P02 - Requirements guidance.md
+|   |           EVA P03 - SM Agent.md
+|   |           EVA P04 - Repo Librarian Agent.md
+|   |           EVA P05 - Scaffolder Agent.md
+|   |           EVA P06 - Review Agent.md
+|   |           EVA P07 - Testing & Failure Explainer Agent.md
+|   |           EVA P08 - CICD Guardian Agent.md
+|   |           EVA P09 - Runbook n SRE Agent.md
+|   |           EVA P10 - Metrics n Insight Agent.md
+|   |           EVA P11 - Security n Compliance Helper Agent.md
+|   |           EVA P12 - UX, Copy n Accessibility Agent.md
+|   |           EVA P13 - Onboarding & Sandbox Coach Agent.md
+|   |           EVA P14 - DevOps LiveOps Companion Agent.md
+|   |           EVA P15 - Dev Master Orchestrator Agent.md
+|   |           EVA P15 - DevMaster Quick Start.txt
+|   |           
+|   +---eva-meta
+|   |       EVA _ 1 README FIRST.txt
+|   |       EVA _ 2 Contributing to EVA .txt
+|   |       EVA _ 3 copilot Instructions.txt
+|   |       eva-meta-REAMD.md
+|   |       
+|   +---gc-agentic-ai-template
+|   |       EVA Canada Agentic AI Template 0.1 .txt
+|   |       EVA Canada Agentic AI Template vol0 - how-to.md
+|   |       EVA Canada Agentic AI Template vol1.md
+|   |       EVA Canada Agentic AI Template vol2.md
+|   |       EVA Canada Agentic AI Template vol3.md
+|   |       EVA Canada Agentic AI Template vol4.md
+|   |       
+|   +---GitHub Blueprint
+|   |       EVA GitHub & Copilot Implementation Guide.md
+|   |       EVA GitHub Blueprint.md
+|   |       EVA GitHub Features.md
+|   |       
+|   \---PubSec-Info-Assistant
+|           APIM Contract.txt
+|           APIM in Info Assistant implementaion.txt
+|           Background.txt
+|           
+\---tools
+    |   README.md
+    |   registry.json
+    |   run_eva_plan.bat
+    |   run_propose_patch.ps1
+    |   
+    +---hello-world-ai2
+    |       evidence.md
+    |       hello-world-ai2.ps1
+    |       README.md
+    |       
+    \---hello-world-windowsguy
+            evidence.md
+            hello-world-windowsguy.ps1
+            README.md
+            

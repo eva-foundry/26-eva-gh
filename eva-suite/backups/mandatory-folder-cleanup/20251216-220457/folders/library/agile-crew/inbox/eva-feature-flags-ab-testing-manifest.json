@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-feature-flags-ab-testing.md",
+  "feature_key": "P02-AUTO-9516f425",
+  "title": "CDD: EVA Feature Flags & A/B Testing",
+  "p02_artifacts_path": "docs/features/eva-feature-flags-ab-testing",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-feature-flags-ab-testing",
+  "created_timestamp": "2025-11-25T23:54:18.0805848Z"
+}

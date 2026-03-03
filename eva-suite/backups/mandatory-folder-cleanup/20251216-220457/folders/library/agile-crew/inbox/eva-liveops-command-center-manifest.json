@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-liveops-command-center.md",
+  "feature_key": "P02-AUTO-cd08da34",
+  "title": "CDD: EVA LiveOps Command Center",
+  "p02_artifacts_path": "docs/features/eva-liveops-command-center",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-liveops-command-center",
+  "created_timestamp": "2025-11-25T23:54:30.4821190Z"
+}

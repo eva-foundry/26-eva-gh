@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-api-platform-developers.md",
+  "feature_key": "P02-AUTO-2778a4a9",
+  "title": "CDD: EVA API Platform for Developers",
+  "p02_artifacts_path": "docs/features/eva-api-platform-developers",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-api-platform-developers",
+  "created_timestamp": "2025-11-25T23:54:00.7513674Z"
+}

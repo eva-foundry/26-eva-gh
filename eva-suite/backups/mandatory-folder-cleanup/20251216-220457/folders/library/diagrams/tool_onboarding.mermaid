@@ -1,0 +1,7 @@
+graph TD;
+    A[Identify Tool] --> B[Evaluate Tool];
+    B --> C{Approval?};
+    C -->|Yes| D[Onboard Tool];
+    C -->|No| E[Re-evaluate];
+    D --> F[Train Team];
+    F --> G[Integrate into Workflow];

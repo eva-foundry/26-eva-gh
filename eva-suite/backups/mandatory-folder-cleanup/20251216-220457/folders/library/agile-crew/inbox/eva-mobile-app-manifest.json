@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-mobile-app.md",
+  "feature_key": "P02-AUTO-190deea0",
+  "title": "CDD: EVA Mobile App (iOS/Android)",
+  "p02_artifacts_path": "docs/features/eva-mobile-app",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-mobile-app",
+  "created_timestamp": "2025-11-25T23:54:35.6823806Z"
+}

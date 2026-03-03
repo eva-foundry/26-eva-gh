@@ -1,0 +1,10 @@
+{
+  "feature_slug": "work-package-1-lit-wc-completion",
+  "priority": "MEDIUM",
+  "feature_key": "P02-AUTO-533c3448",
+  "p02_artifacts_path": "docs/features/work-package-1-lit-wc-completion",
+  "created_timestamp": "2025-12-09T12:42:12.9584346Z",
+  "title": "Work Package 1: Complete Lit Web Components",
+  "source_intake_file": "WORK-PACKAGE-1-LIT-WC-COMPLETION.md",
+  "status": "ready-for-crew"
+}

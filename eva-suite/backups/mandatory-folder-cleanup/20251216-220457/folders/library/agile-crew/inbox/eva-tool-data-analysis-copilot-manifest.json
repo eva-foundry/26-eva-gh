@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-tool-data-analysis-copilot.md",
+  "feature_key": "P02-AUTO-678d0724",
+  "title": "CDD: EVA Data Analysis Copilot Tool",
+  "p02_artifacts_path": "docs/features/eva-tool-data-analysis-copilot",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-tool-data-analysis-copilot",
+  "created_timestamp": "2025-11-25T23:55:10.5722198Z"
+}

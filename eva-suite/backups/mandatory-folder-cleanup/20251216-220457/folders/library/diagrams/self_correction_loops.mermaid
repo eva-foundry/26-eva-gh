@@ -1,0 +1,9 @@
+graph TD;
+    A[Monitor System] --> B{Issue Detected?};
+    B -->|Yes| C[Analyze Issue];
+    C --> D[Implement Fix];
+    D --> E[Test Fix];
+    E --> F{Successful?};
+    F -->|Yes| G[Deploy Fix];
+    F -->|No| C;
+    B -->|No| A;

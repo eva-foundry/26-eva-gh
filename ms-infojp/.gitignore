@@ -1,0 +1,139 @@
+# MS-InfoJP .gitignore - Windows Enterprise Safe
+# Project: 11-MS-InfoJP Jurisprudence RAG Assistant
+# Purpose: Prevent committing sensitive data, debug artifacts, and external dependencies
+
+# ====================
+# Evidence & Debug Artifacts
+# ====================
+debug/
+evidence/
+logs/
+sessions/
+
+# ====================
+# External Dependencies
+# ====================
+# Note: base-platform/ is now part of this repo (not an external clone)
+
+# ====================
+# Python Cache & Build
+# ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ====================
+# Virtual Environments
+# ====================
+.venv/
+venv/
+ENV/
+env/
+.virtualenv/
+
+# ====================
+# Secrets & Credentials
+# ====================
+.env
+backend.env
+local.settings.json
+*.key
+*.pem
+*.pfx
+*.p12
+.azure/
+
+# ====================
+# IDE & Editors
+# ====================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ====================
+# Test & Coverage
+# ====================
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ====================
+# Output Data
+# ====================
+output/chunks/
+output/embeddings/
+output/*.csv
+output/*.json
+!output/.gitkeep
+
+# ====================
+# Temporary Files
+# ====================
+*.tmp
+*.temp
+*.log
+*.bak
+*.orig
+.cache/
+
+# ====================
+# Node (Frontend)
+# ====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dist/
+
+# ====================
+# Azure Functions
+# ====================
+.python_packages/
+.azure-functions/
+local.settings.json
+bin/
+obj/
+
+# ====================
+# Terraform
+# ====================
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+crash.log
+
+# ====================
+# Keep Empty Directories
+# ====================
+!.gitkeep

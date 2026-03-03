@@ -1,0 +1,105 @@
+{
+  "professional_profile": {
+    "roles": [
+      "AI Centre of Enablement (AICOE) leader / architect",
+      "EVA platform owner and strategist",
+      "AI governance and software-approval advisor",
+      "Trainer and evangelist for AI literacy and retooling"
+    ],
+    "domain_expertise": [
+      "Enterprise AI platforms (RAG, agentic systems, shared services)",
+      "Government digital strategy and governance",
+      "AI risk management and compliance in public sector",
+      "Azure cloud, APIM, Azure AI Search, Azure OpenAI",
+      "Knowledge management and semantic / vector search",
+      "Program and portfolio management with multi-year planning"
+    ],
+    "technical_stack_and_tools": {
+      "cloud_platforms": [
+        "Microsoft Azure (primary)",
+        "Azure OpenAI (GPT-4 family in Canada)",
+        "Azure AI Search",
+        "Azure API Management (APIM)"
+      ],
+      "dev_tools": [
+        "GitHub & GitHub Copilot Pro",
+        "Visual Studio",
+        "Vite + React + TypeScript + Tailwind CSS",
+        "Terraform / IaC",
+        "PowerShell, WSL/Docker (for experimentation)"
+      ],
+      "productivity_and_ai_tools": [
+        "EVA Chat (internal)",
+        "Microsoft Copilot (with strict data limitations)",
+        "External GenAI tools (assessed via governance lens)"
+      ]
+    }
+  },
+  "major_initiatives_and_projects_overview": [
+    {
+      "id": "eva_platform",
+      "name": "EVA – ESDC’s Virtual Assistant Platform",
+      "summary": "Core GenAI/RAG platform in Azure, acting as a faceless AI brain with reusable APIs for many applications."
+    },
+    {
+      "id": "eva_chat",
+      "name": "EVA Chat",
+      "summary": "Enterprise GPT-4 assistant for ESDC employees, focused on safe productivity in a Protected B environment."
+    },
+    {
+      "id": "eva_da",
+      "name": "EVA Domain Assistant (EVA DA 2.0)",
+      "summary": "RAG UI and project-based assistant framework with strong accessibility and bilingual support."
+    },
+    {
+      "id": "assistme_migration",
+      "name": "AssistMe Migration to EVA / BDM KM",
+      "summary": "Refactor AssistMe as a client of EVA’s RAG services and IIAID pipeline, avoiding lift-and-shift."
+    },
+    {
+      "id": "jurisprudence",
+      "name": "Jurisprudence Search Tool Integration",
+      "summary": "Legal/jurisprudence RAG solution integrated into EVA DA and EVA Foundation."
+    },
+    {
+      "id": "iiaid",
+      "name": "IIAID – AI Delivery Pipeline",
+      "summary": "Standardized solution-space pipeline for AI projects, integrated with EVA and governance."
+    },
+    {
+      "id": "ai_governance",
+      "name": "AI Governance & Software Approval Framework",
+      "summary": "Risk-based, accountable-access framework for AI and software tools at ESDC."
+    },
+    {
+      "id": "ai_awareness",
+      "name": "AI Awareness & Literacy Campaign",
+      "summary": "Multi-week and year-long campaign to raise AI literacy and responsible use across ESDC."
+    },
+    {
+      "id": "iitb_retooling",
+      "name": "IITB AI Retooling Program",
+      "summary": "Upskilling ~700 IT staff on AI, cloud, and modern development skills."
+    },
+    {
+      "id": "eva_dev_sandbox",
+      "name": "EVA Dev Sandbox Packaging",
+      "summary": "Self-deployable EVA sandbox for external Azure subscription owners."
+    },
+    {
+      "id": "a11y_library",
+      "name": "ESDC Accessibility & Personalization Library + A11y Lab",
+      "summary": "Reusable WCAG-compliant UI library and test lab for accessible, bilingual apps."
+    },
+    {
+      "id": "cppd_rag",
+      "name": "CPP-D RAG & Document Pipelines",
+      "summary": "Micro-projects to support CPP-D adjudication with document AI and RAG."
+    },
+    {
+      "id": "ai_km_assistant",
+      "name": "AI-Enabled Knowledge Management Assistant",
+      "summary": "BDM KM assistant built on EVA RAG services and Power Platform integration."
+    }
+  ]
+}

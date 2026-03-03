@@ -1,0 +1,21 @@
+# MS-InfoJP Testing Requirements
+
+# Extends requirements-core.txt
+
+# Testing frameworks
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+pytest-html>=4.1.0
+pytest-timeout>=2.2.0
+
+# Test utilities
+faker>=20.1.0
+freezegun>=1.4.0
+
+# Coverage and reporting
+coverage>=7.3.0
+
+# Acceptance testing
+selenium>=4.15.0
+beautifulsoup4>=4.12.0

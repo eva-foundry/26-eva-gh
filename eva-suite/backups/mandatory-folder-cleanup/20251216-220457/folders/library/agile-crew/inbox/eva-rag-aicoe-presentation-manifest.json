@@ -1,0 +1,10 @@
+{
+  "p02_artifacts_path": "docs/features/eva-rag-aicoe-presentation",
+  "priority": "MEDIUM",
+  "status": "ready-for-crew",
+  "title": "EVA-RAG: Retrieval-Augmented Generation Engine",
+  "feature_slug": "eva-rag-aicoe-presentation",
+  "created_timestamp": "2025-12-12T01:38:28.2185117Z",
+  "source_intake_file": "EVA-RAG-AICOE-PRESENTATION.md",
+  "feature_key": "P02-AUTO-2c9d536b"
+}

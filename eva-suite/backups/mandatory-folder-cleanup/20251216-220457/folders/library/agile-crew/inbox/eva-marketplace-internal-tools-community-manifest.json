@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-marketplace-internal-tools-community.md",
+  "feature_key": "P02-AUTO-b5f0ef80",
+  "title": "CDD: EVA Marketplace (Internal Tools Community Gallery)",
+  "p02_artifacts_path": "docs/features/eva-marketplace-internal-tools-community",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-marketplace-internal-tools-community",
+  "created_timestamp": "2025-11-25T23:54:33.9105284Z"
+}

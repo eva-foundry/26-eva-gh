@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-tool-meeting-transcription.md",
+  "feature_key": "P02-AUTO-05a17442",
+  "title": "CDD: EVA Meeting Transcription Tool",
+  "p02_artifacts_path": "docs/features/eva-tool-meeting-transcription",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-tool-meeting-transcription",
+  "created_timestamp": "2025-11-25T23:55:15.7232428Z"
+}

@@ -1,0 +1,159 @@
+{
+  "projects": [
+    {
+      "id": "eva_platform_foundation",
+      "name": "EVA Platform & Foundation (EVA 2.0 Core)",
+      "type": "platform",
+      "domain": "Enterprise AI / RAG / Platform Engineering",
+      "description": "Faceless AI platform providing RAG, doc, ingestion, safety, and future agent services via Azure APIs.",
+      "status_2025_11": "Operational as EVA Chat + EVA DA + backend; evolving toward EVA 2.0.",
+      "stage": "Scaling & refactoring",
+      "objectives": [
+        "Provide single secure GenAI backbone for ESDC.",
+        "Expose reusable APIs for RAG, doc, ingestion, safety, agents.",
+        "Support multi-tenant project spaces with RBAC and cost attribution."
+      ],
+      "current_state": [
+        "EVA Chat and EVA DA in production (Protected B).",
+        "APIM headers and cost attribution patterns defined.",
+        "EVA recognized as central trunk for AI solutions."
+      ],
+      "risks_issues": [
+        "Keeping pace with evolving AI tech.",
+        "Avoiding parallel AI stacks outside EVA.",
+        "Sustained governance and compliance workload."
+      ]
+    },
+    {
+      "id": "eva_chat",
+      "name": "EVA Chat",
+      "type": "product",
+      "domain": "Enterprise AI Assistant",
+      "description": "GPT-4-based internal assistant for ESDC employees in a Protected B environment.",
+      "status_2025_11": "Live with ~12,000 users and >1M prompts.",
+      "stage": "Mature product",
+      "objectives": [
+        "Increase productivity safely.",
+        "Serve as flagship for responsible AI use."
+      ],
+      "current_state": [
+        "No file uploads; text and voice supported.",
+        "Monitored via SIEM and infra logs.",
+        "Governance and PIA language under refinement."
+      ]
+    },
+    {
+      "id": "eva_da_refactor",
+      "name": "EVA Domain Assistant 2.0",
+      "type": "product",
+      "domain": "RAG UI / Knowledge Retrieval",
+      "description": "Accessible, bilingual React UI for domain-specific RAG assistants, replacing PubSec IA UI.",
+      "status_2025_11": "Design and prototyping (Vite + React + Tailwind).",
+      "stage": "Design & prototyping",
+      "objectives": [
+        "Expose project-level RAG and UI configuration.",
+        "Support multiple tenant projects with theming and prompts.",
+        "Meet WCAG 2.1 AA and official languages requirements."
+      ]
+    },
+    {
+      "id": "project_registry_rbac",
+      "name": "EVA Project Registry & RBAC Engine",
+      "type": "platform_component",
+      "domain": "Configuration / Security / Multi-tenancy",
+      "description": "Central registry for EVA project spaces with role-based access control and configuration.",
+      "status_2025_11": "In design; data model and UI concept defined.",
+      "stage": "Design"
+    },
+    {
+      "id": "assistme_migration",
+      "name": "AssistMe Migration to EVA / BDM KM Integration",
+      "type": "integration_project",
+      "domain": "Case Management AI Assistance",
+      "description": "Refactor AssistMe into an EVA- and IIAID-based architecture, avoiding lift-and-shift.",
+      "status_2025_11": "Direction set; scope and governance being clarified.",
+      "stage": "Discovery / planning"
+    },
+    {
+      "id": "jurisprudence_integration",
+      "name": "Jurisprudence Search Tool Integration",
+      "type": "integration_project",
+      "domain": "Legal / Jurisprudence Research",
+      "description": "Legal RAG assistant integrated into EVA DA and EVA Foundation.",
+      "status_2025_11": "SOW finalized; gap analysis ongoing.",
+      "stage": "Planning & design"
+    },
+    {
+      "id": "iiaid_pipeline",
+      "name": "IIAID – AI Delivery Pipeline",
+      "type": "platform_process",
+      "domain": "DevOps / Governance",
+      "description": "Standardized AI solution-space pipeline integrated with EVA and governance.",
+      "status_2025_11": "Concept agreed; architecture being developed.",
+      "stage": "Architecture & planning"
+    },
+    {
+      "id": "ai_governance_framework",
+      "name": "AI Governance & Software Approval Framework",
+      "type": "governance_framework",
+      "domain": "Policy / Risk Management",
+      "description": "Risk-based self-assessment and accountable-access model for AI and software.",
+      "status_2025_11": "Core artifacts complete; adoption in progress.",
+      "stage": "Adoption & refinement"
+    },
+    {
+      "id": "ai_awareness_campaign",
+      "name": "AI Awareness & Literacy Campaign",
+      "type": "program",
+      "domain": "Change Management / Training",
+      "description": "Multi-week and year-long campaign to boost AI literacy and responsible use.",
+      "status_2025_11": "Messaging and structure defined; rollout planning.",
+      "stage": "Design & rollout planning"
+    },
+    {
+      "id": "iitb_ai_retooling",
+      "name": "IITB AI Retooling Program",
+      "type": "program",
+      "domain": "Workforce Development",
+      "description": "Upskilling ~700 IT staff on AI, Azure, and modern dev practices.",
+      "status_2025_11": "In planning/early rollout.",
+      "stage": "Pilot / early rollout"
+    },
+    {
+      "id": "eva_dev_sandbox_packaging",
+      "name": "EVA Dev Sandbox Packaging",
+      "type": "platform_enabler",
+      "domain": "Dev Experience",
+      "description": "Self-deployable EVA sandbox for other Azure subscriptions.",
+      "status_2025_11": "Concept and requirements defined.",
+      "stage": "Design & planning"
+    },
+    {
+      "id": "ai_accessibility_library",
+      "name": "Accessibility & Personalization Library + A11y Lab",
+      "type": "product",
+      "domain": "Accessibility / Front-End Enablement",
+      "description": "WCAG-compliant UI library and lab for accessible, bilingual apps.",
+      "status_2025_11": "Concept; early design.",
+      "stage": "Concept / early design"
+    },
+    {
+      "id": "cppd_rag_microprojects",
+      "name": "CPP-D RAG & Document Micro-Projects",
+      "type": "capability_cluster",
+      "domain": "Benefits Adjudication / Document AI",
+      "description": "Document ingestion, OCR, classification, and RAG micro-projects for CPP-D.",
+      "status_2025_11": "Concept defined; backlog for prioritization.",
+      "stage": "Concept / backlog"
+    },
+    {
+      "id": "ai_km_assistant",
+      "name": "AI-Enabled Knowledge Management Assistant (BDM KM)",
+      "type": "solution",
+      "domain": "Knowledge Management / RAG",
+      "description": "KM assistant built on EVA RAG services, integrated with SharePoint/Power Platform.",
+      "status_2025_11": "Conceptual alignment phase.",
+      "stage": "Concept / early design"
+    }
+  ]
+}

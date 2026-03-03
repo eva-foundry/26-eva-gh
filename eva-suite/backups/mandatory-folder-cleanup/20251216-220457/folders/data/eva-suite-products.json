@@ -1,0 +1,367 @@
+{
+  "eva_suite": {
+    "total_products": 24,
+    "categories": [
+      "User Products",
+      "AI Intelligence",
+      "Platform",
+      "Developer",
+      "Moonshot"
+    ],
+    "vision": {
+      "origin": "Marco's email, December 2023: 'I see EVA everywhere... agents talking to agents.'",
+      "mission": "Personal visionary project to build the future of enterprise AI",
+      "status": "Vision from 2023 → Reality in 2025"
+    },
+    "products": [
+      {
+        "id": 1,
+        "name": "EVA Chat",
+        "icon": "💬",
+        "category": "User Product",
+        "description": "Universal enterprise console where you tell EVA what to do. Example: 'Search our SharePoint for the Q3 budget template Susan used last year, then email it to my team with a note that we need to submit by Friday.' EVA Chat orchestrates multiple agents: finds the document, drafts the email with your signature, shows you the preview, sends on your approval.",
+        "use_case": {
+          "title": "Manager's Monday Morning Routine",
+          "steps": [
+            "Opens EVA Chat: 'Show me all team updates from last week'",
+            "EVA searches Teams, Outlook, SharePoint → summarizes 12 updates",
+            "'Schedule 1-on-1s with anyone who mentioned blockers'",
+            "EVA finds 3 people, checks calendars, books 30-min slots",
+            "'Draft status report for my VP highlighting the product launch milestone'",
+            "EVA drafts email with timeline, shows preview",
+            "Manager edits subject line, says 'Send'"
+          ],
+          "result": "45-minute Monday morning routine → 10 minutes with EVA"
+        },
+        "moonshot": "Eventually becomes your universal enterprise console - everything you do at work, you just tell EVA.",
+        "has_dual_buttons": true
+      },
+      {
+        "id": 2,
+        "name": "EVA DA",
+        "icon": "🔍",
+        "category": "User Product",
+        "description": "Document & Data Intelligence with neurosymbolic reasoning. Policy advisor asks: 'Show me all CPP-D appeals where medical evidence was insufficient, jurisprudence cited, and claimant was under 45.' EVA DA queries structured databases + RAG over documents + RaC rule engine, returns: 47 cases with citations, decision patterns, and common themes.",
+        "use_case": {
+          "title": "Legal Researcher Finding Precedents",
+          "steps": [
+            "Lawyer asks EVA DA: 'Show appeals in Atlantic region, 2023-2024, where tribunal overturned initial decision'",
+            "EVA DA queries database (structured) + jurisprudence library (RAG) + RaC rules",
+            "Returns 23 cases with: decision text, key factors, cited statutes, outcome",
+            "Lawyer: 'Which ones cited section 42(2)(a) medical evidence requirements?'",
+            "EVA DA filters → 8 cases, highlights relevant paragraphs",
+            "Lawyer: 'Summarize common themes in overturns'",
+            "EVA DA: 'Main themes: insufficient specialist reports (6 cases), outdated evidence (4 cases), tribunal found new functional limitations (3 cases)'"
+          ],
+          "result": "3 days of manual research → 20 minutes with EVA DA"
+        },
+        "moonshot": "RAG+RaC neurosymbolic reasoning - probabilistic search meets logical rules, no hallucinations on eligibility.",
+        "has_dual_buttons": true
+      },
+      {
+        "id": 3,
+        "name": "EVA Portal",
+        "icon": "🌐",
+        "category": "User Product",
+        "description": "Enterprise governance hub providing single pane of glass for AI platform oversight. IT Director logs in, sees dashboard: '47 active EVA spaces, $12K monthly cost, 8 spaces over budget alerts, 3 pending security reviews.' Clicks 'CPP-D Project' space, reviews: 1,200 queries this month, avg response 2.3s, 94% user satisfaction, top 5 documents accessed. Sets new budget cap: $2K/month.",
+        "use_case": {
+          "title": "IT Director Monthly Review",
+          "steps": [
+            "Opens EVA Portal → sees 47 spaces across organization",
+            "Filters by 'over budget' → 8 spaces flagged red",
+            "Clicks 'Legal Discovery' space (highest spend: $3.2K this month)",
+            "Reviews usage: 450 queries, 12 active users, mostly document summarization",
+            "Sees spike on Nov 15-17 (court deadline prep)",
+            "Approves overage, sets alert for next spike",
+            "Exports cost report for Finance"
+          ],
+          "result": "15 min monthly review vs 3 hours manually tracking spreadsheets"
+        },
+        "moonshot": "Who's using what, spending how much, achieving what results. Single pane of glass for AI platform oversight.",
+        "has_dual_buttons": true
+      },
+      {
+        "id": 4,
+        "name": "EVA AskMe",
+        "icon": "💭",
+        "category": "User Product",
+        "description": "Embeddable chatbot that becomes an expert on YOUR application by learning its navigation and content. HR embeds EVA AskMe widget on Benefits Portal. Widget crawls all portal pages, learns navigation structure: 'Dental plan is under Health → Coverage Options.' Employee asks widget: 'How do I add my spouse to dental?' EVA AskMe answers: 'Go to Health Coverage → Manage Dependents, click Add Spouse, upload marriage certificate, effective next pay period. FYI: deadline is 30 days after marriage.'",
+        "use_case": {
+          "title": "New Employee Onboarding Portal",
+          "scenario": "Company has complex onboarding portal (20+ pages, 50+ forms)",
+          "steps": [
+            "HR embeds EVA AskMe widget in corner of portal",
+            "AskMe crawls portal, maps: Home → Direct Deposit → Tax Forms → Benefits → IT Access...",
+            "New hire Day 1, confused: 'Where do I set up direct deposit?'",
+            "AskMe answers: 'Click 'Payroll Setup' in left menu, then 'Direct Deposit Form''",
+            "Employee: 'What info do I need?'",
+            "AskMe: 'Bank name, routing number, account number. You can find these on a check.'"
+          ],
+          "result": "80% reduction in HR help desk tickets for navigation questions"
+        },
+        "moonshot": "Widget learns this from portal content + HR policy docs - becomes instant expert on any application.",
+        "has_dual_buttons": true
+      },
+      {
+        "id": 5,
+        "name": "EVA CloneMe",
+        "icon": "👤",
+        "category": "User Product",
+        "description": "Your AI proxy that attends meetings, manages your calendar, and builds RAG indexes of everything it learns FOR YOU. You say: 'Book me a meeting room for two next week, afternoon, 30 minutes. Find a slot in Shannon's calendar and send him an invite to discuss our common interests.' CloneMe checks your calendars, finds Tuesday 2pm works, books Room 405, drafts invite referencing your last 3 email threads with Shannon. Then: 'Ask CloneMe to attend the CIO debriefing I'll miss Friday, then make me a summary with my next steps.' CloneMe joins Teams meeting, takes notes, emails you: 'CIO approved the AI budget. Your action: submit Q1 forecast by Nov 30. P.S. I can now answer any questions about the AI governance proposal you presented - I've indexed your deck, the Q&A discussion, and CIO's feedback.'",
+        "use_case": {
+          "title": "Executive's Crazy Thursday",
+          "steps": [
+            "Morning: 'CloneMe, I have back-to-back meetings 9-5 today. Monitor my Outlook for urgent items, draft holding responses.'",
+            "10:30am: CFO emails: 'Need Q4 forecast ASAP.' CloneMe drafts: 'Working on it, will have by EOD.'",
+            "2pm: Double-booked conflict detected. CloneMe: 'You're double-booked at 3pm: Product Review vs HR Budget. Which should I reschedule?'",
+            "2:05pm: You: 'Move Product Review to tomorrow afternoon.'",
+            "2:06pm: CloneMe finds slot, moves meeting, notifies 6 attendees",
+            "3pm: CloneMe attends HR Budget meeting you couldn't make, takes notes",
+            "5:30pm: You: 'CloneMe, what did I miss today?'",
+            "5:31pm: CloneMe summary: '3 urgent emails (drafted responses, await your approval), 2 meeting conflicts resolved, Shannon confirmed coffee tomorrow 10am, reminder: Q4 forecast due EOD.'",
+            "5:32pm: You: 'What was decided in the HR budget meeting?'",
+            "5:33pm: CloneMe: 'Hiring freeze through Q1 except critical roles, training budget cut 15%, bonus pool protected. Your next step: revise Q1 hiring plan by next Wednesday. Want me to draft it based on current open reqs?'"
+          ],
+          "result": "Stayed on top of 47 emails, 8 meetings, 0 dropped balls + instant recall of meetings you missed"
+        },
+        "moonshot": "CloneMe builds a RAG index of every meeting it attends FOR YOU, becoming your expert proxy on those topics. Saves 2+ hours/day.",
+        "has_dual_buttons": true
+      },
+      {
+        "id": 6,
+        "name": "EVA Vision",
+        "icon": "👁️",
+        "category": "AI Intelligence",
+        "description": "Accessibility-first AI making data visualization accessible to everyone through voice and screen reader technology. Blind analyst opens dashboard, says: 'EVA, what's on this screen?' EVA: 'Revenue dashboard, 6 charts. Top left shows Q3 down 12% in Atlantic region, red bar.' Analyst: 'Drill into Atlantic, show me by product line.' EVA: 'Opening Atlantic detail... Software licenses down 23%, consulting up 8%.' Analyst: 'Create a what-if scenario: if we discount software 15%, what's the revenue impact?' EVA runs calculation, narrates results.",
+        "use_case": null,
+        "moonshot": "Makes Power BI accessible to everyone. Voice + screen reader revolution for data analysts.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 7,
+        "name": "EVA IQ",
+        "icon": "🧠",
+        "category": "AI Intelligence",
+        "description": "The Context Engine - Microsoft Work IQ + Fabric IQ equivalent. Builds enterprise work graph (who works on what, using which artifacts) and domain ontologies (business entities, relationships, metrics). Provides contextual intelligence to all EVA products, transforming generic AI into your organization's AI that understands your people, projects, and data semantics.",
+        "use_case": null,
+        "moonshot": "Your AI knows your organization's context - not generic responses, but answers grounded in your enterprise reality.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 8,
+        "name": "EVA RaC",
+        "icon": "⚖️",
+        "category": "AI Intelligence",
+        "description": "Rules as Code - Neurosymbolic AI. Policy and legislation encoded as machine-readable logic (OpenFisca-based), exposed via APIM. LLMs provide explanations, RaC enforces decisions - the guardrail ensuring AI never hallucinates on eligibility, entitlement, or compliance. Transforms policy review from retrospective audits to continuous 'digital twin' simulation and scenario testing.",
+        "use_case": null,
+        "moonshot": "Policy-as-code with continuous simulation - test legislative changes before they're enacted.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 9,
+        "name": "EVA OS",
+        "icon": "💻",
+        "category": "Platform",
+        "description": "Windows Copilot+ alternative providing company-branded AI operating system integration. 'Your company's EVA' seamlessly embedded in Windows.",
+        "use_case": null,
+        "moonshot": "Native OS-level AI integration - EVA becomes part of your Windows experience.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 10,
+        "name": "EVA Learning",
+        "icon": "📚",
+        "category": "Platform",
+        "description": "Adaptive AI training platform for continuous model improvement and user education. Learns and evolves with your organization.",
+        "use_case": null,
+        "moonshot": "AI that learns from your organization's patterns and continuously improves.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 11,
+        "name": "EVA LiveOps",
+        "icon": "📊",
+        "category": "Platform",
+        "description": "Real-time operations monitoring and incident management for production environments. Ensures 24/7 platform reliability.",
+        "use_case": null,
+        "moonshot": "AI-powered observability - predict and prevent incidents before they impact users.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 12,
+        "name": "EVA Analytics",
+        "icon": "📈",
+        "category": "Platform",
+        "description": "Business intelligence engine providing insights across all EVA Suite operations. Data-driven decision making for enterprises.",
+        "use_case": null,
+        "moonshot": "Unified analytics across all EVA products - understand how AI transforms your enterprise.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 13,
+        "name": "EVA Marketplace",
+        "icon": "🛒",
+        "category": "Platform",
+        "description": "App store for AI agents with enterprise governance. Developer publishes 'Contract Analyzer' agent to internal marketplace. Legal team discovers it, reads reviews (4.8 stars, 127 uses), clicks 'Deploy to my EVA Portal.' Agent appears in their EVA Chat with custom slash-command: /contract-analyze [document]. Enterprise governance pre-approves agents before marketplace listing.",
+        "use_case": null,
+        "moonshot": "Community-driven extensibility with enterprise controls - democratize AI agent development.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 14,
+        "name": "EVA Channel Interactivity",
+        "icon": "🎛️",
+        "category": "Platform",
+        "description": "The Paradigm Shift: Every EVA product works 3 ways simultaneously - Traditional UI (click menus, fill forms, navigate screens), Chat Interface (type commands in natural language, EVA executes multi-step workflows), Voice Commands (speak requests, EVA responds via audio + screen updates). Example: Same task 3 ways - 'Create expense report for Paris trip': UI Mode: Click Expenses → New → Select Trip → Add receipts → Calculate totals → Submit. Chat Mode: Type: 'EVA, create expense report for Paris trip Nov 10-15, attach hotel/flight receipts from OneDrive'. Voice Mode: Say: 'EVA, expense report Paris trip' (EVA narrates steps, you approve with 'yes' or 'submit').",
+        "use_case": null,
+        "moonshot": "Users choose their interaction style. Power users use voice for speed. New users use UI with chat hints. Accessibility users rely on voice narration. Same powerful features, your preferred channel.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 15,
+        "name": "EVA Home",
+        "icon": "🏠",
+        "category": "User Product",
+        "description": "The Origin Story: Marco renamed his Alexa to 'EVA' - and realized the vision extends beyond the office. EVA Home brings your enterprise AI assistant to your home device (Alexa, Google Home, Apple HomePod). Example: You're driving home, you say: 'EVA, what did I miss at work today?' EVA summarizes: '3 urgent emails (Shannon needs Q1 forecast by EOD), CloneMe attended your 3pm budget meeting (hiring freeze through Q1), and your VP approved the AI proposal - you present to executives next Wednesday.' Then: 'EVA, remind me tomorrow morning to review the executive deck.' EVA: 'Reminder set for 8am.' The Twist: Your work EVA and home EVA are the same intelligence - seamless context across devices.",
+        "use_case": {
+          "title": "Executive's Evening Routine",
+          "steps": [
+            "6:30pm: Marco arrives home, says: 'EVA, catch me up'",
+            "6:31pm: EVA Home (via Alexa speaker): 'You have 2 urgent items: CFO needs Q4 forecast by 9am tomorrow, and Shannon confirmed coffee meeting moved to Wednesday 10am. CloneMe attended your HR budget meeting - hiring freeze through Q1 except critical roles. Your action: revise Q1 hiring plan by next Wednesday.'",
+            "6:32pm: Marco: 'EVA, set reminder for 7am tomorrow: finish Q4 forecast before CFO meeting'",
+            "6:33pm: EVA: 'Reminder set for 7am. Also, I see you have a 9:30am meeting with CFO - should I block 7-9am on your calendar as focus time?'",
+            "6:34pm: Marco: 'Yes, and draft the forecast outline so I can review it tomorrow morning'",
+            "6:35pm: EVA: 'Focus time blocked. Outline drafted based on Q3 template and current pipeline data. I'll email it to you now.'",
+            "7:45am next day: Marco's phone alarm + EVA reminder: 'Good morning. Your Q4 forecast outline is ready for review. You have 2 hours before the CFO meeting.'"
+          ],
+          "result": "Work continues seamlessly across office EVA → home EVA → morning EVA. Zero context loss, proactive planning, always prepared."
+        },
+        "moonshot": "Work-life AI continuity - your assistant follows you everywhere.",
+        "has_dual_buttons": true
+      },
+      {
+        "id": 16,
+        "name": "EVA Chat SDK",
+        "icon": "🔌",
+        "category": "Developer",
+        "description": "Embeddable chat microservices SDK enabling legacy apps to integrate conversational AI capabilities. Bring EVA Chat to any application.",
+        "use_case": null,
+        "moonshot": "Transform any legacy application into AI-powered conversational interface with minimal code.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 17,
+        "name": "EVA UI/UX Tools",
+        "icon": "🎨",
+        "category": "Developer",
+        "description": "Visual IDE (WYSIWYG) for building accessible, internationalized interfaces. Leverages EVA design system with drag-and-drop simplicity.",
+        "use_case": null,
+        "moonshot": "Build enterprise-grade accessible UIs 10x faster with visual tools.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 18,
+        "name": "EVA Accessibility",
+        "icon": "♿",
+        "category": "Developer",
+        "description": "WCAG 2.1 AA compliant component library (eva-i11y). Brings accessibility to any application through reusable components and testing tools.",
+        "use_case": null,
+        "moonshot": "Make every application accessible by default - accessibility as a library, not an afterthought.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 19,
+        "name": "EVA i18n",
+        "icon": "🌍",
+        "category": "Developer",
+        "description": "Multi-language support framework (eva-i18n) for global deployments. Seamless internationalization for enterprise applications.",
+        "use_case": null,
+        "moonshot": "Ship globally from day one - internationalization that just works.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 20,
+        "name": "EVA Agent Tooling",
+        "icon": "🛠️",
+        "category": "Developer",
+        "description": "DevTools and Reasoning-as-Code (RaC) helpers for building custom AI agents. Complete toolkit for agent development lifecycle.",
+        "use_case": null,
+        "moonshot": "Build custom agents in hours, not weeks - democratize agent development.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 21,
+        "name": "EVA MCP",
+        "icon": "🤖",
+        "category": "Developer",
+        "description": "The Orchestration Layer: Model Context Protocol servers enabling cross-LLM agent coordination. Your agents speak a universal language - Claude, GPT-4, Gemini, or custom models all integrate through standardized MCP interfaces. Enables agent workflows that span multiple AI providers, tools, and data sources with unified context management.",
+        "use_case": null,
+        "moonshot": "Multi-LLM orchestration - never locked into a single AI provider, always use the best model for each task.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 22,
+        "name": "EVA DevTools",
+        "icon": "🛠️",
+        "category": "Moonshot",
+        "description": "AI-Speed Delivery Optimization: Complete agentic landscape with Orchestrator/Super/Utility agent architecture. 10 Super Agents including Backlog Guardian (INVEST quality), Test Architect (coverage optimization), Legacy Analyzer (mainframe documentation), Impact Analyzer (policy change assessment), Release Navigator (WSJF planning), Agile Coach (retro insights), Skills Mentor (capability mapping), Governance Reporter (automated compliance), and Observability Wizard (diagnostic intelligence). Creates/maintains developer tools at AI speed.",
+        "use_case": null,
+        "moonshot": "Software development at AI speed - 10 specialized agents accelerating every phase of SDLC.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 23,
+        "name": "EVA Process Mapper",
+        "icon": "🗺️",
+        "category": "Moonshot",
+        "description": "Natural Language → BPMN: Auto-generate process maps, user journeys, and system flows from conversational descriptions. 'When a user applies for benefit X, they first...' becomes a complete Mermaid/BPMN diagram with steps, decisions, actors, and systems. Accelerates BA work by 10x - from weeks of diagramming to minutes of conversation.",
+        "use_case": null,
+        "moonshot": "Business analysis at conversation speed - describe processes in plain language, get production-ready diagrams.",
+        "has_dual_buttons": false
+      },
+      {
+        "id": 24,
+        "name": "EVA Impact Analyzer",
+        "icon": "🎯",
+        "category": "Moonshot",
+        "description": "Policy Change Intelligence: Compare old vs new policy text, identify affected rules/services/UIs/tests, suggest change backlog. When legislation changes, Impact Analyzer maps ripple effects across your enterprise in seconds - which systems break, which tests need updates, which documentation requires revision. Transforms months of impact analysis into instant intelligence.",
+        "use_case": null,
+        "moonshot": "Legislative change impact analysis from months to minutes - know exactly what breaks before it breaks.",
+        "has_dual_buttons": false
+      }
+    ],
+    "channel_paradigm": {
+      "description": "Every EVA product works 3 ways simultaneously",
+      "modes": [
+        {
+          "name": "Traditional UI",
+          "description": "Click menus, fill forms, navigate screens (classic software)"
+        },
+        {
+          "name": "Chat Interface",
+          "description": "Type commands in natural language, EVA executes multi-step workflows"
+        },
+        {
+          "name": "Voice Commands",
+          "description": "Speak requests, EVA responds via audio + screen updates"
+        }
+      ]
+    },
+    "technical_architecture": {
+      "core_platform": "Azure Cloud + Cosmos DB",
+      "frontend": "React 18+ TypeScript",
+      "ai_integration": "Azure OpenAI + Custom Agents",
+      "security_compliance": "Entra ID + WCAG 2.1 AA",
+      "accessibility": "eva-i11y Library + Automated Testing",
+      "internationalization": "eva-i18n (EN/FR Bilingual)"
+    },
+    "metadata": {
+      "created": "2025-11-23",
+      "author": "Marco",
+      "version": "1.0",
+      "status": "Active Development - Sprint 4",
+      "github_pages": "https://marcopolo483.github.io/eva-suite/",
+      "repository": "https://github.com/MarcoPolo483/eva-suite"
+    }
+  }
+}

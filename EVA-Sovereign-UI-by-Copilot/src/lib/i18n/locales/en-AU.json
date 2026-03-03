@@ -1,0 +1,85 @@
+{
+  "esdc": {
+    "title": "Services Australia",
+    "titleShort": "SA",
+    "hero": {
+      "title": "Building a skilled, adaptable, and inclusive workforce",
+      "description": "Access employment services, benefits, and support programs that help Australians succeed"
+    },
+    "programs": {
+      "title": "Programs and Services",
+      "ei": {
+        "title": "JobSeeker Payment",
+        "titleShort": "JSP",
+        "description": "Financial help while you're looking for work",
+        "details": "JobSeeker Payment is financial help if you're between 22 and Age Pension age and looking for work. You must meet residence rules and income and assets tests."
+      },
+      "oas": {
+        "title": "Age Pension",
+        "titleShort": "AP",
+        "description": "Payment for older Australians",
+        "details": "Age Pension is a payment for older Australians. You must be Age Pension age and meet residence and income and assets tests."
+      },
+      "cpp": {
+        "title": "Superannuation",
+        "titleShort": "Super",
+        "description": "Money set aside for retirement",
+        "details": "Superannuation is money set aside by your employer over your working life for you to live on when you retire from work."
+      }
+    },
+    "services": {
+      "jobSearch": {
+        "title": "Workforce Australia",
+        "description": "Find employment opportunities across Australia",
+        "details": "Workforce Australia helps you find a job, build skills and get the support you need."
+      },
+      "benefitsFinder": {
+        "title": "Payment Finder",
+        "description": "Find payments and services you may be eligible for",
+        "details": "Answer a few questions to get a list of payments and services you may be able to get."
+      }
+    }
+  },
+  "chat": {
+    "title": "Ask EVA",
+    "subtitle": "Employment Virtual Assistant",
+    "placeholder": "How can I help you today?",
+    "send": "Send",
+    "voice": "Voice input",
+    "thinking": "EVA is thinking...",
+    "suggestedTopics": "Suggested topics:",
+    "topics": {
+      "ei": "JobSeeker Payment",
+      "oas": "Age Pension",
+      "cpp": "Superannuation",
+      "jobs": "Finding a job"
+    }
+  },
+  "navigation": {
+    "skipToMain": "Skip to main content",
+    "home": "Home",
+    "programs": "Programs",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© Commonwealth of Australia",
+    "privacy": "Privacy",
+    "terms": "Terms and conditions",
+    "accessibility": "Accessibility",
+    "canada": "Australia.gov.au"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "apply": "Apply now",
+    "english": "English",
+    "french": "Français",
+    "spanish": "Español",
+    "italian": "Italiano",
+    "german": "Deutsch",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "close": "Close"
+  }
+}

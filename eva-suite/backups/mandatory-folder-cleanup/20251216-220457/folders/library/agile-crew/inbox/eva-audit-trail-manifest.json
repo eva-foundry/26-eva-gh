@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-audit-trail.md",
+  "feature_key": "P02-AUTO-9971bf92",
+  "title": "EVA Audit Trail Backlog",
+  "p02_artifacts_path": "docs/features/eva-audit-trail",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-audit-trail",
+  "created_timestamp": "2025-11-25T23:54:04.2009051Z"
+}

@@ -1,0 +1,10 @@
+{
+  "priority": "MEDIUM",
+  "title": "EVA Suite - Repository Status & Work in Progress",
+  "status": "ready-for-crew",
+  "p02_artifacts_path": "docs/features/chatgpt-repo-status",
+  "created_timestamp": "2025-11-27T12:40:14.7267893Z",
+  "source_intake_file": "CHATGPT-REPO-STATUS.md",
+  "feature_key": "P02-AUTO-40310dfc",
+  "feature_slug": "chatgpt-repo-status"
+}

@@ -1,0 +1,10 @@
+{
+  "feature_slug": "architecture-decision-eva-sovereign-ui",
+  "priority": "MEDIUM",
+  "feature_key": "P02-AUTO-8699eb17",
+  "p02_artifacts_path": "docs/features/architecture-decision-eva-sovereign-ui",
+  "created_timestamp": "2025-12-09T12:41:52.9359305Z",
+  "title": "Architecture Decision: EVA-Sovereign-UI - CHOOSE ONE",
+  "source_intake_file": "ARCHITECTURE-DECISION-EVA-SOVEREIGN-UI.md",
+  "status": "ready-for-crew"
+}

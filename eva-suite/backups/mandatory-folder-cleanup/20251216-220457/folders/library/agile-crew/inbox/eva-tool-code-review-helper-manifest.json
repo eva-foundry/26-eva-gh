@@ -1,0 +1,10 @@
+{
+  "status": "ready-for-crew",
+  "source_intake_file": "eva-tool-code-review-helper.md",
+  "feature_key": "P02-AUTO-ab59cafa",
+  "title": "CDD: EVA Code Review Helper Tool",
+  "p02_artifacts_path": "docs/features/eva-tool-code-review-helper",
+  "priority": "MEDIUM",
+  "feature_slug": "eva-tool-code-review-helper",
+  "created_timestamp": "2025-11-25T23:55:08.8409248Z"
+}
